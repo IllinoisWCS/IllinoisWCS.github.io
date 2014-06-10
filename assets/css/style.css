@@ -1,0 +1,87 @@
+body
+{
+	background-color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.officer
+{
+	height: 250px;
+	width: 850px;
+	margin: auto;
+}
+
+.officer_position
+{
+	color: #212162;
+	font-style: italic;
+}
+.officer-circular 
+{
+	display: inline-block;
+	float: left;
+	width: 200px;
+	height: 200px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+	background-size: 100%;
+	background-position: center top; 
+	margin: 20px 20px 20px 0px;
+}
+
+.officer-circular img
+{
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.officer-description
+{
+	vertical-align: middle;
+	display: inline-block;
+	float: left;;
+	font-size: 14px;
+	width: 600px;
+	height: 200px;
+	margin: 20px 0px;
+}
+
+.officer-header a
+{
+	color: #9090B0;
+	text-decoration: none;
+}
+
+.nav{
+	font-size: 14;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+.nav li{
+    display:inline;
+}
+
+.nav a
+{
+	font-size: 22px;
+	color: #212162;
+    display:inline-block;
+    padding:8px;
+	text-decoration: none;
+}
+
+a:visted
+{
+	color: #9090B0;
+}
+
+a:hover, a:active
+{
+	color: #9090B0;
+}
