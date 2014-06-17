@@ -1,6 +1,6 @@
 body
 {
-	background-color: #FFFFFF;
+	background-color: #E4E1E8;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -90,7 +90,13 @@ body
 
 .icon-social
 {
-	color: pink;
+	fill: #212162; 
+	width: 40px;
+}
+
+.icon-social:hover 
+{
+	fill: #9090B0;
 }
 
 a:visted
