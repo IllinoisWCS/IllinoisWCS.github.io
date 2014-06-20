@@ -152,7 +152,7 @@ a:hover, a:active
 #header-wcs
 {
 	margin: auto;
-	width: 35%;
+	width: 50%;
 	height: 90px;
 	float:left;
 	padding-left: 14%;
@@ -180,6 +180,16 @@ a:hover, a:active
 	{
 		margin-left: 0px;
 		padding-left: 0px;
+	}
+	
+	#header-wcstext
+	{
+		font-size: 12px;
+	}
+	
+	#header-uiuctxt
+	{
+		font-size: 10px;
 	}
 
 	#icons-social
