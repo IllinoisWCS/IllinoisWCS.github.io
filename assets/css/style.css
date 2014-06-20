@@ -174,7 +174,7 @@ a:hover, a:active
 	margin-top: 80px;
 }
 
-@media only screen and (max-device-width: 480px) 
+@media only screen and (max-device-width: 600px) 
 {
 	#header-wcs
 	{
