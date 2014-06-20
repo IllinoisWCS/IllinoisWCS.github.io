@@ -180,16 +180,7 @@ a:hover, a:active
 	{
 		margin-left: 0px;
 		padding-left: 0px;
-	}
-	
-	#header-wcstext
-	{
-		font-size: 14px;
-	}
-	
-	#header-uiuctxt
-	{
-		font-size: 12px;
+		width: 60%;
 	}
 
 	#icons-social
