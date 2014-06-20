@@ -120,7 +120,6 @@ a:hover, a:active
 {
 	padding-left: 10px;
 	font-size: 25px;
-	font-size: 3vh;
 	text-align: center;
 	color: #212162;
 	display: inline;
@@ -130,7 +129,6 @@ a:hover, a:active
 {
 	margin-top: -5px;
 	font-size: 14px;
-	font-size: 1.75vh;
 	text-align: left;
 	color: black;
 	margin-left: 200px;
