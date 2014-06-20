@@ -88,7 +88,7 @@ a
 #icons-social
 {
 	float: right;
-	margin-right: 300px;
+	margin-right: 20%;
 	padding-top: 5px;
 }
 
@@ -118,7 +118,7 @@ a:hover, a:active
 
 #header-wcstext
 {
-	padding-left: 20px;
+	padding-left: 10px;
 	font-size: 25px;
 	text-align: center;
 	color: #212162;
@@ -129,8 +129,9 @@ a:hover, a:active
 {
 	margin-top: -5px;
 	font-size: 14px;
-	text-align: right;
+	text-align: left;
 	color: black;
+	margin-left: 24%;
 }
 
 #header-nav {
@@ -150,10 +151,10 @@ a:hover, a:active
 #header-wcs
 {
 	margin: auto;
-	width: 490px;
+	width: 50%;
 	height: 90px;
 	float:left;
-	padding-left: 220px;
+	padding-left: 14%;
 }
 
 #wcs-logo
