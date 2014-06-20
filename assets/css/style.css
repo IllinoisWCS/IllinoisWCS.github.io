@@ -131,10 +131,11 @@ a:hover, a:active
 	font-size: 14px;
 	text-align: left;
 	color: black;
-	margin-left: 24%;
+	margin-left: 200px;
 }
 
 #header-nav {
+	margin: auto;
 	background-color: BCB8CF;
 	padding-top: 10px;
     width:100%;
@@ -151,7 +152,7 @@ a:hover, a:active
 #header-wcs
 {
 	margin: auto;
-	width: 50%;
+	width: 35%;
 	height: 90px;
 	float:left;
 	padding-left: 14%;
