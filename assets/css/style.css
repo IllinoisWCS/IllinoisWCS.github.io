@@ -173,3 +173,18 @@ a:hover, a:active
 {
 	margin-top: 80px;
 }
+
+@media only screen and (max-device-width: 480px) 
+{
+	#header-wcs
+	{
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+
+	#icons-social
+	{
+		margin-right: 0px;
+		padding-right: 0px;
+	}
+}
