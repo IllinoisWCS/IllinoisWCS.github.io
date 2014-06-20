@@ -56,20 +56,21 @@ body
 	text-decoration: none;
 }
 
+
 .nav{
-	font-size: 14px;
+	font-size: 16px;
     list-style: none;
-	float: right;
+	margin: auto;
 	text-align: center;
-	margin-right: 300px;
+	margin-top: 90px;
 }
-.nav li{
+.nav li, .sub-nav li{
     display:inline;
 }
 
-.nav a
+.nav a, .sub-nav a
 {
-	font-size: 14px;
+	font-size: 16px;
 	color: #212162;
     display:inline-block;
     margin: 0px 8px 8px 8px;
@@ -80,9 +81,21 @@ a
 {
 	text-decoration: none;
 }
-.nav-active
+.nav-active, .sub-nav-active
 {
-	
+	font-weight: bold;
+}
+
+.sub-nav 
+{
+    list-style: none;
+	margin: auto;
+	text-align: center;
+}
+ .sub-nav a
+ {
+	font-size: 12px;
+     margin: 0px 10px 8px 10px;
 }
 
 #icons-social
@@ -95,7 +108,7 @@ a
 .icon-social
 {
 	fill: #212162;
-	width: 50px;
+	width: 40px;
 	margin-top: -10px;
 }
 
@@ -171,7 +184,6 @@ a:hover, a:active
 
 #site-content
 {
-	margin-top: 80px;
 }
 
 @media only screen and (max-device-width: 600px) 
