@@ -11,42 +11,43 @@
 	<div id="header-nav"> 
 	</div>
 
-	<script>
-		$(function(){
-			$("#header-nav").load("header.html");
-		});
+		<script>
+			$(function(){
+				$("#header-nav").load("header.html");
+			});
 
-	</script>
+		</script>
 
 
 		<div>
 			<ul class="nav">
-				<li id="home" class="nav-active"><a href="index.html">HOME</a></li>
+				<li id="home"><a href="index.html">HOME</a></li>
 				<li id="about"><a href="members.html">MEMBERS</a></li>
-				<li id="work"><a href="current-officers.html">OFFICERS</a></li>
+				<li id="work" class="nav-active"><a href="current-officers.html">OFFICERS</a></li>
 				<li id="projects"><a href="companies.html">COMPANIES</a></li>
 				<li id="projects"><a href="events.html">EVENTS</a></li>
+			</ul>
+		</div>
+
+		
+		<div>
+			<ul class="sub-nav">
+				<li id="home" class="sub-nav-active"><a href="current-officers.html">CURRENT OFFICERS</a></li>
+				<li id="about"><a href="past-officers.html">PAST OFFICERS</a></li>
 			</ul>
 		</div>
 	
 
 
 		<div id="site-content">
-			<div id="index-page" class="page">
+			<div id="current-officers">
 
-				<div style="text-align:center;"><b>
-					---------------------------------------------------------------------------------------------------------------------</br>
-					Hello. This website is currently under construction for the summer. </br>
-					WCS at Illinois would love to work with you for the upcoming 2014-2015 school year. </br>
-					Email IllinoisWCS@gmail.com with any questions!</br>
-					---------------------------------------------------------------------------------------------------------------------</br>
-					</b>
-				</div>
-			</div>			
-			
+				<script type="text/javascript" src="assets/js/about_officers.js">
+				</script>
+			</div>
 			
 
-	</div>
+		</div>
 	
 	<script> //Google Analytics
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
