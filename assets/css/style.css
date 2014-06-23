@@ -2,6 +2,7 @@ body
 {
 	background-color: #E5E1F5;
 	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
 }
 
 .officer, .page
@@ -58,7 +59,7 @@ body
 
 #past-officers
 {
-	padding: 30px;
+	padding: 20px;
 }
 
 
@@ -80,6 +81,41 @@ body
     display:inline-block;
     margin: 0px 8px 8px 8px;
 	text-decoration: none;
+}
+
+.tab { margin-left: 40px; }
+.address-tab {margin-left: 70px;}
+.large-tab {margin-left: 40px;}
+.title { text-decoration: underline;}
+
+.event-title
+{
+		color: #212162;
+		font-weight: bold;
+}
+
+.event-location
+{
+	color: #212162;
+}
+
+.event-datetime
+{
+	color: #9090B0;
+}
+
+.event-description
+{
+		color: #9090B0;
+}
+.wcs-event
+{
+	font-size: 12px;
+}
+
+.event-details
+{
+	font-style: italic;
 }
 
 a
@@ -189,8 +225,13 @@ a:hover, a:active
 
 #site-content
 {
+	padding-top: 40px;
 }
 
+#index-page
+{
+	width: 750px;
+}
 @media only screen and (max-device-width: 600px) 
 {
 	#header-wcs
