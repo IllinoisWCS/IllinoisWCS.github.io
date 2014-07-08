@@ -254,11 +254,18 @@ a:hover, a:active
 {
 	font-size: 14px;
 	text-align: left;
+	width: 100%;
+	margin: auto;
 }
 
-#sponsorship-table td 
+#sponsors-table
 {
-	width: 300px;
+	padding: 10px;
+}
+
+.company-logo
+{
+	width: 100px; 
 }
 
 @media only screen and (max-device-width: 600px) 
