@@ -270,9 +270,14 @@ a:hover, a:active
 
 @media only screen and (max-device-width: 600px) 
 {
-	.nav
+	#header-wcstext
 	{
-		font-size: 12px;
+		font-size: 10px;
+	}
+	
+	#header-uiuctext
+	{
+		font-size: 8px;
 	}
 	#header-wcs
 	{
