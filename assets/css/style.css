@@ -139,14 +139,14 @@ a
      margin: 0px 10px 8px 10px;
 }
 
-#icons-social
+#social-icons
 {
 	float: right;
 	margin-right: 20%;
 	padding-top: 5px;
 }
 
-.icon-social
+.social-icon
 {
 	fill: #212162;
 	width: 40px;
@@ -225,7 +225,7 @@ a:hover, a:active
 
 #site-content
 {
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 #index-page

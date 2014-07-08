@@ -4,6 +4,167 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/script.js"></script>
+	<script src="assets/js/jquery.slides.min.js"></script>
+
+  <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
+  <meta name="viewport" content="width=device-width">
+  <!-- End SlidesJS Required -->
+
+  <!-- CSS for slidesjs.com example -->
+  
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <!-- End CSS for slidesjs.com example -->
+
+  <!-- SlidesJS Optional: If you'd like to use this design -->
+  <!-- SlidesJS Optional: If you'd like to use this design -->
+  <style>
+  /*
+    body {
+      -webkit-font-smoothing: antialiased;
+      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding-top:70px;
+    }
+*/
+    #slides {
+      display: none
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:5px;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(assets/img/slideshow/btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
+
+    .slidesjs-pagination {
+      margin: 7px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(assets/img/slideshow/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+  </style>
+  <!-- End SlidesJS Optional-->
+
+  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+  <style>
+    #slides {
+      display: none
+    }
+
+    .container {
+      margin: 0 auto;
+	  	max-width: 800px;
+
+    }
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .container {
+        width: auto;
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto;
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px;
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+  </style>
+  <!-- SlidesJS Required: -->
 </head>
 
 <body>
@@ -28,15 +189,12 @@
 				<li><a href="events.html">EVENTS</a></li>
 			</ul>
 		</div>
-	
-
 
 		<div id="site-content">
 			<div id="index-page" class="page">
 
-		<b>MISSION STATEMENT</b></br></br>
-			<span class="tab">Women in Computer Science (WCS) is a student group under <a href="http://cs.illinois.edu/">CS@Illinois</a> that is a non-profit, educational, student-run service organization dedicated to supporting the efforts of young women who are considering pursuit of a career in computer science or show an overall interest in computers. Because of the number of women pursuing Computer Science has been steadily decreasing, this organization aims to retain and provide a network of support for members to rely on for advice and camaraderie.</span></br></br>
 
+			<!--
 		<b>GOALS</b>
 			<ul>
 				<li>To retain and promote women in computer science</li>
@@ -46,17 +204,69 @@
 				<li>To expand the knowledge of CS in women and men</li>
 			</ul>
 
-		<b>Contact</b></br>
-				<div class="tab">
-					Email: <a href="mailto:illinoiswcs@gmail.com">illinoiswcs@gmail.com</a></br>
-					Address: Women in Computer Science</br>
-					<div class="address-tab">1318 Siebel Center</br>
-						201 North Goodwin Avenue</br>
-						Urbana, IL 61801-2302</br></span>
-				</div>
+		<b>CONTACT:</b> <a href="mailto:illinoiswcs@gmail.com">illinoiswcs@gmail.com</a></br></br>
+-->
+	<!-- SlidesJS Required: Start Slides -->
+	  <!-- The container is used to define the width of the slideshow -->
 
-		</div>			
-			
+	  <div class="container">
+	    <div id="slides">
+	      <img src="assets/img/slideshow/slideshow1.png" alt="">
+	      <img src="assets/img/slideshow/slideshow2.png" alt="">
+	      <img src="assets/img/slideshow/slideshow3.png" alt="">
+	      <img src="assets/img/slideshow/slideshow4.png" alt="">
+  	      <img src="assets/img/slideshow/slideshow5.png" alt="">
+  	      <img src="assets/img/slideshow/slideshow6.png" alt="">
+	      <img src="assets/img/slideshow/slideshow7.png" alt="">
+	      <img src="assets/img/slideshow/slideshow8.png" alt="">
+	      <img src="assets/img/slideshow/slideshow9.png" alt="">
+  	      <img src="assets/img/slideshow/slideshow10.png" alt="">
+	      <img src="assets/img/slideshow/slideshow11.png" alt="">
+	      <img src="assets/img/slideshow/slideshow12.png" alt="">
+	      <img src="assets/img/slideshow/slideshow13.png" alt="">
+	      <img src="assets/img/slideshow/slideshow14.png" alt="">
+  	      <img src="assets/img/slideshow/slideshow15.png" alt="">
+	      <img src="assets/img/slideshow/slideshow16.png" alt="">
+	      <img src="assets/img/slideshow/slideshow17.png" alt="">
+	      <img src="assets/img/slideshow/slideshow18.png" alt="">
+	      <img src="assets/img/slideshow/slideshow19.png" alt="">
+	      <img src="assets/img/slideshow/slideshow20.png" alt="">
+	    </div>
+	  </div>
+
+	  <!-- End SlidesJS Required: Start Slides -->
+
+	  <!-- SlidesJS Required: Link to jQuery -->
+	  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	  <!-- End SlidesJS Required -->
+
+	  <!-- SlidesJS Required: Link to jquery.slides.js -->
+	  <script src="assets/js/jquery.slides.min.js"></script>
+	  <!-- End SlidesJS Required -->
+
+	  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+	  <script>
+	    $(function() {
+	      $('#slides').slidesjs({
+	        width: 940,
+	        height: 528,
+	        play: {
+	          active: true,
+	          auto: true,
+	          interval: 4000,
+	          swap: true
+	        }
+	      });
+	    });
+	  </script>
+	  <!-- End SlidesJS Required -->
+	</br></br>
+
+
+		<b>MISSION STATEMENT</b></br>
+			<span class="tab">Women in Computer Science (WCS) is a student group under <a href="http://cs.illinois.edu/">CS@Illinois</a> that is a non-profit, educational, student-run service organization dedicated to supporting the efforts of young women who are considering pursuit of a career in computer science or show an overall interest in technology. Because of the number of women pursuing Computer Science has been steadily decreasing, this organization aims to retain and provide a network of support for members to rely on for advice and camaraderie.</span></br></br>
+		
+		</div>
 		</div>		
 
 	</div>
