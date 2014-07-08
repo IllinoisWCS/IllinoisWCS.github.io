@@ -270,6 +270,10 @@ a:hover, a:active
 
 @media only screen and (max-device-width: 600px) 
 {
+	.nav
+	{
+		font-size: 12px;
+	}
 	#header-wcs
 	{
 		margin-left: 0px;
