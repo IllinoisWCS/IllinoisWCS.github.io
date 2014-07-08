@@ -64,6 +64,7 @@ body
 
 
 .nav{
+	width: 100%;
 	font-size: 16px;
     list-style: none;
 	margin: auto;
@@ -272,12 +273,12 @@ a:hover, a:active
 {
 	#header-wcstext
 	{
-		font-size: 10px;
+		font-size: 12px;
 	}
 	
 	#header-uiuctext
 	{
-		font-size: 8px;
+		font-size: 10px;
 	}
 	#header-wcs
 	{
