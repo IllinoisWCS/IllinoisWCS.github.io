@@ -262,11 +262,19 @@ a:hover, a:active
 #sponsors-table
 {
 	padding: 10px;
+	margin: auto;
 }
 
-.company-logo
+.company-logo-box
 {
 	width: 100px; 
+	padding: 10px;
+}
+
+.company-logo-wide
+{
+	width: 200px; 
+	padding: 10px;
 }
 
 @media only screen and (max-device-width: 600px) 
