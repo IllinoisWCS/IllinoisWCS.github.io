@@ -1,309 +1,290 @@
-body
-{
-	background-color: #E5E1F5;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-}
+/* Main Components */
+html {
+  width: 100%;
+  height: 100%; }
 
-.officer, .page
-{
-	height: 250px;
-	width: 850px;
-	margin: auto;
-}
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%; }
 
-.officer_position
-{
-	color: #212162;
-	font-style: italic;
-}
-.officer-circular 
-{
-	display: inline-block;
-	float: left;
-	width: 200px;
-	height: 200px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
-	box-shadow: 0 0 8px rgba(0, 0, 0, .4);
-	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .4);
-	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .4);
-	background-size: 100%;
-	background-position: center top; 
-	margin: 20px 20px 20px 0px;
-}
+h1 {
+  font-family: "Lobster", cursive !important;
+  font-weight: 500 !important;
+  font-size: 5em !important;
+  letter-spacing: 2px; }
 
-.officer-circular img
-{
-	opacity: 0;
-	filter: alpha(opacity=0);
-}
+h2 {
+  font-family: "Lobster", cursive !important;
+  font-weight: 400 !important;
+  font-size: 3em !important;
+  letter-spacing: 2px; }
 
-.officer-description
-{
-	vertical-align: middle;
-	display: inline-block;
-	float: left;;
-	font-size: 14px;
-	width: 600px;
-	height: 200px;
-	margin: 20px 0px;
-}
+h4 {
+  font-family: "Lobster", cursive !important;
+  font-size: 2em !important; }
 
-.officer-header a
-{
-	color: #9090B0;
-	text-decoration: none;
-}
+p {
+  font-family: "Open Sans", sans-serif; }
 
-#past-officers
-{
-	padding: 20px;
-}
+.padded {
+  padding: 2.5% 0 5% 0; }
 
+#socialMediaLinks {
+  display: block;
+  padding-left: 0px; }
+  #socialMediaLinks li {
+    display: inline;
+    margin: 10px; }
 
-.nav{
-	width: 100%;
-	font-size: 16px;
-    list-style: none;
-	margin: auto;
-	text-align: center;
-	margin-top: 90px;
-}
-.nav li, .sub-nav li{
-    display:inline;
-}
+.btnContainer button {
+  color: #555; }
+  .btnContainer button:hover {
+    color: #000;
+    background-color: #999; }
 
-.nav a, .sub-nav a
-{
-	font-size: 16px;
-	color: #212162;
-    display:inline-block;
-    margin: 8px 8px 8px 8px;
-	text-decoration: none;
-}
+.center, .overlay, #members .btnContainer, #officers, #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
-.tab { margin-left: 40px; }
-.address-tab {margin-left: 70px;}
-.large-tab {margin-left: 40px;}
-.title { text-decoration: underline;}
+a {
+  color: #7d1935; }
+  a:hover {
+    color: #999; }
 
-.event-title
-{
-		color: #212162;
-		font-weight: bold;
-}
+.navbar-brand img {
+  height: 35px;
+  padding: 0px;
+  margin: -12px; }
 
-.event-location
-{
-	color: #212162;
-}
+.navbar {
+  background-color: #f8f8f8;
+  opacity: 0.8; }
+  .navbar .container-fluid {
+    padding: 0 10% 0 10%; }
 
-.event-datetime
-{
-	color: #9090B0;
-}
+.nav {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase; }
 
-.event-description
-{
-		color: #9090B0;
-}
-.wcs-event
-{
-	font-size: 12px;
-}
+@media (min-width: 767px) {
+  .mainNav {
+    padding: 20px 0;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out; }
+  .top-nav-collapse {
+    padding: 0; } }
 
-.event-details
-{
-	font-style: italic;
-}
+/* Individual Divs */
+.carousel {
+  height: 100%; }
 
-a
-{
-	text-decoration: none;
-}
-.nav-active, .sub-nav-active
-{
-	font-weight: bold;
-}
+.carousel-inner {
+  height: 100%; }
+  .carousel-inner .item {
+    opacity: 0.6;
+    transition-property: opacity;
+    width: 100% !important;
+    min-height: 100% !important;
+    overflow: hidden;
+    height: 100%; }
+    .carousel-inner .item img {
+      position: relative;
+      overflow: hidden;
+      height: 100%; }
+  .carousel-inner .active {
+    opacity: 0.75;
+    height: 100%; }
 
-.sub-nav 
-{
-    list-style: none;
-	margin: auto;
-	text-align: center;
-}
- .sub-nav a
- {
-	font-size: 12px;
-     margin: 0px 10px 8px 10px;
-}
+.container {
+  text-align: center;
+  overflow: hidden; }
 
-#social-icons
-{
-	float: right;
-	margin-right: 20%;
-	padding-top: 5px;
-}
+.fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover; }
 
-.social-icon
-{
-	fill: #212162;
-	width: 40px;
-	margin-top: -10px;
-}
+.overlay {
+  position: absolute;
+  z-index: 100;
+  top: calc(50% - 1.5em);
+  width: 100%; }
 
-/*
-.icon-social:hover 
-{
-	fill: #212162; 
-}
-*/
+#home {
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto;
+  height: 1000px; }
+  #home h1 {
+    color: #fff; }
 
-a:visted
-{
-	color: #9090B0;
-}
+#officerCarousel {
+  background-image: url(../img/slideshow/allofficers.jpg); }
 
-a:hover, a:active
-{
-	color: #9090B0;
-}
+#chictechCarousel {
+  background-image: url(../img/slideshow/chictech.jpg); }
 
-#header-wcstext
-{
-	padding-left: 10px;
-	font-size: 25px;
-	text-align: center;
-	color: #212162;
-	display: inline;
-}
+#banquetCarousel {
+  background-image: url(../img/slideshow/banquet.jpg); }
 
-#header-uiuctext
-{
-	margin-top: -5px;
-	font-size: 14px;
-	text-align: left;
-	color: black;
-	margin-left: 200px;
-}
+#splashCarousel {
+  background-image: url(../img/slideshow/splash.jpg); }
 
-#header-nav {
-	margin: auto;
-	background-color: #BCB8CF;
-	padding-top: 10px;
-    width:100%;
-    height:55px;
-    position:fixed;
-    top:0;
-    left:0;
-	opacity: .9;
-	-webkit-box-shadow: 0 4px 6px -6px black;
-	-moz-box-shadow: 0 4px 6px -6px black;
-	box-shadow: 0 4px 6px -6px black;
-}
+#banquet2Carousel {
+  background-image: url(../img/slideshow/banquet2.jpg); }
 
-#header-wcs
-{
-	margin: auto;
-	width: 50%;
-	height: 90px;
-	float:left;
-	padding-left: 14%;
-}
+#about h1, #about p {
+  color: #7d1935; }
 
-#wcs-logo
-{
-	height: 70px;
-	margin: auto;
-}
-#header-logo
-{
-	display: inline;
-	float: left;
-}
+#about p {
+  font-size: 1.3em;
+  line-height: 150%; }
 
-#site-content
-{
-	padding-top: 20px;
-}
+#members {
+  background-color: #f5f3ee; }
+  #members .btnContainer {
+    margin-bottom: 10px; }
+  #members a {
+    cursor: default;
+    /* TEMPORARY */ }
 
-#index-page
-{
-	width: 750px;
-}
-.company-h1
-{
-	font-weight: bold;
-	font-size: 20px;
-}
+.memberImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  min-height: 50vh !important;
+  padding: -15 !important; }
+  .memberImage p {
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%);
+    visibility: hidden; }
 
-.company-h2
-{
-	font-weight: bold;
-	text-decoration: underline;
-	color: #212162;
-}
+#techTeam {
+  background-image: url("../img/members/techteam.jpg"); }
+  #techTeam:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/techteam.jpg"); }
 
-.company-available
-{
-	font-weight: bold;
-	color: green;
-}
-#sponsorship-table 
-{
-	font-size: 14px;
-	text-align: center;
-	width: 100%;
-	margin: auto;
-}
+#mentoring {
+  background-image: url("../img/members/mentoring.jpg"); }
+  #mentoring:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/mentoring.jpg"); }
 
-#sponsors-table
-{
-	padding: 10px;
-	margin: auto;
-}
+#outreach {
+  background-image: url("../img/members/outreach.jpg"); }
+  #outreach:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/outreach.jpg"); }
 
-.company-logo-box
-{
-	width: 100px; 
-	padding: 5px;
-}
+#memberportal {
+  background-image: url("../img/members/memberportal.jpg"); }
+  #memberportal:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/memberportal.jpg"); }
 
-.company-logo-med
-{
-	width: 120px; 
-	padding: 5px;
-}
+#events {
+  margin-top: 50px; }
+  #events iframe {
+    width: 100%; }
 
-.company-logo-wide
-{
-	width: 200px; 
-	padding: 5px;
-}
+.sponsors-row {
+  padding-bottom: 2%; }
+  .sponsors-row .sponsor-small {
+    vertical-align: center;
+    width: 100%; }
 
-@media only screen and (max-device-width: 600px) 
-{
-	#header-wcstext
-	{
-		font-size: 12px;
-	}
-	
-	#header-uiuctext
-	{
-		font-size: 10px;
-	}
-	#header-wcs
-	{
-		margin-left: 0px;
-		padding-left: 0px;
-	}
+#sponsors {
+  color: #7d1935; }
+  #sponsors p {
+    font-size: 1.3em;
+    line-height: 150%; }
+  #sponsors a {
+    color: #000; }
 
-	#icons-social
-	{
-		margin-right: 0px;
-		padding-right: 0px;
-	}
+#officers {
+  background-image: url("../img/wcs/newofficers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  min-width: 100% !important; }
 
-}
+.officerPicture {
+  width: 100%;
+  height: auto; }
+
+#meetOfficers {
+  padding-top: 5%; }
+
+#alumni {
+  background-color: #f5f3ee; }
+  #alumni p {
+    font-size: 1.3em;
+    line-height: 150%; }
+
+#featuredAlumni {
+  margin-bottom: 10px; }
+  #featuredAlumni .col-md-4 img {
+    width: 100%; }
+
+#contact {
+  color: #7d1935; }
+  #contact .form-control {
+    font-family: "Open Sans", sans-serif; }
+  #contact .label {
+    font-family: "Open Sans", sans-serif; }
+  #contact .btn-primary {
+    background-color: #7d1935;
+    border-color: #7d1935;
+    color: #fff; }
+    #contact .btn-primary:hover {
+      background-color: #7d1935;
+      color: #f5f3ee; }
+
+footer {
+  background-color: #f5f3ee;
+  padding: 5% 10% 5% 10%; }
+  footer p {
+    margin: 0;
+    font-size: 1.3em;
+    line-height: 150%; }

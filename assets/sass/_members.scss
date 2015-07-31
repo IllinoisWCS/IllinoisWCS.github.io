@@ -1,0 +1,75 @@
+#members {
+  background-color: $offwhite;
+  .btnContainer {
+    margin-bottom: 10px;
+    @extend .center;
+  }
+  a {
+    cursor: default; /* TEMPORARY */
+  }
+}
+
+.memberImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  min-height: 50vh !important;
+  padding: -15 !important;
+  p {
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+  }
+}
+
+@mixin gradientBackground($url) {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url($url);
+}
+
+#techTeam {
+  background-image: url('../img/members/techteam.jpg');
+  &:hover {
+    @include gradientBackground('../img/members/techteam.jpg');
+  }
+}
+
+#mentoring {
+  background-image: url('../img/members/mentoring.jpg');
+  &:hover {
+    @include gradientBackground('../img/members/mentoring.jpg');
+  }
+}
+
+#outreach {
+  background-image: url('../img/members/outreach.jpg');
+  &:hover {
+    @include gradientBackground('../img/members/outreach.jpg');
+  }
+}
+
+#memberportal {
+  background-image: url('../img/members/memberportal.jpg');
+  &:hover {
+    @include gradientBackground('../img/members/memberportal.jpg');
+  }
+}
+
+#events {
+  margin-top: 50px;
+  iframe {
+    width: 100%;
+  }
+}

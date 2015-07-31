@@ -1,0 +1,16 @@
+#alumni {
+	background-color: $offwhite;
+	p {
+		@include pfontspecial();
+	}
+}
+
+#featuredAlumni {
+	.col-md-4 img {
+		width: 100%;
+	}
+	.alumniImage, .alumniText {
+		@extend .center;
+	}
+	margin-bottom: 10px;
+}

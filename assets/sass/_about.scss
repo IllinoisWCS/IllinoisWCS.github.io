@@ -1,0 +1,8 @@
+#about {
+	h1, p {
+		color: $maroon;
+	}
+	p {
+		@include pfontspecial();
+	}
+}

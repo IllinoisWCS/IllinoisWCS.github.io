@@ -1,288 +1,219 @@
-<head>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WCS @ Illinois</title>
+        
+        <meta name="description" content="Women in Computer Science is an organization under CS@Illinois that strives to provide opportunities and a community for female CS students at University of Illinois."/>
+        <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta property="og:title" content="Women in Computer Science"/>
+        <meta property="og:type" content="company"/>
+        <meta property="og:site_name" content="Women in Computer Science"/>
+        <meta property="og:url" content="www.illinoiswcs.org"/>
+        <meta property="og:image" content=""/>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/script.js"></script>
-	<script src="assets/js/jquery.slides.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="assets/lib/fontawesome/css/font-awesome.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"></link>
 
-  <!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
-  <meta name="viewport" content="width=device-width">
-  <!-- End SlidesJS Required -->
+        <script type="text/javascript" src="assets/lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/lib/mustache/mustache.min.js"></script>
+        <script type="text/javascript" src="assets/js/script.js"></script>
+        <script type="text/javascript" src="assets/js/alumni.js"></script>
+    </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+        <nav class="mainNav navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top"><img src="assets/img/wcs/wcsLogo.png" class="img-responsive"></img></a>
+                </div>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden">
+                            <a class="page-scroll" href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#officers">Officers</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#members">Members</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#sponsors">Sponsors</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#alumni">Alumni</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-  <!-- CSS for slidesjs.com example -->
-  
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-  <!-- End CSS for slidesjs.com example -->
+        <div id="home" class="container fill">
+            <div class="overlay">
+                <h1> Welcome to WCS @ Illinois!</h1>
+            </div>
+            <div id="slideshow" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <div class="fill" id="officerCarousel"></div>
+                    </div>
+                    <div class="item">
+                        <div class="fill" id="chictechCarousel"></div>
+                    </div>
+                    <div class="item">
+                        <div class="fill" id="banquetCarousel"></div>
+                    </div>
+                    <div class="item">
+                        <div class="fill" id="splashCarousel"></div>
+                    </div>
+                    <div class="item">
+                        <div class="fill" id="banquet2Carousel"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="about" class="row padded">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 align="center">About Us</h1>
+                <p>Women in Computer Science (WCS) is a student group under CS@Illinois that is a non-profit, educational, student-run service organization dedicated to supporting the efforts of young women who are considering pursuit of a career in computer science or show an overall interest in technology. Because of the number of women pursuing Computer Science has been steadily decreasing, this organization aims to retain and provide a network of support for members to rely on for advice and camaraderie.</p>
+            </div>
+        </div>
+        
+        <div id="officers" class="row padded">
+            <div class="btnContainer">
+                <a href="officers.html"><button type="button" id="meetOfficersBtn" class="btn"><h4>Meet The Officer Board</h4></button></a>
+            </div>
+        </div>
+        
+        <div id="members" class="row padded">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 align="center">Members</h1>
+                <p align="center">More information coming soon!</p>
+                <div class="row">
+                    <div class="btnContainer">
+                        <a href="members.html"><button type="button" id="eventsBtn" class="btn"><h4>Check Out Upcoming Events</h4></button></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="/techteam" target="_blank"><div class="col-md-3"><div class="memberImage" id="techTeam"><p><b>Tech Team</b></p></div></div></a>
+                    <a href="/mentoring" target="_blank"><div class="col-md-3"><div class="memberImage" id="mentoring"><p><b>Mentoring</b></p></div></div></a>
+                    <a href="/outreach" target="_blank"><div class="col-md-3"><div class="memberImage" id="outreach"><p><b>Outreach</b></p></div></div></a>
+                    <div class="col-md-3"><div class="memberImage" id="memberportal"><p><b>Academic Resources</b></p></div></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="sponsors" class="row padded">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 align="center">Sponsors</h1>
+                <h4 align="center">Special Thanks To</h4>
+                <div class="row sponsors-row">
+                    <div class="col-md-2">
+                        <img class="sponsor-small" src="assets/img/logos/cisco.png"></img>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>We have many different types of sponsorship opportunities available. Learn more <a href="https://docs.google.com/document/d/1rcVNyJjD_S43vrQbGVoKmYzzvAd20d3DkkgOPc_8PQs/edit?usp=sharing" target="_blank">here</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <!-- SlidesJS Optional: If you'd like to use this design -->
-  <!-- SlidesJS Optional: If you'd like to use this design -->
-  <style>
-  /*
-    body {
-      -webkit-font-smoothing: antialiased;
-      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      padding-top:70px;
-    }
-*/
-    #slides {
-      display: none
-    }
-
-    #slides .slidesjs-navigation {
-      margin-top:5px;
-    }
-
-    a.slidesjs-next,
-    a.slidesjs-previous,
-    a.slidesjs-play,
-    a.slidesjs-stop {
-      background-image: url(assets/img/slideshow/btns-next-prev.png);
-      background-repeat: no-repeat;
-      display:block;
-      width:12px;
-      height:18px;
-      overflow: hidden;
-      text-indent: -9999px;
-      float: left;
-      margin-right:5px;
-    }
-
-    a.slidesjs-next {
-      margin-right:10px;
-      background-position: -12px 0;
-    }
-
-    a:hover.slidesjs-next {
-      background-position: -12px -18px;
-    }
-
-    a.slidesjs-previous {
-      background-position: 0 0;
-    }
-
-    a:hover.slidesjs-previous {
-      background-position: 0 -18px;
-    }
-
-    a.slidesjs-play {
-      width:15px;
-      background-position: -25px 0;
-    }
-
-    a:hover.slidesjs-play {
-      background-position: -25px -18px;
-    }
-
-    a.slidesjs-stop {
-      width:18px;
-      background-position: -41px 0;
-    }
-
-    a:hover.slidesjs-stop {
-      background-position: -41px -18px;
-    }
-
-    .slidesjs-pagination {
-      margin: 7px 0 0;
-      float: right;
-      list-style: none;
-    }
-
-    .slidesjs-pagination li {
-      float: left;
-      margin: 0 1px;
-    }
-
-    .slidesjs-pagination li a {
-      display: block;
-      width: 13px;
-      height: 0;
-      padding-top: 13px;
-      background-image: url(assets/img/slideshow/pagination.png);
-      background-position: 0 0;
-      float: left;
-      overflow: hidden;
-    }
-
-    .slidesjs-pagination li a.active,
-    .slidesjs-pagination li a:hover.active {
-      background-position: 0 -13px
-    }
-
-    .slidesjs-pagination li a:hover {
-      background-position: 0 -26px
-    }
-
-    .navbar {
-      overflow: hidden
-    }
-  </style>
-  <!-- End SlidesJS Optional-->
-
-  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
-  <style>
-    #slides {
-      display: none
-    }
-
-    .container {
-      margin: 0 auto;
-	  	max-width: 800px;
-
-    }
-
-    /* For tablets & smart phones */
-    @media (max-width: 767px) {
-      body {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-      .container {
-        width: auto;
-      }
-    }
-
-    /* For smartphones */
-    @media (max-width: 480px) {
-      .container {
-        width: auto;
-      }
-    }
-
-    /* For smaller displays like laptops */
-    @media (min-width: 768px) and (max-width: 979px) {
-      .container {
-        width: 724px;
-      }
-    }
-
-    /* For larger displays */
-    @media (min-width: 1200px) {
-      .container {
-        width: 1170px;
-      }
-    }
-  </style>
-  <!-- SlidesJS Required: -->
-
-</head>
-
-<body>
-	
-	<div id="header-nav"> 
-	</div>
-
-	<script>
-		$(function(){
-			$("#header-nav").load("header.html");
-		});
-
-	</script>
-
-
-		<div>
-			<ul class="nav">
-				<li class="nav-active"><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-				<li><a href="members.html">MEMBERS</a></li>
-				<li><a href="current-officers.html">OFFICERS</a></li>
-        <!--<li><a href="alumni.html">ALUMNI</a></li>-->
-				<li><a href="companies.html">COMPANIES</a></li>
-				<li><a href="events.html">EVENTS</a></li>
-			</ul>
-		</div>
-
-		<div id="site-content">
-			<div id="index-page" class="page">
-
-
-			<!--
-		<b>GOALS</b>
-			<ul>
-				<li>To retain and promote women in computer science</li>
-				<li>To challenge women</li>
-				<li>To demonstrate member's skills and abilities</li>
-				<li>To create a supportive environment</li>
-				<li>To expand the knowledge of CS in women and men</li>
-			</ul>
-
-		<b>CONTACT:</b> <a href="mailto:illinoiswcs@gmail.com">illinoiswcs@gmail.com</a></br></br>
--->
-	<!-- SlidesJS Required: Start Slides -->
-	  <!-- The container is used to define the width of the slideshow -->
-
-	  <div class="container">
-	    <div id="slides">
-	      <img src="assets/img/slideshow/slideshow1.png" alt="">
-	      <img src="assets/img/slideshow/slideshow2.png" alt="">
-	      <img src="assets/img/slideshow/slideshow3.png" alt="">
-	      <img src="assets/img/slideshow/slideshow4.png" alt="">
-  	      <img src="assets/img/slideshow/slideshow5.png" alt="">
-  	      <img src="assets/img/slideshow/slideshow6.png" alt="">
-	      <img src="assets/img/slideshow/slideshow7.png" alt="">
-	      <img src="assets/img/slideshow/slideshow8.png" alt="">
-	      <img src="assets/img/slideshow/slideshow9.png" alt="">
-  	      <img src="assets/img/slideshow/slideshow10.png" alt="">
-	      <img src="assets/img/slideshow/slideshow11.png" alt="">
-	      <img src="assets/img/slideshow/slideshow12.png" alt="">
-	      <img src="assets/img/slideshow/slideshow13.png" alt="">
-	      <img src="assets/img/slideshow/slideshow14.png" alt="">
-  	      <img src="assets/img/slideshow/slideshow15.png" alt="">
-	      <img src="assets/img/slideshow/slideshow16.png" alt="">
-	      <img src="assets/img/slideshow/slideshow17.png" alt="">
-	      <img src="assets/img/slideshow/slideshow18.png" alt="">
-	      <img src="assets/img/slideshow/slideshow19.png" alt="">
-	      <img src="assets/img/slideshow/slideshow20.png" alt="">
-	    </div>
-	  </div>
-
-	  <!-- End SlidesJS Required: Start Slides -->
-
-	  <!-- SlidesJS Required: Link to jQuery -->
-	  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	  <!-- End SlidesJS Required -->
-
-	  <!-- SlidesJS Required: Link to jquery.slides.js -->
-	  <script src="assets/js/jquery.slides.min.js"></script>
-	  <!-- End SlidesJS Required -->
-
-	  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
-	  <script>
-	    $(function() {
-	      $('#slides').slidesjs({
-	        width: 940,
-	        height: 528,
-	        play: {
-	          active: true,
-	          auto: true,
-	          interval: 4000,
-	          swap: true
-	        }
-	      });
-	    });
-	  </script>
-	  <!-- End SlidesJS Required -->
-	</br></br>
-
-
-		<b>MISSION STATEMENT</b></br>
-			Women in Computer Science (WCS) is a student group under <a href="http://cs.illinois.edu/">CS@Illinois</a> that is a non-profit, educational, student-run service organization dedicated to supporting the efforts of young women who are considering pursuit of a career in computer science or show an overall interest in technology. Because of the number of women pursuing Computer Science has been steadily decreasing, this organization aims to retain and provide a network of support for members to rely on for advice and camaraderie.</br></br>
-		
-		</div>
-		</div>		
-
-	</div>
-	
-	<script> //Google Analytics
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-51793372-1', 'illinoiswcs.org');
-		ga('send', 'pageview');
-
-	</script>
-</body>
+        <script type="text/x-mustache" id="alumniTemplate">
+            {{#featured.0}}
+                <div class="col-md-4 alumniImage">
+                    <img src="{{img}}"></img>
+                </div>
+                <div class="col-md-8 alumniText">
+                    <div>
+                        <h4 align="center">{{name}}</h4>
+                        <p><b>Degree/Graduation Year</b>: {{degree}}, {{grad}}</p>
+                        <p><b>Involvement</b>: {{involvement}}</p>
+                        <p><b>Where She Is Now</b>: {{where}}</p>
+                    </div>
+                </div>
+            {{/featured.0}}
+        </script>
+        
+        <div id="alumni" class="row padded">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 align="center">Alumni</h1>
+                <div class="row" id="featuredAlumni"></div>
+                <div class="row"><div class="col-md-12"><p align="center">If you are an alumni and would like to learn how to get involved with WCS, feel free to contact us below. We will have more information posted soon. <!--learn more <a href="/alumni">here</a>-->.</p></div></div>
+            </div>
+        </div>
+        
+        <div id="contact" class="row padded">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 align="center">Contact Us</h1>
+                <div class="row">
+                    <form role="form" action="http://formspree.io/illinoiswcs@gmail.com" method="POST">
+                        <div class="form-group col-md-6">
+                            <label for="nameInput">Name</label>
+                            <input class="form-control" type="text" placeholder="Enter Name" id="nameInput" tabindex="1"/>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="emailInput">Email</label>
+                            <input class="form-control" type="text" placeholder="Enter Email" id="emailInput" tabindex="2" />
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="subjectInput">Subject</label>
+                            <input class="form-control" type="text" placeholder="Enter Subject" id="subjectInput" tabindex="3" />
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="messageInput">Message</label>
+                            <textarea class="form-control" name="message" id="messageInput" rows="6" placeholder="Enter Message" tabindex="4"></textarea>
+                            <br/>
+                            <button type="submit" value="Send" class="btn btn-primary" tabindex="5">Send Message</button>
+                        </div>
+                        <input type="text" name="_gotcha" style="display: none" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Women in Computer Science</p>
+                    <p>1318 Siebel Center</p>
+                    <p>201 North Goodwin Avenue</p>
+                    <p>Urbana, IL 61801-2302</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Contact us at:</p>
+                    <p><b><a href="mailto:contact@illinoiswcs.org">contact@illinoiswcs.org</a></b></p>
+                </div>
+                <div class="col-md-4">
+                    <ul id="socialMediaLinks" class="text-center">
+                        <li><a href="http://www.facebook.com/illinoiswcs"><i class="fa fa-facebook-square fa-4x"></i></a></li>
+                        <li><a href="http://www.twitter.com/illinoiswcs"><i class="fa fa-twitter-square fa-4x"></i></a></li>
+                        <li><a href="http://www.linkedin.com/groups?home=&gid=4473443"><i class="fa fa-linkedin-square fa-4x"></i></a></li>
+                        <li><a href="http://www.instagram.com/illinoiswcs"><i class="fa fa-instagram fa-4x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

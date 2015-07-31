@@ -1,0 +1,18 @@
+#contact {
+	color: $maroon;
+	.form-control {
+		font-family: $paragraphfont;
+	}
+	.label {
+		font-family: $paragraphfont;
+	}
+	.btn-primary {
+		background-color: $maroon;
+		border-color: $maroon;
+		color: $white;
+		&:hover {
+			background-color: $maroon;
+			color: $offwhite;
+		}
+	}
+}	

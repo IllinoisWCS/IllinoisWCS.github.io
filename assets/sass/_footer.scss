@@ -1,0 +1,8 @@
+footer {
+	background-color: $offwhite;
+	padding: 5% 10% 5% 10%;
+	p {
+		margin: 0;
+		@include pfontspecial();
+	}
+}
