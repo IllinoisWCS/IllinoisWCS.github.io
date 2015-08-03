@@ -16,7 +16,7 @@ $(document).ready(function() {
 				"degree": "Bachelor's in Computer Science",
 				"grad": "May 2014",
 				"involvement": "2010-2011 member, 2012-2014 Secretary",
-				"where": "Product Manager at Microsoft",
+				"where": "Program Manager at Microsoft",
 				"img": "assets/img/alumni/juliasyi.jpg"
 			},
 			{
