@@ -229,6 +229,8 @@ a {
   .sponsors-row .sponsor-small {
     vertical-align: center;
     width: 100%; }
+  .sponsors-row #rockwell {
+    padding-top: 15px; }
 
 #sponsors {
   color: #7d1935; }
