@@ -231,6 +231,10 @@ a {
     width: 100%; }
   .sponsors-row #rockwell {
     padding-top: 15px; }
+  .sponsors-row #medallia {
+    padding-top: 30px; }
+  .sponsors-row #pwc {
+    width: 80%; }
 
 #sponsors {
   color: #7d1935; }
