@@ -174,9 +174,6 @@ a {
   background-color: #f5f3ee; }
   #members .btnContainer {
     margin-bottom: 10px; }
-  #members a {
-    cursor: default;
-    /* TEMPORARY */ }
 
 .memberImage {
   background-repeat: no-repeat;
