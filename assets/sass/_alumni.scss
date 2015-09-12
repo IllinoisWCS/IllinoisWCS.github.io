@@ -14,3 +14,12 @@
 	}
 	margin-bottom: 10px;
 }
+
+.carousel-indicators {
+	li {
+		background-color: $maroon;
+		&.active {
+			background-color: $maroon;
+		}
+	}
+}

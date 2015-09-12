@@ -193,7 +193,8 @@
         </div>
 
         <script type="text/x-mustache" id="alumniTemplate">
-            {{#featured.0}}
+            {{#featured}}
+            <div class="item">
                 <div class="col-md-4 alumniImage">
                     <img src="{{img}}"></img>
                 </div>
@@ -205,14 +206,31 @@
                         <p><b>Where She Is Now</b>: {{where}}</p>
                     </div>
                 </div>
-            {{/featured.0}}
+            </div>    
+            {{/featured}}
+        </script>
+
+        <script type="text/x-mustache" id="alumniCarouselIndicatorTemplate">
+            {{#featured}}
+            <li class="indicator" data-target="#alumniSlideshow" data-slide-to="{{i}}"></li>
+            {{/featured}}
         </script>
         
         <div id="alumni" class="row padded">
             <div class="col-sm-offset-1 col-md-10">
                 <h1 align="center">Alumni</h1>
-                <div class="row" id="featuredAlumni"></div>
-                <div class="row"><div class="col-md-12"><p align="center">If you are an alumni and would like to learn how to get involved with WCS, please fill out this <a href="http://goo.gl/forms/ZDH62DscXa" target="_blank">form</a>. See more of our alumni <a href="/alumni">here</a>.</p></div></div>
+                <div class="row" id="featuredAlumni">
+                    <div id="alumniSlideshow" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators"></ol>
+                        <div class="carousel-inner">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p align="center">If you are an alumni and would like to learn how to get involved with WCS, please fill out this <a href="http://goo.gl/forms/ZDH62DscXa" target="_blank">form</a>. See more of our alumni <a href="/alumni">here</a>.</p>
+                    </div>
+                </div>
             </div>
         </div>
         

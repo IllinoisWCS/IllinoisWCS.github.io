@@ -25,7 +25,6 @@
     left: 50%;
     font-size: 2rem;
     transform: translate(-50%, -50%);
-    visibility: hidden;
   }
 }
 
@@ -38,30 +37,22 @@
 
 #techTeam {
   background-image: url('../img/members/techteam.jpg');
-  &:hover {
-    @include gradientBackground('../img/members/techteam.jpg');
-  }
+  @include gradientBackground('../img/members/techteam.jpg');
 }
 
 #mentoring {
   background-image: url('../img/members/mentoring.jpg');
-  &:hover {
-    @include gradientBackground('../img/members/mentoring.jpg');
-  }
+  @include gradientBackground('../img/members/mentoring.jpg');
 }
 
 #outreach {
   background-image: url('../img/members/outreach.jpg');
-  &:hover {
-    @include gradientBackground('../img/members/outreach.jpg');
-  }
+  @include gradientBackground('../img/members/outreach.jpg');
 }
 
 #memberportal {
   background-image: url('../img/members/memberportal.jpg');
-  &:hover {
-    @include gradientBackground('../img/members/memberportal.jpg');
-  }
+  @include gradientBackground('../img/members/memberportal.jpg');
 }
 
 #events {

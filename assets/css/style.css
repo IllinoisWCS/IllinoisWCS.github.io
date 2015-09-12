@@ -103,23 +103,23 @@ a {
     padding: 0; } }
 
 /* Individual Divs */
-.carousel {
+#slideshow {
   height: 100%; }
 
-.carousel-inner {
+#slideshow .carousel-inner {
   height: 100%; }
-  .carousel-inner .item {
+  #slideshow .carousel-inner .item {
     opacity: 0.6;
     transition-property: opacity;
     width: 100% !important;
     min-height: 100% !important;
     overflow: hidden;
     height: 100%; }
-    .carousel-inner .item img {
+    #slideshow .carousel-inner .item img {
       position: relative;
       overflow: hidden;
       height: 100%; }
-  .carousel-inner .active {
+  #slideshow .carousel-inner .active {
     opacity: 0.75;
     height: 100%; }
 
@@ -193,28 +193,23 @@ a {
     top: 50%;
     left: 50%;
     font-size: 2rem;
-    transform: translate(-50%, -50%);
-    visibility: hidden; }
+    transform: translate(-50%, -50%); }
 
 #techTeam {
-  background-image: url("../img/members/techteam.jpg"); }
-  #techTeam:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/techteam.jpg"); }
+  background-image: url("../img/members/techteam.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/techteam.jpg"); }
 
 #mentoring {
-  background-image: url("../img/members/mentoring.jpg"); }
-  #mentoring:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/mentoring.jpg"); }
+  background-image: url("../img/members/mentoring.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/mentoring.jpg"); }
 
 #outreach {
-  background-image: url("../img/members/outreach.jpg"); }
-  #outreach:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/outreach.jpg"); }
+  background-image: url("../img/members/outreach.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/outreach.jpg"); }
 
 #memberportal {
-  background-image: url("../img/members/memberportal.jpg"); }
-  #memberportal:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/memberportal.jpg"); }
+  background-image: url("../img/members/memberportal.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/memberportal.jpg"); }
 
 #events {
   margin-top: 50px; }
@@ -269,6 +264,11 @@ a {
   margin-bottom: 10px; }
   #featuredAlumni .col-md-4 img {
     width: 100%; }
+
+.carousel-indicators li {
+  background-color: #7d1935; }
+  .carousel-indicators li.active {
+    background-color: #7d1935; }
 
 #contact {
   color: #7d1935; }

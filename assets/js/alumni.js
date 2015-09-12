@@ -17,7 +17,8 @@ $(document).ready(function() {
 				"grad": "May 2014",
 				"involvement": "2010-2011 member, 2012-2014 Secretary",
 				"where": "Program Manager at Microsoft",
-				"img": "assets/img/alumni/juliasyi.jpg"
+				"img": "assets/img/alumni/juliasyi.jpg",
+				"i": 0
 			},
 			{
 				"name": "Lavanya Iyer",
@@ -25,7 +26,17 @@ $(document).ready(function() {
 				"grad": "May 2014",
 				"involvement": "2012-2014 President",
 				"where": "Technology Analyst at Goldman Sachs",
-				"img": ""
+				"img": "assets/img/alumni/lavanyaiyer.jpg",
+				"i": 1
+			},
+			{
+				"name": "Kamilah Taylor",
+				"degree": "Master's in Computer Science",
+				"grad": "2010",
+				"involvement": "2007-2008 member, 2008-2010 Grad Representative",
+				"where": "Software Engineer at LinkedIn",
+				"img": "assets/img/alumni/kamilahtaylor.jpg",
+				"i": 2
 			}
 		]
 	};
@@ -33,5 +44,9 @@ $(document).ready(function() {
 	//shuffle(featuredAlumni.featured);
 
 	var template = Mustache.render($('#alumniTemplate').html(), featuredAlumni);
-	$('#featuredAlumni').html(template);
+	$('#alumniSlideshow .carousel-inner').html(template);
+	var template2 = Mustache.render($('#alumniCarouselIndicatorTemplate').html(), featuredAlumni);
+	$('.carousel-indicators').html(template2);
+	$('#alumniSlideshow .carousel-inner .item').first().addClass('active');
+	$('.carousel-indicators .indicator').first().addClass('active');
 });

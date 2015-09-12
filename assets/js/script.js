@@ -1,12 +1,6 @@
 $(document).ready(function() {
-    $('div.memberImage').hover(function(event) {
-        $(this).children().css('visibility', 'visible');
-    }, function(event) {
-        $(this).children().css('visibility', 'hidden');
-    });
-
     $("#slideshow").carousel({
-        interval: 4000
+        interval: 5000
     });
 
     $('a.page-scroll').bind('click', function(event) {
