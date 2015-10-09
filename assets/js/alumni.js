@@ -37,6 +37,24 @@ $(document).ready(function() {
 				"where": "Software Engineer at LinkedIn",
 				"img": "assets/img/alumni/kamilahtaylor.jpg",
 				"i": 2
+			},
+			{
+				"name": "Emily Tran",
+				"degree": "Bachelor's in Computer Science",
+				"grad": "May 2015",
+				"involvement": "2014-2015 President, 2013-2014 Vice President",
+				"where": "Program Manager at Microsoft",
+				"img": "assets/img/alumni/emilytran.jpg",
+				"i": 3
+			},
+			{
+				"name": "Deepti Gupta",
+				"degree": "Bachelor's in Computer Science",
+				"grad": "May 2015",
+				"involvement": "2014-2015 Treasurer",
+				"where": "Software Engineer at PayPal",
+				"img": "assets/img/alumni/deeptigupta.jpg",
+				"i": 4
 			}
 		]
 	};
