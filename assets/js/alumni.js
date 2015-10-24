@@ -55,6 +55,15 @@ $(document).ready(function() {
 				"where": "Software Engineer at PayPal",
 				"img": "assets/img/alumni/deeptigupta.jpg",
 				"i": 4
+			},
+			{
+				"name": "Anne Dailidonis",
+				"degree": "Bachelor's in Computer Science",
+				"grad": "May 2014",
+				"involvement": "2013-2014 Mentoring Director",
+				"where": "Analyst at JP Morgan Chase",
+				"img": "assets/img/alumni/annedailidonis.jpeg",
+				"i": 5
 			}
 		]
 	};
