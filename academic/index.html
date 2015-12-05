@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WCS Academic Resources</title>
+        
+        <meta name="description" content="Check out some resources we've compiled for our members."/>
+        <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta property="og:title" content="Academic"/>
+        <meta property="og:type" content="company"/>
+        <meta property="og:site_name" content="Women in Computer Science"/>
+        <meta property="og:url" content="www.illinoiswcs.org"/>
+        <meta property="og:image" content=""/>
+
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap/dist/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="/assets/lib/fontawesome/css/font-awesome.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css"></link>
+        
+        <script type="text/javascript" src="/assets/lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="/assets/lib/mustache/mustache.min.js"></script>
+        <script type="text/javascript" src="/assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="/assets/js/academic.js"></script>
+    </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+        <nav class="mainNav navbar navbar-default navbar-fixed-top top-nav-collapse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="/assets/img/wcs/wcsLogo.png" class="img-responsive"></img></a>
+                </div>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden">
+                            <a class="page-scroll" href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#resources">Resources</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#interview">Practice Interviews</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#ask">Questions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <script type="text/x-mustache" id="resourcesTemplate">
+            {{#values}}
+            <div class="col-md-2 col-sm-2 grid-item {{#filters}}{{.}} {{/filters}} {{#languages}}{{.}} {{/languages}}">
+                <a href="{{link}}" target="_blank"><h4 align="center">{{title}}</h4></a>
+            </div>
+            {{/values}}
+        </script>
+
+        <script type="text/x-mustache" id="categoryTemplate">
+            <p align="center">
+            {{#list}}
+                {{^href}}
+                    <a class="categoryFilter" href="{{text}}"><span class="label label-default">{{text}}</span></a>
+                {{/href}}
+                {{#href}}
+                    <a class="categoryFilter" href="{{href}}"><span class="label label-default">{{text}}</span></a>
+                {{/href}}
+            {{/list}}
+            </p>
+        </script>
+
+        <div class="row padded" id="resources">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 align="center">Recommended Resources</h1>
+                <p align="center">Click on the filters at the top to filter each type of resource.</p>
+            </div>
+            <div class="col-sm-offset-1 col-md-10">
+                <div id="resourceCategories" class="row"></div>
+                <div id="allResources" class="row"></div>
+            </div>
+        </div>
+
+        <div class="row padded" id="interview">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 align="center">Practice Interviews</h1>
+                <a href="https://www.google.com/calendar/selfsched?sstoken=UUw1dkVubl9ZalVufGRlZmF1bHR8NGE4ODg2MGJmZTRiNzUzNTQ1YWI3YTQ1YTRjM2M5ZmQ" target="_blank"><p align="center">Click here to sign up for a practice interview during our office hours.</p></a>
+            </div>
+        </div>
+
+        <div class="row padded" id="ask">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 align="center">Ask Us a Question</h1>
+                <p align="center">Whether's it's about classes at UIUC, internship interview questions, or other things on your mind, just fill out the below form and we'll be in touch shortly with answers or resources.</p>
+                <div class="iframeOutside">
+                    <iframe align="center" src="https://docs.google.com/a/illinois.edu/forms/d/1wTa1VvaicxGbb-LFpgfXRWjKGTFNkT7iXsEHc1IB83E/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Women in Computer Science</p>
+                    <p>1318 Siebel Center</p>
+                    <p>201 North Goodwin Avenue</p>
+                    <p>Urbana, IL 61801-2302</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Contact us at:</p>
+                    <p><b><a href="mailto:contact@illinoiswcs.org">contact@illinoiswcs.org</a></b></p>
+                </div>
+                <div class="col-md-4">
+                    <ul id="socialMediaLinks" class="text-center">
+                        <li><a href="http://www.facebook.com/illinoiswcs"><i class="fa fa-facebook-square fa-4x"></i></a></li>
+                        <li><a href="http://www.twitter.com/illinoiswcs"><i class="fa fa-twitter-square fa-4x"></i></a></li>
+                        <li><a href="http://www.linkedin.com/groups?home=&gid=4473443"><i class="fa fa-linkedin-square fa-4x"></i></a></li>
+                        <li><a href="http://www.instagram.com/illinoiswcs"><i class="fa fa-instagram fa-4x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        
+        <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51793372-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    </body>
+</html>

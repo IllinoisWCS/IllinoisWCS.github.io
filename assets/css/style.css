@@ -43,7 +43,7 @@ p {
     color: #000;
     background-color: #999; }
 
-.center, .overlay, #members .btnContainer, #officers, #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
+.center, .overlay, #members .btnContainer, #officers, #outreachMain, #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -170,6 +170,19 @@ a {
   font-size: 1.3em;
   line-height: 150%; }
 
+.iframeOutside {
+  text-align: center; }
+
+.panel {
+  border: none; }
+  .panel .panel-heading {
+    border: none;
+    background-color: #fff;
+    border-color: #fff; }
+
+.iframeOutside {
+  text-align: center; }
+
 #members {
   background-color: #f5f3ee; }
   #members .btnContainer {
@@ -216,6 +229,9 @@ a {
   #events iframe {
     width: 100%; }
 
+.col-md-4 img {
+  width: 100%; }
+
 .sponsors-row {
   padding-bottom: 2%; }
   .sponsors-row .sponsor-small {
@@ -254,6 +270,27 @@ a {
 #meetOfficers {
   padding-top: 5%; }
 
+#outreachMain {
+  background-image: url("../img/wcs/chictech.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  min-width: 100% !important;
+  opacity: 0.75; }
+  #outreachMain h1 {
+    color: #fff; }
+
+.panel {
+  border: none; }
+  .panel .panel-heading {
+    border: none;
+    background-color: #fff;
+    border-color: #fff; }
+
 #alumni {
   background-color: #f5f3ee; }
   #alumni p {
@@ -269,6 +306,10 @@ a {
   background-color: #7d1935; }
   .carousel-indicators li.active {
     background-color: #7d1935; }
+
+.alumniPicture {
+  width: 100%;
+  height: auto; }
 
 #contact {
   color: #7d1935; }
