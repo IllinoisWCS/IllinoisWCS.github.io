@@ -2,12 +2,12 @@
   "name": "illinoiswcswebsite",
   "version": "1.0.0",
   "description": "The official website for WCS at the University of Illinois at Urbana-Champaign.",
-  "main": "gulpfile.js",
-  "dependencies": {
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-sass": "^2.1.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,7 @@
     "wcs"
   ],
   "author": "Emily Chao",
-  "license": "ISC",
+  "license": "none",
   "bugs": {
     "url": "https://github.com/IllinoisWCS/IllinoisWCS.github.io/issues"
   },
