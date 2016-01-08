@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>WCS Members</title>
-        
+
         <meta name="description" content="Resources for members of WCS"/>
         <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -18,16 +18,17 @@
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-        
+
         <link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap/dist/css/bootstrap.min.css"></link>
         <link rel="stylesheet" type="text/css" href="/assets/lib/fontawesome/css/font-awesome.min.css"></link>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css"></link>
-        
+
         <script type="text/javascript" src="/assets/lib/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="/assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
         <script type="text/javascript" src="/assets/lib/mustache/mustache.min.js"></script>
         <script type="text/javascript" src="/assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
         <script type="text/javascript" src="/assets/js/disable-script.js"></script>
+        <script type="text/javascript" src="/assets/js/members.js"></script>
     </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
         <nav class="mainNav navbar navbar-default navbar-fixed-top top-nav-collapse">
@@ -50,6 +51,9 @@
                             <a class="page-scroll" href="#events">Events</a>
                         </li>
                         <li>
+                            <a class="page-scroll" href="#points">Check Your Points</a>
+                        </li>
+                        <li>
                             <a class="page-scroll" href="#map">Map</a>
                         </li>
                     </ul>
@@ -64,6 +68,38 @@
             </div>
         </div>
 
+        <script type="text/x-mustache" id="pointTemplate">
+            {{#message}}
+            <p>{{message}}</p>
+            <p>Please <a href="mailto:illinoiswcs@gmail.com">contact us</a> to resolve this issue.</p>
+            {{/message}}
+            {{^message}}
+            <h4>Statistics for {{#netid}}{{.}}{{/netid}}</h4>
+            <p># of Points: {{points}}</p>
+            <p>Active: {{#isActive}} Yes{{/isActive}}{{^isActive}}No{{/isActive}}</p>
+            <ul class="list-group">
+            {{#events}}
+                <li class="list-group-item">{{.}}</li>
+            {{/events}}
+            </ul>
+            <p>Got a question about your points? <a href="mailto:illinoiswcs@gmail.com">Contact us</a> to resolve any issues.</p>
+            {{/message}}
+        </script>
+
+        <div class="row padded" id="points">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 align="center">Check Your Points</h1>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="netid">Netid</label>
+                        <input type="text" class="form-control"  id="netid" placeholder="hpotter3">
+                    </div>
+                    <button class="btn btn-default" onclick="getPoints()">Submit</button>
+                </form>
+                <div id="stats"></div>
+            </div>
+        </div>
+
         <div class="row padded" id="map">
             <div class="col-sm-offset-1 col-md-10">
                 <h1 align="center">Where Are You Working?</h1>
@@ -75,7 +111,7 @@
                 </video>
             </div>
         </div>
-        
+
         <footer>
             <div class="row">
                 <div class="col-md-4">
@@ -99,7 +135,7 @@
             </div>
         </footer>
 
-        
+
         <script type="text/javascript" src="/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
