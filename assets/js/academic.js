@@ -351,6 +351,48 @@ $(document).ready(function() {
                 "languages":[
                     ""
                 ]
+            },
+            {
+                "title": "Awesome C++",
+                "link": "https://github.com/fffaraz/awesome-cpp",
+                "filters": [
+                    "classes"
+                ],
+                "languages": [
+                    "Cpp"
+                ]
+            },
+            {
+                "title": "Frontend Dev Bookmarks",
+                "link": "https://gist.github.com/dypsilon/5819504",
+                "filters": [
+                    "webdevelopment"
+                ],
+                "languages": [
+                    ""
+                ]
+            },
+            {
+                "title": "Java Intro",
+                "link": "http://www.whoishostingthis.com/resources/java-programming/",
+                "filters": [
+                    "beginner",
+                    "classes"
+                ],
+                "languages": [
+                    "Java"
+                ]
+            },
+            {
+                "title": "Stack Overflow",
+                "link": "http://stackoverflow.com/",
+                "filters": [
+                    "reference",
+                    "help"
+                ],
+                "languages": [
+                    ""
+                ]
             }
         ]
     };
