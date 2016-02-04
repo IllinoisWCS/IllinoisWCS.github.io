@@ -1,4 +1,4 @@
-var requestURL = 'http://script.google.com/a/macros/illinois.edu/s/AKfycbwSzrQxspuOMiXKZLFdbQDUFm3jI1cYcfAcpeM87DM/dev';
+var requestURL = 'https://script.google.com/macros/s/AKfycbw4xxn9dJktu0RVJlCGQ6mIGld9BTzqc24P0bvNMWkB_SC-vmw/exec';
 
 var getPoints = function() {
     var netid = $('#netid').val();
