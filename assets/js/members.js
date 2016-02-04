@@ -15,7 +15,13 @@ var getPoints = function() {
                 $('#stats').html('<p>Something went wrong. Please let us know. We are sorry for the inconvenienc.</p>');
             }
         });
+        $('#stats').html('<p>Loading...</p>');
     } else {
         $('#stats').html('<p>Please enter a valid netid.</p>');
     }
+    return false;
 }
+
+$(function() {
+    $('#points-form').submit(getPoints);
+});
