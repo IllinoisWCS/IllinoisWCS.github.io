@@ -15,7 +15,7 @@ $(document).ready(function() {
 				"name": "Julia Syi",
 				"degree": "Bachelor's in Computer Science",
 				"grad": "May 2014",
-				"involvement": "2010-2011 member, 2012-2014 Secretary",
+				"involvement": "2010-2011 Member, 2012-2014 Secretary",
 				"where": "Program Manager at Microsoft",
 				"img": "assets/img/alumni/juliasyi.jpg",
 				"i": 0
@@ -64,6 +64,24 @@ $(document).ready(function() {
 				"where": "Analyst at JP Morgan Chase",
 				"img": "assets/img/alumni/annedailidonis.jpeg",
 				"i": 5
+			},
+			{
+				"name": "Gergana Slavova",
+				"degree": "Bachelor's in Computer Science",
+				"grad": "May 2005",
+				"involvement": "Mentoring Chair, Tech Team Chair, Vice President, Co-President",
+				"where": "Software Engineer at Intel Corporation in Champaign, IL",
+				"img": "assets/img/alumni/gerganaslavova.jpg",
+				"i": 6
+			},
+			{
+				"name": "Fernanda Richnak",
+				"degree": "Bachelor's in Computer Science",
+				"grad": "May 2010",
+				"involvement": "2009-2010 President",
+				"where": "Program Manager at Microsoft",
+				"img": "assets/img/alumni/fernandarichnak.png",
+				"i": 7
 			}
 		]
 	};

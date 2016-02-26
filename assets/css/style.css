@@ -301,6 +301,8 @@ a {
   margin-bottom: 10px; }
   #featuredAlumni .col-md-4 img {
     width: 100%; }
+  #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
+    height: 300px; }
 
 .carousel-indicators li {
   background-color: #7d1935; }

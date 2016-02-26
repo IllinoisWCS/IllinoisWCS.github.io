@@ -11,6 +11,7 @@
 	}
 	.alumniImage, .alumniText {
 		@extend .center;
+		height: 300px;
 	}
 	margin-bottom: 10px;
 }
@@ -26,5 +27,5 @@
 
 .alumniPicture {
 	width: 100%;
-  	height: auto;
+  height: auto;
 }
