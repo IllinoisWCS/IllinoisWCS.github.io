@@ -82,13 +82,22 @@ $(document).ready(function() {
         "img": "/assets/img/alumni/gerganaslavova.jpg"
       },
       {
-        "name": "Fernanda Richnak",
+        "name": "Fernanda (Mendes) Richnak",
         "id": "fernandarichnak",
         "degree": "Bachelor's in Computer Science",
         "grad": "May 2010",
         "involvement": "2009-2010 President",
         "where": "Program Manager at Microsoft",
         "img": "/assets/img/alumni/fernandarichnak.png"
+      },
+      {
+        "name": "Yalan (Maya) Meng",
+        "id": "mayameng",
+        "degree": "Bachelor's in Computer Science",
+        "grad": "May 2015",
+        "involvement": "2013-2014 Tech Team Director",
+        "where": "Software Engineer at Google San Francisco",
+        "img": "/assets/img/alumni/mayameng.jpg"
       }
     ]
   };
