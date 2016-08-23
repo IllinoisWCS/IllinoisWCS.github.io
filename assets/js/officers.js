@@ -385,7 +385,7 @@ $(document).ready(function() {
               "Art and Craft"
           ],
           "fact": "The last time I partied really hard, I ended up teaching Punjabi dance to a bunch of non-Indians. Beware!",
-          "place": "",
+          "place": "New Delhi, India",
           "ask": []
         }
       ]
