@@ -6,7 +6,7 @@ $(document).ready(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
-    
+
     var officers = {
         "prez": [
         {
@@ -67,8 +67,8 @@ $(document).ready(function() {
           "fact": "I have a twin sister!",
           "place": "Foster City, CA",
           "ask": [
-            "Interning at Microsoft", 
-            "independent study", 
+            "Interning at Microsoft",
+            "independent study",
             "studying abroad"
           ]
         }
@@ -137,8 +137,8 @@ $(document).ready(function() {
           "fact": "I lived in Canada for 7 months.",
           "place": "Arlington Heights, IL",
           "ask": [
-            "TA CS 225 and 205", 
-            "transfer student", 
+            "TA CS 225 and 205",
+            "transfer student",
             "course dev with Cinda Heeren"
           ]
         },
@@ -238,14 +238,14 @@ $(document).ready(function() {
           "fact": "I have a huge family-between 40 and 50 first cousins!",
           "place": "Forrest, IL",
           "ask": [
-            "working in Research Park", 
-            "interning at Bank of America", 
-            "courseload and course selection", 
-            "CS 125", 
-            "CS 225", 
-            "the WIMSE LLC", 
-            "attending GHC", 
-            "transferring from LAS to Engineering", 
+            "working in Research Park",
+            "interning at Bank of America",
+            "courseload and course selection",
+            "CS 125",
+            "CS 225",
+            "the WIMSE LLC",
+            "attending GHC",
+            "transferring from LAS to Engineering",
             "Grey's Anatomy"
           ]
         },
@@ -273,10 +273,10 @@ $(document).ready(function() {
           "fact": "Dance is my stress buster! I absolutely love dancing, which includes dancing between coding if needed to destress! ",
           "place": "Calcutta, India",
           "ask": [
-            "CA for CS 125", 
-            "interning at Microsoft", 
-            "switching from CE to CS", 
-            "TA for ECE 110", 
+            "CA for CS 125",
+            "interning at Microsoft",
+            "switching from CE to CS",
+            "TA for ECE 110",
             "choosing easy gen-eds"
           ]
         },
