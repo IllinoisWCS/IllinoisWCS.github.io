@@ -1,4 +1,4 @@
-var requestURL = 'http://script.google.com/macros/s/AKfycbw4xxn9dJktu0RVJlCGQ6mIGld9BTzqc24P0bvNMWkB_SC-vmw/exec';
+var requestURL = 'https://script.google.com/macros/s/AKfycbwIBqC9lJHJGNGlrTQqy-NJC_QlvETx0-jQcYWXJUyoIrdFmFei/exec';
 
 var getPoints = function() {
     var netid = $('#netid').val();
@@ -12,7 +12,7 @@ var getPoints = function() {
                 $('#stats').html(template);
             },
             error: function(error) {
-                $('#stats').html('<p>Something went wrong. Please let us know. We are sorry for the inconvenienc.</p>');
+                $('#stats').html('<p>Something went wrong. Please let us know. We are sorry for the inconvenience.</p>');
             }
         });
         $('#stats').html('<p>Loading...</p>');
