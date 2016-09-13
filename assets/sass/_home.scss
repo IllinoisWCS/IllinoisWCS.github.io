@@ -29,14 +29,14 @@
   overflow: hidden;
 }
 
-.fill {
+.splash-fill {
   width: 100%;
   height: 100%;
   background-position: center;
   background-size: cover;
 }
 
-.overlay {
+.splash-overlay {
   position: absolute;
   z-index: 100;
   top: calc(50% - 1.5em);
@@ -51,26 +51,6 @@
   width: auto;
   height: 1000px;
   h1 {
-    color: $white;
+    color: $offblack;
   }
-}
-
-#officerCarousel {
-  background-image: url(../img/slideshow/allofficers.jpg);
-}
-
-#chictechCarousel {
-  background-image: url(../img/slideshow/chictech.jpg);
-}
-
-#banquetCarousel {
-  background-image: url(../img/slideshow/banquet.jpg);
-}
-
-#splashCarousel {
-  background-image: url(../img/slideshow/splash.jpg);
-}
-
-#banquet2Carousel {
-  background-image: url(../img/slideshow/banquet2.jpg);
 }
