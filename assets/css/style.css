@@ -43,7 +43,7 @@ p {
     color: #000;
     background-color: #999; }
 
-.center, .splash-overlay, #members .btnContainer, #officers, #outreachMain, #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
+.center, .splash-overlay, #members .btnContainer, #outreachMain, #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -237,15 +237,7 @@ a {
     color: #000; }
 
 #officers {
-  background-image: url("../img/wcs/newofficers.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  width: 100% !important;
-  height: 100vh !important;
-  min-height: 100vh !important;
-  min-width: 100% !important; }
+  width: 70%; }
 
 .officerPicture {
   width: 100%;

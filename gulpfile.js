@@ -24,6 +24,7 @@ gulp.task('browserSync', function() {
 // Watch the sass files and reload when they chance
 gulp.task('watch', ['browserSync', 'sass'], function() {
 	gulp.watch('./assets/sass/*.scss', ['sass']);
+	gulp.watch('index.html', browserSync.reload)
 });
 
 // Run 'gulp' in the command line

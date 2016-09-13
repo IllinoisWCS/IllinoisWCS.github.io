@@ -1,14 +1,5 @@
 #officers {
-  background-image: url('../img/wcs/newofficers.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  width: 100% !important;
-  height: 100vh !important;
-  min-height: 100vh !important;
-  min-width: 100% !important;
-  @extend .center;
+  width: 70%;
 }
 
 .officerPicture {

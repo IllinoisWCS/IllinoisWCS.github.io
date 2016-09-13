@@ -29,6 +29,7 @@
         <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/lib/mustache/mustache.min.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
+        <script type="text/javascript" src="/assets/js/officers.js"></script>
         <script type="text/javascript" src="assets/js/alumni.js"></script>
     </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -41,7 +42,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top"><img src="assets/img/wcs/wcsLogo.png" class="img-responsive"></img></a>
+                    <a class="navbar-brand page-scroll" href="#page-top"><img src="assets/img/wcs/wcsLogo.png" class="img-responsive" /></a>
                 </div>
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="nav navbar-nav">
@@ -52,13 +53,13 @@
                             <a class="page-scroll" href="#about">About</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#officers">Officers</a>
-                        </li>
-                        <li>
                             <a class="page-scroll" href="#members">Members</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#sponsors">Sponsors</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#officers">Officers</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#alumni">Alumni</a>
@@ -71,7 +72,7 @@
             </div>
         </nav>
 
-        <div id="home" class="container splash-fill">
+        <div id="home" class="container row splash-fill">
             <div class="splash-overlay">
                 <h1>WCS @ Illinois</h1>
             </div>
@@ -81,12 +82,6 @@
             <div class="col-sm-offset-1 col-md-10">
                 <h1 align="center">About Us</h1>
                 <p>Women in Computer Science (WCS) is a student group under CS@Illinois that is a non-profit, educational, student-run organization dedicated to supporting the efforts of young women who are considering pursuit of a career in computer science or show an overall interest in technology. Because of the number of women pursuing Computer Science has been steadily decreasing, this organization aims to retain and provide a network of support for members to rely on for advice and camaraderie.</p>
-            </div>
-        </div>
-
-        <div id="officers" class="row padded">
-            <div class="btnContainer">
-                <a href="/officers"><button type="button" id="meetOfficersBtn" class="btn"><h4>Meet The Officer Board</h4></button></a>
             </div>
         </div>
 
@@ -152,6 +147,123 @@
                     <div class="col-md-12">
                         <p>We have many different types of sponsorship opportunities available. Learn more <a href="https://docs.google.com/document/d/1OAnENtdnkBbYVFLjgzm31e0FT82ETpw35FiBdNTLxrg/pub" target="_blank">here</a>.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/x-mustache" id="officerTemplate">
+            <div class="row">
+                {{#prez}}
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        <img src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
+                        <div class="caption">
+                            <h4 align="center">{{firstname}} {{lastname}}</h4>
+                            <p align="center">{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="{{netid}}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">{{firstname}} {{lastname}} - {{position}}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="officerPicture" src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}">
+                                        </img>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><b>{{major}}</b></p>
+                                        <p><b>{{year}}</b></p>
+                                        <p><b>Interests: </b>
+                                        {{#interests}}
+                                            <span class="label label-default">{{.}}</span>
+                                        {{/interests}}</p>
+                                        <p><b>Hobbies: </b>
+                                        {{#hobbies}}
+                                            <span class="label label-success">{{.}}</span>
+                                        {{/hobbies}}</p>
+                                        <br/>
+                                        <p><b>Fun fact: </b>{{fact}}</p>
+                                        <p><b>From: </b>{{place}}</p>
+                                        <p><b>Ask me about: </b></p>
+                                        {{#ask}}
+                                            <span class="label label-primary">{{.}}</span>
+                                        {{/ask}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/prez}}
+            </div>
+            <div class="row">
+                {{#admin}}
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
+                        <div class="caption">
+                            <h4 align="center">{{firstname}} {{lastname}}</h4>
+                            <p align="center">{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="{{netid}}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">{{firstname}} {{lastname}} - {{position}}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="officerPicture" src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}">
+                                        </img>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><b>{{major}}</b></p>
+                                        <p><b>{{year}}</b></p>
+                                        <p><b>Interests: </b>
+                                        {{#interests}}
+                                            <span class="label label-default">{{.}}</span>
+                                        {{/interests}}</p>
+                                        <p><b>Hobbies: </b>
+                                        {{#hobbies}}
+                                            <span class="label label-success">{{.}}</span>
+                                        {{/hobbies}}</p>
+                                        <br/>
+                                        <p><b>Fun fact: </b>{{fact}}</p>
+                                        <p><b>From: </b>{{place}}</p>
+                                        <p><b>Ask me about: </b></p>
+                                        {{#ask}}
+                                            <span class="label label-primary">{{.}}</span>
+                                        {{/ask}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/admin}}
+            </div>
+        </script>
+
+        <div id="officers" class="row">
+            <div class="row" id="meetOfficers">
+                <h1 style="text-align:center">The Officer Board</h1>
+                <div id="allOfficers" class="col-sm-offset-1 col-lg-12">
                 </div>
             </div>
         </div>
