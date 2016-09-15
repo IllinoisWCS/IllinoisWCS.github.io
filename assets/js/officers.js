@@ -41,12 +41,18 @@ $(document).ready(function() {
           "lastname": "Khandelwal",
           "email": "vkhande2@illinois.edu",
           "netid": "vkhande2",
-          "year": "",
-          "major": "",
-          "interests": [],
+          "year": "Senior",
+          "major": "Computer Science",
+          "interests": [
+            "Data Science",
+            "Analytics"
+          ],
           "experience": [],
-          "hobbies": [],
-          "fact": "",
+          "hobbies": [
+            "Dancing",
+            "Reading"
+          ],
+          "fact": "I love dancing, I have learnt a traditional Indian Dance, Kathak, for 12 years.",
           "place": "",
           "ask": []
         }
