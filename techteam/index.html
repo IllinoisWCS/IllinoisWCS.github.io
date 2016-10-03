@@ -27,7 +27,7 @@
         <script type="text/javascript" src="/assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
         <script type="text/javascript" src="/assets/lib/mustache/mustache.min.js"></script>
         <script type="text/javascript" src="/assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
-        <script type="text/javascript" src="/assets/js/disable-script.js"></script>
+        <script type="text/javascript" src="/assets/js/techteam.js"></script>
     </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
         <nav class="mainNav navbar navbar-default navbar-fixed-top top-nav-collapse">
@@ -52,6 +52,9 @@
                         <li>
                             <a class="page-scroll" href="#links">Important Links</a>
                         </li>
+                        <li>
+                            <a href="#recoms" class="page-scroll">Project Resources</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -75,6 +78,35 @@
                         <li class="list-group-item"><a href="/tutorials" target="_blank">Slides for our Tutorials</a></li>
                         <li class="list-group-item"><a href="https://github.com/illinoiswcs" target="_blank">Our Github</a></li>
                     </ul>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/x-mustache" id="recTemplate">
+            {{#values}}
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="{{id}}H">
+                    <p class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{id}}" aria-expanded="false" aria-controls="{{id}}">
+                            <i class="fa fa-plus"></i> {{category}}</a></p>
+                </div>
+            </div>
+            <div id="{{id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{id}}H">
+                <div class="panel-body">
+                    <ul>
+                        {{#libraries}}
+                        <li><p><a href="{{href}}">{{name}}</a>: {{description}}</p></li>
+                        {{/libraries}}
+                    </ul>
+                </div>
+            </div>
+            {{/values}}
+        </script>
+
+        <div class="row padded" id="recoms">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 align="center">Project Resources</h1>
+                <div class="panel-group" id="accordionTT" role="tablist" aria-multiselectable="true">
                 </div>
             </div>
         </div>
