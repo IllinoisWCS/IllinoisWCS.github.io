@@ -183,4 +183,72 @@ $(document).ready(function() {
 
     var recTemplate = Mustache.render($('#recTemplate').html(), recommendations);
     $('#accordionTT').html(recTemplate);
+
+    var links = {
+        "values": [
+            {
+                "name": "Tech Team Facebook Group",
+                "href": "https://www.facebook.com/groups/666235760194071/"
+            },
+            {
+                "name": "Our Github",
+                "href": "https://github.com/illinoiswcs"
+            },
+            {
+                "name": "Tutorials",
+                "href": "/tutorials",
+                "tutorials": [
+                    {
+                        "name": "Introduction to Git",
+                        "slides": "/tutorials/git",
+                        "links": [
+                            {
+                                "name": "Git Skeleton Repository",
+                                "href": "https://github.com/IllinoisWCS/git-skeleton"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to Web Development + Javascript Challenges",
+                        "slides": "/tutorials/web-intro",
+                        "links": [
+                            {
+                                "name": "Intro to Web Skeleton Repository",
+                                "href": "https://github.com/IllinoisWCS/web-skeleton"
+                            },
+                            {
+                                "name": "Javascript Challenges Repository",
+                                "href": "https://github.com/IllinoisWCS/web-challenges"
+                            },
+                            {
+                                "name": "Intro to Web Completed Repository",
+                                "href": "https://github.com/IllinoisWCS/web-complete"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to APIs",
+                        "slides": "/tutorials/api-intro",
+                        "links": [
+                            {
+                                "name": "An example of using the CUMTD API",
+                                "href": "https://jsfiddle.net/bxie6/sj2zfce5/7/"
+                            },
+                            {
+                                "name": "An example of using the Open Movie Database API",
+                                "href": "https://jsfiddle.net/elchao96/xc4qsmzt/"
+                            },
+                            {
+                                "name": "An example of using the Giphy API",
+                                "href": "https://github.com/IllinoisWCS/giphy-api"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    };
+
+    var linksTemplate = Mustache.render($('#ttlinkTemplate').html(), links);
+    $('#linksList').html(linksTemplate);
 });

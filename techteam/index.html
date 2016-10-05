@@ -69,11 +69,25 @@
             </div>
         </div>
 
+        <script type="text/x-mustache" id="ttlinkTemplate">
+            {{#values}}
+            <li class="list-group-item">
+                <a href="{{href}}" target="_blank">{{name}}</a>
+                <ul>
+                    {{#tutorials}}
+                    <li>{{name}}: {{#links}}<a href="{{href}}">{{name}}</a>, {{/links}}<a href="{{slides}}">Slides</a></li>
+                    {{/tutorials}}
+                </ul>
+            </li>
+            {{/values}}
+        </script>
+
+
         <div class="row padded" id="links">
             <div class="col-sm-offset-1 col-md-10">
                 <h1 align="center">Important Links</h1>
                 <div class="row">
-                    <ul class="list-group">
+                    <ul class="list-group" id="linksList">
                         <li class="list-group-item"><a href="https://www.facebook.com/groups/666235760194071/" target="_blank">Tech Team Facebook Group</a></li>
                         <li class="list-group-item"><a href="/tutorials" target="_blank">Slides for our Tutorials</a></li>
                         <li class="list-group-item"><a href="https://github.com/illinoiswcs" target="_blank">Our Github</a></li>
