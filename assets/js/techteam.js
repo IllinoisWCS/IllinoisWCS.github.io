@@ -195,6 +195,10 @@ $(document).ready(function() {
                 "href": "https://github.com/illinoiswcs"
             },
             {
+                "name": "How to Start Your Own Side Project (in partnership with Mentoring)",
+                "href": "https://docs.google.com/presentation/d/1XHNqpS30KhmzgWdZX6GDjn15vvvCjb4Pxe5jbxEfWPw/edit?usp=sharing"
+            },
+            {
                 "name": "Tutorials",
                 "href": "/tutorials",
                 "tutorials": [

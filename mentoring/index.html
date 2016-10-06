@@ -27,7 +27,7 @@
         <script type="text/javascript" src="/assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
         <script type="text/javascript" src="/assets/lib/mustache/mustache.min.js"></script>
         <script type="text/javascript" src="/assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
-        <script type="text/javascript" src="/assets/js/disable-script.js"></script>
+        <script type="text/javascript" src="/assets/js/mentoring.js"></script>
     </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
         <nav class="mainNav navbar navbar-default navbar-fixed-top top-nav-collapse">
@@ -79,18 +79,17 @@
             </div>
         </div>
 
+        <script type="text/x-mustache" id="pastEventsTemplate">
+            {{#values}}
+            <li class="list-group-item"><a href="{{href}}" target="_blank">{{name}}</a></li>
+            {{/values}}
+        </script>
+
         <div class="row padded" id="past-events">
             <div class="col-sm-offset-1 col-md-10">
                 <h1 align="center">Past Events</h1>
                 <div class="row">
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="lean-in-book" target="_blank">Lean In Book Introduction February 2015</a></li>
-                        <li class="list-group-item"><a href="lean-in-circle/february-2015" target="_blank">Lean In Circle - Behavioral Interview March 2015</a></li>
-                        <li class="list-group-item"><a href="lean-in-circle/april-2015" target="_blank">Lean In Circle - Academics April 2015</a></li>
-                        <li class="list-group-item"><a href="resume-review" target="_blank">Resume Review and Technical Interview Workshop January 2015</a></li>
-                        <li class="list-group-item"><a href="/assets/file/ResumeReview.pptx">Resume Review Workshop September 2015</a></li>
-                        <li class="list-group-item"><a href="/assets/file/ClassSchedulePrep.pptx">Class Schedule Preparation October 2015</a></li>
-                        <li class="list-group-item"><a href="/assets/file/LeanIn.pptx">Lean In Circle February 2016</a></li>
+                    <ul class="list-group" id="past-events-list">
                     </ul>
                 </div>
             </div>
