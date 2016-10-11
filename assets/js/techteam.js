@@ -247,6 +247,20 @@ $(document).ready(function() {
                                 "href": "https://github.com/IllinoisWCS/giphy-api"
                             }
                         ]
+                    },
+                    {
+                        "name": "Introduction to Data Science",
+                        "slides": "/tutorials/data",
+                        "links": [
+                            {
+                                "name": "Python Data Science Tutorial repository",
+                                "href": "https://github.com/illinoiswcs/python-start",
+                            },
+                            {
+                                "name": "Try Jupyter notebooks online",
+                                "href": "https://try.jupyter.org/"
+                            }
+                        ]
                     }
                 ]
             }
