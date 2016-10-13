@@ -199,6 +199,10 @@ $(document).ready(function() {
                 "href": "https://docs.google.com/presentation/d/1XHNqpS30KhmzgWdZX6GDjn15vvvCjb4Pxe5jbxEfWPw/edit?usp=sharing"
             },
             {
+                "name": "Submit Your Project Idea (and get to present at Engineering Open House)",
+                "href": "https://goo.gl/forms/1WHriNuvaAW5RG7T2"
+            },
+            {
                 "name": "Tutorials",
                 "href": "/tutorials",
                 "tutorials": [
