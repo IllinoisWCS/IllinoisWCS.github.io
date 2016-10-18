@@ -20,6 +20,9 @@ h2 {
   font-size: 3em !important;
   letter-spacing: 2px; }
 
+h3 {
+  font-family: "Oswald" !important; }
+
 h4 {
   font-family: "Oswald" !important;
   font-size: 2em !important; }
@@ -162,6 +165,21 @@ a {
 @media (max-width: 768px) {
   .padded {
     padding: 2.5% 6% 5% 6%; } }
+
+.about-subheading {
+  text-align: center;
+  margin-bottom: 3%; }
+
+.row-centered {
+  text-align: center; }
+
+.col-centered {
+  display: inline-block;
+  float: none;
+  /* reset the text-align */
+  text-align: left;
+  /* inline-block space fix */
+  margin-right: -4px; }
 
 .iframeOutside {
   text-align: center; }
