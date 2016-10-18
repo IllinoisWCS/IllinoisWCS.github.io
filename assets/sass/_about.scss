@@ -36,3 +36,25 @@
     /* inline-block space fix */
     margin-right:-4px;
 }
+
+@mixin gradientBackground($url) {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url($url);
+}
+
+#techTeam {
+  background-image: url('../img/members/techteam.jpg');
+  @include gradientBackground('../img/members/techteam.jpg');
+}
+
+#mentoring {
+  background-image: url('../img/members/mentoring.jpg');
+  @include gradientBackground('../img/members/mentoring.jpg');
+}
+
+#outreach {
+  background-image: url('../img/members/outreach.jpg');
+  @include gradientBackground('../img/members/outreach.jpg');
+}
