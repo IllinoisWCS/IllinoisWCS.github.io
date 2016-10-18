@@ -9,23 +9,23 @@ body {
   height: 100%; }
 
 h1 {
-  font-family: "Didact Gothic" !important;
+  font-family: "Oswald" !important;
   font-weight: 500 !important;
   font-size: 5em !important;
   letter-spacing: 2px; }
 
 h2 {
-  font-family: "Didact Gothic" !important;
+  font-family: "Oswald" !important;
   font-weight: 400 !important;
   font-size: 3em !important;
   letter-spacing: 2px; }
 
 h4 {
-  font-family: "Didact Gothic" !important;
+  font-family: "Oswald" !important;
   font-size: 2em !important; }
 
 p {
-  font-family: "Open Sans"; }
+  font-family: "Proxima Nova"; }
 
 .padded {
   padding: 2.5% 0 5% 0; }
@@ -89,7 +89,7 @@ a {
     padding: 0 10% 0 10%; }
 
 .nav {
-  font-family: "Open Sans";
+  font-family: "Proxima Nova";
   text-transform: uppercase; }
 
 @media (min-width: 767px) {
@@ -147,12 +147,21 @@ a {
   #home h1 {
     color: #333333; }
 
-#about h1, #about p {
+#about h1 {
   color: #7d1935; }
 
 #about p {
   font-size: 1.3em;
-  line-height: 150%; }
+  line-height: 150%;
+  margin-bottom: 10%; }
+
+.about-header {
+  margin-bottom: 10%;
+  text-align: center; }
+
+@media (max-width: 768px) {
+  .padded {
+    padding: 2.5% 6% 5% 6%; } }
 
 .iframeOutside {
   text-align: center; }
@@ -167,10 +176,17 @@ a {
 .iframeOutside {
   text-align: center; }
 
-#members {
-  background-color: #f5f3ee; }
-  #members .btnContainer {
-    margin-bottom: 10px; }
+#members h1 {
+  color: #7d1935;
+  margin-bottom: 5%; }
+
+#members p {
+  font-size: 1.3em;
+  line-height: 150%;
+  margin-bottom: 10%; }
+
+#members .btnContainer {
+  margin-bottom: 10px; }
 
 .memberImage {
   background-repeat: no-repeat;
@@ -238,6 +254,9 @@ a {
 
 #officers {
   width: 70%; }
+  #officers h1 {
+    color: #7d1935;
+    margin-bottom: 5%; }
 
 .officerPicture {
   width: 100%;
@@ -292,9 +311,9 @@ a {
 #contact {
   color: #7d1935; }
   #contact .form-control {
-    font-family: "Open Sans"; }
+    font-family: "Proxima Nova"; }
   #contact .label {
-    font-family: "Open Sans"; }
+    font-family: "Proxima Nova"; }
   #contact .btn-primary {
     background-color: #7d1935;
     border-color: #7d1935;

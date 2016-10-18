@@ -1,9 +1,18 @@
 #members {
-  background-color: $offwhite;
-  .btnContainer {
-    margin-bottom: 10px;
-    @extend .center;
-  }
+    h1 {
+		color: $maroon;
+        margin-bottom: 5%;
+	}
+
+	p {
+		@include pfontspecial();
+		margin-bottom: 10%;
+	}
+
+    .btnContainer {
+        margin-bottom: 10px;
+        @extend .center;
+    }
 }
 
 .memberImage {
