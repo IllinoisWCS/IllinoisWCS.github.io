@@ -113,8 +113,8 @@
             </div>
         </section>
 
-        <section id="members" class="row padded">
-            <div class="col-sm-offset-1 col-md-10">
+        <section id="members" class="padded row-centered">
+            <div>
                 <h1 align="center">Members</h1>
                 <div class="row">
                     <div class="col-sm-6">
@@ -161,7 +161,7 @@
         </section>
 
         <script type="text/x-mustache" id="officerTemplate">
-            <div class="row">
+            <div class="row padding">
                 {{#prez}}
                 <div class="col-sm-6 col-md-6">
                     <div class="thumbnail">
@@ -180,7 +180,7 @@
                                 <h4 class="modal-title">{{firstname}} {{lastname}} - {{position}}</h4>
                             </div>
                             <div class="modal-body">
-                                <div class="row">
+                                <div>
                                     <div class="col-md-6">
                                         <img class="officerPicture" src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}">
                                         </img>
@@ -214,7 +214,6 @@
                 </div>
                 {{/prez}}
             </div>
-            <div class="row">
                 {{#admin}}
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
@@ -266,14 +265,12 @@
                     </div>
                 </div>
                 {{/admin}}
-            </div>
         </script>
 
-        <section id="officers" class="row">
-            <div class="row" id="meetOfficers">
+        <section id="officers" class="padding">
+            <div id="meetOfficers">
                 <h1 style="text-align:center">The Officer Board</h1>
-                <div id="allOfficers" class="col-sm-offset-1 col-lg-12">
-                </div>
+                <div id="allOfficers"></div>
             </div>
         </section>
 
@@ -320,7 +317,7 @@
         </section>
 
         <section id="sponsors" class="row padded">
-            <div class="col-sm-offset-1 col-md-10">
+            <div class="col-sm-offset-1 col-sm-12">
                 <h1 align="center">Sponsors</h1>
                 <div class="row sponsors-row">
                     <div class="col-md-2">
@@ -355,7 +352,7 @@
 
 
         <div id="contact" class="row padded">
-            <div class="col-sm-offset-1 col-md-10">
+            <div class="col-sm-offset-1 col-md-8">
                 <h1 align="center">Contact Us</h1>
                 <div class="row">
                     <form role="form" action="http://formspree.io/illinoiswcs@gmail.com" method="POST">

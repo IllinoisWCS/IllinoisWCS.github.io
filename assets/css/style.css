@@ -286,7 +286,7 @@ a {
     color: #000; }
 
 #officers {
-  width: 70%; }
+  padding: 0 10%; }
   #officers h1 {
     color: #7d1935;
     margin-bottom: 5%; }
