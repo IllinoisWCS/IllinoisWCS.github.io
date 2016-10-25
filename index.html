@@ -38,6 +38,7 @@
         <script type="text/javascript" src="/assets/js/officers.js"></script>
         <script type="text/javascript" src="assets/js/alumni.js"></script>
     </head>
+
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
         <nav class="navbar navbar-default navbar-fixed-top mainNav">
             <div class="container-fluid">
@@ -62,13 +63,10 @@
                             <a class="page-scroll" href="#members">Members</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#sponsors">Sponsors</a>
-                        </li>
-                        <li>
                             <a class="page-scroll" href="#officers">Officers</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#alumni">Alumni</a>
+                            <a class="page-scroll" href="#sponsors">Sponsors</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#contact">Contact</a>
@@ -164,7 +162,7 @@
             <div class="row padding">
                 {{#prez}}
                 <div class="col-sm-6 col-md-6">
-                    <div class="thumbnail">
+                    <div class="thumbnail officer-box">
                         <img src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
                         <div class="caption">
                             <h4 align="center">{{firstname}} {{lastname}}</h4>
@@ -213,10 +211,9 @@
                     </div>
                 </div>
                 {{/prez}}
-            </div>
                 {{#admin}}
                 <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
+                    <div class="thumbnail officer-box">
                         <img src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
                         <div class="caption">
                             <h4 align="center">{{firstname}} {{lastname}}</h4>
@@ -265,6 +262,7 @@
                     </div>
                 </div>
                 {{/admin}}
+            </div>
         </script>
 
         <section id="officers" class="padding">
@@ -274,45 +272,40 @@
             </div>
         </section>
 
-        <section id="sponsors" class="row padded">
-            <div class="col-sm-offset-1 col-sm-12">
-                <h1 align="center">Sponsors</h1>
-                <div class="row sponsors-row">
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/3red.jpg"/>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/belvedere.png"/>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/cmegroup.jpg"/>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/godaddy.jpg"/>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/microsoft.png"/>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/optiver.jpg"/>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/pwc.jpg"/>
-                    </div>
-		       </div>
-               <div class="row">
-                    <div class="col-md-12">
-                        <p>We have many different types of sponsorship opportunities available. Learn more <a href="https://docs.google.com/document/d/1OAnENtdnkBbYVFLjgzm31e0FT82ETpw35FiBdNTLxrg/pub" target="_blank">here</a>.</p>
-                    </div>
-               </div>
-            </div>
+        <section id="sponsors">
+            <h1 align="center">Sponsors</h1>
+            <ul class="list">
+                <li class="list-item">
+                    <img src="assets/img/logos/3red.jpg" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/belvedere.png" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/cmegroup.jpg" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/godaddy.jpg" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/groupon.png" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/microsoft.png" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/optiver.jpg" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/pwc.jpg" />
+                </li>
+            </ul>
         </section>
 
-
         <div id="contact" class="row padded">
-            <div class="col-sm-offset-1 col-md-8">
+            <div class="col-sm-offset-2 col-sm-8">
                 <h1 align="center">Contact Us</h1>
-                <div class="row">
+                <div class="row contact-form">
                     <form role="form" action="http://formspree.io/illinoiswcs@gmail.com" method="POST">
                         <div class="form-group col-md-6">
                             <label for="nameInput">Name</label>
@@ -360,15 +353,15 @@
                 </div>
             </div>
         </footer>
+
         <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-51793372-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+          ga('create', 'UA-51793372-1', 'auto');
+          ga('send', 'pageview');
+        </script>
     </body>
 </html>

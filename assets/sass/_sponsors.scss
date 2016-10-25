@@ -1,26 +1,44 @@
-.sponsors-row {
-  	padding-bottom: 2%;
-  	.sponsor-small{
-	  	vertical-align: center;
-	  	width: 100%;
-	}
-	#rockwell {
-		padding-top: 15px;
-	}
-	#medallia, .sponsor-small-adj {
-		padding-top: 30px;
-	}
-	#pwc {
-		width: 80%;
-	}
+#sponsors {
+    display: block;
+    padding: 10%;
+    color: $maroon;
+
+    h1 {
+        margin-bottom: 5%;
+    }
+
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    img {
+       width: 100%;
+       max-width:100%;
+       object-fit: contain;
+       max-height: 200px;
+    }
 }
 
-#sponsors {
-	color: $maroon;
-	p {
-		@include pfontspecial();
-	}
-	a {
-		color: $black;
-	}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  display: flex;
+  padding: 0.5em;
+  width: 100%;
+  margin-top: 5%;
+}
+
+@media all and (min-width: 40em) {
+  .list-item {
+    width: 50%;
+  }
+}
+@media all and (min-width: 60em) {
+  .list-item {
+    width: 33.33%;
+  }
 }

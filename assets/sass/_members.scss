@@ -1,7 +1,7 @@
 #members {
     h1 {
 		color: $maroon;
-        margin-bottom: 5%;
+        margin-bottom: 3%;
 	}
 
 	p {
@@ -14,9 +14,7 @@
         @extend .center;
     }
 
-    .btn {
-
-    }
+    padding: 5%;
 }
 
 .memberImage {
@@ -28,6 +26,7 @@
   vertical-align: center;
   min-height: 50vh !important;
   padding: -15 !important;
+
   p {
     font-weight: 900;
     color: white;

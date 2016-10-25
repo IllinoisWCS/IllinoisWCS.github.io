@@ -207,17 +207,17 @@ a {
 .iframeOutside {
   text-align: center; }
 
-#members h1 {
-  color: #7d1935;
-  margin-bottom: 5%; }
-
-#members p {
-  font-size: 1.3em;
-  line-height: 150%;
-  margin-bottom: 10%; }
-
-#members .btnContainer {
-  margin-bottom: 10px; }
+#members {
+  padding: 5%; }
+  #members h1 {
+    color: #7d1935;
+    margin-bottom: 3%; }
+  #members p {
+    font-size: 1.3em;
+    line-height: 150%;
+    margin-bottom: 10%; }
+  #members .btnContainer {
+    margin-bottom: 10px; }
 
 .memberImage {
   background-repeat: no-repeat;
@@ -265,25 +265,38 @@ a {
 .col-md-4 img {
   width: 100%; }
 
-.sponsors-row {
-  padding-bottom: 2%; }
-  .sponsors-row .sponsor-small {
-    vertical-align: center;
-    width: 100%; }
-  .sponsors-row #rockwell {
-    padding-top: 15px; }
-  .sponsors-row #medallia, .sponsors-row .sponsor-small-adj {
-    padding-top: 30px; }
-  .sponsors-row #pwc {
-    width: 80%; }
-
 #sponsors {
+  display: block;
+  padding: 10%;
   color: #7d1935; }
-  #sponsors p {
-    font-size: 1.3em;
-    line-height: 150%; }
-  #sponsors a {
-    color: #000; }
+  #sponsors h1 {
+    margin-bottom: 5%; }
+  #sponsors ul {
+    padding: 0;
+    list-style-type: none; }
+  #sponsors img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    max-height: 200px; }
+
+.list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.list-item {
+  display: flex;
+  padding: 0.5em;
+  width: 100%;
+  margin-top: 5%; }
+
+@media all and (min-width: 40em) {
+  .list-item {
+    width: 50%; } }
+
+@media all and (min-width: 60em) {
+  .list-item {
+    width: 33.33%; } }
 
 #officers {
   padding: 0 10%; }
@@ -297,6 +310,9 @@ a {
 
 #meetOfficers {
   padding-top: 5%; }
+
+.officer-box {
+  border: 0; }
 
 #outreachMain {
   background-image: url("../img/wcs/chictech.jpg");
@@ -354,10 +370,12 @@ a {
     #contact .btn-primary:hover {
       background-color: #7d1935;
       color: #f5f3ee; }
+  #contact .contact-form {
+    padding-top: 4%; }
 
 footer {
   background-color: #f5f3ee;
-  padding: 5% 10% 5% 10%; }
+  padding: 3% 3% 3% 3%; }
   footer p {
     margin: 0;
     font-size: 1.3em;
