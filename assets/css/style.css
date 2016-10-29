@@ -260,7 +260,8 @@ a {
 
 .member-subheaders {
   text-align: center;
-  margin-bottom: 5%; }
+  margin-bottom: 3%;
+  margin-top: 3%; }
 
 .btn {
   font-weight: bold; }
@@ -270,7 +271,7 @@ a {
 
 #sponsors {
   display: block;
-  padding: 10%;
+  padding: 5% 20%;
   color: #7d1935; }
   #sponsors h1 {
     margin-bottom: 5%; }
@@ -302,7 +303,7 @@ a {
     width: 33.33%; } }
 
 #officers {
-  padding: 0 10%; }
+  padding: 0 20%; }
   #officers h1 {
     color: #7d1935;
     margin-bottom: 5%; }
@@ -310,9 +311,6 @@ a {
 .officerPicture {
   width: 100%;
   height: auto; }
-
-#meetOfficers {
-  padding-top: 5%; }
 
 .officer-box {
   border: 0; }
