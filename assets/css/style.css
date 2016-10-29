@@ -5,27 +5,31 @@ html {
 
 body {
   overflow-x: hidden;
+  font-family: "Proxima Nova";
   width: 100%;
   height: 100%; }
 
 h1 {
-  font-family: "Lobster", cursive !important;
+  font-family: "Oswald" !important;
   font-weight: 500 !important;
   font-size: 5em !important;
   letter-spacing: 2px; }
 
 h2 {
-  font-family: "Lobster", cursive !important;
+  font-family: "Oswald" !important;
   font-weight: 400 !important;
   font-size: 3em !important;
   letter-spacing: 2px; }
 
+h3 {
+  font-family: "Oswald" !important; }
+
 h4 {
-  font-family: "Lobster", cursive !important;
+  font-family: "Oswald" !important;
   font-size: 2em !important; }
 
 p {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Proxima Nova"; }
 
 .padded {
   padding: 2.5% 0 5% 0; }
@@ -43,7 +47,7 @@ p {
     color: #000;
     background-color: #999; }
 
-.center, .overlay, #members .btnContainer, #officers, #outreachMain, #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
+.center, .splash-overlay, #members .btnContainer, #outreachMain, #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -84,13 +88,12 @@ a {
   margin: -12px; }
 
 .navbar {
-  background-color: #f8f8f8;
-  opacity: 0.8; }
+  background-color: black; }
   .navbar .container-fluid {
     padding: 0 10% 0 10%; }
 
 .nav {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Proxima Nova";
   text-transform: uppercase; }
 
 @media (min-width: 767px) {
@@ -127,17 +130,19 @@ a {
   text-align: center;
   overflow: hidden; }
 
-.fill {
+.splash-fill {
   width: 100%;
   height: 100%;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  background-image: url("../img/slideshow/banquet2.jpg"); }
 
-.overlay {
+.splash-overlay {
   position: absolute;
   z-index: 100;
   top: calc(50% - 1.5em);
-  width: 100%; }
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5); }
 
 #home {
   overflow: hidden;
@@ -146,29 +151,51 @@ a {
   width: auto;
   height: 1000px; }
   #home h1 {
-    color: #fff; }
+    color: #333333; }
 
-#officerCarousel {
-  background-image: url(../img/slideshow/allofficers.jpg); }
+#about {
+  margin-top: 10%; }
+  #about h1 {
+    color: #7d1935; }
+  #about p {
+    font-size: 1.3em;
+    line-height: 150%;
+    margin-bottom: 10%; }
 
-#chictechCarousel {
-  background-image: url(../img/slideshow/chictech.jpg); }
+.about-header {
+  margin-bottom: 10%;
+  text-align: center; }
 
-#banquetCarousel {
-  background-image: url(../img/slideshow/banquet.jpg); }
+@media (max-width: 768px) {
+  .padded {
+    padding: 2.5% 6% 5% 6%; } }
 
-#splashCarousel {
-  background-image: url(../img/slideshow/splash.jpg); }
+.about-subheading {
+  text-align: center;
+  margin-bottom: 3%; }
 
-#banquet2Carousel {
-  background-image: url(../img/slideshow/banquet2.jpg); }
+.row-centered {
+  text-align: center; }
 
-#about h1, #about p {
-  color: #7d1935; }
+.col-centered {
+  display: inline-block;
+  float: none;
+  /* reset the text-align */
+  text-align: left;
+  /* inline-block space fix */
+  margin-right: -4px; }
 
-#about p {
-  font-size: 1.3em;
-  line-height: 150%; }
+#techTeam {
+  background-image: url("../img/members/techteam.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/techteam.jpg"); }
+
+#mentoring {
+  background-image: url("../img/members/mentoring.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/mentoring.jpg"); }
+
+#outreach {
+  background-image: url("../img/members/outreach.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/outreach.jpg"); }
 
 .iframeOutside {
   text-align: center; }
@@ -184,7 +211,14 @@ a {
   text-align: center; }
 
 #members {
-  background-color: #f5f3ee; }
+  padding: 5%; }
+  #members h1 {
+    color: #7d1935;
+    margin-bottom: 3%; }
+  #members p {
+    font-size: 1.3em;
+    line-height: 150%;
+    margin-bottom: 10%; }
   #members .btnContainer {
     margin-bottom: 10px; }
 
@@ -208,60 +242,70 @@ a {
     font-size: 2rem;
     transform: translate(-50%, -50%); }
 
-#techTeam {
-  background-image: url("../img/members/techteam.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/techteam.jpg"); }
-
-#mentoring {
-  background-image: url("../img/members/mentoring.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/mentoring.jpg"); }
-
-#outreach {
-  background-image: url("../img/members/outreach.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/outreach.jpg"); }
-
-#memberportal {
-  background-image: url("../img/members/memberportal.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/memberportal.jpg"); }
-
 #events {
   margin-top: 50px; }
   #events iframe {
     width: 100%; }
 
+.member-map {
+  height: 400px;
+  width: 100%; }
+
+.member-links {
+  list-style-type: none;
+  text-align: center; }
+
+.member-links > li {
+  display: inline; }
+
+.member-subheaders {
+  text-align: center;
+  margin-bottom: 5%; }
+
+.btn {
+  font-weight: bold; }
+
 .col-md-4 img {
   width: 100%; }
 
-.sponsors-row {
-  padding-bottom: 2%; }
-  .sponsors-row .sponsor-small {
-    vertical-align: center;
-    width: 100%; }
-  .sponsors-row #rockwell {
-    padding-top: 15px; }
-  .sponsors-row #medallia, .sponsors-row .sponsor-small-adj {
-    padding-top: 30px; }
-  .sponsors-row #pwc {
-    width: 80%; }
-
 #sponsors {
+  display: block;
+  padding: 10%;
   color: #7d1935; }
-  #sponsors p {
-    font-size: 1.3em;
-    line-height: 150%; }
-  #sponsors a {
-    color: #000; }
+  #sponsors h1 {
+    margin-bottom: 5%; }
+  #sponsors ul {
+    padding: 0;
+    list-style-type: none; }
+  #sponsors img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    max-height: 200px; }
+
+.list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.list-item {
+  display: flex;
+  padding: 0.5em;
+  width: 100%;
+  margin-top: 5%; }
+
+@media all and (min-width: 40em) {
+  .list-item {
+    width: 50%; } }
+
+@media all and (min-width: 60em) {
+  .list-item {
+    width: 33.33%; } }
 
 #officers {
-  background-image: url("../img/wcs/newofficers.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  width: 100% !important;
-  height: 100vh !important;
-  min-height: 100vh !important;
-  min-width: 100% !important; }
+  padding: 0 10%; }
+  #officers h1 {
+    color: #7d1935;
+    margin-bottom: 5%; }
 
 .officerPicture {
   width: 100%;
@@ -269,6 +313,9 @@ a {
 
 #meetOfficers {
   padding-top: 5%; }
+
+.officer-box {
+  border: 0; }
 
 #outreachMain {
   background-image: url("../img/wcs/chictech.jpg");
@@ -316,9 +363,9 @@ a {
 #contact {
   color: #7d1935; }
   #contact .form-control {
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Proxima Nova"; }
   #contact .label {
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Proxima Nova"; }
   #contact .btn-primary {
     background-color: #7d1935;
     border-color: #7d1935;
@@ -326,10 +373,12 @@ a {
     #contact .btn-primary:hover {
       background-color: #7d1935;
       color: #f5f3ee; }
+  #contact .contact-form {
+    padding-top: 4%; }
 
 footer {
   background-color: #f5f3ee;
-  padding: 5% 10% 5% 10%; }
+  padding: 3% 3% 3% 3%; }
   footer p {
     margin: 0;
     font-size: 1.3em;

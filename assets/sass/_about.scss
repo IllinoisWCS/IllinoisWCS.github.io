@@ -1,8 +1,62 @@
 #about {
-	h1, p {
+	margin-top: 10%;
+	
+	h1 {
 		color: $maroon;
 	}
 	p {
 		@include pfontspecial();
+		margin-bottom: 10%;
 	}
+}
+
+.about-header {
+	margin-bottom: 10%;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.padded {
+		padding: 2.5% 6% 5% 6%;
+	}
+}
+
+.about-subheading {
+	text-align: center;
+	margin-bottom: 3%;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+@mixin gradientBackground($url) {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url($url);
+}
+
+#techTeam {
+  background-image: url('../img/members/techteam.jpg');
+  @include gradientBackground('../img/members/techteam.jpg');
+}
+
+#mentoring {
+  background-image: url('../img/members/mentoring.jpg');
+  @include gradientBackground('../img/members/mentoring.jpg');
+}
+
+#outreach {
+  background-image: url('../img/members/outreach.jpg');
+  @include gradientBackground('../img/members/outreach.jpg');
 }

@@ -5,6 +5,7 @@ html {
 
 body {
   overflow-x: hidden;
+  font-family: $paragraphfont;
   width: 100%;
   height: 100%;
 }
@@ -21,6 +22,10 @@ h2 {
   font-weight: 400 !important;
   font-size: 3em !important;
   letter-spacing: 2px;
+}
+
+h3 {
+    font-family: $headerfont;
 }
 
 h4 {
@@ -41,7 +46,7 @@ p {
   padding: 2.5% 0 5% 0;
 }
 
-#socialMediaLinks 
+#socialMediaLinks
 {
   display: block;
   padding-left: 0px;

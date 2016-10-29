@@ -2,8 +2,11 @@
 <html>
     <head>
         <title>WCS @ UIUC</title>
-
-        <meta name="description" content="Women in Computer Science is an organization under CS@Illinois that strives to provide opportunities and a community for female CS students at University of Illinois."/>
+        <meta
+            name="description"
+            content="Women in Computer Science is an organization under
+                     CS@Illinois that strives to provide opportunities and a
+                     community for female CS students at University of Illinois."/>
         <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta property="og:title" content="Women in Computer Science"/>
@@ -12,26 +15,32 @@
         <meta property="og:url" content="www.illinoiswcs.org"/>
         <meta property="og:image" content=""/>
 
-        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
 
-        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Proxima+Nova" rel="stylesheet" />
 
-        <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css"></link>
-        <link rel="stylesheet" type="text/css" href="assets/lib/fontawesome/css/font-awesome.min.css"></link>
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css"></link>
+
+        <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/lib/fontawesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
         <script type="text/javascript" src="assets/lib/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
         <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/lib/mustache/mustache.min.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
+        <script type="text/javascript" src="/assets/js/officers.js"></script>
         <script type="text/javascript" src="assets/js/alumni.js"></script>
     </head>
+
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-        <nav class="mainNav navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-fixed-top mainNav">
             <div class="container-fluid">
                 <div class="navbar-header page-scroll">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
@@ -40,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top"><img src="assets/img/wcs/wcsLogo.png" class="img-responsive"></img></a>
+                    <a class="navbar-brand page-scroll" href="#page-top"><img src="assets/img/wcs/wcsLogo.png" class="img-responsive" /></a>
                 </div>
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="nav navbar-nav">
@@ -51,16 +60,13 @@
                             <a class="page-scroll" href="#about">About</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#officers">Officers</a>
-                        </li>
-                        <li>
                             <a class="page-scroll" href="#members">Members</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#sponsors">Sponsors</a>
+                            <a class="page-scroll" href="#officers">Officers</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#alumni">Alumni</a>
+                            <a class="page-scroll" href="#sponsors">Sponsors</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#contact">Contact</a>
@@ -70,174 +76,236 @@
             </div>
         </nav>
 
-        <div id="home" class="container fill">
-            <div class="overlay">
-                <h1> Welcome to WCS @ Illinois!</h1>
+        <div id="home" class="container row splash-fill">
+            <div class="splash-overlay">
+                <h1>WCS @ Illinois</h1>
             </div>
-            <div id="slideshow" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="active item">
-                        <div class="fill" id="officerCarousel"></div>
-                    </div>
-                    <div class="item">
-                        <div class="fill" id="chictechCarousel"></div>
-                    </div>
-                    <div class="item">
-                        <div class="fill" id="banquetCarousel"></div>
-                    </div>
-                    <div class="item">
-                        <div class="fill" id="splashCarousel"></div>
-                    </div>
-                    <div class="item">
-                        <div class="fill" id="banquet2Carousel"></div>
-                    </div>
+        </div>
+
+        <section id="about">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10 col-md-5">
+                    <h1 class="about-header">About Us</h1>
+                    <p>
+                        Women in Computer Science (WCS) is a non-profit,
+                        educational, student group under the University of Illinois
+                        at Urbana-Champaign Computer Science Department. The
+                        organization is dedicated to supporting the efforts of young
+                        women, who are pursuing a career in computer
+                        science or show an overall interest in technology. Because
+                        of the number of women pursuing Computer Science has been
+                        steadily decreasing, the organization aims to retain and
+                        provide a network of support for members to rely on for
+                        advice and camaraderie.
+                    </p>
+                </div>
+                <div class="col-sm-offset-1 col-sm-10 col-md-4">
+                    <img src="assets/img/wcs/officers.jpg" class="img-responsive" />
                 </div>
             </div>
-        </div>
-
-        <div id="about" class="row padded">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 align="center">About Us</h1>
-                <p>Women in Computer Science (WCS) is a student group under CS@Illinois that is a non-profit, educational, student-run organization dedicated to supporting the efforts of young women who are considering pursuit of a career in computer science or show an overall interest in technology. Because of the number of women pursuing Computer Science has been steadily decreasing, this organization aims to retain and provide a network of support for members to rely on for advice and camaraderie.</p>
+            <h2 class="about-subheading">Teams</h2>
+            <div class="row row-centered">
+                <a href="/techteam" target="_blank"><div class="col-sm-3 col-centered"><div class="memberImage" id="techTeam"><p><b>Tech Team</b></p></div></div></a>
+                <a href="/mentoring" target="_blank"><div class="col-sm-3 col-centered"><div class="memberImage" id="mentoring"><p><b>Mentoring</b></p></div></div></a>
+                <a href="/outreach" target="_blank"><div class="col-sm-3 col-centered"><div class="memberImage" id="outreach"><p><b>Outreach</b></p></div></div></a>
             </div>
-        </div>
+        </section>
 
-        <div id="officers" class="row padded">
-            <div class="btnContainer">
-                <a href="/officers"><button type="button" id="meetOfficersBtn" class="btn"><h4>Meet The Officer Board</h4></button></a>
-            </div>
-        </div>
-
-        <div id="members" class="row padded">
-            <div class="col-sm-offset-1 col-md-10">
+        <section id="members" class="padded row-centered">
+            <div>
                 <h1 align="center">Members</h1>
-                <div class="row btnContainer">
-                    <div class="btn-group btn-group-justified" role="group" aria-label="memberFunctions">
-                        <div class="btn-group" role="group">
-                            <a href="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5" target="_blank"><button type="button" class="btn">Mailing List</button></a>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <a href="https://script.google.com/a/macros/illinois.edu/s/AKfycby3xKcHgsJwfnQ2uY2ac09wX2OTicgZjgsvSv5HXlgaD0taWKLA/exec" target="_blank"><button type="button" class="btn">Resume Book</button></a>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <a href="/members/#events"><button type="button" class="btn">Events</button></a>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <a href="/members/#points"><button type="button" class="btn">Check Your Points</button></a>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <a href="/members/#map"><button type="button" class="btn">Where You Work Map</button></a>
-                        </div>
-                    </div>
-                </div>
                 <div class="row">
-                    <a href="/techteam" target="_blank"><div class="col-md-3"><div class="memberImage" id="techTeam"><p><b>Tech Team</b></p></div></div></a>
-                    <a href="/mentoring" target="_blank"><div class="col-md-3"><div class="memberImage" id="mentoring"><p><b>Mentoring</b></p></div></div></a>
-                    <a href="/outreach" target="_blank"><div class="col-md-3"><div class="memberImage" id="outreach"><p><b>Outreach</b></p></div></div></a>
-                    <a href="/academic" target="_blank"><div class="col-md-3"><div class="memberImage" id="memberportal"><p><b>Academic Resources</b></p></div></div></a>
+                    <div class="col-sm-6">
+                        <h2 class="member-subheaders">Member Internships</h2>
+                        <iframe class="member-map" src="https://www.google.com/maps/d/embed?mid=1Ke1I6UgBfBUVkb4uk3OWacUI3jg"></iframe>
+                    </div>
+                    <div class="col-sm-6">
+                        <h2 class="member-subheaders">Events</h2>
+                        <iframe class="member-map" src="https://www.google.com/calendar/embed?src=illinois.edu_tnb2alhjjgnl741dr51gbfr4gg%40group.calendar.google.com&ctz=America/Chicago" frameborder="0" scrolling="no"></iframe>
+                    </div>
                 </div>
+                <h2 class="member-subheaders" style="margin-bottom:3%;margin-top:3%;">
+                    Links
+                </h2>
+                <ul class="member-links">
+                    <li>
+                        <a
+                            href="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5"
+                            target="_blank"
+                            class="btn member-button">
+                            Mailing List
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://script.google.com/a/macros/illinois.edu/s/AKfycby3xKcHgsJwfnQ2uY2ac09wX2OTicgZjgsvSv5HXlgaD0taWKLA/exec"
+                            target="_blank"
+                            class="btn member-button">
+                            Resume Book
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/members/#points" class="btn member-button">
+                            Point Checker
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/academic" class="btn member-button">
+                            Academic Resources
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </section>
 
-        <div id="sponsors" class="row padded">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 align="center">Sponsors</h1>
-                <h4 align="center">Special Thanks To</h4>
-                <div class="row sponsors-row">
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/3red.jpg"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/belvedere.png"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/cmegroup.jpg"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/godaddy.jpg"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/microsoft.png"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/optiver.jpg"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/pwc.jpg"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/allston.jpeg"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/capitalone.jpg"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/jpmorganchase.svg"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/nextcapital.jpg"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/northerntrust.png"></img>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="sponsor-small" src="assets/img/logos/viasat.png"></img>
-                    </div>
-		</div>
-               <div class="row">
-                    <div class="col-md-12">
-                        <p>We have many different types of sponsorship opportunities available. Learn more <a href="https://docs.google.com/document/d/1OAnENtdnkBbYVFLjgzm31e0FT82ETpw35FiBdNTLxrg/pub" target="_blank">here</a>.</p>
+        <script type="text/x-mustache" id="officerTemplate">
+            <div class="row padding">
+                {{#prez}}
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail officer-box">
+                        <img src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
+                        <div class="caption">
+                            <h4 align="center">{{firstname}} {{lastname}}</h4>
+                            <p align="center">{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o"></i></a></p>
+                        </div>
                     </div>
                 </div>
+                <div class="modal fade" id="{{netid}}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">{{firstname}} {{lastname}} - {{position}}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <div class="col-md-6">
+                                        <img class="officerPicture" src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}">
+                                        </img>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><b>{{major}}</b></p>
+                                        <p><b>{{year}}</b></p>
+                                        <p><b>Interests: </b>
+                                        {{#interests}}
+                                            <span class="label label-default">{{.}}</span>
+                                        {{/interests}}</p>
+                                        <p><b>Hobbies: </b>
+                                        {{#hobbies}}
+                                            <span class="label label-success">{{.}}</span>
+                                        {{/hobbies}}</p>
+                                        <br/>
+                                        <p><b>Fun fact: </b>{{fact}}</p>
+                                        <p><b>From: </b>{{place}}</p>
+                                        <p><b>Ask me about: </b></p>
+                                        {{#ask}}
+                                            <span class="label label-primary">{{.}}</span>
+                                        {{/ask}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/prez}}
+                {{#admin}}
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail officer-box">
+                        <img src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
+                        <div class="caption">
+                            <h4 align="center">{{firstname}} {{lastname}}</h4>
+                            <p align="center">{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="{{netid}}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">{{firstname}} {{lastname}} - {{position}}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="officerPicture" src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}">
+                                        </img>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><b>{{major}}</b></p>
+                                        <p><b>{{year}}</b></p>
+                                        <p><b>Interests: </b>
+                                        {{#interests}}
+                                            <span class="label label-default">{{.}}</span>
+                                        {{/interests}}</p>
+                                        <p><b>Hobbies: </b>
+                                        {{#hobbies}}
+                                            <span class="label label-success">{{.}}</span>
+                                        {{/hobbies}}</p>
+                                        <br/>
+                                        <p><b>Fun fact: </b>{{fact}}</p>
+                                        <p><b>From: </b>{{place}}</p>
+                                        <p><b>Ask me about: </b></p>
+                                        {{#ask}}
+                                            <span class="label label-primary">{{.}}</span>
+                                        {{/ask}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/admin}}
             </div>
-        </div>
-
-        <script type="text/x-mustache" id="alumniTemplate">
-            {{#featured}}
-            <div class="item">
-                <div class="col-md-4 alumniImage">
-                    <img src="{{img}}"></img>
-                </div>
-                <div class="col-md-8 alumniText">
-                    <div>
-                        <h4 align="center">{{name}}</h4>
-                        <p><b>Degree/Graduation Year</b>: {{degree}}, {{grad}}</p>
-                        <p><b>Involvement</b>: {{involvement}}</p>
-                        <p><b>Where She Is Now</b>: {{where}}</p>
-                    </div>
-                </div>
-            </div>
-            {{/featured}}
         </script>
 
-        <script type="text/x-mustache" id="alumniCarouselIndicatorTemplate">
-            {{#featured}}
-            <li class="indicator" data-target="#alumniSlideshow" data-slide-to="{{i}}"></li>
-            {{/featured}}
-        </script>
-
-        <div id="alumni" class="row padded">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 align="center">Alumni</h1>
-                <div class="row" id="featuredAlumni">
-                    <div id="alumniSlideshow" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators"></ol>
-                        <div class="carousel-inner">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p align="center">If you are an alumni and would like to learn how to get involved with WCS, please fill out this <a href="http://goo.gl/forms/ZDH62DscXa" target="_blank">form</a>. See more of our alumni <a href="/alumni">here</a>.</p>
-                    </div>
-                </div>
+        <section id="officers" class="padding">
+            <div id="meetOfficers">
+                <h1 style="text-align:center">The Officer Board</h1>
+                <div id="allOfficers"></div>
             </div>
-        </div>
+        </section>
+
+        <section id="sponsors">
+            <h1 align="center">Sponsors</h1>
+            <ul class="list">
+                <li class="list-item">
+                    <img src="assets/img/logos/3red.jpg" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/belvedere.png" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/cmegroup.jpg" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/godaddy.jpg" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/groupon.png" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/microsoft.png" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/optiver.jpg" />
+                </li>
+                <li class="list-item">
+                    <img src="assets/img/logos/pwc.jpg" />
+                </li>
+            </ul>
+        </section>
 
         <div id="contact" class="row padded">
-            <div class="col-sm-offset-1 col-md-10">
+            <div class="col-sm-offset-2 col-sm-8">
                 <h1 align="center">Contact Us</h1>
-                <div class="row">
+                <div class="row contact-form">
                     <form role="form" action="http://formspree.io/illinoiswcs@gmail.com" method="POST">
                         <div class="form-group col-md-6">
                             <label for="nameInput">Name</label>
@@ -285,15 +353,15 @@
                 </div>
             </div>
         </footer>
+
         <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-51793372-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+          ga('create', 'UA-51793372-1', 'auto');
+          ga('send', 'pageview');
+        </script>
     </body>
 </html>

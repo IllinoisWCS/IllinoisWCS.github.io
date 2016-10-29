@@ -1,9 +1,20 @@
 #members {
-  background-color: $offwhite;
-  .btnContainer {
-    margin-bottom: 10px;
-    @extend .center;
-  }
+    h1 {
+		color: $maroon;
+        margin-bottom: 3%;
+	}
+
+	p {
+		@include pfontspecial();
+		margin-bottom: 10%;
+	}
+
+    .btnContainer {
+        margin-bottom: 10px;
+        @extend .center;
+    }
+
+    padding: 5%;
 }
 
 .memberImage {
@@ -15,6 +26,7 @@
   vertical-align: center;
   min-height: 50vh !important;
   padding: -15 !important;
+
   p {
     font-weight: 900;
     color: white;
@@ -28,36 +40,32 @@
   }
 }
 
-@mixin gradientBackground($url) {
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  ), url($url);
-}
-
-#techTeam {
-  background-image: url('../img/members/techteam.jpg');
-  @include gradientBackground('../img/members/techteam.jpg');
-}
-
-#mentoring {
-  background-image: url('../img/members/mentoring.jpg');
-  @include gradientBackground('../img/members/mentoring.jpg');
-}
-
-#outreach {
-  background-image: url('../img/members/outreach.jpg');
-  @include gradientBackground('../img/members/outreach.jpg');
-}
-
-#memberportal {
-  background-image: url('../img/members/memberportal.jpg');
-  @include gradientBackground('../img/members/memberportal.jpg');
-}
-
 #events {
   margin-top: 50px;
   iframe {
     width: 100%;
   }
+}
+
+.member-map {
+    height: 400px;
+    width: 100%;
+}
+
+.member-links {
+    list-style-type: none;
+    text-align: center;
+}
+
+.member-links > li {
+    display:inline;
+}
+
+.member-subheaders {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.btn {
+    font-weight: bold;
 }
