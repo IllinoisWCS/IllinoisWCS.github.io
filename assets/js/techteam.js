@@ -213,6 +213,10 @@ $(document).ready(function() {
                             {
                                 "name": "Git Skeleton Repository",
                                 "href": "https://github.com/IllinoisWCS/git-skeleton"
+                            },
+                            {
+                                "name": "Extended Notes",
+                                "href": "https://medium.com/how-to-start-your-own-technical-project/notes-on-git-af030e23c887#.kp4d5zdxv"
                             }
                         ]
                     },
@@ -231,6 +235,10 @@ $(document).ready(function() {
                             {
                                 "name": "Intro to Web Completed Repository",
                                 "href": "https://github.com/IllinoisWCS/web-complete"
+                            },
+                            {
+                                "name": "Extended Notes",
+                                "href": "https://medium.com/how-to-start-your-own-technical-project/notes-on-web-development-part-1-3bedffe9821c#.lmue73p05"
                             }
                         ]
                     },
@@ -263,6 +271,20 @@ $(document).ready(function() {
                             {
                                 "name": "Try Jupyter notebooks online",
                                 "href": "https://try.jupyter.org/"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to Data-Binding",
+                        "slides": "/tutorials/web-intro/#/14",
+                        "links": [
+                            {
+                                "name": "AngularJS Complete Repository",
+                                "href": "https://github.com/IllinoisWCS/web-II-complete"
+                            },
+                            {
+                                "name": "AngularJS Skeleton Repository",
+                                "href": "https://github.com/IllinoisWCS/web-II-skeleton"
                             }
                         ]
                     }
