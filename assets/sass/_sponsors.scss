@@ -1,6 +1,6 @@
 #sponsors {
     display: block;
-    padding: 5% 20%;
+    padding: 5% 10%;
     color: $maroon;
 
     h1 {
@@ -14,7 +14,7 @@
 
     img {
        width: 100%;
-       max-width:100%;
+       max-width: 100%;
        object-fit: contain;
        max-height: 200px;
     }
@@ -37,8 +37,16 @@
     width: 50%;
   }
 }
+
 @media all and (min-width: 60em) {
   .list-item {
-    width: 33.33%;
+    width: 20%;
+    padding: 2%;
+  }
+}
+
+@media all and (max-width: 40em) {
+  .list-item {
+    width: 50%;
   }
 }
