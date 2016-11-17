@@ -287,6 +287,38 @@ $(document).ready(function() {
                                 "href": "https://github.com/IllinoisWCS/web-II-skeleton"
                             }
                         ]
+                    },
+                    {
+                        "name": "Introduction to ChatBots",
+                        "slides": "/tutorials/chatbot",
+                        "links": [
+                            {
+                                "name": "Chatbot Example (ELIZA bot)",
+                                "href": "https://github.com/IllinoisWCS/chatbot-intro"
+                            },
+                            {
+                                "name": "Original Tutorial Based Off Of",
+                                "href": "https://www.smallsurething.com/implementing-the-famous-eliza-chatbot-in-python/"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to Creating Your Own API",
+                        "slides": "/tutorials/web-intro/#/25",
+                        "links": [
+                            {
+                                "name": "Backend Example with Firebase",
+                                "href": "https://github.com/IllinoisWCS/backend-intro"
+                            },
+                            {
+                                "name": "Firebase Documentation",
+                                "href": "https://firebase.google.com/"
+                            },
+                            {
+                                "name": "AngularFire (using Angular with Firebase)",
+                                "href": "https://github.com/firebase/angularfire"
+                            }
+                        ]
                     }
                 ]
             }
