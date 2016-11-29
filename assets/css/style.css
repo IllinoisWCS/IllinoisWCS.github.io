@@ -255,6 +255,9 @@ a {
 .member-links > li {
   display: inline; }
 
+.member-button {
+  font-size: large; }
+
 .member-subheaders {
   text-align: center;
   margin-bottom: 3%;
@@ -392,7 +395,8 @@ a {
 footer {
   background-color: #7d1935;
   color: white;
-  padding: 3% 3% 3% 3%; }
+  padding: 3% 3% 3% 3%;
+  text-align: center; }
   footer p {
     margin: 0;
     font-size: 1.3em;
