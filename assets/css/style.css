@@ -140,7 +140,7 @@ a {
   z-index: 100;
   top: calc(50% - 1.5em);
   width: 100%;
-  background-color: white;
+  background-color: #7d1935;
   padding: 1%; }
 
 #home {
@@ -148,9 +148,8 @@ a {
   padding: 0 !important;
   margin: 0 !important;
   width: auto;
-  height: 1000px; }
-  #home h1 {
-    color: #333333; }
+  height: 1000px;
+  color: white; }
 
 #about {
   margin-top: 5%; }
