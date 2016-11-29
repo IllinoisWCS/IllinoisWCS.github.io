@@ -3,6 +3,7 @@ node_modules
 .sass-cache/
 *.css.map
 assets/.sass-cache
+.idea/
 
 
 # Compiled source #
