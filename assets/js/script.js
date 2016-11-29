@@ -1,8 +1,26 @@
 $(document).ready(function() {
-    $("#slideshow").carousel({
-        interval: 5000
+
+    /**
+     * Calendar events
+     */
+    var eventsUrl = 'https://script.google.com/macros/s/AKfycbysZFMo4SZfZCtl9swTqD3M1PvyhLBD71qcrHheuoziX9FpJtpZ/exec';
+    var events = [];
+    $.get(eventsUrl, function(data) {
+        events = data.slice(0, 5);
+        $.each(events, function(i) {
+
+            var start = new Date(events[i].startTime);
+            var li = $('<li/>')
+                .addClass('list-group-item');
+            li.append('<h4>' + events[i].title + '</h4>');
+            li.append('<span>' + start.toDateString() + ' at ' + start.toLocaleTimeString() + '</span>');
+            $('#events-list').append(li);
+        });
     });
 
+    /**
+     * Smooth scrolling
+     */
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -109,9 +127,9 @@ $(document).ready(function() {
     * @param {string} message Text to be placed in pre element.
     */
     function appendPre(message) {
-    var pre = document.getElementById('output');
-    var textContent = document.createTextNode(message + '\n');
-    pre.appendChild(textContent);
+        var pre = document.getElementById('output');
+        var textContent = document.createTextNode(message + '\n');
+        pre.appendChild(textContent);
     }
 
 });

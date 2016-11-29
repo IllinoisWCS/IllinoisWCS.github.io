@@ -1,6 +1,7 @@
 #about {
 	padding: 5% 0;
     background-color: $offwhite;
+    height: 60%;
 
 	h1 {
 		color: $maroon;
@@ -23,8 +24,8 @@
 }
 
 .about-subheading {
-	text-align: center;
-	margin-bottom: 3%;
+    text-align: left;
+	margin-bottom: 2%;
 }
 
 .row-centered {
@@ -47,17 +48,6 @@
   ), url($url);
 }
 
-#techTeam {
-  background-image: url('../img/members/techteam.jpg');
-  @include gradientBackground('../img/members/techteam.jpg');
-}
-
-#mentoring {
-  background-image: url('../img/members/mentoring.jpg');
-  @include gradientBackground('../img/members/mentoring.jpg');
-}
-
-#outreach {
-  background-image: url('../img/members/outreach.jpg');
-  @include gradientBackground('../img/members/outreach.jpg');
+.about-image {
+  height: 80%;
 }

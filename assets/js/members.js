@@ -1,5 +1,6 @@
 var requestURL = 'https://script.google.com/macros/s/AKfycbwIBqC9lJHJGNGlrTQqy-NJC_QlvETx0-jQcYWXJUyoIrdFmFei/exec';
 
+
 var getPoints = function() {
     var netid = $('#netid').val();
     if (netid.length > 0) {

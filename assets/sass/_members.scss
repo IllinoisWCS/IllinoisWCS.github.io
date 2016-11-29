@@ -70,3 +70,18 @@
 .btn {
     font-weight: bold;
 }
+
+#techTeam {
+  background-image: url('../img/members/techteam.jpg');
+  @include gradientBackground('../img/members/techteam.jpg');
+}
+
+#mentoring {
+  background-image: url('../img/members/mentoring.jpg');
+  @include gradientBackground('../img/members/mentoring.jpg');
+}
+
+#outreach {
+  background-image: url('../img/members/outreach.jpg');
+  @include gradientBackground('../img/members/outreach.jpg');
+}

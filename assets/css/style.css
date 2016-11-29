@@ -159,7 +159,8 @@ a {
 
 #about {
   padding: 5% 0;
-  background-color: #f5f3ee; }
+  background-color: #f5f3ee;
+  height: 60%; }
   #about h1 {
     color: #7d1935; }
   #about p {
@@ -176,8 +177,8 @@ a {
     padding: 2.5% 6% 5% 6%; } }
 
 .about-subheading {
-  text-align: center;
-  margin-bottom: 3%; }
+  text-align: left;
+  margin-bottom: 2%; }
 
 .row-centered {
   text-align: center; }
@@ -190,17 +191,8 @@ a {
   /* inline-block space fix */
   margin-right: -4px; }
 
-#techTeam {
-  background-image: url("../img/members/techteam.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/techteam.jpg"); }
-
-#mentoring {
-  background-image: url("../img/members/mentoring.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/mentoring.jpg"); }
-
-#outreach {
-  background-image: url("../img/members/outreach.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/outreach.jpg"); }
+.about-image {
+  height: 80%; }
 
 .iframeOutside {
   text-align: center; }
@@ -271,6 +263,18 @@ a {
 .btn {
   font-weight: bold; }
 
+#techTeam {
+  background-image: url("../img/members/techteam.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/techteam.jpg"); }
+
+#mentoring {
+  background-image: url("../img/members/mentoring.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/mentoring.jpg"); }
+
+#outreach {
+  background-image: url("../img/members/outreach.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/outreach.jpg"); }
+
 .col-md-4 img {
   width: 100%; }
 
@@ -278,8 +282,6 @@ a {
   display: block;
   padding: 5% 5%;
   color: #7d1935; }
-  #sponsors h1 {
-    margin-bottom: 5%; }
   #sponsors ul {
     padding: 0;
     list-style-type: none; }
@@ -371,7 +373,8 @@ a {
   height: auto; }
 
 #contact {
-  color: #7d1935; }
+  color: #7d1935;
+  background-color: #f5f3ee; }
   #contact .form-control {
     font-family: "Proxima Nova"; }
   #contact .label {
@@ -387,9 +390,12 @@ a {
     padding-top: 4%; }
 
 footer {
-  background-color: #f5f3ee;
+  background-color: #7d1935;
+  color: white;
   padding: 3% 3% 3% 3%; }
   footer p {
     margin: 0;
     font-size: 1.3em;
     line-height: 150%; }
+  footer a {
+    color: white; }

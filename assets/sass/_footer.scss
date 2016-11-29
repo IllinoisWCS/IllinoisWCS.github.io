@@ -1,8 +1,13 @@
 footer {
-	background-color: $offwhite;
+	background-color: $maroon;
+	color: white;
 	padding: 3% 3% 3% 3%;
 	p {
 		margin: 0;
 		@include pfontspecial();
+	}
+
+	a {
+		color: white;
 	}
 }
