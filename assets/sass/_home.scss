@@ -36,6 +36,15 @@
   background: url('../img/slideshow/allofficers.jpg') no-repeat center center fixed;
 }
 
+@media (max-width: 440px) {
+  .splash-fill {
+    width: 100%;
+    height: 100%;
+    background: none;
+  }
+}
+
+
 .splash-overlay {
   position: absolute;
   z-index: 100;
@@ -50,6 +59,6 @@
   padding: 0 !important;
   margin: 0 !important;
   width: auto;
-  height: 1000px;
+  height: 100%;
   color: white;
 }

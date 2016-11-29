@@ -8,56 +8,54 @@ $(document).ready(function() {
     });
 
     var officers = {
-        "prez": [
-        {
-          "position": "President",
-          "firstname": "Corly",
-          "lastname": "Leung",
-          "email": "cyleung2@illinois.edu",
-          "netid": "cyleung2",
-          "year": "Senior",
-          "major": "Computer Science",
-          "interests": [
-             "Data Mining",
-             "Social Computing"
-          ],
-          "experience": [
-            "State Farm, System Intern, 2013-2014",
-            "Groupon, SWE Intern, Summer 2015",
-            "Google, SWE Intern, Summer 2016"
-          ],
-          "hobbies": [
-              "Badminton",
-              "Sleep",
-              "Non-Profits",
-          ],
-          "fact": "I had a British passport but I have never been to Europe.",
-          "place": "Milpitas",
-          "ask": []
-        },
-        {
-          "position": "Vice President",
-          "firstname": "Vaishali",
-          "lastname": "Khandelwal",
-          "email": "vkhande2@illinois.edu",
-          "netid": "vkhande2",
-          "year": "Senior",
-          "major": "Computer Science",
-          "interests": [
-            "Data Science",
-            "Analytics"
-          ],
-          "experience": [],
-          "hobbies": [
-            "Dancing",
-            "Reading"
-          ],
-          "fact": "I love dancing, I have learnt a traditional Indian Dance, Kathak, for 12 years.",
-          "place": "",
-          "ask": []
-        }
-      ],
-      "admin": [
+        "admin": [
+            {
+              "position": "President",
+              "firstname": "Corly",
+              "lastname": "Leung",
+              "email": "cyleung2@illinois.edu",
+              "netid": "cyleung2",
+              "year": "Senior",
+              "major": "Computer Science",
+              "interests": [
+                 "Data Mining",
+                 "Social Computing"
+              ],
+              "experience": [
+                "State Farm, System Intern, 2013-2014",
+                "Groupon, SWE Intern, Summer 2015",
+                "Google, SWE Intern, Summer 2016"
+              ],
+              "hobbies": [
+                  "Badminton",
+                  "Sleep",
+                  "Non-Profits",
+              ],
+              "fact": "I had a British passport but I have never been to Europe.",
+              "place": "Milpitas",
+              "ask": []
+            },
+            {
+              "position": "Vice President",
+              "firstname": "Vaishali",
+              "lastname": "Khandelwal",
+              "email": "vkhande2@illinois.edu",
+              "netid": "vkhande2",
+              "year": "Senior",
+              "major": "Computer Science",
+              "interests": [
+                "Data Science",
+                "Analytics"
+              ],
+              "experience": [],
+              "hobbies": [
+                "Dancing",
+                "Reading"
+              ],
+              "fact": "I love dancing, I have learnt a traditional Indian Dance, Kathak, for 12 years.",
+              "place": "",
+              "ask": []
+            },
           {
             "position": "Secretary",
             "firstname": "Shannon",
@@ -394,8 +392,8 @@ $(document).ready(function() {
           "place": "New Delhi, India",
           "ask": []
         }
-      ]
-    };
+          ]
+        };
 
     var output = Mustache.render($('#officerTemplate').html(), officers);
     $('#allOfficers').html(output);

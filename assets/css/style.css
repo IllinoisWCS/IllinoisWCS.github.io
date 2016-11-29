@@ -135,6 +135,12 @@ a {
   height: 100%;
   background: url("../img/slideshow/allofficers.jpg") no-repeat center center fixed; }
 
+@media (max-width: 440px) {
+  .splash-fill {
+    width: 100%;
+    height: 100%;
+    background: none; } }
+
 .splash-overlay {
   position: absolute;
   z-index: 100;
@@ -148,11 +154,12 @@ a {
   padding: 0 !important;
   margin: 0 !important;
   width: auto;
-  height: 1000px;
+  height: 100%;
   color: white; }
 
 #about {
-  margin-top: 5%; }
+  padding: 5% 0;
+  background-color: #f5f3ee; }
   #about h1 {
     color: #7d1935; }
   #about p {
@@ -269,7 +276,7 @@ a {
 
 #sponsors {
   display: block;
-  padding: 5% 10%;
+  padding: 5% 5%;
   color: #7d1935; }
   #sponsors h1 {
     margin-bottom: 5%; }
@@ -306,7 +313,8 @@ a {
     width: 50%; } }
 
 #officers {
-  padding: 0 20%; }
+  padding: 5% 5%;
+  background-color: #f5f3ee; }
   #officers h1 {
     color: #7d1935;
     margin-bottom: 5%; }

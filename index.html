@@ -84,7 +84,7 @@
         </div>
 
         <section id="about">
-            <div class="row">
+            <div class="row" style="margin-bottom: 5%;">
                 <div class="col-sm-offset-1 col-sm-10 col-md-5">
                     <h1 class="about-header">About Us</h1>
                     <p>
@@ -101,7 +101,7 @@
                     </p>
                 </div>
                 <div class="col-sm-offset-1 col-sm-10 col-md-4">
-                    <img src="assets/img/wcs/officers.jpg" class="img-responsive" />
+                    <img src="assets/img/members/memberportal.jpg" class="img-responsive" />
                 </div>
             </div>
             <h2 class="about-subheading">Teams</h2>
@@ -161,53 +161,6 @@
 
         <script type="text/x-mustache" id="officerTemplate">
             <div class="row padding">
-                {{#prez}}
-                <div class="col-sm-6 col-md-6">
-                    <div class="thumbnail officer-box">
-                        <img src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
-                        <div class="caption">
-                            <h4 align="center">{{firstname}} {{lastname}}</h4>
-                            <p align="center">{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o"></i></a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="{{netid}}">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title">{{firstname}} {{lastname}} - {{position}}</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div>
-                                    <div class="col-md-6">
-                                        <img class="officerPicture" src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}">
-                                        </img>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p><b>{{major}}</b></p>
-                                        <p><b>{{year}}</b></p>
-                                        <p><b>Interests: </b>
-                                        {{#interests}}
-                                            <span class="label label-default">{{.}}</span>
-                                        {{/interests}}</p>
-                                        <p><b>Hobbies: </b>
-                                        {{#hobbies}}
-                                            <span class="label label-success">{{.}}</span>
-                                        {{/hobbies}}</p>
-                                        <br/>
-                                        <p><b>Fun fact: </b>{{fact}}</p>
-                                        <p><b>From: </b>{{place}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{/prez}}
                 {{#admin}}
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail officer-box">
