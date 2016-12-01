@@ -319,6 +319,20 @@ $(document).ready(function() {
                                 "href": "https://github.com/firebase/angularfire"
                             }
                         ]
+                    },
+                    {
+                        "name": "Introduction to Chrome Extensions",
+                        "slides": "/tutorials/chrome-extension",
+                        "links": [
+                            {
+                                "name": "Chrome Extension Complete Repository",
+                                "href": "https://github.com/IllinoisWCS/chrome-extension-complete"
+                            },
+                            {
+                                "name": "Chrome Extension Skeleton Repository",
+                                "href": "https://github.com/IllinoisWCS/chrome-extension-skeleton"
+                            }
+                        ]
                     }
                 ]
             }
