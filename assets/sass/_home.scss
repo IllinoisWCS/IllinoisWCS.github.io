@@ -52,6 +52,7 @@
   width: 100%;
   background-color: $maroon;
   padding: 1%;
+  color: white;
 }
 
 #home {
@@ -60,5 +61,9 @@
   margin: 0 !important;
   width: auto;
   height: 100%;
+  color: white;
+}
+
+.home-title {
   color: white;
 }

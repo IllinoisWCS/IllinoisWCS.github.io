@@ -1,26 +1,19 @@
 #about {
-	padding: 5% 0;
+	padding: 5%;
     background-color: $offwhite;
-    height: 60%;
 
-	h1 {
-		color: $maroon;
-	}
 	p {
 		@include pfontspecial();
-		margin-bottom: 10%;
 	}
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
 }
 
 .about-header {
-	margin-bottom: 10%;
-	text-align: center;
-}
-
-@media (max-width: 768px) {
-	.padded {
-		padding: 2.5% 6% 5% 6%;
-	}
+	margin-bottom: 5%;
 }
 
 .about-subheading {
@@ -28,26 +21,18 @@
 	margin-bottom: 2%;
 }
 
-.row-centered {
-    text-align:center;
-}
-
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
-}
-
-@mixin gradientBackground($url) {
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  ), url($url);
-}
-
 .about-image {
-  height: 80%;
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 1169px) {
+	.about-image-container {
+        display: none;
+    }
+    .about-header {
+        text-align: center;
+	    margin-bottom: 5%;
+    }
 }

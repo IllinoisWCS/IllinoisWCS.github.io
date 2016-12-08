@@ -15,6 +15,7 @@ h1 {
   font-weight: 500 !important;
   font-size: 5em !important;
   letter-spacing: 2px;
+  color: $maroon;
 }
 
 h2 {
@@ -38,7 +39,7 @@ p {
 }
 
 @mixin pfontspecial() {
-  font-size: 1.3em;
+  font-size: 1.1em;
   line-height: 150%;
 }
 

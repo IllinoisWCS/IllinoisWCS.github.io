@@ -13,7 +13,8 @@ h1 {
   font-family: "Oswald" !important;
   font-weight: 500 !important;
   font-size: 5em !important;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  color: #7d1935; }
 
 h2 {
   font-family: "Oswald" !important;
@@ -147,7 +148,8 @@ a {
   top: calc(50% - 1.5em);
   width: 100%;
   background-color: #7d1935;
-  padding: 1%; }
+  padding: 1%;
+  color: white; }
 
 #home {
   overflow: hidden;
@@ -157,42 +159,38 @@ a {
   height: 100%;
   color: white; }
 
+.home-title {
+  color: white; }
+
 #about {
-  padding: 5% 0;
-  background-color: #f5f3ee;
-  height: 60%; }
-  #about h1 {
-    color: #7d1935; }
+  padding: 5%;
+  background-color: #f5f3ee; }
   #about p {
-    font-size: 1.3em;
-    line-height: 150%;
-    margin-bottom: 10%; }
+    font-size: 1.1em;
+    line-height: 150%; }
+
+.about-container {
+  display: flex;
+  align-items: center; }
 
 .about-header {
-  margin-bottom: 10%;
-  text-align: center; }
-
-@media (max-width: 768px) {
-  .padded {
-    padding: 2.5% 6% 5% 6%; } }
+  margin-bottom: 5%; }
 
 .about-subheading {
   text-align: left;
   margin-bottom: 2%; }
 
-.row-centered {
-  text-align: center; }
-
-.col-centered {
-  display: inline-block;
-  float: none;
-  /* reset the text-align */
-  text-align: left;
-  /* inline-block space fix */
-  margin-right: -4px; }
-
 .about-image {
-  height: 80%; }
+  width: 75%;
+  display: block;
+  margin: 0 auto; }
+
+@media (max-width: 1169px) {
+  .about-image-container {
+    display: none; }
+  .about-header {
+    text-align: center;
+    margin-bottom: 5%; } }
 
 .iframeOutside {
   text-align: center; }
@@ -213,7 +211,7 @@ a {
     color: #7d1935;
     margin-bottom: 3%; }
   #members p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     line-height: 150%;
     margin-bottom: 10%; }
   #members .btnContainer {
@@ -356,7 +354,7 @@ a {
 #alumni {
   background-color: #f5f3ee; }
   #alumni p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     line-height: 150%; }
 
 #featuredAlumni {
@@ -399,7 +397,7 @@ footer {
   text-align: center; }
   footer p {
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1.1em;
     line-height: 150%; }
   footer a {
     color: white; }
