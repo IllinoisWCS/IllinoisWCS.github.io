@@ -7,9 +7,9 @@
 
 #members {
     h1 {
-		color: $maroon;
-        margin-bottom: 3%;
-	}
+      color: $maroon;
+      margin-bottom: 3%;
+    }
 
 	p {
 		@include pfontspecial();
@@ -25,14 +25,14 @@
 }
 
 .memberImage {
+  margin-bottom: 2%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   position: relative;
   text-align: center;
   vertical-align: center;
-  min-height: 50vh !important;
-  padding: -15 !important;
+  min-height: 20vh !important;
 
   p {
     font-weight: 900;
@@ -60,6 +60,7 @@
 }
 
 .member-links {
+    padding-top: 5%;
     list-style-type: none;
     text-align: center;
 }
