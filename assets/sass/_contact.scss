@@ -21,6 +21,11 @@
 	}
 
 	.contact-form {
-		padding-top: 4%;
+		padding-top: 5%;
 	}
+
+	@media (max-width: 749px) {
+		padding: 5%;
+	}
+
 }

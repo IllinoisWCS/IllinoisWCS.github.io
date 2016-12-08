@@ -388,7 +388,10 @@ a {
       background-color: #7d1935;
       color: #f5f3ee; }
   #contact .contact-form {
-    padding-top: 4%; }
+    padding-top: 5%; }
+  @media (max-width: 749px) {
+    #contact {
+      padding: 5%; } }
 
 footer {
   background-color: #7d1935;
