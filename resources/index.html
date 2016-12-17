@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>WCS Academic Resources</title>
+        <title>WCS Member Resources</title>
 
         <meta name="description" content="Check out some resources we've compiled for our members."/>
         <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
@@ -30,7 +30,7 @@
         <script type="text/javascript" src="/assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
         <script type="text/javascript" src="/assets/lib/mustache/mustache.min.js"></script>
         <script type="text/javascript" src="/assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
-        <script type="text/javascript" src="/assets/js/academic.js"></script>
+        <script type="text/javascript" src="/assets/js/resources.js"></script>
     </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
         <nav class="mainNav navbar navbar-default navbar-fixed-top top-nav-collapse">
@@ -50,65 +50,38 @@
                             <a class="page-scroll" href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#resources">Resources</a>
+                            <a class="page-scroll" href="#overview">Overview</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#interview">Practice Interviews</a>
+                            <a class="page-scroll" href="#internships">Internship Programs</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#ask">Questions</a>
+                            <a class="page-scroll" href="#scholarships">Scholarships</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#conferences">Conferences</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#communities">Communities</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#influencers">Influencers</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <script type="text/x-mustache" id="resourcesTemplate">
-            {{#values}}
-            <div class="col-md-2 col-sm-2 grid-item {{#filters}}{{.}} {{/filters}}{{#languages}}{{.}}  {{/languages}}">
-                <a href="{{link}}" target="_blank"><h4 align="center">{{title}}</h4></a>
-            </div>
-            {{/values}}
-        </script>
-
-        <script type="text/x-mustache" id="categoryTemplate">
-            <p align="center">
-            {{#list}}
-                {{^href}}
-                    <a class="categoryFilter" href="{{text}}"><span class="label label-default">{{text}}</span></a>
-                {{/href}}
-                {{#href}}
-                    <a class="categoryFilter" href="{{href}}"><span class="label label-default">{{text}}</span></a>
-                {{/href}}
-            {{/list}}
-            </p>
-        </script>
-
-        <div class="row padded" id="resources">
+        <div class="row padded" id="overview">
             <div class="col-sm-offset-1 col-md-10">
-                <h1 align="center">Recommended Resources</h1>
-                <p align="center">Click on the filters at the top to filter each type of resource.</p>
-            </div>
-            <div class="col-sm-offset-1 col-md-10">
-                <div id="resourceCategories" class="row"></div>
-                <div id="allResources" class="row"></div>
+                <h1 align="center">Overview</h1>
+                <p>Here is a curated list of opportunities, programs and communities our members can take part in. Think we're missing something? Feel free to submit an issue on <a href="https://github.com/IllinoisWCS/IllinoisWCS.github.io/issues" tab="_blank">Github.</a></p>
             </div>
         </div>
 
-        <div class="row padded" id="interview">
+        <div class="row padded" id="internships">
             <div class="col-sm-offset-1 col-md-10">
-                <h1 align="center">Practice Interviews</h1>
-                <a href="https://www.google.com/calendar/selfsched?sstoken=UUw1dkVubl9ZalVufGRlZmF1bHR8NGE4ODg2MGJmZTRiNzUzNTQ1YWI3YTQ1YTRjM2M5ZmQ" target="_blank"><p align="center">Click here to sign up for a practice interview during our office hours.</p></a>
-            </div>
-        </div>
-
-        <div class="row padded" id="ask">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 align="center">Ask Us a Question</h1>
-                <p align="center">Whether's it's about classes at UIUC, internship interview questions, or other things on your mind, just fill out the below form and we'll be in touch shortly with answers or resources.</p>
-                <div class="iframeOutside">
-                    <iframe align="center" src="https://docs.google.com/a/illinois.edu/forms/d/1wTa1VvaicxGbb-LFpgfXRWjKGTFNkT7iXsEHc1IB83E/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-                </div>
+                
             </div>
         </div>
 
