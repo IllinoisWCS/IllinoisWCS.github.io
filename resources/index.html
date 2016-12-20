@@ -65,7 +65,7 @@
                             <a class="page-scroll" href="#communities">Communities</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#influencers">Influencers</a>
+                            <a class="page-scroll" href="#influencers">Other</a>
                         </li>
                     </ul>
                 </div>
@@ -75,13 +75,24 @@
         <div class="row padded" id="overview">
             <div class="col-sm-offset-1 col-md-10">
                 <h1 align="center">Overview</h1>
-                <p>Here is a curated list of opportunities, programs and communities our members can take part in. Think we're missing something? Feel free to submit an issue on <a href="https://github.com/IllinoisWCS/IllinoisWCS.github.io/issues" tab="_blank">Github.</a></p>
+                <p>Here is a curated list of opportunities, programs and communities our members can take part in. Specifically, the internship programs we list here are geared towards underclassmen. Think we're missing something or we need a correction? Feel free to submit an issue on <a href="https://github.com/IllinoisWCS/IllinoisWCS.github.io/issues" tab="_blank">Github.</a></p>
             </div>
         </div>
 
+        <script type="text/x-mustache" id="resourceTemplate">
+            {{#values}}
+            <li class="list-group-item">
+                <h4>{{name}}</h4>
+                <p>{{description}}</p>
+                {{#link}}<a href={{.}} target="_blank">More information</a>{{/link}}
+            </li>
+            {{/values}}
+        </script>
+
         <div class="row padded" id="internships">
             <div class="col-sm-offset-1 col-md-10">
-                
+                <h1 align="center">Internship Programs</h1>
+                <ul class="list-group" id="internshipsList"></ul>
             </div>
         </div>
 
