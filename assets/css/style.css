@@ -192,8 +192,8 @@ a {
     text-align: center;
     margin-bottom: 5%; } }
 
-.iframeOutside {
-  text-align: center; }
+.resource-header {
+  padding-bottom: 5%; }
 
 .panel {
   border: none; }
