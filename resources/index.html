@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>WCS Academic Resources</title>
+        <title>WCS Member Resources</title>
 
         <meta name="description" content="Check out some resources we've compiled for our members."/>
         <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
@@ -30,7 +30,7 @@
         <script type="text/javascript" src="/assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
         <script type="text/javascript" src="/assets/lib/mustache/mustache.min.js"></script>
         <script type="text/javascript" src="/assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
-        <script type="text/javascript" src="/assets/js/academic.js"></script>
+        <script type="text/javascript" src="/assets/js/resources.js"></script>
     </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
         <nav class="mainNav navbar navbar-default navbar-fixed-top top-nav-collapse">
@@ -50,65 +50,83 @@
                             <a class="page-scroll" href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#resources">Resources</a>
+                            <a class="page-scroll" href="#overview">Overview</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#interview">Practice Interviews</a>
+                            <a class="page-scroll" href="#internships">Internship Programs</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#ask">Questions</a>
+                            <a class="page-scroll" href="#scholarships">Scholarships</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#conferences">Conferences</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#communities">Communities</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#influencers">Other</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <script type="text/x-mustache" id="resourcesTemplate">
-            {{#values}}
-            <div class="col-md-2 col-sm-2 grid-item {{#filters}}{{.}} {{/filters}}{{#languages}}{{.}}  {{/languages}}">
-                <a href="{{link}}" target="_blank"><h4 align="center">{{title}}</h4></a>
+        <div class="row padded" id="overview">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 class="resource-header" align="center">Overview</h1>
+                <p>Here is a curated list of opportunities, programs and communities our members can take part in. Specifically, the internship programs we list here are geared towards underclassmen. Think we're missing something or we need a correction? Feel free to submit an issue on <a href="https://github.com/IllinoisWCS/IllinoisWCS.github.io/issues" tab="_blank">Github.</a></p>
             </div>
+        </div>
+
+        <script type="text/x-mustache" id="resourceTemplate">
+            {{#values}}
+            <li class="list-group-item">
+                <h4>{{name}}</h4>
+                <p>{{description}}</p>
+                {{#link}}<a href={{.}} target="_blank">More information</a>{{/link}}
+            </li>
             {{/values}}
         </script>
 
-        <script type="text/x-mustache" id="categoryTemplate">
-            <p align="center">
-            {{#list}}
-                {{^href}}
-                    <a class="categoryFilter" href="{{text}}"><span class="label label-default">{{text}}</span></a>
-                {{/href}}
-                {{#href}}
-                    <a class="categoryFilter" href="{{href}}"><span class="label label-default">{{text}}</span></a>
-                {{/href}}
-            {{/list}}
-            </p>
-        </script>
-
-        <div class="row padded" id="resources">
+        <div class="row padded" id="internships">
             <div class="col-sm-offset-1 col-md-10">
-                <h1 align="center">Recommended Resources</h1>
-                <p align="center">Click on the filters at the top to filter each type of resource.</p>
-            </div>
-            <div class="col-sm-offset-1 col-md-10">
-                <div id="resourceCategories" class="row"></div>
-                <div id="allResources" class="row"></div>
+                <h1 class="resource-header" align="center">Internship Programs</h1>
+                <ul class="list-group" id="internshipsList"></ul>
+                <p>References: Cassidy Williams' <a href="https://github.com/cassidoo/getting-a-gig">Getting a Gig</a> has a lot of great information about how to best succeed in your internship search. Calla Jun's <a href="https://callajun.github.io/csfrosh/">A Freshman's Guide to Tech Internships</a> is also a great resource.</p>
             </div>
         </div>
 
-        <div class="row padded" id="interview">
+        <div class="row padded" id="scholarships">
             <div class="col-sm-offset-1 col-md-10">
-                <h1 align="center">Practice Interviews</h1>
-                <a href="https://www.google.com/calendar/selfsched?sstoken=UUw1dkVubl9ZalVufGRlZmF1bHR8NGE4ODg2MGJmZTRiNzUzNTQ1YWI3YTQ1YTRjM2M5ZmQ" target="_blank"><p align="center">Click here to sign up for a practice interview during our office hours.</p></a>
+                <h1 class="resource-header" align="center">Scholarships</h1>
+                <ul class="list-group" id="scholarshipsList"></ul>
+                <p>The CS Department periodically sends out emails regarding new and upcoming scholarships offered within and outside of the department.</p>
             </div>
         </div>
 
-        <div class="row padded" id="ask">
+        <div class="row padded" id="conferences">
             <div class="col-sm-offset-1 col-md-10">
-                <h1 align="center">Ask Us a Question</h1>
-                <p align="center">Whether's it's about classes at UIUC, internship interview questions, or other things on your mind, just fill out the below form and we'll be in touch shortly with answers or resources.</p>
-                <div class="iframeOutside">
-                    <iframe align="center" src="https://docs.google.com/a/illinois.edu/forms/d/1wTa1VvaicxGbb-LFpgfXRWjKGTFNkT7iXsEHc1IB83E/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-                </div>
+                <h1 class="resource-header" align="center">Conferences</h1>
+                <ul class="list-group" id="conferencesList"></ul>
+                <p>Most conference applications open at different times, we'll post links to the applications as soon as we get word of them. Also, Freia Lobo's <a href="https://github.com/freialobo/GHC-Scholarships">GHC Scholarships</a> portal is also a great resource to see what other smaller scholarships are out there in case we miss some.</p>
+                <p>Feel free to reach out to the CS Department as well regarding conference funding. They can work with you to help fund some expenses towards your conference trip, as long as you ask and state what help you need.</p>
+            </div>
+        </div>
+
+        <div class="row padded" id="communities">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 class="resource-header" align="center">Communities</h1>
+                <h3 align="center">Facebook Groups, Slack Channels</h3>
+                <p>Coming Soon</p>
+            </div>
+        </div>
+
+        <div class="row padded" id="other">
+            <div class="col-sm-offset-1 col-md-10">
+                <h1 class="resource-header" align="center">Other</h1>
+                <h3 align="center">Influencers, Publications</h3>
+                <p>Coming Soon</p>
             </div>
         </div>
 
