@@ -1,0 +1,54 @@
+{
+        "events": [
+            {
+                "time": "8:30 AM",
+                "what": "Check-in & Breakfast & Photo booth",
+                "where": "SC Atrium"
+            },
+            {
+                "time": "9:30 AM",
+                "what": "Welcome & Lean In Talk & Project Fair",
+                "where": "SC 2405"
+            },
+            {
+                "time": "10:30 AM",
+                "what": "Workshop Intros & time to get started on projects",
+                "where": "SC 0218/20/22"
+            },
+            {
+                "time": "12:00 PM",
+                "what": "Lunch & Talk from a developer in the industry",
+                "where": "SC 2405"
+            },
+            {
+                "time": "1:00 PM",
+                "what": "Workshop time to work on projects",
+                "where": "SC 0218/20/22"
+            },
+            {
+                "time": "4:00 PM",
+                "what": "Photo Scavenger Hunt",
+                "where": "Engineering Quad"
+            },
+            {
+                "time": "5:30 PM",
+                "what": "Jeopardy",
+                "where": "SC 2405"
+            },
+            {
+                "time": "6:00 PM",
+                "what": "Dinner & talk by a professor",
+                "where": "SC 2405"
+            },
+            {
+                "time": "7:00 PM",
+                "what": "Team building!",
+                "where": "SC 2405 or 1404"
+            },
+            {
+                "time": "8:00 PM",
+                "what": "Girls Night (Movie, Nail Painting, Jewelry)",
+                "where": "SC 1404"
+            }
+        ]
+    }

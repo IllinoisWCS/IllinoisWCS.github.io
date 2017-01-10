@@ -10,43 +10,18 @@ setTimeout(function(){
 }, 100);
 
 // mapping Modernizr terms over to caniuse terms
-var map = {
-  audio : 'audio',
-  borderimage : 'border-image',
-  borderradius : 'border-radius',
-  canvas : 'canvas',
-  canvastext : 'canvas-text',
-  cssanimations : 'css-animation',
-  boxshadow : 'css-boxshadow',
-  cssgradients : 'css-gradients',
-  opacity : 'css-opacity',
-  cssreflections : 'css-reflections',
-  textshadow : 'css-textshadow',
-  csstransitions : 'css-transitions',
-  hsla : 'css3-colors',
-  rgba : 'css3-colors',
-  draganddrop : 'dragndrop',
-  flexbox : 'flexbox',
-  fontface : 'fontface',
-  geolocation : 'geolocation',
-  hashchange : 'hashchange',
-  history : 'history',
-  indexeddb : 'indexeddb',
-  multiplebgs : 'multibackgrounds',
-  csscolumns : 'multicolumn',
-  localstorage : 'namevalue-storage',
-  applicationcache : 'offline-apps',
-  websqldatabase : 'sql-storage',
-  svg : 'svg',
-  touch : 'touch',
-  csstransforms : 'transforms2d',
-  csstransforms3d : 'transforms3d',
-  video: 'video',
-  webgl: 'webgl',
-  websockets : 'websockets',
-  webworkers : 'webworkers',
-  postmessage : 'x-doc-messaging'
-};
+var map = $.getJSON("assets_lib_modernizr_test_js_unit-caniuse.json", function() {
+      console.log("success");
+    })
+      .done(function() {
+        console.log("second success");
+    })
+      .fail(function() {
+        console.log("error");
+    })
+      .always(function() {
+        console.log("complete");
+  });
 
 window.caniusecb = function(scriptdata) {
 
