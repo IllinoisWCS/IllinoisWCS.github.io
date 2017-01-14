@@ -137,31 +137,6 @@ $(document).ready(function() {
           },
           {
             "position": "Corporate Co-Chair",
-            "firstname": "Jennifer",
-            "lastname": "Cheng",
-            "email": "jrcheng3@illinois.edu",
-            "netid": "jrcheng3",
-            "year": "Senior",
-            "major": "Computer Science",
-            "interests": [
-                "HCI",
-                "Big Data"
-            ],
-            "experience": [
-                "Dow Chemical Company - SDE Intern, Summer 2015 - Spring 2016",
-                "Groupon - SDE Intern, Summer 2016"
-            ],
-            "hobbies": [
-                "Watching puppy videos",
-                "Baking",
-                "Playing cards"
-            ],
-            "fact": "I like puppies.",
-            "place": "Barrington, IL",
-            "ask": []
-          },
-          {
-            "position": "Corporate Co-Chair",
             "firstname": "Erica",
             "lastname": "Lee",
             "email": "nlee16@illinois.edu",
@@ -235,41 +210,6 @@ $(document).ready(function() {
             "place": "Forrest, IL",
             "ask": []
           },
-          {
-            "position": "Tech Team Co-Chair",
-            "firstname": "Emily",
-            "lastname": "Chao",
-            "email": "elchao2@illinois.edu",
-            "netid": "elchao2",
-            "year": "Senior",
-            "major": "Computer Science",
-            "interests": [
-                "Machine Learning",
-                "Full Stack Web Development",
-                "Social Interaction on the Web",
-                "Cybersecurity and Harrassment"
-            ],
-            "experience": [
-                "IT Development Intern, Paycor, Inc. Summer 2012",
-                "GBS-ITDO HRSS Intern, P&G, Summer 2013",
-                "Software Engineering Intern, kCura, Summer 2014",
-                "Systems Intern, Dow Chemical Company, School Year - 2014-2015",
-                "Software Engineering Intern, Intuit, Summer 2015",
-                "Engineering 100 ELA, Fall 2015",
-                "CS 225 TA, Spring 2015-Present",
-                "Web Developer, Miss Possible, Feb. 2014 - Present",
-                "Software Engineering Intern, Twitter, Summer 2016"
-            ],
-            "hobbies": [
-                "Ice skating",
-                "curating music",
-                "singing",
-                "stargazing"
-            ],
-            "fact": "I got a nose job after ignoring my deviated septum for 10 years. Oh and also I live within 2 miles of former Speaker of the House John Boehner.",
-            "place": "West Chester, OH",
-            "ask": []
-        },
         {
           "position": "Tech Team Co-Chair",
           "firstname": "Berwin",
