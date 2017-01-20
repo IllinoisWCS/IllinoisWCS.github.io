@@ -124,7 +124,8 @@ $(document).ready(function() {
                 "eBay Intern (Summer 2014)",
                 "Facebook Intern (Summer 2015)",
                 "Facebook Intern (Summer 2016)",
-                "Research Work under Prof Ranjitha Kumar"
+                "Research Work under Prof Ranjitha Kumar",
+                "Qualtrics Intern (Summer 2017)"
             ],
             "hobbies": [
                 "Web Dev",
