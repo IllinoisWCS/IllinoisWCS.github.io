@@ -109,7 +109,7 @@ $(document).ready(function() {
             "ask": []
           },
           {
-            "position": "Webmaster",
+            "position": "Head of Infrastructure",
             "firstname": "Sujay",
             "lastname": "Khandekar",
             "email": "khandek2@illinois.edu",
