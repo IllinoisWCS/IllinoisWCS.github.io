@@ -15,15 +15,15 @@ $(document).ready(function() {
             },
             {
                 "name": "Lean In Circle February 2016",
-                "href": "/assets/file/LeanIn.pptx"
+                "href": "/assets/file/LeanIn.pdf"
             },
             {
                 "name": "Class Schedule Preparation October 2015",
-                "href": "/assets/file/ClassSchedulePrep.pptx"
+                "href": "/assets/file/ClassSchedulePrep.pdf"
             },
             {
                 "name": "Resume Review Workshop September 2015",
-                "href": "/assets/file/ResumeReview.pptx"
+                "href": "/assets/file/ResumeReview.pdf"
             },
             {
                 "name": "Lean In Circle - Academics April 2015",
