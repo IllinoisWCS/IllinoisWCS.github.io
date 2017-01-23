@@ -290,6 +290,31 @@
           "ask": []
         },
         {
+            "position": "Tech Team Co-Chair",
+            "firstname": "Jing",
+            "lastname": "Huang",
+            "email": "jhuang81@illinois.edu",
+            "netid": "jhuang81",
+            "year": "Junior",
+            "major": "Computer Science",
+            "interests": [
+            "Machine Learning",
+            "Algorithms"
+            ],
+            "experience": [
+            "CS 233 Course Assistant",
+            "Software Engineering Intern, Google, Summer 2016",
+            "Technology Developer and Analyst Intern, Bank of America, Summer 2015"
+            ],
+            "hobbies": [
+            "Writing",
+            "Badminton"
+            ],
+            "fact": "I grew up in Beijing but never visited the Forbidden City.",
+            "place": "Beijing, China",
+            "ask": []
+        },
+        {
         "position": "Social Chair",
         "firstname": "Shannon",
         "lastname": "Bowman",
