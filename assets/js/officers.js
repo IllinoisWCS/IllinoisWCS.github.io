@@ -7,7 +7,6 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-
   $.getJSON("assets/js/officers.json", function(data) {
     console.log(data);
     var output = Mustache.render($('#officerTemplate').html(), data);

@@ -9,6 +9,6 @@ $(document).ready(function() {
 
     $.getJSON("/assets/js/mentoring_pastEvents.json", function(data) {
       var pastEventsTemplate = Mustache.render($('#pastEventsTemplate').html(), data);
-    $('#past-events-list').html(pastEventsTemplate);
+      $('#past-events-list').html(pastEventsTemplate);
     });
 });
