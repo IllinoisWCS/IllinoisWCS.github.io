@@ -1,0 +1,154 @@
+{
+        "values": [
+            {
+                "name": "Tech Team Facebook Group",
+                "href": "https://www.facebook.com/groups/666235760194071/"
+            },
+            {
+                "name": "Our Github",
+                "href": "https://github.com/illinoiswcs"
+            },
+            {
+                "name": "How to Start Your Own Side Project (in partnership with Mentoring)",
+                "href": "https://docs.google.com/presentation/d/1XHNqpS30KhmzgWdZX6GDjn15vvvCjb4Pxe5jbxEfWPw/edit?usp=sharing"
+            },
+            {
+                "name": "Submit Your Project Idea (and get to present at Engineering Open House)",
+                "href": "https://goo.gl/forms/1WHriNuvaAW5RG7T2"
+            },
+            {
+                "name": "Tutorials",
+                "href": "/tutorials",
+                "tutorials": [
+                    {
+                        "name": "Introduction to Git",
+                        "slides": "/tutorials/git",
+                        "links": [
+                            {
+                                "name": "Git Skeleton Repository",
+                                "href": "https://github.com/IllinoisWCS/git-skeleton"
+                            },
+                            {
+                                "name": "Extended Notes",
+                                "href": "https://medium.com/how-to-start-your-own-technical-project/notes-on-git-af030e23c887#.kp4d5zdxv"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to Web Development + Javascript Challenges",
+                        "slides": "/tutorials/web-intro",
+                        "links": [
+                            {
+                                "name": "Intro to Web Skeleton Repository",
+                                "href": "https://github.com/IllinoisWCS/web-skeleton"
+                            },
+                            {
+                                "name": "Javascript Challenges Repository",
+                                "href": "https://github.com/IllinoisWCS/web-challenges"
+                            },
+                            {
+                                "name": "Intro to Web Completed Repository",
+                                "href": "https://github.com/IllinoisWCS/web-complete"
+                            },
+                            {
+                                "name": "Extended Notes",
+                                "href": "https://medium.com/how-to-start-your-own-technical-project/notes-on-web-development-part-1-3bedffe9821c#.lmue73p05"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to APIs",
+                        "slides": "/tutorials/api-intro",
+                        "links": [
+                            {
+                                "name": "An example of using the CUMTD API",
+                                "href": "https://jsfiddle.net/bxie6/sj2zfce5/7/"
+                            },
+                            {
+                                "name": "An example of using the Open Movie Database API",
+                                "href": "https://jsfiddle.net/elchao96/xc4qsmzt/"
+                            },
+                            {
+                                "name": "An example of using the Giphy API",
+                                "href": "https://github.com/IllinoisWCS/giphy-api"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to Data Science",
+                        "slides": "/tutorials/data",
+                        "links": [
+                            {
+                                "name": "Python Data Science Tutorial repository",
+                                "href": "https://github.com/illinoiswcs/python-start"
+                            },
+                            {
+                                "name": "Try Jupyter notebooks online",
+                                "href": "https://try.jupyter.org/"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to Data-Binding",
+                        "slides": "/tutorials/web-intro/#/14",
+                        "links": [
+                            {
+                                "name": "AngularJS Complete Repository",
+                                "href": "https://github.com/IllinoisWCS/web-II-complete"
+                            },
+                            {
+                                "name": "AngularJS Skeleton Repository",
+                                "href": "https://github.com/IllinoisWCS/web-II-skeleton"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to ChatBots",
+                        "slides": "/tutorials/chatbot",
+                        "links": [
+                            {
+                                "name": "Chatbot Example (ELIZA bot)",
+                                "href": "https://github.com/IllinoisWCS/chatbot-intro"
+                            },
+                            {
+                                "name": "Original Tutorial Based Off Of",
+                                "href": "https://www.smallsurething.com/implementing-the-famous-eliza-chatbot-in-python/"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to Creating Your Own API",
+                        "slides": "/tutorials/web-intro/#/25",
+                        "links": [
+                            {
+                                "name": "Backend Example with Firebase",
+                                "href": "https://github.com/IllinoisWCS/backend-intro"
+                            },
+                            {
+                                "name": "Firebase Documentation",
+                                "href": "https://firebase.google.com/"
+                            },
+                            {
+                                "name": "AngularFire (using Angular with Firebase)",
+                                "href": "https://github.com/firebase/angularfire"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Introduction to Chrome Extensions",
+                        "slides": "/tutorials/chrome-extension",
+                        "links": [
+                            {
+                                "name": "Chrome Extension Complete Repository",
+                                "href": "https://github.com/IllinoisWCS/chrome-extension-complete"
+                            },
+                            {
+                                "name": "Chrome Extension Skeleton Repository",
+                                "href": "https://github.com/IllinoisWCS/chrome-extension-skeleton"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
