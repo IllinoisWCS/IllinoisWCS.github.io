@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "The official website for WCS at the University of Illinois at Urbana-Champaign.",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "browser-sync": "^2.18.5"
+  },
   "devDependencies": {
     "browser-sync": "^2.14.0",
     "gulp": "^3.9.0",
-    "gulp-sass": "^2.1.1"
+    "gulp-sass": "^2.3.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
