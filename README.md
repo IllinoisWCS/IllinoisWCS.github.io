@@ -26,7 +26,7 @@ Run all changes by the head of infrastructure. Here are the steps to making a ch
 
 * camelCase, not snake_case
 
-* Braces on the left
+* Braces on the right
 
 * Lines should not be longer than 80 characters
 
