@@ -8,11 +8,16 @@
         list-style-type: none;
     }
 
-    img {
+    a {
        width: 100%;
        max-width: 100%;
-       object-fit: contain;
        max-height: 200px;
+    }
+
+    img {
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 

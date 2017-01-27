@@ -287,11 +287,14 @@ a {
   #sponsors ul {
     padding: 0;
     list-style-type: none; }
-  #sponsors img {
+  #sponsors a {
     width: 100%;
     max-width: 100%;
-    object-fit: contain;
     max-height: 200px; }
+  #sponsors img {
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%); }
 
 .list {
   display: flex;
