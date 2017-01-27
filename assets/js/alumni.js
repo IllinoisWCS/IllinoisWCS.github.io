@@ -10,7 +10,6 @@ $(document).ready(function() {
 	};
 
 	$.getJSON("/assets/js/alumni.json", function(data) {
-	  console.log(data);
 	  var template = Mustache.render($('#alumniTemplate').html(), data);
 	$('#alumniSlideshow .carousel-inner').html(template);
 	var template2 = Mustache.render($('#alumniCarouselIndicatorTemplate').html(), data);
