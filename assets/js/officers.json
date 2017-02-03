@@ -128,31 +128,6 @@
           },
           {
             "position": "Corporate Co-Chair",
-            "firstname": "Jennifer",
-            "lastname": "Cheng",
-            "email": "jrcheng3@illinois.edu",
-            "netid": "jrcheng3",
-            "year": "Senior",
-            "major": "Computer Science",
-            "interests": [
-                "HCI",
-                "Big Data"
-            ],
-            "experience": [
-                "Dow Chemical Company - SDE Intern, Summer 2015 - Spring 2016",
-                "Groupon - SDE Intern, Summer 2016"
-            ],
-            "hobbies": [
-                "Watching puppy videos",
-                "Baking",
-                "Playing cards"
-            ],
-            "fact": "I like puppies.",
-            "place": "Barrington, IL",
-            "ask": []
-          },
-          {
-            "position": "Corporate Co-Chair",
             "firstname": "Erica",
             "lastname": "Lee",
             "email": "nlee16@illinois.edu",
