@@ -5,7 +5,7 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family: "Proxima Nova";
+  font-family: "Mallanna", sans-serif;
   width: 100%;
   height: 100%; }
 
@@ -30,7 +30,7 @@ h4 {
   font-size: 2em !important; }
 
 p {
-  font-family: "Proxima Nova"; }
+  font-family: "Mallanna", sans-serif; }
 
 .padded {
   padding: 2.5% 0 5% 0; }
@@ -94,7 +94,7 @@ a {
     padding: 0 10% 0 10%; }
 
 .nav {
-  font-family: "Proxima Nova";
+  font-family: "Mallanna", sans-serif;
   text-transform: uppercase; }
 
 @media (min-width: 767px) {
@@ -377,13 +377,48 @@ a {
   width: 100%;
   height: auto; }
 
+#meetAlumni {
+  height: 950px; }
+
+.alumniHeader {
+  padding: 5% 5%; }
+
+.alumniImages {
+  width: 1000px;
+  position: absolute;
+  left: 14%; }
+
+.alumniWrap {
+  position: relative;
+  height: 200px;
+  width: 257px; }
+
+.alumniName {
+  font-family: "Oswald" !important;
+  font-size: 2em !important;
+  color: black;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: rgba(255, 0, 0, 0); }
+
+.alumniWrap:hover .alumniName {
+  color: white;
+  text-shadow: 1px 1px #000000; }
+
+.alumniImage {
+  margin: 2.5px; }
+
 #contact {
   color: #7d1935;
   background-color: #f5f3ee; }
   #contact .form-control {
-    font-family: "Proxima Nova"; }
+    font-family: "Mallanna", sans-serif; }
   #contact .label {
-    font-family: "Proxima Nova"; }
+    font-family: "Mallanna", sans-serif; }
   #contact .btn-primary {
     background-color: #7d1935;
     border-color: #7d1935;
