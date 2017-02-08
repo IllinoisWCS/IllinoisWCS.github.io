@@ -7,9 +7,9 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-  $.getJSON("assets/js/officers.json", function(data) {
+  $.getJSON("../assets/js/officers.json", function(data) {
     var output = Mustache.render($('#officerTemplate').html(), data);
     $('#allOfficers').html(output);
   });
-    
+
 });
