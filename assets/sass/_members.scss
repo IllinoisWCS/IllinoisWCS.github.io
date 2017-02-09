@@ -6,6 +6,7 @@
 }
 
 #members {
+  padding: 5%;
     h1 {
       color: $maroon;
       margin-bottom: 3%;
@@ -66,7 +67,7 @@
 }
 
 .member-links > li {
-    display:inline;
+    display: list-item;
 }
 
 .member-button {

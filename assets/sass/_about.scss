@@ -1,5 +1,4 @@
 #about {
-	padding: 5%;
     background-color: $offwhite;
 
 	p {
@@ -12,24 +11,16 @@
     align-items: center;
 }
 
-.about-header {
-	margin-bottom: 5%;
-}
 
-.about-subheading {
-    text-align: left;
-	margin-bottom: 2%;
-}
 
 .about-image {
-    width: 75%;
-    display: block;
+    width: 100%;
+    display: flex;
     margin: 0 auto;
 }
-
 @media (max-width: 1169px) {
 	.about-image-container {
-        display: none;
+        display: flex;
     }
     .about-header {
         text-align: center;

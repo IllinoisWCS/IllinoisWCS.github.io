@@ -39,80 +39,38 @@
         <script type="text/javascript" src="assets/js/alumni.js"></script>
     </head>
 
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-        <nav class="navbar navbar-default navbar-fixed-top mainNav">
-            <div class="container-fluid">
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand page-scroll" href="#page-top"><img src="assets/img/wcs/wcsLogo.png" class="img-responsive" /></a>
-                </div>
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="nav navbar-nav">
-                        <li class="hidden">
-                            <a class="page-scroll" href="#page-top"></a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#about">About</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#members">Members</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#officers">Officers</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#sponsors">Sponsors</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    <body>
+            <div class="row about-container" id = "about">
+              <div class="col-sm-12 col-md-12 col-lg-10 about-image-container">
+                  <img src="assets/img/wcs/officers.jpg" class="about-image"/>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                  <h1 class="about-header">WCS at UIUC</h1>
+                  <p>
+                      Women in Computer Science (WCS) is a non-profit,
+                      educational, student group under the University of Illinois
+                      at Urbana-Champaign's Computer Science Department. The
+                      organization is dedicated to supporting the efforts of young
+                      women, who are pursuing a career in computer
+                      science or show an overall interest in technology. Because
+                      the number of women pursuing Computer Science has been
+                      steadily decreasing, the organization aims to retain and
+                      provide a network of support for members to rely on for
+                      advice and camaraderie.
+                  </p>
+              </div>
             </div>
-        </nav>
 
-        <div id="home" class="container row splash-fill">
-            <div class="splash-overlay">
-                <h1 class="home-title">Women in Computer Science</h1>
-                <h3>University of Illinois at Urbana-Champaign</h3>
-            </div>
-        </div>
-
-        <section id="about" class="container-fluid">
-            <div class="row about-container">
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                    <h1 class="about-header">About Us</h1>
-                    <p>
-                        Women in Computer Science (WCS) is a non-profit,
-                        educational, student group under the University of Illinois
-                        at Urbana-Champaign Computer Science Department. The
-                        organization is dedicated to supporting the efforts of young
-                        women, who are pursuing a career in computer
-                        science or show an overall interest in technology. Because
-                        of the number of women pursuing Computer Science has been
-                        steadily decreasing, the organization aims to retain and
-                        provide a network of support for members to rely on for
-                        advice and camaraderie.
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-6 about-image-container">
-                    <img src="assets/img/members/memberportal.jpg" class="about-image"/>
-                </div>
-            </div>
-        </section>
-
-        <section id="members" class="padded row-centered">
             <div>
-                <h1 align="center">Members</h1>
-                <div class="row">
+                <div class="row row-centered" id = "members">
                     <div class="col-sm-12 col-md-4">
-                        <h2 class="member-subheaders">Member Internships</h2>
-                        <iframe class="member-map" src="https://www.google.com/maps/d/embed?mid=1Ke1I6UgBfBUVkb4uk3OWacUI3jg"></iframe>
+                      <h2 class ="member-subheaders">Quick Links</h2>
+                      <div class="row row-centered">
+                          <a href="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5"><div><div class="memberImage" id="techTeam"><p><b>Join our Mailing List</b></p></div></div></a>
+                          <a href="/mentoring" target="_blank"><div><div class="memberImage" id="mentoring"><p><b>Mentoring</b></p></div></div></a>
+                          <a href="/outreach" target="_blank"><div><div class="memberImage" id="outreach"><p><b>Outreach</b></p></div></div></a>
+                          <a href="/techteam" target="_blank"><div><div class="memberImage" id="techTeam"><p><b>Tech Team</b></p></div></div></a>
+                      </div>
                     </div>
                     <div class="col-sm-12 col-md-4">
                         <h2 class="member-subheaders">Teams</h2>
@@ -127,173 +85,8 @@
                         <ul id="events-list" class="list-group"></ul>
                     </div>
                 </div>
-                <ul class="member-links">
-                    <li>
-                        <a
-                                href="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5"
-                                target="_blank"
-                                class="btn member-button">
-                            Mailing List
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                                href="https://script.google.com/a/macros/illinois.edu/s/AKfycby3xKcHgsJwfnQ2uY2ac09wX2OTicgZjgsvSv5HXlgaD0taWKLA/exec"
-                                target="_blank"
-                                class="btn member-button">
-                            Resume Book
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/members/#points" class="btn member-button">
-                            Point Checker
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/resources" class="btn member-button">
-                            Member Resources
-                        </a>
-                    </li>
-                </ul>
+
             </div>
-
-        </section>
-
-        <script type="text/x-mustache" id="officerTemplate">
-            <div class="row padding">
-                {{#admin}}
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail officer-box">
-                        <img src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
-                        <div class="caption">
-                            <h4 align="center">{{firstname}} {{lastname}}</h4>
-                            <p align="center">{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o"></i></a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="{{netid}}">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title">{{firstname}} {{lastname}} - {{position}}</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img class="officerPicture" src="/assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}">
-                                        </img>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p><b>{{major}}</b></p>
-                                        <p><b>{{year}}</b></p>
-                                        <p><b>Interests: </b>
-                                        {{#interests}}
-                                            <span class="label label-default">{{.}}</span>
-                                        {{/interests}}</p>
-                                        <p><b>Hobbies: </b>
-                                        {{#hobbies}}
-                                            <span class="label label-success">{{.}}</span>
-                                        {{/hobbies}}</p>
-                                        <br/>
-                                        <p><b>Fun fact: </b>{{fact}}</p>
-                                        <p><b>From: </b>{{place}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{/admin}}
-            </div>
-        </script>
-
-        <section id="officers" class="padding">
-            <div id="meetOfficers">
-                <h1 style="text-align:center">The Officer Board</h1>
-                <div id="allOfficers"></div>
-            </div>
-        </section>
-
-        <section id="sponsors">
-            <h1 align="center">Sponsors</h1>
-            <ul class="list">
-                <li class="list-item">
-                    <a href = "https://3redgroup.com/campus"> <img src="assets/img/logos/3red.jpg" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "https://www.belvederetrading.com/careers/available-positions/"> <img src="assets/img/logos/belvedere.png" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "http://www.cmegroup.com/careers.html"> <img src="assets/img/logos/cmegroup.jpg" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "https://www.godaddy.com/careers/interns"> <img src="assets/img/logos/godaddy.jpg" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "https://jobs.groupon.com"> <img src="assets/img/logos/groupon.png" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "https://careers.microsoft.com/students/internships"> <img src="assets/img/logos/microsoft.png" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "http://www.optiver.com/working-at-optiver/job-opportunities"> <img src="assets/img/logos/optiver.jpg" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "http://www.pwc.com/us/en/careers.html"> <img src="assets/img/logos/pwc.jpg" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "http://www.allstontrading.com/careers/"> <img src="assets/img/logos/allston.jpeg" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "https://www.capitalonecareers.com"> <img src="assets/img/logos/capitalone.jpg" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "https://www.themuse.com/jobs/c-nextcapital-jobs"> <img src="assets/img/logos/nextcapital.jpg" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "https://northerntrustcareers.com"> <img src="assets/img/logos/northerntrust.png" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "https://www.deshaw.com/recruit/UnivListing.html"> <img src="assets/img/logos/DESCO_Logo_2c.jpg" /> </a>
-                </li>
-                <li class="list-item">
-                    <a href = "https://stripe.com/jobs"> <img src="assets/img/logos/stripe.png" /> </a>
-                </li>
-            </ul>
-        </section>
-
-        <div id="contact" class="row padded">
-            <div class="col-sm-offset-2 col-sm-8">
-                <h1 align="center">Contact Us</h1>
-                <div class="row contact-form">
-                    <form role="form" action="http://formspree.io/illinoiswcs@gmail.com" method="POST">
-                        <div class="form-group col-md-6">
-                            <label for="nameInput">Name</label>
-                            <input class="form-control" type="text" placeholder="Enter Name" id="nameInput" name="name" tabindex="1"/>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label for="emailInput">Email</label>
-                            <input class="form-control" type="text" name="_replyto" placeholder="Enter Email" id="emailInput" tabindex="2" />
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="subjectInput">Subject</label>
-                            <input class="form-control" type="text" name="_subject" placeholder="Enter Subject" id="subjectInput" tabindex="3" />
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="messageInput">Message</label>
-                            <textarea class="form-control" name="message" id="messageInput" rows="6" placeholder="Enter Message" tabindex="4"></textarea>
-                            <br/>
-                            <button type="submit" value="Send" class="btn btn-primary" tabindex="5">Send Message</button>
-                        </div>
-                        <input type="text" name="_gotcha" style="display: none" />
-                    </form>
-                </div>
-            </div>
-        </div>
 
         <footer>
             <div class="row">
