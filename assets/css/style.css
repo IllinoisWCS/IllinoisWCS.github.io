@@ -48,7 +48,7 @@ p {
     color: #000;
     background-color: #999; }
 
-.center, #members .btnContainer, #outreachMain, #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
+.center, #members .btnContainer, #outreachMain {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -355,62 +355,15 @@ a {
     background-color: #fff;
     border-color: #fff; }
 
-#alumni {
-  background-color: #f5f3ee; }
-  #alumni p {
-    font-size: 1.1em;
-    line-height: 150%; }
+#alumni p {
+  font-size: 1.1em;
+  line-height: 150%; }
 
 #featuredAlumni {
-  margin-bottom: 10px; }
-  #featuredAlumni .col-md-4 img {
+  padding: 5% 10%; }
+  #featuredAlumni .alumniPicture {
+    height: auto;
     width: 100%; }
-  #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
-    height: 300px; }
-
-.carousel-indicators li {
-  background-color: #7d1935; }
-  .carousel-indicators li.active {
-    background-color: #7d1935; }
-
-.alumniPicture {
-  width: 100%;
-  height: auto; }
-
-#meetAlumni {
-  height: 950px; }
-
-.alumniHeader {
-  padding: 5% 5%; }
-
-.alumniImages {
-  width: 1000px;
-  position: absolute;
-  left: 14%; }
-
-.alumniWrap {
-  position: relative;
-  height: 200px;
-  width: 257px; }
-
-.alumniName {
-  font-family: "Oswald" !important;
-  font-size: 2em !important;
-  color: black;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: rgba(255, 0, 0, 0); }
-
-.alumniWrap:hover .alumniName {
-  color: white;
-  text-shadow: 1px 1px #000000; }
-
-.alumniImage {
-  margin: 2.5px; }
 
 #contact {
   color: #7d1935;
