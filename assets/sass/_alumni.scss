@@ -1,79 +1,15 @@
 
 #alumni {
-	background-color: $offwhite;
 	p {
 		@include pfontspecial();
 	}
 }
 
 #featuredAlumni {
-	.col-md-4{
-		height:300px;
-	}
-	.col-md-4 img {
-		width: 100%;
-		height:100%; //225px;
-	}
-	.alumniImage, .alumniText {
-		@extend .center;
-		height: 300px;
-	}
-	.caption{
-		height: 100px;
-	}
-	.alumniPicture{
-		height: 100%;
+	padding: 5% 10%;
+	
+	.alumniPicture {
+		height: auto;
 		width: 100%;
 	}
 }
-
-.carousel-indicators {
-	li {
-		background-color: $maroon;
-		&.active {
-			background-color: $maroon;
-		}
-	}
-}
-
-// .alumniPicture {
-// 	width: 100%;
-//   height: auto;
-// }
-//
-// #meetAlumni{
-//   height:950px;
-// }
-// .alumniHeader{
-//   padding: 5% 5%;
-// }
-// .alumniImages{
-//   width: 1000px;
-//   position:absolute;
-//   left:14%;
-// }
-// .alumniWrap{
-//   position: relative;
-//   height: 200px;
-//   width: 257px;
-// }
-// .alumniName{
-//   font-family: "Oswald" !important;
-//   font-size: 2em !important;
-//   color: black;
-//   position: absolute;
-//   text-align: center;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   color:rgba(255, 0, 0, 0);
-// }
-// .alumniWrap:hover .alumniName{
-//   color:rgba(255, 255, 255, 1);
-//   text-shadow: 1px 1px #000000;
-// }
-//
-// .alumniImage{
-//   margin:2.5px;
-// }
