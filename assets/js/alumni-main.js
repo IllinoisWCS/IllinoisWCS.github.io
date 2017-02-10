@@ -16,7 +16,7 @@ $(document).ready(function() {
     }
   };
 
-  $.getJSON("/assets/js/alumni.json", function(data) {
+  $.getJSON("../assets/js/alumni.json", function(data) {
     console.log(data);
     var template = Mustache.render($('#alumniTemplate').html(), data);
   $('#featuredAlumni').html(template);
