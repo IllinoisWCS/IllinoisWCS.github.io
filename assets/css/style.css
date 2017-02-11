@@ -103,6 +103,12 @@ a {
   text-align: center;
   overflow: hidden; }
 
+#home {
+  background-color: #f5f3ee;
+  padding: 5%;
+  display: flex;
+  align-items: center; }
+
 .memberImage {
   margin-bottom: 2%;
   background-repeat: no-repeat;

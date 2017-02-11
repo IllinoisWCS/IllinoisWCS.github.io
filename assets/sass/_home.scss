@@ -3,6 +3,13 @@
   overflow: hidden;
 }
 
+#home {
+    background-color: $offwhite;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+}
+
 .memberImage {
     margin-bottom: 2%;
     background-repeat: no-repeat;
