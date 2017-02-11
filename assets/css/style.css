@@ -284,40 +284,35 @@ a {
   display: block;
   padding: 5% 5%;
   color: #7d1935; }
-  #sponsors ul {
+  #sponsors .list {
     padding: 0;
-    list-style-type: none; }
-  #sponsors a {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; }
+  #sponsors .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
     width: 100%;
+    margin-top: 5%; }
+  #sponsors .list-item-link {
+    position: relative; }
+  #sponsors .list-item-image {
+    top: 50%;
+    width: auto;
     max-width: 100%;
     max-height: 200px; }
-  #sponsors img {
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%); }
-
-.list {
-  display: flex;
-  flex-wrap: wrap; }
-
-.list-item {
-  display: flex;
-  padding: 1em;
-  width: 100%;
-  margin-top: 5%; }
-
-@media all and (min-width: 40em) {
-  .list-item {
-    width: 50%; } }
-
-@media all and (min-width: 60em) {
-  .list-item {
-    width: 20%;
-    padding: 2%; } }
-
-@media all and (max-width: 40em) {
-  .list-item {
-    width: 50%; } }
+  @media all and (min-width: 40em) {
+    #sponsors .list-item {
+      width: 50%; } }
+  @media all and (min-width: 60em) {
+    #sponsors .list-item {
+      width: 20%;
+      padding: 2%; } }
+  @media all and (max-width: 40em) {
+    #sponsors .list-item {
+      width: 50%; } }
 
 #officers {
   padding: 5% 5%;
