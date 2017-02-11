@@ -1,69 +1,27 @@
-#slideshow {
-  height: 100%;
-}
-
-#slideshow .carousel-inner {
-  height: 100%;
-  .item {
-    opacity: 0.6;
-    transition-property: opacity;
-    width: 100% !important;
-    min-height: 100% !important;
-    overflow: hidden;
-    height: 100%;
-
-    img {
-      position: relative;
-      overflow: hidden;
-      height: 100%;
-    }
-  }
-
-  .active {
-    opacity: 0.75;
-    height: 100%;
-  }
-}
-
 .container {
   text-align: center;
   overflow: hidden;
 }
 
-.splash-fill {
-  width: 100%;
-  height: 100%;
-  background: url('../img/slideshow/allofficers.jpg') no-repeat center center fixed;
-}
+.memberImage {
+    margin-bottom: 2%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    text-align: center;
+    vertical-align: center;
+    min-height: 10vh !important;
 
-@media (max-width: 440px) {
-  .splash-fill {
-    width: 100%;
-    height: 100%;
-    background: none;
-  }
-}
-
-
-.splash-overlay {
-  position: absolute;
-  z-index: 100;
-  top: calc(50% - 1.5em);
-  width: 100%;
-  background-color: $maroon;
-  padding: 1%;
-  color: white;
-}
-
-#home {
-  overflow: hidden;
-  padding: 0 !important;
-  margin: 0 !important;
-  width: auto;
-  height: 100%;
-  color: white;
-}
-
-.home-title {
-  color: white;
+    p {
+        font-weight: 900;
+        color: white;
+        text-transform: uppercase;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 2rem;
+        transform: translate(-50%, -50%);
+    }
 }

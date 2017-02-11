@@ -25,29 +25,6 @@
     padding: 5%;
 }
 
-.memberImage {
-  margin-bottom: 2%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  position: relative;
-  text-align: center;
-  vertical-align: center;
-  min-height: 20vh !important;
-
-  p {
-    font-weight: 900;
-    color: white;
-    text-transform: uppercase;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 2rem;
-    transform: translate(-50%, -50%);
-  }
-}
-
 #events {
   margin-top: 50px;
   iframe {

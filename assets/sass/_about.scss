@@ -1,23 +1,14 @@
 #about {
     background-color: $offwhite;
-
-	p {
-		@include pfontspecial();
-	}
 }
-
-.about-container {
-    display: flex;
-    align-items: center;
-}
-
-
 
 .about-image {
-    width: 100%;
+    max-width: 100%;
+    max-height: 500px;
     display: flex;
     margin: 0 auto;
 }
+
 @media (max-width: 1169px) {
 	.about-image-container {
         display: flex;

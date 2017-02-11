@@ -83,10 +83,11 @@ a {
   a:hover {
     color: #999; }
 
-.navbar-brand img {
-  height: 35px;
-  padding: 0px;
-  margin: -12px; }
+.navbar-brand {
+  padding: 5px; }
+  .navbar-brand img {
+    height: 100%;
+    width: auto; }
 
 .navbar {
   background-color: white; }
@@ -97,83 +98,37 @@ a {
   font-family: "ProximaNova";
   text-transform: uppercase; }
 
-@media (min-width: 767px) {
-  .mainNav {
-    padding: 20px 0;
-    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    transition: background .5s ease-in-out,padding .5s ease-in-out; }
-  .top-nav-collapse {
-    padding: 0; } }
-
 /* Individual Divs */
-#slideshow {
-  height: 100%; }
-
-#slideshow .carousel-inner {
-  height: 100%; }
-  #slideshow .carousel-inner .item {
-    opacity: 0.6;
-    transition-property: opacity;
-    width: 100% !important;
-    min-height: 100% !important;
-    overflow: hidden;
-    height: 100%; }
-    #slideshow .carousel-inner .item img {
-      position: relative;
-      overflow: hidden;
-      height: 100%; }
-  #slideshow .carousel-inner .active {
-    opacity: 0.75;
-    height: 100%; }
-
 .container {
   text-align: center;
   overflow: hidden; }
 
-.splash-fill {
-  width: 100%;
-  height: 100%;
-  background: url("../img/slideshow/allofficers.jpg") no-repeat center center fixed; }
-
-@media (max-width: 440px) {
-  .splash-fill {
-    width: 100%;
-    height: 100%;
-    background: none; } }
-
-.splash-overlay {
-  position: absolute;
-  z-index: 100;
-  top: calc(50% - 1.5em);
-  width: 100%;
-  background-color: #7d1935;
-  padding: 1%;
-  color: white; }
-
-#home {
-  overflow: hidden;
-  padding: 0 !important;
-  margin: 0 !important;
-  width: auto;
-  height: 100%;
-  color: white; }
-
-.home-title {
-  color: white; }
+.memberImage {
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  min-height: 10vh !important; }
+  .memberImage p {
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%); }
 
 #about {
   background-color: #f5f3ee; }
-  #about p {
-    font-size: 1.1em;
-    line-height: 150%; }
-
-.about-container {
-  display: flex;
-  align-items: center; }
 
 .about-image {
-  width: 100%;
+  max-width: 100%;
+  max-height: 500px;
   display: flex;
   margin: 0 auto; }
 
@@ -209,26 +164,6 @@ a {
     margin-bottom: 10%; }
   #members .btnContainer {
     margin-bottom: 10px; }
-
-.memberImage {
-  margin-bottom: 2%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  position: relative;
-  text-align: center;
-  vertical-align: center;
-  min-height: 20vh !important; }
-  .memberImage p {
-    font-weight: 900;
-    color: white;
-    text-transform: uppercase;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 2rem;
-    transform: translate(-50%, -50%); }
 
 #events {
   margin-top: 50px; }
