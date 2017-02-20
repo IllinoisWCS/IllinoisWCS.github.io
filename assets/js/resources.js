@@ -11,6 +11,10 @@ $(document).ready(function() {
      $("#internshipsList").html(Mustache.render($("#resourceTemplate").html(), data.internships));
     $("#scholarshipsList").html(Mustache.render($("#resourceTemplate").html(), data.scholarships));
     $("#conferencesList").html(Mustache.render($("#resourceTemplate").html(), data.conferences));
+    $("#communitiesList").html(Mustache.render($("#resourceTemplate").html(), data.communities));
+    $("#othersList").html(Mustache.render($("#resourceTemplate").html(), data.influencers));
+
+
     });
     
 });
