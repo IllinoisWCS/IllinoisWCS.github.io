@@ -1,33 +1,26 @@
 #home {
-    display: flex;
     padding: 5% 0 5% 0;
-
-    .home-image-container {
-        width: 50%;
-    }
+    background: url('../img/wcs/officers.jpg') no-repeat center center;
 
     .home-header-container {
-        width: 50%;
+        width: 100%;
         padding: 2%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        text-align: center;
 
         .home-header {
             font-size: 10em;
+            color: white;
         }
 
         .home-subheader {
             margin: 5px;
-            font-size: 10em;
+            color: white;
         }
     }
 }
 
 @media only screen and (max-width : 1200px) {
     #home {
-        display: flex;
-        flex-direction: column;
         padding: 15% 0 5% 0;
         text-align: center;
 
@@ -37,13 +30,11 @@
 
         .home-header-container {
             width: 100%;
-            .home-header {
-                font-size: 8em;
-            }
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            .home-subheader {
+                margin: 5px;
+                color: white;
+            }
         }
     }
 }
@@ -100,4 +91,25 @@
         font-size: 2rem;
         transform: translate(-50%, -50%);
     }
+}
+
+
+#members {
+  padding: 2%;
+    h1 {
+      color: $primaryColor;
+      margin-bottom: 3%;
+    }
+
+	p {
+		@include pfontspecial();
+		margin-bottom: 10%;
+	}
+
+    .btnContainer {
+        margin-bottom: 10px;
+        @extend .center;
+    }
+
+    padding: 5%;
 }

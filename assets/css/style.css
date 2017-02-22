@@ -18,18 +18,18 @@ h1 {
 h2 {
   font-family: "Oswald" !important;
   font-weight: 400;
-  font-size: 3em !important; }
+  font-size: 3em; }
 
 h3 {
   font-family: "Oswald" !important; }
 
 h4 {
   font-family: "Oswald" !important;
-  font-size: 2em !important; }
+  font-size: 2em; }
 
 h5 {
   font-family: "Oswald" !important;
-  font-size: 1em !important; }
+  font-size: 1em; }
 
 p {
   font-family: Lato, "Lato"; }
@@ -102,37 +102,30 @@ a {
 
 /* Individual Divs */
 #home {
-  display: flex;
-  padding: 5% 0 5% 0; }
-  #home .home-image-container {
-    width: 50%; }
+  padding: 5% 0 5% 0;
+  background: url("../img/wcs/officers.jpg") no-repeat center center; }
   #home .home-header-container {
-    width: 50%;
+    width: 100%;
     padding: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
+    text-align: center; }
     #home .home-header-container .home-header {
-      font-size: 10em; }
+      font-size: 10em;
+      color: white; }
     #home .home-header-container .home-subheader {
       margin: 5px;
-      font-size: 10em; }
+      color: white; }
 
 @media only screen and (max-width: 1200px) {
   #home {
-    display: flex;
-    flex-direction: column;
     padding: 15% 0 5% 0;
     text-align: center; }
     #home .home-image-container {
       width: 100%; }
     #home .home-header-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      #home .home-header-container .home-header {
-        font-size: 8em; } }
+      width: 100%; }
+      #home .home-header-container .home-subheader {
+        margin: 5px;
+        color: white; } }
 
 .about-image {
   display: block;
@@ -181,6 +174,19 @@ a {
     font-size: 2rem;
     transform: translate(-50%, -50%); }
 
+#members {
+  padding: 2%;
+  padding: 5%; }
+  #members h1 {
+    color: #c0392b;
+    margin-bottom: 3%; }
+  #members p {
+    font-size: 1.1em;
+    line-height: 150%;
+    margin-bottom: 10%; }
+  #members .btnContainer {
+    margin-bottom: 10px; }
+
 .resource-header {
   padding-bottom: 5%; }
 
@@ -193,19 +199,6 @@ a {
 
 .iframeOutside {
   text-align: center; }
-
-#members {
-  padding: 5%;
-  padding: 5%; }
-  #members h1 {
-    color: #c0392b;
-    margin-bottom: 3%; }
-  #members p {
-    font-size: 1.1em;
-    line-height: 150%;
-    margin-bottom: 10%; }
-  #members .btnContainer {
-    margin-bottom: 10px; }
 
 #events {
   margin-top: 50px; }

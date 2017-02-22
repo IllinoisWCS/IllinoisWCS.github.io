@@ -5,26 +5,6 @@
   ), url($url);
 }
 
-#members {
-  padding: 5%;
-    h1 {
-      color: $primaryColor;
-      margin-bottom: 3%;
-    }
-
-	p {
-		@include pfontspecial();
-		margin-bottom: 10%;
-	}
-
-    .btnContainer {
-        margin-bottom: 10px;
-        @extend .center;
-    }
-
-    padding: 5%;
-}
-
 #events {
   margin-top: 50px;
   iframe {
