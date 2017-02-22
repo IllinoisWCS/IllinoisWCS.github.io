@@ -1,35 +1,41 @@
 #about {
-	padding: 5%;
     background-color: $offwhite;
-
-	p {
-		@include pfontspecial();
-	}
 }
 
-.about-container {
-    display: flex;
-    align-items: center;
-}
+.quickLinks {
+    margin-bottom: 2%;
+    margin-top: 3%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    text-align: center;
+    vertical-align: center;
+    min-height: 5vh !important;
 
-.about-header {
-	margin-bottom: 5%;
-}
-
-.about-subheading {
-    text-align: left;
-	margin-bottom: 2%;
+    p {
+        font-weight: 900;
+        color: black;
+        text-transform: uppercase;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 2rem;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .about-image {
-    width: 75%;
-    display: block;
+    max-width: 100%;
+    max-height: 500px;
+    display: flex;
     margin: 0 auto;
 }
 
 @media (max-width: 1169px) {
 	.about-image-container {
-        display: none;
+        display: flex;
     }
     .about-header {
         text-align: center;
