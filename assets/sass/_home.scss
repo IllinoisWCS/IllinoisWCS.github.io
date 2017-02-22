@@ -19,19 +19,25 @@
     }
 }
 
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 768px) {
     #home {
         padding: 15% 0 5% 0;
         text-align: center;
 
         .home-image-container {
+            font-size: 4em;
             width: 100%;
         }
 
         .home-header-container {
             width: 100%;
 
+            .home-header {
+                font-size: 7em;
+            }
+
             .home-subheader {
+                font-size: 2em;
                 margin: 5px;
                 color: white;
             }
@@ -39,11 +45,10 @@
     }
 }
 
-.about-image {
-    display: block;
-    max-width: 100%;
-    max-height: 500px;
-    margin: 0 auto;
+.member-subheaders {
+    text-align: center;
+    margin-bottom: 10%;
+    margin-top: 3%;
 }
 
 .memberImage {
@@ -64,14 +69,11 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        font-size: 2rem;
         transform: translate(-50%, -50%);
     }
 }
 
 .quickLinks {
-    margin-bottom: 2%;
-    margin-top: 3%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -88,7 +90,6 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        font-size: 2rem;
         transform: translate(-50%, -50%);
     }
 }
@@ -102,14 +103,8 @@
     }
 
 	p {
-		@include pfontspecial();
 		margin-bottom: 10%;
 	}
-
-    .btnContainer {
-        margin-bottom: 10px;
-        @extend .center;
-    }
 
     padding: 5%;
 }

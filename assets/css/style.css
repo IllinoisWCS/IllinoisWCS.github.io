@@ -12,24 +12,20 @@ body {
 h1 {
   font-family: "Oswald" !important;
   font-weight: 500;
-  font-size: 5em;
   color: #e84c3d; }
 
 h2 {
   font-family: "Oswald" !important;
   font-weight: 400;
-  font-size: 4em;
   color: #e84c3d; }
 
 h3 {
   font-family: "Oswald" !important;
   font-weight: 300;
-  font-size: 3em;
   color: #e84c3d; }
 
 h4 {
   font-family: "Oswald" !important;
-  font-size: 2em;
   color: #e84c3d; }
 
 h5 {
@@ -40,8 +36,10 @@ h5 {
 p {
   font-family: "Mallanna", sans-serif; }
 
-.padded {
-  padding: 2.5% 0 5% 0; }
+a {
+  color: #e84c3d; }
+  a:hover {
+    color: #fff; }
 
 #socialMediaLinks {
   display: block;
@@ -49,47 +47,6 @@ p {
   #socialMediaLinks li {
     display: inline;
     margin: 10px; }
-
-.btnContainer button {
-  color: #555; }
-  .btnContainer button:hover {
-    color: #000;
-    background-color: #999; }
-
-.center, #members .btnContainer, #outreachMain {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-a {
-  color: #e84c3d; }
-  a:hover {
-    color: #999; }
 
 .nav {
   font-family: "Mallanna", sans-serif;
@@ -122,23 +79,26 @@ a {
       margin: 5px;
       color: white; }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 768px) {
   #home {
     padding: 15% 0 5% 0;
     text-align: center; }
     #home .home-image-container {
+      font-size: 4em;
       width: 100%; }
     #home .home-header-container {
       width: 100%; }
+      #home .home-header-container .home-header {
+        font-size: 7em; }
       #home .home-header-container .home-subheader {
+        font-size: 2em;
         margin: 5px;
         color: white; } }
 
-.about-image {
-  display: block;
-  max-width: 100%;
-  max-height: 500px;
-  margin: 0 auto; }
+.member-subheaders {
+  text-align: center;
+  margin-bottom: 10%;
+  margin-top: 3%; }
 
 .memberImage {
   margin-bottom: 2%;
@@ -157,12 +117,9 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 2rem;
     transform: translate(-50%, -50%); }
 
 .quickLinks {
-  margin-bottom: 2%;
-  margin-top: 3%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -178,7 +135,6 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 2rem;
     transform: translate(-50%, -50%); }
 
 #members {
@@ -188,11 +144,7 @@ a {
     color: #e84c3d;
     margin-bottom: 3%; }
   #members p {
-    font-size: 1.1em;
-    line-height: 150%;
     margin-bottom: 10%; }
-  #members .btnContainer {
-    margin-bottom: 10px; }
 
 .resource-header {
   padding-bottom: 5%; }
@@ -226,11 +178,6 @@ a {
 
 .member-button {
   font-size: large; }
-
-.member-subheaders {
-  text-align: center;
-  margin-bottom: 3%;
-  margin-top: 3%; }
 
 .btn {
   font-weight: bold; }
@@ -320,10 +267,6 @@ a {
     background-color: #fff;
     border-color: #fff; }
 
-#alumni p {
-  font-size: 1.1em;
-  line-height: 150%; }
-
 #featuredAlumni {
   padding: 5% 10%; }
   #featuredAlumni .alumniPicture {
@@ -356,8 +299,6 @@ footer {
   padding: 3% 3% 3% 3%;
   text-align: center; }
   footer p {
-    margin: 0;
-    font-size: 1.1em;
-    line-height: 150%; }
+    margin: 0; }
   footer a {
     color: white; }
