@@ -13,7 +13,7 @@ h1 {
   font-family: "Oswald" !important;
   font-weight: 500;
   font-size: 4em;
-  color: #c0392b; }
+  color: #e84c3d; }
 
 h2 {
   font-family: "Oswald" !important;
@@ -81,7 +81,7 @@ p {
   align-items: center; }
 
 a {
-  color: #c0392b; }
+  color: #e84c3d; }
   a:hover {
     color: #999; }
 
@@ -178,7 +178,7 @@ a {
   padding: 2%;
   padding: 5%; }
   #members h1 {
-    color: #c0392b;
+    color: #e84c3d;
     margin-bottom: 3%; }
   #members p {
     font-size: 1.1em;
@@ -246,7 +246,7 @@ a {
 #sponsors {
   display: block;
   padding: 5% 5%;
-  color: #c0392b; }
+  color: #e84c3d; }
   #sponsors .list {
     padding: 0;
     list-style-type: none;
@@ -281,7 +281,7 @@ a {
   padding: 5% 5%;
   background-color: #f5f3ee; }
   #officers h1 {
-    color: #c0392b;
+    color: #e84c3d;
     margin-bottom: 5%; }
 
 .officerPicture {
@@ -324,18 +324,18 @@ a {
     width: 100%; }
 
 #contact {
-  color: #c0392b;
+  color: #e84c3d;
   background-color: #f5f3ee; }
   #contact .form-control {
     font-family: "Mallanna", sans-serif; }
   #contact .label {
     font-family: "Mallanna", sans-serif; }
   #contact .btn-primary {
-    background-color: #c0392b;
-    border-color: #c0392b;
+    background-color: #e84c3d;
+    border-color: #e84c3d;
     color: #fff; }
     #contact .btn-primary:hover {
-      background-color: #c0392b;
+      background-color: #e84c3d;
       color: #f5f3ee; }
   #contact .contact-form {
     padding-top: 5%; }
@@ -344,7 +344,7 @@ a {
       padding: 5%; } }
 
 footer {
-  background-color: #c0392b;
+  background-color: #e84c3d;
   color: white;
   padding: 3% 3% 3% 3%;
   text-align: center; }
