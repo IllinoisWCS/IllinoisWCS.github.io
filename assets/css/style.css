@@ -38,7 +38,7 @@ h5 {
   color: #e84c3d; }
 
 p {
-  font-family: Lato, "Lato"; }
+  font-family: "Mallanna", sans-serif; }
 
 .padded {
   padding: 2.5% 0 5% 0; }
@@ -91,6 +91,11 @@ a {
   a:hover {
     color: #999; }
 
+.nav {
+  font-family: "Mallanna", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase; }
+
 .navbar-brand {
   padding: 5px; }
   .navbar-brand img {
@@ -101,10 +106,6 @@ a {
   background-color: white; }
   .navbar .container-fluid {
     padding: 0 10% 0 10%; }
-
-.nav {
-  font-family: "Mallanna", sans-serif;
-  text-transform: uppercase; }
 
 /* Individual Divs */
 #home {

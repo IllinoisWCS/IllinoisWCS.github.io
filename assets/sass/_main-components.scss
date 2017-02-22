@@ -44,7 +44,7 @@ h5 {
 }
 
 p {
-    font-family: Lato, "Lato"
+    font-family: $paragraphfont;
 }
 
 @mixin pfontspecial() {
