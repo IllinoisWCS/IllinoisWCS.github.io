@@ -11,16 +11,14 @@ body {
 
 h1 {
   font-family: "Oswald" !important;
-  font-weight: 500 !important;
-  font-size: 5em !important;
-  letter-spacing: 2px;
-  color: #7d1935; }
+  font-weight: 500;
+  font-size: 4em;
+  color: #c0392b; }
 
 h2 {
   font-family: "Oswald" !important;
-  font-weight: 400 !important;
-  font-size: 3em !important;
-  letter-spacing: 2px; }
+  font-weight: 400;
+  font-size: 3em !important; }
 
 h3 {
   font-family: "Oswald" !important; }
@@ -29,8 +27,12 @@ h4 {
   font-family: "Oswald" !important;
   font-size: 2em !important; }
 
+h5 {
+  font-family: "Oswald" !important;
+  font-size: 1em !important; }
+
 p {
-  font-family: "Mallanna", sans-serif; }
+  font-family: Lato, "Lato"; }
 
 .padded {
   padding: 2.5% 0 5% 0; }
@@ -79,14 +81,15 @@ p {
   align-items: center; }
 
 a {
-  color: #7d1935; }
+  color: #c0392b; }
   a:hover {
     color: #999; }
 
-.navbar-brand img {
-  height: 35px;
-  padding: 0px;
-  margin: -12px; }
+.navbar-brand {
+  padding: 5px; }
+  .navbar-brand img {
+    height: 100%;
+    width: auto; }
 
 .navbar {
   background-color: white; }
@@ -97,101 +100,86 @@ a {
   font-family: "Mallanna", sans-serif;
   text-transform: uppercase; }
 
-@media (min-width: 767px) {
-  .mainNav {
-    padding: 20px 0;
-    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    transition: background .5s ease-in-out,padding .5s ease-in-out; }
-  .top-nav-collapse {
-    padding: 0; } }
-
 /* Individual Divs */
-#slideshow {
-  height: 100%; }
-
-#slideshow .carousel-inner {
-  height: 100%; }
-  #slideshow .carousel-inner .item {
-    opacity: 0.6;
-    transition-property: opacity;
-    width: 100% !important;
-    min-height: 100% !important;
-    overflow: hidden;
-    height: 100%; }
-    #slideshow .carousel-inner .item img {
-      position: relative;
-      overflow: hidden;
-      height: 100%; }
-  #slideshow .carousel-inner .active {
-    opacity: 0.75;
-    height: 100%; }
-
-.container {
-  text-align: center;
-  overflow: hidden; }
-
-.splash-fill {
-  width: 100%;
-  height: 100%;
-  background: url("../img/slideshow/allofficers.jpg") no-repeat center center fixed; }
-
-@media (max-width: 440px) {
-  .splash-fill {
-    width: 100%;
-    height: 100%;
-    background-size: cover; } 
-  }
-
-.splash-overlay {
-  position: absolute;
-  z-index: 100;
-  top: calc(50% - 1.5em);
-  width: 100%;
-  background-color: #7d1935;
-  padding: 1%;
-  color: white; }
-
 #home {
-  overflow: hidden;
-  padding: 0 !important;
-  margin: 0 !important;
-  width: auto;
-  height: 100%;
-  color: white; }
-
-.home-title {
-  color: white; }
-
-#about {
-  padding: 5%;
-  background-color: #f5f3ee; }
-  #about p {
-    font-size: 1.1em;
-    line-height: 150%; }
-
-.about-container {
   display: flex;
-  align-items: center; }
+  padding: 5% 0 5% 0; }
+  #home .home-image-container {
+    width: 50%; }
+  #home .home-header-container {
+    width: 50%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #home .home-header-container .home-header {
+      font-size: 15em; }
+    #home .home-header-container .home-subheader {
+      margin: 5px;
+      font-size: 10em; }
 
-.about-header {
-  margin-bottom: 5%; }
-
-.about-subheading {
-  text-align: left;
-  margin-bottom: 2%; }
+@media only screen and (max-width: 1200px) {
+  #home {
+    display: flex;
+    flex-direction: column;
+    padding: 15% 0 5% 0;
+    text-align: center; }
+    #home .home-image-container {
+      width: 100%; }
+    #home .home-header-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      #home .home-header-container .home-header {
+        font-size: 8em; } }
 
 .about-image {
-  width: 75%;
   display: block;
+  max-width: 100%;
+  max-height: 500px;
   margin: 0 auto; }
 
-@media (max-width: 1169px) {
-  .about-image-container {
-    display: none; }
-  .about-header {
-    text-align: center;
-    margin-bottom: 5%; } }
+.memberImage {
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  min-height: 10vh !important; }
+  .memberImage p {
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%); }
+
+.quickLinks {
+  margin-bottom: 2%;
+  margin-top: 3%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  min-height: 5vh !important; }
+  .quickLinks p {
+    font-weight: 900;
+    color: black;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%); }
 
 .resource-header {
   padding-bottom: 5%; }
@@ -207,9 +195,10 @@ a {
   text-align: center; }
 
 #members {
+  padding: 5%;
   padding: 5%; }
   #members h1 {
-    color: #7d1935;
+    color: #c0392b;
     margin-bottom: 3%; }
   #members p {
     font-size: 1.1em;
@@ -217,26 +206,6 @@ a {
     margin-bottom: 10%; }
   #members .btnContainer {
     margin-bottom: 10px; }
-
-.memberImage {
-  margin-bottom: 2%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  position: relative;
-  text-align: center;
-  vertical-align: center;
-  min-height: 20vh !important; }
-  .memberImage p {
-    font-weight: 900;
-    color: white;
-    text-transform: uppercase;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 2rem;
-    transform: translate(-50%, -50%); }
 
 #events {
   margin-top: 50px; }
@@ -253,7 +222,7 @@ a {
   text-align: center; }
 
 .member-links > li {
-  display: inline; }
+  display: list-item; }
 
 .member-button {
   font-size: large; }
@@ -284,7 +253,7 @@ a {
 #sponsors {
   display: block;
   padding: 5% 5%;
-  color: #7d1935; }
+  color: #c0392b; }
   #sponsors .list {
     padding: 0;
     list-style-type: none;
@@ -319,7 +288,7 @@ a {
   padding: 5% 5%;
   background-color: #f5f3ee; }
   #officers h1 {
-    color: #7d1935;
+    color: #c0392b;
     margin-bottom: 5%; }
 
 .officerPicture {
@@ -362,18 +331,18 @@ a {
     width: 100%; }
 
 #contact {
-  color: #7d1935;
+  color: #c0392b;
   background-color: #f5f3ee; }
   #contact .form-control {
     font-family: "Mallanna", sans-serif; }
   #contact .label {
     font-family: "Mallanna", sans-serif; }
   #contact .btn-primary {
-    background-color: #7d1935;
-    border-color: #7d1935;
+    background-color: #c0392b;
+    border-color: #c0392b;
     color: #fff; }
     #contact .btn-primary:hover {
-      background-color: #7d1935;
+      background-color: #c0392b;
       color: #f5f3ee; }
   #contact .contact-form {
     padding-top: 5%; }
@@ -382,7 +351,7 @@ a {
       padding: 5%; } }
 
 footer {
-  background-color: #7d1935;
+  background-color: #c0392b;
   color: white;
   padding: 3% 3% 3% 3%;
   text-align: center; }

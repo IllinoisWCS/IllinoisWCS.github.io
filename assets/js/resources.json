@@ -167,15 +167,43 @@
                 },
                 {
                     "name": "Slack Channels",
-                    "description": ""
+                    "description": "LGBTQ in Tech (lgbt.slack.com), Frontend Developers (frontenddevelopers.slack.com), Slashrocket (slashrocket.io)"
                 }
             ]
         },
-        "other": {
+        "influencers": {
             "values": [
                 {
-                    "name": "",
-                    "description": ""
+                    "name": "Tracy Chou",
+                    "description": "Former software engineer at Pinterest and Quora, involved with Project Include, a non-profit that works to help companies improve their employee diversity and inclusion, jumpstarted the movement to encourage companies to release their diversity numbers"
+                },
+                {
+                    "name": "Cassidy Williams",
+                    "description": "Software Engineer at L4Digital, moderator for HH, heavily involved in women in tech movements"
+                },
+                {
+                    "name": "Laura Weidman Powers",
+                    "description": "Co-Founder, Code2040"
+                },
+                {
+                    "name": "Kimberly Bryant",
+                    "description": "Founder, BlackGirlsCode"
+                },
+                {
+                    "name": "Megan Smith",
+                    "description": "Former CTO of the United States and former Google Engineer"
+                },
+                {
+                    "name": "Anil Dash",
+                    "description": "CEO of Fog Creek Software, prolific blogger of ethics and technology"
+                },
+                {
+                    "name": "Parisa Tabriz",
+                    "description": "Head of Security, Google Chrome and UIUC Alum"
+                },
+                {
+                    "name": "Amy Chen",
+                    "description": "Founder, Ladies Storm Hackathons on Facebook"
                 }
             ]
         }
