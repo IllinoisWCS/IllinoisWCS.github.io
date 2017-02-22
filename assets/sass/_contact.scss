@@ -1,5 +1,5 @@
 #contact {
-	color: $maroon;
+	color: $primaryColor;
 	background-color: $offwhite;
 
 	.form-control {
@@ -11,11 +11,11 @@
 	}
 
 	.btn-primary {
-		background-color: $maroon;
-		border-color: $maroon;
+		background-color: $primaryColor;
+		border-color: $primaryColor;
 		color: $white;
 		&:hover {
-			background-color: $maroon;
+			background-color: $primaryColor;
 			color: $offwhite;
 		}
 	}

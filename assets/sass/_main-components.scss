@@ -12,17 +12,15 @@ body {
 
 h1 {
   font-family: $headerfont;
-  font-weight: 500 !important;
-  font-size: 5em !important;
-  letter-spacing: 2px;
-  color: $maroon;
+  font-weight: 500;
+  font-size: 4em;
+  color: $primaryColor;
 }
 
 h2 {
   font-family: $headerfont;
-  font-weight: 400 !important;
+  font-weight: 400;
   font-size: 3em !important;
-  letter-spacing: 2px;
 }
 
 h3 {
@@ -32,6 +30,11 @@ h3 {
 h4 {
   font-family: $headerfont;
   font-size: 2em !important;
+}
+
+h5 {
+  font-family: $headerfont;
+  font-size: 1em !important;
 }
 
 p {
@@ -99,7 +102,7 @@ p {
 }
 
 a {
-  color: $maroon;
+  color: $primaryColor;
   &:hover {
     color: $darkgray;
   }
