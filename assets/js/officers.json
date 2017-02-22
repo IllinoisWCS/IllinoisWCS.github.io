@@ -100,7 +100,7 @@
             "ask": []
           },
           {
-            "position": "Webmaster",
+            "position": "Head of Infrastructure",
             "firstname": "Sujay",
             "lastname": "Khandekar",
             "email": "khandek2@illinois.edu",
@@ -124,31 +124,6 @@
             ],
             "fact": "I lived in Belgium for two years during my high school career",
             "place": "Saratoga, CA",
-            "ask": []
-          },
-          {
-            "position": "Corporate Co-Chair",
-            "firstname": "Jennifer",
-            "lastname": "Cheng",
-            "email": "jrcheng3@illinois.edu",
-            "netid": "jrcheng3",
-            "year": "Senior",
-            "major": "Computer Science",
-            "interests": [
-                "HCI",
-                "Big Data"
-            ],
-            "experience": [
-                "Dow Chemical Company - SDE Intern, Summer 2015 - Spring 2016",
-                "Groupon - SDE Intern, Summer 2016"
-            ],
-            "hobbies": [
-                "Watching puppy videos",
-                "Baking",
-                "Playing cards"
-            ],
-            "fact": "I like puppies.",
-            "place": "Barrington, IL",
             "ask": []
           },
           {
@@ -226,41 +201,6 @@
             "place": "Forrest, IL",
             "ask": []
           },
-          {
-            "position": "Tech Team Co-Chair",
-            "firstname": "Emily",
-            "lastname": "Chao",
-            "email": "elchao2@illinois.edu",
-            "netid": "elchao2",
-            "year": "Senior",
-            "major": "Computer Science",
-            "interests": [
-                "Machine Learning",
-                "Full Stack Web Development",
-                "Social Interaction on the Web",
-                "Cybersecurity and Harrassment"
-            ],
-            "experience": [
-                "IT Development Intern, Paycor, Inc. Summer 2012",
-                "GBS-ITDO HRSS Intern, P&G, Summer 2013",
-                "Software Engineering Intern, kCura, Summer 2014",
-                "Systems Intern, Dow Chemical Company, School Year - 2014-2015",
-                "Software Engineering Intern, Intuit, Summer 2015",
-                "Engineering 100 ELA, Fall 2015",
-                "CS 225 TA, Spring 2015-Present",
-                "Web Developer, Miss Possible, Feb. 2014 - Present",
-                "Software Engineering Intern, Twitter, Summer 2016"
-            ],
-            "hobbies": [
-                "Ice skating",
-                "curating music",
-                "singing",
-                "stargazing"
-            ],
-            "fact": "I got a nose job after ignoring my deviated septum for 10 years. Oh and also I live within 2 miles of former Speaker of the House John Boehner.",
-            "place": "West Chester, OH",
-            "ask": []
-        },
         {
           "position": "Tech Team Co-Chair",
           "firstname": "Berwin",
@@ -288,6 +228,31 @@
           "fact": "A lot of people call me Bear, a nickname given to me when I got to college. I roll with it now.",
           "place": "Palatine, IL",
           "ask": []
+        },
+        {
+            "position": "Tech Team Co-Chair",
+            "firstname": "Jing",
+            "lastname": "Huang",
+            "email": "jhuang81@illinois.edu",
+            "netid": "jhuang81",
+            "year": "Junior",
+            "major": "Computer Science",
+            "interests": [
+            "Machine Learning",
+            "Algorithms"
+            ],
+            "experience": [
+            "CS 233 Course Assistant",
+            "Software Engineering Intern, Google, Summer 2016",
+            "Technology Developer and Analyst Intern, Bank of America, Summer 2015"
+            ],
+            "hobbies": [
+            "Writing",
+            "Badminton"
+            ],
+            "fact": "I grew up in Beijing but never visited the Forbidden City.",
+            "place": "Beijing, China",
+            "ask": []
         },
         {
         "position": "Social Chair",

@@ -5,7 +5,7 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family: "ProximaNova";
+  font-family: "Mallanna", sans-serif;
   width: 100%;
   height: 100%; }
 
@@ -30,7 +30,7 @@ h4 {
   font-size: 2em !important; }
 
 p {
-  font-family: Lato, "Lato"; }
+  font-family: "Mallanna", sans-serif; }
 
 .padded {
   padding: 2.5% 0 5% 0; }
@@ -48,7 +48,7 @@ p {
     color: #000;
     background-color: #999; }
 
-.center, #members .btnContainer, #outreachMain, #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
+.center, #members .btnContainer, #outreachMain {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -95,7 +95,7 @@ a {
     padding: 0 10% 0 10%; }
 
 .nav {
-  font-family: "ProximaNova";
+  font-family: "Mallanna", sans-serif;
   text-transform: uppercase; }
 
 /* Individual Divs */
@@ -202,7 +202,7 @@ a {
   width: 100%; }
 
 .member-links {
-  padding-top: 5%;
+  padding-top: 2%;
   list-style-type: none;
   text-align: center; }
 
@@ -239,37 +239,35 @@ a {
   display: block;
   padding: 5% 5%;
   color: #7d1935; }
-  #sponsors ul {
+  #sponsors .list {
     padding: 0;
-    list-style-type: none; }
-  #sponsors img {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; }
+  #sponsors .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
     width: 100%;
+    margin-top: 5%; }
+  #sponsors .list-item-link {
+    position: relative; }
+  #sponsors .list-item-image {
+    top: 50%;
+    width: auto;
     max-width: 100%;
-    object-fit: contain;
     max-height: 200px; }
-
-.list {
-  display: flex;
-  flex-wrap: wrap; }
-
-.list-item {
-  display: flex;
-  padding: 1em;
-  width: 100%;
-  margin-top: 5%; }
-
-@media all and (min-width: 40em) {
-  .list-item {
-    width: 50%; } }
-
-@media all and (min-width: 60em) {
-  .list-item {
-    width: 20%;
-    padding: 2%; } }
-
-@media all and (max-width: 40em) {
-  .list-item {
-    width: 50%; } }
+  @media all and (min-width: 40em) {
+    #sponsors .list-item {
+      width: 50%; } }
+  @media all and (min-width: 60em) {
+    #sponsors .list-item {
+      width: 20%;
+      padding: 2%; } }
+  @media all and (max-width: 40em) {
+    #sponsors .list-item {
+      width: 50%; } }
 
 #officers {
   padding: 5% 5%;
@@ -307,35 +305,23 @@ a {
     background-color: #fff;
     border-color: #fff; }
 
-#alumni {
-  background-color: #f5f3ee; }
-  #alumni p {
-    font-size: 1.1em;
-    line-height: 150%; }
+#alumni p {
+  font-size: 1.1em;
+  line-height: 150%; }
 
 #featuredAlumni {
-  margin-bottom: 10px; }
-  #featuredAlumni .col-md-4 img {
+  padding: 5% 10%; }
+  #featuredAlumni .alumniPicture {
+    height: auto;
     width: 100%; }
-  #featuredAlumni .alumniImage, #featuredAlumni .alumniText {
-    height: 300px; }
-
-.carousel-indicators li {
-  background-color: #7d1935; }
-  .carousel-indicators li.active {
-    background-color: #7d1935; }
-
-.alumniPicture {
-  width: 100%;
-  height: auto; }
 
 #contact {
   color: #7d1935;
   background-color: #f5f3ee; }
   #contact .form-control {
-    font-family: "ProximaNova"; }
+    font-family: "Mallanna", sans-serif; }
   #contact .label {
-    font-family: "ProximaNova"; }
+    font-family: "Mallanna", sans-serif; }
   #contact .btn-primary {
     background-color: #7d1935;
     border-color: #7d1935;
