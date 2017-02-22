@@ -12,24 +12,30 @@ body {
 h1 {
   font-family: "Oswald" !important;
   font-weight: 500;
-  font-size: 4em;
+  font-size: 5em;
   color: #e84c3d; }
 
 h2 {
   font-family: "Oswald" !important;
   font-weight: 400;
-  font-size: 3em; }
+  font-size: 4em;
+  color: #e84c3d; }
 
 h3 {
-  font-family: "Oswald" !important; }
+  font-family: "Oswald" !important;
+  font-weight: 300;
+  font-size: 3em;
+  color: #e84c3d; }
 
 h4 {
   font-family: "Oswald" !important;
-  font-size: 2em; }
+  font-size: 2em;
+  color: #e84c3d; }
 
 h5 {
   font-family: "Oswald" !important;
-  font-size: 1em; }
+  font-size: 1em;
+  color: #e84c3d; }
 
 p {
   font-family: Lato, "Lato"; }
