@@ -146,6 +146,10 @@ a {
   #members p {
     margin-bottom: 10%; }
 
+#resources {
+  display: block;
+  padding: 5% 5%; }
+
 .resource-header {
   padding-bottom: 5%; }
 
@@ -267,6 +271,10 @@ a {
     background-color: #fff;
     border-color: #fff; }
 
+#alumni {
+  display: block;
+  padding: 5% 5%; }
+
 #featuredAlumni {
   padding: 5% 10%; }
   #featuredAlumni .alumniPicture {
@@ -274,6 +282,8 @@ a {
     width: 100%; }
 
 #contact {
+  display: block;
+  padding: 5% 5%;
   color: #e84c3d;
   background-color: #f5f3ee; }
   #contact .form-control {

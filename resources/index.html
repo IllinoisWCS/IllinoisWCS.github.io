@@ -45,7 +45,7 @@
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="nav navbar-nav">
                         <li><a href="/members">Members</a></li>
-                        <li><a href="/members">Resources</a></li>
+                        <li><a href="/resources">Resources</a></li>
                         <li><a href="/officers">Officers</a></li>
                         <li><a href="/sponsors">Sponsors</a></li>
                         <li><a href="/alumni">Alumni</a></li>
@@ -55,61 +55,63 @@
             </div>
         </nav>
 
-        <div class="row padded" id="overview">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 class="resource-header" align="center">Overview</h1>
-                <p>Here is a curated list of opportunities, programs and communities our members can take part in. Specifically, the internship programs we list here are geared towards underclassmen. Think we're missing something or we need a correction? Feel free to submit an issue on <a href="https://github.com/IllinoisWCS/IllinoisWCS.github.io/issues" tab="_blank">Github.</a></p>
+        <div id="resources">
+            <div class="row padded" id="overview">
+                <div class="col-sm-offset-1 col-md-10">
+                    <h1 class="resource-header" align="center">Overview</h1>
+                    <p>Here is a curated list of opportunities, programs and communities our members can take part in. Specifically, the internship programs we list here are geared towards underclassmen. Think we're missing something or we need a correction? Feel free to submit an issue on <a href="https://github.com/IllinoisWCS/IllinoisWCS.github.io/issues" tab="_blank">Github.</a></p>
+                </div>
             </div>
-        </div>
 
-        <script type="text/x-mustache" id="resourceTemplate">
-            {{#values}}
-            <li class="list-group-item">
-                <h4>{{name}}</h4>
-                <p>{{description}}</p>
-                {{#link}}<a href={{.}} target="_blank">More information</a>{{/link}}
-            </li>
-            {{/values}}
-        </script>
+            <script type="text/x-mustache" id="resourceTemplate">
+                {{#values}}
+                <li class="list-group-item">
+                    <h4>{{name}}</h4>
+                    <p>{{description}}</p>
+                    {{#link}}<a href={{.}} target="_blank">More information</a>{{/link}}
+                </li>
+                {{/values}}
+            </script>
 
-        <div class="row padded" id="internships">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 class="resource-header" align="center">Internship Programs</h1>
-                <ul class="list-group" id="internshipsList"></ul>
-                <p>References: Cassidy Williams' <a href="https://github.com/cassidoo/getting-a-gig">Getting a Gig</a> has a lot of great information about how to best succeed in your internship search. Calla Jun's <a href="https://callajun.github.io/csfrosh/">A Freshman's Guide to Tech Internships</a> is also a great resource.</p>
+            <div class="row padded" id="internships">
+                <div class="col-sm-offset-1 col-md-10">
+                    <h1 class="resource-header" align="center">Internship Programs</h1>
+                    <ul class="list-group" id="internshipsList"></ul>
+                    <p>References: Cassidy Williams' <a href="https://github.com/cassidoo/getting-a-gig">Getting a Gig</a> has a lot of great information about how to best succeed in your internship search. Calla Jun's <a href="https://callajun.github.io/csfrosh/">A Freshman's Guide to Tech Internships</a> is also a great resource.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="row padded" id="scholarships">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 class="resource-header" align="center">Scholarships</h1>
-                <ul class="list-group" id="scholarshipsList"></ul>
-                <p>The CS Department periodically sends out emails regarding new and upcoming scholarships offered within and outside of the department.</p>
+            <div class="row padded" id="scholarships">
+                <div class="col-sm-offset-1 col-md-10">
+                    <h1 class="resource-header" align="center">Scholarships</h1>
+                    <ul class="list-group" id="scholarshipsList"></ul>
+                    <p>The CS Department periodically sends out emails regarding new and upcoming scholarships offered within and outside of the department.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="row padded" id="conferences">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 class="resource-header" align="center">Conferences</h1>
-                <ul class="list-group" id="conferencesList"></ul>
-                <p>Most conference applications open at different times, we'll post links to the applications as soon as we get word of them. Also, Freia Lobo's <a href="https://github.com/freialobo/GHC-Scholarships">GHC Scholarships</a> portal is also a great resource to see what other smaller scholarships are out there in case we miss some.</p>
-                <p>Feel free to reach out to the CS Department as well regarding conference funding. They can work with you to help fund some expenses towards your conference trip, as long as you ask and state what help you need.</p>
+            <div class="row padded" id="conferences">
+                <div class="col-sm-offset-1 col-md-10">
+                    <h1 class="resource-header" align="center">Conferences</h1>
+                    <ul class="list-group" id="conferencesList"></ul>
+                    <p>Most conference applications open at different times, we'll post links to the applications as soon as we get word of them. Also, Freia Lobo's <a href="https://github.com/freialobo/GHC-Scholarships">GHC Scholarships</a> portal is also a great resource to see what other smaller scholarships are out there in case we miss some.</p>
+                    <p>Feel free to reach out to the CS Department as well regarding conference funding. They can work with you to help fund some expenses towards your conference trip, as long as you ask and state what help you need.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="row padded" id="communities">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 class="resource-header" align="center">Communities</h1>
-                <h3 align="center">Facebook Groups, Slack Channels</h3>
-                <ul class="list-group" id="communitiesList"></ul>
+            <div class="row padded" id="communities">
+                <div class="col-sm-offset-1 col-md-10">
+                    <h1 class="resource-header" align="center">Communities</h1>
+                    <h3 align="center">Facebook Groups, Slack Channels</h3>
+                    <ul class="list-group" id="communitiesList"></ul>
+                </div>
             </div>
-        </div>
 
-        <div class="row padded" id="other">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 class="resource-header" align="center">Other</h1>
-                <h3 align="center">Influencers</h3>
-                <ul class="list-group" id="othersList"></ul>
+            <div class="row padded" id="other">
+                <div class="col-sm-offset-1 col-md-10">
+                    <h1 class="resource-header" align="center">Other</h1>
+                    <h3 align="center">Influencers</h3>
+                    <ul class="list-group" id="othersList"></ul>
+                </div>
             </div>
         </div>
 
