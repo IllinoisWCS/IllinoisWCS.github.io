@@ -128,7 +128,7 @@ a {
   vertical-align: center;
   min-height: 5vh !important; }
   .quickLinks p {
-    font-weight: 900;
+    font-weight: 700;
     color: black;
     text-transform: uppercase;
     margin: 0;
@@ -167,9 +167,12 @@ a {
   text-align: center; }
 
 #events {
-  margin-top: 50px; }
+  margin-top: 30px; }
   #events iframe {
     width: 100%; }
+
+#helpme {
+  margin-top: 50px; }
 
 .member-map {
   height: 500px;
