@@ -6,15 +6,20 @@
 }
 
 #events {
-  margin-top: 50px;
+  margin-top: 30px;
   iframe {
     width: 100%;
   }
 }
 
+#helpme {
+  margin-top: 50px;
+}
+
 .member-map {
-    height: 400px;
+    height: 500px;
     width: 100%;
+    padding: 5%;
 }
 
 .member-links {
@@ -33,6 +38,13 @@
 
 .btn {
     font-weight: bold;
+}
+
+.form-inline {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  padding: 5%;
 }
 
 #techTeam {
