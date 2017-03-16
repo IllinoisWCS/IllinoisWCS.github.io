@@ -5,6 +5,10 @@
     }
 
     padding: 5% 5%;
+    @media (max-width: 749px) {
+        padding: 10% 5%;
+    }
+    
     background-color: $offwhite;
 }
 
@@ -12,6 +16,8 @@
   width: 100%;
   height: auto;
 }
+
+
 
 .officer-box {
     border: 0;
