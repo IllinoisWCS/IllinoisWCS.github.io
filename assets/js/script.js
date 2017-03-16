@@ -12,7 +12,7 @@ $(document).ready(function() {
             var start = new Date(events[i].startTime);
             var li = $('<li/>')
                 .addClass('list-group-item');
-            li.append('<h4>' + events[i].title + '</h4>');
+            li.append('<h6>' + events[i].title + '</h6>');
             li.append('<span>' + start.toDateString() + ' at ' + start.toLocaleTimeString() + '</span>');
             $('#events-list').append(li);
         });

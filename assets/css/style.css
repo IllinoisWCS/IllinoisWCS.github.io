@@ -33,6 +33,10 @@ h5 {
   font-size: 1em;
   color: #e84c3d; }
 
+h6 {
+  font-family: "Oswald" !important;
+  color: black; }
+
 p {
   font-family: "Mallanna", sans-serif; }
 
