@@ -258,6 +258,9 @@ a {
   #officers h1 {
     color: #e84c3d;
     margin-bottom: 5%; }
+  @media (max-width: 749px) {
+    #officers {
+      padding: 10% 5%; } }
 
 .officerPicture {
   width: 100%;
@@ -329,3 +332,6 @@ footer {
     margin: 0; }
   footer a {
     color: white; }
+
+#techteam-title {
+  padding-top: 5% 5%; }
