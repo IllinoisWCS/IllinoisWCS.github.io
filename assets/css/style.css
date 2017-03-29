@@ -258,6 +258,9 @@ a {
   #officers h1 {
     color: #e84c3d;
     margin-bottom: 5%; }
+  @media (max-width: 749px) {
+    #officers {
+      padding: 10% 5%; } }
 
 .officerPicture {
   width: 100%;
@@ -268,25 +271,17 @@ a {
   cursor: pointer; }
 
 #outreachMain {
-  background-image: url("../img/wcs/chictech.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  width: 100% !important;
-  height: 100vh !important;
-  min-height: 100vh !important;
-  min-width: 100% !important;
-  opacity: 0.75; }
-  #outreachMain h1 {
-    color: #fff; }
-
-.panel {
-  border: none; }
-  .panel .panel-heading {
-    border: none;
-    background-color: #fff;
-    border-color: #fff; }
+  display: block;
+  padding: 5% 5%;
+  color: #e84c3d; }
+  #outreachMain .outreach-title {
+    padding-bottom: 2%;
+    text-align: center; }
+  #outreachMain .outreach-events {
+    color: black; }
+  @media (max-width: 749px) {
+    #outreachMain {
+      padding: 10%; } }
 
 #alumni {
   display: block;
