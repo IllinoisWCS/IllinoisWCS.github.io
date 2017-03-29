@@ -43,7 +43,7 @@ p {
 a {
   color: #e84c3d; }
   a:hover {
-    color: #fff; }
+    color: #333333; }
 
 #socialMediaLinks {
   display: block;
@@ -334,4 +334,4 @@ footer {
     color: white; }
 
 #techteam-title {
-  padding-top: 5% 5%; }
+  padding: 5%; }
