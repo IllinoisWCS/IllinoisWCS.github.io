@@ -2,7 +2,7 @@
         "values": [
             {
                 "name": "Tech Team Facebook Group",
-                "href": "https://www.facebook.com/groups/666235760194071/"
+                "href": "https://www.facebook.com/groups/wcstechteam1718/"
             },
             {
                 "name": "Our Github",
@@ -29,8 +29,8 @@
                                 "href": "https://github.com/IllinoisWCS/git-skeleton"
                             },
                             {
-                                "name": "Extended Notes",
-                                "href": "https://medium.com/how-to-start-your-own-technical-project/notes-on-git-af030e23c887#.kp4d5zdxv"
+                                "name": "Slides",
+                                "href": "https://docs.google.com/a/illinois.edu/presentation/d/1zPJkCUrvm0ZFZ5izPJhIrxKmTQPl1qUytJY2F8a-QCs/edit?usp=sharing"
                             }
                         ]
                     },
@@ -49,10 +49,6 @@
                             {
                                 "name": "Intro to Web Completed Repository",
                                 "href": "https://github.com/IllinoisWCS/web-complete"
-                            },
-                            {
-                                "name": "Extended Notes",
-                                "href": "https://medium.com/how-to-start-your-own-technical-project/notes-on-web-development-part-1-3bedffe9821c#.lmue73p05"
                             }
                         ]
                     },
