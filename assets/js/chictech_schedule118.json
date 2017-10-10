@@ -7,26 +7,21 @@
             },
             {
                 "time": "9:30 AM",
-                "what": "Finish Breakfast during Panel & Photo",
+                "what": "Finish Projects",
                 "where": "SC 2405 or 1404"
             },
             {
-                "time": "10:30 AM",
-                "what": "Workshop time to work on projects",
+                "time": "11:30 AM",
+                "what": "Demo Projects",
                 "where": "SC 0218/20/22"
             },
             {
                 "time": "12:00 PM",
-                "what": "Start project demos to parents",
+                "what": "Lunch with parents",
                 "where": "SC 0218/20/22"
             },
             {
-                "time": "12:30 PM",
-                "what": "Lunch (parents invited) and talk by current professor",
-                "where": "SC 1404"
-            },
-            {
-                "time": "1:30 PM",
+                "time": "1:00 PM",
                 "what": "Wrap up and Closing Note",
                 "where": "SC 2405"
             }
