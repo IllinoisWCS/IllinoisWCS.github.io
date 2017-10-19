@@ -47,11 +47,6 @@
                     "name": "HackNY Fellowship",
                     "description": "Work at a startup or technology-based company in the NYC area for 3 months, participate in activities as part of the fellows community. Companies represented include MongoDB, Buzzfeed, Tumblr, Mashable, etc.",
                     "link": "http://hackny.org/fellows/"
-                },
-                {
-                    "name": "PennApps Fellowship",
-                    "description": "10-week internship to introduce students to the tech scene in Philadelphia. Work at a startup in the Philly area.",
-                    "link": "http://www.pennappsfellows.com/"
                 }
             ]
         },
