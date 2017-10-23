@@ -217,7 +217,7 @@
             "advice": "Grades don't define you"
         },
         {
-            "position": "Corporate Co-Chair",
+            "position": "Corporate Chair",
             "firstname": "Shivali",
             "lastname": "Patel",
             "email": "supatel2@illinois.edu",
@@ -245,34 +245,6 @@
                 "Course scheduling"
             ],
             "advice": "Pace yourself with classes, but don't let yourself fall behind. Friends fall into place; don't try so hard. "
-        },
-        {
-            "position": "Corporate Co-Chair",
-            "firstname": "Jacqueline",
-            "lastname": "Bruen",
-            "email": "jebruen2@illinois.edu",
-            "netid": "jebruen2",
-            "year": "Sophomore",
-            "major": "Computer Science",
-            "interests": [
-                "Artificial Intelligence"
-            ],
-            "experience": [],
-            "hobbies": [
-                "Polymer clay miniature modeling",
-                "Learning Chinese",
-                "Knitting",
-                "Reading"
-            ],
-            "fact": "I really like 1940s music.",
-            "place": "Palm City, FL",
-            "ask": [
-                "CS 125",
-                "CS 126",
-                "HackerRank",
-                "Leetcode questions"
-            ],
-            "advice": "Don't be afraid to ask questions!"
         },
         {
             "position": "Tech Team Co-Chair",
