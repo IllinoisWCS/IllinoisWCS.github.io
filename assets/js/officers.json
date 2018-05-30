@@ -2,36 +2,37 @@
     "admin": [
         {
             "position": "President",
-            "firstname": "Shannon",
-            "lastname": "Strum",
-            "email": "sstrum2@illinois.edu",
-            "netid": "sstrum2",
+            "firstname": "Shivali",
+            "lastname": "Patel",
+            "email": "supatel2@illinois.edu",
+            "netid": "supatel2",
             "year": "Senior",
-            "major": "Computer Science",
+            "major": "CS",
             "interests": [
-                "Data Science",
-                "Security"
+                "Data Science/Analytics",
+                "Ethical AI"
             ],
             "experience": [
-                "Information Security Intern at Bank of America",
-                "IT Intern at Procter & Gamble",
-                "Systems Intern at State Farm",
-                "Lead Engineering Learning Assistant for Engineering 100"
+                "Capital One Data Engineering Intern"
             ],
             "hobbies": [
-                "Knitting sweaters for my cat",
-                "Finding new coffee shops",
-                "Writing  "
+                "Roller skating",
+                "Movies",
+                "Badminton"
             ],
-            "fact": "I want to get my pilot's license",
-            "place": "Villa Park, IL",
+            "fact": "During second semester of my junior year, I studied abroad
+            in Stockholm, Sweden and got CS credit for it too!",
+            "place": "Darien, IL",
             "ask": [
-                "MATH 461",
-                "Resume Reviewing",
-                "Course Scheduling",
-                "Mentoring"
+                "Getting involved in CS clubs/organizations",
+                "Dealing with college stress and difficult classes"
             ],
-            "advice": "Believe in yourself and don't be afraid of failure."
+            "advice": "Don't take it too easy! Trying hard is cool and good for
+            setting yourself up on the right path for the remainder of your
+            college career. Do your best to stay eager and motivated about the
+            coursework, but also take advantage of resources offered to you!
+            Those who ask for help when they need it are the smartest ones in
+            my book."
         },
         {
             "position": "Vice President",
@@ -58,163 +59,161 @@
             "ask": [
                 "CS 173"
             ],
-            "advice": "Use the resources given to you like office hours and don't be afraid to talk to new people."
+            "advice": "Use the resources given to you like office hours and
+            don't be afraid to talk to new people."
         },
         {
-            "position": "Mentor",
-            "firstname": "Erica",
-            "lastname": "Lee",
-            "email": "nlee16@illinois.edu",
-            "netid": "nlee16",
-            "year": "Alumna (Graduated May '17)",
-            "major": "Computer Science",
+            "position": "Mentoring Chair",
+            "firstname": "Deepika",
+            "lastname": "Ramachandran",
+            "email": "dramac4@illinois.edu",
+            "netid": "dramac4",
+            "year": "Junior",
+            "major": "CS + Stats",
             "interests": [
-                "Systems",
-                "Security"
+                "Data Visualization",
+                "Big Data"
             ],
             "experience": [
-                "Adobe Intern",
-                "Microsoft Intern",
-                "Co-Op at Kimberly-Clark",
-                "241 TA",
-                "Undergraduate Research Assistant"
+                "Worked at Mathnasium for 2 summers",
+                "WCS Mentoring Committee for 2017-2018 year",
             ],
             "hobbies": [
-                "Running",
+                "Going to the gym",
                 "Cooking",
-                "Photography",
-                "Traveling",
-                "Exploring around"
+                "Watching Gilmore Girls",
+                "Gymnastics",
             ],
-            "fact": "I have two scars on my forehead, both from falling down the stairs",
-            "place": "Des Plaines, IL",
+            "fact": "I've had braces twice!",
+            "place": "Naperville, IL",
             "ask": [
-                "CS241",
-                "Switching to CS",
-                "Grad School",
-                "Bioengineering",
-                "Engineering Minors",
-                "Make-up and Beauty Stuff",
-                "Half Marathon Training"
+                "Gilmore Girls",
+                "Gymnastics"
             ],
-            "advice": "Everything will be okay"
+            "advice": "Making mistakes is okay, but make sure to treat them as a
+            learning opportunity."
         },
         {
             "position": "Head of Infrastructure",
-            "firstname": "Simon",
-            "lastname": "Lu",
-            "email": "shlu2@illinois.edu",
-            "netid": "shlu2",
-            "year": "Senior",
-            "major": "Computer Science and Statistics",
+            "firstname": "Alice",
+            "lastname": "Fang",
+            "email": "alicesf2@illinois.edu",
+            "netid": "alicesf2",
+            "year": "Sophomore",
+            "major": "CS",
             "interests": [
-                "Full-Stack development",
-                "Algorithms"
-            ],
-            "experience": [
-                "LinkedIn - Frontend Engineering Intern",
-                "Bank of America - Software Development Intern"
-            ],
-            "hobbies": [
-                "Sleeping",
-                "Reading",
-                "Cooking"
-            ],
-            "fact": "I've somehow never broken a bone",
-            "place": "St. Louis, MO",
-            "ask": [
-                "Frontend Development",
-                "Fitness"
-            ],
-            "advice": "Try hard to get involved on campus and try to find experience in your field as early as you can!"
-        },
-        {
-            "position": "Social Chair",
-            "firstname": "Pooja",
-            "lastname": "Welling",
-            "email": "pgwelli2@illinois.edu",
-            "netid": "pgwelli2",
-            "year": "Junior",
-            "major": "Computer Science",
-            "interests": [
+                "Data Visualization",
                 "Machine Learning",
-                "Artificial Intelligence"
+                "Web Development"
             ],
             "experience": [
-                "Capital One",
-                "Fidelity Investments",
-                "Research through PURE"
+                "Software development intern at Productive Edge"
             ],
             "hobbies": [
-                "Reading",
-                "Hiking",
-                "Snapchat"
+                "Dancing",
+                "Playing piano and flute",
+                "Ice skating"
             ],
-            "fact": "I like puns and watermelon. In that order.",
-            "place": "Nashua, NH",
+            "fact": "I'm a yellow belt at Kung Fu Tea",
+            "place": "Hawthorn Woods, IL",
             "ask": [
-                "East coast tech scene",
-                "Staying organized",
-                "Work-life balance",
-                "Trying new things"
+                "CS 125",
+                "CS 126",
+                "CS 173",
+                "Getting involved",
+                "Resume help"
             ],
-            "advice": "Fake it til you make it"
+            "advice": "Don't spend all your money on bubble tea"
         },
         {
-            "position": "External Chair",
+            "position": "Head of Social",
+            "firstname": "Ayushi",
+            "lastname": "Singh",
+            "email": "ayushis3@illinois.edu",
+            "netid": "ayushis3",
+            "year": "Sophomore",
+            "major": "CS + Stats",
+            "interests": [
+                "Data Science/Analytics",
+                "Machine Learning"
+            ],
+            "experience": [
+                "Interned at Ameren",
+                "HackIllinois",
+                "ACM",
+                "R|P",
+                "Sail"
+            ],
+            "hobbies": [
+                "Tennis",
+                "Swimming",
+                "Photography"
+            ],
+            "fact": "I've been to 17 countries and 27 states",
+            "place": "Pleasonton, CA",
+            "ask": [
+                "Advice regarding internships",
+                "Coursework",
+                "RSO involvement",
+            ],
+            "advice": "Do less and do it well."
+        },
+        {
+            "position": "Head of Design",
             "firstname": "Alyssa",
             "lastname": "Chen",
             "email": "ychen374@illinois.edu",
             "netid": "ychen374",
-            "year": "Junior",
-            "major": "Computer Science, minor in Math",
+            "year": "Senior",
+            "major": "CS",
             "interests": [
-                "Data Analytics"
+                "Honestly who knows"
             ],
             "experience": [
-                "Discover Intern"
+                "intern @ amazon this summer !!!! working on enterprise ads !!"
             ],
             "hobbies": [
-                "Playing violin",
-                "Practicing handwriting",
-                "Writing food haikus"
+                "Calligraphy",
+                "Browsing font catalogs",
             ],
-            "fact": "I can eat a bowl of noodles in under a minute",
+            "fact": "im not very fun jk i eat noodles really fast, like _really_
+            fast",
             "place": "San Jose, CA",
             "ask": [
-                "CS 225"
+                "anything, especially noodles"
             ],
-            "advice": "Don't be shy"
+            "advice": "dont be such a tryhard + expand yo horizons"
         },
         {
-            "position": "Outreach Chair",
-            "firstname": "Sylvia",
-            "lastname": "Haas",
-            "email": "smhaas2@illinois.edu",
-            "netid": "smhaas2",
-            "year": "Senior",
+            "position": "Head of Outreach",
+            "firstname": "Grace",
+            "lastname": "Cao",
+            "email": "gracesc2@illinois.edu",
+            "netid": "gracesc2",
+            "year": "Sophomore",
             "major": "Computer Science and Statistics",
             "interests": [
-                "Data Visualization"
+                "Data Science",
+                "Cybersecurity"
             ],
             "experience": [
-                "Gems counselor",
-                "Research with Professor Shaffer"
+                "I participated in Facebook University for Engineers",
+                "I'm involved with WCS and consulting for EntreCORPS on campus
+                with my free time."
             ],
             "hobbies": [
-                "Swimming",
-                "Cooking",
-                "Photography",
-                "Laughing"
+                "Browsing Quora and Reddit",
+                "Experimenting with makeup and fun new recipes",
             ],
-            "fact": "I'm fluent in German",
-            "place": "Urbana, IL",
+            "fact": "I'm incapable of doing a push-up.",
+            "place": "Naperville, IL",
             "ask": [
-                "CS 125",
-                "CS 225",
-                "Things to do in Urbana"
+                "Getting involved on campus",
+                "Self-care tips!"
             ],
-            "advice": "Grades don't define you"
+            "advice": "Apply for only the things you know you're genuinely
+            interested in and appreciate your time with friends as much as you
+            can!"
         },
         {
             "position": "Corporate Chair",
@@ -244,7 +243,8 @@
                 "Getting involved",
                 "Course scheduling"
             ],
-            "advice": "Pace yourself with classes, but don't let yourself fall behind. Friends fall into place; don't try so hard. "
+            "advice": "Pace yourself with classes, but don't let yourself fall
+            behind. Friends fall into place; don't try so hard. "
         },
         {
             "position": "Tech Team Co-Chair",
@@ -252,54 +252,64 @@
             "lastname": "Subrahmanyam",
             "email": "varsha2@illinois.edu",
             "netid": "varsha2",
-            "year": "Junior",
-            "major": "Computer Science and Statistics",
+            "year": "Senior",
+            "major": "CS + Stats",
             "interests": [
                 "Data Science",
                 "Machine Learning",
-                "EdTech"
             ],
             "experience": [
-                "Google Intern (2017)"
+                "Intern at Google last summer",
+                "Intern at MongoDB this summer",
+                "Tech Team Co-Char last year"
             ],
             "hobbies": [
+                "Piano",
                 "Singing",
-                "Playing piano"
+                "Reading"
             ],
-            "fact": "I spent last summer in Cambridge!",
+            "fact": "My first cd was oops i did it again B)",
             "place": "Aurora, IL",
             "ask": [
-                "Resume reviewing",
-                "CS 225"
+                "Anything really :)"
             ],
-            "advice": "Get started in research really early!"
+            "advice": "Get started in research as early, and try to get outside
+            of the CS bubble!"
         },
         {
             "position": "Tech Team Co-Chair",
-            "firstname": "Jing",
-            "lastname": "Huang",
-            "email": "jhuang81@illinois.edu",
-            "netid": "jhuang81",
-            "year": "Senior",
-            "major": "Computer Science",
+            "firstname": "Tamara",
+            "lastname": "Nelson",
+            "email": "tln2@illinois.edu",
+            "netid": "tln2",
+            "year": "Junior",
+            "major": "CS",
             "interests": [
-                "Machine Learning",
-                "Algorithms"
+                "Data",
+                "UI/UX",
+                "Human Impact"
             ],
             "experience": [
-                "Software Engineering Intern, Google, Summer 2016",
-                "Technology Developer and Analyst Intern, Bank of America, Summer 2015"
+                "Programming Instructor with iDTech",
+                "ENG 100 ELA",
+                "Engineering Tour Guide"
             ],
             "hobbies": [
-                "Writing",
-                "Badminton"
+                "Music",
+                "Reading",
+                "Photography",
+                "Sewing"
             ],
-            "fact": "I grew up in Beijing but never visited the Forbidden City.",
-            "place": "Beijing, China",
+            "fact": "I used to be a nationally ranked Synchronized Swimmer",
+            "place": "St. Paul, Minnesota",
             "ask": [
-                "CS 233"
+                "Books",
+                "Net Neutrality"
             ],
-            "advice": "Get more involved in WCS."
+            "advice": "Meet as many people as you can, get involved (but don't
+            overwhelm yourself), listen to professors and upperclassmen that you
+            trust, don't hold onto old interests if they're not right for you
+            anymore."
         }
     ]
 }
