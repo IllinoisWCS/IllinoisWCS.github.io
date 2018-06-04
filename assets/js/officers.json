@@ -150,7 +150,7 @@
                 "Photography"
             ],
             "fact": "I've been to 17 countries and 27 states",
-            "place": "Pleasonton, CA",
+            "place": "Pleasanton, CA",
             "ask": [
                 "Advice regarding internships",
                 "Coursework",
@@ -170,19 +170,20 @@
                 "Honestly who knows"
             ],
             "experience": [
-                "intern @ amazon this summer !!!! working on enterprise ads !!"
+                "Intern at Amazon",
+                "Working on Enterprise ads"
             ],
             "hobbies": [
                 "Calligraphy",
                 "Browsing font catalogs",
             ],
-            "fact": "im not very fun jk i eat noodles really fast, like _really_
+            "fact": "I'm not very fun jk I eat noodles really fast, like REALLY
             fast",
             "place": "San Jose, CA",
             "ask": [
-                "anything, especially noodles"
+                "Anything, especially noodles"
             ],
-            "advice": "dont be such a tryhard + expand yo horizons"
+            "advice": "Don't be such a tryhard and expand yo horizons!"
         },
         {
             "position": "Head of Outreach",
@@ -197,9 +198,9 @@
                 "Cybersecurity"
             ],
             "experience": [
-                "I participated in Facebook University for Engineers",
-                "I'm involved with WCS and consulting for EntreCORPS on campus
-                with my free time."
+                "Facebook University for Engineers",
+                "WCS",
+                "Consulting for EntreCORPS"
             ],
             "hobbies": [
                 "Browsing Quora and Reddit",
@@ -259,16 +260,16 @@
                 "Machine Learning",
             ],
             "experience": [
-                "Intern at Google last summer",
-                "Intern at MongoDB this summer",
-                "Tech Team Co-Char last year"
+                "Intern at Google",
+                "Intern at MongoDB",
+                "Tech Team Co-Chair last year"
             ],
             "hobbies": [
                 "Piano",
                 "Singing",
                 "Reading"
             ],
-            "fact": "My first cd was oops i did it again B)",
+            "fact": "My first CD was Oops I Did it Again :)",
             "place": "Aurora, IL",
             "ask": [
                 "Anything really :)"
