@@ -35,35 +35,39 @@
             my book."
         },
         {
-            "position": "Vice President",
-            "firstname": "Kavya",
-            "lastname": "Varghese",
-            "email": "kmvargh2@illinois.edu",
-            "netid": "kmvargh2",
+            "position": "Treasurer",
+            "firstname": "Devashri",
+            "lastname": "Nagarkar",
+            "email": "nagarka2@illinois.edu",
+            "netid": "nagarka2",
             "year": "Junior",
             "major": "Computer Science",
             "interests": [
-                "HCI",
-                "Big data"
+                "Machine Learning",
+                "AI",
             ],
             "experience": [
-                "Nvidia",
-                "YouTube for Google Engineering Practicum"
+                "Microsoft SWE and Explorer Intern",
+                "Lead CS ELA for ENG 100"
             ],
             "hobbies": [
-                "Starbucks",
-                "Reading"
+                "Reading",
+                "Painting",
+                "Eating food"
             ],
-            "fact": "i dont believe in proper capitalization",
-            "place": "Fremont, CA",
+            "fact": "I have a really great sense of direction!",
+            "place": "Naperville, IL",
             "ask": [
-                "CS 173"
+                "Ways to integrate business into your college experiences",
+                "All my opinions about good food on campus"
             ],
-            "advice": "Use the resources given to you like office hours and
-            don't be afraid to talk to new people."
+            "advice": "College isn't about doing things because you are supposed
+            to do them, it is about finding you passion and making that into a
+            career. Don't worry about the small stuff and just focus on the big
+            picture."
         },
         {
-            "position": "Mentoring Chair",
+            "position": "Head of Mentoring",
             "firstname": "Deepika",
             "lastname": "Ramachandran",
             "email": "dramac4@illinois.edu",
@@ -75,13 +79,13 @@
                 "Big Data"
             ],
             "experience": [
-                "Worked at Mathnasium for 2 summers",
-                "WCS Mentoring Committee for 2017-2018 year",
+                "Mathnasium",
+                "WCS Mentoring Committee",
             ],
             "hobbies": [
                 "Going to the gym",
                 "Cooking",
-                "Watching Gilmore Girls",
+                "Gilmore Girls",
                 "Gymnastics",
             ],
             "fact": "I've had braces twice!",
@@ -94,99 +98,7 @@
             learning opportunity."
         },
         {
-            "position": "Head of Infrastructure",
-            "firstname": "Alice",
-            "lastname": "Fang",
-            "email": "alicesf2@illinois.edu",
-            "netid": "alicesf2",
-            "year": "Sophomore",
-            "major": "CS",
-            "interests": [
-                "Data Visualization",
-                "Machine Learning",
-                "Web Development"
-            ],
-            "experience": [
-                "Software development intern at Productive Edge"
-            ],
-            "hobbies": [
-                "Dancing",
-                "Playing piano and flute",
-                "Ice skating"
-            ],
-            "fact": "I'm a yellow belt at Kung Fu Tea",
-            "place": "Hawthorn Woods, IL",
-            "ask": [
-                "CS 125",
-                "CS 126",
-                "CS 173",
-                "Getting involved",
-                "Resume help"
-            ],
-            "advice": "Don't spend all your money on bubble tea"
-        },
-        {
-            "position": "Head of Social",
-            "firstname": "Ayushi",
-            "lastname": "Singh",
-            "email": "ayushis3@illinois.edu",
-            "netid": "ayushis3",
-            "year": "Sophomore",
-            "major": "CS + Stats",
-            "interests": [
-                "Data Science/Analytics",
-                "Machine Learning"
-            ],
-            "experience": [
-                "Interned at Ameren",
-                "HackIllinois",
-                "ACM",
-                "R|P",
-                "Sail"
-            ],
-            "hobbies": [
-                "Tennis",
-                "Swimming",
-                "Photography"
-            ],
-            "fact": "I've been to 17 countries and 27 states",
-            "place": "Pleasanton, CA",
-            "ask": [
-                "Advice regarding internships",
-                "Coursework",
-                "RSO involvement",
-            ],
-            "advice": "Do less and do it well."
-        },
-        {
-            "position": "Head of Design",
-            "firstname": "Alyssa",
-            "lastname": "Chen",
-            "email": "ychen374@illinois.edu",
-            "netid": "ychen374",
-            "year": "Senior",
-            "major": "CS",
-            "interests": [
-                "Honestly who knows"
-            ],
-            "experience": [
-                "Intern at Amazon",
-                "Working on Enterprise ads"
-            ],
-            "hobbies": [
-                "Calligraphy",
-                "Browsing font catalogs",
-            ],
-            "fact": "I'm not very fun jk I eat noodles really fast, like REALLY
-            fast",
-            "place": "San Jose, CA",
-            "ask": [
-                "Anything, especially noodles"
-            ],
-            "advice": "Don't be such a tryhard and expand yo horizons!"
-        },
-        {
-            "position": "Head of Outreach",
+            "position": "Outreach Co-Chair",
             "firstname": "Grace",
             "lastname": "Cao",
             "email": "gracesc2@illinois.edu",
@@ -199,7 +111,6 @@
             ],
             "experience": [
                 "Facebook University for Engineers",
-                "WCS",
                 "Consulting for EntreCORPS"
             ],
             "hobbies": [
@@ -217,37 +128,6 @@
             can!"
         },
         {
-            "position": "Corporate Chair",
-            "firstname": "Shivali",
-            "lastname": "Patel",
-            "email": "supatel2@illinois.edu",
-            "netid": "supatel2",
-            "year": "Junior",
-            "major": "Computer Science",
-            "interests": [
-                "Artificial Intelligence",
-                "Data Science",
-                "Neuroscience"
-            ],
-            "experience": [
-                "Research at Beckman I'm Computational Neurobiology lab",
-                "Capital One at Research Park"
-            ],
-            "hobbies": [
-                "Badminton",
-                "Roller Skating",
-                "TV"
-            ],
-            "fact": "My favorite food are sprinkles!",
-            "place": "Darien, IL",
-            "ask": [
-                "Getting involved",
-                "Course scheduling"
-            ],
-            "advice": "Pace yourself with classes, but don't let yourself fall
-            behind. Friends fall into place; don't try so hard. "
-        },
-        {
             "position": "Tech Team Co-Chair",
             "firstname": "Varsha",
             "lastname": "Subrahmanyam",
@@ -260,8 +140,8 @@
                 "Machine Learning",
             ],
             "experience": [
-                "Intern at Google",
-                "Intern at MongoDB",
+                "Google intern",
+                "MongoDB intern",
                 "Tech Team Co-Chair last year"
             ],
             "hobbies": [
@@ -301,7 +181,7 @@
                 "Photography",
                 "Sewing"
             ],
-            "fact": "I used to be a nationally ranked Synchronized Swimmer",
+            "fact": "I used to be a nationally ranked Synchronized Swimmer.",
             "place": "St. Paul, Minnesota",
             "ask": [
                 "Books",
@@ -311,6 +191,95 @@
             overwhelm yourself), listen to professors and upperclassmen that you
             trust, don't hold onto old interests if they're not right for you
             anymore."
+        },
+        {
+            "position": "Head of Infrastructure",
+            "firstname": "Alice",
+            "lastname": "Fang",
+            "email": "alicesf2@illinois.edu",
+            "netid": "alicesf2",
+            "year": "Sophomore",
+            "major": "CS",
+            "interests": [
+                "Data Visualization",
+                "Machine Learning",
+                "Web Development"
+            ],
+            "experience": [
+                "Software development intern at Productive Edge"
+            ],
+            "hobbies": [
+                "Dancing",
+                "Playing piano and flute",
+                "Ice skating"
+            ],
+            "fact": "I'm a yellow belt at Kung Fu Tea!",
+            "place": "Hawthorn Woods, IL",
+            "ask": [
+                "CS 125",
+                "CS 126",
+                "CS 173"
+            ],
+            "advice": "Don't spend all your money on bubble tea!"
+        },
+        {
+            "position": "Head of Social",
+            "firstname": "Ayushi",
+            "lastname": "Singh",
+            "email": "ayushis3@illinois.edu",
+            "netid": "ayushis3",
+            "year": "Sophomore",
+            "major": "CS + Stats",
+            "interests": [
+                "Data Science/Analytics",
+                "Machine Learning"
+            ],
+            "experience": [
+                "Interned at Ameren",
+                "HackIllinois",
+                "ACM",
+                "R|P",
+                "Sail"
+            ],
+            "hobbies": [
+                "Tennis",
+                "Swimming",
+                "Photography"
+            ],
+            "fact": "I've been to 17 countries and 27 states.",
+            "place": "Pleasanton, CA",
+            "ask": [
+                "Advice regarding internships",
+                "Coursework",
+                "RSO involvement",
+            ],
+            "advice": "Do less and do it well."
+        },
+        {
+            "position": "Head of Design",
+            "firstname": "Alyssa",
+            "lastname": "Chen",
+            "email": "ychen374@illinois.edu",
+            "netid": "ychen374",
+            "year": "Senior",
+            "major": "CS",
+            "interests": [
+                "Honestly who knows"
+            ],
+            "experience": [
+                "Intern at Amazon"
+            ],
+            "hobbies": [
+                "Calligraphy",
+                "Browsing font catalogs",
+            ],
+            "fact": "I'm not very fun jk I eat noodles really fast, like REALLY
+            fast.",
+            "place": "San Jose, CA",
+            "ask": [
+                "Anything, especially noodles"
+            ],
+            "advice": "Don't be such a tryhard and expand yo horizons!"
         }
     ]
 }
