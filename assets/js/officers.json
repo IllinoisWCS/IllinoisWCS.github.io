@@ -57,10 +57,10 @@
             ],
             "fact": "I have a really great sense of direction!",
             "place": "Naperville, IL",
-            "ask": [
+            <!-- "ask": [
                 "Ways to integrate business into your college experiences",
                 "Good food on campus"
-            ],
+            ], -->
             "advice": "College isn't about doing things because you are supposed
             to do them, it is about finding you passion and making that into a
             career. Don't worry about the small stuff and just focus on the big
@@ -90,10 +90,10 @@
             ],
             "fact": "I've had braces twice!",
             "place": "Naperville, IL",
-            "ask": [
+            <!-- "ask": [
                 "Gilmore Girls",
                 "Gymnastics"
-            ],
+            ], -->
             "advice": "Making mistakes is okay, but make sure to treat them as a
             learning opportunity."
         },
@@ -121,10 +121,10 @@
             ],
             "fact": "I'm incapable of doing a push-up.",
             "place": "Naperville, IL",
-            "ask": [
+            <!-- "ask": [
                 "Getting involved on campus",
                 "Self-care tips"
-            ],
+            ], -->
             "advice": "Apply for only the things you know you're genuinely
             interested in and appreciate your time with friends as much as you
             can!"
@@ -152,9 +152,9 @@
             ],
             "fact": "My first CD was Oops I Did it Again :)",
             "place": "Aurora, IL",
-            "ask": [
+            <!-- "ask": [
                 "Anything really :)"
-            ],
+            ], -->
             "advice": "Get started in research as early, and try to get outside
             of the CS bubble!"
         },
@@ -184,10 +184,10 @@
             ],
             "fact": "I used to be a nationally ranked Synchronized Swimmer.",
             "place": "St. Paul, Minnesota",
-            "ask": [
+            <!-- "ask": [
                 "Books",
                 "Net Neutrality"
-            ],
+            ], -->
             "advice": "Meet as many people as you can, get involved (but don't
             overwhelm yourself), listen to professors and upperclassmen that you
             trust, don't hold onto old interests if they're not right for you
@@ -217,11 +217,11 @@
             ],
             "fact": "I'm a yellow belt at Kung Fu Tea!",
             "place": "Hawthorn Woods, IL",
-            "ask": [
+            <!-- "ask": [
                 "CS 125",
                 "CS 126",
                 "CS 173"
-            ],
+            ], -->
             "advice": "Don't spend all your money on bubble tea!"
         },
         {
@@ -250,11 +250,11 @@
             ],
             "fact": "I've been to 17 countries and 27 states.",
             "place": "Pleasanton, CA",
-            "ask": [
+            <!-- "ask": [
                 "Internship advice",
                 "Coursework",
                 "RSO involvement",
-            ],
+            ], -->
             "advice": "Do less and do it well."
         },
         {
@@ -278,9 +278,9 @@
             "fact": "I'm not very fun jk I eat noodles really fast, like REALLY
             fast.",
             "place": "San Jose, CA",
-            "ask": [
+            <!-- "ask": [
                 "Anything, especially noodles"
-            ],
+            ], -->
             "advice": "Don't be such a tryhard and expand yo horizons!"
         }
     ]
