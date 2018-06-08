@@ -20,19 +20,13 @@
                 "Movies",
                 "Badminton"
             ],
-            "fact": "During second semester of my junior year, I studied abroad
-            in Stockholm, Sweden and got CS credit for it too!",
+            "fact": "During second semester of my junior year, I studied abroad in Stockholm, Sweden and got CS credit for it too!",
             "place": "Darien, IL",
-            <!-- "ask": [
+            "ask": [
                 "Getting involved in CS clubs/organizations",
                 "Dealing with college stress and difficult classes"
-            ], -->
-            "advice": "Don't take it too easy! Trying hard is cool and good for
-            setting yourself up on the right path for the remainder of your
-            college career. Do your best to stay eager and motivated about the
-            coursework, but also take advantage of resources offered to you!
-            Those who ask for help when they need it are the smartest ones in
-            my book."
+            ],
+            "advice": "Don't take it too easy! Trying hard is cool and good for setting yourself up on the right path for the remainder of your college career. Do your best to stay eager and motivated about the coursework, but also take advantage of resources offered to you! Those who ask for help when they need it are the smartest ones in my book."
         },
         {
             "position": "Treasurer",
@@ -44,7 +38,7 @@
             "major": "Computer Science",
             "interests": [
                 "Machine Learning",
-                "AI",
+                "AI"
             ],
             "experience": [
                 "Microsoft intern",
@@ -57,14 +51,11 @@
             ],
             "fact": "I have a really great sense of direction!",
             "place": "Naperville, IL",
-            <!-- "ask": [
+            "ask": [
                 "Ways to integrate business into your college experiences",
                 "Good food on campus"
-            ], -->
-            "advice": "College isn't about doing things because you are supposed
-            to do them, it is about finding you passion and making that into a
-            career. Don't worry about the small stuff and just focus on the big
-            picture."
+            ],
+            "advice": "College isn't about doing things because you are supposed to do them, it is about finding you passion and making that into a career. Don't worry about the small stuff and just focus on the big picture."
         },
         {
             "position": "Head of Mentoring",
@@ -80,22 +71,21 @@
             ],
             "experience": [
                 "Mathnasium",
-                "WCS Mentoring Committee",
+                "WCS Mentoring Committee"
             ],
             "hobbies": [
                 "Going to the gym",
                 "Cooking",
                 "Gilmore Girls",
-                "Gymnastics",
+                "Gymnastics"
             ],
             "fact": "I've had braces twice!",
             "place": "Naperville, IL",
-            <!-- "ask": [
+            "ask": [
                 "Gilmore Girls",
                 "Gymnastics"
-            ], -->
-            "advice": "Making mistakes is okay, but make sure to treat them as a
-            learning opportunity."
+            ],
+            "advice": "Making mistakes is okay, but make sure to treat them as a learning opportunity."
         },
         {
             "position": "Outreach Co-Chair",
@@ -121,13 +111,11 @@
             ],
             "fact": "I'm incapable of doing a push-up.",
             "place": "Naperville, IL",
-            <!-- "ask": [
+            "ask": [
                 "Getting involved on campus",
                 "Self-care tips"
-            ], -->
-            "advice": "Apply for only the things you know you're genuinely
-            interested in and appreciate your time with friends as much as you
-            can!"
+            ],
+            "advice": "Apply for only the things you know you're genuinely interested in and appreciate your time with friends as much as you can!"
         },
         {
             "position": "Tech Team Co-Chair",
@@ -139,7 +127,7 @@
             "major": "CS + Stats",
             "interests": [
                 "Data Science",
-                "Machine Learning",
+                "Machine Learning"
             ],
             "experience": [
                 "Google intern",
@@ -152,11 +140,10 @@
             ],
             "fact": "My first CD was Oops I Did it Again :)",
             "place": "Aurora, IL",
-            <!-- "ask": [
+            "ask": [
                 "Anything really :)"
-            ], -->
-            "advice": "Get started in research as early, and try to get outside
-            of the CS bubble!"
+            ],
+            "advice": "Get started in research as early, and try to get outside of the CS bubble!"
         },
         {
             "position": "Tech Team Co-Chair",
@@ -184,14 +171,11 @@
             ],
             "fact": "I used to be a nationally ranked Synchronized Swimmer.",
             "place": "St. Paul, Minnesota",
-            <!-- "ask": [
+            "ask": [
                 "Books",
                 "Net Neutrality"
-            ], -->
-            "advice": "Meet as many people as you can, get involved (but don't
-            overwhelm yourself), listen to professors and upperclassmen that you
-            trust, don't hold onto old interests if they're not right for you
-            anymore."
+            ],
+            "advice": "Meet as many people as you can, get involved (but don't overwhelm yourself), listen to professors and upperclassmen that you trust, don't hold onto old interests if they're not right for you anymore."
         },
         {
             "position": "Head of Infrastructure",
@@ -217,11 +201,11 @@
             ],
             "fact": "I'm a yellow belt at Kung Fu Tea!",
             "place": "Hawthorn Woods, IL",
-            <!-- "ask": [
+            "ask": [
                 "CS 125",
                 "CS 126",
                 "CS 173"
-            ], -->
+            ],
             "advice": "Don't spend all your money on bubble tea!"
         },
         {
@@ -250,11 +234,11 @@
             ],
             "fact": "I've been to 17 countries and 27 states.",
             "place": "Pleasanton, CA",
-            <!-- "ask": [
+            "ask": [
                 "Internship advice",
                 "Coursework",
-                "RSO involvement",
-            ], -->
+                "RSO involvement"
+            ],
             "advice": "Do less and do it well."
         },
         {
@@ -273,14 +257,13 @@
             ],
             "hobbies": [
                 "Calligraphy",
-                "Browsing font catalogs",
+                "Browsing font catalogs"
             ],
-            "fact": "I'm not very fun jk I eat noodles really fast, like REALLY
-            fast.",
+            "fact": "I'm not very fun jk I eat noodles really fast, like REALLY fast.",
             "place": "San Jose, CA",
-            <!-- "ask": [
+            "ask": [
                 "Anything, especially noodles"
-            ], -->
+            ],
             "advice": "Don't be such a tryhard and expand yo horizons!"
         }
     ]
