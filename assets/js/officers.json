@@ -13,7 +13,7 @@
                 "Ethical AI"
             ],
             "experience": [
-                "Capital One Data Engineering Intern"
+                "Capital One Data Engineering intern"
             ],
             "hobbies": [
                 "Roller skating",
@@ -58,6 +58,36 @@
             "advice": "College isn't about doing things because you are supposed to do them, it is about finding you passion and making that into a career. Don't worry about the small stuff and just focus on the big picture."
         },
         {
+            "position": "Corporate Co-Chair",
+            "firstname": "Morgan",
+            "lastname": "Wessel",
+            "email": "mhw2@illinois.edu",
+            "netid": "mhw2",
+            "year": "Junior",
+            "major": "CS + Linguistics",
+            "interests": [
+                "Systems Programming",
+                "Networking",
+                "Natural Language Processing"
+            ],
+            "experience": [
+                "GE Transportation intern",
+                "GE Digital intern"
+            ],
+            "hobbies": [
+                "Soccer",
+                "Running",
+                "Talking"
+            ],
+            "fact": "I used to do musical theater.",
+            "place": "Elk Grove Village, IL",
+            "ask": [
+                "Getting involved in CS clubs/organizations",
+                "Dealing with college stress and difficult classes"
+            ],
+            "advice": "I would tell myself to get involved in activities right away. I waited too long."
+        },
+        {
             "position": "Head of Mentoring",
             "firstname": "Deepika",
             "lastname": "Ramachandran",
@@ -70,8 +100,7 @@
                 "Big Data"
             ],
             "experience": [
-                "Mathnasium",
-                "WCS Mentoring Committee"
+                "Mathnasium"
             ],
             "hobbies": [
                 "Going to the gym",
@@ -94,7 +123,7 @@
             "email": "gracesc2@illinois.edu",
             "netid": "gracesc2",
             "year": "Sophomore",
-            "major": "Computer Science and Statistics",
+            "major": "CS + Stats",
             "interests": [
                 "Data Science",
                 "Cybersecurity"
@@ -159,9 +188,9 @@
                 "Human Impact"
             ],
             "experience": [
-                "Programming Instructor with iDTech",
+                "Programming instructor with iDTech",
                 "ENG 100 ELA",
-                "Engineering Tour Guide"
+                "Engineering tour guide"
             ],
             "hobbies": [
                 "Music",
