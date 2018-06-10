@@ -29,13 +29,40 @@
             "advice": "Don't take it too easy! Trying hard is cool and good for setting yourself up on the right path for the remainder of your college career. Do your best to stay eager and motivated about the coursework, but also take advantage of resources offered to you! Those who ask for help when they need it are the smartest ones in my book."
         },
         {
+            "position": "Internal Vice President",
+            "firstname": "Ann",
+            "lastname": "Rajan",
+            "email": "amrajan2@illinois.edu",
+            "netid": "amrajan2",
+            "year": "Junior",
+            "major": "CS",
+            "interests": [
+                "Blockchain",
+                "Systems"
+            ],
+            "experience": [
+                "CME Group intern",
+                "Microsoft intern"
+            ],
+            "hobbies": [
+                "Badminton",
+                "Violin (sort of)"
+            ],
+            "fact": "I once thought I inhaled boba and believed I was dying for 3 days :(",
+            "place": "Palatine, IL",
+            "ask": [
+                "Kdramas :)"
+            ],
+            "advice": "Time management in college is hard! A lot of people do different things, but I recommend sticking to something similar to your high school schedule - classes/studying in the morning and afternoon, and clubs in the evening."
+        },
+        {
             "position": "Treasurer",
             "firstname": "Devashri",
             "lastname": "Nagarkar",
             "email": "nagarka2@illinois.edu",
             "netid": "nagarka2",
             "year": "Junior",
-            "major": "Computer Science",
+            "major": "CS",
             "interests": [
                 "Machine Learning",
                 "AI"
@@ -52,7 +79,7 @@
             "fact": "I have a really great sense of direction!",
             "place": "Naperville, IL",
             "ask": [
-                "Ways to integrate business into your college experiences",
+                "Integrating entrepreneurship with engineering",
                 "Good food on campus"
             ],
             "advice": "College isn't about doing things because you are supposed to do them, it is about finding you passion and making that into a career. Don't worry about the small stuff and just focus on the big picture."
@@ -82,8 +109,7 @@
             "fact": "I used to do musical theater.",
             "place": "Elk Grove Village, IL",
             "ask": [
-                "Getting involved in CS clubs/organizations",
-                "Dealing with college stress and difficult classes"
+                "My travels"
             ],
             "advice": "I would tell myself to get involved in activities right away. I waited too long."
         },
