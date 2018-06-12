@@ -17,14 +17,14 @@
             ],
             "hobbies": [
                 "Roller skating",
-                "Movies",
-                "Badminton"
+                " movies",
+                " badminton"
             ],
             "fact": "During second semester of my junior year, I studied abroad in Stockholm, Sweden and got CS credit for it too!",
             "place": "Darien, IL",
             "ask": [
                 "Getting involved in CS clubs/organizations",
-                "Dealing with college stress and difficult classes"
+                " dealing with college stress and difficult classes"
             ],
             "advice": "Don't take it too easy! Trying hard is cool and good for setting yourself up on the right path for the remainder of your college career. Do your best to stay eager and motivated about the coursework, but also take advantage of resources offered to you! Those who ask for help when they need it are the smartest ones in my book."
         },
@@ -46,7 +46,7 @@
             ],
             "hobbies": [
                 "Badminton",
-                "Violin (sort of)"
+                " violin (sort of)"
             ],
             "fact": "I once thought I inhaled boba and believed I was dying for 3 days :(",
             "place": "Palatine, IL",
@@ -73,16 +73,16 @@
             ],
             "hobbies": [
                 "Reading",
-                "Painting",
-                "Eating food"
+                " painting",
+                " eating food"
             ],
             "fact": "I have a really great sense of direction!",
             "place": "Naperville, IL",
             "ask": [
                 "Integrating entrepreneurship with engineering",
-                "Good food on campus"
+                " good food on campus"
             ],
-            "advice": "College isn't about doing things because you are supposed to do them, it is about finding you passion and making that into a career. Don't worry about the small stuff and just focus on the big picture."
+            "advice": "College isn't about doing things because you are supposed to do them, it is about finding your passion and making that into a career. Don't worry about the small stuff and just focus on the big picture."
         },
         {
             "position": "Corporate Co-Chair",
@@ -103,8 +103,8 @@
             ],
             "hobbies": [
                 "Soccer",
-                "Running",
-                "Talking"
+                " running",
+                " talking"
             ],
             "fact": "I used to do musical theater.",
             "place": "Elk Grove Village, IL",
@@ -135,21 +135,21 @@
             ],
             "hobbies": [
                 "Surfing the web",
-                "Binge-watching",
-                "Eating good food",
-                "Golfing",
-                "Reading",
-                "Trying to be cool"
+                " binge-watching",
+                " eating good food",
+                " golfing",
+                " reading",
+                " trying to be cool"
             ],
             "fact": "I once got stuck in a golf course bathroom. Unfortunately, it was not at a country club.",
             "place": "Cupertino, CA",
             "ask": [
                 "CS stuff",
-                "Life as we know it",
-                "What to binge-watch",
-                "Anything"
+                " life as we know it",
+                " what to binge-watch",
+                " anything"
             ],
-            "advice": "Seize every opportunity—don't limit yourself and venture as far out of your comfort zone as possible (you'll thank yourself, trust me :))"
+            "advice": "Seize every opportunity - don't limit yourself and venture as far out of your comfort zone as possible (you'll thank yourself, trust me :))"
         },
         {
             "position": "Head of Mentoring",
@@ -168,15 +168,15 @@
             ],
             "hobbies": [
                 "Going to the gym",
-                "Cooking",
-                "Gilmore Girls",
-                "Gymnastics"
+                " cooking",
+                " Gilmore Girls",
+                " gymnastics"
             ],
             "fact": "I've had braces twice!",
             "place": "Naperville, IL",
             "ask": [
                 "Gilmore Girls",
-                "Gymnastics"
+                " gymnastics"
             ],
             "advice": "Making mistakes is okay, but make sure to treat them as a learning opportunity."
         },
@@ -198,15 +198,15 @@
             ],
             "hobbies": [
                 "Quora",
-                "Reddit",
-                "Makeup",
-                "Cooking"
+                " Reddit",
+                " makeup",
+                " cooking"
             ],
             "fact": "I'm incapable of doing a push-up.",
             "place": "Naperville, IL",
             "ask": [
                 "Getting involved on campus",
-                "Self-care tips"
+                " self-care tips"
             ],
             "advice": "Apply for only the things you know you're genuinely interested in and appreciate your time with friends as much as you can!"
         },
@@ -228,8 +228,8 @@
             ],
             "hobbies": [
                 "Piano",
-                "Singing",
-                "Reading"
+                " singing",
+                " reading"
             ],
             "fact": "My first CD was Oops I Did it Again :)",
             "place": "Aurora, IL",
@@ -258,15 +258,15 @@
             ],
             "hobbies": [
                 "Music",
-                "Reading",
-                "Photography",
-                "Sewing"
+                " reading",
+                " photography",
+                " sewing"
             ],
             "fact": "I used to be a nationally ranked Synchronized Swimmer.",
             "place": "St. Paul, Minnesota",
             "ask": [
                 "Books",
-                "Net Neutrality"
+                " Net Neutrality"
             ],
             "advice": "Meet as many people as you can, get involved (but don't overwhelm yourself), listen to professors and upperclassmen that you trust, don't hold onto old interests if they're not right for you anymore."
         },
@@ -288,16 +288,17 @@
             ],
             "hobbies": [
                 "Dancing",
-                "Piano",
-                "Flute",
-                "Ice skating"
+                " piano",
+                " flute",
+                " ice skating"
             ],
             "fact": "I'm a yellow belt at Kung Fu Tea!",
             "place": "Hawthorn Woods, IL",
             "ask": [
-                "CS 125",
-                "CS 126",
-                "CS 173"
+                "CS 125/126/173",
+                " resume help",
+                " getting involved",
+                " having fun :)"
             ],
             "advice": "Don't spend all your money on bubble tea!"
         },
@@ -317,20 +318,20 @@
                 "Ameren",
                 "HackIllinois",
                 "ACM",
-                "R|P",
+                "R | P",
                 "Sail"
             ],
             "hobbies": [
                 "Tennis",
-                "Swimming",
-                "Photography"
+                " swimming",
+                " photography"
             ],
             "fact": "I've been to 17 countries and 27 states.",
             "place": "Pleasanton, CA",
             "ask": [
                 "Internship advice",
-                "Coursework",
-                "RSO involvement"
+                " coursework",
+                " RSO involvement"
             ],
             "advice": "Do less and do it well."
         },
@@ -350,7 +351,7 @@
             ],
             "hobbies": [
                 "Calligraphy",
-                "Browsing font catalogs"
+                " browsing font catalogs"
             ],
             "fact": "I'm not very fun jk I eat noodles really fast, like REALLY fast.",
             "place": "San Jose, CA",
