@@ -270,6 +270,13 @@ a {
   border: 0;
   cursor: pointer; }
 
+.label-default {
+  background-color: #E26269;
+}
+.label-primary {
+  background-color: #68C7CB;
+}
+
 #outreachMain {
   display: block;
   padding: 5% 5%;

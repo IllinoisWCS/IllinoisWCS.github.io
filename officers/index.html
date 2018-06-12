@@ -79,22 +79,21 @@
                                           </img>
                                       </div>
                                       <div class="col-md-6">
-                                          <p><b>{{major}}</b></p>
-                                          <p><b>{{year}}</b></p>
+                                          <p><b>Major: </b>{{major}}</p>
+                                          <p><b>Year: </b>{{year}}</p>
+                                          <p><b>From: </b>{{place}}</p>
+                                          <p><b>Experiences: </b>
+                                          {{#experience}}
+                                              <span class="label label-default">{{.}}</span>
+                                          {{/experience}}</p>
                                           <p><b>Interests: </b>
                                           {{#interests}}
-                                              <span class="label label-default">{{.}}</span>
+                                              <span class="label label-primary">{{.}}</span>
                                           {{/interests}}</p>
-                                          <p><b>Experiences: </b>{{experience}}</p>
-                                          <p><b>Hobbies: </b>
-                                          {{#hobbies}}
-                                              <span class="label label-success">{{.}}</span>
-                                          {{/hobbies}}</p>
-                                          <br/>
+                                          <p><b>Hobbies: </b>{{hobbies}}</p>
                                           <p><b>Ask Me About: </b>{{ask}}</p>
-                                          <p><b>Advice to your freshman self: </b>{{advice}}</p>
-                                          <p><b>Fun fact: </b>{{fact}}</p>
-                                          <p><b>From: </b>{{place}}</p>
+                                          <p><b>Fun Fact: </b>{{fact}}</p>
+                                          <p><b>Advice: </b>{{advice}}</p>
                                       </div>
                                   </div>
                               </div>
