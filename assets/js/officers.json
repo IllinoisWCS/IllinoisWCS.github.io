@@ -13,7 +13,7 @@
                 "Ethical AI"
             ],
             "experience": [
-                "Capital One Data Engineering intern"
+                "Capital One"
             ],
             "hobbies": [
                 "Roller skating",
@@ -41,8 +41,8 @@
                 "Systems"
             ],
             "experience": [
-                "CME Group intern",
-                "Microsoft intern"
+                "CME Group",
+                "Microsoft"
             ],
             "hobbies": [
                 "Badminton",
@@ -68,7 +68,7 @@
                 "AI"
             ],
             "experience": [
-                "Microsoft intern",
+                "Microsoft",
                 "Lead CS ELA"
             ],
             "hobbies": [
@@ -98,8 +98,8 @@
                 "Natural Language Processing"
             ],
             "experience": [
-                "GE Transportation intern",
-                "GE Digital intern"
+                "GE Transportation",
+                "GE Digital"
             ],
             "hobbies": [
                 "Soccer",
@@ -112,6 +112,44 @@
                 "My travels"
             ],
             "advice": "I would tell myself to get involved in activities right away. I waited too long."
+        },
+        {
+            "position": "Corporate Co-Chair",
+            "firstname": "Sam",
+            "lastname": "Pal",
+            "email": "sspal2@illinois.edu",
+            "netid": "sspal2",
+            "year": "Sophomore",
+            "major": "CS",
+            "interests": [
+                "AI",
+                "Machine Learning",
+                "Data Science",
+                "Cloud Tech",
+                "Everything"
+            ],
+            "experience": [
+                "LinkedIn",
+                "NY Times",
+                "Girls Who Code"
+            ],
+            "hobbies": [
+                "Surfing the web",
+                "Binge-watching",
+                "Eating good food",
+                "Golfing",
+                "Reading",
+                "Trying to be cool"
+            ],
+            "fact": "I once got stuck in a golf course bathroom. Unfortunately, it was not at a country club.",
+            "place": "Cupertino, CA",
+            "ask": [
+                "CS stuff",
+                "Life as we know it",
+                "What to binge-watch",
+                "Anything"
+            ],
+            "advice": "Seize every opportunity—don't limit yourself and venture as far out of your comfort zone as possible (you'll thank yourself, trust me :))"
         },
         {
             "position": "Head of Mentoring",
@@ -155,8 +193,8 @@
                 "Cybersecurity"
             ],
             "experience": [
-                "Facebook University for Engineers",
-                "Consulting for EntreCORPS"
+                "Facebook",
+                "EntreCORPS"
             ],
             "hobbies": [
                 "Quora",
@@ -185,8 +223,8 @@
                 "Machine Learning"
             ],
             "experience": [
-                "Google intern",
-                "MongoDB intern"
+                "Google",
+                "MongoDB"
             ],
             "hobbies": [
                 "Piano",
@@ -214,7 +252,7 @@
                 "Human Impact"
             ],
             "experience": [
-                "Programming instructor with iDTech",
+                "iDTech",
                 "ENG 100 ELA",
                 "Engineering tour guide"
             ],
@@ -246,7 +284,7 @@
                 "Web Development"
             ],
             "experience": [
-                "Productive Edge intern"
+                "Productive Edge"
             ],
             "hobbies": [
                 "Dancing",
@@ -276,7 +314,7 @@
                 "Machine Learning"
             ],
             "experience": [
-                "Ameren intern",
+                "Ameren",
                 "HackIllinois",
                 "ACM",
                 "R|P",
@@ -308,7 +346,7 @@
                 "Honestly who knows"
             ],
             "experience": [
-                "Amazon intern"
+                "Amazon"
             ],
             "hobbies": [
                 "Calligraphy",
