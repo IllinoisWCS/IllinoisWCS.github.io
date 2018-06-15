@@ -7,7 +7,7 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    $.getJSON("/assets/js/resources.json", function(data) {
+    $.getJSON("../assets/js/resources.json", function(data) {
      $("#internshipsList").html(Mustache.render($("#resourceTemplate").html(), data.internships));
     $("#scholarshipsList").html(Mustache.render($("#resourceTemplate").html(), data.scholarships));
     $("#conferencesList").html(Mustache.render($("#resourceTemplate").html(), data.conferences));
@@ -16,5 +16,5 @@ $(document).ready(function() {
 
 
     });
-    
+
 });

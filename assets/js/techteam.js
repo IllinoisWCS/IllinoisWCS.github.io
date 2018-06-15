@@ -7,12 +7,12 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    $.getJSON("/assets/js/techteam_recommendations.json", function(data) {
+    $.getJSON("../assets/js/techteam_recommendations.json", function(data) {
       var recTemplate = Mustache.render($('#recTemplate').html(), data);
       $('#accordionTT').html(recTemplate);
     });
 
-    $.getJSON("/assets/js/techteam_links.json", function(data) {
+    $.getJSON("../assets/js/techteam_links.json", function(data) {
       var linksTemplate = Mustache.render($('#ttlinkTemplate').html(), data);
       $('#linksList').html(linksTemplate);
     });
