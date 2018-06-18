@@ -29,6 +29,37 @@
             "advice": "Don't take it too easy! Trying hard is cool and good for setting yourself up on the right path for the remainder of your college career. Do your best to stay eager and motivated about the coursework, but also take advantage of resources offered to you! Those who ask for help when they need it are the smartest ones in my book."
         },
         {
+            "position": "External Vice President",
+            "firstname": "Prajakti",
+            "lastname": "Jinachandran",
+            "email": "pj3@illinois.edu",
+            "netid": "pj3",
+            "year": "Junior",
+            "major": "CS + Stats",
+            "interests": [
+                "Natural Language Processing",
+                "Data Science",
+                "Honestly though, I have no idea"
+            ],
+            "experience": [
+                "Illinois Geometry Lab",
+                "Tastytrade",
+                "Engineering City Scholar"
+            ],
+            "hobbies": [
+                "Cooking",
+                " reading"
+            ],
+            "fact": "I can draw a perfect circle freehand!",
+            "place": "Dubai, UAE",
+            "ask": [
+                "Coursework",
+                " being an international student",
+                " life"
+            ],
+            "advice": "Plan out your schedule more carefully and better aligned to the areas of CS you might be interested in. Don't wait till sophomore year to join WCS!"
+        },
+        {
             "position": "Internal Vice President",
             "firstname": "Ann",
             "lastname": "Rajan",
