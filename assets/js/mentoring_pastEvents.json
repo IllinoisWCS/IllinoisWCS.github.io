@@ -1,36 +1,22 @@
 {
         "values": [
             {
-                "name": "How to Start Your Own Side Project 2016",
-                "href": "https://drive.google.com/open?id=1XHNqpS30KhmzgWdZX6GDjn15vvvCjb4Pxe5jbxEfWPw"
+                "name": "Kellogg Resume Review"
             },
             {
-                "name": "Lean In Circle February 2016",
-                "href": "/assets/file/LeanIn.pdf"
+                "name": "WCSxACM Breaking the Glass Ceiling"
             },
             {
-                "name": "Class Schedule Preparation October 2015",
-                "href": "/assets/file/ClassSchedulePrep.pdf"
+                "name": "Lean-in (Imposter Syndrome)"
             },
             {
-                "name": "Resume Review Workshop September 2015",
-                "href": "/assets/file/ResumeReview.pdf"
+                "name": "Internship Panel #1 (Project Management, Product Design, Research)"
             },
             {
-                "name": "Lean In Circle - Academics April 2015",
-                "href": "lean-in-circle/april-2015"
+                "name": "Internship Panel #2 (Software Engineering)"
             },
             {
-                "name": "Lean In Circle - Behavioral Interview March 2015",
-                "href": "lean-in-circle/february-2015"
-            },
-            {
-                "name": "Lean In Book Introduction February 2015",
-                "href": "lean-in-book"
-            },
-            {
-                "name": "Resume Review and Technical Interview Workshop January 2015",
-                "href": "resume-review"
+                "name": "Bias in Algorithms"
             }
         ]
     }
