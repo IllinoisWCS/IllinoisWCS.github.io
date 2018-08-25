@@ -7,7 +7,7 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    $.getJSON("mentoring_pastEvents.json", function(data) {
+    $.getJSON("../assets/js/mentoring_pastEvents.json", function(data) {
       var pastEventsTemplate = Mustache.render($('#pastEventsTemplate').html(), data);
       $('#past-events-list').html(pastEventsTemplate);
     });
