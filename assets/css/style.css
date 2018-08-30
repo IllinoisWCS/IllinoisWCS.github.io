@@ -71,7 +71,9 @@ a {
 /* Individual Divs */
 #home {
   padding: 5% 0 5% 0;
-  background: url("../img/wcs/officers.jpg") no-repeat center center; }
+  background: url("../img/wcs/new-officers.jpg") no-repeat center center;
+  background-size: cover;
+}
   #home .home-header-container {
     width: 100%;
     padding: 2%;
