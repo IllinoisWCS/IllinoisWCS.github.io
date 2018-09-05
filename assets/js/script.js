@@ -92,7 +92,7 @@ $(document).ready(function() {
     */
     function listUpcomingEvents() {
     var request = gapi.client.calendar.events.list({
-      'calendarId': 'illinoiswcs@gmail.com',
+      'calendarId': 'aWxsaW5vaXN3Y3NAZ21haWwuY29t',
       'timeMin': (new Date()).toISOString(),
       'showDeleted': false,
       'singleEvents': true,
