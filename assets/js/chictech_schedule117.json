@@ -16,29 +16,29 @@
                 "where": "SC 0218/20/22"
             },
             {
-                "time": "12:00 PM",
-                "what": "Lunch",
+                "time": "11:30 AM",
+                "what": "Speaker",
                 "where": "SC 2405"
             },
             {
-                "time": "1:00 PM",
-                "what": "Lean-ins",
+                "time": "12:30 PM",
+                "what": "Lunch",
                 "where": "SC 0218/20/22"
             },
             {
-                "time": "2:00 PM",
-                "what": "Coding Workshop",
+                "time": "1:45 PM",
+                "what": "Coding Workshop & Escape Room",
                 "where": "SC 2405"
             },
             {
                 "time": "3:30 PM",
-                "what": "Scavenger Hunt",
+                "what": "Escape Room & Other Activities",
                 "where": "Engineering Quad"
             },
 
             {
-                "time": "5:00 PM",
-                "what": "Talk",
+                "time": "5:15 PM",
+                "what": "Speaker",
                 "where": "SC 2405"
             },
             {
@@ -47,8 +47,13 @@
                 "where": "SC 2405 or 1404"
             },
             {
-                "time": "8:00 PM",
-                "what": "Girls Night (Movie, Nail Painting, Jewelry)",
+                "time": "7:00 PM",
+                "what": "Movie & Game Night",
+                "where": "SC 1404"
+            },
+            {
+                "time": "9:30 PM",
+                "what": "Movie & Game Night",
                 "where": "SC 1404"
             }
         ]
