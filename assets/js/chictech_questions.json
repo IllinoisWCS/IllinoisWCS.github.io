@@ -8,7 +8,7 @@
             {
                 "id": "when",
                 "question": "When is it?",
-                "answer": "Chictech will be held Nov. 11th - 12th, 2017."
+                "answer": "Chictech will be held Nov. 10th - 11th, 2018."
             },
             {
                 "id": "cost",
@@ -18,7 +18,7 @@
             {
                 "id": "registration",
                 "question": "When will registration open?",
-                "answer": "Registration will open on October 6rd and will close on October 23rd. The form to register on will be in the register section below."
+                "answer": "Registration will open on October 6th and will close on October 23rd. The form to register on will be in the register section below."
 
             },
             {
@@ -49,6 +49,3 @@
             }
         ]
     }
-
-
-    
