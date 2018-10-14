@@ -29,7 +29,7 @@
                 {
                     "name": "Google Summer of Code",
                     "description": "Work alongside a mentor on an open-source project with a stipend",
-                    "link": "https://developers.google.com/open-source/gsoc/"
+                    "link": "https://summerofcode.withgoogle.com/"
                 },
                 {
                     "name": "Code2040",
@@ -59,7 +59,7 @@
                   "name": "Microsoft Diversity Scholarship",
                   "description": "Recipients receive paid registration to one of the following diversity conferences: Grace Hopper Celebration of Women in Computing, National Society of Black Engineers Conference, Society of Hispanic Professional Engineers Conference, Tapia Conference",
                   "link": "https://careers.microsoft.com/us/en/usscholarshipprogram"
-                }
+                },
                 {
                   "name": "NCWIT Aspirations in Computing",
                   "description": "The NCWIT Collegiate Award honors the outstanding computing accomplishments of undergraduate and graduate women. Conferred annually, the award recognizes technical contributions to projects that demonstrate a high level of innovation and potential impact.",
@@ -79,7 +79,7 @@
                   "name": "Buildium Women in Technology Scholarship",
                   "description": "Awards one $2,500 scholarship each semester to a woman who can explain which female leader most inspires them to pursue their dreams, and why.",
                   "link": "https://www.buildium.com/women-in-technology-scholarship/"
-                },
+                }
             ]
         },
         "conferences": {
