@@ -19,20 +19,12 @@
                 {
                     "name": "Amazon Future Engineer Internship",
                     "description": "9-week program focusing on software development for freshmen and sophomores, working alongside a technical mentor and a manager",
-                    "link": "https://www.amazon.jobs/en/landing_pages/amazonfutureengineer"
+                    "link": "https://www.amazon.jobs/en/jobs/722376/amazon-future-engineer-internship-summer-2019"
                 },
                 {
                     "name": "Twitter Academy Internship",
                     "description": "12-week internship for freshmen, working in small teams alongside full-time Tweeps",
                     "link": "https://twitteracademy19.splashthat.com/"
-                },
-                {
-                    "name": "Pinterest Engage Internship",
-                    "description": "8-week internship for freshmen in San Francisco office, work on project alongside other interns"
-                },
-                {
-                    "name": "Qualcomm Early Identification Program",
-                    "description": "Geared towards freshmen and sophomores, summer internship at Qualcomm with hands-on project experience"
                 },
                 {
                     "name": "Google Summer of Code",
@@ -42,62 +34,52 @@
                 {
                     "name": "Code2040",
                     "description": "Internship program to place students from underrepresented minorities, specifically focused on Black and Latinx students, in startups and companies for the summer",
-                    "link": "http://www.code2040.org/"
+                    "link": "http://www.code2040.org/fellows-program"
                 },
                 {
                     "name": "KPCB Fellowship",
                     "description": "Work at a KPCB portfolio startup for 3 months as a Design, Engineering or Product fellow. KPCB is a venture capital firm that has invested in companies like Airbnb, Pinterest, Indiegogo, and Uber.",
-                    "link": "http://kpcbfellows.com/"
+                    "link": "http://fellows.kleinerperkins.com/"
                 },
                 {
                     "name": "HackNY Fellowship",
                     "description": "Work at a startup or technology-based company in the NYC area for 3 months, participate in activities as part of the fellows community. Companies represented include MongoDB, Buzzfeed, Tumblr, Mashable, etc.",
-                    "link": "http://hackny.org/fellows/"
+                    "link": "https://apply.hackny.org/"
                 }
             ]
         },
         "scholarships": {
             "values": [
                 {
-                    "name": "Box Diversity Scholarship",
-                    "description": "Multiple scholarships (4 semi-finalist, 1 finalist) available for those who are pursuing computer science or related field and identify as an underrepresented minority",
-                    "link": "http://www.boxdiversityscholarship.com/"
+                  "name": "Women Techmakers Scholars Program",
+                  "description": "In honor of Dr. Anita Borg, who believed that technology affects all aspects of our economic, political, social and personal lives, Google awards this scholarship of $10,000 to female undergraduates based on the strength of each candidate’s academic background and demonstrated leadership.",
+                  "link": "https://www.womentechmakers.com/scholars"
+                },
+                {
+                  "name": "Microsoft Diversity Scholarship",
+                  "description": "Recipients receive paid registration to one of the following diversity conferences: Grace Hopper Celebration of Women in Computing, National Society of Black Engineers Conference, Society of Hispanic Professional Engineers Conference, Tapia Conference",
+                  "link": "https://careers.microsoft.com/us/en/usscholarshipprogram"
+                }
+                {
+                  "name": "NCWIT Aspirations in Computing",
+                  "description": "The NCWIT Collegiate Award honors the outstanding computing accomplishments of undergraduate and graduate women. Conferred annually, the award recognizes technical contributions to projects that demonstrate a high level of innovation and potential impact.",
+                  "link": "https://www.aspirations.org/participate/collegiate-award"
+                },
+                {
+                  "name": "Point Foundation Scholarship",
+                  "description": "Point Foundation (Point) is the nation’s largest higher education scholarship-granting organization for lesbian, gay, bisexual, transgender, and queer (LGBTQ) students. Point’s multifaceted support of its scholarship recipients (“scholars”) extends far beyond direct financial contribution toward the cost of their education. Each scholar is paired with a mentor and participates in leadership development programs and events.",
+                  "link": "https://pointfoundation.org/thepoint/scholarship/"
                 },
                 {
                     "name": "Palantir Scholarship for Women in Technology",
                     "description": "10 finalists awarded grants and invited to Palantir HQ for workshops, select participants are selected for an internship",
-                    "link": "https://www.palantir.com/college/witscholarship/"
+                    "link": "https://www.palantir.com/students/scholarship/wit-north-america/"
                 },
                 {
-                    "name": "Point Foundation Scholarship",
-                    "description": "Financial assistance and mentorship for LGBTQ+ identifying students",
-                    "link": "https://www.pointfoundation.org/point-apply/application-faqs/"
+                  "name": "Buildium Women in Technology Scholarship",
+                  "description": "Awards one $2,500 scholarship each semester to a woman who can explain which female leader most inspires them to pursue their dreams, and why.",
+                  "link": "https://www.buildium.com/women-in-technology-scholarship/"
                 },
-                {
-                    "name": "Society of Women Engineers Scholarships",
-                    "description": "Must be a SWE National member to apply, multiple different grants awarded based on application",
-                    "link": "http://societyofwomenengineers.swe.org/scholarships"
-                },
-                {
-                    "name": "Microsoft Scholarships",
-                    "description": "Multiple scholarships available for assistance in tuition or attending a conference like Grace Hopper",
-                    "link": "https://careers.microsoft.com/students/scholarships"
-                },
-                {
-                    "name": "NSBE Scholarships",
-                    "description": "Multiple scholarships available for members of the National Society of Black Engineers based on application",
-                    "link": "https://connect.nsbe.org/Scholarships/ScholarshipList.aspx"
-                },
-                {
-                    "name": "SHPE Scholarships",
-                    "description": "Multiple scholarships available for members of the Society of Hispanic Professional Engineers based on application",
-                    "link": "http://www.shpe.org/scholarships"
-                },
-                {
-                    "name": "Generation Google Scholarship",
-                    "description": "For high school seniors and current university undergrads, pursuing computer science or related field and identify as an underrepresented minority",
-                    "link": "https://www.google.com/edu/scholarships/the-generation-google-scholarship/"
-                }
             ]
         },
         "conferences": {
@@ -108,41 +90,24 @@
                     "link": "http://anitaborg.org/awards-grants/ghc-scholarship-grants/"
                 },
                 {
-                    "name": "Google Grace Hopper Scholarship",
-                    "description": "Full conference ticket + flight + hotel coverage + $50 for food, application opens July."
-                },
-                {
-                    "name": "Facebook Grace Hopper Scholarship",
-                    "description": "Full conference ticket + flight + hotel coverage + an extra two-day workshop with Facebook engineers, application opens June"
-                },
-                {
-                    "name": "Twitter @Womeng GHC Scholarship",
-                    "description": "Juniors / Seniors or graduate school students provided conference ticket + flight + hotel + an extra workshop with Twitter @womeng, typically July application opens"
-                },
-                {
-                    "name": "Out for Undergrad",
-                    "description": "A 2-day conference for any student who is interested in Technology, Marketing, Business or Engineering, application only, all expenses paid except for an acceptance fee if accepted",
-                    "link": "http://outforundergrad.org/"
-                },
-                {
-                    "name": "NSBE Convention",
-                    "description": "3-day conference hosted by the National Society of Black Engineers, collegiate and graduate programming and tracks available",
-                    "link": "http://convention.nsbe.org/"
-                },
-                {
-                    "name": "SHPE Conference",
-                    "description": "4-day professional conference hosted by the Society for Hispanic Professional Engineers",
-                    "link": "http://www.shpe.org/shpe2016/"
-                },
-                {
-                    "name": "SWE Regional and National Conferences",
-                    "description": "Annual spring and fall conferences for Society of Women Engineers members and chapters",
-                    "link": "http://societyofwomenengineers.swe.org/learning/conferences-and-events"
-                },
-                {
                     "name": "Google Travel Grants",
                     "description": "Funding provided for select conferences from Google",
-                    "link": "https://www.google.com/edu/scholarships/google-travel-and-conference-grants/"
+                    "link": "https://buildyourfuture.withgoogle.com/scholarships/google-travel-and-conference-grants/#!?detail-content-tabby_activeEl=detail-overview-content"
+                },
+                {
+                  "name": "Facebook Developer Conference",
+                  "description": "2-day conference in San Jose, CA",
+                  "link": "https://www.f8.com/"
+                },
+                {
+                  "name": "AWS Global Summit",
+                  "description": "Amazon AWS summits held in multiple cities throughout the year",
+                  "link": "https://aws.amazon.com/summits/"
+                },
+                {
+                  "name": "Microsoft Ignite Conference",
+                  "description": "Microsoft developer conference held in multiple cities",
+                  "link": "https://www.microsoft.com/en-us/ignite-the-tour/"
                 },
                 {
                     "name": "WWDC Scholarships",
@@ -150,13 +115,19 @@
                     "link": "https://developer.apple.com/wwdc/scholarships/"
                 },
                 {
-                    "name": "Google I/O",
-                    "description": "Attend Google's annual developer conference by participating in Google Code Jam"
+                  "name": "GitHub Universe",
+                  "description": "Open source tech conference in San Francisco, CA",
+                  "link": "https://githubuniverse.com/"
+                },
+                {
+                    "name": "Out for Undergrad",
+                    "description": "A 2-day conference for any student who is interested in Technology, Marketing, Business or Engineering, application only, all expenses paid except for an acceptance fee if accepted",
+                    "link": "http://outforundergrad.org/"
                 },
                 {
                     "name": "Lesbians Who Tech",
-                    "description": "Apply for a scholarship to attend the LWT Summit in NYC or San Francisco",
-                    "link": "http://lesbianswhotech.org/sanfrancisco2017/2017scholarship/"
+                    "description": "Apply for a scholarship to attend the LWT Summit in San Francisco",
+                    "link": "https://lesbianswhotech.org/sanfrancisco2019/"
                 }
             ]
         },
