@@ -1,60 +1,60 @@
 {
-        "events": [
-            {
-                "time": "8:30 AM",
-                "what": "Check-in & Breakfast",
-                "where": "SC Atrium"
-            },
-            {
-                "time": "9:30 AM",
-                "what": "Introductions",
-                "where": "SC 0218/20/22"
-            },
-            {
-                "time": "10:00 AM",
-                "what": "Coding Workshop",
-                "where": "SC 0218/20/22"
-            },
-            {
-                "time": "11:30 AM",
-                "what": "Speaker",
-                "where": "SC 2405"
-            },
-            {
-                "time": "12:30 PM",
-                "what": "Lunch",
-                "where": "SC 0218/20/22"
-            },
-            {
-                "time": "1:45 PM",
-                "what": "Coding Workshop & Escape Room",
-                "where": "SC 2405"
-            },
-            {
-                "time": "3:30 PM",
-                "what": "Escape Room & Other Activities",
-                "where": "Engineering Quad"
-            },
+  "events": [
+    {
+      "time": "8:30 AM",
+      "what": "Check-in & Breakfast",
+      "where": "SC Atrium & SC 2405"
+    },
+    {
+      "time": "9:30 AM",
+      "what": "Introductions",
+      "where": "SC 2405"
+    },
+    {
+      "time": "10:00 AM",
+      "what": "Workshop Intros",
+      "where": "SC 0218/20/22"
+    },
+    {
+      "time": "11:30 AM",
+      "what": "Speaker: Ranjitha Kumar",
+      "where": "SC 2405 or 1404"
+    },
+    {
+      "time": "12:30 PM",
+      "what": "Lunch",
+      "where": "SC 0218/20/22"
+    },
+    {
+      "time": "1:45 PM",
+      "what": "Coding Workshop",
+      "where": "Engineering Quad"
+    },
+    {
+      "time": "3:30 PM",
+      "what": "Activities",
+      "where": "SC 2405 or 1404"
+    },
 
-            {
-                "time": "5:15 PM",
-                "what": "Speaker",
-                "where": "SC 2405"
-            },
-            {
-                "time": "6:00 PM",
-                "what": "Dinner",
-                "where": "SC 2405 or 1404"
-            },
-            {
-                "time": "7:00 PM",
-                "what": "Movie & Game Night",
-                "where": "SC 1404"
-            },
-            {
-                "time": "9:30 PM",
-                "what": "Snacks",
-                "where": "SC 1404"
-            }
-        ]
+    {
+      "time": "5:15 PM",
+      "what": "Speaker: Kate Key",
+      "where": "SC 2405 or 1404"
+    },
+    {
+      "time": "6:00 PM",
+      "what": "Dinner",
+      "where": "SC 2405 or 1404"
+    },
+    {
+      "time": "7:00 PM",
+      "what": "Girls Night",
+      "where": "SC 1404"
+    },
+    {
+      "time": "9:30 PM",
+      "what": "Snacks",
+      "where": "SC 1404"
     }
+  ]
+}
