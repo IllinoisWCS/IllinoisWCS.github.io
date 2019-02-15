@@ -1,395 +1,238 @@
 {
-    "admin": [
-        {
-            "position": "President",
-            "firstname": "Shivali",
-            "lastname": "Patel",
-            "email": "supatel2@illinois.edu",
-            "netid": "supatel2",
-            "year": "Senior",
-            "major": "CS",
-            "interests": [
-                "Data Science/Analytics",
-                "Ethical AI"
-            ],
-            "experience": [
-                "Capital One"
-            ],
-            "hobbies": [
-                "Roller skating",
-                " movies",
-                " badminton"
-            ],
-            "fact": "During second semester of my junior year, I studied abroad in Stockholm, Sweden and got CS credit for it too!",
-            "place": "Darien, IL",
-            "ask": [
-                "Getting involved in CS clubs/organizations",
-                " dealing with college stress and difficult classes"
-            ],
-            "advice": "Don't take it too easy! Trying hard is cool and good for setting yourself up on the right path for the remainder of your college career. Do your best to stay eager and motivated about the coursework, but also take advantage of resources offered to you! Those who ask for help when they need it are the smartest ones in my book."
-        },
-        {
-            "position": "External Vice President",
-            "firstname": "Prajakti",
-            "lastname": "Jinachandran",
-            "email": "pj3@illinois.edu",
-            "netid": "pj3",
-            "year": "Junior",
-            "major": "CS + Stats",
-            "interests": [
-                "Natural Language Processing",
-                "Data Science",
-                "Honestly though, I have no idea"
-            ],
-            "experience": [
-                "Illinois Geometry Lab",
-                "Tastytrade",
-                "Engineering City Scholar"
-            ],
-            "hobbies": [
-                "Cooking",
-                " reading"
-            ],
-            "fact": "I can draw a perfect circle freehand!",
-            "place": "Dubai, UAE",
-            "ask": [
-                "Coursework",
-                " being an international student",
-                " life"
-            ],
-            "advice": "Plan out your schedule more carefully and better aligned to the areas of CS you might be interested in. Don't wait till sophomore year to join WCS!"
-        },
-        {
-            "position": "Internal Vice President",
-            "firstname": "Ann",
-            "lastname": "Rajan",
-            "email": "amrajan2@illinois.edu",
-            "netid": "amrajan2",
-            "year": "Junior",
-            "major": "CS",
-            "interests": [
-                "Blockchain",
-                "Systems"
-            ],
-            "experience": [
-                "CME Group",
-                "Microsoft"
-            ],
-            "hobbies": [
-                "Badminton",
-                " violin (sort of)"
-            ],
-            "fact": "I once thought I inhaled boba and believed I was dying for 3 days :(",
-            "place": "Palatine, IL",
-            "ask": [
-                "Kdramas :)"
-            ],
-            "advice": "Time management in college is hard! A lot of people do different things, but I recommend sticking to something similar to your high school schedule - classes/studying in the morning and afternoon, and clubs in the evening."
-        },
-        {
-            "position": "Treasurer",
-            "firstname": "Devashri",
-            "lastname": "Nagarkar",
-            "email": "nagarka2@illinois.edu",
-            "netid": "nagarka2",
-            "year": "Junior",
-            "major": "CS",
-            "interests": [
-                "Machine Learning",
-                "AI"
-            ],
-            "experience": [
-                "Microsoft",
-                "Lead CS ELA"
-            ],
-            "hobbies": [
-                "Reading",
-                " painting",
-                " eating food"
-            ],
-            "fact": "I have a really great sense of direction!",
-            "place": "Naperville, IL",
-            "ask": [
-                "Integrating entrepreneurship with engineering",
-                " good food on campus"
-            ],
-            "advice": "College isn't about doing things because you are supposed to do them, it is about finding your passion and making that into a career. Don't worry about the small stuff and just focus on the big picture."
-        },
-        {
-            "position": "Corporate Co-Chair",
-            "firstname": "Morgan",
-            "lastname": "Wessel",
-            "email": "mhw2@illinois.edu",
-            "netid": "mhw2",
-            "year": "Junior",
-            "major": "CS + Linguistics",
-            "interests": [
-                "Systems Programming",
-                "Networking",
-                "Natural Language Processing"
-            ],
-            "experience": [
-                "GE Transportation",
-                "GE Digital"
-            ],
-            "hobbies": [
-                "Soccer",
-                " running",
-                " talking"
-            ],
-            "fact": "I used to do musical theater.",
-            "place": "Elk Grove Village, IL",
-            "ask": [
-                "My travels"
-            ],
-            "advice": "I would tell myself to get involved in activities right away. I waited too long."
-        },
-        {
-            "position": "Corporate Co-Chair",
-            "firstname": "Sam",
-            "lastname": "Pal",
-            "email": "sspal2@illinois.edu",
-            "netid": "sspal2",
-            "year": "Sophomore",
-            "major": "CS",
-            "interests": [
-                "AI",
-                "Machine Learning",
-                "Data Science",
-                "Cloud Tech",
-                "Everything"
-            ],
-            "experience": [
-                "LinkedIn",
-                "NY Times",
-                "Girls Who Code"
-            ],
-            "hobbies": [
-                "Surfing the web",
-                " binge-watching",
-                " eating good food",
-                " golfing",
-                " reading",
-                " trying to be cool"
-            ],
-            "fact": "I once got stuck in a golf course bathroom. Unfortunately, it was not at a country club.",
-            "place": "Cupertino, CA",
-            "ask": [
-                "CS stuff",
-                " life as we know it",
-                " what to binge-watch",
-                " anything"
-            ],
-            "advice": "Seize every opportunity - don't limit yourself and venture as far out of your comfort zone as possible (you'll thank yourself, trust me :))"
-        },
-        {
-            "position": "Head of Mentoring",
-            "firstname": "Deepika",
-            "lastname": "Ramachandran",
-            "email": "dramac4@illinois.edu",
-            "netid": "dramac4",
-            "year": "Junior",
-            "major": "CS + Stats",
-            "interests": [
-                "Data Visualization",
-                "Big Data"
-            ],
-            "experience": [
-                "Mathnasium"
-            ],
-            "hobbies": [
-                "Going to the gym",
-                " cooking",
-                " Gilmore Girls",
-                " gymnastics"
-            ],
-            "fact": "I've had braces twice!",
-            "place": "Naperville, IL",
-            "ask": [
-                "Gilmore Girls",
-                " gymnastics"
-            ],
-            "advice": "Making mistakes is okay, but make sure to treat them as a learning opportunity."
-        },
-        {
-            "position": "Outreach Co-Chair",
-            "firstname": "Grace",
-            "lastname": "Cao",
-            "email": "gracesc2@illinois.edu",
-            "netid": "gracesc2",
-            "year": "Sophomore",
-            "major": "CS + Stats",
-            "interests": [
-                "Data Science",
-                "Cybersecurity"
-            ],
-            "experience": [
-                "Facebook",
-                "EntreCORPS"
-            ],
-            "hobbies": [
-                "Quora",
-                " Reddit",
-                " makeup",
-                " cooking"
-            ],
-            "fact": "I'm incapable of doing a push-up.",
-            "place": "Naperville, IL",
-            "ask": [
-                "Getting involved on campus",
-                " self-care tips"
-            ],
-            "advice": "Apply for only the things you know you're genuinely interested in and appreciate your time with friends as much as you can!"
-        },
-        {
-            "position": "Tech Team Co-Chair",
-            "firstname": "Varsha",
-            "lastname": "Subrahmanyam",
-            "email": "varsha2@illinois.edu",
-            "netid": "varsha2",
-            "year": "Senior",
-            "major": "CS + Stats",
-            "interests": [
-                "Data Science",
-                "Machine Learning"
-            ],
-            "experience": [
-                "Google",
-                "MongoDB"
-            ],
-            "hobbies": [
-                "Piano",
-                " singing",
-                " reading"
-            ],
-            "fact": "My first CD was Oops I Did it Again :)",
-            "place": "Aurora, IL",
-            "ask": [
-                "Anything really :)"
-            ],
-            "advice": "Get started in research as early, and try to get outside of the CS bubble!"
-        },
-        {
-            "position": "Tech Team Co-Chair",
-            "firstname": "Tamara",
-            "lastname": "Nelson-Fromm",
-            "email": "tln2@illinois.edu",
-            "netid": "tln2",
-            "year": "Junior",
-            "major": "CS",
-            "interests": [
-                "Data",
-                "UI/UX",
-                "Human Impact"
-            ],
-            "experience": [
-                "iDTech",
-                "ENG 100 ELA",
-                "Engineering tour guide"
-            ],
-            "hobbies": [
-                "Music",
-                " reading",
-                " photography",
-                " sewing"
-            ],
-            "fact": "I used to be a nationally ranked Synchronized Swimmer.",
-            "place": "St. Paul, Minnesota",
-            "ask": [
-                "Books",
-                " Net Neutrality"
-            ],
-            "advice": "Meet as many people as you can, get involved (but don't overwhelm yourself), listen to professors and upperclassmen that you trust, don't hold onto old interests if they're not right for you anymore."
-        },
-        {
-            "position": "Head of Infrastructure",
-            "firstname": "Alice",
-            "lastname": "Fang",
-            "email": "alicesf2@illinois.edu",
-            "netid": "alicesf2",
-            "year": "Sophomore",
-            "major": "CS",
-            "interests": [
-                "Data Visualization",
-                "Machine Learning",
-                "Web Development"
-            ],
-            "experience": [
-                "Productive Edge"
-            ],
-            "hobbies": [
-                "Dancing",
-                " piano",
-                " flute",
-                " ice skating"
-            ],
-            "fact": "I'm a yellow belt at Kung Fu Tea!",
-            "place": "Hawthorn Woods, IL",
-            "ask": [
-                "CS 125/126/173",
-                " resume help",
-                " getting involved",
-                " having fun :)"
-            ],
-            "advice": "Don't spend all your money on bubble tea!"
-        },
-        {
-            "position": "Head of Social",
-            "firstname": "Ayushi",
-            "lastname": "Singh",
-            "email": "ayushis3@illinois.edu",
-            "netid": "ayushis3",
-            "year": "Sophomore",
-            "major": "CS + Stats",
-            "interests": [
-                "Data Science/Analytics",
-                "Machine Learning"
-            ],
-            "experience": [
-                "Ameren",
-                "HackIllinois",
-                "ACM",
-                "R | P",
-                "Sail"
-            ],
-            "hobbies": [
-                "Tennis",
-                " swimming",
-                " photography"
-            ],
-            "fact": "I've been to 17 countries and 27 states.",
-            "place": "Pleasanton, CA",
-            "ask": [
-                "Internship advice",
-                " coursework",
-                " RSO involvement"
-            ],
-            "advice": "Do less and do it well."
-        },
-        {
-            "position": "Head of Design",
-            "firstname": "Alyssa",
-            "lastname": "Chen",
-            "email": "ychen374@illinois.edu",
-            "netid": "ychen374",
-            "year": "Senior",
-            "major": "CS",
-            "interests": [
-                "Honestly who knows"
-            ],
-            "experience": [
-                "Amazon"
-            ],
-            "hobbies": [
-                "Calligraphy",
-                " browsing font catalogs"
-            ],
-            "fact": "I'm not very fun jk I eat noodles really fast, like REALLY fast.",
-            "place": "San Jose, CA",
-            "ask": [
-                "Anything, especially noodles"
-            ],
-            "advice": "Don't be such a tryhard and expand yo horizons!"
-        }
-    ]
+  "admin": [
+    {
+      "position": "President",
+      "firstname": "Shivali",
+      "lastname": "Patel",
+      "email": "supatel2@illinois.edu",
+      "netid": "supatel2",
+      "year": "Senior",
+      "major": "CS",
+      "interests": ["Data Science/Analytics", "Ethical AI"],
+      "experience": ["Capital One"],
+      "hobbies": ["Roller skating", " movies", " badminton"],
+      "fact":
+        "During second semester of my junior year, I studied abroad in Stockholm, Sweden and got CS credit for it too!",
+      "place": "Darien, IL",
+      "ask": [
+        "Getting involved in CS clubs/organizations",
+        " dealing with college stress and difficult classes"
+      ],
+      "advice":
+        "Don't take it too easy! Trying hard is cool and good for setting yourself up on the right path for the remainder of your college career. Do your best to stay eager and motivated about the coursework, but also take advantage of resources offered to you! Those who ask for help when they need it are the smartest ones in my book."
+    },
+    {
+      "position": "External Vice President",
+      "firstname": "Prajakti",
+      "lastname": "Jinachandran",
+      "email": "pj3@illinois.edu",
+      "netid": "pj3",
+      "year": "Junior",
+      "major": "CS + Stats",
+      "interests": [
+        "Natural Language Processing",
+        "Data Science",
+        "Honestly though, I have no idea"
+      ],
+      "experience": [
+        "Illinois Geometry Lab",
+        "Tastytrade",
+        "Engineering City Scholar"
+      ],
+      "hobbies": ["Cooking", " reading"],
+      "fact": "I can draw a perfect circle freehand!",
+      "place": "Dubai, UAE",
+      "ask": ["Coursework", " being an international student", " life"],
+      "advice":
+        "Plan out your schedule more carefully and better aligned to the areas of CS you might be interested in. Don't wait till sophomore year to join WCS!"
+    },
+    {
+      "position": "Internal Vice President",
+      "firstname": "Ann",
+      "lastname": "Rajan",
+      "email": "amrajan2@illinois.edu",
+      "netid": "amrajan2",
+      "year": "Junior",
+      "major": "CS",
+      "interests": ["Blockchain", "Systems"],
+      "experience": ["CME Group", "Microsoft"],
+      "hobbies": ["Badminton", " violin (sort of)"],
+      "fact":
+        "I once thought I inhaled boba and believed I was dying for 3 days :(",
+      "place": "Palatine, IL",
+      "ask": ["Kdramas :)"],
+      "advice":
+        "Time management in college is hard! A lot of people do different things, but I recommend sticking to something similar to your high school schedule - classes/studying in the morning and afternoon, and clubs in the evening."
+    },
+    {
+      "position": "Treasurer",
+      "firstname": "Devashri",
+      "lastname": "Nagarkar",
+      "email": "nagarka2@illinois.edu",
+      "netid": "nagarka2",
+      "year": "Junior",
+      "major": "CS",
+      "interests": ["Machine Learning", "AI"],
+      "experience": ["Microsoft", "Lead CS ELA"],
+      "hobbies": ["Reading", " painting", " eating food"],
+      "fact": "I have a really great sense of direction!",
+      "place": "Naperville, IL",
+      "ask": [
+        "Integrating entrepreneurship with engineering",
+        " good food on campus"
+      ],
+      "advice":
+        "College isn't about doing things because you are supposed to do them, it is about finding your passion and making that into a career. Don't worry about the small stuff and just focus on the big picture."
+    },
+    {
+      "position": "Corporate Chair",
+      "firstname": "Sam",
+      "lastname": "Pal",
+      "email": "sspal2@illinois.edu",
+      "netid": "sspal2",
+      "year": "Sophomore",
+      "major": "CS",
+      "interests": [
+        "AI",
+        "Machine Learning",
+        "Data Science",
+        "Cloud Tech",
+        "Everything"
+      ],
+      "experience": ["LinkedIn", "NY Times", "Girls Who Code"],
+      "hobbies": [
+        "Surfing the web",
+        " binge-watching",
+        " eating good food",
+        " golfing",
+        " reading",
+        " trying to be cool"
+      ],
+      "fact":
+        "I once got stuck in a golf course bathroom. Unfortunately, it was not at a country club.",
+      "place": "Cupertino, CA",
+      "ask": [
+        "CS stuff",
+        " life as we know it",
+        " what to binge-watch",
+        " anything"
+      ],
+      "advice":
+        "Seize every opportunity - don't limit yourself and venture as far out of your comfort zone as possible (you'll thank yourself, trust me :))"
+    },
+    {
+      "position": "Head of Mentoring",
+      "firstname": "Deepika",
+      "lastname": "Ramachandran",
+      "email": "dramac4@illinois.edu",
+      "netid": "dramac4",
+      "year": "Junior",
+      "major": "CS + Stats",
+      "interests": ["Data Visualization", "Big Data"],
+      "experience": ["Mathnasium"],
+      "hobbies": [
+        "Going to the gym",
+        " cooking",
+        " Gilmore Girls",
+        " gymnastics"
+      ],
+      "fact": "I've had braces twice!",
+      "place": "Naperville, IL",
+      "ask": ["Gilmore Girls", " gymnastics"],
+      "advice":
+        "Making mistakes is okay, but make sure to treat them as a learning opportunity."
+    },
+    {
+      "position": "Outreach Chair",
+      "firstname": "Grace",
+      "lastname": "Cao",
+      "email": "gracesc2@illinois.edu",
+      "netid": "gracesc2",
+      "year": "Sophomore",
+      "major": "CS + Stats",
+      "interests": ["Data Science", "Cybersecurity"],
+      "experience": ["Facebook", "EntreCORPS"],
+      "hobbies": ["Quora", " Reddit", " makeup", " cooking"],
+      "fact": "I'm incapable of doing a push-up.",
+      "place": "Naperville, IL",
+      "ask": ["Getting involved on campus", " self-care tips"],
+      "advice":
+        "Apply for only the things you know you're genuinely interested in and appreciate your time with friends as much as you can!"
+    },
+    {
+      "position": "Tech Team Co-Chair",
+      "firstname": "Varsha",
+      "lastname": "Subrahmanyam",
+      "email": "varsha2@illinois.edu",
+      "netid": "varsha2",
+      "year": "Senior",
+      "major": "CS + Stats",
+      "interests": ["Data Science", "Machine Learning"],
+      "experience": ["Google", "MongoDB"],
+      "hobbies": ["Piano", " singing", " reading"],
+      "fact": "My first CD was Oops I Did it Again :)",
+      "place": "Aurora, IL",
+      "ask": ["Anything really :)"],
+      "advice":
+        "Get started in research as early, and try to get outside of the CS bubble!"
+    },
+    {
+      "position": "Tech Team Co-Chair",
+      "firstname": "Tamara",
+      "lastname": "Nelson-Fromm",
+      "email": "tln2@illinois.edu",
+      "netid": "tln2",
+      "year": "Junior",
+      "major": "CS",
+      "interests": ["Data", "UI/UX", "Human Impact"],
+      "experience": ["iDTech", "ENG 100 ELA", "Engineering tour guide"],
+      "hobbies": ["Music", " reading", " photography", " sewing"],
+      "fact": "I used to be a nationally ranked Synchronized Swimmer.",
+      "place": "St. Paul, Minnesota",
+      "ask": ["Books", " Net Neutrality"],
+      "advice":
+        "Meet as many people as you can, get involved (but don't overwhelm yourself), listen to professors and upperclassmen that you trust, don't hold onto old interests if they're not right for you anymore."
+    },
+    {
+      "position": "Head of Infrastructure",
+      "firstname": "Alice",
+      "lastname": "Fang",
+      "email": "alicesf2@illinois.edu",
+      "netid": "alicesf2",
+      "year": "Sophomore",
+      "major": "CS",
+      "interests": [
+        "Data Visualization",
+        "Machine Learning",
+        "Web Development"
+      ],
+      "experience": ["Productive Edge"],
+      "hobbies": ["Dancing", " piano", " flute", " ice skating"],
+      "fact": "I'm a yellow belt at Kung Fu Tea!",
+      "place": "Hawthorn Woods, IL",
+      "ask": [
+        "CS 125/126/173",
+        " resume help",
+        " getting involved",
+        " having fun :)"
+      ],
+      "advice": "Don't spend all your money on bubble tea!"
+    },
+    {
+      "position": "Head of Social",
+      "firstname": "Ayushi",
+      "lastname": "Singh",
+      "email": "ayushis3@illinois.edu",
+      "netid": "ayushis3",
+      "year": "Sophomore",
+      "major": "CS + Stats",
+      "interests": ["Data Science/Analytics", "Machine Learning"],
+      "experience": ["Ameren", "HackIllinois", "ACM", "R | P", "Sail"],
+      "hobbies": ["Tennis", " swimming", " photography"],
+      "fact": "I've been to 17 countries and 27 states.",
+      "place": "Pleasanton, CA",
+      "ask": ["Internship advice", " coursework", " RSO involvement"],
+      "advice": "Do less and do it well."
+    }
+  ]
 }
