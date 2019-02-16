@@ -68,43 +68,6 @@
     </div>
   </div>
 
-  <div class="row" id="events">
-    <div class="col-sm-offset-1 col-md-10">
-      <h1 align="center">Events</h1>
-      <iframe src="https://calendar.google.com/calendar/b/2/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=illinoiswcs%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FChicago" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </div>
-  </div>
-
-  <script type="text/x-mustache" id="pointTemplate">
-    {{#message}}
-    <p>{{message}}</p>
-    <p>Please <a href="mailto:illinoiswcs@gmail.com">contact us</a> to resolve this issue.</p>
-    {{/message}} {{^message}}
-    <h4>Statistics for {{#netid}}{{.}}{{/netid}}</h4>
-    <p># of Points: {{points}}</p>
-    <p>Active: {{#isActive}} Yes{{/isActive}}{{^isActive}}No{{/isActive}}</p>
-    <ul class="list-group">
-      {{#events}}
-      <li class="list-group-item">{{.}}</li>
-      {{/events}}
-    </ul>
-    <p>Got a question about your points? <a href="mailto:illinoiswcs@gmail.com">Contact us</a> to resolve any issues.</p>
-    {{/message}}
-  </script>
-
-  <!--div class="form-inline">
-                    <form id="points-form">
-                        <div class="form-group">
-                            <label for="netid">Enter your netID</label>
-                            <input type="text" class="form-control"  id="netid" placeholder="hpotter3">
-                        </div>
-                        <input type="submit" class="btn btn-default" value="Submit">
-                    </form>
-                    <div id="stats"></div>
-                </div-->
-  </div>
-  </div>
-
   <div class="row padded">
     <h1 align="center">WCS Career Map</h1>
     <iframe class="member-map" src="https://www.google.com/maps/d/embed?mid=1Ke1I6UgBfBUVkb4uk3OWacUI3jg"></iframe>

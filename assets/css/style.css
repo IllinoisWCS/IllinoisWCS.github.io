@@ -215,10 +215,11 @@ a:hover {
   text-align: center;
 }
 
-#events {
-  margin-top: 30px;
+#calendar {
+  margin-top: 50px;
 }
-#events iframe {
+
+#calendar iframe {
   width: 100%;
 }
 
