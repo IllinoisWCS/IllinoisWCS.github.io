@@ -2,69 +2,85 @@
 <html>
 
 <head>
-  <title>WCS Calendar</title>
+    <title>WCS Calendar</title>
 
-  <meta name="description" content="Calendar of Upcoming WCS Events" />
-  <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Calendar" />
-  <meta property="og:type" content="company" />
-  <meta property="og:site_name" content="Women in Computer Science" />
-  <meta property="og:url" content="www.illinoiswcs.org" />
-  <meta property="og:image" content="" />
+    <meta name="description" content="Calendar of Upcoming WCS Events" />
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Calendar" />
+    <meta property="og:type" content="company" />
+    <meta property="og:site_name" content="Women in Computer Science" />
+    <meta property="og:url" content="www.illinoiswcs.org" />
+    <meta property="og:image" content="" />
 
-  <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico">
+    <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico">
 
 
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"></link>
-  <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css"></link>
-  <link rel="stylesheet" type="text/css" href="../assets/css/style.css"></link>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"></link>
 
-  <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
-  <script type="text/javascript" src="../assets/js/disable-script.js"></script>
+    <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
+    <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="../assets/js/disable-script.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <nav class="navbar navbar-default navbar-fixed-top mainNav">
-    <div class="container-fluid">
-      <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-        <a class="navbar-brand" href="/">
-                        <img src="../assets/img/wcs/logo.png" class="img-responsive" />
-                    </a>
-      </div>
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="../members/index.html">Members</a></li>
-          <li><a href="../calendar/index.html">Calendar</a></li>
-          <li><a href="../resources/index.html">Resources</a></li>
-          <li><a href="../officers/index.html">Officers</a></li>
-          <li><a href="../sponsors/index.html">Sponsors</a></li>
-          <li><a href="../alumni/index.html">Alumni</a></li>
-          <li><a href="../contact/index.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-default navbar-fixed-top mainNav">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="/">
+                    <img src="../assets/img/wcs/logo.png" class="img-responsive" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../members/index.html">Members</a>
+                    </li>
+                    <li>
+                        <a href="../calendar/index.html">Calendar</a>
+                    </li>
+                    <li>
+                        <a href="../resources/index.html">Resources</a>
+                    </li>
+                    <li>
+                        <a href="../officers/index.html">Officers</a>
+                    </li>
+                    <li>
+                        <a href="../sponsors/index.html">Sponsors</a>
+                    </li>
+                    <li>
+                        <a href="../alumni/index.html">Alumni</a>
+                    </li>
+                    <li>
+                        <a href="../contact/index.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<div class="row" id="calendar">
-  <div class="col-sm-offset-1 col-md-10">
-    <h1 align="center">Calendar</h1>
-    <h4 align="center">Click the button in the bottom right corner so you don't miss any events!</h4>
-    <iframe src="https://calendar.google.com/calendar/b/2/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=illinoiswcs%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FChicago" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-  </div>
-</div>
+    <div class="row" id="calendar">
+        <div class="col-sm-offset-1 col-md-10">
+            <h1 align="center">Calendar</h1>
+            <h4 align="center">Click the button in the bottom right corner so you don't miss any events!</h4>
+            <iframe src="https://calendar.google.com/calendar/embed?src=3c28gpprcnos0q251odnl877mc%40group.calendar.google.com&mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=illinoiswcs%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FChicago"
+                style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
 </body>
+
 </html>
