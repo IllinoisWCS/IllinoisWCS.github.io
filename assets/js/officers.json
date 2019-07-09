@@ -8,7 +8,7 @@
             "year": "Senior",
             "major": "CS",
             "interests": ["Artificial intelligence", "Mixed Reality"],
-            "experience": ["Fillin"],
+            "experience": ["Microsoft", "Google", "Argonne National Lab"],
             "hobbies": ["Tennis", " Photography", " Watching Netflix", " Hiking"],
             "fact": "I practiced taekwondo for 13 years.",
             "place": "Mexico",
@@ -33,7 +33,7 @@
                 "Cybersecurity",
                 "Mobile Development"
             ],
-            "experience": "fillin",
+            "experience": ["Facebook", "State Farm (Research Park)", "EntreCorps", "Girls Who Code", "Reflections | Projections", "Pulse", "Independent Study"],
             "hobbies": ["Makeup/Skincare ", " spending time on Reddit/Quora?"],
             "fact": "I can't do a push-up :')",
             "place": "Naperville, IL",
@@ -49,7 +49,7 @@
             "year": "Junior",
             "major": "CS + Stats",
             "interests": ["Data Science", "Machine Learning", "idk yet"],
-            "experience": "fillin",
+            "experience": ["Microsoft", "CloudFabrix", "Ameren", "Cisco"],
             "hobbies": ["Tennis", " Photography", " Watching Netflix", " Hiking"],
             "fact": "I can write with both hands ",
             "place": "Pleasanton, CA",
@@ -65,7 +65,7 @@
             "year": "Sophomore",
             "major": "CS",
             "interests": ["Data Science", "Machine Learning", "Natural Language Processing"],
-            "experience": "fillin",
+            "experience": ["i2 Decisions", "Girls who Code"],
             "hobbies": ["Movies", " Reading"],
             "fact": "I can monologue about tea for an hour straight :)",
             "place": "Chennai, India",
@@ -89,7 +89,7 @@
                 "Data Science",
                 "Natural Language Understanding"
             ],
-            "experience": "fillin",
+            "experience": ["Microsoft"],
             "hobbies": [
                 "Watching movies",
                 " writing postcards",
@@ -122,7 +122,7 @@
                 "Bioinformatics",
                 "Data Analytics"
             ],
-            "experience": "fillin",
+            "experience": ["SAP", "PwC", "Illinois Business Consulting", "Health Care Engineering Systems Center"],
             "hobbies": [
                 "Dancing",
                 " Traveling",
@@ -152,7 +152,7 @@
             "year": "Science",
             "major": "CS + Stats",
             "interests": ["Data Visualization"],
-            "experience": ["Mathnasium"],
+            "experience": ["Caterpillar", "Ernst & Young"],
             "hobbies": [
                 "Going to the gym",
                 " cooking",
@@ -173,7 +173,7 @@
             "year": "Sophomore",
             "major": "CS",
             "interests": ["Data Science/Analytics", "AI", "Web Dev.", "UI/UX Design"],
-            "experience": "fillin",
+            "experience": ["Illinois Computer Science Sail", "Reflections | Projections"],
             "hobbies": [
                 "Tennis",
                 " dance",
@@ -196,7 +196,7 @@
             "year": "Sophomore",
             "major": "CS",
             "interests": ["Human and Social Impact", "Computational Neuroscience", "Cybersecurity", "I honestly don’t really know"],
-            "experience": "fillin",
+            "experience": ["Reflections|Projections"],
             "hobbies": [
                 "Drawing",
                 " fashion",
@@ -217,7 +217,7 @@
             "year": "Junior",
             "major": "CS",
             "interests": ["Software Engineering", "Big Data", "UIUX Design"],
-            "experience": "fillin",
+            "experience": ["Productive Edge", "Coursicle", "Hack4Impact"],
             "hobbies": [
                 "Dancing",
                 " watching movies",
@@ -238,7 +238,7 @@
             "year": "Junior",
             "major": "CS",
             "interests": "Too many, still exploring!",
-            "experience": "fillin",
+            "experience": ["Qualcomm", "Avaya"],
             "hobbies": [
                 "Public speaking",
                 " ice skating",
@@ -287,7 +287,7 @@
             "year": "Sophomore",
             "major": "CS",
             "interests": ["Machine Learning", "Mathematical applications in cs"],
-            "experience": "fillin",
+            "experience": ["Anant Corporation", "Google"],
             "hobbies": [
                 "yoga",
                 " dance (all types!)",
@@ -312,7 +312,7 @@
             "year": "Sophomore",
             "major": "CS",
             "interests": ["Computer graphics", "AI", "Security"],
-            "experience": "fillin",
+            "experience": ["Personal Projects (GoSquirrel, Travlog)", "Study Abroad in Hiroshima", "Japan"],
             "hobbies": [
                 "Drawing",
                 " cooking",
