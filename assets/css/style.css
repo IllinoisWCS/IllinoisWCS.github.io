@@ -98,12 +98,14 @@ a:hover {
     padding: 5% 0 5% 0;
     background: url("../img/wcs/new-officers.jpg") no-repeat center center;
     background-size: cover;
+    height: 60%;
 }
 
 #home .home-header-container {
     width: 100%;
     padding: 2%;
     text-align: center;
+    margin-top: 17em;
 }
 
 #home .home-header-container .home-header {
@@ -114,6 +116,7 @@ a:hover {
 #home .home-header-container .home-subheader {
     margin: 5px;
     color: white;
+    opacity: 0.9;
 }
 
 @media only screen and (max-width: 768px) {
