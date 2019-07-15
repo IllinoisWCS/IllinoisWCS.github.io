@@ -9,14 +9,13 @@
             "major": "CS",
             "interests": ["Artificial intelligence", "Mixed Reality"],
             "experience": ["Microsoft", "Google", "Argonne National Lab"],
-            "hobbies": ["Tennis", " Photography", " Watching Netflix", " Hiking"],
+            "hobbies": ["I love to workout ", " and experiment with cooking to destress myself"],
             "fact": "I practiced taekwondo for 13 years.",
             "place": "Mexico",
             "ask": [
-                "Internships",
-                " Coursework",
-                " Research Park",
-                " CS RSOs"
+                "Dealing with transition to college ",
+                " different internship",
+                " scholarship opportunities"
             ],
             "advice": "Talk to people when you are planning out your schedule, CS classes can be tough so make sure you have balance. Never think you are too early in your career to get internships or scholarships - simply apply and give yourself a shot."
         },
@@ -48,12 +47,12 @@
             "netid": "ayushis3",
             "year": "Junior",
             "major": "CS + Stats",
-            "interests": ["Data Science", "Machine Learning", "idk yet"],
+            "interests": ["Data Science", "Machine Learning"],
             "experience": ["Microsoft", "CloudFabrix", "Ameren", "Cisco"],
-            "hobbies": ["Tennis", " Photography", " Watching Netflix", " Hiking"],
+            "hobbies": ["Tennis", " photography", " watching Netflix", " and hiking"],
             "fact": "I can write with both hands ",
             "place": "Pleasanton, CA",
-            "ask": ["internships", " coursework", "research park", " CS RSOs"],
+            "ask": ["internships", " coursework", "research park", " CS RSOs", "out of state", "CS + X"],
             "advice": "Do a few things and do them well."
         },
         {
@@ -70,7 +69,7 @@
             "fact": "I can monologue about tea for an hour straight :)",
             "place": "Chennai, India",
             "ask": [
-                "Getting involved on campus ",
+                "Getting involved on campus",
                 " Coursework",
                 " Marvel"
             ],
@@ -149,9 +148,9 @@
             "lastname": "Ramachandran",
             "email": "dramac4@illinois.edu",
             "netid": "dramac4",
-            "year": "Science",
+            "year": "Senior",
             "major": "CS + Stats",
-            "interests": ["Data Visualization"],
+            "interests": ["Data Visualization", "Data Analytics"],
             "experience": ["Caterpillar", "Ernst & Young"],
             "hobbies": [
                 "Going to the gym",
@@ -268,7 +267,7 @@
                 " dancing",
                 " exploring the outdoors"
             ],
-            "fact": "I've gone skydiving twice.",
+            "fact": "I've gone skydiving three times.",
             "place": "Northbrook, IL",
             "ask": [
                 "Coursework",
@@ -294,7 +293,7 @@
                 " running",
                 " Netflix :)"
             ],
-            "fact": "I've been to 17 countries and 27 states.",
+            "fact": "After I graduate, I want to take an east Asia tour. I want to study abroad my second semester of junior year in Australia, Sweden, or Switzerland. I used to hate running with a passion, but now run almost everyday. I was part of an Indian classical dance school for 13 years, and still try to perform/teach/attend classes during breaks at home.",
             "place": "Northern Virginia",
             "ask": [
                 "Ways to get involved with CS RSOs as a freshmen",
