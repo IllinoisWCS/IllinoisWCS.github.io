@@ -76,7 +76,7 @@
             "advice": "Make sure get involved, work hard and get out of your comfort zone, but remember to enjoy what you're doing at the end of the day."
         },
         {
-            "position": "Corporate Chair",
+            "position": "Corporate Co-Chair",
             "firstname": "Devanshi",
             "lastname": "Pratap",
             "email": "dpratap2@illinois.edu",
@@ -88,7 +88,7 @@
                 "Data Science",
                 "Natural Language Understanding"
             ],
-            "experience": ["Microsoft"],
+            "experience": ["Microsoft", "Study Abroad in Hong Kong", "Research"],
             "hobbies": [
                 "Watching movies",
                 " writing postcards",
@@ -106,7 +106,7 @@
             "advice": "Do not compare yourselves to others. Pursue your passions and interests, whatever they may be. Ask people/other students for help. Lastly, if you're not from the area, be prepared for the terrible weather!"
         },
         {
-            "position": "Corporate Chair",
+            "position": "Corporate Co-Chair",
             "firstname": "Shivani",
             "lastname": "Jain",
             "email": "sjain77@illinois.edu",
@@ -143,7 +143,7 @@
             "advice": "It's ok to be selfish sometimes and take the time to focus on your own personal development. Also, make an effort to meet new people (both within and outside of CS), make good connections, and build good relationships with your professors."
         },
         {
-            "position": "Head of Mentoring",
+            "position": "Mentoring Chair",
             "firstname": "Deepika",
             "lastname": "Ramachandran",
             "email": "dramac4@illinois.edu",
@@ -164,7 +164,7 @@
             "advice": "Find a good friend or study group for each class. It's a great way to clarify any questions, and it makes studying more fun! It also really helps to prepare ahead of time by running through the study material on your own."
         },
         {
-            "position": "Outreach Chair",
+            "position": "Outreach Co-Chair",
             "firstname": "Simran",
             "lastname": "Desai",
             "email": "sdesai51@illinois.edu",
@@ -187,7 +187,7 @@
             "advice": "Seize every opportunity that comes your way - don’t be afraid to try new things and step out of your comfort zone."
         },
         {
-            "position": "Outreach Chair",
+            "position": "Outreach Co-Chair",
             "firstname": "Nikita",
             "lastname": "Agarwal",
             "email": "nikitaa4@illinois.edu",
@@ -249,7 +249,7 @@
             "advice": "Sort of ironic but don't live by other people's advice about how to get through college. Everyone has a unique experience. Take it easy. It may take long, but you'll find your groove eventually :)"
         },
         {
-            "position": "Head of Infrastructure",
+            "position": "Infrastructure Chair",
             "firstname": "Anna",
             "lastname": "Buyevich",
             "email": "annavb2@illinois.edu",
@@ -261,7 +261,7 @@
                 "Data Science",
                 "Data Visualization"
             ],
-            "experience": ["IMO", "Capital One"],
+            "experience": ["IMO", "Capital One", "Study Abroad in Sweden"],
             "hobbies": [
                 "Traveling",
                 " dancing",
@@ -278,7 +278,7 @@
             "advice": "Don't ever feel like you can't ask for help, and try to put yourself in uncomfortable situations they can benefit you in the long run."
         },
         {
-            "position": "Head of Social",
+            "position": "Social Chair",
             "firstname": "Aishani",
             "lastname": "Pal",
             "email": "aishani2@illinois.edu",
