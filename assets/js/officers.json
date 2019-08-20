@@ -325,6 +325,28 @@
                 "How to get through freshman year, CS125, CS126, CS173"
             ],
             "advice": "Stop comparing yourself to other people or relying on others to validate you- as long as you’re proud of the progress you’re making, that’s all that matters, and the only person that needs to validate you is yourself!"
+        },
+        {
+            "position": "Graduate Student POC",
+            "firstname": "Heather",
+            "lastname": "Huynh",
+            "email": "hh11@illinois.edu",
+            "netid": "hh11",
+            "year": "2nd",
+            "major": "Masters in Computer Science",
+            "interests": "Studying Human Computer Interaction",
+            "experience": ["Undergrad in CS at UGA", "Blend", "Google", "Los Alamos National Laboratory"],
+            "hobbies": [
+                "I love taking pictures",
+                " making videos",
+                " eating/cooking delicious food"
+            ],
+            "fact": "I love to travel and keep a travel blog!",
+            "place": "Loganville, GA",
+            "ask": [
+                "More than happy to talk about applying to graduate school (personal statements, not having previous research experience, etc)", "getting an internship in industry", "mentorship/getting mentorship"
+            ],
+            "advice": "Take advantage of your time in undergrad; it's your opportunity to explore all parts of CS and find which you like the best!"
         }
     ]
 }
