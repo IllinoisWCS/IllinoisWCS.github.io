@@ -1,0 +1,48 @@
+{
+    "values": [{
+            "event": "Tutorial 1: Terminal Tips and Tricks",
+            "date": "August 28",
+            "time": "5-6PM"
+        },
+        {
+            "event": "Tech Team September Social",
+            "date": "September 4th",
+            "time": "5-6PM"
+        },
+        {
+            "event": "Tutorial 2: Git-ing better at Git",
+            "date": "September 11th",
+            "time": "5-6PM"
+        },
+        {
+            "event": "Tutorial 3: Web Dev/React",
+            "date": "September 25th",
+            "time": "5-6PM"
+        },
+        {
+            "event": "Interview Prep",
+            "date": "tbd",
+            "time": "tbd"
+        },
+        {
+            "event": "Tech Team October Social",
+            "date": "October 9th",
+            "time": "5-6PM"
+        },
+        {
+            "event": "Tutorial 4: Android",
+            "date": "October 16th",
+            "time": "5-6PM"
+        },
+        {
+            "event": "Tutorial 5: Databases",
+            "date": "October 23rd",
+            "time": "5-6PM"
+        },
+        {
+            "event": "Code Ada (Tech team’s very own hackathon!!) ",
+            "date": "October 26th - 27th",
+            "time": "All day"
+        }
+    ]
+}

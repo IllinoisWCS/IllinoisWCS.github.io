@@ -8,12 +8,18 @@ $(document).ready(function() {
     });
 
     $.getJSON("../assets/js/techteam_recommendations.json", function(data) {
-      var recTemplate = Mustache.render($('#recTemplate').html(), data);
-      $('#accordionTT').html(recTemplate);
+        var recTemplate = Mustache.render($('#recTemplate').html(), data);
+        $('#accordionTT').html(recTemplate);
     });
 
     $.getJSON("../assets/js/techteam_links.json", function(data) {
-      var linksTemplate = Mustache.render($('#ttlinkTemplate').html(), data);
-      $('#linksList').html(linksTemplate);
+        var linksTemplate = Mustache.render($('#ttlinkTemplate').html(), data);
+        $('#linksList').html(linksTemplate);
     });
+
+    $.getJSON("../assets/js/techteam_upcoming.json", function(data) {
+        var upcomingTemplate = Mustache.render($('#upcomingEvents').html(), data);
+        $('#upcomingTT').html(upcomingTemplate);
+    });
+
 });

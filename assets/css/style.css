@@ -12,6 +12,10 @@ body {
     height: 100%;
 }
 
+table {
+    font-family: "Roboto", sans-serif;
+}
+
 h1 {
     font-family: "Oswald" !important;
     font-weight: 500;
