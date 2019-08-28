@@ -347,6 +347,27 @@
                 "More than happy to talk about applying to graduate school (personal statements, not having previous research experience, etc)", "getting an internship in industry", "mentorship/getting mentorship"
             ],
             "advice": "Take advantage of your time in undergrad; it's your opportunity to explore all parts of CS and find which you like the best!"
+        },
+        {
+            "position": "Graduate Student Point of Contact",
+            "firstname": "Sushmita",
+            "lastname": "Azad",
+            "email": "@sazad2illinois.edu",
+            "netid": "sazad2",
+            "year": "2nd",
+            "major": "Masters in Computer Science",
+            "interests": "Studying Computer Science Education",
+            "experience": ["Undergrad in Information Science back home in Bangalore, India", " Adobe as a tech consultant", " Microsoft as a software engineer before coming to grad school"],
+            "hobbies": [
+                "I love reading  PG Wodehouse & James Herriot",
+                " I enjoy climbing mountains",
+                " playing Ultimate Frisbee!"
+            ],
+            "place": "Bangalore, India",
+            "ask": [
+                "More than happy to talk about applying to graduate school (personal statements, not having previous research experience, etc), and how to decide whether the grad school or industry path is right for you."
+            ],
+            "advice": "Take courses that interest you, not just ones that look good on your resume.  And try and take those courses with your friends, so you’re working with your favorite people to learn something brand new."
         }
     ]
 }
