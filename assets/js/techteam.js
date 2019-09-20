@@ -50,7 +50,14 @@ $(document).ready(function() {
                 var start = new Date(events[i].startTime);
                 var end = new Date(events[i].endTime);
                 tr.append('<td>' + start.toDateString() + '</td>');
-                tr.append('<td>' + start.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' - ' + end.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '</td>');
+
+                let allDay = events[i].isAllDay;
+                if (allDay) {
+                    tr.append('<td>All Day</td>');
+                } else {
+                    tr.append('<td>' + start.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' - ' + end.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '</td>');
+                }
+
 
                 added = true;
 
