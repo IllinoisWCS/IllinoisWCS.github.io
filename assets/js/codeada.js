@@ -45,3 +45,22 @@ function initializeClock(id, endtime) {
 }
 var deadline = 'October 26 2019 09:00:00 CST';
 initializeClock('clockdiv', deadline);
+
+
+$(document).ready(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+
+
+    $.getJSON("../assets/js/codeada_schedule.json", function(data) {
+        var scheduleTemplate = Mustache.render($('#schedule').html(), data);
+        $('#scheduleTemplate').html(scheduleTemplate);
+    });
+
+
+});

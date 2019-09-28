@@ -16,6 +16,10 @@ table {
     font-family: "Roboto", sans-serif;
 }
 
+#code-ada-table {
+    width: 40% !important;
+}
+
 h1 {
     font-family: "Oswald" !important;
     font-weight: 500;

@@ -1,0 +1,36 @@
+{
+    "values": [{
+            "time": "9:00 AM",
+            "what": "Check In, Team Matching & Breakfast"
+        },
+        {
+            "time": "9:45 AM",
+            "what": "Opening address"
+        },
+        {
+            "time": "10:00 AM",
+            "what": "Hacking commences"
+        },
+        {
+            "time": "1:00 PM",
+            "what": "Lunch"
+        },
+        {
+            "time": "6:00 PM",
+            "what": "Dinner"
+        },
+        {
+            "time": "8:00 PM",
+            "what": "End of hacking"
+        },
+        {
+            "time": "8:00 PM",
+            "what": "Judging"
+        },
+        {
+            "time": "8:30 PM",
+            "what": "Keynote Speaker, Awards with Mini Project Presentations"
+        }
+
+    ]
+}
