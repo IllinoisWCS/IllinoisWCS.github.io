@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>WCS Chictech Retreat</title>
+    <title>WCS Code Ada</title>
 
-    <meta name="description" content="Chictech is our annual retreat to invite high school girls to learn about CS." />
+
     <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="Chictech" />
@@ -87,6 +87,13 @@
         </div>
     </div>
 
+    <div class="row padded" id="register">
+        <div class="col-sm-offset-1 col-md-10">
+            <h1 align="center"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd7jpSnxD9Pl6D4_RFk4LbwZflT7kuaOVYASMZ2KSmjQt5nyA/viewform?usp=sf_link" target="_blank">Register</a>
+            </h1>
+
+        </div>
+    </div>
 
     <div align="center" id="clockdiv">
         <div>
@@ -109,18 +116,32 @@
     </div>
 
 
-    <div class="row padded" id="register">
-        <div class="col-sm-offset-1 col-md-10">
-            <h1 align="center"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd7jpSnxD9Pl6D4_RFk4LbwZflT7kuaOVYASMZ2KSmjQt5nyA/viewform?usp=sf_link" target="_blank">Register</a>
-            </h1>
+    <script type="text/x-mustache" id="schedule">
+        {{#values}}
+        <tr>
+            <th scope="row" style="font-weight:400">{{time}}</th>
+            <td>{{what}}</td>
+        </tr>
+        {{/values}}
+    </script>
 
-            <div class="iframeOutside">
+    <div class="row padded">
+        <h1 align="center">Schedule</h1>
+        <table align="center" class="table table-striped" id="code-ada-table">
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Task</th>
+                </tr>
+            </thead>
+            <tbody id="scheduleTemplate" role="tablist" aria-multiselectable="true">
 
-                <iframe align="center" src="https://docs.google.com/forms/d/e/1FAIpQLSd7jpSnxD9Pl6D4_RFk4LbwZflT7kuaOVYASMZ2KSmjQt5nyA/viewform?usp=sf_link" width="700" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </tbody>
+        </table>
 
-            </div>
-        </div>
     </div>
+
+
 
     <footer>
         <div class="row">
