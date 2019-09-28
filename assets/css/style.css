@@ -505,3 +505,63 @@ footer a {
 #techteam-title {
     padding: 5%;
 }
+
+#clockdiv {
+    font-family: sans-serif;
+    color: #fff;
+    /* display: inline-block; */
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv>div {
+    padding: 10px;
+    border-radius: 3px;
+    background: #feeee8;
+    display: inline-block;
+}
+
+#clockdiv div>span {
+    padding: 15px;
+    border-radius: 3px;
+    background: #e84c3d;
+    display: inline-block;
+}
+
+.smalltext {
+    padding-top: 5px;
+    font-size: 16px;
+    color: #e84c3d;
+}
+
+#code-ada {
+    background: #e84c3d;
+    border-color: #e84c3d;
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    text-align: center;
+}
+
+#code-ada-link {
+    color: #f5f3ee;
+}
+
+
+/* div#preload {
+    display: none;
+} */
+
+
+/* 
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url("../img/wcs/new-officers.jpg") url("../img/officers/annavb2.jpg") url("../img/officers/jcolla3.jpg") url("../img/officers/gracesc2.jpg") url("../img/officers/ayushis3.jpg") url("../img/officers/cd13.jpg") url("../img/officers/dpratap2.jpg") url("../img/officers/sjain77.jpg") url("../img/officers/dramac4.jpg") url("../img/officers/sdesai51.jpg") url("../img/officers/nikitaa4.jpg") url("../img/officers/alicesf2.jpg") url("../img/officers/mihikaa2.jpg") url("../img/officers/aishani2.jpg") url("../img/officers/cechiu2.jpg") url("../img/officers/hh11.jpg") url("../img/officers/sazad2.jpg");
+} */
