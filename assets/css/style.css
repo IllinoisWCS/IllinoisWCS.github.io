@@ -563,12 +563,16 @@ body::after {
     z-index: -1;
     content: url("../img/wcs/new-officers.jpg") url("../img/officers/annavb2.jpg") url("../img/officers/jcolla3.jpg") url("../img/officers/gracesc2.jpg") url("../img/officers/ayushis3.jpg") url("../img/officers/cd13.jpg") url("../img/officers/dpratap2.jpg") url("../img/officers/sjain77.jpg") url("../img/officers/dramac4.jpg") url("../img/officers/sdesai51.jpg") url("../img/officers/nikitaa4.jpg") url("../img/officers/alicesf2.jpg") url("../img/officers/mihikaa2.jpg") url("../img/officers/aishani2.jpg") url("../img/officers/cechiu2.jpg") url("../img/officers/hh11.jpg") url("../img/officers/sazad2.jpg");
 } */
-    
-    .border {
+    /* .border {
         border-style: solid !important;
-        /* border-color: #3175d8 !important; */
-        border-width: 3px !important;
+
+        border-width: 2px !important;
+        -webkit-background-clip: padding-box;
+  
+        background-clip: padding-box;
+
     }
+     */
     
     .card-img-top {
         top: 50%;
@@ -629,4 +633,14 @@ body::after {
         float: none; */
         display: flex;
         justify-content: center;
+        /* height: 70%; */
+    }
+    
+    #codeada-sponser-row {
+        justify-content: center;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        display: flex;
     }
