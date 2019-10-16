@@ -642,5 +642,6 @@ body::after {
         margin-left: auto;
         margin-right: auto;
         width: 100px;
+        text-align: center;
         display: flex;
     }
