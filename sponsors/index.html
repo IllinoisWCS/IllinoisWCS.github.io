@@ -24,12 +24,15 @@
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
     <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
     <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
     <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="../assets/js/sponsers.js"></script>
+    <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -65,85 +68,142 @@
         </div>
     </nav>
 
+
     <section id="sponsors">
         <h1 align="center">Sponsors</h1>
         <ul class="list">
             <li class="list-item">
-                <a class="list-item-link" href="https://campus.capitalone.com/internships/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/C1C-logo.jpg" />
-                </a>
+                <div class="card border border-warning" style="width: 18rem;">
+                    <div class="card-div">
+                        <img align="center" src="../assets/img/logos/new-logos/logos/nextcapital.jpg" class="list-item-image" alt="... ">
+
+                    </div>
+
+
+                    <div class="h-100 card-body " align="center ">
+                        <a href="https://www.themuse.com/profiles/nextcapital" id="card-button" class="btn btn-primary "> PLATINUM </a>
+                    </div>
+                </div>
+
+
             </li>
+
+
             <li class="list-item">
-                <a class="list-item-link" href="https://www.flexport.com/careers">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/flexport.png" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://careers.google.com/students/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/google.jpg" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://careers.jpmorgan.com/careers/US/en/programs">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/jpmc.jpeg" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://careers.microsoft.com/students/internships">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/mslogo.jpg" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.themuse.com/profiles/nextcapital">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/nextcapital.jpg" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.qualtrics.com/careers/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/qualtrics.jpg" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.relativity.com/careers/internships/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/relativity.jpg" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.rubrik.com/company/careers/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/Rubrik-Logo-1024.jpg" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://northerntrustcareers.com/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/northerntrust.png" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://careers.ibm.com/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/ibm.png" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="http://www.goldmansachs.com/careers/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/goldman.png" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://liveramp.com/careers/">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/liveramp.png" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.baxter.com/careers">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/baxter.png" />
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="list-item-link" href="https://www.baxter.com/careers">
-                    <img class="list-item-image" src="../assets/img/logos/new-logos/logos/facebook.jpg" />
-                </a>
+                <div class="card border border-warning" style="width: 18rem;">
+                    <div class="card-div"><img align="center" src="../assets/img/logos/new-logos/logos/jpmc.jpeg" class="list-item-image" alt="... "></div>
+
+                    <div class="h-100 card-body " align="center ">
+                        <a href="https://careers.jpmorgan.com/US/en/students/programs" id="card-button" class="btn btn-primary "> PLATINUM </a>
+                    </div>
+                </div>
             </li>
         </ul>
+        <ul class="list">
+            <li class="list-item">
+                <div class="card border border-warning" style="width: 18rem;">
+                    <div class="card-div">
+                        <img align="center" src="../assets/img/logos/new-logos/logos/goldman.png" class="list-item-image" alt="... "></div>
+                    <div class="h-100 card-body " align="center ">
+                        <a href="http://www.goldmansachs.com/careers/" id="card-button" class="btn btn-warning "> GOLD </a>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="card border border-warning" style="width: 18rem;">
+                    <div class="card-div">
+                        <img align="center" src="../assets/img/logos/new-logos/logos/hubspot.png" class="list-item-image" alt="... ">
+                    </div <div class="card-body " align="center ">
+                    <a href="https://www.hubspot.com/jobs " id="card-button" class="btn btn-warning "> GOLD </a>
+                </div>
+                </div>
+
+            </li>
+            <li class="list-item">
+                <div class="card border border-warning " style="width: 18rem; ">
+                    <div class="card-div">
+                        <img align="center " src="../assets/img/logos/new-logos/logos/CMEGroup.jpg " class="list-item-image" alt="... "></div>
+                    <div class="card-body " align="center ">
+                        <a href="https://www.cmegroup.com/careers.html " id="card-button" class="btn btn-warning "> GOLD </a>
+                    </div>
+                </div>
+
+            </li>
+            <li class="list-item">
+                <div class="card border border-warning " style="width: 18rem; ">
+                    <div class="card-div">
+                        <img align="center " src="../assets/img/logos/new-logos/logos/pinterest.png " class="list-item-image" alt="... "></div>
+                    <div class="card-body " align="center ">
+                        <a href="https://careers.pinterest.com/ " id="card-button" class="btn btn-warning "> GOLD </a>
+                    </div>
+                </div>
+
+            </li>
+            <li class="list-item">
+                <div class="card border border-warning" style="width: 18rem;">
+                    <div class="card-div">
+                        <img align="center" src="../assets/img/logos/new-logos/logos/google.jpg" class="list-item-image" alt="... ">
+                    </div>
+                    <div class="card-body " align="center ">
+                        <a href="https://careers.google.com/students/ " id="card-button" class="btn btn-warning "> GOLD </a>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="card border border-warning " style="width: 18rem; ">
+                    <div class="card-div">
+                        <img align="center " src="../assets/img/logos/new-logos/logos/at&t.png" class="list-item-image" alt="... "></div>
+                    <div class="card-body " align="center ">
+                        <a href="https://www.att.jobs/" id="card-button" class="btn btn-warning "> GOLD </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="list">
+            <li class="list-item">
+                <div class="card border border-warning " style="width: 18rem; ">
+                    <div class="card-div">
+                        <img align="center " src="../assets/img/logos/new-logos/logos/facebook.jpg" class="list-item-image" alt="... "></div>
+                    <div class="card-body " align="center ">
+                        <a href="https://www.facebook.com/careers/ " id="card-button" class="btn btn-secondary"> SILVER </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="list">
+            <li class="list-item">
+                <div class="card border border-warning" style="width: 18rem;">
+                    <div class="card-div">
+                        <img align="center" src="../assets/img/logos/new-logos/logos/uber.png" class="list-item-image" alt="... "></div>
+                    <div class="card-body " align="center ">
+                        <a href="https://www.uber.com/us/en/careers/" id="card-button" class="btn btn-danger "> BRONZE </a>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="card border border-warning " style="width: 18rem; ">
+                    <div class="card-div">
+                        <img align="center " src="../assets/img/logos/new-logos/logos/cruise.png" class="list-item-image" alt="... ">
+                    </div>
+                    <div class="card-body " align="center ">
+                        <a href="https://www.getcruise.com/careers/" id="card-button" class="btn btn-danger "> BRONZE </a>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="card border border-warning " style="width: 18rem; ">
+                    <div class="card-div">
+                        <img align="center " src="../assets/img/logos/new-logos/logos/splunk.png" class="list-item-image" alt=" ... ">
+                    </div>
+                    <div class="card-body " align="center ">
+                        <a href="https://www.splunk.com/en_us/careers.html " id="card-button" class="btn btn-danger "> BRONZE </a>
+                    </div>
+                </div>
+
+            </li>
+
+        </ul>
+
     </section>
 
     <footer>
@@ -156,7 +216,11 @@
             </div>
             <div class="col-md-4">
                 <p>Contact us at:</p>
-                <p><b><a href="mailto:contact@illinoiswcs.org">contact@illinoiswcs.org</a></b></p>
+                <p>
+                    <b>
+                            <a href="mailto:contact@illinoiswcs.org">contact@illinoiswcs.org</a>
+                        </b>
+                </p>
                 <p>
                     <b>
                             <a href="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5">Mailing List</a></h4>
