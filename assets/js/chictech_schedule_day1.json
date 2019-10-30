@@ -1,0 +1,54 @@
+{
+    "events": [{
+            "time": "9:30 AM",
+            "what": "Check-in & Breakfast",
+            "where": "Siebel Atrium"
+        },
+        {
+            "time": "10:30 AM",
+            "what": "Introductions",
+            "where": "Balcony"
+        },
+        {
+            "time": "11:30 AM",
+            "what": "Student Panel Q&A",
+            "where": "Siebel 2405"
+        },
+        {
+            "time": "12:30 AM",
+            "what": "Lunch",
+            "where": "Siebel Atrium"
+        },
+        {
+            "time": "1:45 PM",
+            "what": "Workshop #1",
+            "where": "Basement Labs"
+        },
+        {
+            "time": "3:45 PM",
+            "what": "Activities",
+            "where": "Siebel 2405"
+        },
+
+        {
+            "time": "5:15 PM",
+            "what": "Speaker: Professor Sarita Adve",
+            "where": "Siebel 2405"
+        },
+        {
+            "time": "6:00 PM",
+            "what": "Dinner",
+            "where": "Siebel Atrium"
+        },
+        {
+            "time": "7:00 PM",
+            "what": "Girls Night",
+            "where": "Siebel 2405"
+        },
+        {
+            "time": "10:30 PM",
+            "what": "Bedtime",
+            "where": "Sleeping rooms"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "events": [{
+            "time": "9:00 AM",
+            "what": "Wake up & Breakfast",
+            "where": "Siebel Atrium"
+        },
+        {
+            "time": "10:15 AM",
+            "what": "Workshop #2",
+            "where": "Basement Labs"
+        },
+        {
+            "time": "12:15 PM",
+            "what": "Lunch with Parents",
+            "where": "Siebel Atrium"
+        },
+        {
+            "time": "1:00 PM",
+            "what": "Corporate Speakers: Google",
+            "where": "Siebel 1404"
+        },
+        {
+            "time": "2:00 PM",
+            "what": "End of retreat",
+            "where": ""
+        }
+    ]
+}

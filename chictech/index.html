@@ -113,7 +113,7 @@
             </div>
         </div>
     </div>
-
+    <!-- 
     <script type="text/x-mustache" id="eventTemplate">
         {{#events}}
         <div class="row">
@@ -130,15 +130,12 @@
         {{/events}}
     </script>
 
-    <!-- <div class="row padded" id="schedule"> -->
-    <!-- <div class="col-md-10 col-sm-offset-1"> -->
-    <!-- <h1 align="center">Schedule</h1> -->
-    <!-- <p align="center">TBD</p> -->
-    <!-- <p align="center">Tentative right now, times and activities may change.</p>
-            <h4 align="center">November 10</h4>
-            <p align="center">
-                <strong>*Escape rooms ongoing from 9am - 5pm!*</strong>
-            </p>
+    <div class="row padded" id="schedule">
+        <div class="col-md-10 col-sm-offset-1">
+            <h1 align="center">Schedule</h1>
+
+            <h4 align="center">November 2</h4>
+
             <div class="row">
                 <div class="col-md-3">
                     <h5 align="center">Time</h5>
@@ -152,7 +149,7 @@
             </div>
             <div id="agenda117">
             </div>
-            <h4 align="center">November 11</h4>
+            <h4 align="center">November 3</h4>
             <div class="row">
                 <div class="col-md-3">
                     <h5 align="center">Time</h5>
@@ -165,18 +162,63 @@
                 </div>
             </div>
             <div id="agenda118">
-            </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
+            </div>
+        </div>
+    </div> -->
 
+    <script type="text/x-mustache" id="eventTemplate">
+        {{#events}}
+        <tr>
+            <th scope="row" style="font-weight:400">{{time}}</th>
+            <td>{{what}}</td>
+            <td>{{where}}</td>
+        </tr>
+        {{/events}}
+    </script>
+
+
+    <h1 align="center">Schedule</h1>
+
+    <h3 align="center">November 2nd</h3>
+    <table class="table table-striped" id="chictech-schedule">
+        <thead>
+            <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Event</th>
+                <th scope="col">Location</th>
+            </tr>
+        </thead>
+        <tbody id="agendaDay1" role="tablist" aria-multiselectable="true">
+
+        </tbody>
+    </table>
+
+    <h3 align="center">November 3rd</h3>
+
+
+    <table class="table table-striped" id="chictech-schedule">
+        <thead>
+            <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Event</th>
+                <th scope="col">Location</th>
+            </tr>
+        </thead>
+        <tbody id="agendaDay2" role="tablist" aria-multiselectable="true">
+
+        </tbody>
+    </table>
+
+
+
+
+
+    <!-- 
     <div class="row padded" id="register">
         <div class="col-sm-offset-1 col-md-10">
             <h1 align="center"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc_77sOcKgEF-0bY1ZkM491uaZ6SWq5OhWSiULbdm2L1dizkA/viewform" target="_blank">Register</a>
             </h1>
-            <!-- <p align="center">
-                <strong>*REGISTRATION HAS BEEN EXTENDED TO NOV 1!*</strong>
-            </p> -->
-            <!-- <p align="center">* -->
+
 
             <div class="iframeOutside">
 
@@ -184,7 +226,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 
     <footer>
         <div class="row">
