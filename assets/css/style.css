@@ -632,3 +632,9 @@ footer a {
     text-align: center;
     display: flex;
 }
+
+#chictech-schedule {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
