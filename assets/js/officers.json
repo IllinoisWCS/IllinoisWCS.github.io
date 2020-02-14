@@ -250,32 +250,32 @@
         },
         {
             "position": "Infrastructure Chair",
-            "firstname": "Anna",
-            "lastname": "Buyevich",
-            "email": "annavb2@illinois.edu",
-            "netid": "annavb2",
-            "year": "Senior",
+            "firstname": "Eunice",
+            "lastname": "Zhou",
+            "email": "xz33@illinois.edu",
+            "netid": "xz33",
+            "year": "Sophomore",
             "major": "CS",
             "interests": [
-                "Security",
+                "Web Development",
                 "Data Science",
-                "Data Visualization"
+                "UI/UX",
+                "Software Engineering"
             ],
-            "experience": ["IMO", "Capital One", "Study Abroad in Sweden"],
+            "experience": ["Graybar (Research Park)"],
             "hobbies": [
                 "Traveling",
-                " dancing",
-                " exploring the outdoors"
+                " drawing"
             ],
-            "fact": "I've gone skydiving three times.",
-            "place": "Northbrook, IL",
+            "fact": "I can write with either hand.",
+            "place": "Westmont, IL",
             "ask": [
                 "Coursework",
                 " class schedules",
                 " life tips",
                 " anything"
             ],
-            "advice": "Don't ever feel like you can't ask for help, and try to put yourself in uncomfortable situations they can benefit you in the long run."
+            "advice": "College is the time for exploring different things. Don't be too stressed and enjoy your time :D"
         },
         {
             "position": "Social Chair",
