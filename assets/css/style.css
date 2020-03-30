@@ -251,6 +251,21 @@ a:hover {
     width: 100%;
 }
 
+#officehour {
+    margin-top: 50px;
+}
+
+#officehour iframe {
+    width: 100%;
+}
+
+#officehour #covid-message {
+    margin-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-size: 15px;
+}
+
 #helpme {
     margin-top: 50px;
 }
