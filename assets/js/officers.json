@@ -1,10 +1,10 @@
 {
     "admin": [{
             "position": "President",
-            "firstname": "Jocelyn",
-            "lastname": "Collado-Kuri",
+            "firstname": "Aishani",
+            "lastname": "Pal",
             "email": "jcolla3@illinois.edu",
-            "netid": "jcolla3",
+            "netid": "aishani2",
             "year": "Senior",
             "major": "CS",
             "interests": ["Artificial intelligence", "Mixed Reality"],
@@ -20,11 +20,11 @@
             "advice": "Talk to people when you are planning out your schedule, CS classes can be tough so make sure you have balance. Never think you are too early in your career to get internships or scholarships - simply apply and give yourself a shot."
         },
         {
-            "position": "External Vice President",
-            "firstname": "Grace",
-            "lastname": "Cao",
+            "position": "Vice President",
+            "firstname": "Nikita",
+            "lastname": "Agarwal",
             "email": "gracesc2@illinois.edu",
-            "netid": "gracesc2",
+            "netid": "nikitaa4",
             "year": "Junior",
             "major": "CS + Stats",
             "interests": [
@@ -40,27 +40,11 @@
             "advice": "Get involved early! The people you meet and the experiences you have will shape your entire college career. "
         },
         {
-            "position": "Internal Vice President",
-            "firstname": "Ayushi",
-            "lastname": "Singh",
-            "email": "ayushis3@illinois.edu",
-            "netid": "ayushis3",
-            "year": "Junior",
-            "major": "CS + Stats",
-            "interests": ["Data Science", "Machine Learning"],
-            "experience": ["Microsoft", "CloudFabrix", "Ameren", "Cisco"],
-            "hobbies": ["Tennis", " photography", " watching Netflix", " and hiking"],
-            "fact": "I can write with both hands ",
-            "place": "Pleasanton, CA",
-            "ask": ["internships", " coursework", "research park", " CS RSOs", "out of state", "CS + X"],
-            "advice": "Do a few things and do them well."
-        },
-        {
             "position": "Treasurer",
-            "firstname": "Cynthia",
-            "lastname": "Damodaran",
+            "firstname": "Claudia",
+            "lastname": "Salazar",
             "email": "cd13@illinois.edu",
-            "netid": "cd13",
+            "netid": "",
             "year": "Sophomore",
             "major": "CS",
             "interests": ["Data Science", "Machine Learning", "Natural Language Processing"],
@@ -77,10 +61,10 @@
         },
         {
             "position": "Corporate Co-Chair",
-            "firstname": "Devanshi",
-            "lastname": "Pratap",
+            "firstname": "Himanshi",
+            "lastname": "Sharma",
             "email": "dpratap2@illinois.edu",
-            "netid": "dpratap2",
+            "netid": "hsharma2",
             "year": "Senior",
             "major": "CS + Astronomy",
             "interests": [
@@ -107,10 +91,10 @@
         },
         {
             "position": "Corporate Co-Chair",
-            "firstname": "Shivani",
-            "lastname": "Jain",
+            "firstname": "Prerana",
+            "lastname": "Kiran",
             "email": "sjain77@illinois.edu",
-            "netid": "sjain77",
+            "netid": "prajnak2",
             "year": "Junior",
             "major": "CS",
             "interests": [
@@ -143,76 +127,11 @@
             "advice": "It's ok to be selfish sometimes and take the time to focus on your own personal development. Also, make an effort to meet new people (both within and outside of CS), make good connections, and build good relationships with your professors."
         },
         {
-            "position": "Mentoring Chair",
-            "firstname": "Deepika",
-            "lastname": "Ramachandran",
-            "email": "dramac4@illinois.edu",
-            "netid": "dramac4",
-            "year": "Senior",
-            "major": "CS + Stats",
-            "interests": ["Data Visualization", "Data Analytics"],
-            "experience": ["Caterpillar", "Ernst & Young"],
-            "hobbies": [
-                "Going to the gym",
-                " cooking",
-                " sudoku puzzles",
-                " gymnastics"
-            ],
-            "fact": "I don't like pizza!",
-            "place": "Naperville, IL",
-            "ask": ["Classes", " adjusting to college", " time management"],
-            "advice": "Find a good friend or study group for each class. It's a great way to clarify any questions, and it makes studying more fun! It also really helps to prepare ahead of time by running through the study material on your own."
-        },
-        {
-            "position": "Outreach Co-Chair",
-            "firstname": "Simran",
-            "lastname": "Desai",
-            "email": "sdesai51@illinois.edu",
-            "netid": "sdesai51",
-            "year": "Sophomore",
-            "major": "CS",
-            "interests": ["Data Science/Analytics", "AI", "Web Dev.", "UI/UX Design"],
-            "experience": ["Illinois Computer Science Sail", "Reflections | Projections"],
-            "hobbies": [
-                "Tennis",
-                " dance",
-                " drawing",
-                " photography",
-                " travel",
-                " listening to music"
-            ],
-            "fact": "I’ve been classically trained in Indian dance for 12 years.",
-            "place": "Hoffman Estates, IL",
-            "ask": "Anything really (:",
-            "advice": "Seize every opportunity that comes your way - don’t be afraid to try new things and step out of your comfort zone."
-        },
-        {
-            "position": "Outreach Co-Chair",
-            "firstname": "Nikita",
-            "lastname": "Agarwal",
-            "email": "nikitaa4@illinois.edu",
-            "netid": "nikitaa4",
-            "year": "Sophomore",
-            "major": "CS",
-            "interests": ["Human and Social Impact", "Computational Neuroscience", "Cybersecurity", "I honestly don’t really know"],
-            "experience": ["Reflections|Projections"],
-            "hobbies": [
-                "Drawing",
-                " fashion",
-                " movies",
-                " keeping up with politics and the news"
-            ],
-            "fact": "I lived in Gurgaon, India for four years!",
-            "place": "Austin, Texas",
-            "ask": ["Getting involved as a freshman", " participating in WCS outreach (obviously)"],
-            "advice": "Get involved! Getting involved with WCS and R|P were some of the most fulfilling experiences of my freshman year. College isn’t just for learning technical skills, and extracurriculars are how you learn soft skills and grow as an individual and professional. Also, upperclassmen are friendly! Branch out and talk to as many people as you can."
-        },
-        {
             "position": "Tech Team Co-Chair",
-            "firstname": "Alice",
-            "lastname": "Fang",
+            "firstname": "Darci",
+            "lastname": "Peoples",
             "email": "alicesf2@illinois.edu",
-            "netid": "alicesf2",
+            "netid": "darciap2",
             "year": "Junior",
             "major": "CS",
             "interests": ["Software Engineering", "Big Data", "UIUX Design"],
@@ -230,10 +149,10 @@
         },
         {
             "position": "Tech Team Co-Chair",
-            "firstname": "Mihika",
-            "lastname": "Aggarwal",
+            "firstname": "Melissa",
+            "lastname": "Chen",
             "email": "mihikaa2@illinois.edu",
-            "netid": "mihikaa2",
+            "netid": "myc2",
             "year": "Junior",
             "major": "CS",
             "interests": "Too many, still exploring!",
@@ -247,6 +166,48 @@
             "place": "Dubai, U.A.E",
             "ask": ["Coursework/class schedules", " proficiency exams", " being an international student", " balancing school work and fun", " anything"],
             "advice": "Sort of ironic but don't live by other people's advice about how to get through college. Everyone has a unique experience. Take it easy. It may take long, but you'll find your groove eventually :)"
+        },
+        {
+            "position": "Mentoring Co-Chair",
+            "firstname": "Charlie",
+            "lastname": "Jung",
+            "email": "dramac4@illinois.edu",
+            "netid": "charlie4",
+            "year": "Senior",
+            "major": "CS + Stats",
+            "interests": ["Data Visualization", "Data Analytics"],
+            "experience": ["Caterpillar", "Ernst & Young"],
+            "hobbies": [
+                "Going to the gym",
+                " cooking",
+                " sudoku puzzles",
+                " gymnastics"
+            ],
+            "fact": "I don't like pizza!",
+            "place": "Naperville, IL",
+            "ask": ["Classes", " adjusting to college", " time management"],
+            "advice": "Find a good friend or study group for each class. It's a great way to clarify any questions, and it makes studying more fun! It also really helps to prepare ahead of time by running through the study material on your own."
+        },
+        {
+            "position": "Mentoring Co-Chair",
+            "firstname": "Claire",
+            "lastname": "Chiu",
+            "email": "dramac4@illinois.edu",
+            "netid": "cechiu2",
+            "year": "Senior",
+            "major": "CS + Stats",
+            "interests": ["Data Visualization", "Data Analytics"],
+            "experience": ["Caterpillar", "Ernst & Young"],
+            "hobbies": [
+                "Going to the gym",
+                " cooking",
+                " sudoku puzzles",
+                " gymnastics"
+            ],
+            "fact": "I don't like pizza!",
+            "place": "Naperville, IL",
+            "ask": ["Classes", " adjusting to college", " time management"],
+            "advice": "Find a good friend or study group for each class. It's a great way to clarify any questions, and it makes studying more fun! It also really helps to prepare ahead of time by running through the study material on your own."
         },
         {
             "position": "Infrastructure Chair",
@@ -279,10 +240,10 @@
         },
         {
             "position": "Social Chair",
-            "firstname": "Aishani",
-            "lastname": "Pal",
+            "firstname": "Kathy",
+            "lastname": "Zhou",
             "email": "aishani2@illinois.edu",
-            "netid": "aishani2",
+            "netid": "kathy2",
             "year": "Sophomore",
             "major": "CS",
             "interests": ["Machine Learning", "Mathematical applications in cs"],
@@ -304,10 +265,10 @@
         },
         {
             "position": "Design Chair",
-            "firstname": "Claire",
-            "lastname": "Chiu",
+            "firstname": "Emily",
+            "lastname": "Laughead",
             "email": "cechiu2@illinois.edu",
-            "netid": "cechiu2",
+            "netid": "elaugh2",
             "year": "Sophomore",
             "major": "CS",
             "interests": ["Computer graphics", "AI", "Security"],
@@ -327,47 +288,25 @@
             "advice": "Stop comparing yourself to other people or relying on others to validate you- as long as you’re proud of the progress you’re making, that’s all that matters, and the only person that needs to validate you is yourself!"
         },
         {
-            "position": "Graduate Student Point of Contact",
-            "firstname": "Heather",
-            "lastname": "Huynh",
-            "email": "hh11@illinois.edu",
-            "netid": "hh11",
-            "year": "2nd",
-            "major": "Masters in Computer Science",
-            "interests": "Studying Human Computer Interaction",
-            "experience": ["Undergrad in CS at UGA", "Blend", "Google", "Los Alamos National Laboratory"],
+            "position": "Outreach Chair",
+            "firstname": "Ariane",
+            "lastname": "Taraki",
+            "email": "nikitaa4@illinois.edu",
+            "netid": "atarak2",
+            "year": "Sophomore",
+            "major": "CS",
+            "interests": ["Human and Social Impact", "Computational Neuroscience", "Cybersecurity", "I honestly don’t really know"],
+            "experience": ["Reflections|Projections"],
             "hobbies": [
-                "I love taking pictures",
-                " making videos",
-                " eating/cooking delicious food"
+                "Drawing",
+                " fashion",
+                " movies",
+                " keeping up with politics and the news"
             ],
-            "fact": "I love to travel and keep a travel blog!",
-            "place": "Loganville, GA",
-            "ask": [
-                "More than happy to talk about applying to graduate school (personal statements, not having previous research experience, etc)", "getting an internship in industry", "mentorship/getting mentorship"
-            ],
-            "advice": "Take advantage of your time in undergrad; it's your opportunity to explore all parts of CS and find which you like the best!"
-        },
-        {
-            "position": "Graduate Student Point of Contact",
-            "firstname": "Sushmita",
-            "lastname": "Azad",
-            "email": "@sazad2illinois.edu",
-            "netid": "sazad2",
-            "year": "2nd",
-            "major": "Masters in Computer Science",
-            "interests": "Studying Computer Science Education",
-            "experience": ["Undergrad in Information Science back home in Bangalore, India", " Adobe as a tech consultant", " Microsoft as a software engineer before coming to grad school"],
-            "hobbies": [
-                "I love reading  PG Wodehouse & James Herriot",
-                " I enjoy climbing mountains",
-                " playing Ultimate Frisbee!"
-            ],
-            "place": "Bangalore, India",
-            "ask": [
-                "More than happy to talk about applying to graduate school (personal statements, not having previous research experience, etc), and how to decide whether the grad school or industry path is right for you."
-            ],
-            "advice": "Take courses that interest you, not just ones that look good on your resume.  And try and take those courses with your friends, so you’re working with your favorite people to learn something brand new."
+            "fact": "I lived in Gurgaon, India for four years!",
+            "place": "Austin, Texas",
+            "ask": ["Getting involved as a freshman", " participating in WCS outreach (obviously)"],
+            "advice": "Get involved! Getting involved with WCS and R|P were some of the most fulfilling experiences of my freshman year. College isn’t just for learning technical skills, and extracurriculars are how you learn soft skills and grow as an individual and professional. Also, upperclassmen are friendly! Branch out and talk to as many people as you can."
         }
     ]
 }
