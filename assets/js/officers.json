@@ -3,41 +3,35 @@
             "position": "President",
             "firstname": "Aishani",
             "lastname": "Pal",
-            "email": "jcolla3@illinois.edu",
+            "email": "aishani2@illinois.edu",
             "netid": "aishani2",
-            "year": "Senior",
-            "major": "CS",
-            "interests": ["Artificial intelligence", "Mixed Reality"],
-            "experience": ["Microsoft", "Google", "Argonne National Lab"],
-            "hobbies": ["I love to workout ", " and experiment with cooking to destress myself"],
-            "fact": "I practiced taekwondo for 13 years.",
-            "place": "Mexico",
-            "ask": [
-                "Dealing with transition to college ",
-                " different internship",
-                " scholarship opportunities"
-            ],
-            "advice": "Talk to people when you are planning out your schedule, CS classes can be tough so make sure you have balance. Never think you are too early in your career to get internships or scholarships - simply apply and give yourself a shot."
+            "year": "Junior",
+            "major": "Computer Science",
+            "interests": ["Artificial intelligence", "Algorithms", "Big Data"],
+            "experience": ["SWE Intern at Google", "WCS", "Theta Tau"],
+            "hobbies": ["yoga", "running", "cooking"],
+            "fact": "I was part of a professional dance school for 16 years.",
+            "place": "Northern Virginia",
+            "ask": "classes, internships, how to get involved in WCS, resume reviews, tech interviews",
+            "advice": "Don’t be afraid to say no!! Try new things :)"
         },
         {
             "position": "Vice President",
             "firstname": "Nikita",
             "lastname": "Agarwal",
-            "email": "gracesc2@illinois.edu",
+            "email": "nikitaa4@illinois.edu",
             "netid": "nikitaa4",
             "year": "Junior",
-            "major": "CS + Stats",
+            "major": "Computer Science",
             "interests": [
-                "Data Science",
-                "Cybersecurity",
-                "Mobile Development"
+                "Tech for social good", "data science", "web and app development", "and much more"
             ],
-            "experience": ["Facebook", "State Farm (Research Park)", "EntreCorps", "Girls Who Code", "Reflections | Projections", "Pulse", "Independent Study"],
-            "hobbies": ["Makeup/Skincare ", " spending time on Reddit/Quora?"],
-            "fact": "I can't do a push-up :')",
-            "place": "Naperville, IL",
-            "ask": ["Getting involved at school", " independent study", " internships", " class schedules", " (pretty much anything?)"],
-            "advice": "Get involved early! The people you meet and the experiences you have will shape your entire college career. "
+            "experience": ["Women in Computer Science", "Reflections | Projections", "CS Mental Health Committee; University of Illinois Foundation"],
+            "hobbies": "Art, cooking and baking, staying up to date on current events",
+            "fact": "I wouldn't remember to do anything if I didn't have google calendar",
+            "place": "Austin, TX",
+            "ask": "Getting involved in the UIUC CS community, mental health advice and connecting you with resources, internships and resume advice",
+            "advice": "Don't take on too much too fast - give yourself space in your schedule to breathe. And if you have credit for any calculus already, don't repeat it at UIUC lol"
         },
         {
             "position": "Treasurer",
@@ -45,169 +39,119 @@
             "lastname": "Salazar",
             "email": "cd13@illinois.edu",
             "netid": "",
-            "year": "Sophomore",
-            "major": "CS",
-            "interests": ["Data Science", "Machine Learning", "Natural Language Processing"],
-            "experience": ["i2 Decisions", "Girls who Code"],
-            "hobbies": ["Movies", " Reading"],
-            "fact": "I can monologue about tea for an hour straight :)",
-            "place": "Chennai, India",
-            "ask": [
-                "Getting involved on campus",
-                " Coursework",
-                " Marvel"
-            ],
-            "advice": "Make sure get involved, work hard and get out of your comfort zone, but remember to enjoy what you're doing at the end of the day."
+            "year": "",
+            "major": "",
+            "interests": [],
+            "experience": [],
+            "hobbies": "",
+            "fact": "",
+            "place": "",
+            "ask": "",
+            "advice": ""
         },
         {
             "position": "Corporate Co-Chair",
             "firstname": "Himanshi",
             "lastname": "Sharma",
-            "email": "dpratap2@illinois.edu",
+            "email": "hsharma2@illinois.edu",
             "netid": "hsharma2",
-            "year": "Senior",
-            "major": "CS + Astronomy",
-            "interests": [
-                "Computational Astrophysics",
-                "Data Science",
-                "Natural Language Understanding"
-            ],
-            "experience": ["Microsoft", "Study Abroad in Hong Kong", "Research"],
-            "hobbies": [
-                "Watching movies",
-                " writing postcards",
-                " basic photography",
-                " cleaning"
-            ],
-            "fact": "My calendar has 11 different color coded categories (look, an alliteration!)",
-            "place": "Chandigarh, India",
-            "ask": [
-                "Time management",
-                " involvement opportunities on campus",
-                " stepping outside your comfort zone",
-                " the universe"
-            ],
-            "advice": "Do not compare yourselves to others. Pursue your passions and interests, whatever they may be. Ask people/other students for help. Lastly, if you're not from the area, be prepared for the terrible weather!"
+            "year": "Junior",
+            "major": "Mathematics and Computer Science (minor Econometrics)",
+            "interests": ["Data Analytics", "Machine Learning", "Fin tech"],
+            "experience": ["Microsoft SWE Intern", "CS225 Course Assistant", "Research"],
+            "hobbies": "Running, Working out, Reading",
+            "fact": "I have been scuba diving for 4 years :)",
+            "place": "Bangalore, India",
+            "ask": "Getting involved both inside and outside tech, the internship recruitment process (honestly even if you just want to talk I'm down)",
+            "advice": "Don't stress out too much, we're a part of an industry that is constantly changing and actively trying to learn is the only way to keep up."
         },
         {
             "position": "Corporate Co-Chair",
             "firstname": "Prerana",
             "lastname": "Kiran",
-            "email": "sjain77@illinois.edu",
+            "email": "prajnak2@illinois.edu",
             "netid": "prajnak2",
-            "year": "Junior",
-            "major": "CS",
-            "interests": [
-                "Human-Computer Interaction",
-                "Artificial Intelligence,",
-                "Machine Learning",
-                "Computer Vision",
-                "Bioinformatics",
-                "Data Analytics"
-            ],
-            "experience": ["SAP", "PwC", "Illinois Business Consulting", "Health Care Engineering Systems Center"],
-            "hobbies": [
-                "Dancing",
-                " Traveling",
-                " Swimming",
-                " Skiing",
-                " Reading",
-                " Watching movies"
-            ],
-            "fact": "I'm an adrenaline junkie- I love rollercoasters and watching scary movies, and I've been on the CN Tower Edge Walk in Toronto!",
-            "place": "Naperville, IL",
-            "ask": [
-                "Internships",
-                " Doing research on campus",
-                " Consulting",
-                " Product Management",
-                " Being involved in both CS and non-CS clubs",
-                " Life advice"
-            ],
-            "advice": "It's ok to be selfish sometimes and take the time to focus on your own personal development. Also, make an effort to meet new people (both within and outside of CS), make good connections, and build good relationships with your professors."
+            "year": "",
+            "major": "",
+            "interests": [],
+            "experience": [],
+            "hobbies": "",
+            "fact": "",
+            "place": "",
+            "ask": "",
+            "advice": ""
         },
         {
             "position": "Tech Team Co-Chair",
             "firstname": "Darci",
             "lastname": "Peoples",
-            "email": "alicesf2@illinois.edu",
+            "email": "darciap2@illinois.edu",
             "netid": "darciap2",
-            "year": "Junior",
-            "major": "CS",
-            "interests": ["Software Engineering", "Big Data", "UIUX Design"],
-            "experience": ["Productive Edge", "Coursicle", "Hack4Impact"],
-            "hobbies": [
-                "Dancing",
-                " watching movies",
-                " sleeping",
-                " spending too much money on food"
-            ],
-            "fact": "Sometimes I skip class to go ice skating",
-            "place": "Hawthorn Woods, IL",
-            "ask": ["How to get involved on campus", " scheduling classes", " best boba shops", " not CS 241"],
-            "advice": "Prioritize your mental health and don't be afraid to have fun! Don't drown yourself in schoolwork or extracurriculars - make sure you're passionate about what you're spending your time on."
+            "year": "Senior",
+            "major": "Computer Science",
+            "interests": ["Data Science", "Machine Learning", "Security", "Privacy", "UI/UX"],
+            "experience": ["Facebook", "State Farm", "CS 233 CA", "Girls Who Code", "BAAC"],
+            "hobbies": "Watching YouTube, playing cards & video games, swimming, petting my cat Morton",
+            "fact": "I know how to unicycle, longboard, ripstik, and surf!",
+            "place": "Bloomington, IL",
+            "ask": "Internships, finding resources, class schedules, BIPOC in tech, anything!",
+            "advice": "Find people to work with; it's much better together. Believe in yourself & do not give up. Reach out for help when you need it! Try new things, meet new people, & enjoy your time here :)"
         },
         {
             "position": "Tech Team Co-Chair",
             "firstname": "Melissa",
             "lastname": "Chen",
-            "email": "mihikaa2@illinois.edu",
+            "email": "myc2@illinois.edu",
             "netid": "myc2",
             "year": "Junior",
-            "major": "CS",
-            "interests": "Too many, still exploring!",
-            "experience": ["Qualcomm", "Avaya"],
-            "hobbies": [
-                "Public speaking",
-                " ice skating",
-                " violin"
+            "major": "Computer Science",
+            "interests": ["Artificial Intelligence/Machine Learning", "Systems", "Bioinformatics", "Education", "Privacy"],
+            "experience": [
+                "SWE Intern, Facebook",
+                "PURE",
+                "Co-director, HackIllinois 2020",
+                "Co-chair, Reflections | Projections Content x Diversity Committee",
+                "CA, CS 233",
+                "Girls Who Code",
+                "Former CA, CS 196"
             ],
-            "fact": "I didn't know how to ride a bike until I came to college.",
-            "place": "Dubai, U.A.E",
-            "ask": ["Coursework/class schedules", " proficiency exams", " being an international student", " balancing school work and fun", " anything"],
-            "advice": "Sort of ironic but don't live by other people's advice about how to get through college. Everyone has a unique experience. Take it easy. It may take long, but you'll find your groove eventually :)"
+            "hobbies": "Reading mystery novels, Animal Crossing, puzzle games, exploring coffee shops",
+            "fact": "I once slept for more than 24 hours straight!",
+            "place": "Naperville, IL",
+            "ask": "Classes, getting involved in clubs, research, pretty much anything!",
+            "advice": "Stop comparing yourself with other people. You're going to find your own path through college, and it's not going to look like a lot of other people's. Just because you might not be able to get internships or research your freshman year doesn't mean you're not going to do great things in the world. Instead -- get involved, meet people, and open new doors for yourself, no matter where they might lead."
         },
         {
             "position": "Mentoring Co-Chair",
             "firstname": "Charlie",
             "lastname": "Jung",
-            "email": "dramac4@illinois.edu",
+            "email": "charlie4@illinois.edu",
             "netid": "charlie4",
-            "year": "Senior",
-            "major": "CS + Stats",
-            "interests": ["Data Visualization", "Data Analytics"],
-            "experience": ["Caterpillar", "Ernst & Young"],
-            "hobbies": [
-                "Going to the gym",
-                " cooking",
-                " sudoku puzzles",
-                " gymnastics"
-            ],
-            "fact": "I don't like pizza!",
-            "place": "Naperville, IL",
-            "ask": ["Classes", " adjusting to college", " time management"],
-            "advice": "Find a good friend or study group for each class. It's a great way to clarify any questions, and it makes studying more fun! It also really helps to prepare ahead of time by running through the study material on your own."
+            "year": "",
+            "major": "",
+            "interests": [],
+            "experience": [],
+            "hobbies": "",
+            "fact": "",
+            "place": "",
+            "ask": "",
+            "advice": ""
         },
         {
             "position": "Mentoring Co-Chair",
             "firstname": "Claire",
             "lastname": "Chiu",
-            "email": "dramac4@illinois.edu",
+            "email": "cechiu2@illinois.edu",
             "netid": "cechiu2",
-            "year": "Senior",
-            "major": "CS + Stats",
-            "interests": ["Data Visualization", "Data Analytics"],
-            "experience": ["Caterpillar", "Ernst & Young"],
-            "hobbies": [
-                "Going to the gym",
-                " cooking",
-                " sudoku puzzles",
-                " gymnastics"
-            ],
-            "fact": "I don't like pizza!",
+            "year": "Junior",
+            "major": "Computer Science",
+            "interests": ["Security", "Computer Graphics", "HCI", "Data Visualization"],
+            "experience": ["Prior Social Committee member and Design Chair for WCS", "intern at Microsoft", "CS 125,126,173,225,233"],
+            "hobbies": "Drawing, embroidery, thrifting, gardening (vegetable and houseplant), gaming, watching movies/shows",
+            "fact": "I love houseplants, and have around 30 in my apartment!",
             "place": "Naperville, IL",
-            "ask": ["Classes", " adjusting to college", " time management"],
-            "advice": "Find a good friend or study group for each class. It's a great way to clarify any questions, and it makes studying more fun! It also really helps to prepare ahead of time by running through the study material on your own."
+            "ask": "Classes, internship, getting involved, mental health, struggling with school",
+            "advice": "Don't worry about how well other people are doing- just focus on your own personal growth and learning. Be kind to yourself and take care of your mental health!"
         },
         {
             "position": "Infrastructure Chair",
@@ -215,19 +159,15 @@
             "lastname": "Zhou",
             "email": "xz33@illinois.edu",
             "netid": "xz33",
-            "year": "Sophomore",
-            "major": "CS",
+            "year": "Junior",
+            "major": "Computer Science",
             "interests": [
                 "Web Development",
-                "Data Science",
                 "UI/UX",
                 "Software Engineering"
             ],
-            "experience": ["Graybar (Research Park)"],
-            "hobbies": [
-                "Traveling",
-                " drawing"
-            ],
+            "experience": ["Graybar (Research Park)", "CS 225 CA", "Facebook"],
+            "hobbies": "watching movies and shows, drawing, eating :P",
             "fact": "I can write with either hand.",
             "place": "Westmont, IL",
             "ask": [
@@ -242,71 +182,49 @@
             "position": "Social Chair",
             "firstname": "Kathy",
             "lastname": "Zhou",
-            "email": "aishani2@illinois.edu",
+            "email": "kathy2@illinois.edu",
             "netid": "kathy2",
-            "year": "Sophomore",
-            "major": "CS",
-            "interests": ["Machine Learning", "Mathematical applications in cs"],
-            "experience": ["Anant Corporation", "Google"],
-            "hobbies": [
-                "yoga",
-                " dance (all types!)",
-                " running",
-                " Netflix :)"
-            ],
-            "fact": "After I graduate, I want to take an east Asia tour. I want to study abroad my second semester of junior year in Australia, Sweden, or Switzerland. I used to hate running with a passion, but now run almost everyday. I was part of an Indian classical dance school for 13 years, and still try to perform/teach/attend classes during breaks at home.",
-            "place": "Northern Virginia",
-            "ask": [
-                "Ways to get involved with CS RSOs as a freshmen",
-                " how to adjust to uiuc as an out of state student",
-                " classes I could help out with: data structures (CS 225), linear algebra (Math 415), calculus (Calc I, II, III), stats and probability (CS 361)"
-            ],
-            "advice": "In general, just keep an open mind about everything: friends, classes, ways to spend free time. If you're like me and out of state, this will be especially helpful when you are coming into UIUC knowing 0 people. Join as many organization as possible, whether that is a sorority/fraternity, sports, or academic RSOs. Also, work smarter, not harder and maintain a healthy balance between work and fun so you can guarantee unforgettable years here."
+            "year": "Junior",
+            "major": "Computer Science",
+            "interests": ["Computer Graphics", "HCI", "Education", "Security"],
+            "experience": ["Reflections | Projections", "HackIllinois", "WIE"],
+            "hobbies": "drawing, running, baking",
+            "fact": "I have a Big Weakness for cute stationery.",
+            "place": "Naperville, IL",
+            "ask": "classes, getting involved, mental health, struggling with school",
+            "advice": "Don't worry about how other people are doing and focus on yourself. Everyone does things at their own pace, but also don't be afraid to see no and try new things!"
         },
         {
             "position": "Design Chair",
             "firstname": "Emily",
             "lastname": "Laughead",
-            "email": "cechiu2@illinois.edu",
+            "email": "elaugh2@illinois.edu",
             "netid": "elaugh2",
-            "year": "Sophomore",
-            "major": "CS",
-            "interests": ["Computer graphics", "AI", "Security"],
-            "experience": ["Personal Projects (GoSquirrel, Travlog)", "Study Abroad in Hiroshima", "Japan"],
-            "hobbies": [
-                "Drawing",
-                " cooking",
-                " growing plants",
-                " thrift flipping",
-                " playing games"
-            ],
-            "fact": "I studied abroad in Japan and learned how to properly wear kimono and yukata from my host mother, who was a professional kimono dressing instructor!",
-            "place": "Naperville, IL",
-            "ask": [
-                "How to get through freshman year, CS125, CS126, CS173"
-            ],
-            "advice": "Stop comparing yourself to other people or relying on others to validate you- as long as you’re proud of the progress you’re making, that’s all that matters, and the only person that needs to validate you is yourself!"
+            "year": "",
+            "major": "",
+            "interests": [],
+            "experience": [],
+            "hobbies": "",
+            "fact": "",
+            "place": "",
+            "ask": "",
+            "advice": ""
         },
         {
             "position": "Outreach Chair",
             "firstname": "Ariane",
             "lastname": "Taraki",
-            "email": "nikitaa4@illinois.edu",
+            "email": "atarak2@illinois.edu",
             "netid": "atarak2",
             "year": "Sophomore",
-            "major": "CS",
-            "interests": ["Human and Social Impact", "Computational Neuroscience", "Cybersecurity", "I honestly don’t really know"],
-            "experience": ["Reflections|Projections"],
-            "hobbies": [
-                "Drawing",
-                " fashion",
-                " movies",
-                " keeping up with politics and the news"
-            ],
-            "fact": "I lived in Gurgaon, India for four years!",
-            "place": "Austin, Texas",
-            "ask": ["Getting involved as a freshman", " participating in WCS outreach (obviously)"],
-            "advice": "Get involved! Getting involved with WCS and R|P were some of the most fulfilling experiences of my freshman year. College isn’t just for learning technical skills, and extracurriculars are how you learn soft skills and grow as an individual and professional. Also, upperclassmen are friendly! Branch out and talk to as many people as you can."
+            "major": "Computer Science and Anthropology",
+            "interests": ["Cybersecurity", "Natural Language Processing", "Social and Community Impact", "much more to learn!"],
+            "experience": ["Hall council (Outreach)", "more to come this year!"],
+            "hobbies": "Makeup, Netflix, Traveling, talking with friends :)",
+            "fact": "I was going to study abroad this summer (cancelled because of COVID), so I plan on working abroad for a couple years after college instead!",
+            "place": "Skokie, IL",
+            "ask": "CS+X help, getting involved in WCS as a freshman, mental health support, anything you need help with!",
+            "advice": "Don't think that you need to be the best at everything you do, most of the time you wont be the best, and that's okay. You can still be successful, happy, and good at what you do! Don't compare yourself to others, and just think about your own personal goals and achievements! Be nice to yourself!!"
         }
     ]
 }
