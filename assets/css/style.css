@@ -419,18 +419,25 @@ a:hover {
     object-fit: cover;
 }
 
-.officer-box {
-    border: 0;
-    cursor: pointer;
-    width: 100%;
-    height: 50%;
+.officer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.officer-box img {
-    width: 100%;
-    height: 540px;
+.officer-info {
+    cursor: pointer;
+    width: fit-content;
+    margin: 40px;
+}
+
+.officer-info img {
     object-fit: cover;
     object-position: 50% 50%;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: white solid 5px;
 }
 
 .label-default {

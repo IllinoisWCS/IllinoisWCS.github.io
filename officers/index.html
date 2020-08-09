@@ -69,15 +69,13 @@
     </nav>
 
     <script type="text/x-mustache" id="officerTemplate">
-        <div class="row padding">
+        <div class="officer-wrapper">
             {{#admin}}
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail officer-box">
-                    <img src="../assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
-                    <div class="caption">
-                        <h4 align="center">{{firstname}} {{lastname}}</h4>
-                        <p align="center">{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o"></i></a></p>
-                    </div>
+            <div class="officer-info">
+                <img src="../assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
+                <div class="text-center">
+                    <h4>{{firstname}} {{lastname}}</h4>
+                    <p>{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o"></i></a></p>
                 </div>
             </div>
             <div class="modal fade" id="{{netid}}">
