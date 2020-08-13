@@ -99,6 +99,27 @@ a:hover {
     padding: 0 10% 0 10%;
 }
 
+.content-header {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 1192px) {
+    .content-header {
+        margin-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 996px) {
+    .content-header {
+        margin-top: 120px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .content-header {
+        margin-top: 40px;
+    }
+}
 
 /* Individual Divs */
 
@@ -225,7 +246,7 @@ a:hover {
     padding: 5% 5%;
 }
 
-.resource-header {
+.resource-header.content-header {
     padding-bottom: 5%;
 }
 
