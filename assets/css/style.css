@@ -171,6 +171,10 @@ a:hover {
     }
 }
 
+.home-content {
+    padding: 10px 100px;
+}
+
 .wcs-welcome {
     display: flex;
     flex-direction: column;
@@ -257,9 +261,9 @@ a:hover {
 }
 
 #members {
-    padding: 2%;
+    /* padding: 2%;
     padding: 5%;
-    padding-bottom: 20px;
+    padding-bottom: 20px; */
 }
 
 #members h1 {
@@ -272,6 +276,50 @@ a:hover {
     margin-right: 5%;
     font-size: 1.28em;
     text-align: center;
+}
+
+.stay-connected {
+    font-size: 1.28em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+    /* margin-left: 50px; */
+    /* margin-right: 5%; */
+    
+}
+
+.bullet-point {
+    width: 7px;
+    height: 7px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.wcs-bg-pink {
+    background-color: #F2777A;
+}
+
+.wcs-pink {
+    color: #F2777A;
+}
+
+.wcs-bg-blue {
+    background-color: #4AA9AD;
+}
+
+.wcs-blue {
+    color: #4AA9AD;
+}
+
+.stay-connected-link {
+    color: black
+}
+
+.text-underline {
+    text-decoration: underline;
 }
 
 #resources {
