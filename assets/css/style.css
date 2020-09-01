@@ -172,7 +172,7 @@ a:hover {
 }
 
 .home-content {
-    padding: 10px 100px;
+    padding: 30px 100px;
 }
 
 .wcs-welcome {
@@ -283,7 +283,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
+    padding-top: 8%;
     /* margin-left: 50px; */
     /* margin-right: 5%; */
     
