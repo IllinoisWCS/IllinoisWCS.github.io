@@ -346,6 +346,25 @@ a:hover {
     text-align: center;
 }
 
+#explore {
+    margin-top: 70px;
+}
+
+.explore-content {
+    margin: 40px 20px 40px 70px;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+}
+
+.explore-content .intro-text {
+    margin-right: 80px;
+}
+
+.explore-flyer {
+    width: 400px;
+}
+
 #calendar {
     margin-top: 50px;
 }
