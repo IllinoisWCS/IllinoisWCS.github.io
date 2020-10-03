@@ -357,12 +357,46 @@ a:hover {
     font-size: 16px;
 }
 
+.monthly-content {
+    font-size: 16px;
+    margin: 40px 70px;
+}
+
+.monthly-content .intro {
+    margin-bottom: 50px;
+}
+
 .explore-content .intro-text {
     margin-right: 80px;
 }
 
+.session {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.faculty {
+    margin-right: 40px;
+}
+
+.faculty .description {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.faculty .name {
+    font-size: 23px;
+    font-weight: bold;
+}
+
 .explore-flyer {
     width: 400px;
+}
+
+.faculty-image {
+    width: 300px;
 }
 
 #calendar {
