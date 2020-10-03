@@ -36,50 +36,12 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <nav class="navbar navbar-default navbar-fixed-top mainNav">
-        <div class="container-fluid">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-                <a class="navbar-brand" href="../">
-                    <img src="../assets/img/wcs/logo.png" class="img-responsive" />
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="nav navbar-nav">
-
-                    <li>
-                        <a href="../calendar/index.html">Calendar</a>
-                    </li>
-                    <li>
-                        <a href="../resources/index.html">Resources</a>
-                    </li>
-                    <li>
-                        <a href="../officers/index.html">Officers</a>
-                    </li>
-                    <li>
-                        <a href="http://points.illinoiswcs.org/">Points</a>
-                    </li>
-                    <li>
-                        <a href="https://script.google.com/a/illinois.edu/macros/s/AKfycbz7WLZ7LcMD8GVpW9dDYPc0pdLf9TkxK_74JJBoGoxz9fDC0-xi/exec">Resume Book</a>
-                    </li>
-                    <li>
-                        <a href="../sponsors/index.html">Sponsors</a>
-                    </li>
-                    <!-- <li>
-                        <a href="../alumni/index.html">Alumni</a>
-                    </li> -->
-                    <li>
-                        <a href="../contact/index.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar"></div>
+    <script>
+        $(function() {
+           $('#navbar').load('/components/navbar.html');
+        });
+    </script>
 
     <div class="row padded" id="techteam-title">
         <div class="col-sm-offset-1 col-md-10">
