@@ -3,7 +3,7 @@ $(document).ready(function() {
     /**
      * Calendar events
      */
-    var eventsUrl = 'https://script.google.com/macros/s/AKfycbysZFMo4SZfZCtl9swTqD3M1PvyhLBD71qcrHheuoziX9FpJtpZ/exec';
+    var eventsUrl = 'https://script.google.com/a/illinois.edu/macros/s/AKfycbwjW5AGzBRydqUY0Bs1J6SpYbC3q4U7KY9RcJyxzLkyzUp9EyBG/exec';
     var events = [];
     $.get(eventsUrl, function(data) {
         events = data.slice(0, 5);
