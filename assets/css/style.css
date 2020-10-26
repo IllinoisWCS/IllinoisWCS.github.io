@@ -423,6 +423,12 @@ a:hover {
     font-size: 16px;
 }
 
+#officehours .officer-shift {
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 60px;
+}
+
 #helpme {
     margin-top: 50px;
 }
