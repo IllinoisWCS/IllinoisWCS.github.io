@@ -377,6 +377,14 @@ a:hover {
     margin-bottom: 60px;
 }
 
+.tba {
+    text-align: center;
+    font-size: 24px;
+    padding-top: 10px;
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+}
+
 .faculty {
     margin-right: 40px;
 }
@@ -395,8 +403,13 @@ a:hover {
     width: 350px;
 }
 
-.faculty-image {
-    width: 300px;
+/* .faculty-image {
+    border: 1px solid #E0E0E0;
+    padding: 5px;
+} */
+
+.faculty-image img {
+    width: 250px;
 }
 
 #calendar {
