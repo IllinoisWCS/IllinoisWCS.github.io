@@ -370,6 +370,10 @@ a:hover {
     margin-right: 80px;
 }
 
+.explore-content .intro-text p {
+    margin-bottom: 20px;
+}
+
 .session {
     display: flex;
     flex-direction: row;
