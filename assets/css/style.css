@@ -96,7 +96,8 @@ a:hover {
 }
 
 .navbar .container-fluid {
-    padding: 0 10% 0 10%;
+    /* padding: 0 5% 0 5%; */
+    padding: 0 50px;
 }
 
 .content-header {
