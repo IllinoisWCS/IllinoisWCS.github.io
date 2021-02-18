@@ -103,19 +103,19 @@ a:hover {
     margin-top: 20px;
 }
 
-@media only screen and (max-width: 1192px) {
+@media only screen and (max-width: 1336px) {
     .content-header {
         margin-top: 70px;
     }
 }
 
-@media only screen and (max-width: 996px) {
+@media only screen and (max-width: 1147px) {
     .content-header {
         margin-top: 120px;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .content-header {
         margin-top: 40px;
     }
@@ -556,7 +556,7 @@ a:hover {
 }
 
 #officers h4 {
-    padding-bottom: 5%;
+    /* padding-bottom: 5%; */
 }
 
 @media (max-width: 749px) {
@@ -586,7 +586,7 @@ a:hover {
 .officer-info {
     cursor: pointer;
     width: fit-content;
-    margin: 40px;
+    margin: 30px 40px;
 }
 
 .officer-info img {
