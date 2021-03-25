@@ -16,7 +16,8 @@ $(document).ready(function() {
             li.append('<h6>' + events[i].title + '</h6>');
             li.append('<span>' + start.toDateString() + ' at ' + start.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '</span>');
             if (events[i].location.length > 0) {
-                li.append('<br><span>' + ' Location: ' + events[i].location + '</span>');
+                loc_with_links = events[i].location.replace(/(?:(https?\:\/\/[^\s]+))/mg,'<a href="$1" target="_blank">$1</a>'); 
+                li.append('<br><span>' + ' Location: ' + loc_with_links + '</span>');
             }
 
             $('#events-list').append(li);
