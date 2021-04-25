@@ -334,9 +334,14 @@ a:hover {
 }
 
 .resource-header.content-header {
-    padding-bottom: 5%;
+    padding-bottom: 2rem;
 }
 
+.wcs-career-list {
+    margin-left: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 .resources-page {
     font-size: 15px;
@@ -875,5 +880,5 @@ footer a {
     display: flex;
     flex-wrap: nowrap;
     flex-shrink: 0;
-    min-height: 40vh;
+    min-height: 50vh;
 }
