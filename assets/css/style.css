@@ -808,3 +808,67 @@ footer a {
     margin-left: 15%;
     margin-right: 15%;
 }
+
+/* Custom CSS */
+
+/* Reference code: 
+ * https://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3
+ * https://www.codeply.com/go/bp/74926
+ */
+
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane {
+  display: none;
+}
+
+.tab-content > .active {
+  display: block;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+
+.tabs-left > .nav-tabs {
+  margin-right: 30px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+
+.custom-tabs > .nav-tabs {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.custom-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    min-height: 40vh;
+}
