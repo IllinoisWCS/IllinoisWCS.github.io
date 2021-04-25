@@ -337,6 +337,11 @@ a:hover {
     padding-bottom: 5%;
 }
 
+
+.resources-page {
+    font-size: 15px;
+}
+
 .panel {
     border: none;
 }
