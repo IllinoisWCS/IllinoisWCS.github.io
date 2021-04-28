@@ -44,9 +44,9 @@
 
 
     <div id="resources" class="resources-page">
-        <div class="row padded" id="overview">
+        <div class="row padded">
             <div class="col-sm-offset-1 col-md-10">
-                <h1 class="resource-header content-header" align="center">WCS Career Services</h1>
+                <h1 class="resource-header content-header" align="center">Career Resources</h1>
             </div>
         </div>
         
@@ -54,16 +54,19 @@
             <div class="tabs-left custom-tabs">
                 <ul class="nav nav-tabs">
                     <li class="active">
-                        <a href="#career-services" data-toggle="tab">Career Services</a>
+                        <a href="#career-services" data-toggle="tab">WCS Career Services</a>
                     </li>
                     <li>
                         <a href="#interview-buddy" data-toggle="tab">Interview Buddy System</a>
                     </li>
                     <li>
-                        <a href="#office-hours" data-toggle="tab">Office Hours</a>
+                        <a href="#office-hours" data-toggle="tab">WCS Office Hours</a>
                     </li>
                     <li>
-                        <a href="#career-workshops" data-toggle="tab">Career Workshops</a>
+                        <a href="#career-workshops" data-toggle="tab">WCS Career Workshops</a>
+                    </li>
+                    <li>
+                        <a href="#external-career" data-toggle="tab">External Career Resources</a>
                     </li>
                 </ul>
 
@@ -97,7 +100,7 @@
                     </div>
 
                     <div class="tab-pane" id="interview-buddy">
-                        Try out WCS's Interview Buddy System and practice your interview skills with a buddy. 
+                        Check out WCS's Interview Buddy System and practice your interview skills with a buddy. 
                         Add your contact info & what you’re looking for in an interview buddy 
                         <a href="https://docs.google.com/spreadsheets/d/1ylEUT4xM34kXv9yEP8-Tg4UEJQyj3DMWogKGpmx-uLA/edit#gid=0" target="_blank">
                             here
@@ -112,6 +115,8 @@
                     <div class="tab-pane" id="career-workshops">
                         Come to our career workshop events hosted by Explorations, Mentoring, and more!
                     </div>
+
+                    <div class="tab-pane" id="external-career"></div>
                 </div>
             </div>
         </div>
@@ -122,6 +127,9 @@
     <script>
         $(function() {
            $('#footer').load('/components/footer.html');
+        });
+        $(function() {
+           $('#external-career').load('/resources/external.html');
         });
     </script>
 
