@@ -351,6 +351,12 @@ a:hover {
     border: none;
 }
 
+#career-services .panel-title {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
 .panel .panel-heading {
     border: none;
     background-color: #fff;
