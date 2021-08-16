@@ -4,7 +4,7 @@ IllinoisWCS.github.io
 # About
 
 This is the main website for Women in Computer Science at UIUC.
-Current owner is Alice Fang (@alicesf2).
+Current owner is Anjali Kumar (@anjalik4).
 
 # Pull Requests
 
