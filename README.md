@@ -6,6 +6,10 @@ IllinoisWCS.github.io
 This is the main website for Women in Computer Science at UIUC.
 Current owner is Anjali Kumar (@anjalik4).
 
+# Making Edits
+
+Set up a simple http server to view edits you make locally. [This guide](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) should help with that. Refresh the localhost tab to view changes after saving them in your code editor.
+
 # Pull Requests
 
 Please never commit to master, even if you have permission.
