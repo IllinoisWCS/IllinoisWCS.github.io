@@ -522,6 +522,11 @@ a:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/outreach.jpg");
 }
 
+#social {
+    background-image: url("../img/members/social.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/members/social.jpg");
+}
+
 .col-md-4 img {
     width: 100%;
 }

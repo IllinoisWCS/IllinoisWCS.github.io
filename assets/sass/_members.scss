@@ -61,3 +61,8 @@
   background-image: url('../img/members/outreach.jpg');
   @include gradientBackground('../img/members/outreach.jpg');
 }
+
+#social {
+  background-image: url('../img/members/social.jpg');
+  @include gradientBackground('../img/members/social.jpg');
+}
