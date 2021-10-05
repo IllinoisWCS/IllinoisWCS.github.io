@@ -1,50 +1,55 @@
 {
     "questions": [{
             "id": "where",
-            "question": "Where will the retreat be held?",
-            "answer": "The retreat will be held at the Thomas M. Siebel Center for Computer Science, at 201 N. Goodwin Ave., Urbana, IL 61801. This is the main building where our computer science courses are held."
+            "question": "When is ChicTech?",
+            "answer": "Chictech will be held on November 13 starting from 9am CST to around 5pm CST!"
         },
         {
             "id": "when",
-            "question": "When is it?",
-            "answer": "Chictech will be held Nov. 2nd - 3rd, 2019."
+            "question": "Will ChicTech be in person this year?",
+            "answer": "ChicTech will be held in person and online! Historically, ChicTech has been held in person, but due to safety and health concerns, we will be limiting in person capacity this year to 50 people. However, any high schooler across the country will be fully able to participate online!"
         },
         {
             "id": "cost",
-            "question": "Are there costs associated with attending the retreat?",
-            "answer": "Nope! Once you've arrived at our retreat, it's absolutely free!"
+            "question": "How do I register?",
+            "answer": "Registration will be open starting October 11th and be open until November 5th."
         },
         {
             "id": "registration",
-            "question": "When will registration open?",
-            "answer": "Registration will open September 20th and close October 18th."
+            "question": "How will I know whether I will be participating online or in person?",
+            "answer": "We will be accepting in person participants on a rolling basis throughout the registration period. If you do not receive an email from illinoiswcs.outreach@gmail.com by October 29th notifying that you can attend in person, please assume that you will be attending over zoom."
 
         },
         {
             "id": "accept",
-            "question": "How do I know if I'm accepted into the retreat?",
-            "answer": "We will be sending out emails by October 21st with decisions about your acceptance."
+            "question": "What are the precautions that are being taken for in person attendees?",
+            "answer": "For anyone attending in person, masks are required to be worn at all times. Any food that is served will be individually packaged and eaten outside if the weather is nice, in a large open space otherwise. We have reserved multiple working spaces within the building and our keynote will be held in the largest classroom within the building to ensure that social distancing regulations can be followed."
         },
         {
             "id": "programming",
-            "question": "Is any prior programming experience required?",
-            "answer": "No, you do not have to have programming experience prior to attending our retreat. We will provide three different workshop track options, and there is an option that requires no previous experience. Just please make sure to mark this on the registration form."
+            "question": "Do I need to have prior programming experience?",
+            "answer": "No! Our goal is to teach you everything you need to know regardless of your background knowledge in programming or computer science to help you build a project completely from scratch that you can be proud of and show off to your friends and family."
         },
         {
             "id": "pack",
-            "question": "What should I pack?",
-            "answer": "Since we are an overnight retreat, a sleeping bag, pillow, clothes and pajamas, and necessary toiletries should be sufficient. If you have a sleeping mat that you would like to use, that would be great to bring as well!"
+            "question": "I am not a high school student, can I still attend?",
+            "answer": "Yes! As long as you are a student between the grades of K - 12, you can register to attend. Our goal is to create a fun experience for everyone and help you build a project that you can be proud of."
         },
         {
             "id": "parking",
             "heading": "parkingH",
-            "question": "I am going to be driving to the retreat. Where can I park?",
-            "answer": "There will be places where you can park for free! Parking is available directly south and northeast of Siebel Center in Lot B2 (on Springfield Avenue between Mathews & Goodwin) and Lot B18 (Harvey Street between Clark and Main), respectively. For Lot B2, go half a block farther from Siebel Center and enter on your right. For Lot B18, from University Ave make a left turn onto Harvey St. Go about a block and a half. The parking lot will be on your right."
+            "question": "Are there costs to attending?",
+            "answer": "No! Once you have registered, that is all you have to do. There are no costs associated with being part of our event."
         },
         {
             "id": "middle",
-            "question": "I have a middle schooler who wants to attend. Can she?",
-            "answer": "We are first opening our retreat to high school students, but we may accept middle schoolers if there are still spots left. If you have a middle schooler who wants to attend, go ahead and write that in on the registration form where it asks for the year in school. We will notify you by October 21st about whether or not you were accepted!"
+            "question": "I have other questions or concerns. How can I reach you?",
+            "answer": "You can reach us by emailing illinoiswcs.outreach@gmail.com!"
+        },
+        {
+            "id": "middle",
+            "question": "I am attending online, how can I join the zoom sessions?",
+            "answer": "We will be providing more information as the date of the event approaches as well as post Zoom information on this website!"
         }
     ]
 }
