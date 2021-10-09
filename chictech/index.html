@@ -31,63 +31,20 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <nav class="navbar navbar-default navbar-fixed-top mainNav">
-        <div class="container-fluid">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-                <a class="navbar-brand" href="/">
-                    <img src="../assets/img/wcs/logo.png" class="img-responsive" />
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="nav navbar-nav">
-
-                    <li>
-                        <a href="../calendar/index.html">Calendar</a>
-                    </li>
-                    <li>
-                        <a href="../resources/index.html">Resources</a>
-                    </li>
-                    <li>
-                        <a href="../officers/index.html">Officers</a>
-                    </li>
-                    <li>
-                        <a href="http://points.illinoiswcs.org/">Points</a>
-                    </li>
-                    <li>
-                        <a href="https://script.google.com/a/illinois.edu/macros/s/AKfycbz7WLZ7LcMD8GVpW9dDYPc0pdLf9TkxK_74JJBoGoxz9fDC0-xi/exec">Resume Book</a>
-                    </li>
-                    <li>
-                        <a href="../sponsors/index.html">Sponsors</a>
-                    </li>
-                    <!-- <li>
-                        <a href="../alumni/index.html">Alumni</a>
-                    </li> -->
-                    <li>
-                        <a href="../growth/index.html">Growth</a>
-                    </li>
-                    <li>
-                        <a href="../contact/index.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar"></div>
+    <script>
+        $(function() {
+           $('#navbar').load('/components/navbar.html');
+        });
+    </script>
     <div class="row padded" id="helpme">
         <div class="col-sm-offset-1 col-md-10">
             <h1 align="center">Overview</h1>
-            <p>Our annual ChicTech retreat is part of WCS’s outreach effort to inspire girls to pursue an education in computer science! This retreat invites about seventy high schoolers to stay overnight on campus and get a taste of the different opportunities
-                in computer science, with no prior experience needed! Over the course of the retreat, each participant will attend fun computer science workshops. The students will also get to attend a talk from a UIUC professor and participate in a Q&A
-                with current undergraduate students. Our goal for the retreat is for the students to understand that Computer Science is for everyone, and to leave the retreat with a new perspective on the field.</p>
+            <p>ChicTech is a full day event dedicated to introduce high schoolers to Computer Science by teaching them to make their own project to show off to friends and family. This year, we will be going through how to make your own website and data visualization using Github Pages, Jekyll, and d3.js! We will be having <a href="https://waf.cs.illinois.edu/" target="_blank">Professor Wade Fagen-Ulmschneider</a>, the creator of many visualizations used by news organizations and the government, as a keynote speaker and teaching the data visualization portion.</p>
 
             <br>
             <br>
-            <p align="center">Applications for ChicTech 2019 are closed.</p>
+            <p align="center">Stay tuned for ChicTech 2021 applications!</p>
         </div>
     </div>
 
@@ -180,7 +137,7 @@
     </script>
 
 
-    <h1 align="center">Schedule</h1>
+    <!-- <h1 align="center">Schedule</h1>
 
     <h3 align="center">November 2nd</h3>
     <table class="table table-striped" id="chictech-schedule">
@@ -210,7 +167,7 @@
         <tbody id="agendaDay2" role="tablist" aria-multiselectable="true">
 
         </tbody>
-    </table>
+    </table> -->
 
 
 
