@@ -12,7 +12,7 @@
         {
             "id": "cost",
             "question": "How do I register?",
-            "answer": "Registration will be open starting October 11th and be open until November 5th."
+            "answer": "Registration is open from October 11th until November 5th."
         },
         {
             "id": "registration",
@@ -37,17 +37,17 @@
         },
         {
             "id": "parking",
-            "heading": "parkingH",
+            "heading": "parking",
             "question": "Are there costs to attending?",
             "answer": "No! Once you have registered, that is all you have to do. There are no costs associated with being part of our event."
         },
         {
-            "id": "when",
+            "id": "middle",
             "question": "I have other questions or concerns. How can I reach you?",
             "answer": "You can reach us by emailing illinoiswcs.outreach@gmail.com!"
         },
         {
-            "id": "when",
+            "id": "online",
             "question": "I am attending online, how can I join the zoom sessions?",
             "answer": "We will be providing more information as the date of the event approaches as well as post Zoom information on this website!"
         }
