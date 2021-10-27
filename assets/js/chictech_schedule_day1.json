@@ -1,54 +1,33 @@
 {
     "events": [{
-            "time": "9:30 AM",
-            "what": "Check-in & Breakfast",
-            "where": "Siebel Atrium"
+            "time": "9:00 AM",
+            "what": "Check In and Mingle!",
+            "where": "TBD"
         },
         {
-            "time": "10:30 AM",
-            "what": "Introductions",
-            "where": "Balcony"
+            "time": "10:00 AM",
+            "what": "Making Your Own Website!",
+            "where": "TBD"
         },
         {
-            "time": "11:30 AM",
-            "what": "Student Panel Q&A",
-            "where": "Siebel 2405"
-        },
-        {
-            "time": "12:30 AM",
+            "time": "12:00 PM",
             "what": "Lunch",
-            "where": "Siebel Atrium"
+            "where": "TBD"
         },
         {
-            "time": "1:45 PM",
-            "what": "Workshop #1",
-            "where": "Basement Labs"
+            "time": "1:00 PM",
+            "what": "Data Visualization Workshop",
+            "where": "Siebel 1404"
         },
         {
-            "time": "3:45 PM",
-            "what": "Activities",
-            "where": "Siebel 2405"
-        },
-
-        {
-            "time": "5:15 PM",
-            "what": "Speaker: Professor Sarita Adve",
-            "where": "Siebel 2405"
+            "time": "4:00 PM",
+            "what": "Why Data Visualization",
+            "where": "TBD"
         },
         {
-            "time": "6:00 PM",
-            "what": "Dinner",
-            "where": "Siebel Atrium"
-        },
-        {
-            "time": "7:00 PM",
-            "what": "Girls Night",
-            "where": "Siebel 2405"
-        },
-        {
-            "time": "10:30 PM",
-            "what": "Bedtime",
-            "where": "Sleeping rooms"
+            "time": "5:00 PM",
+            "what": "Closing",
+            "where": "TBD"
         }
     ]
 }
