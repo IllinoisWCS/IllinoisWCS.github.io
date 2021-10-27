@@ -2,27 +2,32 @@
     "events": [{
             "time": "9:00 AM",
             "what": "Wake up & Breakfast",
-            "where": "Siebel Atrium"
+            "where": "TBD"
         },
         {
-            "time": "10:15 AM",
-            "what": "Workshop #2",
-            "where": "Basement Labs"
+            "time": "10:00 AM",
+            "what": "Making Your Own Website!",
+            "where": "TBD"
         },
         {
-            "time": "12:15 PM",
-            "what": "Lunch with Parents",
-            "where": "Siebel Atrium"
+            "time": "12:00 PM",
+            "what": "Lunch Break!",
+            "where": "TBD"
         },
         {
             "time": "1:00 PM",
-            "what": "Corporate Speakers: Google",
-            "where": "Siebel 1404"
+            "what": "Data Visualization Workshop",
+            "where": "TBD"
         },
         {
-            "time": "2:00 PM",
-            "what": "End of retreat",
-            "where": ""
+            "time": "4:00 PM",
+            "what": "Why Data Visualization?",
+            "where": "TBD"
+        },
+        {
+            "time": "5:00 PM",
+            "what": "Closing",
+            "where": "TBD"
         }
     ]
 }
