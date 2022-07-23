@@ -627,10 +627,16 @@ a:hover {
 
 .label-default {
     background-color: #e26269;
+    white-space: initial;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 .label-primary {
     background-color: #68c7cb;
+    white-space: normal;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 #outreachMain {
