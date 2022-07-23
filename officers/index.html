@@ -24,6 +24,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
     <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -46,8 +47,8 @@
             <div class="officer-info">
                 <img src="../assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
                 <div class="text-center">
-                    <h4>{{firstname}} {{lastname}}</h4>
-                    <p>{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o"></i></a></p>
+                    <h4>{{name}}</h4>
+                    <p>{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o" aria-hidden=true></i></a></p>
                 </div>
             </div>
             <div class="modal fade" id="{{netid}}">
@@ -55,7 +56,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title">{{firstname}} {{lastname}} - {{position}}</h4>
+                            <h4 class="modal-title">{{name}} - {{position}}</h4>
                         </div>
                         <div class="modal-body">
                             <div class="row">
@@ -67,14 +68,13 @@
                                     <p><b>Major: </b>{{major}}</p>
                                     <p><b>Year: </b>{{year}}</p>
                                     <p><b>From: </b>{{place}}</p>
-                                    <p><b>Experiences: </b> {{#experience}}
-                                        <span class="label label-default">{{.}}</span> {{/experience}}
+                                    <p><b>Involvements: </b> {{#involvements}}
+                                        <span class="label label-default">{{.}}</span> {{/involvements}}
                                     </p>
                                     <p><b>Interests: </b> {{#interests}}
                                         <span class="label label-primary">{{.}}</span> {{/interests}}
                                     </p>
                                     <p><b>Hobbies: </b>{{hobbies}}</p>
-                                    <p><b>Ask Me About: </b>{{ask}}</p>
                                     <p><b>Fun Fact: </b>{{fact}}</p>
                                     <p><b>Advice: </b>{{advice}}</p>
                                 </div>
