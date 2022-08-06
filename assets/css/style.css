@@ -182,13 +182,19 @@ a:hover {
 
 .wcs-welcome {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 40px;
 }
 
 .wcs-welcome .header {
     margin-bottom: 30px;
+    width: 70%;
+    margin-right: 5%;
+}
+
+.wcs-welcome p {
+    font-size: 16px;
 }
 
 .wcs-video-wrapper {
@@ -214,7 +220,7 @@ a:hover {
 
 .member-subheaders {
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     margin-top: 3%;
 }
 
