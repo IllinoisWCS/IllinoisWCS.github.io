@@ -180,6 +180,11 @@ a:hover {
     padding: 30px 100px;
 }
 
+.home-content .carousel-img {
+    width: 100%;
+    height: 400px !important;
+}
+
 .wcs-welcome {
     display: flex;
     flex-direction: row;
