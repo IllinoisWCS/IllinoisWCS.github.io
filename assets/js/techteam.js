@@ -32,18 +32,13 @@ $(document).ready(function() {
     var events = [];
     $.get(eventsUrl, function(data) {
         events = data;
-        console.log(events);
         $.each(events, function(i) {
 
-
             var tr = $('<tr/>');
-            // .addClass('list-group-item');
             let creator = events[i].creator;
 
             var added = false;
-            console.log("creator: ", creator);
             if (creator.includes("mihikaa2@illinois.edu") || creator.includes("alicesf2@illinois.edu") || creator.includes("annavb2@illinois.edu")) {
-                console.log("inside");
                 let title = events[i].title;
                 tr.append('<th scope="row" style="font-weight:400">' + title + '</th>');
 
@@ -58,18 +53,12 @@ $(document).ready(function() {
                     tr.append('<td>' + start.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' - ' + end.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + '</td>');
                 }
 
-
                 added = true;
-
-
             }
 
             if (added) {
                 $('#upcomingTT').append(tr);
             }
-
-
-
         });
     });
 

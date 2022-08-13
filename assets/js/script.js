@@ -10,13 +10,6 @@ $(document).ready(function () {
     if (events.length === 0) {
       var li = $("<li/>").addClass("list-group-item");
       li.append("<h6>" + "No upcoming events this week. Check again next week!" + "</h6>");
-    //   li.append(
-    //     "<span>" +
-    //       start.toDateString() +
-    //       " at " +
-    //       start.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) +
-    //       "</span>"
-    //   );
       $("#events-list").append(li);
     }
     $.each(events, function (i) {
