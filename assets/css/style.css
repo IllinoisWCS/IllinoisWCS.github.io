@@ -588,6 +588,10 @@ a:hover {
     border-color: #eea236;
 }
 
+#sponsors .sponsor-level .silver {
+    background-color: #c0c0c0 !important;
+}
+
 #sponsors .sponsor-level .bronze {
     background-color: #d9534f;
     border-color: #d43f3a;
