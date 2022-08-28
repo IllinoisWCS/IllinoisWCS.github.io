@@ -566,6 +566,33 @@ a:hover {
     justify-content: center;
 }
 
+#sponsors .sponsor-level .level-indicator {
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    padding: 6px 12px;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+}
+
+#sponsors .sponsor-level .platinum {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+#sponsors .sponsor-level .gold {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+#sponsors .sponsor-level .bronze {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
 #sponsors .sponsor-image {
     display: flex;
     justify-content: center;
