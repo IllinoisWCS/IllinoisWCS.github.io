@@ -1,0 +1,72 @@
+
+
+.card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  /* height: null; */
+  word-wrap: break-word;
+  background-color: white;
+  background-clip: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.125);
+  border-radius: .25rem;
+}
+
+.card hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.card .list-group {
+  border-top: inherit;
+  border-bottom: inherit;
+}
+
+.card .list-group :first-child {
+  border-top-width: 0;
+}
+
+.card .list-group :last-child {
+  border-bottom-width: 0;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.card-title {
+  margin-bottom: 1rem * .5;
+}
+
+.card-subtitle {
+  margin-top: -(1rem * .5) * .5;
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link {
+  margin-left: 1rem;
+}
+
+.card-link :hover {
+  text-decoration: none;
+}
+
+.card-header {
+  padding: 1rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.125);
+}
+
+.card-header :first-child {
+  
+}

@@ -27,6 +27,8 @@
   </link>
   <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css">
   </link>
+  <link rel="stylesheet" type="text/css" href="../assets/css/card.css">
+</link>
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
   </link>
 
@@ -54,34 +56,42 @@
         by different companies and can be great networking opportunities. We look forward to seeing you at our next GM!
       </p>
 
-      <table class="table table-striped">
-        <thead>
-          <th scope="col" style="width: 20%;">Date</th>
-          <th scope="col" style="width: 40%">Name</th>
-          <th scope="col" style="width: 20%;">Slides</th>
-          <th scope="col" style="width: 20%;">Recording</th>
-        </thead>
-        <tr>
-          <td>
-            <p>August 29, 2022</p>
-          </td>
-          <td>
-            <p>August GM</p>
-          </td>
-          <td>
-            <p><a
-                href="https://docs.google.com/presentation/d/1iOT3CpfnD3ONK5nLZb6YwdaEFKc8Dmw9uIcBf2h1D6s/edit?usp=sharing"
-                target="_blank">
-                Slides
-              </a></p>
-          </td>
-          <td>
-            <p><a href="https://github.com/IllinoisWCS/git-gud" target="_blank">
-                Github Repo
-              </a></p>
-          </td>
-        </tr>
-      </table>
+      <div class="row">
+
+        <div class="col-sm-6 col-md-4">
+          <div class="card border-white">
+            <div class="card-header">Heading 1</div>
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build
+                on the card
+                title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <div class="card border-white">
+            <div class="card-header">Heading 2</div>
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build
+                on the card
+                title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <div class="card border-white">
+            <div class="card-header">Heading 3</div>
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build
+                on the card
+                title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -90,21 +100,6 @@
     $(function() {
       $('#footer').load('/components/footer.html');
     });
-  </script>
-  <script>
-    (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-51793372-1', 'auto');
-    ga('send', 'pageview');
   </script>
 </body>
 
