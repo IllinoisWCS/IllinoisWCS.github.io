@@ -1,5 +1,5 @@
 
-.meeting-card {
+.event-card {
   width: 100%;
   height: 100%;
   min-height: 300px;
@@ -19,30 +19,30 @@
   border-radius: .25rem;
 }
 
-.meeting-card video {
+.event-card video {
   width: 100%;
   height: 100%;
 }
 
-.meeting-card-body {
+.event-card-body {
   flex: 1 1 auto;
   padding: 1rem;
 }
 
-.meeting-card-title {
+.event-card-title {
   margin-bottom: 1rem * .5;
 }
 
-.meeting-card-subtitle {
+.event-card-subtitle {
   margin-top: -(1rem * .5) * .5;
   margin-bottom: 0;
 }
 
-.meeting-card-text:last-child {
+.event-card-text:last-child {
   margin-bottom: 0;
 }
 
-.meeting-card-header {
+.event-card-header {
   font-family: "Oswald" !important;
   color: #e84c3d;
   font-size: 18px;
@@ -50,7 +50,7 @@
   margin-bottom: 0;
 }
 
-.meeting-card-footer {
+.event-card-footer {
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px;
@@ -58,24 +58,24 @@
   border-top-color: rgba(0, 0, 0, 0.125);
 }
 
-.meeting-card-header-tabs {
+.event-card-header-tabs {
   margin-right: -0.5rem;
   margin-bottom: -0.5rem;
   margin-left: -0.5rem;
   border-bottom: 0;
 }
 
-.meeting-card-header-tabs .nav-link.active {
+.event-card-header-tabs .nav-link.active {
   background-color: rgba(255, 255, 255);
   border-bottom-color: rgba(255, 255, 255);
 }
 
-.meeting-card-header-pills {
+.event-card-header-pills {
   margin-right: -0.5rem;
   margin-left: -0.5rem;
 }
 
-.meeting-card-img-overlay {
+.event-card-img-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -84,7 +84,7 @@
   padding: 1rem;
 }
 
-.meeting-card-img {
+.event-card-img {
   width: 100%;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -92,23 +92,23 @@
   border-bottom-right-radius: 0;
 }
 
-.meeting-card-img-top {
+.event-card-img-top {
   width: 100%;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.meeting-card-img-bottom {
+.event-card-img-bottom {
   width: 100;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.meeting-card-row-group {
+.event-card-row-group {
   padding-top: 50px;
 }
 
-.meeting-card-row {
+.event-card-row {
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: 50px;
