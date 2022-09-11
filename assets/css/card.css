@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-top: 45px;
 }
 
 .event-card {
@@ -10,8 +11,9 @@
   width: fit-content;
   display: flex;
   flex-direction: column;
-
   word-wrap: break-word;
+
+  margin-bottom: 45px;
 
   background-color: white;
   background-clip: border-box;
@@ -23,23 +25,13 @@
 
 .event-card video {
   width: 300px;
-  height: 200px;
+  height: 188px;
 }
 
 .event-card-body {
   flex: 1 1 auto;
   padding: 1rem;
   width: 300px;
-}
-
-.event-card-title {
-  margin-bottom: 1rem * .5;
-  width: 300px;
-}
-
-.event-card-subtitle {
-  margin-top: -(1rem * .5) * .5;
-  margin-bottom: 0;
 }
 
 .event-card-text:last-child {
@@ -53,6 +45,10 @@
   padding: 1rem;
   margin-bottom: 0;
   width: 300px;
+}
+
+.event-card-subheader {
+  
 }
 
 .event-card-footer {
