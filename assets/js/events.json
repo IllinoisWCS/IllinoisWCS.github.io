@@ -1,0 +1,52 @@
+{
+    "event-admin": [
+        {
+            "video name": [],
+            "event image":"code ada team bonding.png",
+            "name": "Code Ada Team Matching Social",
+            "date": "10/11/2022",
+            "slide link": [],
+            "description":"Looking for teammates for Code Ada? Want to brainstorm some project ideas before the hackathon? Come to our second Team Matching Social on October 11th from 5-6pm! We’ll go over some possible project ideas, tips and tricks for the day of, and we’ll be playing some games! We will also have snacks! Stop by to relax, play, and meet new people!"
+        },
+        {
+            "video name": "20220922-git-workshop.mp4",
+            "event image": [],
+            "name": "Git Gud @ Git",
+            "date": "09/22/2022",
+            "slide link": "https://docs.google.com/presentation/d/1ypeJc3I3eklbVBF5hmdLZINVg3UiHA8l2DU2gVdKQXM/edit?usp=sharing",
+            "description": "Want to learn more about using GitHub? Interesed in getting practice with version control and Git? Come Git Gud @ Git at our GitHub workshop! No experience is necessary, and we welcome all ages, majors, and backgrounds."
+        },
+        {
+            "video name":[],
+            "event image":"wcs september gm.PNG",
+            "name":"September General Meeting (with Hubspot)",
+            "date":"09/21/2022",
+            "slide link":"https://docs.google.com/presentation/d/1Yd_23AXKQR-kfRv_a1ZixZBdzwa_8G8kezQfSLP3-is/edit?usp=sharing",
+            "description": "Interested in working in product and engineering? Curious what a day in life for a software engineer or product manager looks like? Come and join WCS for our General Meeting and a panel discussion with HubSpot! We'll start with some general club updates, then dive into our Q&A with SWEs andPMs who will be sharing about their role and experience at HubSpot. Food will be provided."
+        },
+        {
+            "video name":[],
+            "event image":"20220908-board-game-night.PNG",
+            "name":"Board Game Night",
+            "date":"09/08/2022",
+            "slide link":[],
+            "description":"Join WCS for a fun night of board games and cookies! We will start off with speedfriending so you can get to know some new people and then we have a variety of board games for you tochoose from!"
+        },
+        {
+            "video name":[],
+            "event image":"20220831-involvement-fair.png",
+            "name":"Fall 22 Involvement Fair",
+            "date":"08/31/2022",
+            "slide link":"https://docs.google.com/presentation/d/1a82TINeVAdjZ9CGUqA_Mjsq885jXdTg-vqOEeIIM0c8/edit?usp=sharing",
+            "description":"Join us to learn more about WCS' 5 committees, what we do for the broader CScommunity and our members, and how you can get more involved. Here from our committee chairs, on theroles, responsibilities, and application process, and get a chance to meet and get our questions answeredby our committee chairs!"
+        },
+        {
+            "video name":"20220829-gm.mp4",
+            "event image":[],
+            "name":"August General Meeting",
+            "date":"08/29/2022",
+            "slide link":"https://docs.google.com/presentation/d/1jZVRfM1gsCfo1vGSSOTZSNASgerd8D27OTd0YJk6pfs/edit?usp=sharing",
+            "description":"Join us for WCS's first general meeting! We'll be going over some of ourannouncements, progress, committees, and more from the summer and since the start of the school year! Comeby and learn how you can be a member of WCS."
+        }
+    ]
+}

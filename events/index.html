@@ -38,6 +38,7 @@
   <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
   <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
   <script type="text/javascript" src="../assets/js/techteam.js"></script>
+  <script type="text/javascript" src="../assets/js/events.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -57,8 +58,51 @@
         event!
       </p>
 
-      <div class="event-wrapper">
-        <div class="event-card">
+      <script type="text/x-mustache" id="eventTemplate">
+        {{#event-admin}}
+        <div class="event-wrapper" id="allEvents">
+          <div class="event-card">
+            {{#video name}}
+              <video src="../assets/events/{{video name}}" controls></video>
+            {{/video name}}
+            {{^video name}}
+              <video style="display:none" src="../assets/events/{{video name}}" controls></video>
+            {{/video name}}
+
+            {{#event image}}
+              <img src="../assets/events/{{event image}}" />
+            {{/event image}}
+            {{^event image}}
+              <img style="display:none" src="../assets/events/{{event image}}" />
+            {{/event image}}
+
+            <div class="event-card-header">{{name}}</div>
+            <div class="event-card-subheader">{{date}}</div>
+
+            {{#slide link}}
+              <div class="event-card-link"><a
+                  href={{slide link}}
+                  target="_blank">Slides</a>
+              </div>
+            {{/slide link}}
+            {{^slide link}}
+              <div style = "display:none" class="event-card-link"><a
+                href={{slide link}}
+                target="_blank">Slides</a>
+              </div>
+            {{/slide link}}
+
+            <div class="event-card-body">
+              <p class="event-card-text">{{description}}</p>
+            </div>
+          </div>
+        </div>
+          {{/event-admin}}
+      </script>
+
+      <div class="event-wrapper" id="allEvents">
+        <!--previous event info-->
+        <!--<div class="event-card">
           <video src="../assets/events/20220922-git-workshop.mp4" controls></video>
           <div class="event-card-header">Git Gud @ Git</div>
           <div class="event-card-subheader">09/22/2022</div>
@@ -128,8 +172,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </div> -->
+  </div> 
 
   <div id="footer"></div>
   <script>
