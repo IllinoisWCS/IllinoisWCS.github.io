@@ -994,3 +994,6 @@ footer a {
   -moz-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
 }
+td[scope="time"] {
+  background-color: #68c7cb;
+}
