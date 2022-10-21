@@ -44,7 +44,7 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
   <div id="navbar"></div>
   <script>
-    $(function() {
+    $(function () {
       $('#navbar').load('/components/navbar.html');
     });
   </script>
@@ -62,24 +62,24 @@
         {{#event-admin}}
         <div class="event-wrapper" id="allEvents">
           <div class="event-card">
-            {{#video name}}
+            {{#video-name}}
               <video src="../assets/events/{{video name}}" controls></video>
-            {{/video name}}
+            {{/video-name}}
 
-            {{#event image}}
+            {{#event-image}}
               <img src="../assets/events/{{event image}}" />
-            {{/event image}}
+            {{/event-image}}
 
 
             <div class="event-card-header">{{name}}</div>
             <div class="event-card-subheader">{{date}}</div>
 
-            {{#slide link}}
+            {{#slide-link}}
               <div class="event-card-link"><a
                   href={{slide link}}
                   target="_blank">Slides</a>
               </div>
-            {{/slide link}}
+            {{/slide-link}}
 
 
             <div class="event-card-body">
@@ -91,14 +91,14 @@
       </script>
 
       <div class="event-wrapper" id="allEvents">
-  </div> 
+      </div>
 
-  <div id="footer"></div>
-  <script>
-    $(function() {
-      $('#footer').load('/components/footer.html');
-    });
-  </script>
+      <div id="footer"></div>
+      <script>
+        $(function () {
+          $('#footer').load('/components/footer.html');
+        });
+      </script>
 </body>
 
 </html>
