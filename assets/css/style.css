@@ -125,13 +125,21 @@ a:hover {
     margin-top: 40px;
   }
 }
+.homeCarousel { /*how to change height of the imagee aldsjfalksdjf*/
+  height:60%;
+}
+.carouselText { /*for the text*/
+  font-size: 50px;
+  color: white;
+}
 
 /* Individual Divs */
 
+
 #home {
   padding: 5% 0 5% 0;
-  background: url("../img/wcs/new-officers.jpg") no-repeat center center;
-  background-size: cover;
+  background: url("../img/wcs/wcs bits & bytes.jpg") no-repeat center center;
+  background-size: cover; 
   height: 60%;
 }
 
