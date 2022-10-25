@@ -125,8 +125,9 @@ a:hover {
     margin-top: 40px;
   }
 }
-.homeCarousel { /*how to change height of the imagee aldsjfalksdjf*/
-  height:60%;
+.carouselHomeImage{
+  height: 200px;
+  width: 100%;
 }
 .carouselText { /*for the text*/
   font-size: 50px;
