@@ -63,11 +63,11 @@
         <div class="event-wrapper" id="allEvents">
           <div class="event-card">
             {{#video-name}}
-              <video src="../assets/events/{{video name}}" controls></video>
+              <video src="../assets/events/{{video-name}}" controls></video>
             {{/video-name}}
 
             {{#event-image}}
-              <img src="../assets/events/{{event image}}" />
+              <img src="../assets/events/{{event-image}}" />
             {{/event-image}}
 
 
@@ -76,7 +76,7 @@
 
             {{#slide-link}}
               <div class="event-card-link"><a
-                  href={{slide link}}
+                  href={{slide-link}}
                   target="_blank">Slides</a>
               </div>
             {{/slide-link}}
