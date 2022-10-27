@@ -569,53 +569,46 @@ a:hover {
   padding-right: 5%;
   padding-top: 1%;
   padding-bottom: 1.5%;
-  font-size: 16.5px;
+  font-size: 1.28em;
   color: #333333;
 }
 
 #sponsors .sponsor-dropdown {
-  color: #333333;
   text-align: center;
-  padding-bottom: 1%;
-  font-size: 20px;
 }
 
 #sponsors .sponsor-benefits .color-indicator {
-     font-size: 20px;
-     text-align:center;
-     padding-right: 2%;
-     padding-left: 2%;
-     padding-bottom: 2%;
-     font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  font-weight: bolder;
 }
-  
+
 #sponsors .sponsor-benefits .platinum {
-     color: #337ab7;
-     text-align:center
+  color: #337ab7;
+  text-align: center;
 }
 #sponsors .sponsor-benefits .black {
   color: black;
-  text-align:center
+  text-align: center;
 }
 
-  
 #sponsors .sponsor-benefits .gold {
-    color: #f0ad4e;
-     text-align:center;
+  color: #f0ad4e;
+  text-align: center;
 }
-  
+
 #sponsors .sponsor-benefits .silver {
-      color: #808080;
-     text-align:center
-
+  color: #808080;
+  text-align: center;
 }
-  
+
 #sponsors .sponsor-benefits .bronze {
-      color: #d9534f;
-     text-align:center
-
+  color: #d9534f;
+  text-align: center;
 }
-
 
 #sponsors .sponsor-level {
   display: flex;

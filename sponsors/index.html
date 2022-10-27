@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Sponsors</title>
 
     <meta name="description" content="The sponsors of WCS @ Illinois." />
@@ -13,137 +12,208 @@
     <meta property="og:url" content="wcs.illinois.edu" />
     <meta property="og:image" content="" />
 
-    <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico">
+    <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico" />
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mallanna"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/lib/fontawesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
 
-    <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
-    <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/jquery/dist/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/jquery-easing-original/jquery.easing.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/mustache/mustache.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/isotope/dist/isotope.pkgd.min.js"
+    ></script>
     <script type="text/javascript" src="../assets/js/sponsers.js"></script>
     <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
-</head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+        text-align: center;
+        right: auto;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+      }
+      .desc {
+        padding: 15px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <div id="navbar"></div>
     <script>
-        $(function() {
-            $('#navbar').load('/components/navbar.html');
-        });
+      $(function () {
+        $("#navbar").load("/components/navbar.html");
+      });
     </script>
 
     <section id="sponsors">
-        <h1 align="center"  class="content-header">Sponsor Us!</h1>
+      <h1 align="center" class="content-header">Sponsor Us!</h1>
 
+      <div align="center" class="sponsor-call">
+        We are committed to cultivating diverse voices in our student body while
+        maintaining engagement between company representatives and our members
+        in whatever setting that may be. With your contribution, we will plan
+        in-person and hybrid opportunities through which we aim to help members
+        gain confidence in pursuing their ambitions. In turn, you will be able
+        to connect with these dedicated students and gain more recognition
+        within our organization!
+      </div>
 
-        <div align= "center" class="sponsor-call">
-            We are committed to cultivating diverse voices in our
-            student body while maintaining engagement between company representatives and our members in
-            whatever setting that may be. With your contribution, we will plan in-person and hybrid opportunities through
-            which we aim to help members gain confidence in pursuing their ambitions. In turn, you will be able to connect with these dedicated students and gain more recognition within our organization!
+      <div style="text-align: center; padding-bottom: 20px">
+        <div class="dropdown">
+          <h2 class="dropbtn" style="font-size: 35px">
+            <u>Sponsorship Tiers:</u>
+          </h2>
+          <div class="dropdown-content">
+            <img src=/assets/img/logos/sponsors/sponsor_tiers.png
+            style="height:450px;width:550px">
+          </div>
         </div>
+      </div>
 
-        <div class="sponsor-call" style="padding-bottom: 0px;">
-          <p style="font-size: 20px;">Sponsorship Tiers:</p>  
-        </div>
+      <div
+        align="center"
+        style="padding-bottom: 40px"
+        class="sponsor-benefits color-indicator"
+      >
+        <span style="display: inline" class="color-indicator platinum"
+          >PLATINUM</span
+        >
+        <span style="display: inline" class="color-indicator gold">GOLD</span>
+        <span style="display: inline" class="color-indicator silver"
+          >SILVER
+        </span>
+        <span style="display: inline" class="color-indicator bronze"
+          >BRONZE</span
+        >
+      </div>
 
+      <h1 align="center" class="content-header">Sponsors</h1>
 
-        <div align="center" class="sponsor-benefits color-indicator">
-            <span style="display:inline;" class="color-indicator platinum">PLATINUM</span>
-            <span style="display:inline;" class="color-indicator gold">GOLD</span>
-            <span style="display:inline;" class="color-indicator silver">SILVER </span>
-            <span style="display:inline;" class="color-indicator bronze">BRONZE</span>
-        </div>
-        
-        <div class="" style="text-align:center;padding-top:15px;padding-bottom:30px;">
-            <img src=/assets/img/logos/sponsors/sponsor_tiers.png style="height:50%;width:50%">
-        </div>
-
-        <h1 align="center"  class="content-header">Sponsors</h1>
-
-        <div class="sponsor-level">
-            <div class="sponsor-detail">
-                <a href="https://stripe.com/jobs/university" target="_blank">
-                    <div class="sponsor-image">
-                        <img src="/assets/img/logos/sponsors/stripe.png" alt="Stripe logo">
-                    </div>
-                </a>
-
-                <div class="level-indicator platinum">
-                    PLATINUM
-                </div>
+      <div class="sponsor-level">
+        <div class="sponsor-detail">
+          <a href="https://stripe.com/jobs/university" target="_blank">
+            <div class="sponsor-image">
+              <img
+                src="/assets/img/logos/sponsors/stripe.png"
+                alt="Stripe logo"
+              />
             </div>
-            <div class="sponsor-detail">
-                <a href="https://www.uber.com/us/en/careers/" target="_blank">
-                    <div class="sponsor-image">
-                        <img src="/assets/img/logos/sponsors/uber.png" alt="Uber logo">
-                    </div>
-                </a>
+          </a>
 
-                <div class="level-indicator platinum">
-                    PLATINUM
-                </div>
-            </div>
+          <div class="level-indicator platinum">PLATINUM</div>
         </div>
-
-        <div class="sponsor-level">
-            <div class="sponsor-detail">
-                <a href="https://www.metacareers.com/" target="_blank">
-                    <div class="sponsor-image">
-                        <img src="/assets/img/logos/sponsors/meta.png" alt="Meta logo">
-                    </div>
-                </a>
-                <div class="level-indicator gold">
-                    GOLD
-                </div>
-
+        <div class="sponsor-detail">
+          <a href="https://www.uber.com/us/en/careers/" target="_blank">
+            <div class="sponsor-image">
+              <img src="/assets/img/logos/sponsors/uber.png" alt="Uber logo" />
             </div>
-            <div class="sponsor-detail">
-                <a href="https://www.oldmissioncapital.com/careers/" target="_blank">
-                    <div class="sponsor-image">
-                        <img src="/assets/img/logos/sponsors/oldmissioncapital.png" alt="Old Mission Capital logo">
-                    </div>
-                </a>
+          </a>
 
-                <div class="level-indicator gold">
-                    GOLD
-                </div>
+          <div class="level-indicator platinum">PLATINUM</div>
+        </div>
+      </div>
+
+      <div class="sponsor-level">
+        <div class="sponsor-detail">
+          <a href="https://www.metacareers.com/" target="_blank">
+            <div class="sponsor-image">
+              <img src="/assets/img/logos/sponsors/meta.png" alt="Meta logo" />
             </div>
+          </a>
+          <div class="level-indicator gold">GOLD</div>
         </div>
-
-        <div class="sponsor-level">
-        </div>
-
-        <div class="sponsor-level">
-            <div class="sponsor-detail">
-                <a href="https://www.capitalonecareers.com" target="_blank">
-                    <div class="sponsor-image">
-                        <img src="/assets/img/logos/sponsors/capitalone.jpg" alt="Capital One logo">
-                    </div>
-                </a>
-
-                <div class="level-indicator bronze">
-                    BRONZE
-                </div>
+        <div class="sponsor-detail">
+          <a href="https://www.oldmissioncapital.com/careers/" target="_blank">
+            <div class="sponsor-image">
+              <img
+                src="/assets/img/logos/sponsors/oldmissioncapital.png"
+                alt="Old Mission Capital logo"
+              />
             </div>
+          </a>
+
+          <div class="level-indicator gold">GOLD</div>
         </div>
+      </div>
+
+      <div class="sponsor-level"></div>
+
+      <div class="sponsor-level">
+        <div class="sponsor-detail">
+          <a href="https://www.capitalonecareers.com" target="_blank">
+            <div class="sponsor-image">
+              <img
+                src="/assets/img/logos/sponsors/capitalone.jpg"
+                alt="Capital One logo"
+              />
+            </div>
+          </a>
+
+          <div class="level-indicator bronze">BRONZE</div>
+        </div>
+      </div>
     </section>
 
     <div id="footer"></div>
     <script>
-        $(function() {
-            $('#footer').load('/components/footer.html');
-        });
+      $(function () {
+        $("#footer").load("/components/footer.html");
+      });
     </script>
-</body>
-
+  </body>
 </html>
