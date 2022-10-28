@@ -125,14 +125,16 @@ a:hover {
     margin-top: 40px;
   }
 }
-.carouselHomeImage{
-  height: 200px;
-  width: 100%;
+#carouselImageStyling{
+  height:500px; 
+  width:100%;
+  object-fit: cover;
 }
 .carouselText { /*for the text*/
   font-size: 50px;
   color: white;
 }
+
 
 /* Individual Divs */
 
