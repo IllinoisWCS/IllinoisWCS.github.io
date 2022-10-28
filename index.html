@@ -121,7 +121,7 @@
       });
     </script>
 
-    <div class="carousel slide" data-ride="carousel">
+    <div id="mainCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active">
           <img
@@ -129,7 +129,7 @@
             class="carouselImageStyling"
             alt="bits & bytes"
           />
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption">
             <h2 class="carouselText">Women in Computer Science at UIUC</h2>
           </div>
         </div>
@@ -139,7 +139,7 @@
             class="carouselImageStyling"
             alt="google"
           />
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption">
             <h2 class="carouselText">Women in Computer Science at UIUC</h2>
           </div>
         </div>
@@ -149,18 +149,21 @@
             class="carouselImageStyling"
             alt="stripe"
           />
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption">
             <h2 class="carouselText">Women in Computer Science at UIUC</h2>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- <div class="row" id = "home">
-        <div class="home-header-container">
-            <h2 class="home-subheader">Women in Computer Science at UIUC</h2>
-        </div> 
-    </div> -->
+    <!--main carousel speed change-->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#mainCarousel").carousel({
+          interval: 4000,
+          pause: false,
+        });
+      });
+    </script>
 
     <div class="home-content">
       <div class="wcs-welcome">
