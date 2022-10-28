@@ -997,10 +997,15 @@ footer a {
 
 .openofficeheader {
   background-color: #fbd5de;
+  width: 30%;
 }
 .openofficetime {
   background-color: #c6f6f8;
 }
 .openofficecell {
   background-color: #fcf7e6;
+}
+.openofficehighlight {
+  background-color: #faddc8;
+  border-radius: 10px;
 }

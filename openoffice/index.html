@@ -30,7 +30,14 @@
         <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
         <script type="text/javascript" src="../assets/js/disable-script.js"></script>
     </head>
-
+    <style>
+        th,td,tr {
+            border-radius: 20px;
+            border: 2.5px solid white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
         <div id="navbar"></div>
         <script>
@@ -38,9 +45,9 @@
             $('#navbar').load('/components/navbar.html');
             });
         </script>
-
-        <div class="row" id="officehours">
-            <div class="col-sm-offset-1 col-md-10">
+        
+        <div class="row padded">
+            <div class="col-sm-offset-1 col-md-10"  id="officehours">
                 <!-- <h1 align="center">Office Hour</h1> -->
                 <!-- <h4 align="center">Click the button in the bottom right corner so you don't miss any events!</h4> -->
     
@@ -61,85 +68,308 @@
                         https://go.illinoiswcs.org/wcs-office
                     </a> -->
                 </p>
-                <p id="covid-message"> * = Officer </p>
-
-                <div class="officer-shift">
-                    <table class="ui very basic collapsing celled table" style="border-radius: 20px;">
-                        <style>
-                        th,td,tr {
-                            border-radius: 30px;
-                            border: 4px solid white;
-                            padding: 20px;
-                        }
-                            </style>
-                        <thead>
-                          <tr>
-                            <th style = "width: 10%;" > </th>
-                            <th style = "background-color: #FBD5DE; width: 18%"> Monday</th>
-                            <th style = "background-color: #FBD5DE; width: 18%"> Tuesday</th>
-                            <th style = "background-color: #FBD5DE; width: 18%"> Wednesday</th>
-                            <th style = "background-color: #FBD5DE; width: 18%"> Thursday</th>
-                            <th style = "background-color: #FBD5DE; width: 18%"> Friday</th>
-                        </tr>
-                        <tr>
-                            <td style = "background-color: #C6F6F8;" > 2:00 - 2:30 </td>
-                            <td style = "background-color: #FCF7E6;" > <span> Sailaja Nallacheruvu Noopur Shanbhogue Anushri Mittal</span>  </td>
-                            <td style = "background-color: #FCF7E6;" > def </td>
-                            <td style = "background-color: #FCF7E6;" > lol </td>
-                            <td style = "background-color: #FCF7E6;" > lets </td>
-                            <td style = "background-color: #FCF7E6;" > try </td>
-                         </tr>
-                         <tr>
-                            <td style = "background-color: #C5F2F4;" > 2:30 - 3:00 </td>
-                            <td style = "background-color: #FCF7E6;" > Abc  </td>
-                            <td style = "background-color: #FCF7E6;" > def </td>
-                            <td style = "background-color: #FCF7E6;" > lol </td>
-                            <td style = "background-color: #FCF7E6;" > lets </td>
-                            <td style = "background-color: #FCF7E6;" > try </td>
-                         </tr>
-                         <tr>
-                            
-                            <td style = "background-color: #BDEBED;" > 3:00 - 3:30 </td>
-                            <td style = "background-color: #FCF7E6;" > Abc  </td>
-                            <td style = "background-color: #FCF7E6;" > def </td>
-                            <td style = "background-color: #FCF7E6;" > lol </td>
-                            <td style = "background-color: #FCF7E6;" > lets </td>
-                            <td style = "background-color: #FCF7E6;" > try </td>
-                         </tr>
-                         <tr>
-                            
-                            <td style = "background-color: #B1DFE1;" > 3:30 - 4:00 </td>
-                            <td style = "background-color: #FCF7E6;" > Abc  </td>
-                            <td style = "background-color: #FCF7E6;" > def </td>
-                            <td style = "background-color: #FCF7E6;" > lol </td>
-                            <td style = "background-color: #FCF7E6;" > lets </td>
-                            <td style = "background-color: #FCF7E6;" > try </td>
-                         </tr>
-                         <tr>
-
-                            <td style = "background-color: #A0D2D4;" > 4:00 - 4:30 </td>
-                            <td style = "background-color: #FCF7E6;" > Abc  </td>
-                            <td style = "background-color: #FCF7E6;" > def </td>
-                            <td style = "background-color: #FCF7E6;" > lol </td>
-                            <td style = "background-color: #FCF7E6;" > lets </td>
-                            <td style = "background-color: #FCF7E6;" > try </td>
-                         </tr>
-                         <tr>
-                            
-                            <td style = "background-color: #98C3C5;" > 4:30 - 5:00 </td>
-                            <td style = "background-color: #FCF7E6;" > Abc  </td>
-                            <td style = "background-color: #FCF7E6;" > def </td>
-                            <td style = "background-color: #FCF7E6;" > lol </td>
-                            <td style = "background-color: #FCF7E6;" > lets </td>
-                            <td style = "background-color: #FCF7E6;" > try </td>
-                         </tr>
-
-                        </thead>
-                    </table>
-                </div>
-    
+                <p id="covid-message"> *Highlighted names indicate officers </p>
             </div> 
         </div>
+        <div class="row padded" id="officehours">
+            <div class="tabs-left custom-tabs col-sm-offset-1 col-md-10">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#week1" data-toggle="tab">Week 1</a></li>
+                    <li><a href="#week2" data-toggle="tab">Week 2</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="week1">
+                        <table class="ui very basic collapsing celled table">
+                            
+                            <thead>
+                            <tr>
+                                <th style ="width: 14%;"> </th>
+                                <th class="openofficeheader"> Monday</th>
+                                <th class="openofficeheader"> Tuesday</th>
+                                <th class="openofficeheader"> Wednesday</th>
+                                <th class="openofficeheader"> Thursday</th>
+                                <th class="openofficeheader"> Friday</th>
+                            </tr>
+                            <!-- 2:00-2:30 -->
+                            <tr>
+                                <td style="background-color: #C6F6F8; text-align: center;" > 2:00 - 2:30 </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight"> Sailaja Nallacheruvu</span></div> 
+                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div>
+                                        <div><span class="openofficehighlight">Anushri Mittal</span></div>
+                                        <div>Akash Sannasi</div> 
+                                        <div>Sritha Kavuri</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
+                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div>
+                                        <div><span class="openofficehighlight">Meghan Lu</span></div>
+                                        <div>Jillian Nylund</div> 
+                                        <div>Anika Jain</div>
+                                        <div>Anoushka Khajanchi</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div> 
+                                        <div>Fiona Seo</div> 
+                                        <div>Sabrina Tu</div>
+                                        <div>Rachael Gu</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Rayna Wu</span></div> 
+                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div> 
+                                        <div>Reva Jethwani</div> 
+                                        <div>Rachel Samojedny</div>
+                                        <div>Harini Arumugam</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
+                                        <div>Prachi Gyanmote</div> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style = "background-color: #C5F2F4; text-align: center;" > 2:30 - 3:00 </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight"> Sailaja Nallacheruvu</span></div> 
+                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div>
+                                        <div><span class="openofficehighlight">Anushri Mittal</span></div>
+                                        <div>Akash Sannasi</div> 
+                                        <div>Sritha Kavuri</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
+                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div>
+                                        <div><span class="openofficehighlight">Meghan Lu</span></div>
+                                        <div>Jillian Nylund</div> 
+                                        <div>Anoushka Khajanchi</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div> 
+                                        <div>Fiona Seo</div> 
+                                        <div>Rhea Moozhayil</div>
+                                        <div>Rachael Gu</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Rayna Wu</span></div> 
+                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div> 
+                                        <div>Reva Jethwani</div> 
+                                        <div>Thea Surya</div>
+                                        <div>Harini Arumugam</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
+                                        <div>Prachi Gyanmote</div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style = "background-color: #bdebed; text-align: center;" > 3:00 - 3:30 </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Aarthi Balaji</span></div> 
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
+                                        <div><span class="openofficehighlight">Rayna Wuh</span></div> 
+                                        <div><span class="openofficehighlight">Meghan Lu</span></div> 
+                                        <div>Mia Paelmo</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Grace Zhang</span></div> 
+                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
+                                        <div>Arshiya Gupta</div>
+                                        <div>Sarena Yang</div>
+                                        <div>Rhea Moozhayil</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
+                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
+                                        <div>Divya Machineni</div>
+                                        <div>Thea Surya</div>
+                                        <div>Divya Koya</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Ananya Rajagopal</span></div> 
+                                        <div><span class="openofficehighlight">Dawn Lim</span></div> 
+                                        <div>Anagha Shenoy</div>
+                                        <div>Vidya Bharadwaj</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td style = "background-color: #B1DFE1; text-align: center;" > 3:30 - 4:00 </td>
+                                <td style = "background-color: #FCF7E6;" > Abc  </td>
+                                <td style = "background-color: #FCF7E6;" > def </td>
+                                <td style = "background-color: #FCF7E6;" > lol </td>
+                                <td style = "background-color: #FCF7E6;" > lets </td>
+                                <td style = "background-color: #FCF7E6;" > try </td>
+                            </tr>
+                            <tr>
+
+                                <td style = "background-color: #A0D2D4; text-align: center;" > 4:00 - 4:30 </td>
+                                <td style = "background-color: #FCF7E6;" > Abc  </td>
+                                <td style = "background-color: #FCF7E6;" > def </td>
+                                <td style = "background-color: #FCF7E6;" > lol </td>
+                                <td style = "background-color: #FCF7E6;" > lets </td>
+                                <td style = "background-color: #FCF7E6;" > try </td>
+                            </tr>
+                            <tr>
+                                
+                                <td style = "background-color: #98C3C5; text-align: center;" > 4:30 - 5:00 </td>
+                                <td style = "background-color: #FCF7E6;" > Abc  </td>
+                                <td style = "background-color: #FCF7E6;" > def </td>
+                                <td style = "background-color: #FCF7E6;" > lol </td>
+                                <td style = "background-color: #FCF7E6;" > lets </td>
+                                <td style = "background-color: #FCF7E6;" > try </td>
+                            </tr>
+
+                            </thead>
+                        </table>
+                    </div> <!--end of table1-->
+
+                    <div class="tab-pane" id="week2">
+                        <table class="ui very basic collapsing celled table">
+                            <thead>
+                            <tr>
+                                <th style ="width:11%;"> </th>
+                                <th class="openofficeheader"> Monday</th>
+                                <th class="openofficeheader"> Tuesday</th>
+                                <th class="openofficeheader"> Wednesday</th>
+                                <th class="openofficeheader"> Thursday</th>
+                                <th class="openofficeheader"> Friday</th>
+                            </tr>
+                            <!-- 2:00-2:30 -->
+                            <tr>
+                                <td style="background-color: #C6F6F8; text-align: center;" > 2:00 - 2:30 </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight"> Sailaja Nallacheruvu</span></div> 
+                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div>
+                                        <div><span class="openofficehighlight">Anushri Mittal</span></div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
+                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div>
+                                        <div><span class="openofficehighlight">Meghan Lu</span></div>
+                                        <div>Adelia Solarman</div> 
+                                        <div>Anika Jain</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div> 
+                                        <div>Sabrina Tu</div>
+                                        <div>Shreya Vinjamuri</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Rayna Wu</span></div> 
+                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div> 
+                                        <div>Reva Jethwani</div> 
+                                        <div>Rachel Samojedny</div>
+                                        <div>Harini Arumugam</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
+                                        <div>Prachi Gyanmote</div> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style = "background-color: #C5F2F4; text-align: center;" > 2:30 - 3:00 </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Sailaja Nallacheruvu</span></div> 
+                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div>
+                                        <div><span class="openofficehighlight">Anushri Mittal</span></div>
+                                        <div>Akash Sannasi</div> 
+                                        <div>Sritha Kavuri</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
+                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div>
+                                        <div><span class="openofficehighlight">Meghan Lu</span></div>
+                                        <div>Jillian Nylund</div> 
+                                        <div>Anoushka Khajanchi</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div> 
+                                        <div>Fiona Seo</div> 
+                                        <div>Rhea Moozhayil</div>
+                                        <div>Rachael Gu</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Rayna Wu</span></div> 
+                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div> 
+                                        <div>Reva Jethwani</div> 
+                                        <div>Thea Surya</div>
+                                        <div>Harini Arumugam</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
+                                        <div>Prachi Gyanmote</div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style = "background-color: #bdebed; text-align: center;" > 3:00 - 3:30 </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Aarthi Balaji</span></div> 
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
+                                        <div><span class="openofficehighlight">Rayna Wuh</span></div> 
+                                        <div><span class="openofficehighlight">Meghan Lu</span></div> 
+                                        <div>Mia Paelmo</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Grace Zhang</span></div> 
+                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
+                                        <div>Arshiya Gupta</div>
+                                        <div>Sarena Yang</div>
+                                        <div>Rhea Moozhayil</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
+                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
+                                        <div>Divya Machineni</div>
+                                        <div>Thea Surya</div>
+                                        <div>Divya Koya</div>
+                                </td>
+                                <td class="openofficecell"> 
+                                        <div><span class="openofficehighlight">Ananya Rajagopal</span></div> 
+                                        <div><span class="openofficehighlight">Dawn Lim</span></div> 
+                                        <div>Anagha Shenoy</div>
+                                        <div>Vidya Bharadwaj</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td style = "background-color: #B1DFE1; text-align: center;" > 3:30 - 4:00 </td>
+                                <td style = "background-color: #FCF7E6;" > Abc  </td>
+                                <td style = "background-color: #FCF7E6;" > def </td>
+                                <td style = "background-color: #FCF7E6;" > lol </td>
+                                <td style = "background-color: #FCF7E6;" > lets </td>
+                                <td style = "background-color: #FCF7E6;" > try </td>
+                            </tr>
+                            <tr>
+
+                                <td style = "background-color: #A0D2D4; text-align: center;" > 4:00 - 4:30 </td>
+                                <td style = "background-color: #FCF7E6;" > Abc  </td>
+                                <td style = "background-color: #FCF7E6;" > def </td>
+                                <td style = "background-color: #FCF7E6;" > lol </td>
+                                <td style = "background-color: #FCF7E6;" > lets </td>
+                                <td style = "background-color: #FCF7E6;" > try </td>
+                            </tr>
+                            <tr>
+                                
+                                <td style = "background-color: #98C3C5; text-align: center;" > 4:30 - 5:00 </td>
+                                <td style = "background-color: #FCF7E6;" > Abc  </td>
+                                <td style = "background-color: #FCF7E6;" > def </td>
+                                <td style = "background-color: #FCF7E6;" > lol </td>
+                                <td style = "background-color: #FCF7E6;" > lets </td>
+                                <td style = "background-color: #FCF7E6;" > try </td>
+                            </tr>
+
+                            </thead>
+                        </table>
+                    </div> <!--end of table 2-->
+                </div> <!--tab-content-->
+            </div> <!--tabs-left-->
+        </div> <!--end of tables div-->
     
         <div id="footer"></div>
         <script>
