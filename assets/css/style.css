@@ -483,10 +483,6 @@ a:hover {
   margin: 40px 0px;
 }
 
-#helpme {
-  margin-top: 50px;
-}
-
 .member-map {
   height: 500px;
   width: 100%;
@@ -878,10 +874,18 @@ footer a {
   display: flex;
 }
 
+#chictech-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#chictech-container h5 a {
+  text-decoration: underline;
+  color: #68c7cb;
+}
+
 #chictech-schedule {
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
+  max-width: 100%;
 }
 
 /* Custom CSS */

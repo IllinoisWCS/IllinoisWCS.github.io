@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>WCS Chictech Retreat</title>
+    <title>WCS Chictech</title>
 
     <meta name="description" content="Chictech is our annual retreat to invite high school girls to learn about CS." />
     <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
@@ -40,8 +40,9 @@
             $('#navbar').load('/components/navbar.html');
         });
     </script>
-    <div class="row padded" id="helpme">
-        <div class="col-sm-offset-1 col-md-10">
+    <div class="row padded" id="chictech-container">
+        <h1 align="center">Chictech</h1>
+        <div class="col-md-5 col-sm-offset-1">
             <h1 align="center">Overview</h1>
             <p>ChicTech is a full day event dedicated to introducing high schoolers to Computer Science by teaching them
                 to make their own project to show off to friends and family. This year, we will be having a wonderful
@@ -52,13 +53,25 @@
                 to know, so please come out and join us for an exciting day of learning. </p>
 
             <br>
-            <br>
-            <p align="center">You can register for ChicTech <a
+            <h5 align="center">Register <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSds6-CQ_dtX_K5M0bTmzlSnqtko6z-CtosQNY1rqDRkF2gdQA/viewform?usp=sf_link"
-                    target="_blank">here</a>!</p>
+                    target="_blank">Here</a></h5>
+
+            <div class="row padded" id="faq">
+                <div>
+                    <h1 align="center">Frequently Asked Questions</h1>
+                    <br>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5 offset-md-1">
+            <h1 align="center">Schedule</h1>
+            <img id="chictech-schedule" src="../assets/img/chictech/chictech-schedule.jpg" />
         </div>
     </div>
-
     <script type="text/x-mustache" id="faqTemplate">
         {{#questions}}
             <div class="panel panel-default">
@@ -77,14 +90,6 @@
             </div>
         {{/questions}}
     </script>
-
-    <div class="row padded" id="faq">
-        <div class="col-md-10 col-sm-offset-1">
-            <h1 align="center">Frequently Asked Questions</h1>
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
-            </div>
-        </div>
-    </div>
 
     <!-- 
     <script type="text/x-mustache" id="eventTemplate">
