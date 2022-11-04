@@ -125,24 +125,23 @@ a:hover {
     margin-top: 40px;
   }
 }
-.carouselImageStyling{
-  height:500px !important; 
-  width:100%;
+.carouselImageStyling {
+  height: 500px !important;
+  width: 100%;
   object-fit: cover;
 }
-.carouselText { /*for the text*/
+.carouselText {
+  /*for the text*/
   font-size: 50px;
   color: white;
 }
 
-
 /* Individual Divs */
-
 
 #home {
   padding: 5% 0 5% 0;
   background: url("../img/wcs/wcs bits & bytes.jpg") no-repeat center center;
-  background-size: cover; 
+  background-size: cover;
   height: 60%;
 }
 
