@@ -562,6 +562,27 @@ a:hover {
   color: #e84c3d;
 }
 
+#sponsors .dropdown-lg-view{
+  width: 100%;
+  font-size: 20px;
+  display:inline-block;
+}
+
+#sponsors .dropdown-sm-view{
+  display:none;
+}
+@media screen and (max-width: 700px) {
+  #sponsors .dropdown-lg-view{
+     display:none;
+  }
+
+  #sponsors .dropdown-sm-view{
+     display:inline-block;
+     width: 100%;
+     font-size: 20px;
+  }
+}
+
 #sponsors .sponsor-call {
   display: flex;
   justify-content: center;
