@@ -704,20 +704,6 @@ a:hover {
   }
 }
 
-#alumni {
-  display: block;
-  padding: 5% 5%;
-}
-
-#featuredAlumni {
-  padding: 5% 10%;
-}
-
-#featuredAlumni .alumniPicture {
-  height: auto;
-  width: 100%;
-}
-
 #contact {
   display: block;
   padding: 5% 5%;
@@ -890,7 +876,7 @@ footer a {
 
 /* Custom CSS */
 
-/* Reference code: 
+/* Reference code:
  * https://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3
  * https://www.codeply.com/go/bp/74926
  */
