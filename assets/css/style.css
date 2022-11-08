@@ -251,31 +251,6 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 
-.quickLinks {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  position: relative;
-  text-align: center;
-  vertical-align: center;
-  min-height: 5vh !important;
-}
-
-.quickLinks p {
-  font-weight: 700;
-  color: black;
-  text-transform: uppercase;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.quickLinks a {
-  color: black;
-}
-
 #members {
   /* padding: 2%;
     padding: 5%;
