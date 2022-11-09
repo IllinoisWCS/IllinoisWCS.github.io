@@ -202,27 +202,6 @@ a:hover {
   font-size: 16px;
 }
 
-.wcs-video-wrapper {
-  width: 60%;
-}
-
-.wcs-video {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 35px;
-  height: 0;
-  overflow: hidden;
-  width: 100%;
-}
-
-.wcs-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .member-subheaders {
   text-align: center;
   margin-bottom: 5%;
@@ -251,12 +230,6 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 
-#members {
-  /* padding: 2%;
-    padding: 5%;
-    padding-bottom: 20px; */
-}
-
 #members h1 {
   color: #e84c3d;
   margin-bottom: 3%;
@@ -275,10 +248,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-bottom: 10%; */
   padding-top: 8%;
-  /* margin-left: 50px; */
-  /* margin-right: 5%; */
 }
 
 .bullet-point {
@@ -349,10 +319,6 @@ a:hover {
   border-color: #fff;
 }
 
-.iframeOutside {
-  text-align: center;
-}
-
 #explore {
   margin-top: 70px;
 }
@@ -415,11 +381,6 @@ a:hover {
   height: 450px;
 }
 
-/* .faculty-image {
-    border: 1px solid #E0E0E0;
-    padding: 5px;
-} */
-
 .faculty-image img {
   width: 250px;
 }
@@ -458,26 +419,6 @@ a:hover {
   margin: 40px 0px;
 }
 
-.member-map {
-  height: 500px;
-  width: 100%;
-  padding: 5%;
-}
-
-.member-links {
-  padding-top: 2%;
-  list-style-type: none;
-  text-align: center;
-}
-
-.member-links > li {
-  display: list-item;
-}
-
-.member-button {
-  font-size: large;
-}
-
 .btn {
   font-weight: bold;
 }
@@ -487,30 +428,6 @@ a:hover {
   margin-bottom: 5%;
   text-align: center;
   padding: 5%;
-}
-
-#techTeam {
-  background-image: url("../img/members/techteam.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/members/techteam.jpg");
-}
-
-#mentoring {
-  background-image: url("../img/members/mentoring.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/members/mentoring.jpg");
-}
-
-#outreach {
-  background-image: url("../img/members/outreach.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/members/outreach.jpg");
-}
-
-#social {
-  background-image: url("../img/members/social.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/members/social.jpg");
 }
 
 .col-md-4 img {
@@ -598,10 +515,6 @@ a:hover {
   color: #e84c3d;
 }
 
-#officers h4 {
-  /* padding-bottom: 5%; */
-}
-
 @media (max-width: 749px) {
   #officers {
     padding: 10% 5%;
@@ -610,12 +523,6 @@ a:hover {
 
 .officerPicture {
   width: 100%;
-  /* width: 100%;
-    height: 400px; */
-  /* object-fit: cover;
-    object-position: 50% 50%; */
-  /* object-fit: cover;
-    object-position: 50% 50%; */
   height: 100%;
   object-fit: cover;
 }
@@ -734,34 +641,6 @@ footer a {
   padding: 5%;
 }
 
-#clockdiv {
-  font-family: sans-serif;
-  color: #fff;
-  font-weight: 100;
-  text-align: center;
-  font-size: 30px;
-}
-
-#clockdiv > div {
-  padding: 10px;
-  border-radius: 3px;
-  background: #feeee8;
-  display: inline-block;
-}
-
-#clockdiv div > span {
-  padding: 15px;
-  border-radius: 3px;
-  background: #e84c3d;
-  display: inline-block;
-}
-
-.smalltext {
-  padding-top: 5px;
-  font-size: 16px;
-  color: #e84c3d;
-}
-
 .code-ada {
   font-size: 16px;
   margin: 90px 200px 20px;
@@ -775,29 +654,6 @@ footer a {
   margin-bottom: 30px;
 }
 
-#code-ada {
-  background: #e84c3d;
-  border-color: #e84c3d;
-  padding: 18px 28px;
-  font-size: 22px;
-  line-height: normal;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  text-align: center;
-}
-
-#code-ada-link {
-  color: #f5f3ee;
-}
-
-.card-img-top {
-  top: 50%;
-  width: auto;
-  max-width: 100%;
-  display: block;
-  margin: auto;
-}
-
 .card {
   height: 250px;
   width: 100%;
@@ -808,31 +664,9 @@ footer a {
   display: block;
 }
 
-#codeada-sponser {
-  display: flex;
-  justify-content: center;
-}
-
 .btn.btn-secondary {
   background-color: #c0c0c0 !important;
   color: white !important;
-}
-
-#codeada-img {
-  justify-content: center;
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-  padding: 10px;
-}
-
-#codeada-sponser-row {
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  text-align: center;
-  display: flex;
 }
 
 #chictech-container {
