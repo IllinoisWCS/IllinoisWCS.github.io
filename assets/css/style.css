@@ -562,26 +562,28 @@ a:hover {
   color: #e84c3d;
 }
 
-#sponsors .dropdown-lg-view{
+#sponsors .button {
+  width: 530px;
+  background-color: #e84c3d;
+  color: white;
+}
+ 
+
+#sponsors .dropdown-view{
   width: 100%;
   font-size: 20px;
   display:inline-block;
 }
 
-#sponsors .dropdown-sm-view{
-  display:none;
-}
-@media screen and (max-width: 700px) {
-  #sponsors .dropdown-lg-view{
-     display:none;
+@media screen and (max-width: 700px) { 
+  #sponsors .button {
+    /* display: none; */
+    width: 440px;
+    background-color: #e84c3d;
+    color: white;
   }
 
-  #sponsors .dropdown-sm-view{
-     display:inline-block;
-     width: 100%;
-     font-size: 20px;
-  }
-}
+} 
 
 #sponsors .sponsor-call {
   display: flex;
