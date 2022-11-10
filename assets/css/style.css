@@ -125,15 +125,33 @@ a:hover {
     margin-top: 40px;
   }
 }
+
+#mainCarousel {
+  position: relative;
+}
 .carouselImageStyling {
   height: 500px !important;
   width: 100%;
   object-fit: cover;
 }
-.carouselText {
+.mainTextBackground {
+  width: 755px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: black;
+  opacity: 0.7;
+  margin: auto;
+  bottom: 60px;
+  left: 350px;
+  position: absolute;
+}
+.mainText {
   /*for the text*/
   font-size: 50px;
   color: white;
+  text-align: center;
 }
 
 /* Individual Divs */
