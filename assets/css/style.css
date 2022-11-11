@@ -567,7 +567,41 @@ a:hover {
   background-color: #e84c3d;
   color: white;
 }
+
+/* tiers dropdown button */
+.dropbtn {
+  background-color: #e84c3d;
+  color: white;
+  font-size: 16px;
+  border-color: gray;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
  
+.tiers-image-style {
+  height:550px;
+  width:100%;
+} 
 
 #sponsors .dropdown-view{
   width: 100%;
