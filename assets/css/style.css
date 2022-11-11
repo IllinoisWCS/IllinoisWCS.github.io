@@ -581,7 +581,6 @@ a:hover {
   position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 20px;
 }
 
 .dropdown-content {
