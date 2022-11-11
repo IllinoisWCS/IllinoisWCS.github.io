@@ -483,6 +483,13 @@ a:hover {
   margin: 40px 0px;
 }
 
+#officehours #week-indication {
+  margin-top: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 16px;
+}
+
 #helpme {
   margin-top: 50px;
 }
@@ -997,7 +1004,6 @@ footer a {
 
 .openofficeheader {
   background-color: #fbd5de;
-  width: 30%;
 }
 .openofficetime {
   background-color: #c6f6f8;
