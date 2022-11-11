@@ -126,11 +126,39 @@ a:hover {
   }
 }
 
+#mainCarousel {
+  position: relative;
+}
+.carouselImageStyling {
+  height: 500px !important;
+  width: 100%;
+  object-fit: cover;
+}
+.mainTextBackground {
+  width: 755px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: black;
+  opacity: 0.7;
+  margin: auto;
+  bottom: 60px;
+  left: 350px;
+  position: absolute;
+}
+.mainText {
+  /*for the text*/
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
 /* Individual Divs */
 
 #home {
   padding: 5% 0 5% 0;
-  background: url("../img/wcs/new-officers.jpg") no-repeat center center;
+  background: url("../img/wcs/wcs bits & bytes.jpg") no-repeat center center;
   background-size: cover;
   height: 60%;
 }
