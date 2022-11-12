@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>WCS Chictech Retreat</title>
+    <title>WCS Chictech</title>
 
     <meta name="description" content="Chictech is our annual retreat to invite high school girls to learn about CS." />
     <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
@@ -18,9 +18,12 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"></link>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css">
+    </link>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css">
+    </link>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    </link>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
@@ -34,258 +37,69 @@
     <div id="navbar"></div>
     <script>
         $(function() {
-           $('#navbar').load('/components/navbar.html');
+            $('#navbar').load('/components/navbar.html');
         });
     </script>
-    <div class="row padded" id="helpme">
-        <div class="col-sm-offset-1 col-md-10">
+    <div class="row padded" id="chictech-container">
+        <h1 align="center">Chictech</h1>
+        <div class="col-md-5 col-sm-offset-1">
             <h1 align="center">Overview</h1>
-            <p>ChicTech is a full day event dedicated to introduce high schoolers to Computer Science by teaching them to make their own project to show off to friends and family. This year, we will be going through how to make your own website and data visualization using Github Pages, HTML/CSS, and d3.js! We will be having <a href="https://waf.cs.illinois.edu/" target="_blank">Professor Wade Fagen-Ulmschneider</a>, the creator of many visualizations used by news organizations and the government, and Ritika Adhikari (CS Illinois 2020) as a keynote speaker and teaching the data visualization portion.</p>
+            <p>ChicTech is a full day event dedicated to introducing high schoolers to Computer Science by teaching them
+                to make their own project to show off to friends and family. This year, we will be having a wonderful
+                guest speaker. Professor Wade Fagen-Ulmschneider, the creator of many visualizations used by news
+                organizations and the government, will do a keynote speech about “Nerding out with Interactive Data
+                Visualization Systems.” We will also hold a technical workshop, where you can learn new CS concepts and
+                applications. If you have no experience, no worries! Our goal is to teach you everything you will need
+                to know, so please come out and join us for an exciting day of learning. </p>
 
             <br>
-            <br>
-            <p align="center">You can register for ChicTech <a href="https://forms.gle/5Fe9MCc4Cp87QH116" target="_blank">here</a>!</p>
+            <h5 align="center">Register <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSds6-CQ_dtX_K5M0bTmzlSnqtko6z-CtosQNY1rqDRkF2gdQA/viewform?usp=sf_link"
+                    target="_blank">Here</a></h5>
+
+            <div class="row padded" id="faq">
+                <div>
+                    <h1 align="center">Frequently Asked Questions</h1>
+                    <br>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5 offset-md-1">
+            <h1 align="center">Schedule</h1>
+            <img id="chictech-schedule" src="../assets/img/chictech/chictech-schedule.jpg" />
         </div>
     </div>
-
     <script type="text/x-mustache" id="faqTemplate">
         {{#questions}}
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="{{id}}H">
-                <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{id}}" aria-expanded="false" aria-controls="{{id}}">
-                        <i class="fa fa-plus"></i> {{question}}</a>
-                </h4>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="{{id}}H">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{id}}"
+                            aria-expanded="false" aria-controls="{{id}}">
+                            <i class="fa fa-plus"></i> {{question}}</a>
+                    </h4>
+                </div>
             </div>
-        </div>
-        <div id="{{id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{id}}H">
-            <div class="panel-body">
-                <p>{{answer}}</p>
+            <div id="{{id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{id}}H">
+                <div class="panel-body">
+                    <p>{{answer}}</p>
+                </div>
             </div>
-        </div>
         {{/questions}}
     </script>
 
-    <div class="row padded" id="faq">
-        <div class="col-md-10 col-sm-offset-1">
-            <h1 align="center">Frequently Asked Questions</h1>
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-<!-- 
     <script type="text/x-mustache" id="eventTemplate">
         {{#events}}
-        <div class="row">
-            <div class="col-md-3">
-                <p align="center">{{time}}</p>
-            </div>
-            <div class="col-md-6">
-                <p>{{what}}</p>
-            </div>
-            <div class="col-md-3">
-                <p align="center">{{where}}</p>
-            </div>
-        </div>
+            <tr>
+                <th scope="row" style="font-weight:400">{{time}}</th>
+                <td>{{what}}</td>
+                <td>{{where}}</td>
+            </tr>
         {{/events}}
     </script>
-
-    <div class="row padded" id="schedule">
-        <div class="col-md-10 col-sm-offset-1">
-            <h1 align="center">Schedule</h1>
-
-            <h4 align="center">November 2</h4>
-
-            <div class="row">
-                <div class="col-md-3">
-                    <h5 align="center">Time</h5>
-                </div>
-                <div class="col-md-6">
-                    <h5 align="center">Event</h5>
-                </div>
-                <div class="col-md-3">
-                    <h5 align="center">Where</h5>
-                </div>
-            </div>
-            <div id="agenda117">
-            </div>
-            <h4 align="center">November 3</h4>
-            <div class="row">
-                <div class="col-md-3">
-                    <h5 align="center">Time</h5>
-                </div>
-                <div class="col-md-6">
-                    <h5 align="center">Event</h5>
-                </div>
-                <div class="col-md-3">
-                    <h5 align="center">Where</h5>
-                </div>
-            </div>
-            <div id="agenda118">
-            </div>
-        </div>
-    </div> -->
-
-
-
-
-
-
-
-
-
-
-    <script type="text/x-mustache" id="eventTemplate">
-        {{#events}}
-        <tr>
-            <th scope="row" style="font-weight:400">{{time}}</th>
-            <td>{{what}}</td>
-            <td>{{where}}</td>
-        </tr>
-        {{/events}}
-    </script>
-
-
-
-
-    
-
-
-
-
-    <h1 align="center">Schedule</h1>
-
-    <iframe src="chictech_schedule.pdf" width="100%" height="100%">
-    </iframe>
-
-    <h1 align="center">Setup Guide</h1>
-
-    <iframe src="chictech_setup_guide.pdf" width="100%" height="100%">
-    </iframe>
-
-
-
-
-    <!-- <iframe src="in-person.png" width="100%" height="100%">
-    </iframe>
-
-    <iframe src="online.png" width="50%" height="100%">
-    </iframe> -->
-
-
-
-
-    <!-- <div class="box"> <iframe src="in-person.png" frameborder="10" scrolling="yes" width="50%" height="100%" align="left"> </iframe> </div>
-
-    <div class="box">    <iframe src="online.png" frameborder="10" scrolling="yes" width="50%" height="100%" align="right">  </iframe></div>
-    <div class= "clear"></div> -->
-
-
-
-
-
-
-
-    <!-- <h3 align="center">In-Person Schedule</h3>
-    <table class="table table-striped" id="chictech-schedule">
-        <thead>
-            <tr>
-                <th scope="col">Time</th>
-                <th scope="col">Event</th>
-                <th scope="col">Location</th>
-            </tr>
-        </thead>
-        <tbody id="agendaDay1" role="tablist" aria-multiselectable="true">
-
-        </tbody>
-    </table>
-
-    <h3 align="center">Online Schedule - Zoom</h3>
-
-
-    <table class="table table-striped" id="chictech-schedule">
-        <thead>
-            <tr>
-                <th scope="col">Time</th>
-                <th scope="col">Event</th>
-                <th scope="col">Location</th>
-            </tr>
-        </thead>
-        <tbody id="agendaDay2" role="tablist" aria-multiselectable="true">
-
-        </tbody>
-    </table> -->
-
-
-
-
-
-
-
-
-
-
-
-    
-
-     <!-- <h1 align="center">Schedule</h1>
-
-    <h3 align="center">November 2nd</h3>
-    <table class="table table-striped" id="chictech-schedule">
-        <thead>
-            <tr>
-                <th scope="col">Time</th>
-                <th scope="col">Event</th>
-                <th scope="col">Location</th>
-            </tr>
-        </thead>
-        <tbody id="agendaDay1" role="tablist" aria-multiselectable="true">
-
-        </tbody>
-    </table>
-
-    <h3 align="center">November 3rd</h3>
-
-
-    <table class="table table-striped" id="chictech-schedule">
-        <thead>
-            <tr>
-                <th scope="col">Time</th>
-                <th scope="col">Event</th>
-                <th scope="col">Location</th>
-            </tr>
-        </thead>
-        <tbody id="agendaDay2" role="tablist" aria-multiselectable="true">
-
-        </tbody>
-    </table> -->
-
-
-
-
-
-    <!-- 
-    <div class="row padded" id="register">
-        <div class="col-sm-offset-1 col-md-10">
-            <h1 align="center"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc_77sOcKgEF-0bY1ZkM491uaZ6SWq5OhWSiULbdm2L1dizkA/viewform" target="_blank">Register</a>
-            </h1>
-
-
-            <div class="iframeOutside">
-
-                <iframe align="center" src="https://docs.google.com/forms/d/e/1FAIpQLSc_77sOcKgEF-0bY1ZkM491uaZ6SWq5OhWSiULbdm2L1dizkA/viewform?embedded=true" width="700" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
-            </div>
-        </div>
-    </div> -->
 
     <footer>
         <div class="row">
@@ -299,13 +113,15 @@
                 <p>Contact us at:</p>
                 <p>
                     <b>
-            <a href="mailto:contact@illinoiswcs.org">contact@illinoiswcs.org</a>
-          </b>
+                        <a href="mailto:contact@illinoiswcs.org">contact@illinoiswcs.org</a>
+                    </b>
                 </p>
                 <p>
                     <b>
-                            <a href="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5">Mailing List</a></h4>
-                        </b>
+                        <a
+                            href="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5">Mailing
+                            List</a></h4>
+                    </b>
                 </p>
             </div>
             <div class="col-md-4">
@@ -351,7 +167,6 @@
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
         ga('create', 'UA-51793372-1', 'auto');
         ga('send', 'pageview');
     </script>

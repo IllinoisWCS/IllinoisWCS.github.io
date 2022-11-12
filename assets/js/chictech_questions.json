@@ -1,55 +1,44 @@
 {
-    "questions": [{
-            "id": "where",
-            "question": "When is ChicTech?",
-            "answer": "Chictech will be held on November 13 starting from 9am CST to around 5pm CST!"
-        },
-        {
-            "id": "when",
-            "question": "Will ChicTech be in person this year?",
-            "answer": "ChicTech will be held in person and online! Historically, ChicTech has been held in person, but due to safety and health concerns, we will be limiting in person capacity this year to 50 people. However, any high schooler across the country will be fully able to participate online!"
-        },
-        {
-            "id": "cost",
-            "question": "How do I register?",
-            "answer": "Registration is open from October 11th until November 5th."
-        },
-        {
-            "id": "registration",
-            "question": "How will I know whether I will be participating online or in person?",
-            "answer": "We will be accepting in person participants on a rolling basis throughout the registration period. If you do not receive an email from illinoiswcs.outreach@gmail.com by October 29th notifying that you can attend in person, please assume that you will be attending over zoom."
-
-        },
-        {
-            "id": "accept",
-            "question": "What are the precautions that are being taken for in person attendees?",
-            "answer": "For anyone attending in person, masks are required to be worn at all times. Any food that is served will be individually packaged and eaten outside if the weather is nice, in a large open space otherwise. We have reserved multiple working spaces within the building and our keynote will be held in the largest classroom within the building to ensure that social distancing regulations can be followed."
-        },
-        {
-            "id": "programming",
-            "question": "Do I need to have prior programming experience?",
-            "answer": "No! Our goal is to teach you everything you need to know regardless of your background knowledge in programming or computer science to help you build a project completely from scratch that you can be proud of and show off to your friends and family."
-        },
-        {
-            "id": "pack",
-            "question": "I am not a high school student, can I still attend?",
-            "answer": "Yes! As long as you are a student between the grades of K - 12, you can register to attend. Our goal is to create a fun experience for everyone and help you build a project that you can be proud of."
-        },
-        {
-            "id": "parking",
-            "heading": "parking",
-            "question": "Are there costs to attending?",
-            "answer": "No! Once you have registered, that is all you have to do. There are no costs associated with being part of our event."
-        },
-        {
-            "id": "middle",
-            "question": "I have other questions or concerns. How can I reach you?",
-            "answer": "You can reach us by emailing illinoiswcs.outreach@gmail.com!"
-        },
-        {
-            "id": "online",
-            "question": "I am attending online, how can I join the zoom sessions?",
-            "answer": "We will be providing more information as the date of the event approaches as well as post Zoom information on this website!"
-        }
-    ]
+  "questions": [
+    {
+      "id": "where",
+      "question": "When is ChicTech?",
+      "answer": "Chictech will be held on November 5 starting from 9am CST to around 5pm CST!"
+    },
+    {
+      "id": "when",
+      "question": "Will ChicTech be in person this year?",
+      "answer": "ChicTech will be held in person and online! To encourage students from other states and international schools to join, ChicTech will be hybrid."
+    },
+    {
+      "id": "registration",
+      "question": "How do I register?",
+      "answer": "Registration will be open until October 30th. The participants will get an email with detailed information on November 1st. The registration form is here: https://docs.google.com/forms/d/e/1FAIpQLSds6-CQ_dtX_K5M0bTmzlSnqtko6z-CtosQNY1rqDRkF2gdQA/viewform?usp=sf_link"
+    },
+    {
+      "id": "programming",
+      "question": "Do I need to have prior programming experience?",
+      "answer": "No! Our goal is to teach you everything you need to know regardless of your background knowledge in programming or computer science to help you build a project completely from scratch that you can be proud of and show off to your friends and family."
+    },
+    {
+      "id": "accept",
+      "question": "I am not a high school student, can I still attend?",
+      "answer": "Yes! As long as you are a student between the grades of K - 12, you can register to attend. Our goal is to create a fun experience for everyone and help you build a project that you can be proud of."
+    },
+    {
+      "id": "cost",
+      "question": "Are there costs to attending?",
+      "answer": "No! Once you have registered, that is all you have to do. There are no costs associated with being part of our event."
+    },
+    {
+      "id": "online",
+      "question": "I am attending online, how can I join the zoom sessions?",
+      "answer": "We will be providing more information as the date of the event approaches as well as post Zoom information on this website!"
+    },
+    {
+      "id": "questions",
+      "question": "I have other questions or concerns. How can I reach you?",
+      "answer": "If you have any questions, feel free to contact dahyunl2@illinois.edu, puppala4@illinois.edu, or illinoiswcs.outreach@gmail.com!"
+    }
+  ]
 }
