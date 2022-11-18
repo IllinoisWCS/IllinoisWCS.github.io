@@ -34,9 +34,10 @@
     <style>
         th,td,tr {
             border-radius: 20px;
-            border: 2.5px solid white;
-            padding: 20px;
+            border: 2.1px solid white;
+            padding: 10%;
             text-align: center;
+            position: relative;
         }
     </style>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -49,13 +50,13 @@
         </script>
         
         <div class="row padded">
-            <div class="col-sm-offset-1 col-md-10"  id="officehours">
+            <div class="col-sm-offset-1 col-md-10">
                 <!-- <h1 align="center">Office Hour</h1> -->
                 <!-- <h4 align="center">Click the button in the bottom right corner so you don't miss any events!</h4> -->
     
                 <!-- <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=aWxsaW5vaXMuZWR1X2Vqa28waTFrZzk5OGtxNjdhdDN1a2pucGwwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=aWxsaW5vaXMuZWR1X2tubTFwaWdxNjc0ODYzbTg1OGhobDI2c2FnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23795548&amp;color=%237CB342" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
                 
-                <h1 align="center" class="content-header">Open Office</h1>
+                <h1 align="center" class="content-header" id="officehours">Open Office</h1>
                 <!-- <p id="covid-message">Due to COVID-19, we are moving our office hours online. We understand that it is a stressful time, 
                     but we are here to help! If you would like to talk to an officer, please fill out this form: 
                     <a href="https://forms.gle/VzJvFaB5cvo3sR7QA" target="_blank">https://forms.gle/VzJvFaB5cvo3sR7QA</a>
@@ -73,7 +74,7 @@
                 <p id="week-indication"> </p>
             </div> 
         </div>
-        <div class="row padded" id="officehours">
+        <div class="row padded">
             <div class="tabs-left custom-tabs col-sm-offset-1 col-md-10">
                 <ul class="nav nav-tabs">
                     <li id="week1tab"><a href="#week1" data-toggle="tab">Week 1</a></li>
@@ -85,217 +86,266 @@
                             
                             <thead>
                             <tr>
-                                <th style ="width: 10%;"> </th>
-                                <th class="openofficeheader"> Monday</th>
-                                <th class="openofficeheader"> Tuesday</th>
-                                <th class="openofficeheader"> Wednesday</th>
-                                <th class="openofficeheader"> Thursday</th>
-                                <th class="openofficeheader"> Friday</th>
+                                <th id="open-office-space"> </th>
+                                <th class="open-office-header"> Monday</th>
+                                <th class="open-office-header"> Tuesday</th>
+                                <th class="open-office-header"> Wednesday</th>
+                                <th class="open-office-header"> Thursday</th>
+                                <th class="open-office-header"> Friday</th>
                             </tr>
                             <!-- 2:00-2:30 -->
                             <tr>
-                                <td style="background-color: #C6F6F8;" > 2:00 - 2:30 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight"> Sailaja Nallacheruvu</span></div> 
-                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div>
-                                        <div><span class="openofficehighlight">Anushri Mittal</span></div>
-                                        <div>Akash Sannasi</div> 
-                                        <div>Sritha Kavuri</div>
+                                <td style="background-color: #C6F6F8;"> <div class="open-office-vertical-center">2:00 - 2:30</div></td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Sailaja Nallacheruvu</span></div> 
+                                                <div><span class="open-office-highlight">Noopur Shanbhogue</span></div>
+                                                <div><span class="open-office-highlight">Anushri Mittal</span></div>
+                                                <div>Akash Sannasi</div> 
+                                                <div>Sritha Kavuri</div>
+                                        </div>
+                                        
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
-                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div>
-                                        <div><span class="openofficehighlight">Meghan Lu</span></div>
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Anushree Berlia</span></div> 
+                                        <div><span class="open-office-highlight">Saloni Vaishnav</span></div>
+                                        <div><span class="open-office-highlight">Meghan Lu</span></div>
                                         <div>Jillian Nylund</div> 
                                         <div>Anika Jain</div>
                                         <div>Anoushka Khajanchi</div>
+                                        
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div> 
-                                        <div>Fiona Seo</div> 
-                                        <div>Sabrina Tu</div>
-                                        <div>Rachael Gu</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Saloni Vaishnav</span></div> 
+                                                <div>Fiona Seo</div> 
+                                                <div>Sabrina Tu</div>
+                                                <div>Rachael Gu</div>
+                                        </div>
+                                        
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rayna Wu</span></div> 
-                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Rayna Wu</span></div> 
+                                        <div><span class="open-office-highlight">Noopur Shanbhogue</span></div> 
                                         <div>Reva Jethwani</div> 
                                         <div>Rachel Samojedny</div>
                                         <div>Harini Arumugam</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
-                                        <div>Prachi Gyanmote</div> 
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Anushree Berlia</span></div> 
+                                                <div>Prachi Gyanmote</div> 
+                                        </div>
                                 </td>
                             </tr>
 
                             <tr>
-                                <td style = "background-color: #C5F2F4;" > 2:30 - 3:00 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight"> Sailaja Nallacheruvu</span></div> 
-                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div>
-                                        <div><span class="openofficehighlight">Anushri Mittal</span></div>
-                                        <div>Akash Sannasi</div> 
-                                        <div>Sritha Kavuri</div>
+                                <td style = "background-color: #C5F2F4;"> <div class="open-office-vertical-center">2:30 - 3:00</div></td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight"> Sailaja Nallacheruvu</span></div> 
+                                                <div><span class="open-office-highlight">Noopur Shanbhogue</span></div>
+                                                <div><span class="open-office-highlight">Anushri Mittal</span></div>
+                                                <div>Akash Sannasi</div> 
+                                                <div>Sritha Kavuri</div>
+                                        </div>
+                                        
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
-                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div>
-                                        <div><span class="openofficehighlight">Meghan Lu</span></div>
-                                        <div>Jillian Nylund</div> 
-                                        <div>Anoushka Khajanchi</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Anushree Berlia</span></div> 
+                                                <div><span class="open-office-highlight">Saloni Vaishnav</span></div>
+                                                <div><span class="open-office-highlight">Meghan Lu</span></div>
+                                                <div>Jillian Nylund</div> 
+                                                <div>Anoushka Khajanchi</div>
+                                        </div>
+                                        
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div> 
-                                        <div>Fiona Seo</div> 
-                                        <div>Rhea Moozhayil</div>
-                                        <div>Rachael Gu</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Saloni Vaishnav</span></div> 
+                                                <div>Fiona Seo</div> 
+                                                <div>Rhea Moozhayil</div>
+                                                <div>Rachael Gu</div>
+                                        </div>
+                                        
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rayna Wu</span></div> 
-                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Rayna Wu</span></div> 
+                                        <div><span class="open-office-highlight">Noopur Shanbhogue</span></div> 
                                         <div>Reva Jethwani</div> 
                                         <div>Thea Surya</div>
                                         <div>Harini Arumugam</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
-                                        <div>Prachi Gyanmote</div> 
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Anushree Berlia</span></div> 
+                                                <div>Prachi Gyanmote</div> 
+                                        </div>
+                                        
                                 </td>
                             </tr>
                             <tr>
-                                <td style = "background-color: #bdebed;" > 3:00 - 3:30 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Aarthi Balaji</span></div> 
+                                <td style = "background-color: #bdebed;"><div class="open-office-vertical-center"> 3:00 - 3:30 </div></td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Aarthi Balaji</span></div> 
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
-                                        <div><span class="openofficehighlight">Rayna Wuh</span></div> 
-                                        <div><span class="openofficehighlight">Meghan Lu</span></div> 
-                                        <div>Mia Paelmo</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Nikhila Puppala</span></div> 
+                                                <div><span class="open-office-highlight">Rayna Wuh</span></div> 
+                                                <div><span class="open-office-highlight">Meghan Lu</span></div> 
+                                                <div>Mia Paelmo</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Grace Zhang</span></div> 
-                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Grace Zhang</span></div> 
+                                        <div><span class="open-office-highlight">Shreya Deshpande</span></div> 
                                         <div>Arshiya Gupta</div>
                                         <div>Sarena Yang</div>
                                         <div>Rhea Moozhayil</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
-                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Nikhila Puppala</span></div> 
+                                        <div><span class="open-office-highlight">Shreya Deshpande</span></div> 
                                         <div>Divya Machineni</div>
                                         <div>Thea Surya</div>
                                         <div>Divya Koya</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Ananya Rajagopal</span></div> 
-                                        <div><span class="openofficehighlight">Dawn Lim</span></div> 
-                                        <div>Anagha Shenoy</div>
-                                        <div>Vidya Bharadwaj</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Ananya Rajagopal</span></div> 
+                                                <div><span class="open-office-highlight">Dawn Lim</span></div> 
+                                                <div>Anagha Shenoy</div>
+                                                <div>Vidya Bharadwaj</div>
+                                        </div>
                                 </td>
                             </tr>
                             <tr>
                                 
-                                <td style = "background-color: #B1DFE1;" > 3:30 - 4:00 </td>
-                                <td class="openofficecell"> 
-                                    <div><span class="openofficehighlight">Aarthi Balaji</span></div>
-                                    <div><span class="openofficehighlight">Grace Zhang</span></div>  
+                                <td style = "background-color: #B1DFE1;"><div class="open-office-vertical-center">3:30 - 4:00</div></td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Aarthi Balaji</span></div>
+                                                <div><span class="open-office-highlight">Grace Zhang</span></div>  
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
-                                        <div><span class="openofficehighlight">Rayna Wuh</span></div> 
-                                        <div><span class="openofficehighlight">Meghan Lu</span></div> 
-                                        <div>Mia Paelmo</div>
-                                        <div>Hela Kasibhotla</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-shift">
+                                                <div><span class="open-office-highlight">Nikhila Puppala</span></div> 
+                                                <div><span class="open-office-highlight">Rayna Wuh</span></div> 
+                                                <div><span class="open-office-highlight">Meghan Lu</span></div> 
+                                                <div>Mia Paelmo</div>
+                                                <div>Hela Kasibhotla</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Grace Zhang</span></div> 
-                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
-                                        <div>Arshiya Gupta</div>
-                                        <div>Sarena Yang</div>
-                                        <div>Emma Maxwell</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Grace Zhang</span></div> 
+                                                <div><span class="open-office-highlight">Shreya Deshpande</span></div> 
+                                                <div>Arshiya Gupta</div>
+                                                <div>Sarena Yang</div>
+                                                <div>Emma Maxwell</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
-                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Nikhila Puppala</span></div> 
+                                        <div><span class="open-office-highlight">Shreya Deshpande</span></div> 
                                         <div>Divya Machineni</div>
                                         <div>Tingyin Ding</div>
                                         <div>Divya Koya</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Ananya Rajagopal</span></div> 
-                                        <div><span class="openofficehighlight">Dawn Lim</span></div> 
-                                        <div><span class="openofficehighlight">Anushri Mittal</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Ananya Rajagopal</span></div> 
+                                        <div><span class="open-office-highlight">Dawn Lim</span></div> 
+                                        <div><span class="open-office-highlight">Anushri Mittal</span></div> 
                                         <div>Anagha Shenoy</div>
                                         <div>Akshata Tiwari</div>
                                 </td>
                             </tr>
                             <tr>
-                                <td style = "background-color: #A0D2D4;" > 4:00 - 4:30 </td>
-                                <td class="openofficecell"> 
-                                    <div><span class="openofficehighlight">Grace Zhang</span></div> 
-                                    <div><span class="openofficehighlight">Sailaja Nallacheruvu</span></div>
-                                    <div><span class="openofficehighlight">Ellie Chang</span></div>
-
-                                    <div>Kavya Moharana</div>
+                                <td style = "background-color: #A0D2D4;" ><div class="open-office-vertical-center">4:00 - 4:30</div></td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Grace Zhang</span></div> 
+                                                <div><span class="open-office-highlight">Sailaja Nallacheruvu</span></div>
+                                                <div><span class="open-office-highlight">Ellie Chang</span></div>
+                                                <div>Kavya Moharana</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rachel Huang</span></div> 
-                                        <div>Becky Blake</div>
-                                        <div>Karen Gao</div>
-                                        <div>Kalika Raje</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Rachel Huang</span></div> 
+                                                <div>Becky Blake</div>
+                                                <div>Karen Gao</div>
+                                                <div>Kalika Raje</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Ananya Rajagopal</span></div> 
-                                        <div><span class="openofficehighlight">Aarthi Balaji</span></div> 
-                                        <div><span class="openofficehighlight">Ellie Chang</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Ananya Rajagopal</span></div> 
+                                        <div><span class="open-office-highlight">Aarthi Balaji</span></div> 
+                                        <div><span class="open-office-highlight">Ellie Chang</span></div> 
                                         <div>Ishika Awachat</div>
                                         <div>Emma Maxwell</div>
                                         <div>Alyssa Flores</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rachel Huang</span></div> 
-                                        <div>Tingyin Ding</div>
-                                        <div>Jenny Kim</div>
-                                        <div>Daniel Wang</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Rachel Huang</span></div> 
+                                                <div>Tingyin Ding</div>
+                                                <div>Jenny Kim</div>
+                                                <div>Daniel Wang</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Anushri Mittal</span></div> 
-                                        <div><span class="openofficehighlight">Dawn Lim</span></div> 
-                                        <div>Anagha Tiwari</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Anushri Mittal</span></div> 
+                                                <div><span class="open-office-highlight">Dawn Lim</span></div> 
+                                                <div>Anagha Tiwari</div>
+                                        </div>
                                 </td>
                         </tr>
                         <tr>
                             
-                                <td style = "background-color: #98C3C5;" > 4:30 - 5:00 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Sailaja Nallacheruvu</span></div>
-                                        <div><span class="openofficehighlight">Ellie Chang</span></div>  
-                                        <div>Kavya Moharana</div>
+                                <td style = "background-color: #98C3C5;" > <div class="open-office-vertical-center">4:30 - 5:00</div></td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Sailaja Nallacheruvu</span></div>
+                                                <div><span class="open-office-highlight">Ellie Chang</span></div>  
+                                                <div>Kavya Moharana</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rachel Huang</span></div> 
-                                        <div>Becky Blake</div>
-                                        <div>Karen Gao</div>
-                                        <div>Kalika Raje</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Rachel Huang</span></div> 
+                                                <div>Becky Blake</div>
+                                                <div>Karen Gao</div>
+                                                <div>Kalika Raje</div>
+                                        </div>
+                                        
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Ananya Rajagopal</span></div> 
-                                        <div><span class="openofficehighlight">Aarthi Balaji</span></div> 
-                                        <div><span class="openofficehighlight">Ellie Chang</span></div>
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Ananya Rajagopal</span></div> 
+                                        <div><span class="open-office-highlight">Aarthi Balaji</span></div> 
+                                        <div><span class="open-office-highlight">Ellie Chang</span></div>
                                         <div>Ishika Awachat</div>
                                         <div>Alyssa Flores</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rachel Huang</span></div> 
-                                        <div>Lisa Leung</div>
-                                        <div>Jenny Kim</div>
-                                        <div>Daniel Wang</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Rachel Huang</span></div> 
+                                                <div>Tingyin Ding</div>
+                                                <div>Jenny Kim</div>
+                                                <div>Daniel Wang</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Dawn Lim</span></div> 
-                                        <div>Anagha Tiwari</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Dawn Lim</span></div> 
+                                                <div>Anagha Tiwari</div>
+                                        </div>
                                 </td>
                         </tr>
 
@@ -310,203 +360,243 @@
                             <thead>
                             <tr>
                                 <th style ="width:10%;"> </th>
-                                <th class="openofficeheader"> Monday</th>
-                                <th class="openofficeheader"> Tuesday</th>
-                                <th class="openofficeheader"> Wednesday</th>
-                                <th class="openofficeheader"> Thursday</th>
-                                <th class="openofficeheader"> Friday</th>
+                                <th class="open-office-header"> Monday</th>
+                                <th class="open-office-header"> Tuesday</th>
+                                <th class="open-office-header"> Wednesday</th>
+                                <th class="open-office-header"> Thursday</th>
+                                <th class="open-office-header"> Friday</th>
                             </tr>
                             <!-- 2:00-2:30 -->
                             <tr>
-                                <td style="background-color: #C6F6F8;" > 2:00 - 2:30 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight"> Sailaja Nallacheruvu</span></div> 
-                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div>
-                                        <div><span class="openofficehighlight">Anushri Mittal</span></div>
+                                <td style="background-color: #C6F6F8;"><div class="open-office-vertical-center"> 2:00 - 2:30</div> </td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight"> Sailaja Nallacheruvu</span></div> 
+                                                <div><span class="open-office-highlight">Noopur Shanbhogue</span></div>
+                                                <div><span class="open-office-highlight">Anushri Mittal</span></div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
-                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div>
-                                        <div><span class="openofficehighlight">Meghan Lu</span></div>
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Anushree Berlia</span></div> 
+                                        <div><span class="open-office-highlight">Saloni Vaishnav</span></div>
+                                        <div><span class="open-office-highlight">Meghan Lu</span></div>
                                         <div>Adelia Solarman</div> 
                                         <div>Anika Jain</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div> 
-                                        <div>Sabrina Tu</div>
-                                        <div>Shreya Vinjamuri</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Saloni Vaishnav</span></div> 
+                                                <div>Sabrina Tu</div>
+                                                <div>Shreya Vinjamuri</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rayna Wu</span></div> 
-                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div> 
-                                        <div>Vidya Bharadwaj</div> 
-                                        <div>Heli Viramgami</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Rayna Wu</span></div> 
+                                                <div><span class="open-office-highlight">Noopur Shanbhogue</span></div> 
+                                                <div>Vidya Bharadwaj</div> 
+                                                <div>Heli Viramgami</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
-                                        <div>Prachi Gyanmote</div> 
-                                        <div>Nivedita Rethnakar</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Anushree Berlia</span></div> 
+                                                <div>Prachi Gyanmote</div> 
+                                                <div>Nivedita Rethnakar</div>
+                                        </div>
                                 </td>
                             </tr>
 
                             <tr>
-                                <td style = "background-color: #C5F2F4;" > 2:30 - 3:00 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Sailaja Nallacheruvu</span></div> 
-                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div>
-                                        <div><span class="openofficehighlight">Anushri Mittal</span></div>
+                                <td style = "background-color: #C5F2F4;" ><div class="open-office-vertical-center"> 2:30 - 3:00</div> </td>
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Sailaja Nallacheruvu</span></div> 
+                                        <div><span class="open-office-highlight">Noopur Shanbhogue</span></div>
+                                        <div><span class="open-office-highlight">Anushri Mittal</span></div>
                                         <div>Riya Jain</div> 
                                         <div>Shriya Dave</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
-                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div>
-                                        <div><span class="openofficehighlight">Meghan Lu</span></div>
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Anushree Berlia</span></div> 
+                                        <div><span class="open-office-highlight">Saloni Vaishnav</span></div>
+                                        <div><span class="open-office-highlight">Meghan Lu</span></div>
                                         <div>Anika Jain</div> 
                                         <div>Adelia Solarman</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Saloni Vaishnav</span></div> 
-                                        <div>Neha Vardhaman</div> 
-                                        <div>Shreya Vinjamuri</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Saloni Vaishnav</span></div> 
+                                                <div>Neha Vardhaman</div> 
+                                                <div>Shreya Vinjamuri</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rayna Wu</span></div> 
-                                        <div><span class="openofficehighlight">Noopur Shanbhogue</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Rayna Wu</span></div> 
+                                        <div><span class="open-office-highlight">Noopur Shanbhogue</span></div> 
                                         <div>Tanvi Kamat</div> 
                                         <div>Kavya Puranam</div>
                                         <div>Heli Viramgami</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Anushree Berlia</span></div> 
-                                        <div>Divya Sundar</div> 
-                                        <div>Sharvani Mallarapu</div>
-                                        <div>Nivedita Rethnakar</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Anushree Berlia</span></div> 
+                                                <div>Divya Sundar</div> 
+                                                <div>Sharvani Mallarapu</div>
+                                                <div>Nivedita Rethnakar</div>
+                                        </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td style = "background-color: #bdebed;" > 3:00 - 3:30 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Aarthi Balaji</span></div> 
-                                        <div>Riya Jain</div>
-                                        <div>Shriya Dave</div>
+                                <td style = "background-color: #bdebed;"><div class="open-office-vertical-center">3:00 - 3:30</div></td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Aarthi Balaji</span></div> 
+                                                <div>Riya Jain</div>
+                                                <div>Shriya Dave</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
-                                        <div><span class="openofficehighlight">Rayna Wuh</span></div> 
-                                        <div><span class="openofficehighlight">Meghan Lu</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Nikhila Puppala</span></div> 
+                                        <div><span class="open-office-highlight">Rayna Wuh</span></div> 
+                                        <div><span class="open-office-highlight">Meghan Lu</span></div> 
                                         <div>Bhuvana Betini</div>
                                         <div>Simone Schwaighart</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Grace Zhang</span></div> 
-                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
-                                        <div>Kajal Patel</div>
-                                        <div>Neha Vardhaman</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Grace Zhang</span></div> 
+                                                <div><span class="open-office-highlight">Shreya Deshpande</span></div> 
+                                                <div>Kajal Patel</div>
+                                                <div>Neha Vardhaman</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
-                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Nikhila Puppala</span></div> 
+                                        <div><span class="open-office-highlight">Shreya Deshpande</span></div> 
                                         <div>Rachel Samojedny</div>
                                         <div>Tanvi Kamat</div>
                                         <div>Kavya Puranam</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Ananya Rajagopal</span></div> 
-                                        <div><span class="openofficehighlight">Dawn Lim</span></div> 
-                                        <div><span class="openofficehighlight">Anushri Mittal</span></div>
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Ananya Rajagopal</span></div> 
+                                        <div><span class="open-office-highlight">Dawn Lim</span></div> 
+                                        <div><span class="open-office-highlight">Anushri Mittal</span></div>
                                         <div>Divya Sundar</div>
                                         <div>Sharvani Mallarapu</div>
                                 </td>
                             </tr>
                             <tr>
                                 
-                                <td style = "background-color: #B1DFE1;" > 3:30 - 4:00 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Aarthi Balaji</span></div> 
-                                        <div><span class="openofficehighlight">Grace Zhang</span></div>
-                                        <div>Saborni Kundu</div>
+                                <td style = "background-color: #B1DFE1;" ><div class="open-office-vertical-center"> 3:30 - 4:00</div></td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Aarthi Balaji</span></div> 
+                                                <div><span class="open-office-highlight">Grace Zhang</span></div>
+                                                <div>Saborni Kundu</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
-                                        <div><span class="openofficehighlight">Rayna Wuh</span></div> 
-                                        <div><span class="openofficehighlight">Meghan Lu</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Nikhila Puppala</span></div> 
+                                        <div><span class="open-office-highlight">Rayna Wuh</span></div> 
+                                        <div><span class="open-office-highlight">Meghan Lu</span></div> 
                                         <div>Hela Kasibhotla</div>
                                         <div>Simone Schwaighart</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Grace Zhang</span></div> 
-                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
-                                        <div>Kajal Patel</div>
-                                        <div>Michelle Ru</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Grace Zhang</span></div> 
+                                                <div><span class="open-office-highlight">Shreya Deshpande</span></div> 
+                                                <div>Kajal Patel</div>
+                                                <div>Michelle Ru</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Nikhila Puppala</span></div> 
-                                        <div><span class="openofficehighlight">Shreya Deshpande</span></div> 
-                                        <div>Rachel Samojedny</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Nikhila Puppala</span></div> 
+                                                <div><span class="open-office-highlight">Shreya Deshpande</span></div> 
+                                                <div>Rachel Samojedny</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Ananya Rajagopal</span></div> 
-                                        <div><span class="openofficehighlight">Dawn Lim</span></div> 
-                                        <div><span class="openofficehighlight">Anushri Mittal</span></div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Ananya Rajagopal</span></div> 
+                                                <div><span class="open-office-highlight">Dawn Lim</span></div> 
+                                                <div><span class="open-office-highlight">Anushri Mittal</span></div>
+                                        </div>
                                 </td>
                             </tr>
                             <tr>
 
-                                <td style = "background-color: #A0D2D4;" > 4:00 - 4:30 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Sailaja Nallcheruvu</span></div> 
-                                        <div><span class="openofficehighlight">Grace Zhang</span></div>
-                                        <div><span class="openofficehighlight">Ellie Chang</span></div>
-                                        <div>Saborni Kundu</div>
+                                <td style = "background-color: #A0D2D4;" ><div class="open-office-vertical-center">4:00 - 4:30</div></td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Sailaja Nallcheruvu</span></div> 
+                                                <div><span class="open-office-highlight">Grace Zhang</span></div>
+                                                <div><span class="open-office-highlight">Ellie Chang</span></div>
+                                                <div>Saborni Kundu</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rachel Huang</span></div> 
-                                        <div>Alice Li</div>
-                                        <div>Preeti Gomathinayagam</div>
-                                        <div>Janvi Gandhi</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Rachel Huang</span></div> 
+                                                <div>Alice Li</div>
+                                                <div>Preeti Gomathinayagam</div>
+                                                <div>Janvi Gandhi</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Ananya Rajagopal</span></div> 
-                                        <div><span class="openofficehighlight">Aarthi Balaji</span></div> 
-                                        <div><span class="openofficehighlight">Ellie Chang</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Ananya Rajagopal</span></div> 
+                                        <div><span class="open-office-highlight">Aarthi Balaji</span></div> 
+                                        <div><span class="open-office-highlight">Ellie Chang</span></div> 
                                         <div>Stuti Agrawal</div>
                                         <div>Michelle Ru</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rachel Huang</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Rachel Huang</span></div> 
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Dawn Lim</span></div> 
-                                        <div>Bandhuli Maity</div>
-                                        <div>Akshata Tiwari</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Dawn Lim</span></div> 
+                                                <div>Bandhuli Maity</div>
+                                                <div>Akshata Tiwari</div>
+                                        </div>
                                 </td>
                             </tr>
                             <tr>
                                 
-                                <td style = "background-color: #98C3C5;" > 4:30 - 5:00 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Sailaja Nallcheruvu</span></div> 
-                                        <div><span class="openofficehighlight">Ellie Chang</span></div>
+                                <td style = "background-color: #98C3C5;" ><div class="open-office-vertical-center"> 4:30 - 5:00 </div></td>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Sailaja Nallcheruvu</span></div> 
+                                                <div><span class="open-office-highlight">Ellie Chang</span></div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rachel Huang</span></div> 
-                                        <div>Alice Li</div>
-                                        <div>Preeti Gomathinayagam</div>
-                                        <div>Janvi Gandhi</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Rachel Huang</span></div> 
+                                                <div>Alice Li</div>
+                                                <div>Preeti Gomathinayagam</div>
+                                                <div>Janvi Gandhi</div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Ananya Rajagopal</span></div> 
-                                        <div><span class="openofficehighlight">Aarthi Balaji</span></div> 
-                                        <div><span class="openofficehighlight">Ellie Chang</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div><span class="open-office-highlight">Ananya Rajagopal</span></div> 
+                                        <div><span class="open-office-highlight">Aarthi Balaji</span></div> 
+                                        <div><span class="open-office-highlight">Ellie Chang</span></div> 
                                         <div>Stuti Agrawal</div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Rachel Huang</span></div> 
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Rachel Huang</span></div>
+                                        </div>
                                 </td>
-                                <td class="openofficecell"> 
-                                        <div><span class="openofficehighlight">Dawn Lim</span></div> 
-                                        <div>Bandhuli Maity</div>
+                                <td class="open-office-cell"> 
+                                        <div class="open-office-vertical-center">
+                                                <div><span class="open-office-highlight">Dawn Lim</span></div> 
+                                                <div>Bandhuli Maity</div>
+                                        </div>
                                 </td>
                             </tr>
 

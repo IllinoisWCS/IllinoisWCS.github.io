@@ -462,7 +462,7 @@ a:hover {
 }
 
 #officehours {
-  margin-top: 50px;
+  margin-top: 10%;
   /* height: 100%; */
 }
 
@@ -470,23 +470,23 @@ a:hover {
   width: 100%;
 }
 
-#officehours #covid-message {
-  margin-top: 50px;
-  padding-left: 150px;
-  padding-right: 150px;
+#covid-message {
+  margin: 1% auto;
+  /* padding-left: 150px;
+  padding-right: 150px; */
+  width: 80%;
   font-size: 16px;
 }
 
-#officehours .officer-shift {
+/* #officehours .officer-shift {
   padding-left: 150px;
   padding-right: 150px;
   margin: 40px 0px;
-}
+} */
 
-#officehours #week-indication {
-  margin-top: 50px;
-  padding-left: 150px;
-  padding-right: 150px;
+#week-indication {
+  margin: 5% auto;
+  width: 80%;
   font-size: 16px;
 }
 
@@ -1002,16 +1002,28 @@ footer a {
   border-radius: 6px 0 6px 6px;
 }
 
-.openofficeheader {
+.open-office-header {
   background-color: #fbd5de;
+  width:18%;
 }
-.openofficetime {
-  background-color: #c6f6f8;
+.open-office-vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
-.openofficecell {
-  background-color: #fcf7e6;
+.open-office-cell {
+  background-color: #fcf7e6;  
 }
-.openofficehighlight {
+.open-office-highlight {
   background-color: #faddc8;
-  border-radius: 10px;
+  border-radius: 20%;
 }
+#open-office-space {
+  width: 10%;
+}
+
