@@ -123,24 +123,18 @@
     </script>
 
     <script type="text/x-mustache" id="mainCarouselTemplate">
-      {{#main-carousel}}
-      <div class="item">
-        <img
-          src="/assets/img/events/{{image-name}}"
-          class="carouselImageStyling"
-          alt="{{alt-text}}"
-        />
-      </div>
-      {{/main-carousel}}
+      <img
+        src="/assets/img/events/{{image}}"
+        class="carouselImageStyling"
+        alt="{{alt}}"
+      />
     </script>
-    
+
     <!--main header carousel-->
     <div id="mainCarousel" class="carousel slide" data-ride="carousel">
       <!--indicators-->
-      <ol class="carousel-indicators">
+      <ol class="carousel-indicators" id="indicators">
         <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#mainCarousel" data-slide-to="1"></li>
-        <li data-target="#mainCarousel" data-slide-to="2"></li>
       </ol>
 
       <!--images in carousel-->

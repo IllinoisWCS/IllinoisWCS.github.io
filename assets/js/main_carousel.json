@@ -1,12 +1,12 @@
 {
-    "main-carousel": [
+    "values": [
         {
-           "image-name":"wcs google workshop.png" ,
-           "alt-text": "google"
+           "image":"wcs google workshop.png" ,
+           "alt": "google"
         },
         {
-            "image-name":"wcs and stripe.png",
-            "alt-text": "stripe"
+            "image":"wcs and stripe.png",
+            "alt": "stripe"
         }
     ]
 }
