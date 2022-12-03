@@ -149,30 +149,9 @@ a:hover {
   text-align: center;
 }
 
-@media screen and (min-width: 1000px) { 
+@media screen and (max-width: 1000px) { 
   .mainBackground {
-    width: 755px;
-    position: absolute;
-    text-align: justify;
-    background-color: black;
-    top: 78%;
-    left: 26.5%;
-    bottom: 25%;
-    right: 75%;
-    opacity: 0.8;
-    margin-top: -50px;
-    margin-left: -50px;
-    height: 100px;
-  }
-  .mainText {
-   /* display: none; */
-    font-size: 35px;
-    color: white;
-    text-align: center;
-    top: 50%;
-    left: 12%;
-    bottom: 12%;
-    right: 50%; 
+    display:none;
   }
 }
 
