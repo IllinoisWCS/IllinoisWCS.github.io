@@ -151,13 +151,10 @@ a:hover {
 }
 
 .main-text {
-  /*for the text*/
   font-size: 50px;
   color: white;
   text-align: center;
 }
-
-/* Individual Divs */
 
 .home-content {
   padding: 5% 10% 7% 10%;
@@ -315,14 +312,6 @@ a:hover {
   margin-bottom: 60px;
 }
 
-.tba {
-  text-align: center;
-  font-size: 20px;
-  padding-top: 10px;
-  /* margin-top: 10px; */
-  margin-bottom: 50px;
-}
-
 .faculty {
   margin-right: 40px;
 }
@@ -401,7 +390,6 @@ a:hover {
 
 .modal-body .col-md-6 {
   flex: 1;
-  /* additionally, equal width */
   padding: 1em;
 }
 
@@ -752,13 +740,6 @@ footer a {
 #chictech-schedule {
   max-width: 100%;
 }
-
-/* Custom CSS */
-
-/* Reference code:
- * https://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3
- * https://www.codeply.com/go/bp/74926
- */
 
 .tabs-left>.nav-tabs {
   border-bottom: 0;
