@@ -60,16 +60,7 @@ a:hover {
   color: #333333;
 }
 
-#social-media-links {
-  display: block;
-  padding-left: 0px;
-}
-
-#social-media-links li {
-  display: inline;
-  margin: 10px;
-}
-
+/* Navbar */
 .nav {
   font-family: "Mallanna", sans-serif;
   font-weight: 500;
@@ -96,6 +87,18 @@ a:hover {
 .dropdown-menu li {
   padding: 3px 0px;
 }
+
+#social-media-links {
+  display: block;
+  padding-left: 0px;
+}
+
+#social-media-links li {
+  display: inline;
+  margin: 10px;
+}
+
+/* General */
 
 .content-header {
   margin-top: 20px;
@@ -144,66 +147,14 @@ a:hover {
   color: #4aa9ad;
 }
 
-.stay-connected-link {
-  color: black;
-}
-
-.text-underline {
-  text-decoration: underline;
-}
-
-#resources {
-  display: block;
-  padding: 5% 5%;
-}
-
-.resource-header.content-header {
-  padding-bottom: 2rem;
-}
-
-.wcs-career-list {
-  margin-left: 25px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.resources-page {
-  font-size: 15px;
-}
-
-.panel {
-  border: none;
-}
-
-#career-services .panel-title {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eeeeee;
-}
-
 .panel .panel-heading {
   border: none;
   background-color: #fff;
   border-color: #fff;
 }
 
-#calendar {
-  margin: 50px 0px;
-}
-
-#calendar iframe {
-  width: 100%;
-}
-
 .btn {
   font-weight: bold;
-}
-
-.form-inline {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  text-align: center;
-  padding: 5%;
 }
 
 .col-md-4 img {

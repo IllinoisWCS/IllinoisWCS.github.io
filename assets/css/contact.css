@@ -41,3 +41,11 @@
   align-items: center;
   padding-top: 8%;
 }
+
+.stay-connected-link {
+  color: black;
+}
+
+.text-underline {
+  text-decoration: underline;
+}

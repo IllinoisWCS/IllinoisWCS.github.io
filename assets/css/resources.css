@@ -1,0 +1,28 @@
+#resources {
+  display: block;
+  padding: 5% 5%;
+}
+
+.resource-header.content-header {
+  padding-bottom: 2rem;
+}
+
+.wcs-career-list {
+  margin-left: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.resources-page {
+  font-size: 15px;
+}
+
+.panel {
+  border: none;
+}
+
+#career-services .panel-title {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}

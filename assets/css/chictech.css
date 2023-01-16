@@ -11,3 +11,7 @@
 #chictech-schedule {
   max-width: 100%;
 }
+
+.panel {
+  border: none;
+}
