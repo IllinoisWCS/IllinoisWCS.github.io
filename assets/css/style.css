@@ -16,10 +16,6 @@ table {
   font-family: "Roboto", sans-serif;
 }
 
-#code-ada-table {
-  width: 40% !important;
-}
-
 h1 {
   font-family: "Oswald" !important;
   font-weight: 500;
@@ -66,12 +62,12 @@ a:hover {
   color: #333333;
 }
 
-#socialMediaLinks {
+#social-media-links {
   display: block;
   padding-left: 0px;
 }
 
-#socialMediaLinks li {
+#social-media-links li {
   display: inline;
   margin: 10px;
 }
