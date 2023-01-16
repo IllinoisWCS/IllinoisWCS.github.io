@@ -1,0 +1,20 @@
+#officehours {
+  margin-top: 50px;
+}
+
+#officehours iframe {
+  width: 100%;
+}
+
+#officehours #covid-message {
+  margin-top: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 16px;
+}
+
+#officehours .officer-shift {
+  padding-left: 150px;
+  padding-right: 150px;
+  margin: 40px 0px;
+}
