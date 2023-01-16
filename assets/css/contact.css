@@ -33,3 +33,11 @@
     padding: 10%;
   }
 }
+
+.stay-connected {
+  font-size: 1.28em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8%;
+}
