@@ -1,314 +1,317 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>WCS Open Office</title>
 
-        <meta name="description" content="Calendar of Upcoming WCS Events" />
-        <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Open Office" />
-        <meta property="og:type" content="company" />
-        <meta property="og:site_name" content="Women in Computer Science" />
-        <meta property="og:url" content="www.illinoiswcs.org" />
-        <meta property="og:image" content="" />
+<head>
+  <title>WCS Open Office</title>
 
-        <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico">
+  <meta name="description" content="Calendar of Upcoming WCS Events" />
+  <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Open Office" />
+  <meta property="og:type" content="company" />
+  <meta property="og:site_name" content="Women in Computer Science" />
+  <meta property="og:url" content="www.illinoiswcs.org" />
+  <meta property="og:image" content="" />
+
+  <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico">
 
 
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"></link>
-        <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css"></link>
-        <link rel="stylesheet" type="text/css" href="../assets/css/style.css"></link>
+  <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/openoffice.css" />
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
-        <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
-        <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
-        <script type="text/javascript" src="../assets/js/disable-script.js"></script>
-    </head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+  <script type="text/javascript" src="../assets/js/disable-script.js"></script>
+</head>
 
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-        <div id="navbar"></div>
-        <script>
-            $(function() {
-            $('#navbar').load('/components/navbar.html');
-            });
-        </script>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <div id="navbar"></div>
+  <script>
+    $(function () {
+      $('#navbar').load('/components/navbar.html');
+    });
+  </script>
 
-        <div class="row" id="officehours">
-            <div class="col-sm-offset-1 col-md-10">
-                <h1 align="center" class="content-header">Open Office</h1>
-                <p id="covid-message">
-                    Come to our Open Office that happen Monday through Friday from 2-5PM! 
-                    Drop by to talk to our WCS officers and other members and ask any question you have.
-                    Open Office will be located at the new WCS office located at Siebel 0211 (at the end of the ramp by the stairs)!
-                </p>
-                <p id="covid-message"> * = Officer </p>
+  <div class="row" id="officehours">
+    <div class="col-sm-offset-1 col-md-10">
+      <h1 align="center" class="content-header">Open Office</h1>
+      <p id="covid-message">
+        Come to our Open Office that happen Monday through Friday from 2-5PM!
+        Drop by to talk to our WCS officers and other members and ask any question you have.
+        Open Office will be located at the new WCS office located at Siebel 0211 (at the end of the ramp by the stairs)!
+      </p>
+      <p id="covid-message"> * = Officer </p>
 
-                <div class="officer-shift">
-                    <table class="ui very basic collapsing celled table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Mon</th>
-                                <th>Tue</th>
-                                <th>Wed</th>
-                                <th>Thu</th>
-                                <th>Fri</th>
-                            </tr>
-                        </thead>
+      <div class="officer-shift">
+        <table class="ui very basic collapsing celled table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+            </tr>
+          </thead>
 
-                        <tbody>
-                            <tr>
-                                <td>
-                                    2:00 - 2:30 PM CT
-                                </td>
-                                <td>
-                                    <div>*Emily L.</div>
-                                    <div>*Omar K.</div>
-                                    <div>*Noopur S.</div>
-                                    <div> Esther L.</div>
-                                    <div> Aydan P.</div>
-                                </td>
-                                <td>
-                                    <div>*Melissa Cho</div>
-                                    <div>*Eileen Y.</div>
-                                    <div>*Anjali K.</div>
-                                    <div> Maya N.</div>
-                                    <div> Nikita M.</div>
-                                </td>
-                                <td>
-                                    <div>*Ariane T.</div>
-                                    <div>*Omar K.</div>
-                                    <div> Romina P.</div>
-                                </td>
-                                <td>
-                                    <div>*Eileen Y.</div>
-                                    <div>*Melissa Chen</div>
-                                    <div>*Angie C.</div>
-                                    <div> Sabrina T.</div>
-                                    <div> Nikita M.</div>
-                                </td>
-                                <td>
-                                    <div>*Ariane T.</div>
-                                    <div>*Melissa Cho</div>
-                                    <div>*Rachel H.</div>
-                                    <div> Felicia W.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    2:30 - 3:00 PM CT
-                                </td>
-                                <td>
-                                    <div>*Emily L.</div>
-                                    <div>*Omar K.</div>
-                                    <div>*Noopur S.</div>
-                                    <div> Charlotte Y.</div>
-                                </td>
-                                <td>
-                                    <div>*Melissa Cho</div>
-                                    <div>*Eileen Y.</div>
-                                    <div>*Anjali K.</div>
-                                    <div> Sana M.</div>
-                                    <div> Aditi K.</div>
-                                </td>
-                                <td>
-                                    <div>*Ariane T.</div>
-                                    <div>*Omar K.</div>
-                                    <div>*Angie C.</div>
-                                    <div> Gauri P.</div>
-                                    <div> Deevya S.</div>
-                                </td>
-                                <td>
-                                    <div>*Eileen Y.</div>
-                                    <div>*Melissa Chen</div>
-                                    <div>*Angie C.</div>
-                                    <div> Dawn L.</div>
-                                    <div> Eesha B.</div>
-                                </td>
-                                <td>
-                                    <div>*Ariane T.</div>
-                                    <div>*Melissa Cho</div>
-                                    <div>*Rachel H.</div>
-                                    <div> Eshana P.</div>
-                                    <div> Pooja T.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    3:00 - 3:30 PM CT
-                                </td>
-                                <td>
-                                    <div>*Emily L.</div>
-                                    <div>*Melissa Chen</div>
-                                    <div>*Noopur S.</div>
-                                    <div> Sailaja N.</div>
-                                    <div> Jessica S.</div>
-                                </td>
-                                <td>
-                                    <div>*Athena F.</div>
-                                    <div>*Eileen Y.</div>
-                                    <div>*Meghna G.</div>
-                                    <div> Harini A.</div>
-                                    <div> Rachel H.</div>
-                                </td>
-                                <td>
-                                    <div>*Anjali K.</div>
-                                    <div>*Riya G.</div>
-                                    <div>*Angie C.</div>
-                                    <div> Sarena Y.</div>
-                                    <div> Rachel S.</div>
-                                </td>
-                                <td>
-                                    <div>*Eileen Y.</div>
-                                    <div>*Meghna M.</div>
-                                    <div>*Angie C.</div>
-                                    <div> Lina M.</div>
-                                    <div> Sophia Z.</div>
-                                </td>
-                                <td>
-                                    <div>*Meghna M.</div>
-                                    <div>*Melissa Cho</div>
-                                    <div>*Rachel H.</div>
-                                    <div>*Varsha K.</div>
-                                    <div> Anika J.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    3:30 - 4:00 PM CT
-                                </td>
-                                <td>
-                                    <div>*Emily L.</div>
-                                    <div>*Melissa Chen</div>
-                                    <div>*Noopur S.</div>
-                                    <div> Meghan L.</div>
-                                    <div> Anagha S.</div>
-                                </td>
-                                <td>
-                                    <div>*Athena F.</div>
-                                    <div>*Meghna M.</div>
-                                    <div>*Meghna G.</div>
-                                    <div> Yogi P.</div>
-                                    <div> Keerthana N.</div>
-                                </td>
-                                <td>
-                                    <div>*Anjali K.</div>
-                                    <div>*Riya G.</div>
-                                    <div>*Meghna G.</div>
-                                    <div> Grace G.</div>
-                                    <div> Ananya R.</div>
-                                </td>
-                                <td>
-                                    <div>*Angie C.</div>
-                                    <div>*Meghna M.</div>
-                                    <div>*Varsha K.</div>
-                                    <div> Devak N.</div>
-                                    <div> Grace Z.</div>
-                                </td>
-                                <td>
-                                    <div>*Melissa Chen</div>
-                                    <div>*Melissa Cho</div>
-                                    <div>*Varsha K.</div>
-                                    <div> Ellie C.</div>
-                                    <div> Sanya S.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    4:00 - 4:30 PM CT
-                                </td>
-                                <td>
-                                    <div>*Emily L.</div>
-                                    <div>*Rachel H.</div>
-                                    <div>*Athena F.</div>
-                                    <div> Saanji S.</div>
-                                    <div> Ishika A.</div>
-                                </td>
-                                <td>
-                                    <div>*Varsha K.</div>
-                                    <div>*Meghna M.</div>
-                                    <div>*Meghna G.</div>
-                                    <div> Saloni V.</div>
-                                    <div> Rachael W.</div>
-                                </td>
-                                <td>
-                                    <div>*Anjali K.</div>
-                                    <div>*Ariane T.</div>
-                                    <div>*Meghna G.</div>
-                                    <div> Mahnur K.</div>
-                                    <div> Rachael W.</div>
-                                </td>
-                                <td>
-                                    <div>*Riya G.</div>
-                                    <div>*Noopur S.</div>
-                                    <div>*Varsha K.</div>
-                                    <div> Neha G.</div>
-                                    <div> Nikhila P.</div>
-                                </td>
-                                <td>
-                                    <div>*Riya G.</div>
-                                    <div>*Athena F.</div>
-                                    <div>*Omar K.</div>
-                                    <div> Rayna W.</div>
-                                    <div> Sakshi R.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    4:30 - 5:00 PM CT
-                                </td>
-                                <td>
-                                    <div>*Emily L.</div>
-                                    <div>*Rachel H.</div>
-                                    <div>*Athena F.</div>
-                                    <div> Shreya D.</div>
-                                    <div> Devak N.</div>
-                                </td>
-                                <td>
-                                    <div>*Melissa Chen</div>
-                                    <div>*Rachel H.</div>
-                                    <div>*Meghna G.</div>
-                                    <div> Ishani T.</div>
-                                    <div> Yu B.</div>
-                                </td>
-                                <td>
-                                    <div>*Anjali K.</div>
-                                    <div>*Ariane T.</div>
-                                    <div>*Meghna M.</div>
-                                    <div> Rainy Y.</div>
-                                    <div> Stuti A.</div>
-                                </td>
-                                <td>
-                                    <div>*Riya G.</div>
-                                    <div>*Noopur S.</div>
-                                    <div>*Varsha K.</div>
-                                    <div> Nidhi C.</div>
-                                </td>
-                                <td>
-                                    <div>*Riya G.</div>
-                                    <div>*Athena F.</div>
-                                    <div>*Omar K.</div>
-                                    <div> Lisa L.</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-    
-            </div> 
-        </div>
-    
-        <div id="footer"></div>
-        <script>
-            $(function() {
-               $('#footer').load('/components/footer.html');
-            });
-        </script>
-    </body>
+          <tbody>
+            <tr>
+              <td>
+                2:00 - 2:30 PM CT
+              </td>
+              <td>
+                <div>*Emily L.</div>
+                <div>*Omar K.</div>
+                <div>*Noopur S.</div>
+                <div> Esther L.</div>
+                <div> Aydan P.</div>
+              </td>
+              <td>
+                <div>*Melissa Cho</div>
+                <div>*Eileen Y.</div>
+                <div>*Anjali K.</div>
+                <div> Maya N.</div>
+                <div> Nikita M.</div>
+              </td>
+              <td>
+                <div>*Ariane T.</div>
+                <div>*Omar K.</div>
+                <div> Romina P.</div>
+              </td>
+              <td>
+                <div>*Eileen Y.</div>
+                <div>*Melissa Chen</div>
+                <div>*Angie C.</div>
+                <div> Sabrina T.</div>
+                <div> Nikita M.</div>
+              </td>
+              <td>
+                <div>*Ariane T.</div>
+                <div>*Melissa Cho</div>
+                <div>*Rachel H.</div>
+                <div> Felicia W.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                2:30 - 3:00 PM CT
+              </td>
+              <td>
+                <div>*Emily L.</div>
+                <div>*Omar K.</div>
+                <div>*Noopur S.</div>
+                <div> Charlotte Y.</div>
+              </td>
+              <td>
+                <div>*Melissa Cho</div>
+                <div>*Eileen Y.</div>
+                <div>*Anjali K.</div>
+                <div> Sana M.</div>
+                <div> Aditi K.</div>
+              </td>
+              <td>
+                <div>*Ariane T.</div>
+                <div>*Omar K.</div>
+                <div>*Angie C.</div>
+                <div> Gauri P.</div>
+                <div> Deevya S.</div>
+              </td>
+              <td>
+                <div>*Eileen Y.</div>
+                <div>*Melissa Chen</div>
+                <div>*Angie C.</div>
+                <div> Dawn L.</div>
+                <div> Eesha B.</div>
+              </td>
+              <td>
+                <div>*Ariane T.</div>
+                <div>*Melissa Cho</div>
+                <div>*Rachel H.</div>
+                <div> Eshana P.</div>
+                <div> Pooja T.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                3:00 - 3:30 PM CT
+              </td>
+              <td>
+                <div>*Emily L.</div>
+                <div>*Melissa Chen</div>
+                <div>*Noopur S.</div>
+                <div> Sailaja N.</div>
+                <div> Jessica S.</div>
+              </td>
+              <td>
+                <div>*Athena F.</div>
+                <div>*Eileen Y.</div>
+                <div>*Meghna G.</div>
+                <div> Harini A.</div>
+                <div> Rachel H.</div>
+              </td>
+              <td>
+                <div>*Anjali K.</div>
+                <div>*Riya G.</div>
+                <div>*Angie C.</div>
+                <div> Sarena Y.</div>
+                <div> Rachel S.</div>
+              </td>
+              <td>
+                <div>*Eileen Y.</div>
+                <div>*Meghna M.</div>
+                <div>*Angie C.</div>
+                <div> Lina M.</div>
+                <div> Sophia Z.</div>
+              </td>
+              <td>
+                <div>*Meghna M.</div>
+                <div>*Melissa Cho</div>
+                <div>*Rachel H.</div>
+                <div>*Varsha K.</div>
+                <div> Anika J.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                3:30 - 4:00 PM CT
+              </td>
+              <td>
+                <div>*Emily L.</div>
+                <div>*Melissa Chen</div>
+                <div>*Noopur S.</div>
+                <div> Meghan L.</div>
+                <div> Anagha S.</div>
+              </td>
+              <td>
+                <div>*Athena F.</div>
+                <div>*Meghna M.</div>
+                <div>*Meghna G.</div>
+                <div> Yogi P.</div>
+                <div> Keerthana N.</div>
+              </td>
+              <td>
+                <div>*Anjali K.</div>
+                <div>*Riya G.</div>
+                <div>*Meghna G.</div>
+                <div> Grace G.</div>
+                <div> Ananya R.</div>
+              </td>
+              <td>
+                <div>*Angie C.</div>
+                <div>*Meghna M.</div>
+                <div>*Varsha K.</div>
+                <div> Devak N.</div>
+                <div> Grace Z.</div>
+              </td>
+              <td>
+                <div>*Melissa Chen</div>
+                <div>*Melissa Cho</div>
+                <div>*Varsha K.</div>
+                <div> Ellie C.</div>
+                <div> Sanya S.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                4:00 - 4:30 PM CT
+              </td>
+              <td>
+                <div>*Emily L.</div>
+                <div>*Rachel H.</div>
+                <div>*Athena F.</div>
+                <div> Saanji S.</div>
+                <div> Ishika A.</div>
+              </td>
+              <td>
+                <div>*Varsha K.</div>
+                <div>*Meghna M.</div>
+                <div>*Meghna G.</div>
+                <div> Saloni V.</div>
+                <div> Rachael W.</div>
+              </td>
+              <td>
+                <div>*Anjali K.</div>
+                <div>*Ariane T.</div>
+                <div>*Meghna G.</div>
+                <div> Mahnur K.</div>
+                <div> Rachael W.</div>
+              </td>
+              <td>
+                <div>*Riya G.</div>
+                <div>*Noopur S.</div>
+                <div>*Varsha K.</div>
+                <div> Neha G.</div>
+                <div> Nikhila P.</div>
+              </td>
+              <td>
+                <div>*Riya G.</div>
+                <div>*Athena F.</div>
+                <div>*Omar K.</div>
+                <div> Rayna W.</div>
+                <div> Sakshi R.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                4:30 - 5:00 PM CT
+              </td>
+              <td>
+                <div>*Emily L.</div>
+                <div>*Rachel H.</div>
+                <div>*Athena F.</div>
+                <div> Shreya D.</div>
+                <div> Devak N.</div>
+              </td>
+              <td>
+                <div>*Melissa Chen</div>
+                <div>*Rachel H.</div>
+                <div>*Meghna G.</div>
+                <div> Ishani T.</div>
+                <div> Yu B.</div>
+              </td>
+              <td>
+                <div>*Anjali K.</div>
+                <div>*Ariane T.</div>
+                <div>*Meghna M.</div>
+                <div> Rainy Y.</div>
+                <div> Stuti A.</div>
+              </td>
+              <td>
+                <div>*Riya G.</div>
+                <div>*Noopur S.</div>
+                <div>*Varsha K.</div>
+                <div> Nidhi C.</div>
+              </td>
+              <td>
+                <div>*Riya G.</div>
+                <div>*Athena F.</div>
+                <div>*Omar K.</div>
+                <div> Lisa L.</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script>
+    $(function () {
+      $('#footer').load('/components/footer.html');
+    });
+  </script>
+</body>
+
 </html>

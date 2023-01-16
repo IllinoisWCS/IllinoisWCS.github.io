@@ -11,9 +11,9 @@ $(document).ready(function () {
                 ele.className = "item active";
                 ele.id = "currentActive";
                 ele.innerHTML = output;
-                $("#carouselImages").append(ele);
+                $("#carousel-images").append(ele);
                 $("#indicators").append(
-                    '<li data-target="#mainCarousel" data-slide-to=' +
+                    '<li data-target="#main-carousel" data-slide-to=' +
                     (count - 1).toString() +
                     'class="active"></li>'
                 );
@@ -23,7 +23,7 @@ $(document).ready(function () {
                 ele.innerHTML = output;
                 active.parentNode.insertBefore(ele, active.nextSibling);
                 $("#indicators").append(
-                    '<li data-target="#mainCarousel" data-slide-to=' +
+                    '<li data-target="#main-carousel" data-slide-to=' +
                     (count - 1).toString() +
                     "></li>"
                 );
