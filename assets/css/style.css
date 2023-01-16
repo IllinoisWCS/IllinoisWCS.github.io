@@ -230,27 +230,6 @@ a:hover {
   font-size: 16px;
 }
 
-.wcs-video-wrapper {
-  width: 60%;
-}
-
-.wcs-video {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 35px;
-  height: 0;
-  overflow: hidden;
-  width: 100%;
-}
-
-.wcs-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .member-subheaders {
   text-align: center;
   margin-bottom: 5%;
@@ -279,37 +258,6 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 
-.quickLinks {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  position: relative;
-  text-align: center;
-  vertical-align: center;
-  min-height: 5vh !important;
-}
-
-.quickLinks p {
-  font-weight: 700;
-  color: black;
-  text-transform: uppercase;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.quickLinks a {
-  color: black;
-}
-
-#members {
-  /* padding: 2%;
-    padding: 5%;
-    padding-bottom: 20px; */
-}
-
 #members h1 {
   color: #e84c3d;
   margin-bottom: 3%;
@@ -328,10 +276,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-bottom: 10%; */
   padding-top: 8%;
-  /* margin-left: 50px; */
-  /* margin-right: 5%; */
 }
 
 .bullet-point {
@@ -402,10 +347,6 @@ a:hover {
   border-color: #fff;
 }
 
-.iframeOutside {
-  text-align: center;
-}
-
 #explore {
   margin-top: 70px;
 }
@@ -468,11 +409,6 @@ a:hover {
   height: 450px;
 }
 
-/* .faculty-image {
-    border: 1px solid #E0E0E0;
-    padding: 5px;
-} */
-
 .faculty-image img {
   width: 250px;
 }
@@ -511,30 +447,6 @@ a:hover {
   margin: 40px 0px;
 }
 
-#helpme {
-  margin-top: 50px;
-}
-
-.member-map {
-  height: 500px;
-  width: 100%;
-  padding: 5%;
-}
-
-.member-links {
-  padding-top: 2%;
-  list-style-type: none;
-  text-align: center;
-}
-
-.member-links > li {
-  display: list-item;
-}
-
-.member-button {
-  font-size: large;
-}
-
 .btn {
   font-weight: bold;
 }
@@ -544,30 +456,6 @@ a:hover {
   margin-bottom: 5%;
   text-align: center;
   padding: 5%;
-}
-
-#techTeam {
-  background-image: url("../img/members/techteam.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/members/techteam.jpg");
-}
-
-#mentoring {
-  background-image: url("../img/members/mentoring.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/members/mentoring.jpg");
-}
-
-#outreach {
-  background-image: url("../img/members/outreach.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/members/outreach.jpg");
-}
-
-#social {
-  background-image: url("../img/members/social.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/members/social.jpg");
 }
 
 .col-md-4 img {
@@ -588,6 +476,110 @@ a:hover {
   display: block;
   padding: 5% 5%;
   color: #e84c3d;
+}
+
+#sponsors .button {
+  width: 530px;
+  background-color: #e84c3d;
+  color: white;
+}
+
+/* tiers dropdown button */
+.dropbtn {
+  background-color: #e84c3d;
+  color: white;
+  font-size: 16px;
+  border-color: gray;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+ 
+.tiers-image-style {
+  height:550px;
+  width:100%;
+} 
+
+#sponsors .dropdown-view{
+  width: 100%;
+  font-size: 20px;
+  display:inline-block;
+}
+
+@media screen and (max-width: 700px) { 
+  #sponsors .button {
+    /* display: none; */
+    width: 440px;
+    background-color: #e84c3d;
+    color: white;
+  }
+
+} 
+
+#sponsors .sponsor-call {
+  display: flex;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1.5%;
+  font-size: 1.28em;
+  color: #333333;
+}
+
+#sponsors .sponsor-dropdown {
+  text-align: center;
+}
+
+#sponsors .sponsor-benefits .color-indicator {
+  font-size: 20px;
+  text-align: center;
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  font-weight: bolder;
+}
+
+#sponsors .sponsor-benefits .platinum {
+  color: #337ab7;
+  text-align: center;
+}
+#sponsors .sponsor-benefits .black {
+  color: black;
+  text-align: center;
+}
+
+#sponsors .sponsor-benefits .gold {
+  color: #f0ad4e;
+  text-align: center;
+}
+
+#sponsors .sponsor-benefits .silver {
+  color: #808080;
+  text-align: center;
+}
+
+#sponsors .sponsor-benefits .bronze {
+  color: #d9534f;
+  text-align: center;
 }
 
 #sponsors .sponsor-level {
@@ -655,10 +647,6 @@ a:hover {
   color: #e84c3d;
 }
 
-#officers h4 {
-  /* padding-bottom: 5%; */
-}
-
 @media (max-width: 749px) {
   #officers {
     padding: 10% 5%;
@@ -667,12 +655,6 @@ a:hover {
 
 .officerPicture {
   width: 100%;
-  /* width: 100%;
-    height: 400px; */
-  /* object-fit: cover;
-    object-position: 50% 50%; */
-  /* object-fit: cover;
-    object-position: 50% 50%; */
   height: 100%;
   object-fit: cover;
 }
@@ -736,20 +718,6 @@ a:hover {
   }
 }
 
-#alumni {
-  display: block;
-  padding: 5% 5%;
-}
-
-#featuredAlumni {
-  padding: 5% 10%;
-}
-
-#featuredAlumni .alumniPicture {
-  height: auto;
-  width: 100%;
-}
-
 #contact {
   display: block;
   padding: 5% 5%;
@@ -805,34 +773,6 @@ footer a {
   padding: 5%;
 }
 
-#clockdiv {
-  font-family: sans-serif;
-  color: #fff;
-  font-weight: 100;
-  text-align: center;
-  font-size: 30px;
-}
-
-#clockdiv > div {
-  padding: 10px;
-  border-radius: 3px;
-  background: #feeee8;
-  display: inline-block;
-}
-
-#clockdiv div > span {
-  padding: 15px;
-  border-radius: 3px;
-  background: #e84c3d;
-  display: inline-block;
-}
-
-.smalltext {
-  padding-top: 5px;
-  font-size: 16px;
-  color: #e84c3d;
-}
-
 .code-ada {
   font-size: 16px;
   margin: 90px 200px 20px;
@@ -846,29 +786,6 @@ footer a {
   margin-bottom: 30px;
 }
 
-#code-ada {
-  background: #e84c3d;
-  border-color: #e84c3d;
-  padding: 18px 28px;
-  font-size: 22px;
-  line-height: normal;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  text-align: center;
-}
-
-#code-ada-link {
-  color: #f5f3ee;
-}
-
-.card-img-top {
-  top: 50%;
-  width: auto;
-  max-width: 100%;
-  display: block;
-  margin: auto;
-}
-
 .card {
   height: 250px;
   width: 100%;
@@ -879,42 +796,28 @@ footer a {
   display: block;
 }
 
-#codeada-sponser {
-  display: flex;
-  justify-content: center;
-}
-
 .btn.btn-secondary {
   background-color: #c0c0c0 !important;
   color: white !important;
 }
 
-#codeada-img {
-  justify-content: center;
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-  padding: 10px;
+#chictech-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-#codeada-sponser-row {
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  text-align: center;
-  display: flex;
+#chictech-container h5 a {
+  text-decoration: underline;
+  color: #68c7cb;
 }
 
 #chictech-schedule {
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
+  max-width: 100%;
 }
 
 /* Custom CSS */
 
-/* Reference code: 
+/* Reference code:
  * https://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3
  * https://www.codeply.com/go/bp/74926
  */
@@ -1021,4 +924,4 @@ footer a {
   -webkit-border-radius: 6px 0 6px 6px;
   -moz-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
-}
+}x

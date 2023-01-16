@@ -1,5 +1,3 @@
-<!-- NOT USED -->
-
 <!DOCTYPE html>
 <html>
 
@@ -37,13 +35,13 @@
   <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
   <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
-  <script type="text/javascript" src="../assets/js/techteam.js"></script>
+  <script type="text/javascript" src="../assets/js/events.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
   <div id="navbar"></div>
   <script>
-    $(function() {
+    $(function () {
       $('#navbar').load('/components/navbar.html');
     });
   </script>
@@ -57,86 +55,47 @@
         event!
       </p>
 
-      <div class="event-wrapper">
-        <div class="event-card">
-          <video src="../assets/events/20220922-git-workshop.mp4" controls></video>
-          <div class="event-card-header">Git Gud @ Git</div>
-          <div class="event-card-subheader">09/22/2022</div>
-          <div class="event-card-link"><a
-              href="https://docs.google.com/presentation/d/1ypeJc3I3eklbVBF5hmdLZINVg3UiHA8l2DU2gVdKQXM/edit?usp=sharing"
-              target="_blank">Slides</a>
-          </div>
-          <div class="event-card-body">
-            <p class="event-card-text">Want to learn more about using GitHub? Interested in getting practice with
-              version control and Git? Come Git Gud @ Git at our GitHub workshop! No experience is necessary, and we
-              welcome all ages, majors, and backgrounds.</p>
-          </div>
-        </div>
-        <div class="event-card">
-          <img src="../assets/events/wcs september gm.PNG" />
-          <div class="event-card-header">September General Meeting (with Hubspot)</div>
-          <div class="event-card-subheader">09/21/2022</div>
-          <div class="event-card-link"><a
-              href="https://docs.google.com/presentation/d/1Yd_23AXKQR-kfRv_a1ZixZBdzwa_8G8kezQfSLP3-is/edit?usp=sharing"
-              target="_blank">Slides</a>
-          </div>
-          <div class="event-card-body">
-            <p class="event-card-text">Interested in working in product and engineering? Curious what a day in life for
-              a software engineer or product manager looks like? Come and join WCS for our General Meeting and a panel
-              discussion with HubSpot! We'll start with some general club updates, then dive into our Q&A with SWEs and
-              PMs who will be sharing about their role and experience at HubSpot. Food will be provided.</p>
-          </div>
-        </div>
-        <div class="event-card">
-          <img src="../assets/events/20220908-board-game-night.PNG" />
-          <div class="event-card-header">Board Game Night</div>
-          <div class="event-card-subheader">09/08/2022</div>
+      <script type="text/x-mustache" id="eventTemplate">
+        {{#event-admin}}
+        <div class="event-wrapper" id="allEvents">
+          <div class="event-card">
+            {{#video-name}}
+              <video src="../assets/events/{{video-name}}" controls></video>
+            {{/video-name}}
 
-          <div class="event-card-body">
-            <p class="event-card-text">Join WCS for a fun night of board games and cookies! We will start off with speed
-              friending so you can get to know some new people and then we have a variety of board games for you to
-              choose from!</p>
+            {{#event-image}}
+              <img src="../assets/events/{{event-image}}" />
+            {{/event-image}}
+
+
+            <div class="event-card-header">{{name}}</div>
+            <div class="event-card-subheader">{{date}}</div>
+
+            {{#slide-link}}
+              <div class="event-card-link"><a
+                  href={{slide-link}}
+                  target="_blank">Slides</a>
+              </div>
+            {{/slide-link}}
+
+
+            <div class="event-card-body">
+              <p class="event-card-text">{{description}}</p>
+            </div>
           </div>
         </div>
-        <div class="event-card">
-          <img src="../assets/events/20220831-involvement-fair.png" />
-          <div class="event-card-header">Fall 22 Involvement Fair</div>
-          <div class="event-card-subheader">08/31/2022</div>
-          <div class="event-card-link"><a
-              href="https://docs.google.com/presentation/d/1a82TINeVAdjZ9CGUqA_Mjsq885jXdTg-vqOEeIIM0c8/edit?usp=sharing"
-              target="_blank">Slides</a>
-          </div>
-          <div class="event-card-body">
-            <p class="event-card-text">Join us to learn more about WCS' 5 committees, what we do for the broader CS
-              community and our members, and how you can get more involved. Here from our committee chairs, on the
-              roles, responsibilities, and application process, and get a chance to meet and get our questions answered
-              by our committee chairs!</p>
-          </div>
-        </div>
-        <div class="event-card">
-          <video src="../assets/events/20220829-gm.mp4" controls></video>
-          <div class="event-card-header">August General Meeting</div>
-          <div class="event-card-subheader">08/29/2022</div>
-          <div class="event-card-link"><a
-              href="https://docs.google.com/presentation/d/1jZVRfM1gsCfo1vGSSOTZSNASgerd8D27OTd0YJk6pfs/edit?usp=sharing"
-              target="_blank">Slides</a>
-          </div>
-          <div class="event-card-body">
-            <p class="event-card-text">Join us for WCS's first general meeting! We'll be going over some of our
-              announcements, progress, committees, and more from the summer and since the start of the school year! Come
-              by and learn how you can be a member of WCS.</p>
-          </div>
-        </div>
+          {{/event-admin}}
+      </script>
+
+      <div class="event-wrapper" id="allEvents">
       </div>
-    </div>
-  </div>
 
-  <div id="footer"></div>
-  <script>
-    $(function() {
-      $('#footer').load('/components/footer.html');
-    });
-  </script>
+      <div id="footer"></div>
+      <script>
+        $(function () {
+          $('#footer').load('/components/footer.html');
+        });
+      </script>
 </body>
 
 </html>
