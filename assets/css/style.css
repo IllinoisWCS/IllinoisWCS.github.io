@@ -301,42 +301,6 @@ a:hover {
   }
 }
 
-#contact {
-  display: block;
-  padding: 5% 5%;
-  color: #e84c3d;
-  background-color: #f5f3ee;
-}
-
-#contact .form-control {
-  font-family: "Mallanna", sans-serif;
-}
-
-#contact .label {
-  font-family: "Mallanna", sans-serif;
-}
-
-#contact .btn-primary {
-  background-color: #e84c3d;
-  border-color: #e84c3d;
-  color: #fff;
-}
-
-#contact .btn-primary:hover {
-  background-color: #e84c3d;
-  color: #f5f3ee;
-}
-
-#contact .contact-form {
-  padding-top: 5%;
-}
-
-@media (max-width: 749px) {
-  #contact {
-    padding: 10%;
-  }
-}
-
 footer {
   background-color: #e84c3d;
   color: white;
@@ -367,21 +331,6 @@ footer a {
 
 .code-ada .header {
   margin-bottom: 30px;
-}
-
-.card {
-  height: 250px;
-  width: 100%;
-}
-
-.card-button {
-  width: 100%;
-  display: block;
-}
-
-.btn.btn-secondary {
-  background-color: #c0c0c0 !important;
-  color: white !important;
 }
 
 #chictech-container {
