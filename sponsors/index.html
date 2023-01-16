@@ -1,214 +1,170 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sponsors</title>
 
-    <meta name="description" content="The sponsors of WCS @ Illinois." />
-    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Sponsors" />
-    <meta property="og:type" content="company" />
-    <meta property="og:site_name" content="Women in Computer Science" />
-    <meta property="og:url" content="wcs.illinois.edu" />
-    <meta property="og:image" content="" />
+<head>
+  <title>Sponsors</title>
 
-    <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico" />
+  <meta name="description" content="The sponsors of WCS @ Illinois." />
+  <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Sponsors" />
+  <meta property="og:type" content="company" />
+  <meta property="og:site_name" content="Women in Computer Science" />
+  <meta property="og:url" content="wcs.illinois.edu" />
+  <meta property="og:image" content="" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Oswald"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Mallanna"
-      rel="stylesheet"
-    />
+  <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico" />
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../assets/lib/fontawesome/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet" />
 
-    <script
-      type="text/javascript"
-      src="../assets/lib/jquery/dist/jquery.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../assets/lib/jquery-easing-original/jquery.easing.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../assets/lib/mustache/mustache.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../assets/lib/isotope/dist/isotope.pkgd.min.js"
-    ></script>
-    <script type="text/javascript" src="../assets/js/sponsers.js"></script>
-    <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/sponsors.css" />
 
-    <!-- functionality for tiers dropdown button -->
-    <script type="text/javascript">
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
+  <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+  <script type="text/javascript" src="../assets/js/sponsers.js"></script>
+  <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
 
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropbtn")) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
+  <!-- functionality for tiers dropdown button -->
+  <script type="text/javascript">
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+      if (!event.target.matches(".dropbtn")) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
           }
         }
-      };
-    </script>
-  </head>
+      }
+    };
+  </script>
+</head>
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <div id="navbar"></div>
-    <script>
-      $(function () {
-        $("#navbar").load("/components/navbar.html");
-      });
-    </script>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <div id="navbar"></div>
+  <script>
+    $(function () {
+      $("#navbar").load("/components/navbar.html");
+    });
+  </script>
 
-    <section id="sponsors">
-      <h1 align="center" class="content-header">Sponsor Us!</h1>
+  <section id="sponsors">
+    <h1 align="center" class="content-header">Sponsor Us!</h1>
 
-      <div align="center" class="sponsor-call">
-        We are committed to cultivating diverse voices in our student body while
-        maintaining engagement between company representatives and our members
-        in whatever setting that may be. With your contribution, we will plan
-        in-person and hybrid opportunities through which we aim to help members
-        gain confidence in pursuing their ambitions. In turn, you will be able
-        to connect with these dedicated students and gain more recognition
-        within our organization!
+    <div align="center" class="sponsor-call">
+      We are committed to cultivating diverse voices in our student body while
+      maintaining engagement between company representatives and our members
+      in whatever setting that may be. With your contribution, we will plan
+      in-person and hybrid opportunities through which we aim to help members
+      gain confidence in pursuing their ambitions. In turn, you will be able
+      to connect with these dedicated students and gain more recognition
+      within our organization!
+    </div>
+
+    <h1 align="center" class="content-header" style="padding-bottom: 20px">
+      Sponsorship Tiers:
+    </h1>
+
+    <div align="center" style="" class="sponsor-benefits color-indicator">
+      <span style="display: inline" class="color-indicator platinum">PLATINUM</span>
+      <span style="display: inline" class="color-indicator gold">GOLD</span>
+      <span style="display: inline" class="color-indicator silver">SILVER
+      </span>
+      <span style="display: inline" class="color-indicator bronze">BRONZE</span>
+    </div>
+
+    <!-- tiers dropdown button -->
+    <br />
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">
+        Click here to learn more!
+      </button>
+      <div id="myDropdown" class="dropdown-content">
+        <img class="tiers-image-style" src=/assets/img/logos/sponsors/sponsor_tiers.png>
       </div>
+    </div>
+    <br />
 
-      <h1 align="center" class="content-header" style="padding-bottom: 20px">
-        Sponsorship Tiers:
-      </h1>
+    <h1 align="center" class="content-header" style="padding-top: 5px">
+      Sponsors
+    </h1>
 
-      <div align="center" style="" class="sponsor-benefits color-indicator">
-        <span style="display: inline" class="color-indicator platinum"
-          >PLATINUM</span
-        >
-        <span style="display: inline" class="color-indicator gold">GOLD</span>
-        <span style="display: inline" class="color-indicator silver"
-          >SILVER
-        </span>
-        <span style="display: inline" class="color-indicator bronze"
-          >BRONZE</span
-        >
+    <div class="sponsor-level">
+      <div class="sponsor-detail">
+        <a href="https://stripe.com/jobs/university" target="_blank">
+          <div class="sponsor-image">
+            <img src="/assets/img/logos/sponsors/stripe.png" alt="Stripe logo" />
+          </div>
+        </a>
+
+        <div class="level-indicator platinum">PLATINUM</div>
       </div>
+      <div class="sponsor-detail">
+        <a href="https://www.uber.com/us/en/careers/" target="_blank">
+          <div class="sponsor-image">
+            <img src="/assets/img/logos/sponsors/uber.png" alt="Uber logo" />
+          </div>
+        </a>
 
-      <!-- tiers dropdown button -->
-      <br />
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">
-          Click here to learn more!
-        </button>
-        <div id="myDropdown" class="dropdown-content">
-          <img class="tiers-image-style"
-          src=/assets/img/logos/sponsors/sponsor_tiers.png >
-        </div>
+        <div class="level-indicator platinum">PLATINUM</div>
       </div>
-      <br />
+    </div>
 
-      <h1 align="center" class="content-header" style="padding-top: 5px">
-        Sponsors
-      </h1>
-
-      <div class="sponsor-level">
-        <div class="sponsor-detail">
-          <a href="https://stripe.com/jobs/university" target="_blank">
-            <div class="sponsor-image">
-              <img
-                src="/assets/img/logos/sponsors/stripe.png"
-                alt="Stripe logo"
-              />
-            </div>
-          </a>
-
-          <div class="level-indicator platinum">PLATINUM</div>
-        </div>
-        <div class="sponsor-detail">
-          <a href="https://www.uber.com/us/en/careers/" target="_blank">
-            <div class="sponsor-image">
-              <img src="/assets/img/logos/sponsors/uber.png" alt="Uber logo" />
-            </div>
-          </a>
-
-          <div class="level-indicator platinum">PLATINUM</div>
-        </div>
+    <div class="sponsor-level">
+      <div class="sponsor-detail">
+        <a href="https://www.metacareers.com/" target="_blank">
+          <div class="sponsor-image">
+            <img src="/assets/img/logos/sponsors/meta.png" alt="Meta logo" />
+          </div>
+        </a>
+        <div class="level-indicator gold">GOLD</div>
       </div>
+      <div class="sponsor-detail">
+        <a href="https://www.oldmissioncapital.com/careers/" target="_blank">
+          <div class="sponsor-image">
+            <img src="/assets/img/logos/sponsors/oldmissioncapital.png" alt="Old Mission Capital logo" />
+          </div>
+        </a>
 
-      <div class="sponsor-level">
-        <div class="sponsor-detail">
-          <a href="https://www.metacareers.com/" target="_blank">
-            <div class="sponsor-image">
-              <img src="/assets/img/logos/sponsors/meta.png" alt="Meta logo" />
-            </div>
-          </a>
-          <div class="level-indicator gold">GOLD</div>
-        </div>
-        <div class="sponsor-detail">
-          <a href="https://www.oldmissioncapital.com/careers/" target="_blank">
-            <div class="sponsor-image">
-              <img
-                src="/assets/img/logos/sponsors/oldmissioncapital.png"
-                alt="Old Mission Capital logo"
-              />
-            </div>
-          </a>
-
-          <div class="level-indicator gold">GOLD</div>
-        </div>
+        <div class="level-indicator gold">GOLD</div>
       </div>
+    </div>
 
-      <div class="sponsor-level"></div>
+    <div class="sponsor-level"></div>
 
-      <div class="sponsor-level">
-        <div class="sponsor-detail">
-          <a href="https://www.capitalonecareers.com" target="_blank">
-            <div class="sponsor-image">
-              <img
-                src="/assets/img/logos/sponsors/capitalone.jpg"
-                alt="Capital One logo"
-              />
-            </div>
-          </a>
+    <div class="sponsor-level">
+      <div class="sponsor-detail">
+        <a href="https://www.capitalonecareers.com" target="_blank">
+          <div class="sponsor-image">
+            <img src="/assets/img/logos/sponsors/capitalone.jpg" alt="Capital One logo" />
+          </div>
+        </a>
 
-          <div class="level-indicator bronze">BRONZE</div>
-        </div>
+        <div class="level-indicator bronze">BRONZE</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div id="footer"></div>
-    <script>
-      $(function () {
-        $("#footer").load("/components/footer.html");
-      });
-    </script>
-  </body>
+  <div id="footer"></div>
+  <script>
+    $(function () {
+      $("#footer").load("/components/footer.html");
+    });
+  </script>
+</body>
+
 </html>
