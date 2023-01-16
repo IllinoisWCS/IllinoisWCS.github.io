@@ -102,6 +102,8 @@
     <script type="text/javascript" src="assets/js/script.js"></script>
     <script type="text/javascript" src="/assets/js/officers.js"></script>
     <script type="text/javascript" src="assets/js/alumni.js"></script>
+    <script type="text/javascript" src="assets/js/main_carousel.js"></script>
+
   </head>
 
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -120,39 +122,26 @@
       });
     </script>
 
+
+    <script type="text/x-mustache" id="mainCarouselTemplate">
+      <img
+        src="/assets/img/events/{{image}}"
+        class="carouselImageStyling"
+        alt="{{alt}}"
+      />
+    </script>
+
     <!--main header carousel-->
     <div id="mainCarousel" class="carousel slide" data-ride="carousel">
       <!--indicators-->
-      <ol class="carousel-indicators">
-        <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#mainCarousel" data-slide-to="1"></li>
-        <li data-target="#mainCarousel" data-slide-to="2"></li>
-      </ol>
+      <ol class="carousel-indicators" id="indicators"></ol>
 
       <!--images in carousel-->
-      <div class="carousel-inner">
-        <div class="item active">
-          <img
-            src="/assets/img/events/wcs bits and bytes.png"
-            class="carouselImageStyling"
-            alt="bits & bytes"
-          />
-        </div>
-        <div class="item">
-          <img
-            src="/assets/img/events/wcs google workshop.png"
-            class="carouselImageStyling"
-            alt="google"
-          />
-        </div>
-        <div class="item">
-          <img
-            src="/assets/img/events/wcs and stripe.png"
-            class="carouselImageStyling"
-            alt="stripe"
-          />
-        </div>
-      </div>
+      <div class="carousel-inner" id="carouselImages"></div>
+
+
+
+
       <!--left and right controls-->
       <a class="left carousel-control" href="#mainCarousel" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>

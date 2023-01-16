@@ -3,4 +3,5 @@ $(document).ready(function() {
         var output = Mustache.render($('#officerTemplate').html(), data);
         $('#allOfficers').html(output);
     });
+    
 });
