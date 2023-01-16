@@ -254,22 +254,8 @@ footer a {
   color: white;
 }
 
-#techteam-title {
+#events-container {
   padding: 5%;
-}
-
-#chictech-container {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-#chictech-container h5 a {
-  text-decoration: underline;
-  color: #68c7cb;
-}
-
-#chictech-schedule {
-  max-width: 100%;
 }
 
 .tabs-left>.nav-tabs {
