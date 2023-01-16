@@ -82,6 +82,7 @@
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/home.css"/>
 
     <script
       type="text/javascript"
@@ -126,28 +127,28 @@
     <script type="text/x-mustache" id="mainCarouselTemplate">
       <img
         src="/assets/img/events/{{image}}"
-        class="carouselImageStyling"
+        class="carousel-image-styling"
         alt="{{alt}}"
       />
     </script>
 
     <!--main header carousel-->
-    <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+    <div id="main-carousel" class="carousel slide" data-ride="carousel">
       <!--indicators-->
       <ol class="carousel-indicators" id="indicators"></ol>
 
       <!--images in carousel-->
-      <div class="carousel-inner" id="carouselImages"></div>
+      <div class="carousel-inner" id="carousel-images"></div>
 
 
 
 
       <!--left and right controls-->
-      <a class="left carousel-control" href="#mainCarousel" data-slide="prev">
+      <a class="left carousel-control" href="#main-carousel" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="right carousel-control" href="#mainCarousel" data-slide="next">
+      <a class="right carousel-control" href="#main-carousel" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -159,7 +160,7 @@
     <!--main carousel speed change-->
     <script type="text/javascript">
       $(document).ready(function () {
-        $("#mainCarousel").carousel({
+        $("#main-carousel").carousel({
           interval: 6000,
           pause: false,
         });
@@ -186,19 +187,19 @@
         <div class="col-md-6">
           <h2 class="member-subheaders">Our Committees</h2>
           <div
-            id="committeesCarousel"
+            id="committees-carousel"
             class="carousel slide"
             data-ride="carousel"
           >
             <ol class="carousel-indicators">
               <li
-                data-target="#committeesCarousel"
+                data-target="#committees-carousel"
                 data-slide-to="0"
                 class="active"
               ></li>
-              <li data-target="#committeesCarousel" data-slide-to="1"></li>
-              <li data-target="#committeesCarousel" data-slide-to="2"></li>
-              <li data-target="#committeesCarousel" data-slide-to="3"></li>
+              <li data-target="#committees-carousel" data-slide-to="1"></li>
+              <li data-target="#committees-carousel" data-slide-to="2"></li>
+              <li data-target="#committees-carousel" data-slide-to="3"></li>
             </ol>
 
             <div class="carousel-inner">
@@ -286,7 +287,7 @@
 
             <a
               class="left carousel-control"
-              href="#committeesCarousel"
+              href="#committees-carousel"
               data-slide="prev"
             >
               <span class="glyphicon glyphicon-chevron-left"></span>
@@ -294,7 +295,7 @@
             </a>
             <a
               class="right carousel-control"
-              href="#committeesCarousel"
+              href="#committees-carousel"
               data-slide="next"
             >
               <span class="glyphicon glyphicon-chevron-right"></span>
