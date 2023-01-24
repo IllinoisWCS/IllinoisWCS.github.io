@@ -8,7 +8,7 @@ $(document).ready(function() {
     var weekNumber = Math.ceil(days/7);
 
     // conditional may have to change each year depending on what week of the year we start open office
-    if (weekNumber % 2 != 0) {
+    if (weekNumber % 2 == 0) {
             var element = document.getElementById("week2");
             element.classList.remove("active");
             element = document.getElementById("week2tab");
