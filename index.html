@@ -1,355 +1,242 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>WCS @ UIUC</title>
-    <meta
-      name="description"
-      content="Women in Computer Science is an organization under
+
+<head>
+  <title>WCS @ UIUC</title>
+  <meta name="description" content="Women in Computer Science is an organization under
                      CS@Illinois that strives to provide opportunities and a
-                     community for female CS students at University of Illinois."
-    />
-    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta property="og:title" content="Women in Computer Science" />
-    <meta property="og:type" content="company" />
-    <meta property="og:site_name" content="Women in Computer Science" />
-    <meta property="og:url" content="http://www.illinoiswcs.org" />
-    <meta property="og:image" content="assets/img/wcs/officerOpenGraph.jpg" />
+                     community for female CS students at University of Illinois." />
+  <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta property="og:title" content="Women in Computer Science" />
+  <meta property="og:type" content="company" />
+  <meta property="og:site_name" content="Women in Computer Science" />
+  <meta property="og:url" content="http://www.illinoiswcs.org" />
+  <meta property="og:image" content="assets/img/wcs/officerOpenGraph.jpg" />
 
-    <!-- Favicon Data -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/img/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="assets/img/favicons/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/img/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/img/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/img/favicons/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="assets/img/favicons/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <link rel="shortcut icon" href="assets/img/favicons/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-config"
-      content="assets/img/favicons/browserconfig.xml"
-    />
-    <meta name="theme-color" content="#ffffff" />
+  <!-- Favicon Data -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="assets/img/favicons/site.webmanifest" />
+  <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Mallanna|Roboto:400,700&display=swap"
-      rel="stylesheet"
-    />
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Mallanna|Roboto:400,700&display=swap" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/lib/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/lib/fontawesome/css/font-awesome.min.css"
-    />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/lib/fontawesome/css/font-awesome.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/home.css" />
 
-    <script
-      type="text/javascript"
-      src="assets/lib/jquery/dist/jquery.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/lib/jquery-easing-original/jquery.easing.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/lib/bootstrap/dist/js/bootstrap.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/lib/mustache/mustache.min.js"
-    ></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
-    <script type="text/javascript" src="/assets/js/officers.js"></script>
-    <script type="text/javascript" src="assets/js/alumni.js"></script>
-  </head>
+  <script type="text/javascript" src="assets/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/lib/mustache/mustache.min.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  <script type="text/javascript" src="/assets/js/officers.js"></script>
+  <script type="text/javascript" src="assets/js/alumni.js"></script>
+  <script type="text/javascript" src="assets/js/main_carousel.js"></script>
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <div id="navbar"></div>
-    <div id="fb-root"></div>
-    <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
-      nonce="3ssviHgQ"
-    ></script>
-    <script>
-      $(function () {
-        $("#navbar").load("/components/navbar.html");
-      });
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <div id="navbar"></div>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
+    nonce="3ssviHgQ"></script>
+  <script>
+    $(function () {
+      $("#navbar").load("/components/navbar.html");
+    });
+  </script>
+
+
+  <script type="text/x-mustache" id="mainCarouselTemplate">
+      <img
+        src="/assets/img/events/{{image}}"
+        class="carousel-image-styling"
+        alt="{{alt}}"
+      />
     </script>
 
-    <!--main header carousel-->
-    <div id="mainCarousel" class="carousel slide" data-ride="carousel">
-      <!--indicators-->
-      <ol class="carousel-indicators">
-        <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#mainCarousel" data-slide-to="1"></li>
-        <li data-target="#mainCarousel" data-slide-to="2"></li>
-      </ol>
+  <!--main header carousel-->
+  <div id="main-carousel" class="carousel slide" data-ride="carousel">
+    <!--indicators-->
+    <ol class="carousel-indicators" id="indicators"></ol>
 
-      <!--images in carousel-->
-      <div class="carousel-inner">
-        <div class="item active">
-          <img
-            src="/assets/img/events/wcs bits and bytes.png"
-            class="carouselImageStyling"
-            alt="bits & bytes"
-          />
-        </div>
-        <div class="item">
-          <img
-            src="/assets/img/events/wcs google workshop.png"
-            class="carouselImageStyling"
-            alt="google"
-          />
-        </div>
-        <div class="item">
-          <img
-            src="/assets/img/events/wcs and stripe.png"
-            class="carouselImageStyling"
-            alt="stripe"
-          />
-        </div>
-      </div>
-      <!--left and right controls-->
-      <a class="left carousel-control" href="#mainCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#mainCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-      </a>
-      <!-- women in cs text-->
-      <div meta class="main-heading-container">
-        <h2 class="main-heading">Women in Computer Science at UIUC</h2>
-      </div>
+    <!--images in carousel-->
+    <div class="carousel-inner" id="carousel-images"></div>
+
+    <!--left and right controls-->
+    <a class="left carousel-control" href="#main-carousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#main-carousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <div class="main-heading-container">
+      <h2 class="main-heading">Women in Computer Science at UIUC</h2>
     </div>
-    <!--main carousel speed change-->
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#mainCarousel").carousel({
-          interval: 6000,
-          pause: false,
-        });
+  </div>
+  <!--main carousel speed change-->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#main-carousel").carousel({
+        interval: 6000,
+        pause: false,
       });
-    </script>
+    });
+  </script>
 
 
-    <div class="home-content">
-      <div class="wcs-welcome">
-        <h2 class="header">Welcome to Women in Computer Science</h2>
-        <p>
-          Women in Computer Science (WCS) is a non-profit, educational student
-          group under the University of Illinois at Urbana-Champaign Computer
-          Science Department. The organization is dedicated to supporting the
-          efforts of young women who are pursuing a career in computer science
-          or show an overall interest in technology. Because the number of women
-          pursuing computer science has been steadily decreasing, WCS aims to
-          provide a network of support for members to rely on for advice and
-          camaraderie. We welcome everyone irrespective of gender and major!
-        </p>
-      </div>
+  <div class="home-content">
+    <div class="wcs-welcome">
+      <h2 class="header">Welcome to Women in Computer Science</h2>
+      <p>
+        Women in Computer Science (WCS) is a non-profit, educational student
+        group under the University of Illinois at Urbana-Champaign Computer
+        Science Department. The organization is dedicated to supporting the
+        efforts of young women who are pursuing a career in computer science
+        or show an overall interest in technology. Because the number of women
+        pursuing computer science has been steadily decreasing, WCS aims to
+        provide a network of support for members to rely on for advice and
+        camaraderie. We welcome everyone irrespective of gender and major!
+      </p>
+    </div>
 
-      <div class="row row-centered" id="members">
-        <div class="col-md-6">
-          <h2 class="member-subheaders">Our Committees</h2>
-          <div
-            id="committeesCarousel"
-            class="carousel slide"
-            data-ride="carousel"
-          >
-            <ol class="carousel-indicators">
-              <li
-                data-target="#committeesCarousel"
-                data-slide-to="0"
-                class="active"
-              ></li>
-              <li data-target="#committeesCarousel" data-slide-to="1"></li>
-              <li data-target="#committeesCarousel" data-slide-to="2"></li>
-              <li data-target="#committeesCarousel" data-slide-to="3"></li>
-            </ol>
+    <div class="row row-centered" id="members">
+      <div class="col-md-6">
+        <h2 class="member-subheaders">Our Committees</h2>
+        <div id="committees-carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#committees-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#committees-carousel" data-slide-to="1"></li>
+            <li data-target="#committees-carousel" data-slide-to="2"></li>
+            <li data-target="#committees-carousel" data-slide-to="3"></li>
+          </ol>
 
-            <div class="carousel-inner">
-              <div class="item active">
-                <a
-                  href="https://illinois-wcs-explorations.notion.site/WCS-Explorations-b936f1d332224e5d90541bb1ec9c022f"
-                  target="_blank"
-                >
-                  <img
-                    class="carousel-img"
-                    src="/assets/img/members/techteam.jpg"
-                    alt="Explorations"
-                  />
-                  <div class="carousel-caption">
-                    <h4>Explorations</h4>
-                    <p>
-                      WCS Explorations helps with all things technical! We offer
-                      frequent technical and interview preparation workshops,
-                      project teams for real-world project experience, and host
-                      an annual hackathon!
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="item">
-                <a href="mentoring/index.html">
-                  <img
-                    class="carousel-img"
-                    src="/assets/img/members/mentoring.jpg"
-                    alt="Mentoring"
-                  />
-                  <div class="carousel-caption">
-                    <h4>Mentoring</h4>
-                    <p>
-                      WCS Mentoring strives to provide opportunities and
-                      resources for new freshmen, transfer members, and current
-                      UIUC students to promote professional, personal, and
-                      academic development.
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="item">
-                <a href="outreach/index.html">
-                  <img
-                    class="carousel-img"
-                    src="/assets/img/members/outreach.jpg"
-                    alt="Outreach"
-                  />
-                  <div class="carousel-caption">
-                    <h4>Outreach</h4>
-                    <p>
-                      Welcome to WCS Outreach! We are the subdivision of WCS
-                      dedicated to encouraging young women to pursue a computer
-                      science education.
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="item">
-                <a
-                  href="https://lavish-layer-015.notion.site/WCS-Social-6c0889d569674f54965a433bb0eb0dc4"
-                  target="_blank"
-                >
-                  <img
-                    class="carousel-img"
-                    src="/assets/img/members/social.jpg"
-                    alt="Social"
-                  />
-                  <div class="carousel-caption">
-                    <h4>Social</h4>
-                    <p>
-                      At Social, we strive to make new and upcoming events
-                      inclusive and engaging, participate in internal and
-                      external networking to hold unique experiences, and design
-                      and create enjoyable and amicable social events.
-                    </p>
-                  </div>
-                </a>
-              </div>
+          <div class="carousel-inner">
+            <div class="item active">
+              <a href="https://illinois-wcs-explorations.notion.site/WCS-Explorations-b936f1d332224e5d90541bb1ec9c022f"
+                target="_blank">
+                <img class="carousel-img" src="/assets/img/members/techteam.jpg" alt="Explorations" />
+                <div class="carousel-caption">
+                  <h4>Explorations</h4>
+                  <p>
+                    WCS Explorations helps with all things technical! We offer
+                    frequent technical and interview preparation workshops,
+                    project teams for real-world project experience, and host
+                    an annual hackathon!
+                  </p>
+                </div>
+              </a>
             </div>
 
-            <a
-              class="left carousel-control"
-              href="#committeesCarousel"
-              data-slide="prev"
-            >
-              <span class="glyphicon glyphicon-chevron-left"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a
-              class="right carousel-control"
-              href="#committeesCarousel"
-              data-slide="next"
-            >
-              <span class="glyphicon glyphicon-chevron-right"></span>
-              <span class="sr-only">Next</span>
-            </a>
+            <div class="item">
+              <a href="mentoring/index.html">
+                <img class="carousel-img" src="/assets/img/members/mentoring.jpg" alt="Mentoring" />
+                <div class="carousel-caption">
+                  <h4>Mentoring</h4>
+                  <p>
+                    WCS Mentoring strives to provide opportunities and
+                    resources for new freshmen, transfer members, and current
+                    UIUC students to promote professional, personal, and
+                    academic development.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="outreach/index.html">
+                <img class="carousel-img" src="/assets/img/members/outreach.jpg" alt="Outreach" />
+                <div class="carousel-caption">
+                  <h4>Outreach</h4>
+                  <p>
+                    Welcome to WCS Outreach! We are the subdivision of WCS
+                    dedicated to encouraging young women to pursue a computer
+                    science education.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="https://lavish-layer-015.notion.site/WCS-Social-6c0889d569674f54965a433bb0eb0dc4"
+                target="_blank">
+                <img class="carousel-img" src="/assets/img/members/social.jpg" alt="Social" />
+                <div class="carousel-caption">
+                  <h4>Social</h4>
+                  <p>
+                    At Social, we strive to make new and upcoming events
+                    inclusive and engaging, participate in internal and
+                    external networking to hold unique experiences, and design
+                    and create enjoyable and amicable social events.
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <h2 class="member-subheaders">Upcoming Events</h2>
-          <ul id="events-list" class="list-group"></ul>
+
+          <a class="left carousel-control" href="#committees-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#committees-carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
+      <div class="col-md-6">
+        <h2 class="member-subheaders">Upcoming Events</h2>
+        <ul id="events-list" class="list-group"></ul>
+      </div>
     </div>
+  </div>
 
-    <div id="footer"></div>
-    <script>
-      $(function () {
-        $("#footer").load("/components/footer.html");
-      });
-    </script>
+  <div id="footer"></div>
+  <script>
+    $(function () {
+      $("#footer").load("/components/footer.html");
+    });
+  </script>
 
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        "script",
-        "//www.google-analytics.com/analytics.js",
-        "ga"
-      );
-      ga("create", "UA-51793372-1", "auto");
-      ga("send", "pageview");
-    </script>
-  </body>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "//www.google-analytics.com/analytics.js",
+      "ga"
+    );
+    ga("create", "UA-51793372-1", "auto");
+    ga("send", "pageview");
+  </script>
+</body>
+
 </html>

@@ -1,0 +1,20 @@
+#outreach-main {
+  display: block;
+  padding: 5% 5%;
+  color: #e84c3d;
+}
+
+#outreach-main .outreach-title {
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+#outreach-main .outreach-events {
+  color: black;
+}
+
+@media (max-width: 749px) {
+  #outreach-main {
+    padding: 10%;
+  }
+}
