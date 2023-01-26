@@ -2,677 +2,668 @@
 <html>
 
 <head>
-    <title>WCS Explore CS</title>
+  <title>WCS Explore CS</title>
 
-    <meta name="description" content="Calendar of Upcoming WCS Events" />
-    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Calendar" />
-    <meta property="og:type" content="company" />
-    <meta property="og:site_name" content="Women in Computer Science" />
-    <meta property="og:url" content="www.illinoiswcs.org" />
-    <meta property="og:image" content="" />
+  <meta name="description" content="Calendar of Upcoming WCS Events" />
+  <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Calendar" />
+  <meta property="og:type" content="company" />
+  <meta property="og:site_name" content="Women in Computer Science" />
+  <meta property="og:url" content="www.illinoiswcs.org" />
+  <meta property="og:image" content="" />
 
-    <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico">
+  <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico">
 
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"></link>
+  <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/explore.css"/>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
-    <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="../assets/js/disable-script.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+  <script type="text/javascript" src="../assets/js/disable-script.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <div id="navbar"></div>
-    <script>
-        $(function() {
-           $('#navbar').load('/components/navbar.html');
-        });
-    </script>
+  <div id="navbar"></div>
+  <script>
+    $(function () {
+      $('#navbar').load('/components/navbar.html');
+    });
+  </script>
 
-    <div class="row" id="explore">
-        <div class="col-sm-offset-1 col-md-10">
-            <h1 align="center" class="content-header">WCS Explore CS @ Illinois Series</h1>
+  <div class="row" id="explore">
+    <div class="col-sm-offset-1 col-md-10">
+      <h1 align="center" class="content-header">WCS Explore CS @ Illinois Series</h1>
 
-            <div class="explore-content">
-                <div class="intro-text">
-                    <!-- <p>
-                        WCS Explore CS Series is an informative video series about the research our professors have done, using computer science applications, to impact different fields of work. We hope this series will allow young teenagers, and possibly even <b>you</b> reading this, to learn more about the opportunities available through studying computer science!
-                        We are bringing professors from all fields of expertise to talk about how they have used computer science to complete their research and how it affects the field they work in, as well as communities around the world!
-                        Stay tuned to our YouTube channel and check out our introductory article to learn more!
-                    </p>
-                    <p>
-                        If you would like to receive a monthly update, with a summary of the research topic videos posted, make sure to fill out this newsletter form: 
-                        <a href="https://forms.gle/hHnfnBhpxBnZphBF8" target="_blank">
-                            https://forms.gle/hHnfnBhpxBnZphBF8
-                        </a>
-                    </p>
-                    <p>
-                        We will be posting the videos in our series on our YouTube channel: 
-                        <a href="https://tinyurl.com/illinoiswcsyoutube" target="_blank">
-                            https://tinyurl.com/illinoiswcsyoutube
-                        </a>
-                    </p>
-                    <p>
-                        If you would like to learn more, make sure to check out our introductory medium article, detailing what we hope students can gain from our series: 
-                        <a href="https://medium.com/@illinoiswcs/explore-cs-illinois-series-29cfb2829b43" target="_blank">
-                            https://medium.com/@illinoiswcs/explore-cs-illinois-series-29cfb2829b43
-                        </a>
-                    </p> -->
-                    <p>
-                        WCS Explore CS Series is an informative video series about the research our professors have done, 
-                        using computer science applications, to impact different fields of work. We hope this series will 
-                        allow young teenagers, and possibly even <b>you</b> reading this, to learn more about the opportunities 
-                        available through studying computer science! We are bringing professors from all fields of expertise 
-                        to talk about how they have used computer science to complete their research and how it affects 
-                        the field they work in, as well as communities around the world!
-                    </p>
+      <div class="explore-content">
+        <div class="intro-text">
+          <p>
+            WCS Explore CS Series is an informative video series about the research our professors have done,
+            using computer science applications, to impact different fields of work. We hope this series will
+            allow young teenagers, and possibly even <b>you</b> reading this, to learn more about the opportunities
+            available through studying computer science! We are bringing professors from all fields of expertise
+            to talk about how they have used computer science to complete their research and how it affects
+            the field they work in, as well as communities around the world!
+          </p>
 
-                    <p>
-                        Through this series we hope aspiring, uncertain, and interested students alike will be able to 
-                        gain better insight into how computer science can help you actualize your personal goals and 
-                        interests. Computer science work is not just what it looks like in the media — it can be fun, 
-                        interactive, and fulfilling. Not all computer scientists sit around a computer screen all day, 
-                        and not all of us are code monkeys! We hope to show through this series that computer science 
-                        is more than what it seems, and can be used in a vast number of fields in various ways!!
-                    </p>
+          <p>
+            Through this series we hope aspiring, uncertain, and interested students alike will be able to
+            gain better insight into how computer science can help you actualize your personal goals and
+            interests. Computer science work is not just what it looks like in the media — it can be fun,
+            interactive, and fulfilling. Not all computer scientists sit around a computer screen all day,
+            and not all of us are code monkeys! We hope to show through this series that computer science
+            is more than what it seems, and can be used in a vast number of fields in various ways!!
+          </p>
 
-                    <p>
-                        All videos in our series are posted on our YouTube channel:
-                        <a href="https://tinyurl.com/illinoiswcsyoutube" target="_blank">
-                            https://tinyurl.com/illinoiswcsyoutube
-                        </a>
-                    </p>
+          <p>
+            All videos in our series are posted on our YouTube channel:
+            <a href="https://tinyurl.com/illinoiswcsyoutube" target="_blank">
+              https://tinyurl.com/illinoiswcsyoutube
+            </a>
+          </p>
 
-                    <p>
-                        If you would like to learn more, make sure to check out our introductory medium article, 
-                        detailing what we hope students can gain from our series: 
-                        <a href="https://medium.com/@illinoiswcs/explore-cs-illinois-series-29cfb2829b43" target="_blank">
-                            https://medium.com/@illinoiswcs/explore-cs-illinois-series-29cfb2829b43
-                        </a>
-                    </p>
-                </div>
-                <!-- to do: click on flyer to expand -->
-                <img class="explore-flyer" src="../assets/img/wcs/explore-flyer.jpg" />
-            </div>
-            
-            <div class="october-series">
-                <h1 align="center" class="content-header">October Sessions</h1>
-
-                <div class="monthly-content">
-                    <div class="intro">
-                        Check out our 
-                        <a href="https://illinoiswcs.medium.com/explore-cs-october-sessions-5e194e3211c" target="_blank">
-                        October Sessions article
-                        </a>
-                         for more information on these sessions below!
-                    </div>
-                    
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Sheldon Jacobson</div>
-                            <a href="http://shj.cs.illinois.edu/" target="_blank">
-                                http://shj.cs.illinois.edu/
-                            </a>
-                            <div class="description">
-                                Sheldon H. Jacobson is a Founder Professor of Computer Science, 
-                                Director of the Simulation and Optimization Laboratory, and Founding 
-                                Director of the Bed Time Research Institute at the University of 
-                                Illinois at Urbana-Champaign. With a strong background in Computer 
-                                Science, Industrial Engineering, Electrical and Computer Engineering, 
-                                Mathematics, Statistics, and Medicine, he is well versed in applications 
-                                of technology, and his research displays that. Most of Professor Jacobson’s 
-                                research focuses on Vaccines and Immunizations, Data Science Applications 
-                                (Computation Public Health), Aviation Security (TSA), Presidential Election 
-                                Predictions, NCAA Basketball Predictions (and March Madness), Political 
-                                Redistricting (Gerrymandering), and much much more! Make sure to watch 
-                                Professor Jacobson’s video session to learn how you can use computer science
-                                 to impact the fields mentioned above, and the world!
-                                </div>
-                            <div>
-                                <b>Premiere Date:</b> Posted on 10/3. Click 
-                                <a href="https://www.youtube.com/watch?v=77DnAlmDx2c&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                 to watch!
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/jacobson.jpg" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Wade Fagen-Ulmschneider</div>
-                            <a href="https://waf.cs.illinois.edu/" target="_blank">
-                                https://waf.cs.illinois.edu/
-                            </a>
-                            <div class="description">
-                                Wade Fagen-Ulmschneider is a highly qualified and well-known 
-                                Professor at the University of Illinois at Urbana-Champaign. 
-                                He has impacted thousands of students annually with his teachings 
-                                on Data Science, Data Structures and Data Visualizations and has 
-                                been recognized as a National Academy of Engineering’s Frontiers 
-                                of Engineering Education scholars and has been awarded the Collins 
-                                Award for Innovation Teaching. His research and technical work has 
-                                impacted various fields of study, as exhibited by the 91-DIVOC project 
-                                (used by public health officials around the country), GPA visualizations, 
-                                Queue (an open source resource for many cs classes), and more! Make sure 
-                                to tune into Professor Wade Fagen-Ulmschneider’s session to learn about 
-                                how these fields are affected by computer science!
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://docs.google.com/presentation/d/1Jgqr2aKD6NcvP_LHgYwDiup4jsq5N5Qj0z73TMXkCUU/edit#slide=id.g5364c9f305_0_789">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b> 
-                                Posted on 10/12. Click 
-                                <a href="https://www.youtube.com/watch?v=VOCFq1Wb6tA&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a> 
-                                to watch!
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/wade.png" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Roxana Girju</div>
-                            <a href="https://linguistics.illinois.edu/directory/profile/girju" target="_blank">
-                                https://linguistics.illinois.edu/directory/profile/girju
-                            </a>
-                            <div class="description">
-                                Roxana Girju is a Linguistics Professor here at the University of Illinois, 
-                                as well as Computer Science affiliate and faculty member of the Organizational 
-                                Intelligence and Computational Social Science and the Social and Emotional Dimensions 
-                                of Well-Being Groups at the Beckman Institute of Advanced Science and Technology. 
-                                Professor Girju has done much of her research around Artificial Intelligence (AI) 
-                                and Computational Linguistics. The focus of Professor Girju’s session here is Emotion AI, 
-                                and why it is important to focus on the portrayal of empathy within language technology. 
-                                Make sure to tune into this session to learn more about the importance of Empathetic AI, 
-                                and how it can be used to bridge the gap within communication!
-                                
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://drive.google.com/file/d/1HQwvfmRUOUXqhqrK1aevNehHHQMWB6e6/view">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b>
-                                Posted on 10/24. Click 
-                                <a href="https://www.youtube.com/watch?v=xuPXhHyQ3Xk&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                to watch! 
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/girju.jpg" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Sanmi Koyejo</div>
-                            <a href="https://sanmi.cs.illinois.edu/" target="_blank">
-                                https://sanmi.cs.illinois.edu/
-                            </a>
-                            <div class="description">
-                                Sanmi Koyejo is a Computer Science professor here at the University 
-                                of Illinois. With a Ph. D. in Electrical Engineering from the University 
-                                of Texas Austin and postdoctoral work at Stanford University in 
-                                neuroimaging data techniques, his research interests range from brain 
-                                data analysis to interpreting data from models and the fairness of these 
-                                models. He is especially interested in research using machine learning for 
-                                neuroscience and biomedical imaging.  We are excited to have him speak 
-                                about AI for turning x-ray images into 3D CT images, how AI can be applied 
-                                in the medical field to help develop treatment plans, as well as some of 
-                                the privacy and trustworthiness issues that can arise from using these 
-                                methods.
-
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://docs.google.com/presentation/d/1jz-53k3UqDTH_t3u8Wxh_5EOziiKXjL02p6w2MV7qyg/edit">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b>
-                                Posted on 10/29. Click 
-                                <a href="https://www.youtube.com/watch?v=4AHY421cWLY&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                to watch! 
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/koyejo.jpg" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Gang Wang</div>
-                            <a href="https://gangw.cs.illinois.edu/" target="_blank">
-                                https://gangw.cs.illinois.edu/
-                            </a>
-                            <div class="description">
-                                Gang Wang is a well-praised Professor here at our university, as indicated by his receival of 
-                                the NSF CAREER Award (2018), Google Faculty Research Award (2017), IMWUT Distinguished Paper 
-                                Award (2019), and much more! Professor Gang focuses his specialization on fields such as: Security 
-                                and Privacy, Internet Measurement, Mobile Networks, and HCI. His presentation with us here is within 
-                                the Security and Privacy realm, specifically focused on Spoofing and Spear-Phishing. Spear-phishing 
-                                is the exploitation of human factors to attack and breach target networks. Spoofing is a critical 
-                                step in phishing, where the attacker impersonates a trusted entity to gain the victim’s trust. In 
-                                this talk, Professor Gang will describe a measurement study to understand how flawed system designs 
-                                can severely weaken user-level defenses in spear-phishing attacks. Through the illustration of data 
-                                analytics and active measurements, he will show us how we can better understand the reasons behind 
-                                successful spoofing attempts and how users react to spoofed messages. Professor Gang will also touch 
-                                upon his other on-going research in his group that focuses on combining machine learning and human 
-                                efforts to jointly improve security. Make sure to tune into this session to learn more about Security 
-                                and Privacy applications, and why they are important to understand!
-                                
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://drive.google.com/file/d/1H_GDvFGGSNgusJct9zXggPoXXr0jeKCA/view">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b>
-                                Posted on 10/30. Click 
-                                <a href="https://www.youtube.com/watch?v=SZvot14zF_c&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                to watch! 
-                            </div>
-                        </div>
-                        <div class="faculty-image image-gang">
-                            <img src="../assets/img/faculty/gangw.jpg" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Mattox Beckman</div>
-                            <a href="https://cs.illinois.edu/about/people/faculty/mattox" target="_blank">
-                                https://cs.illinois.edu/about/people/faculty/mattox
-                            </a>
-                            <div class="description">
-                                Mattox Beckman is a Computer Science Professor at UIUC who has taught many prominent upper 
-                                level CS classes at our university. Professor Beckman is also an alumnus at our university, 
-                                having studied here for around 14 years (from undergrad to PhD)! He is well versed in the study 
-                                of programming languages, as well as Computer Science education as a whole. The main focus for 
-                                Professor Beckman’s presentation here is the structure of programming languages and their 
-                                language families, including how they relate to the many languages that we are familiar with 
-                                around the world! He will also be discussing Computer Science education, and why it is important 
-                                to understand the impact that education like this has on not only the CS field, but the world 
-                                as well. Make sure to tune in to this session to learn more about how you can get started in 
-                                learning about Computer Science yourself!
-                                
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://drive.google.com/file/d/1BRGACB-JOsHNA7IqCmWP4eFCpDbTqTKj/view">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b>
-                                Posted on 10/31. Click 
-                                <a href="https://www.youtube.com/watch?v=VLuetYWfz-M&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                to watch! 
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/mattox.png" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="november-series">
-                <h1 align="center" class="content-header">November Sessions</h1>
-                
-                <div class="monthly-content">
-                    <div class="intro">
-                        Check out our <a href="https://illinoiswcs.medium.com/explore-cs-november-sessions-749c722aeab1" target="_blank">November Sessions article</a> for more information on these sessions below!
-
-                        <!-- <br />
-                        <br /> -->
-                        
-                        <!-- <b>More info coming soon!</b> -->
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Nan Jiang</div>
-                            <a href="https://nanjiang.cs.illinois.edu/" target="_blank">
-                                https://nanjiang.cs.illinois.edu/
-                            </a>
-                            <div class="description">
-                                Nan Jiang is a professor here at the University of Illinois at Urbana 
-                                Champaign with an extensive background in Machine Learning research. 
-                                Within this field, Professor Jiang focuses mainly on Reinforcement 
-                                Learning (RL), and algorithmic understandings of this phenomenon. 
-                                His presentation with us today explains RL using Video Games as 
-                                examples, as well as the successes and possible future successes of 
-                                RL as a whole. Make sure to tune into Professor Jiang’s presentation to 
-                                learn more about Reinforcement Learning as a field of research!
-
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://drive.google.com/file/d/1-wF-rigxnXUCU8wpkXIIHgWGoB1tIpXD/view">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b> Posted on 11/07. Click 
-                                <a href="https://www.youtube.com/watch?v=YlN3GHOzd7A&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                 to watch!
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/jiang.jpg" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Edgar Solomonik</div>
-                            <a href="http://solomonik.cs.illinois.edu/" target="_blank">
-                                http://solomonik.cs.illinois.edu/
-                            </a>
-                            <div class="description">
-                                Edgar Solomonik is an experienced Computer Science Professor at our 
-                                University, having received his PhD from UC Berkeley, and BS right 
-                                here at UIUC! Professor Solomonik has research interests ranging from 
-                                numerical linear algebra to computational quantum chemistry. Professor 
-                                Solomonik’s presentation here focuses on Computational Science, 
-                                numerical analysis, and the applications of these fields in the real 
-                                world! Make sure to watch the presentation below to learn more about 
-                                these fields of research.
-
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://drive.google.com/file/d/1BPv9GsU3bl1F9nKmOKSVQOE5GMET9CUf/view">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b> Posted on 11/15. Click 
-                                <a href="https://www.youtube.com/watch?v=Mhpe55ioYxA&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                 to watch!
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/solomonik.jpg" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Mohammed El-Kebir</div>
-                            <a href="http://www.el-kebir.net/" target="_blank">
-                                http://www.el-kebir.net/
-                            </a>
-                            <div class="description">
-                                Mohammed El-Kebir is an Assistant Professor of Computer Science at our 
-                                University with extensive research experience in tumor phylogenetics, 
-                                studying tumor progression from initial stages to metastasization. 
-                                He has also developed algorithms to reconstruct patterns of disease 
-                                outbreak spreading. Prior to coming to Illinois, Professor El-Kebir 
-                                was a postdoc at Brown and Princeton University. He has received the 
-                                NSF CRII award. Professor El-Kebir’s presentation here is about 
-                                Computational Biology, Bioinformatics and cancer phylogenetics. 
-                                If you would like to learn more about how fields of science like 
-                                Biology can intertwine with Computer Science, make sure to check 
-                                out Professor El-Kebir’s presentation!
-
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://drive.google.com/file/d/1k6DeT7nK9wnyJCLBSBQoOiqMDUyKHBNe/view">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b> Posted on 11/16. Click 
-                                <a href="https://www.youtube.com/watch?v=qMaCZ3WyYaQ&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                 to watch!
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/el-kebir.png" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Lawrence Angrave</div>
-                            <a href="https://cs.illinois.edu/about/people/faculty/angrave" target="_blank">
-                                https://cs.illinois.edu/about/people/faculty/angrave
-                            </a>
-                            <div class="description">
-                                Lawrence Angrave is a well-known professor in the UIUC Computer Science department. 
-                                Having taught many major core CS classes offered at our university, received many awards, 
-                                and served on many committees, including the Technology Accessibility Review Committee, 
-                                Professor Angrave focuses much of his efforts on accessibility within Computer Science Education. 
-                                Within his presentation with us today, Professor Angrave discusses ClassTranscribe and the 
-                                benefits of having a Closed Captioning service in educational videos. He also discusses 
-                                disabilities within education, and how this field can work towards being more inclusive!
-
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://docs.google.com/presentation/d/1ZndsHLLHbksHCpR9DvWos0sDCyss8GsxlLI1EEpAFCI/edit#slide=id.ga9c8555a72_0_0">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b> Posted on 11/23. Click 
-                                <a href="https://www.youtube.com/watch?v=Y9FcVgCBmYk&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                 to watch!
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/angrave.png" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Klara Nahrstedt</div>
-                            <a href="https://cs.illinois.edu/about/people/faculty/klara" target="_blank">
-                                https://cs.illinois.edu/about/people/faculty/klara
-                            </a>
-                            <div class="description">
-                                Klara Nahrstedt is a Grainger Distinguished Chair of Engineering Professor of Computer Science 
-                                at the University of Illinois at Urbana Champaign. Professor Nahrstedt is also the Director 
-                                of the Coordinated Science Laboratory, and has focused much of her research on advanced 
-                                edge-cloud-based cyber-infrastructures for scientific instruments, and many many other fields. 
-                                Her presentation with us here today is about SENSELET, a sensor infrastructure for improving 
-                                situational awareness and safety in academic cleanroom environments. Make sure to check out 
-                                Professor Nahrstedt’s presentation to learn more about the world of research environments and 
-                                technologies!
-
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://drive.google.com/file/d/1_5wJJXyL_5A6zdBQjwG444TOjVlz5nLl/view">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b> Posted on 11/27. Click 
-                                <a href="https://www.youtube.com/watch?v=-OBFkBo-XZA&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                 to watch!
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/nahrstedt.png" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Ling Ren</div>
-                            <a href="https://cs.illinois.edu/about/people/faculty/renling" target="_blank">
-                                https://cs.illinois.edu/about/people/faculty/renling
-                            </a>
-                            <div class="description">
-                                Ling Ren is a Professor at our University with a strong foundation in Computer Science, 
-                                having received his Ph.D. in Electrical Engineering and Computer Science from MIT in 2018. 
-                                Professor Ren has focused much of his research on security and privacy, cryptography and 
-                                distributed computing. His presentation with us here is about Fault Tolerant Consensus 
-                                and its applications. Make sure to watch Professor Ren’s presentation to learn more about 
-                                Fault Tolerance and computer system components like this!
-
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://drive.google.com/file/d/1ylQiH99_NV-TQ_Fk_NC5SrqfOvLKUB5A/view">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b> Posted on 11/28. Click 
-                                <a href="https://www.youtube.com/watch?v=XPEPxE_baqI&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                 to watch!
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/ling.png" />
-                        </div>
-                    </div>
-
-                    <div class="session">
-                        <div class="faculty">
-                            <div class="name">Professor Jingrui He</div>
-                            <a href="https://ischool.illinois.edu/people/jingrui-he" target="_blank">
-                                https://ischool.illinois.edu/people/jingrui-he
-                            </a>
-                            <div class="description">
-                                Jingrui He is a Professor in the School of Information Sciences at UIUC. 
-                                She received her Ph.D. in machine learning from Carnegie Mellon University in 2010, 
-                                and has focused most of her research on heterogeneous machine learning, rare category 
-                                analysis, active learning and semi-supervised learning, with applications in social 
-                                network analysis, healthcare, and manufacturing processes. Professor He’s presentation 
-                                is about her experience with the balance between a career in CS and life, as well as her 
-                                personal research on Security Informatics, Healthcare Informatics, Air Traffic Informatics, 
-                                and Misinformation Analytics. Check out Professor He’s presentation to learn more about 
-                                how you can do professional work in CS while maintaining a healthy and productive lifestyle!
-
-                                <div style="margin-top: 5px">
-                                    <a target="_blank" href="https://drive.google.com/file/d/1ZxONnb-iS6hTjEx1pqJRFT4bejLfIaTc/view">
-                                        Presentation slides
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <b>Premiere Date:</b> Posted on 11/29. Click 
-                                <a href="https://www.youtube.com/watch?v=hz4D8psC9Dc&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                 to watch!
-                            </div>
-                        </div>
-                        <div class="faculty-image">
-                            <img src="../assets/img/faculty/JingruiHe.jpg" />
-                        </div>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="december-series">
-                <h1 align="center" class="content-header">December Sessions</h1>
-                
-                <div class="monthly-content">
-                    <div class="intro">
-                        Check out our 
-                        <a href="https://illinoiswcs.medium.com/explore-cs-december-sessions-1e342885537f" target="_blank">
-                            December Sessions article
-                        </a>
-                         for more information on these sessions below!
-                        
-                        <br />
-                        <br />
-                        
-                        <div class="session">
-                            <div class="faculty">
-                                <div class="name">Professor Katherine Rose Driggs-Campbell</div>
-                                <a href="https://krdc.web.illinois.edu/" target="_blank">
-                                    https://krdc.web.illinois.edu/
-                                </a>
-                                <div class="description">
-                                    Katherine Rose Driggs-Campbell is a Professor in UIUC’s Electrical and Computer Engineering and 
-                                    Computer Science Departments. Professor Driggs-Campbell focuses her research on developing tools 
-                                    for autonomous robotics, drawing from fields of human-robot interaction, optimization, 
-                                    learning & AI, and control theory. Professor Driggs-Campbell’s presentation with us is about 
-                                    designing interactive robots at the Human-Centered Autonomy Lab. Make sure to check out her 
-                                    presentation to learn more about the world of robotics!
-
-                                    <div style="margin-top: 5px">
-                                        <a target="_blank" href="https://drive.google.com/file/d/16Wi875NXu35qhnlMaQ2888v6NCnfi636/view">
-                                            Presentation slides
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <b>Premiere Date:</b> Posted on 12/16. Click 
-                                    <a href="https://www.youtube.com/watch?v=f9p3muv4s5Y&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                     to watch!
-                                </div>
-                            </div>
-                            <div class="faculty-image">
-                                <img src="../assets/img/faculty/driggs-campbell.jpg" />
-                            </div>
-                        </div>
-    
-                        <div class="session">
-                            <div class="faculty">
-                                <div class="name">Professor Yan Tang</div>
-                                <a href="https://linguistics.illinois.edu/directory/profile/yty" target="_blank">
-                                    https://linguistics.illinois.edu/directory/profile/yty
-                                </a>
-                                <div class="description">
-                                    Yan Tang is a Professor of Linguistics at UIUC. He teaches a variety of high level Linguistic 
-                                    courses, including those involved with Machine Learning. Professor Tang has research interests 
-                                    ranging from speech perception and production in noise to robust automatic speech recognition. 
-                                    Professor Tang’s presentation focuses on speech intelligibility enhancement in non-ideal 
-                                    listening conditions, and the factors involved in speech modifications. Be sure to watch 
-                                    the presentation to learn more about speech intelligibility enhancement!
-
-                                    <div style="margin-top: 5px">
-                                        <a target="_blank" href="https://drive.google.com/file/d/11PO-QkX1Q8DNmdpkD3d8NkpykiCEFwHq/view">
-                                            Presentation slides
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <b>Premiere Date:</b> Posted on 12/30. Click 
-                                    <a href="https://www.youtube.com/watch?v=0KYrUZsaur0&feature=youtu.be&ab_channel=IllinoisWCS" target="_blank">here</a>
-                                     to watch!
-                                </div>
-                            </div>
-                            <div class="faculty-image">
-                                <img src="../assets/img/faculty/yan-tang.jpg" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          <p>
+            If you would like to learn more, make sure to check out our introductory medium article,
+            detailing what we hope students can gain from our series:
+            <a href="https://medium.com/@illinoiswcs/explore-cs-illinois-series-29cfb2829b43" target="_blank">
+              https://medium.com/@illinoiswcs/explore-cs-illinois-series-29cfb2829b43
+            </a>
+          </p>
         </div>
-    </div>
+        <img class="explore-flyer" src="../assets/img/wcs/explore-flyer.jpg" />
+      </div>
 
-    <div id="footer"></div>
-    <script>
-        $(function() {
-           $('#footer').load('/components/footer.html');
-        });
-    </script>
+      <div class="october-series">
+        <h1 align="center" class="content-header">October Sessions</h1>
+
+        <div class="monthly-content">
+          <div class="intro">
+            Check out our
+            <a href="https://illinoiswcs.medium.com/explore-cs-october-sessions-5e194e3211c" target="_blank">
+              October Sessions article
+            </a>
+            for more information on these sessions below!
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Sheldon Jacobson</div>
+              <a href="http://shj.cs.illinois.edu/" target="_blank">
+                http://shj.cs.illinois.edu/
+              </a>
+              <div class="description">
+                Sheldon H. Jacobson is a Founder Professor of Computer Science,
+                Director of the Simulation and Optimization Laboratory, and Founding
+                Director of the Bed Time Research Institute at the University of
+                Illinois at Urbana-Champaign. With a strong background in Computer
+                Science, Industrial Engineering, Electrical and Computer Engineering,
+                Mathematics, Statistics, and Medicine, he is well versed in applications
+                of technology, and his research displays that. Most of Professor Jacobson’s
+                research focuses on Vaccines and Immunizations, Data Science Applications
+                (Computation Public Health), Aviation Security (TSA), Presidential Election
+                Predictions, NCAA Basketball Predictions (and March Madness), Political
+                Redistricting (Gerrymandering), and much much more! Make sure to watch
+                Professor Jacobson’s video session to learn how you can use computer science
+                to impact the fields mentioned above, and the world!
+              </div>
+              <div>
+                <b>Premiere Date:</b> Posted on 10/3. Click
+                <a href="https://www.youtube.com/watch?v=77DnAlmDx2c&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/jacobson.jpg" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Wade Fagen-Ulmschneider</div>
+              <a href="https://waf.cs.illinois.edu/" target="_blank">
+                https://waf.cs.illinois.edu/
+              </a>
+              <div class="description">
+                Wade Fagen-Ulmschneider is a highly qualified and well-known
+                Professor at the University of Illinois at Urbana-Champaign.
+                He has impacted thousands of students annually with his teachings
+                on Data Science, Data Structures and Data Visualizations and has
+                been recognized as a National Academy of Engineering’s Frontiers
+                of Engineering Education scholars and has been awarded the Collins
+                Award for Innovation Teaching. His research and technical work has
+                impacted various fields of study, as exhibited by the 91-DIVOC project
+                (used by public health officials around the country), GPA visualizations,
+                Queue (an open source resource for many cs classes), and more! Make sure
+                to tune into Professor Wade Fagen-Ulmschneider’s session to learn about
+                how these fields are affected by computer science!
+                <div style="margin-top: 5px">
+                  <a target="_blank"
+                    href="https://docs.google.com/presentation/d/1Jgqr2aKD6NcvP_LHgYwDiup4jsq5N5Qj0z73TMXkCUU/edit#slide=id.g5364c9f305_0_789">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b>
+                Posted on 10/12. Click
+                <a href="https://www.youtube.com/watch?v=VOCFq1Wb6tA&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/wade.png" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Roxana Girju</div>
+              <a href="https://linguistics.illinois.edu/directory/profile/girju" target="_blank">
+                https://linguistics.illinois.edu/directory/profile/girju
+              </a>
+              <div class="description">
+                Roxana Girju is a Linguistics Professor here at the University of Illinois,
+                as well as Computer Science affiliate and faculty member of the Organizational
+                Intelligence and Computational Social Science and the Social and Emotional Dimensions
+                of Well-Being Groups at the Beckman Institute of Advanced Science and Technology.
+                Professor Girju has done much of her research around Artificial Intelligence (AI)
+                and Computational Linguistics. The focus of Professor Girju’s session here is Emotion AI,
+                and why it is important to focus on the portrayal of empathy within language technology.
+                Make sure to tune into this session to learn more about the importance of Empathetic AI,
+                and how it can be used to bridge the gap within communication!
+
+                <div style="margin-top: 5px">
+                  <a target="_blank" href="https://drive.google.com/file/d/1HQwvfmRUOUXqhqrK1aevNehHHQMWB6e6/view">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b>
+                Posted on 10/24. Click
+                <a href="https://www.youtube.com/watch?v=xuPXhHyQ3Xk&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/girju.jpg" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Sanmi Koyejo</div>
+              <a href="https://sanmi.cs.illinois.edu/" target="_blank">
+                https://sanmi.cs.illinois.edu/
+              </a>
+              <div class="description">
+                Sanmi Koyejo is a Computer Science professor here at the University
+                of Illinois. With a Ph. D. in Electrical Engineering from the University
+                of Texas Austin and postdoctoral work at Stanford University in
+                neuroimaging data techniques, his research interests range from brain
+                data analysis to interpreting data from models and the fairness of these
+                models. He is especially interested in research using machine learning for
+                neuroscience and biomedical imaging. We are excited to have him speak
+                about AI for turning x-ray images into 3D CT images, how AI can be applied
+                in the medical field to help develop treatment plans, as well as some of
+                the privacy and trustworthiness issues that can arise from using these
+                methods.
+
+                <div style="margin-top: 5px">
+                  <a target="_blank"
+                    href="https://docs.google.com/presentation/d/1jz-53k3UqDTH_t3u8Wxh_5EOziiKXjL02p6w2MV7qyg/edit">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b>
+                Posted on 10/29. Click
+                <a href="https://www.youtube.com/watch?v=4AHY421cWLY&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/koyejo.jpg" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Gang Wang</div>
+              <a href="https://gangw.cs.illinois.edu/" target="_blank">
+                https://gangw.cs.illinois.edu/
+              </a>
+              <div class="description">
+                Gang Wang is a well-praised Professor here at our university, as indicated by his receival of
+                the NSF CAREER Award (2018), Google Faculty Research Award (2017), IMWUT Distinguished Paper
+                Award (2019), and much more! Professor Gang focuses his specialization on fields such as: Security
+                and Privacy, Internet Measurement, Mobile Networks, and HCI. His presentation with us here is within
+                the Security and Privacy realm, specifically focused on Spoofing and Spear-Phishing. Spear-phishing
+                is the exploitation of human factors to attack and breach target networks. Spoofing is a critical
+                step in phishing, where the attacker impersonates a trusted entity to gain the victim’s trust. In
+                this talk, Professor Gang will describe a measurement study to understand how flawed system designs
+                can severely weaken user-level defenses in spear-phishing attacks. Through the illustration of data
+                analytics and active measurements, he will show us how we can better understand the reasons behind
+                successful spoofing attempts and how users react to spoofed messages. Professor Gang will also touch
+                upon his other on-going research in his group that focuses on combining machine learning and human
+                efforts to jointly improve security. Make sure to tune into this session to learn more about Security
+                and Privacy applications, and why they are important to understand!
+
+                <div style="margin-top: 5px">
+                  <a target="_blank" href="https://drive.google.com/file/d/1H_GDvFGGSNgusJct9zXggPoXXr0jeKCA/view">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b>
+                Posted on 10/30. Click
+                <a href="https://www.youtube.com/watch?v=SZvot14zF_c&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image image-gang">
+              <img src="../assets/img/faculty/gangw.jpg" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Mattox Beckman</div>
+              <a href="https://cs.illinois.edu/about/people/faculty/mattox" target="_blank">
+                https://cs.illinois.edu/about/people/faculty/mattox
+              </a>
+              <div class="description">
+                Mattox Beckman is a Computer Science Professor at UIUC who has taught many prominent upper
+                level CS classes at our university. Professor Beckman is also an alumnus at our university,
+                having studied here for around 14 years (from undergrad to PhD)! He is well versed in the study
+                of programming languages, as well as Computer Science education as a whole. The main focus for
+                Professor Beckman’s presentation here is the structure of programming languages and their
+                language families, including how they relate to the many languages that we are familiar with
+                around the world! He will also be discussing Computer Science education, and why it is important
+                to understand the impact that education like this has on not only the CS field, but the world
+                as well. Make sure to tune in to this session to learn more about how you can get started in
+                learning about Computer Science yourself!
+
+                <div style="margin-top: 5px">
+                  <a target="_blank" href="https://drive.google.com/file/d/1BRGACB-JOsHNA7IqCmWP4eFCpDbTqTKj/view">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b>
+                Posted on 10/31. Click
+                <a href="https://www.youtube.com/watch?v=VLuetYWfz-M&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/mattox.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="november-series">
+        <h1 align="center" class="content-header">November Sessions</h1>
+
+        <div class="monthly-content">
+          <div class="intro">
+            Check out our <a href="https://illinoiswcs.medium.com/explore-cs-november-sessions-749c722aeab1"
+              target="_blank">November Sessions article</a> for more information on these sessions below!
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Nan Jiang</div>
+              <a href="https://nanjiang.cs.illinois.edu/" target="_blank">
+                https://nanjiang.cs.illinois.edu/
+              </a>
+              <div class="description">
+                Nan Jiang is a professor here at the University of Illinois at Urbana
+                Champaign with an extensive background in Machine Learning research.
+                Within this field, Professor Jiang focuses mainly on Reinforcement
+                Learning (RL), and algorithmic understandings of this phenomenon.
+                His presentation with us today explains RL using Video Games as
+                examples, as well as the successes and possible future successes of
+                RL as a whole. Make sure to tune into Professor Jiang’s presentation to
+                learn more about Reinforcement Learning as a field of research!
+
+                <div style="margin-top: 5px">
+                  <a target="_blank" href="https://drive.google.com/file/d/1-wF-rigxnXUCU8wpkXIIHgWGoB1tIpXD/view">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b> Posted on 11/07. Click
+                <a href="https://www.youtube.com/watch?v=YlN3GHOzd7A&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/jiang.jpg" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Edgar Solomonik</div>
+              <a href="http://solomonik.cs.illinois.edu/" target="_blank">
+                http://solomonik.cs.illinois.edu/
+              </a>
+              <div class="description">
+                Edgar Solomonik is an experienced Computer Science Professor at our
+                University, having received his PhD from UC Berkeley, and BS right
+                here at UIUC! Professor Solomonik has research interests ranging from
+                numerical linear algebra to computational quantum chemistry. Professor
+                Solomonik’s presentation here focuses on Computational Science,
+                numerical analysis, and the applications of these fields in the real
+                world! Make sure to watch the presentation below to learn more about
+                these fields of research.
+
+                <div style="margin-top: 5px">
+                  <a target="_blank" href="https://drive.google.com/file/d/1BPv9GsU3bl1F9nKmOKSVQOE5GMET9CUf/view">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b> Posted on 11/15. Click
+                <a href="https://www.youtube.com/watch?v=Mhpe55ioYxA&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/solomonik.jpg" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Mohammed El-Kebir</div>
+              <a href="http://www.el-kebir.net/" target="_blank">
+                http://www.el-kebir.net/
+              </a>
+              <div class="description">
+                Mohammed El-Kebir is an Assistant Professor of Computer Science at our
+                University with extensive research experience in tumor phylogenetics,
+                studying tumor progression from initial stages to metastasization.
+                He has also developed algorithms to reconstruct patterns of disease
+                outbreak spreading. Prior to coming to Illinois, Professor El-Kebir
+                was a postdoc at Brown and Princeton University. He has received the
+                NSF CRII award. Professor El-Kebir’s presentation here is about
+                Computational Biology, Bioinformatics and cancer phylogenetics.
+                If you would like to learn more about how fields of science like
+                Biology can intertwine with Computer Science, make sure to check
+                out Professor El-Kebir’s presentation!
+
+                <div style="margin-top: 5px">
+                  <a target="_blank" href="https://drive.google.com/file/d/1k6DeT7nK9wnyJCLBSBQoOiqMDUyKHBNe/view">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b> Posted on 11/16. Click
+                <a href="https://www.youtube.com/watch?v=qMaCZ3WyYaQ&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/el-kebir.png" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Lawrence Angrave</div>
+              <a href="https://cs.illinois.edu/about/people/faculty/angrave" target="_blank">
+                https://cs.illinois.edu/about/people/faculty/angrave
+              </a>
+              <div class="description">
+                Lawrence Angrave is a well-known professor in the UIUC Computer Science department.
+                Having taught many major core CS classes offered at our university, received many awards,
+                and served on many committees, including the Technology Accessibility Review Committee,
+                Professor Angrave focuses much of his efforts on accessibility within Computer Science Education.
+                Within his presentation with us today, Professor Angrave discusses ClassTranscribe and the
+                benefits of having a Closed Captioning service in educational videos. He also discusses
+                disabilities within education, and how this field can work towards being more inclusive!
+
+                <div style="margin-top: 5px">
+                  <a target="_blank"
+                    href="https://docs.google.com/presentation/d/1ZndsHLLHbksHCpR9DvWos0sDCyss8GsxlLI1EEpAFCI/edit#slide=id.ga9c8555a72_0_0">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b> Posted on 11/23. Click
+                <a href="https://www.youtube.com/watch?v=Y9FcVgCBmYk&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/angrave.png" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Klara Nahrstedt</div>
+              <a href="https://cs.illinois.edu/about/people/faculty/klara" target="_blank">
+                https://cs.illinois.edu/about/people/faculty/klara
+              </a>
+              <div class="description">
+                Klara Nahrstedt is a Grainger Distinguished Chair of Engineering Professor of Computer Science
+                at the University of Illinois at Urbana Champaign. Professor Nahrstedt is also the Director
+                of the Coordinated Science Laboratory, and has focused much of her research on advanced
+                edge-cloud-based cyber-infrastructures for scientific instruments, and many many other fields.
+                Her presentation with us here today is about SENSELET, a sensor infrastructure for improving
+                situational awareness and safety in academic cleanroom environments. Make sure to check out
+                Professor Nahrstedt’s presentation to learn more about the world of research environments and
+                technologies!
+
+                <div style="margin-top: 5px">
+                  <a target="_blank" href="https://drive.google.com/file/d/1_5wJJXyL_5A6zdBQjwG444TOjVlz5nLl/view">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b> Posted on 11/27. Click
+                <a href="https://www.youtube.com/watch?v=-OBFkBo-XZA&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/nahrstedt.png" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Ling Ren</div>
+              <a href="https://cs.illinois.edu/about/people/faculty/renling" target="_blank">
+                https://cs.illinois.edu/about/people/faculty/renling
+              </a>
+              <div class="description">
+                Ling Ren is a Professor at our University with a strong foundation in Computer Science,
+                having received his Ph.D. in Electrical Engineering and Computer Science from MIT in 2018.
+                Professor Ren has focused much of his research on security and privacy, cryptography and
+                distributed computing. His presentation with us here is about Fault Tolerant Consensus
+                and its applications. Make sure to watch Professor Ren’s presentation to learn more about
+                Fault Tolerance and computer system components like this!
+
+                <div style="margin-top: 5px">
+                  <a target="_blank" href="https://drive.google.com/file/d/1ylQiH99_NV-TQ_Fk_NC5SrqfOvLKUB5A/view">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b> Posted on 11/28. Click
+                <a href="https://www.youtube.com/watch?v=XPEPxE_baqI&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/ling.png" />
+            </div>
+          </div>
+
+          <div class="session">
+            <div class="faculty">
+              <div class="name">Professor Jingrui He</div>
+              <a href="https://ischool.illinois.edu/people/jingrui-he" target="_blank">
+                https://ischool.illinois.edu/people/jingrui-he
+              </a>
+              <div class="description">
+                Jingrui He is a Professor in the School of Information Sciences at UIUC.
+                She received her Ph.D. in machine learning from Carnegie Mellon University in 2010,
+                and has focused most of her research on heterogeneous machine learning, rare category
+                analysis, active learning and semi-supervised learning, with applications in social
+                network analysis, healthcare, and manufacturing processes. Professor He’s presentation
+                is about her experience with the balance between a career in CS and life, as well as her
+                personal research on Security Informatics, Healthcare Informatics, Air Traffic Informatics,
+                and Misinformation Analytics. Check out Professor He’s presentation to learn more about
+                how you can do professional work in CS while maintaining a healthy and productive lifestyle!
+
+                <div style="margin-top: 5px">
+                  <a target="_blank" href="https://drive.google.com/file/d/1ZxONnb-iS6hTjEx1pqJRFT4bejLfIaTc/view">
+                    Presentation slides
+                  </a>
+                </div>
+              </div>
+              <div>
+                <b>Premiere Date:</b> Posted on 11/29. Click
+                <a href="https://www.youtube.com/watch?v=hz4D8psC9Dc&feature=youtu.be&ab_channel=IllinoisWCS"
+                  target="_blank">here</a>
+                to watch!
+              </div>
+            </div>
+            <div class="faculty-image">
+              <img src="../assets/img/faculty/JingruiHe.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="december-series">
+        <h1 align="center" class="content-header">December Sessions</h1>
+
+        <div class="monthly-content">
+          <div class="intro">
+            Check out our
+            <a href="https://illinoiswcs.medium.com/explore-cs-december-sessions-1e342885537f" target="_blank">
+              December Sessions article
+            </a>
+            for more information on these sessions below!
+
+            <br />
+            <br />
+
+            <div class="session">
+              <div class="faculty">
+                <div class="name">Professor Katherine Rose Driggs-Campbell</div>
+                <a href="https://krdc.web.illinois.edu/" target="_blank">
+                  https://krdc.web.illinois.edu/
+                </a>
+                <div class="description">
+                  Katherine Rose Driggs-Campbell is a Professor in UIUC’s Electrical and Computer Engineering and
+                  Computer Science Departments. Professor Driggs-Campbell focuses her research on developing tools
+                  for autonomous robotics, drawing from fields of human-robot interaction, optimization,
+                  learning & AI, and control theory. Professor Driggs-Campbell’s presentation with us is about
+                  designing interactive robots at the Human-Centered Autonomy Lab. Make sure to check out her
+                  presentation to learn more about the world of robotics!
+
+                  <div style="margin-top: 5px">
+                    <a target="_blank" href="https://drive.google.com/file/d/16Wi875NXu35qhnlMaQ2888v6NCnfi636/view">
+                      Presentation slides
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <b>Premiere Date:</b> Posted on 12/16. Click
+                  <a href="https://www.youtube.com/watch?v=f9p3muv4s5Y&feature=youtu.be&ab_channel=IllinoisWCS"
+                    target="_blank">here</a>
+                  to watch!
+                </div>
+              </div>
+              <div class="faculty-image">
+                <img src="../assets/img/faculty/driggs-campbell.jpg" />
+              </div>
+            </div>
+
+            <div class="session">
+              <div class="faculty">
+                <div class="name">Professor Yan Tang</div>
+                <a href="https://linguistics.illinois.edu/directory/profile/yty" target="_blank">
+                  https://linguistics.illinois.edu/directory/profile/yty
+                </a>
+                <div class="description">
+                  Yan Tang is a Professor of Linguistics at UIUC. He teaches a variety of high level Linguistic
+                  courses, including those involved with Machine Learning. Professor Tang has research interests
+                  ranging from speech perception and production in noise to robust automatic speech recognition.
+                  Professor Tang’s presentation focuses on speech intelligibility enhancement in non-ideal
+                  listening conditions, and the factors involved in speech modifications. Be sure to watch
+                  the presentation to learn more about speech intelligibility enhancement!
+
+                  <div style="margin-top: 5px">
+                    <a target="_blank" href="https://drive.google.com/file/d/11PO-QkX1Q8DNmdpkD3d8NkpykiCEFwHq/view">
+                      Presentation slides
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <b>Premiere Date:</b> Posted on 12/30. Click
+                  <a href="https://www.youtube.com/watch?v=0KYrUZsaur0&feature=youtu.be&ab_channel=IllinoisWCS"
+                    target="_blank">here</a>
+                  to watch!
+                </div>
+              </div>
+              <div class="faculty-image">
+                <img src="../assets/img/faculty/yan-tang.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script>
+    $(function () {
+      $('#footer').load('/components/footer.html');
+    });
+  </script>
 </body>
 
 </html>
