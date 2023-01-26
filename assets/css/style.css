@@ -129,33 +129,20 @@ a:hover {
 #mainCarousel {
   position: relative;
 }
+
 .carouselImageStyling {
   height: 500px !important;
   width: 100%;
   object-fit: cover;
 }
-.mainTextBackground {
-  width: 755px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: black;
-  opacity: 0.8;
-  margin: auto;
-  bottom: 60px;
-  justify-content: center;
-  position: absolute;
-  text-align: center;
-}
 
 @media screen and (max-width: 1000px) { 
-  .mainBackground {
+  .main-heading-container {
     display:none;
   }
 }
 
-.mainBackground {
+.main-heading-container {
   width: 755px;
   position: absolute;
   text-align: justify;
@@ -170,8 +157,7 @@ a:hover {
   height: 100px;
 }
 
-.mainText {
-  /* for the text */
+.main-heading {
   font-size: 45px;
   color: white;
   text-align: center;
