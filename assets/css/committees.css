@@ -1,4 +1,3 @@
-
 .committees-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -20,7 +19,7 @@
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.125);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 .committees-card video {
@@ -128,9 +127,6 @@
   margin-bottom: 50px;
 }
 
-
-
-/** OFFICER STYLING BEGINS HERE **/ 
 #committees {
   padding: 5% 5%;
   background-color: #f5f3ee;
