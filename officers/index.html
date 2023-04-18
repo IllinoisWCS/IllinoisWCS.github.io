@@ -1,110 +1,152 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>The Officer Board</title>
 
-<head>
-  <title>The Officer Board</title>
+    <meta
+      name="description"
+      content="Get to know the officers of WCS @ Illinois."
+    />
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Officers" />
+    <meta property="og:type" content="company" />
+    <meta property="og:site_name" content="Women in Computer Science" />
+    <meta property="og:url" content="www.illinoiswcs.org" />
+    <meta property="og:image" content="" />
 
-  <meta name="description" content="Get to know the officers of WCS @ Illinois." />
-  <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Officers" />
-  <meta property="og:type" content="company" />
-  <meta property="og:site_name" content="Women in Computer Science" />
-  <meta property="og:url" content="www.illinoiswcs.org" />
-  <meta property="og:image" content="" />
+    <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico" />
 
-  <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico">
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mallanna"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/lib/fontawesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/officers.css" />
 
-  <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
-  <link rel="stylesheet" type="text/css" href="../assets/css/officers.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="../assets/lib/jquery/dist/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/jquery-easing-original/jquery.easing.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/mustache/mustache.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/isotope/dist/isotope.pkgd.min.js"
+    ></script>
+    <script type="text/javascript" src="../assets/js/officers.js"></script>
+  </head>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
-  <script type="text/javascript" src="../assets/js/officers.js"></script>
-</head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="navbar"></div>
+    <script>
+      $(function () {
+        $("#navbar").load("/components/navbar.html");
+      });
+    </script>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <div id="navbar"></div>
-  <script>
-    $(function () {
-      $('#navbar').load('/components/navbar.html');
-    });
-  </script>
-
-  <!--mustache template-->
-  <script type="text/x-mustache" id="officerTemplate">
-    <div class="officer-wrapper">
-      {{#admin}}
-      <div class="officer-info">
-        <img src="../assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
-        <div class="text-center">
-            <h4>{{name}}</h4>
-            <p>{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o" aria-hidden=true></i></a></p>
+    <!--mustache template-->
+    <script type="text/x-mustache" id="officerTemplate">
+      <div class="officer-wrapper">
+        {{#admin}}
+        <div class="officer-info">
+          <img src="../assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}"></img>
+          <div class="text-center">
+              <h4>{{name}}</h4>
+              <p>{{position}} <a href="mailto:{{email}}"><i class="fa fa-envelope-o" aria-hidden=true></i></a></p>
+          </div>
         </div>
-      </div>
-      <div class="modal fade" id="{{netid}}">
-        <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">{{name}} - {{position}}</h4>
-              </div>
-            <div class="modal-body">
-              <div class="row">
-                  <div class="col-md-6">
-                      <img class="officer-picture" src="../assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}">
-                      </img>
-                  </div>
-                  <div class="col-md-6">
-                      <p><b>Major: </b>{{major}}</p>
-                      <p><b>Year: </b>{{year}}</p>
-                      <p><b>From: </b>{{place}}</p>
-                      <p><b>Involvements: </b> {{#involvements}}
-                          <span class="label label-default">{{.}}</span> {{/involvements}}
-                      </p>
-                      <p><b>Interests: </b> {{#interests}}
-                          <span class="label label-primary">{{.}}</span> {{/interests}}
-                      </p>
-                      <p><b>Hobbies: </b>{{hobbies}}</p>
-                      <p><b>Fun Fact: </b>{{fact}}</p>
-                      <p><b>Advice: </b>{{advice}}</p>
+        <div class="modal fade" id="{{netid}}">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">{{name}} - {{position}}</h4>
+                </div>
+              <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="officer-picture" src="../assets/img/officers/{{netid}}.jpg" data-toggle="modal" data-target="#{{netid}}">
+                        </img>
+                    </div>
+                    <div class="col-md-6">
+                        <p><b>Major: </b>{{major}}</p>
+                        <p><b>Year: </b>{{year}}</p>
+                        <p><b>From: </b>{{place}}</p>
+                        <p><b>Involvements: </b> {{#involvements}}
+                            <span class="label label-default">{{.}}</span> {{/involvements}}
+                        </p>
+                        <p><b>Interests: </b> {{#interests}}
+                            <span class="label label-primary">{{.}}</span> {{/interests}}
+                        </p>
+                        <p><b>Hobbies: </b>{{hobbies}}</p>
+                        <p><b>Fun Fact: </b>{{fact}}</p>
+                        <p><b>Advice: </b>{{advice}}</p>
+                        <p><b>LinkedIn: </b><a> <a href="{{linkedin}}">Connect with {{name}}!</a> </a></p>
+
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
               </div>
             </div>
           </div>
+          {{/admin}}
         </div>
-        {{/admin}}
-      </div>
     </script>
 
-  <section id="officers" class="padding">
-    <h1 style="text-align:center" class="content-header">The Officer Board</h1>
-    <h4 style="text-align:center">Click each photo to learn more about our officers!</h4>
-    <!--This is where all of the officer images will go. PUT IT IN AN EMPTY DIV-->
-    <div id="allOfficers"></div>
-  </section>
+    <section id="officers" class="padding">
+      <h1 style="text-align: center" class="content-header">
+        The Officer Board
+      </h1>
+      <h4 style="text-align: center">
+        Click each photo to learn more about our officers!
+      </h4>
+      <!--This is where all of the officer images will go. PUT IT IN AN EMPTY DIV-->
+      <div id="allOfficers"></div>
+    </section>
 
-  <div id="footer"></div>
-  <script>
-    $(function () {
-      $('#footer').load('/components/footer.html');
-    });
-  </script>
-</body>
-
+    <div id="footer"></div>
+    <script>
+      $(function () {
+        $("#footer").load("/components/footer.html");
+      });
+    </script>
+  </body>
 </html>
