@@ -1,153 +1,190 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>WCS Contact</title>
 
-<head>
-  <title>WCS Contact</title>
+    <meta name="description" content="Contact WCS" />
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Contact" />
+    <meta property="og:type" content="company" />
+    <meta property="og:site_name" content="Women in Computer Science" />
+    <meta property="og:url" content="www.illinoiswcs.org" />
+    <meta property="og:image" content="" />
 
-  <meta name="description" content="Contact WCS" />
-  <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Contact" />
-  <meta property="og:type" content="company" />
-  <meta property="og:site_name" content="Women in Computer Science" />
-  <meta property="og:url" content="www.illinoiswcs.org" />
-  <meta property="og:image" content="" />
+    <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
 
-  <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mallanna"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/lib/fontawesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/contact.css" />
 
-  <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css"/>
-  <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
-  <link rel="stylesheet" type="text/css" href="../assets/css/contact.css"/>
+    <script
+      type="text/javascript"
+      src="../assets/lib/jquery/dist/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/jquery-easing-original/jquery.easing.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/mustache/mustache.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/lib/isotope/dist/isotope.pkgd.min.js"
+    ></script>
+  </head>
 
-  <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
-  <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
-</head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="navbar"></div>
+    <script>
+      $(function () {
+        $("#navbar").load("/components/navbar.html");
+      });
+    </script>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <div id="navbar"></div>
-  <script>
-    $(function () {
-      $('#navbar').load('/components/navbar.html');
-    });
-  </script>
-
-  <div id="contact" class="row padded">
-    <div class="col-sm-12 col-md-6">
-      <h1 align="center" class="content-header">Stay Connected</h1>
-      <div class="stay-connected">
-        <div>
+    <div id="contact" class="row padded">
+      <div class="">
+        <h1 align="center" class="content-header">Stay Connected</h1>
+        <div class="stay-connected">
           <div>
-            <span class="bullet-point wcs-bg-pink"></span>
-            <a href="https://tinyurl.com/illinoiswcs" class="stay-connected-link" target="_blank">
-              Join our main Facebook group
-            </a>
+            <div>
+              <span class="bullet-point wcs-bg-pink"></span>
+              <span class="stay-connected-link"
+                >Join our main
+                <span class="stay-connected-link">
+                  <a
+                    href="https://tinyurl.com/illinoiswcs"
+                    class="stay-connected-link-wcs-pink"
+                    target="_blank"
+                  >
+                    Facebook group
+                  </a>
+                </span>
+              </span>
+            </div>
+            <div>
+              <span class="bullet-point wcs-bg-blue"></span>
+              <span class="stay-connected-link"
+                >Sign up for our
+                <span class="stay-connected-link"
+                  ><a
+                    href="https://tinyurl.com/wcsmailinglist"
+                    class="stay-connected-link-wcs-pink"
+                    target="_blank"
+                  >
+                    weekly newsletters
+                  </a></span
+                ></span
+              >
+            </div>
+            <div>
+              <span class="bullet-point wcs-bg-pink"></span>
+              <span class="stay-connected-link"
+                >Join our
+                <span class="stay-connected-link"
+                  ><a
+                    href="https://join.slack.com/t/wcs-uiuc/shared_invite/zt-1tut8j6pi-51ilAwG8CNmYNolsQP25ew"
+                    class="stay-connected-link-wcs-pink"
+                    target="_blank"
+                  >
+                    Slack channel
+                  </a></span
+                ></span
+              >
+            </div>
+            <div>
+              <span class="bullet-point wcs-bg-blue"></span>
+              <span class="stay-connected-link"
+                >Follow us on
+                <span class="stay-connected-link"
+                  ><a
+                    href="https://www.instagram.com/illinoiswcs/"
+                    class="stay-connected-link-wcs-pink"
+                    target="_blank"
+                  >
+                    Instagram
+                  </a></span
+                ></span
+              >
+            </div>
+            <div>
+              <span class="bullet-point wcs-bg-pink"></span>
+              <span class="stay-connected-link"
+                >Sign up for
+                <span class="stay-connected-link"
+                  ><a
+                    href="https://www.remind.com/join/g2ed79"
+                    class="stay-connected-link-wcs-pink"
+                    target="_blank"
+                  >
+                    text reminders
+                  </a>
+                  for our events</span
+                ></span
+              >
+            </div>
+            <div>
+              <span class="bullet-point wcs-bg-blue"></span>
+              <span class="stay-connected-link"
+                >Email us at
+                <span class="stay-connected-link"
+                  ><a
+                    href="mailto:“contact@illinoiswcs.org”"
+                    class="stay-connected-link-wcs-pink"
+                    >contact@illinoiswcs.org
+                  </a></span
+                ></span
+              >
+            </div>
+            <div>
+              <span class="bullet-point wcs-bg-pink"></span>
+              <span class="stay-connected-link"
+                >Come swing by the new WCS office located at Siebel 0211 (at the
+                end of the ramp by the stairs)!</span
+              >
+            </div>
           </div>
           <div>
-            <span class="bullet-point wcs-bg-pink"></span>
-            <a href="https://tinyurl.com/wcsmailinglist" class="stay-connected-link" target="_blank">
-              Sign up for our weekly newsletters
-            </a>
-          </div>
-          <div>
-            <span class="bullet-point wcs-bg-blue"></span>
-            <a href="https://tinyurl.com/wcsslackinvite" class="stay-connected-link" target="_blank">
-              Join our slack channel
-            </a>
-          </div>
-          <div>
-            <span class="bullet-point wcs-bg-pink"></span>
-            <a href="https://www.remind.com/join/g2ed79" class="stay-connected-link" target="_blank">
-              Sign up for text reminders for our events
-            </a>
-          </div>
-          <div>
-            <span class="bullet-point wcs-bg-blue"></span>
-            <span class="stay-connected-link">Email us at <span
-                class="text-underline">contact@illinoiswcs.org</span></span>
-          </div>
-          <div>
-            <span class="bullet-point wcs-bg-pink"></span>
-            <span class="stay-connected-link">Come swing by the new WCS office located at Siebel 0211 (at the end of the
-              ramp by the stairs)!</span>
+            <img class="" src="../assets/img/members/social.jpg" />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-sm-12 col-md-6">
-      <h1 align="center" class="content-header">Contact Us</h1>
-      <div class="row contact-form">
-        <form role="form" action="http://formspree.io/illinoiswcs@gmail.com" method="POST">
-          <div class="form-group col-md-6">
-            <label for="nameInput">Name</label>
-            <input class="form-control" type="text" placeholder="Enter Name" id="nameInput" name="name" tabindex="1" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label for="emailInput">Email</label>
-            <input class="form-control" type="text" name="_replyto" placeholder="Enter Email" id="emailInput"
-              tabindex="2" />
-          </div>
-          <div class="form-group col-md-12">
-            <label for="subjectInput">Subject</label>
-            <input class="form-control" type="text" name="_subject" placeholder="Enter Subject" id="subjectInput"
-              tabindex="3" />
-          </div>
-          <div class="form-group col-md-12">
-            <label for="messageInput">Message</label>
-            <textarea class="form-control" name="message" id="messageInput" rows="6" placeholder="Enter Message"
-              tabindex="4"></textarea>
-            <br />
-            <button type="submit" value="Send" class="btn btn-primary" tabindex="5">Send Message</button>
-          </div>
-          <input type="text" name="_gotcha" style="display: none" />
-        </form>
-      </div>
-
-      <div class="row corporate-form">
-        <h4>Interested in hosting an event? Contact us <a
-            href="../corporate-contact/index.html"><strong>here</strong></a>.</h4>
-      </div>
-    </div>
-
-    <div class="col-sm-12 col-md-6">
-      <h1 align="center" class="content-header">Alumni</h1>
-      <div class="stay-connected">
-        <div>
-          <div>
-            <p style="color:black;">
-              If you were involved with WCS, either as a past member or on our previous officer boards, fill out our
-              Alumni Form at
-              <a href="https://go.illinoiswcs.org/wcs-alumni-form" class="stay-connected-link" target="_blank">
-                https://go.illinoiswcs.org/wcs-alumni-form
-              </a>
-              so we can stay connected with you in the future!
-            </p>
-
-            <p style="color:black;">
-              We would love to stay in contact and build our extensive WCS alumni network so that future WCS members can
-              see what amazing accomplishments our alumni have achieved!"
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="footer"></div>
-  <script>
-    $(function () {
-      $('#footer').load('/components/footer.html');
-    });
-  </script>
-</body>
-
+    <div id="footer"></div>
+    <script>
+      $(function () {
+        $("#footer").load("/components/footer.html");
+      });
+    </script>
+  </body>
 </html>
