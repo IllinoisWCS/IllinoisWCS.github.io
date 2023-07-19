@@ -5,7 +5,7 @@
       "image": "assets/img/favicons/apple-touch-icon.png",
       "description": "Welcome to WCS Infrastructure! We are responsible for developing and maintaining WCS's website. We work closely with other committees and members to ensure that the website is up-to-date and provides information about the club's events, activities, and resources. We are responsible for the design, development, and deployment of the website, as well as its ongoing maintenance and updates. We play a key role in advancing the mission of WCS by providing a centralized hub for members and promoting the club to the broader community.",
       "site-link": "",
-      "officers": "Shreya Deshpande, Grace Zhang",
+      "officers": "Anushri Mittal, Neha Vardhaman",
       "id": "1"
     },
     {
@@ -13,7 +13,7 @@
       "image": "assets/img/members/social.jpg",
       "description": "Welcome to WCS Social! We strive to make new and upcoming events inclusive and engaging, participate in internal and external networking to hold unique experiences, and design and create enjoyable and amicable social events. Our main events include: Fall and Spring Banquet, Internal and external socials, Small-scale frequent activities.",
       "site-link": "https://lavish-layer-015.notion.site/WCS-Social-6c0889d569674f54965a433bb0eb0dc4",
-      "officers": "Meghan Lu, Saloni Vaishnav",
+      "officers": "Kavya Puranam, Twinkle Yeruva",
       "id": "2"
     },
     {
@@ -21,7 +21,7 @@
       "image": "assets/img/members/mentoring.jpg",
       "description": "Welcome to WCS Mentoring! We offer opportunities and resources for new and current UIUC students to enhance their professional, personal, and academic development. Our Bits & Bytes Mentorship Program connects freshmen, transfer students, and sophomores with upperclassmen to support them in their college career. Additionally, we provide resume reviews, mock interviews, and internship panels to foster students' professional growth and prepare them for the industry.",
       "site-link": "http://wcs.illinois.edu/mentoring/index.html",
-      "officers": "Anushri Mittal, Rayna Wuh",
+      "officers": "Kalika Raje, Shreya Deshpande",
       "id": "3"
     },
     {
@@ -29,7 +29,7 @@
       "image": "assets/img/members/memberportal.jpg",
       "description": "Welcome to WCS Explorations! We are UIUC WCS’s technical committee. We provide support and resources to help members gain technical skills and prepare for interviews. Scroll through our page to view our upcoming events, and be sure to attend them to meet new friends and learn something new!",
       "site-link": "https://illinois-wcs-explorations.notion.site/WCS-Explorations-b936f1d332224e5d90541bb1ec9c022f",
-      "officers": "Shreya Deshpande, Grace Zhang",
+      "officers": "Jillian Nylund, Shreya Vinjamuri",
       "id": "4"
     },
     {
@@ -37,7 +37,7 @@
       "image": "assets/img/members/outreach.jpg",
       "description": "Welcome to WCS Outreach! We are the subdivision of WCS dedicated to encouraging young women to pursue a computer science education. Although 51% of the United States population is female, only 18% of Computer Science bachelor’s degrees are earned by women. Women’s voices are needed in tech, and we want to do our part in making those numbers change. We have multiple initiatives: Chictech, High School Visits, our Explore CS Series, and CS+X Panel.",
       "site-link": "http://wcs.illinois.edu/outreach/index.html",
-      "officers": "Dahyun Dawn Lim, Nikhila Puppala",
+      "officers": "Akshata Tiwari, Garima Sharma",
       "id": "5"
     }
   ]
