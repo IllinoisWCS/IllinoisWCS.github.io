@@ -14,15 +14,17 @@
 }
 
 .resources-page {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .panel {
   border: none;
 }
 
-#career-services .panel-title {
+#career-services .panel-heading {
+  margin-top: 0px;
   margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0px 10px 0px;
   border-bottom: 1px solid #eeeeee;
+  color: inherit;
 }
