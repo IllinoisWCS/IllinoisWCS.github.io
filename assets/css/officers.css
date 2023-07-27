@@ -25,6 +25,10 @@
   justify-content: space-evenly;
 }
 
+.officer-wrapper p {
+  font-size: 15px;
+}
+
 .officer-info {
   cursor: pointer;
   width: fit-content;
