@@ -42,6 +42,7 @@
 
 .event-card-text:last-child {
   margin-bottom: 0;
+  font-size: 15px;
 }
 
 .event-card-header {
@@ -57,11 +58,13 @@
   margin-top: -0.75rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  font-size: 15px;
 }
 
 .event-card-link {
   padding-left: 1rem;
   padding-right: 1rem;
+  font-size: 15px;
 }
 
 .event-card-footer {

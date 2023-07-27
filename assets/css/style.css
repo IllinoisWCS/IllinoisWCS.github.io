@@ -180,6 +180,11 @@ footer a {
   padding: 5%;
 }
 
+#events-container p {
+  padding-top: 10px;
+  font-size: 17px;
+}
+
 .tabs-left>.nav-tabs {
   border-bottom: 0;
 }
