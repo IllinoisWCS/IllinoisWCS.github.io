@@ -62,7 +62,15 @@
 }
 
 .wcs-welcome p {
-  font-size: 16px;
+  font-size: 19px;
+}
+
+.carousel-caption h3 {
+  color: #fff;
+}
+
+#events-list h4 {
+  color: black;
 }
 
 .member-subheaders {
