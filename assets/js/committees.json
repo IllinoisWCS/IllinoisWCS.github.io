@@ -11,7 +11,7 @@
     {
       "name": "Social",
       "image": "assets/img/members/social.jpg",
-      "description": "Welcome to WCS Social! We strive to make new and upcoming events inclusive and engaging, participate in internal and external networking to hold unique experiences, and design and create enjoyable and amicable social events. Our main events include: Fall and Spring Banquet, Internal and external socials, Small-scale frequent activities.",
+      "description": "Welcome to WCS Social Committee! We strive to make new and upcoming events inclusive and engaging, participate in internal and external networking to hold unique experiences, and design and create enjoyable and amicable social events. Our main events include Spring Banquet, internal and external socials, and small-scale frequent activities.",
       "site-link": "https://lavish-layer-015.notion.site/WCS-Social-6c0889d569674f54965a433bb0eb0dc4",
       "officers": "Kavya Puranam, Twinkle Yeruva",
       "id": "2"
@@ -19,7 +19,7 @@
     {
       "name": "Mentoring",
       "image": "assets/img/members/mentoring.jpg",
-      "description": "Welcome to WCS Mentoring! We offer opportunities and resources for new and current UIUC students to enhance their professional, personal, and academic development. Our Bits & Bytes Mentorship Program connects freshmen, transfer students, and sophomores with upperclassmen to support them in their college career. Additionally, we provide resume reviews, mock interviews, and internship panels to foster students' professional growth and prepare them for the industry.",
+      "description": "Welcome to WCS Mentoring! We are a committee that is focused on providing resources and opportunities, whether it be professional, academic, or personal, for both new and current UIUC students. We host the Bits and Bytes program that is focused on connecting mentors and mentees within the CS program to provide incoming freshman, transfer students, and sophomores support. Additionally, we provide events to help students develop their professional skills.",
       "site-link": "http://wcs.illinois.edu/mentoring/index.html",
       "officers": "Kalika Raje, Shreya Deshpande",
       "id": "3"
@@ -27,7 +27,7 @@
     {
       "name": "Explorations",
       "image": "assets/img/members/memberportal.jpg",
-      "description": "Welcome to WCS Explorations! We are UIUC WCS’s technical committee. We provide support and resources to help members gain technical skills and prepare for interviews. Scroll through our page to view our upcoming events, and be sure to attend them to meet new friends and learn something new!",
+      "description": "Welcome to WCS Explorations! We aspire to support your CS journey. We provide beginner friendly workshops and resources to help members gain technical skills and prepare for interviews. Check our our annual hackathon Code Ada and our project cycle Dev Ada! Don't miss the opportunity to attend our events, as they offer a chance to make new connections and gain valuable knowledge!",
       "site-link": "https://illinois-wcs-explorations.notion.site/WCS-Explorations-b936f1d332224e5d90541bb1ec9c022f",
       "officers": "Jillian Nylund, Shreya Vinjamuri",
       "id": "4"
@@ -39,6 +39,14 @@
       "site-link": "http://wcs.illinois.edu/outreach/index.html",
       "officers": "Akshata Tiwari, Garima Sharma",
       "id": "5"
+    },
+    {
+      "name": "Corporate",
+      "image": "assets/img/events/wcs and stripe.png",
+      "description": "As part of the corporate committee, we speak with company representatives to arrange partnerships and secure sponsorships to support WCS's events and operations over the course of the year. We then collaborate with our corporate sponsors to plan and host events including General Meetings, networking events, tech talks, workshops, and more. Additionally, we organize WCS's annual Chicago retreat where our members spend a day immersing themselves in Chicago's tech environment.",
+      "site-link": "",
+      "officers": "Divya Koya, Riya Jain",
+      "id": "6"
     }
   ]
 }
