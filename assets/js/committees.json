@@ -1,28 +1,12 @@
 {
   "committees-admin": [
     {
-      "name": "Infrastructure",
-      "image": "assets/img/favicons/apple-touch-icon.png",
-      "description": "Welcome to WCS Infrastructure! We are responsible for developing and maintaining WCS's website. We work closely with other committees and members to ensure that the website is up-to-date and provides information about the club's events, activities, and resources. We are responsible for the design, development, and deployment of the website, as well as its ongoing maintenance and updates. We play a key role in advancing the mission of WCS by providing a centralized hub for members and promoting the club to the broader community.",
+      "name": "Corporate",
+      "image": "assets/img/events/wcs and stripe.png",
+      "description": "As part of the corporate committee, we speak with company representatives to arrange partnerships and secure sponsorships to support WCS's events and operations over the course of the year. We then collaborate with our corporate sponsors to plan and host events including General Meetings, networking events, tech talks, workshops, and more. Additionally, we organize WCS's annual Chicago retreat where our members spend a day immersing themselves in Chicago's tech environment.",
       "site-link": "",
-      "officers": "Anushri Mittal, Neha Vardhaman",
+      "officers": "Divya Koya, Riya Jain",
       "id": "1"
-    },
-    {
-      "name": "Social",
-      "image": "assets/img/members/social.jpg",
-      "description": "Welcome to WCS Social Committee! We strive to make new and upcoming events inclusive and engaging, participate in internal and external networking to hold unique experiences, and design and create enjoyable and amicable social events. Our main events include Spring Banquet, internal and external socials, and small-scale frequent activities.",
-      "site-link": "https://social-committee-24.notion.site/WCS-Social-610d0ed1178347c78caffecf24152781?pvs=4",
-      "officers": "Kavya Puranam, Twinkle Yeruva",
-      "id": "2"
-    },
-    {
-      "name": "Mentoring",
-      "image": "assets/img/members/mentoring.jpg",
-      "description": "Welcome to WCS Mentoring! We are a committee that is focused on providing resources and opportunities, whether it be professional, academic, or personal, for both new and current UIUC students. We host the Bits and Bytes program that is focused on connecting mentors and mentees within the CS program to provide incoming freshman, transfer students, and sophomores support. Additionally, we provide events to help students develop their professional skills.",
-      "site-link": "http://wcs.illinois.edu/mentoring/index.html",
-      "officers": "Kalika Raje, Shreya Deshpande",
-      "id": "3"
     },
     {
       "name": "Explorations",
@@ -30,6 +14,22 @@
       "description": "Welcome to WCS Explorations! We aspire to support your CS journey. We provide beginner friendly workshops and resources to help members gain technical skills and prepare for interviews. Check our our annual hackathon Code Ada and our project cycle Dev Ada! Don't miss the opportunity to attend our events, as they offer a chance to make new connections and gain valuable knowledge!",
       "site-link": "https://illinois-wcs-explorations.notion.site/WCS-Explorations-b936f1d332224e5d90541bb1ec9c022f",
       "officers": "Jillian Nylund, Shreya Vinjamuri",
+      "id": "2"
+    },
+    {
+      "name": "Infrastructure",
+      "image": "assets/img/favicons/apple-touch-icon.png",
+      "description": "Welcome to WCS Infrastructure! We are responsible for the design, development, and deployment of the WCS website, as well as its ongoing maintenance. We work closely with other committees and members to ensure that the website is up-to-date and provides information about the club's events, activities, and resources. We play a key role in advancing the mission of WCS by providing a centralized hub for members and promoting the club to the broader community.",
+      "site-link": "",
+      "officers": "Anushri Mittal, Neha Vardhaman",
+      "id": "3"
+    },
+    {
+      "name": "Mentoring",
+      "image": "assets/img/members/mentoring.jpg",
+      "description": "Welcome to WCS Mentoring! We are a committee that is focused on providing resources and opportunities, whether it be professional, academic, or personal, for both new and current UIUC students. We host the Bits and Bytes program that is focused on connecting mentors and mentees within the CS program to provide incoming freshman, transfer students, and sophomores support. Additionally, we provide events to help students develop their professional skills.",
+      "site-link": "http://wcs.illinois.edu/mentoring/index.html",
+      "officers": "Kalika Raje, Shreya Deshpande",
       "id": "4"
     },
     {
@@ -41,11 +41,11 @@
       "id": "5"
     },
     {
-      "name": "Corporate",
-      "image": "assets/img/events/wcs and stripe.png",
-      "description": "As part of the corporate committee, we speak with company representatives to arrange partnerships and secure sponsorships to support WCS's events and operations over the course of the year. We then collaborate with our corporate sponsors to plan and host events including General Meetings, networking events, tech talks, workshops, and more. Additionally, we organize WCS's annual Chicago retreat where our members spend a day immersing themselves in Chicago's tech environment.",
-      "site-link": "",
-      "officers": "Divya Koya, Riya Jain",
+      "name": "Social",
+      "image": "assets/img/members/social.jpg",
+      "description": "Welcome to WCS Social Committee! We strive to make new and upcoming events inclusive and engaging, participate in internal and external networking to hold unique experiences, and design and create enjoyable and amicable social events. Our main events include Spring Banquet, internal and external socials, and small-scale frequent activities.",
+      "site-link": "https://social-committee-24.notion.site/WCS-Social-610d0ed1178347c78caffecf24152781?pvs=4",
+      "officers": "Kavya Puranam, Twinkle Yeruva",
       "id": "6"
     }
   ]
