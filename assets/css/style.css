@@ -180,6 +180,16 @@ footer a {
   padding: 5%;
 }
 
+#events-container p {
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.events-subheading {
+  padding-top: 10px;
+  font-size: 19px;
+}
+
 .tabs-left>.nav-tabs {
   border-bottom: 0;
 }

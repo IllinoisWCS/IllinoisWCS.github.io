@@ -4,7 +4,7 @@ IllinoisWCS.github.io
 # About
 
 This is the main website for Women in Computer Science at UIUC.
-Current owners are Grace Zhang (@gracewzhang) and Shreya Deshpande (@shreyad216).
+Current owners are Neha Vardhaman (@neha-vard) and Anushri Mittal (@Anushri-Mittal).
 
 # Making Edits
 

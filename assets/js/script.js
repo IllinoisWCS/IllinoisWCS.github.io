@@ -9,7 +9,7 @@ $(document).ready(function () {
     events = data.events.slice(0, 5);
     if (events.length === 0) {
       var li = $("<li/>").addClass("list-group-item");
-      li.append("<h6>" + "No upcoming events this week. Check again next week!" + "</h6>");
+      li.append("<h4>" + "No upcoming events this week. Check again next week!" + "</h4>");
       $("#events-list").append(li);
     }
     $.each(events, function (i) {

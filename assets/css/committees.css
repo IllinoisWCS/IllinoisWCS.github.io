@@ -5,6 +5,10 @@
   margin-bottom: 30px;
 }
 
+.committees-wrapper p {
+  font-size: 15px;
+}
+
 .committees-card {
   cursor: pointer;
   width: fit-content;
