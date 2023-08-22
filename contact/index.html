@@ -1,190 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>WCS Contact</title>
 
-    <meta name="description" content="Contact WCS" />
-    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Contact" />
-    <meta property="og:type" content="company" />
-    <meta property="og:site_name" content="Women in Computer Science" />
-    <meta property="og:url" content="www.illinoiswcs.org" />
-    <meta property="og:image" content="" />
+<head>
+  <title>WCS Contact</title>
 
-    <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    />
+  <meta name="description" content="Contact WCS" />
+  <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Contact" />
+  <meta property="og:type" content="company" />
+  <meta property="og:site_name" content="Women in Computer Science" />
+  <meta property="og:url" content="www.illinoiswcs.org" />
+  <meta property="og:image" content="" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Oswald"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Mallanna"
-      rel="stylesheet"
-    />
+  <link rel="shortcut icon" href="../assets/img/favicons/favicon.ico" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../assets/lib/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../assets/lib/fontawesome/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/contact.css" />
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet" />
 
-    <script
-      type="text/javascript"
-      src="../assets/lib/jquery/dist/jquery.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../assets/lib/jquery-easing-original/jquery.easing.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../assets/lib/mustache/mustache.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../assets/lib/isotope/dist/isotope.pkgd.min.js"
-    ></script>
-  </head>
+  <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/contact.css" />
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <div id="navbar"></div>
-    <script>
-      $(function () {
-        $("#navbar").load("/components/navbar.html");
-      });
-    </script>
+  <script type="text/javascript" src="../assets/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/jquery-easing-original/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/mustache/mustache.min.js"></script>
+  <script type="text/javascript" src="../assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+</head>
 
-    <div id="contact" class="row padded">
-      <div class="">
-        <h1 align="center" class="content-header">Stay Connected</h1>
-        <div class="stay-connected">
-          <div>
-            <div>
-              <span class="bullet-point wcs-bg-pink"></span>
-              <span class="stay-connected-link"
-                >Join our main
-                <span class="stay-connected-link">
-                  <a
-                    href="https://tinyurl.com/illinoiswcs"
-                    class="stay-connected-link-wcs-pink"
-                    target="_blank"
-                  >
-                    Facebook group
-                  </a>
-                </span>
-              </span>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <div id="navbar"></div>
+  <script>
+    $(function () {
+      $("#navbar").load("/components/navbar.html");
+    });
+  </script>
+
+  <div id="contact" class="row padded">
+    <div class="">
+      <h1 align="center" class="content-header">Stay Connected</h1>
+      <div class="contacts-wrapper">
+        <div class="contact-detail">
+          <a href="https://tinyurl.com/wcsmailinglist" target=" _blank">
+            <div class="contact-icon">
+              <img src="/assets/img/contactIcons/newsletter.png" alt="News logo" />
             </div>
-            <div>
-              <span class="bullet-point wcs-bg-blue"></span>
-              <span class="stay-connected-link"
-                >Sign up for our
-                <span class="stay-connected-link"
-                  ><a
-                    href="https://tinyurl.com/wcsmailinglist"
-                    class="stay-connected-link-wcs-pink"
-                    target="_blank"
-                  >
-                    weekly newsletters
-                  </a></span
-                ></span
-              >
+            <h4 class="contact-description">Sign up for our newsletters!</h4>
+          </a>
+        </div>
+        <div class="contact-detail">
+          <a href="https://join.slack.com/t/wcs-uiuc/shared_invite/zt-1tut8j6pi-51ilAwG8CNmYNolsQP25ew"
+            target=" _blank">
+            <div class="contact-icon">
+              <img src="/assets/img/contactIcons/slack.png" alt="Slack logo" />
             </div>
-            <div>
-              <span class="bullet-point wcs-bg-pink"></span>
-              <span class="stay-connected-link"
-                >Join our
-                <span class="stay-connected-link"
-                  ><a
-                    href="https://join.slack.com/t/wcs-uiuc/shared_invite/zt-1tut8j6pi-51ilAwG8CNmYNolsQP25ew"
-                    class="stay-connected-link-wcs-pink"
-                    target="_blank"
-                  >
-                    Slack channel
-                  </a></span
-                ></span
-              >
+            <h4 class="contact-description">Join our slack!</h4>
+          </a>
+        </div>
+        <div class="contact-detail">
+          <a href="https://www.instagram.com/illinoiswcs/" target=" _blank">
+            <div class="contact-icon">
+              <img src="/assets/img/contactIcons/instagram.png" alt="Instagram logo" />
             </div>
-            <div>
-              <span class="bullet-point wcs-bg-blue"></span>
-              <span class="stay-connected-link"
-                >Follow us on
-                <span class="stay-connected-link"
-                  ><a
-                    href="https://www.instagram.com/illinoiswcs/"
-                    class="stay-connected-link-wcs-pink"
-                    target="_blank"
-                  >
-                    Instagram
-                  </a></span
-                ></span
-              >
+            <h4 class="contact-description">Follow @illinoiswcs!</h4>
+          </a>
+        </div>
+        <div class="contact-detail">
+          <a href="https://www.remind.com/join/g2ed79" target=" _blank">
+            <div class="contact-icon">
+              <img src="/assets/img/contactIcons/remind.png" alt="Remind logo" />
             </div>
-            <div>
-              <span class="bullet-point wcs-bg-pink"></span>
-              <span class="stay-connected-link"
-                >Sign up for
-                <span class="stay-connected-link"
-                  ><a
-                    href="https://www.remind.com/join/g2ed79"
-                    class="stay-connected-link-wcs-pink"
-                    target="_blank"
-                  >
-                    text reminders
-                  </a>
-                  for our events</span
-                ></span
-              >
+            <h4 class="contact-description">Sign up for event reminders via text!</h4>
+          </a>
+        </div>
+        <div class="contact-detail">
+          <a href="http://wcs.illinois.edu/openoffice/index.html" target=" _blank">
+            <div class="contact-icon">
+              <img src="/assets/img/contactIcons/door.png" alt="Door logo" />
             </div>
-            <div>
-              <span class="bullet-point wcs-bg-blue"></span>
-              <span class="stay-connected-link"
-                >Email us at
-                <span class="stay-connected-link"
-                  ><a
-                    href="mailto:“contact@illinoiswcs.org”"
-                    class="stay-connected-link-wcs-pink"
-                    >contact@illinoiswcs.org
-                  </a></span
-                ></span
-              >
-            </div>
-            <div>
-              <span class="bullet-point wcs-bg-pink"></span>
-              <span class="stay-connected-link"
-                >Come swing by the new WCS office located at Siebel 0211 (at the
-                end of the ramp by the stairs)!</span
-              >
-            </div>
-          </div>
-          <div>
-            <img class="" src="../assets/img/members/social.jpg" />
-          </div>
+            <h4 class="contact-description">Swing by our open office!</h4>
+          </a>
+        </div>
+      </div>
+      <div class="stay-connected">
+        <div>
+          <img class="" src="../assets/img/members/social.jpg" />
         </div>
       </div>
     </div>
+  </div>
+  </div>
 
-    <div id="footer"></div>
-    <script>
-      $(function () {
-        $("#footer").load("/components/footer.html");
-      });
-    </script>
-  </body>
+  <div id="footer"></div>
+  <script>
+    $(function () {
+      $("#footer").load("/components/footer.html");
+    });
+  </script>
+</body>
+
 </html>
