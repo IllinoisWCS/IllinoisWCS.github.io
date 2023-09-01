@@ -23,20 +23,34 @@
   left: 26.5%;
   bottom: 25%;
   right: 75%;
-  opacity: 0.8;
-  margin-top: -50px;
+  opacity: 0.85;
+  margin-top: -90px;
   margin-left: -50px;
-  height: 100px;
+  height: 140px;
 }
 
 .main-heading {
   font-size: 45px;
+  /* color: white; */
+  text-align: center;
+  top: 50%;
+  left: 12%;
+  bottom: 12%;
+  right: 50%;
+}
+
+.application-call {
   color: white;
   text-align: center;
   top: 50%;
   left: 12%;
   bottom: 12%;
   right: 50%;
+}
+
+.application-call a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .home-content {
