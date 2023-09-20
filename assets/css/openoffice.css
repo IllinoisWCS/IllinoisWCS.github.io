@@ -1,11 +1,19 @@
 th,
-td,
 tr {
   border-radius: 20px;
   border: 3px solid white;
   padding: 10%;
   text-align: center;
   position: relative;
+}
+
+td {
+  border-radius: 20px;
+  border: 3px solid white;
+  padding: 10%;
+  text-align: center;
+  position: relative;
+  height: 100px;
 }
 
 #open-office-heading {
