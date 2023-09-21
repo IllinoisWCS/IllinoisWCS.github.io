@@ -3,7 +3,7 @@
     {
       "id": "where",
       "question": "When is ChicTech?",
-      "answer": "Chictech will be held on November 5 starting from 9am CST to around 5pm CST!"
+      "answer": "ChicTech will be held on Saturday, October 7th from 9 AM - 5 PM CST!"
     },
     {
       "id": "when",
@@ -13,12 +13,12 @@
     {
       "id": "registration",
       "question": "How do I register?",
-      "answer": "Registration will be open until October 30th. The participants will get an email with detailed information on November 1st. The registration form is here: https://docs.google.com/forms/d/e/1FAIpQLSds6-CQ_dtX_K5M0bTmzlSnqtko6z-CtosQNY1rqDRkF2gdQA/viewform?usp=sf_link"
+      "answer": "Registration will be open until September 30th. All attending participants will receive an email with detailed information by October 1st. The registration form is here: https://forms.gle/PXVtmDk1UXKr7NA69."
     },
     {
       "id": "programming",
       "question": "Do I need to have prior programming experience?",
-      "answer": "No! Our goal is to teach you everything you need to know regardless of your background knowledge in programming or computer science to help you build a project completely from scratch that you can be proud of and show off to your friends and family."
+      "answer": "No! Our goal is to teach you everything you need to know in the workshops regardless of your background knowledge in programming or computer science! We encourage students of all skill levels to join ChicTech."
     },
     {
       "id": "accept",
@@ -33,12 +33,12 @@
     {
       "id": "online",
       "question": "I am attending online, how can I join the zoom sessions?",
-      "answer": "We will be providing more information as the date of the event approaches as well as post Zoom information on this website!"
+      "answer": "We will be providing more information as the date of the event approaches and will be posting the Zoom information on this website as well!"
     },
     {
       "id": "questions",
       "question": "I have other questions or concerns. How can I reach you?",
-      "answer": "If you have any questions, feel free to contact dahyunl2@illinois.edu, puppala4@illinois.edu, or illinoiswcs.outreach@gmail.com!"
+      "answer": "If you have any questions, feel free to contact atiwari5@illinois.edu, garimas2@illinois.edu, or illinoiswcs.outreach@gmail.com!"
     }
   ]
 }
