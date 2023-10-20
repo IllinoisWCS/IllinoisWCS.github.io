@@ -1,10 +1,12 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Gloock&family=Lato:wght@300&display=swap');
 
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Lato", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
@@ -89,12 +91,15 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    background: linear-gradient(#FFB2DA, #CBEDFF);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 a {
@@ -106,4 +111,27 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+h1 {
+  font-family: "Audiowide" !important;
+  font-weight: 500;
+  color: black;
+}
+
+h2 {
+  font-family: "Audiowide" !important;
+  font-weight: 400;
+  color: black;
+}
+
+h3 {
+  font-family: "Lato" !important;
+  font-weight: 300;
+  color: black;
+}
+
+
+p {
+  font-family: "Lato", sans-serif;
 }
