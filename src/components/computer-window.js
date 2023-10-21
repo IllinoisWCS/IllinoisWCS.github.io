@@ -1,6 +1,6 @@
 import styles from "@/styles/ComputerWindow.module.css"
 
-export default function ComputerWindow({ width, height, topbarColor }) {
+export default function ComputerWindow({ width, height, topbarColor = "#65C7CC" }) {
 	return (
 		<>
 			<div className={styles.container} style={{width, height}}>
