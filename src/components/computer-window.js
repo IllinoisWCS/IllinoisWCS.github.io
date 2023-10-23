@@ -1,6 +1,6 @@
 import styles from "@/styles/ComputerWindow.module.css"
 
-export default function ComputerWindow({ width, height, topbarColor = "#65C7CC" }) {
+export default function ComputerWindow({ children, width, height, topbarColor = "#65C7CC" }) {
 	return (
 		<>
 			<div className={styles.container} style={{width, height}}>
@@ -11,6 +11,7 @@ export default function ComputerWindow({ width, height, topbarColor = "#65C7CC" 
 						<li className={`${styles.topbarButtons} ${styles.topbarGreenButton}`}></li>
 					</ul>
 				</div>
+				<div>{children}</div>
 			</div>
 		</>
 	);

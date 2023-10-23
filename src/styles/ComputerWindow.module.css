@@ -11,6 +11,7 @@
   background-color: white;
   border-radius: 1rem;
   display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
