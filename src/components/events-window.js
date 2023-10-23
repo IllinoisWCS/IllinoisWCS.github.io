@@ -4,7 +4,7 @@ import styles from "@/styles/EventsWindow.module.css"
 export default function EventsWindow({ children, color = "#65C7CC", location }) {
   return (
     <>
-      <ComputerWindow width={"14rem"} height={"14rem"} topbarColor={color}>
+      <ComputerWindow width={"15rem"} height={"15rem"} topbarColor={color}>
         <div className={styles.container}>
           <div>{children}</div>
           <div>

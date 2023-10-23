@@ -1,0 +1,30 @@
+.container {
+  color: black;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container * {
+  padding: 0;
+  margin: 0;
+}
+
+.dateTime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h2 {
+  padding: 0.25rem;
+  font-size: 26px;
+}
+
+.container p {
+  font-size: 14px;
+  opacity: 80%;
+}
