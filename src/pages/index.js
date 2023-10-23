@@ -19,8 +19,12 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <Container>
           <h1>Welcome to My Next.js App</h1>
+          <h2>Welcome to My Next.js App</h2>
+          <h3>Welcome to My Next.js App</h3>
+          <p>Welcome to My Next.js App</p>
           <Button variant="primary">Click Me</Button>
         </Container>
+
       </main>
     </>
   );
