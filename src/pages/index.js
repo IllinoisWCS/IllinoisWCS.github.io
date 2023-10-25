@@ -4,6 +4,9 @@ import React from "react";
 import {Button} from "react-bootstrap";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
+import { Container } from "react-bootstrap";
+import Carousel from "@/components/carousel";
+
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -17,19 +20,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-<<<<<<< HEAD
         <Container>
-          <h1>Welcome to My Next.js App</h1>
-          <h2>Welcome to My Next.js App</h2>
-          <h3>Welcome to My Next.js App</h3>
-          <p>Welcome to My Next.js App</p>
-          <Button variant="primary">Click Me</Button>
+          <h1>UIUC Women in Computer Science</h1>
+          
+          <Carousel />
         </Container>
 
-=======
-        <h1>Welcome to My Next.js App</h1>
-        <Button variant="primary">Click Me</Button>
->>>>>>> ea950ab997895ff8075aacf5af3ce483854fe041
       </main>
     </>
   );
