@@ -4,9 +4,11 @@ import React from "react";
 import {Button} from "react-bootstrap";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
+import ComputerWindow from "@/components/computer-window";
 import { Container } from "react-bootstrap";
+import slideshow from '../../assets/img/events/wcs google workshop.png';
+import Image from "next/image";
 import Carousel from "@/components/carousel";
-
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -22,9 +24,9 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <Container>
           <h1>UIUC Women in Computer Science</h1>
-          
           <Carousel />
         </Container>
+
 
       </main>
     </>
