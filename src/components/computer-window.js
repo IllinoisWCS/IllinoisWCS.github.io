@@ -6,7 +6,7 @@ export default function ComputerWindow({children, topbarColor = "#65C7CC"}) {
       <div className={styles.container}>
         <div
           className={styles.topbar}
-          style={{"background-color": topbarColor}}
+          style={{backgroundColor: topbarColor}}
         >
           <ul>
             <li
