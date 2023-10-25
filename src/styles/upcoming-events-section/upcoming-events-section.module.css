@@ -1,0 +1,12 @@
+.eventContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.officeHours {
+  font-weight: bold;
+  text-align: center;
+}

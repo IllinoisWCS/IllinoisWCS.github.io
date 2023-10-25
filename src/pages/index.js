@@ -4,6 +4,7 @@ import React from "react";
 import {Button} from "react-bootstrap";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
+import UpcomingEventsSection from "@/components/upcoming-events-section/upcoming-events-section";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -19,6 +20,7 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <h1>Welcome to My Next.js App</h1>
         <Button variant="primary">Click Me</Button>
+        <UpcomingEventsSection />
       </main>
     </>
   );

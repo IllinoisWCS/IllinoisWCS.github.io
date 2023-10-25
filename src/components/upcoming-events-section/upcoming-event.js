@@ -1,5 +1,5 @@
 import EventsWindow from "./events-window";
-import styles from "@/styles/UpcomingEvent.module.css"
+import styles from "@/styles/upcoming-events-section/UpcomingEvent.module.css";
 
 export default function UpcomingEvent({ title, date, time, location }) {
   return (
