@@ -1,13 +1,51 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  gap: 0.25rem;
+}
+
+.header::before {
+  content: '';
+  height: 24px;
+  width: 24px;
+  margin-right: 1rem;
+  background-image: url("../../../assets/design-vectors/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header::after {
+  content: '';
+  height: 26px;
+  width: 26px;
+  background-image: url("../../../assets/design-vectors/cursor.svg");
+  background-repeat: no-repeat;
+}
+
+.headerArrow {
+  height: 24px;
+  margin-right: 1rem;
+}
+
+.headerCursor {
+  height: 28px;
+  margin-left: 0.25rem;
+}
+
 .eventContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
+  position: relative;
+  background-image: url("../../../assets/design-vectors/grid.svg");
 }
 
 .officeHours {
+  color: black;
   font-weight: bold;
   text-align: center;
 }
