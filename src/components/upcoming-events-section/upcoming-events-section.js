@@ -1,11 +1,12 @@
 import EventsWindow from "./events-window";
 import UpcomingEvent from "./upcoming-event";
-import styles from "@/styles/upcoming-events-section/upcoming-events-section.module.css";
+import styles from "@/styles/upcoming-events-section/UpcomingEventsSection.module.css";
 
 export default function UpcomingEventsSection() {
   return (
     <>
       <div className={styles.container}>
+        <h1>Upcoming Events</h1>
         <div className={styles.eventContainer}>
           <EventsWindow location={"Siebel CS 0211"} color={"#FB79C3"}>
             <p className={styles.officeHours} style={{color: "black"}}>Come to our office to chat, ask questions, or just study:</p>
