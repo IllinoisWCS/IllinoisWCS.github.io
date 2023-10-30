@@ -47,7 +47,7 @@ td {
 
 .open-office-cell {
   text-align: center;
-  background-color: #fff7d8;
+  background-color: #fcf7e6;
 }
 
 .open-office-highlight {
@@ -74,6 +74,5 @@ td {
 }
 
 #open-office-width {
-  /* width: 100%; */
   overflow-x: auto;
 }
