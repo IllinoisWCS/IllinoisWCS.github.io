@@ -9,7 +9,10 @@ export default function WCSNavbar() {
     return (
         <Navbar
             style={{
-                backgroundColor: "#ff8fcd"
+                backgroundImage: "linear-gradient(rgba(255, 143, 205, 1), rgba(253, 176, 218, 1))",
+                color: "#175d5e"
+                // color1: #fe93d2
+                // color2: #rgba (253, 176, 218, 1)
             }}
         >
             <Container>
