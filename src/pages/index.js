@@ -2,9 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import {Button} from "react-bootstrap";
+import EventsWindow from "@/components/events-window";
+import UpcomingEvent from "@/components/upcoming-event";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
-import UpcomingEventsSection from "@/components/upcoming-events-section/upcoming-events-section";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -24,7 +25,18 @@ export default function Home() {
         <p>Welcome to My Next.js App</p>
         <Button variant="primary">Click Me</Button>
         <br />
-        <UpcomingEventsSection />
+        <div className={styles.upcomingEventSection}>
+          <h2 className={styles.upcomingEventHeader}>Upcoming Events</h2>
+          <div className={styles.eventContainer}>
+            <EventsWindow location={"Siebel CS 0211"} color={"#FB79C3"}>
+              <p className={styles.officeHours}>Come to our office to chat, ask questions, or just study:</p>
+            </EventsWindow>
+            <UpcomingEvent title={"ChicTech"} date={"Oct 07"} time={"8:00 AM - 4:00 PM"} location={"Siebel 1404 & 2405"}/>
+            <UpcomingEvent title={"ChicTech"} date={"Oct 07"} time={"8:00 AM - 4:00 PM"} location={"Siebel 1404 & 2405"}/>
+            <UpcomingEvent title={"ChicTech"} date={"Oct 07"} time={"8:00 AM - 4:00 PM"} location={"Siebel 1404 & 2405"}/>
+            <UpcomingEvent title={"ChicTech"} date={"Oct 07"} time={"8:00 AM - 4:00 PM"} location={"Siebel 1404 & 2405"}/>
+          </div>
+        </div>
       </main>
     </>
   );

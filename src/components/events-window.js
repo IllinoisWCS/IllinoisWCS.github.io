@@ -1,5 +1,5 @@
-import ComputerWindow from "../computer-window";
-import styles from "@/styles/upcoming-events-section/EventsWindow.module.css";
+import ComputerWindow from "./computer-window";
+import styles from "@/styles/EventsWindow.module.css";
 
 export default function EventsWindow({ children, color = "#65C7CC", location }) {
   return (
