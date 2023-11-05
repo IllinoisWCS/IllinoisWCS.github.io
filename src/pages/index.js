@@ -23,6 +23,7 @@ export default function Home() {
         <h3>Welcome to My Next.js App</h3>
         <p>Welcome to My Next.js App</p>
         <Button variant="primary">Click Me</Button>
+        <br />
         <UpcomingEventsSection />
       </main>
     </>

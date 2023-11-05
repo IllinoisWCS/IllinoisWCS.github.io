@@ -18,13 +18,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.container h2 {
-  padding: 0.25rem;
-  font-size: 26px;
-}
-
-.container p {
-  font-size: 14px;
-  opacity: 80%;
-}
