@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   // conditional may have to change each year depending on what week of the year we start open office
   if (weekNumber % 2 == 0) {
-    var element = document.getElementById("week1");
+    var element = document.getElementById("week2");
     element.classList.remove("active");
     element = document.getElementById("week2tab");
     element.classList.remove("active");
@@ -27,7 +27,7 @@ $(document).ready(function () {
     element = document.getElementById("week1tab");
     element.classList.remove("active");
 
-    var element2 = document.getElementById("week1");
+    var element2 = document.getElementById("week2");
     element2.classList.add("active");
     element2 = document.getElementById("week2tab");
     element2.classList.add("active");
