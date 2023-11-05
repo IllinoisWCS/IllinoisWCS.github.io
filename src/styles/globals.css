@@ -115,13 +115,15 @@ a {
 
 h1 {
   font-family: "Audiowide" !important;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 64px;
   color: black;
 }
 
 h2 {
   font-family: "Audiowide" !important;
   font-weight: 400;
+  font-size: 40px;
   color: black;
 }
 
@@ -129,9 +131,13 @@ h3 {
   font-family: "Lato" !important;
   font-weight: 300;
   color: black;
+  font-size: 32px;
 }
 
 
 p {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 24px;
+  color: black;
 }
