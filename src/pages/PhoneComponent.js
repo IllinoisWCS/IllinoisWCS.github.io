@@ -9,9 +9,9 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
+    // backgroundSize: 'cover',
+    // backgroundRepeat: 'no-repeat',
+    // backgroundPosition: 'center'
   },
   notch: {
     width: '117px',
@@ -30,8 +30,9 @@ const styles = {
 }
 export default function PhoneComponent({children}) {
   return (
-    <div className="container" style={Object.assign(styles.container, {backgroundImage: `url(${children})`})}>
+     <div className="container" style={styles.container}>
         <div className="notch" style={styles.notch}></div>
+        <div>{children}</div>
         <div className="rectangle" style={styles.rectangle}></div>
     </div>
   );
