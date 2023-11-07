@@ -8,10 +8,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    // backgroundSize: 'cover',
-    // backgroundRepeat: 'no-repeat',
-    // backgroundPosition: 'center'
+    alignItems: 'center'
   },
   notch: {
     width: '117px',
