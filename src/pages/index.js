@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import {Container, Button} from "react-bootstrap";
+import {Button} from "react-bootstrap";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
 
@@ -17,10 +17,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Container>
-          <h1>Welcome to My Next.js App</h1>
-          <Button variant="primary">Click Me</Button>
-        </Container>
+        <h1>Welcome to My Next.js App</h1>
+        <h2>Welcome to My Next.js App</h2>
+        <h3>Welcome to My Next.js App</h3>
+        <p>Welcome to My Next.js App</p>
+        <Button variant="primary">Click Me</Button>
       </main>
     </>
   );
