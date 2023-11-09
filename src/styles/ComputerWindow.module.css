@@ -8,12 +8,13 @@
 }
 
 .container {
-  background-color: white;
+  /*background-color: white;*/
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   height: fit-content;
   overflow: hidden;
+  /*width: 400px;*/
   width: fit-content;
 }
 
