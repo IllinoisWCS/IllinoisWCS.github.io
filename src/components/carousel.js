@@ -10,38 +10,35 @@ import ComputerWindow from "@/components/computer-window";
 export default function Carousel() {
   return (
     <>
-    <div  className={styles.gridBackground} >
+    {/* <div  className={styles.gridBackground} >
         <Image className={styles.grid} src={grid} height={500} width={1000} alt="grid" />
-    </div>
+    </div> */}
 
-    <div class="container1" className={styles.container1}>
-        <input type="radio" name="slider" id="item-1" style={{display: "none"}} checked></input>
-        <input type="radio" name="slider" id="item-2" style={{display: "none"}}></input>
-        <input type="radio" name="slider" id="item-3" style={{display: "none"}}></input>
+    <div className={styles.container}>
+        <input className={styles.radio} type="radio" name="slider" id="item-1"  defaultChecked></input>
+        <input className={styles.radio} type="radio" name="slider" id="item-2" ></input>
+        <input className={styles.radio} type="radio" name="slider" id="item-3" ></input>
         <div class="cards" className={styles.cards}>
-            <div className={styles.carousel}>
+            {/* <div className={styles.carousel}> */}
                 <div className={styles.card}>
-                    <label class="card" for="item-1" id="pic-1">
-                        {/*<div className={styles.carouselMain}>*/}
-                            <ComputerWindow >
-                                {/*<Image style={{ height: 400, width: 600, objectFit: "cover" }} src={slideshow1}  alt="slideshow picture" />*/}
-                                <Image style={{height: 400, width: 600, objectFit: "cover"}} src={slideshow1} />
+                    <label className={styles.card} htmlFor="item-1" id="pic-1">
+                            <ComputerWindow className={styles.imgstyle}>
+                                <Image style={{height: 400, width: 600, objectFit: "cover"}} src={slideshow1} alt="slideshow picture1" />
                             </ComputerWindow>
-                        {/*</div>*/}
                     </label>
                 </div>
                
                <div className={styles.card}>
-                    <label class="card" for="item-2" id="pic-2">
-                        <ComputerWindow >
-                            <Image style={{ height: 400, width: 600, objectFit: "cover" }} src={slideshow2}  alt="slideshow picture" />
+                    <label className={styles.card} htmlFor="item-2" id="pic-2">
+                        <ComputerWindow className={styles.imgstyle} >
+                            <Image style={{ height: 400, width: 600, objectFit: "cover" }} src={slideshow2}  alt="slideshow picture2" />
                         </ComputerWindow>
                     </label>
                 </div>
                 <div className={styles.card}>
-                    <label class="card" for="item-3" id="pic-3">
-                        <ComputerWindow >
-                            <Image style={{ height: 400, width: 600, objectFit: "cover" }} src={slideshow3}  alt="slideshow picture" />
+                    <label className={styles.card} htmlFor="item-3" id="pic-3">
+                        <ComputerWindow className={styles.imgstyle}>
+                            <Image style={{ height: 400, width: 600, objectFit: "cover" }} src={slideshow3}  alt="slideshow picture3" />
                         </ComputerWindow>
                     </label>
                 </div>
@@ -57,7 +54,7 @@ export default function Carousel() {
                         </ComputerWindow>
                     </div>
                 </div>*/}
-            </div>
+            {/* </div> */}
         </div>
     </div>
 

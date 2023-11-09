@@ -147,24 +147,35 @@ p {
   color: black;
 }
 
+ /* code for carousel to work */
+
 #item-1:checked ~ .cards #pic-3, #item-2:checked ~ .cards #pic-1, #item-3:checked ~ .cards #pic-2 {
-  transform: translatex(-40%) scale(.8);
-  opacity: .8;
-  z-index: 0;
-  }
+  transform: translatex(-60%) scale(.8);
+  opacity: .4;
+  z-index: 0s;
+  /* padding-top: 50px; */
+}
 
-  #item-1:checked ~ .cards #pic-2, #item-2:checked ~ .cards #pic-3, #item-3:checked ~ .cards #pic-1 {
-  transform: translatex(40%) scale(.8);
-  opacity: .8;
+#item-1:checked ~ .cards #pic-2, #item-2:checked ~ .cards #pic-3, #item-3:checked ~ .cards #pic-1 {
+  transform: translatex(80%) scale(.8);
+  opacity: .4;
   z-index: 0;
-  }
+  /* padding-top: 50px; */
+}
 
-  #item-1:checked ~ .cards #pic-1, #item-2:checked ~ .cards #pic-2, #item-3:checked ~ .cards #pic-3 {
+#item-1:checked ~ .cards #pic-1, #item-2:checked ~ .cards #pic-2, #item-3:checked ~ .cards #pic-3 {
   transform: translatex(0) scale(1);
   opacity: 1;
   z-index: 1;
-
-  img {
-      box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  
+  Image {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
   }
 }
+
+#item-1:checked ~ .cards #pic-1, #item-2:checked ~ .cards #pic-2, #item-3:checked ~ .cards #pic-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+

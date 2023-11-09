@@ -1,9 +1,9 @@
-.carousel {
+/* .carousel {
     display: flex;
     justify-content: center;
     
-  }
-
+  } */
+/* 
 .carouselMain {
   display: flex;
   justify-self: center;
@@ -19,8 +19,9 @@
 .carouselBg {
   padding-top: 60px;
   position: absolute;
-}
-.container1{
+} */
+
+.container {
   width: 100%;
   max-width: 800px;
   max-height: 600px;
@@ -29,35 +30,36 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
+}
+
+.radio {
+  display: none;
 }
 
 .card {
   position: absolute;
-  width: 600px;
+  width: 60%;
   height: 100%;
   left: 0;
   right: 0;
   margin: auto;
-  transition: transform .4s ease-in;
+  transition: transform .4s ease;
   cursor: pointer;
 }
 
 .cards {
-  background-color: green;
   position: relative;
   width: 100%;
   height: 100%;
-  /*margin-bottom: 20px;*/
 }
-
+/* 
 .grid {
   position: absolute;
-  z-index: -1;
+  z-index: -10;
 }
 
 .gridBackground {
   display: flex;
   justify-content: center;
-}
-
+} */
