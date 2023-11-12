@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .container * {
@@ -12,9 +13,17 @@
   margin: 0;
 }
 
+.container h2 {
+  font-size: 28px;
+}
+
 .dateTime {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.dateTime p {
+  font-size: 20px;
 }

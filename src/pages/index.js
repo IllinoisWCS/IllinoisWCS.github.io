@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import {Button} from "react-bootstrap";
+import ComputerWindow from "@/components/computer-window";
 import EventsWindow from "@/components/events-window";
 import UpcomingEvent from "@/components/upcoming-event";
 import styles from "@/styles/Home.module.css";
@@ -9,7 +10,45 @@ import {Inter} from "next/font/google";
 
 const inter = Inter({subsets: ["latin"]});
 
-export default function Home() {
+export async function getServerSideProps() {
+  return {
+    props: {
+      events: await getEvents(),
+    }
+  };
+}
+
+async function getEvents() {
+  const eventsUrl = "https://script.google.com/macros/s/AKfycbwjW5AGzBRydqUY0Bs1J6SpYbC3q4U7KY9RcJyxzLkyzUp9EyBG/exec";
+  const res = await fetch(eventsUrl);
+  const { events } = await res.json();
+  return events.slice(0, 5).map(({ startTime, endTime, title, location }) => {
+    const startDate = new Date(startTime);
+    const endDate = new Date(endTime);
+
+    const dateOptions = {
+      weekday: "long",
+      month: "long",
+      day: "2-digit",
+    };
+    const date = startDate.toLocaleDateString("en-US", dateOptions);
+
+    const timeOptions = {
+      hour: "2-digit",
+      minute: "2-digit",
+    };
+    const start = startDate.toLocaleTimeString("en-US", timeOptions);
+    const end = endDate.toLocaleTimeString("en-US", timeOptions);
+    return {
+      title,
+      date,
+      time: `${start} - ${end}`,
+      location,
+    };
+  });
+}
+
+export default function Home({ events }) {
   return (
     <>
       <Head>
@@ -31,10 +70,14 @@ export default function Home() {
             <EventsWindow location={"Siebel CS 0211"} color={"#FB79C3"}>
               <p className={styles.officeHours}>Come to our office to chat, ask questions, or just study:</p>
             </EventsWindow>
-            <UpcomingEvent title={"ChicTech"} date={"Oct 07"} time={"8:00 AM - 4:00 PM"} location={"Siebel 1404 & 2405"}/>
-            <UpcomingEvent title={"ChicTech"} date={"Oct 07"} time={"8:00 AM - 4:00 PM"} location={"Siebel 1404 & 2405"}/>
-            <UpcomingEvent title={"ChicTech"} date={"Oct 07"} time={"8:00 AM - 4:00 PM"} location={"Siebel 1404 & 2405"}/>
-            <UpcomingEvent title={"ChicTech"} date={"Oct 07"} time={"8:00 AM - 4:00 PM"} location={"Siebel 1404 & 2405"}/>
+            { events.length === 0 
+              ? <ComputerWindow>
+                  <p className={styles.noEvents}>No upcoming events this week. Check again next week!</p>
+                </ComputerWindow>
+              : events.map(({ title, date, time, location }, index) => 
+                  <UpcomingEvent key={index} title={title} date={date} time={time} location={location}/>
+                )
+            }
           </div>
         </div>
       </main>
