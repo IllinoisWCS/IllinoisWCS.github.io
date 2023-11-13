@@ -13,8 +13,10 @@
   margin: 0;
 }
 
-.container h2 {
+.container h3 {
   font-size: 28px;
+  font-weight: 700;
+  color: #21636C;
 }
 
 .dateTime {
@@ -25,5 +27,7 @@
 }
 
 .dateTime p {
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #21636C;
 }

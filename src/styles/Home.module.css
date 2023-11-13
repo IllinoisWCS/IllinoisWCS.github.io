@@ -136,7 +136,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  align-items: center;
   justify-content: center;
   padding: 2rem;
   position: relative;
@@ -145,6 +144,9 @@
 
 .officeHours {
   text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #21636C;
 }
 
 .noEvents {

@@ -4,9 +4,9 @@ import styles from "@/styles/UpcomingEvent.module.css";
 export default function UpcomingEvent({ title, date, time, location }) {
   return (
     <>
-      <EventsWindow location={location} color="#65C7CC">
+      <EventsWindow location={location}>
         <div className={styles.container}>
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <div className={styles.dateTime}>
             <p>{date}</p>
             <p>{time}</p>

@@ -34,7 +34,7 @@ async function getEvents() {
     const date = startDate.toLocaleDateString("en-US", dateOptions);
 
     const timeOptions = {
-      hour: "2-digit",
+      hour: "numeric",
       minute: "2-digit",
     };
     const start = startDate.toLocaleTimeString("en-US", timeOptions);
@@ -67,7 +67,7 @@ export default function Home({ events }) {
         <div className={styles.upcomingEventSection}>
           <h2 className={styles.upcomingEventHeader}>Upcoming Events</h2>
           <div className={styles.eventContainer}>
-            <EventsWindow location={"Siebel CS 0211"} color={"#FB79C3"}>
+            <EventsWindow location={"Siebel CS 0211"} topbarColor={"#FB79C3"} buttonColor={"#FFCEE7"}>
               <p className={styles.officeHours}>Come to our office to chat, ask questions, or just study:</p>
             </EventsWindow>
             { events.length === 0 
