@@ -68,11 +68,11 @@ export default function Home({ events }) {
           <h2 className={styles.upcomingEventHeader}>Upcoming Events</h2>
           <div className={styles.eventContainer}>
             <EventsWindow location={"Siebel CS 0211"} topbarColor={"#FB79C3"} buttonColor={"#FFCEE7"}>
-              <p className={styles.officeHours}>Come to our office to chat, ask questions, or just study:</p>
+              <p className={styles.eventText}>Come to our office to chat, ask questions, or just study:</p>
             </EventsWindow>
             { events.length === 0 
               ? <ComputerWindow>
-                  <p className={styles.noEvents}>No upcoming events this week. Check again next week!</p>
+                  <p className={`${styles.noEvents} ${styles.eventText}`}>No upcoming events this week. Check again next week!</p>
                 </ComputerWindow>
               : events.map(({ title, date, time, location }, index) => 
                   <UpcomingEvent key={index} title={title} date={date} time={time} location={location}/>
