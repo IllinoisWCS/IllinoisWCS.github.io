@@ -1,0 +1,36 @@
+.container {
+    background-color: white;
+    width: 447px;
+    height: 778px;
+    border-radius: 33px;
+    border: 13px solid #BAA7FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container img {
+    height: 778px;
+}
+
+.notch {
+    width: 117px;
+    height: 33px;
+    border-radius: 63px;
+    background-color: #BAA7FF;
+    margin-top: 12px;
+    position: absolute;
+}
+
+.rectangle {
+    width: 211px;
+    height: 9px;
+    border-radius: 63px;
+    background-color: #BAA7FF;
+    margin-bottom: 12px;
+    position: absolute;
+    bottom: 0;
+}
