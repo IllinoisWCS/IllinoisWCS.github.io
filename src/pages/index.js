@@ -22,7 +22,7 @@ async function getEvents() {
   const eventsUrl = "https://script.google.com/macros/s/AKfycbwjW5AGzBRydqUY0Bs1J6SpYbC3q4U7KY9RcJyxzLkyzUp9EyBG/exec";
   const res = await fetch(eventsUrl);
   const { events } = await res.json();
-  return events.slice(0, 5).map(({ startTime, endTime, title, location }) => {
+  return events.slice(0, 5).map(({ startTime, endTime, title, location, description }) => {
     const startDate = new Date(startTime);
     const endDate = new Date(endTime);
 
@@ -44,6 +44,7 @@ async function getEvents() {
       date,
       time: `${start} - ${end}`,
       location,
+      description,
     };
   });
 }
@@ -74,8 +75,8 @@ export default function Home({ events }) {
               ? <ComputerWindow>
                   <p className={`${styles.noEvents} ${styles.eventText}`}>No upcoming events this week. Check again next week!</p>
                 </ComputerWindow>
-              : events.map(({ title, date, time, location }, index) => 
-                  <UpcomingEvent key={index} title={title} date={date} time={time} location={location}/>
+              : events.map(({ title, date, time, location, description }, index) => 
+                  <UpcomingEvent key={index} title={title} date={date} time={time} location={location} description={description}/>
                 )
             }
           </div>

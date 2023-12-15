@@ -1,0 +1,16 @@
+.container {
+  width: 100svw;
+  height: 100svh;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(10, 10, 10, 0.60);
+}
+
+.window {
+  position: absolute;
+  top: 10svh;
+  right: 10svw;
+  width: 80svw;
+  height: 80svh;
+}

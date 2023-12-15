@@ -8,7 +8,7 @@ export default function EventsWindow({ children, topbarColor = "#65C7CC", button
         <div className={styles.container}>
           <div>{children}</div>
           <div>
-            <button className={styles.eventButton} style={{backgroundColor: buttonColor}}>{location}</button>
+            <p className={styles.eventButton} style={{backgroundColor: buttonColor}}>{location}</p>
           </div>
         </div>
       </ComputerWindow>
