@@ -1,4 +1,4 @@
-import ComputerWindow from "./computer-window";
+import ComputerWindow from "./ComputerWindow";
 import styles from "@/styles/EventsWindow.module.css";
 
 export default function EventsWindow({ children, topbarColor = "#65C7CC", buttonColor = "#CBEDFF", location }) {

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import EventsWindow from "./events-window";
+import EventsWindow from "./EventsWindow";
 import styles from "@/styles/UpcomingEvent.module.css";
-import EventDescriptionModal from "./event-description-modal";
+import EventDescriptionModal from "./EventDescriptionModal";
 
 export default function UpcomingEvent({ title, date, time, location, description }) {
   const [showModal, setShowModal] = useState(false);

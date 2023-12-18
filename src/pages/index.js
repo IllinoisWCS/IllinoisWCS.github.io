@@ -2,9 +2,9 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import {Button} from "react-bootstrap";
-import ComputerWindow from "@/components/computer-window";
-import EventsWindow from "@/components/events-window";
-import UpcomingEvent from "@/components/upcoming-event";
+import ComputerWindow from "@/components/ComputerWindow";
+import EventsWindow from "@/components/EventsWindow";
+import UpcomingEvent from "@/components/UpcomingEvent";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
 

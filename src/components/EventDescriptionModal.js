@@ -1,4 +1,4 @@
-import ComputerWindow from "./computer-window";
+import ComputerWindow from "./ComputerWindow";
 import styles from "@/styles/EventDescriptionModal.module.css";
 
 export default function EventDescriptionModal({ data, isOpen, closeModal }) {
