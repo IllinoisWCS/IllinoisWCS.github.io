@@ -17,6 +17,11 @@
   font-size: 28px;
   font-weight: 700;
   color: #21636C;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .dateTime {

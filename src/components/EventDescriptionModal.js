@@ -10,12 +10,14 @@ function EventDescription({ title, date, time, location, description }, closeMod
     <>
       <div className={styles.container}>
         <ComputerWindow className={styles.window}>
-          <h3>{title}</h3>
-          <p>{date}</p>
-          <p>{time}</p>
-          <p>{location}</p>
-          <p>{description}</p>
-          <button onClick={closeModal}>close</button>
+          <div className={styles.eventInfo}>
+            <h3 className={styles.title}>{title}</h3>
+            <p>{date}</p>
+            <p>{time}</p>
+            <p className={styles.location}>{location}</p>
+            <p className={styles.description}>{description}</p>
+          </div>
+          <button onClick={closeModal} className={styles.closeButton}>Close</button>
         </ComputerWindow>     
       </div>
     </>
