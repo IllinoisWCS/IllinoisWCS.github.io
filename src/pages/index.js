@@ -66,7 +66,7 @@ export default function Home({ events }) {
         <Button variant="primary">Click Me</Button>
         <br />
         <div className={styles.upcomingEventSection}>
-          <h2 className={styles.upcomingEventHeader}>Upcoming Events</h2>
+          <h2 className={styles.upcomingEventHeader}>Upcoming Events▮</h2>
           <div className={styles.eventContainer}>
             <EventsWindow location={"Siebel CS 0211"} topbarColor={"#FB79C3"} buttonColor={"#FFCEE7"}>
               <p className={styles.eventText}>Come to our office to chat, ask questions, or just study:</p>
