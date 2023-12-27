@@ -134,12 +134,18 @@
 }
 
 .windowContainer {
-  width: 70%;
+  max-width: 950px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 768px) {
   .windowContainer {
-    width: 100%;
+    max-width: 650px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .windowContainer {
+    max-width: 500px;
   }
 }
 
