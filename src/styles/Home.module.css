@@ -127,6 +127,15 @@
   background-size: contain;
 }
 
+.windowContainer {
+  margin-top: 4rem;
+  padding: 4rem 8rem;
+  background-image: url("../../assets/design-vectors/grid.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .windowImageContainer {
   width: 900px;
   height: 600px;

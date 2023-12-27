@@ -26,7 +26,7 @@ export default function Home() {
 
       <main className={`${styles.main} ${inter.className}`}>
         <h1>Illinois Women in Computer Science</h1>
-        <div style={{marginTop: "4rem"}}>
+        <div className={`${styles.windowContainer}`}>
           <ComputerWindow>
             <div className={`${styles.windowImageContainer}`}>
               <img
