@@ -1,15 +1,9 @@
 import Head from "next/head";
-import Link from "next/link";
 import React from "react";
-import {Button} from "react-bootstrap";
 import ComputerWindow from "@/components/ComputerWindow";
-import EventsWindow from "@/components/EventsWindow";
-import UpcomingEvent from "@/components/UpcomingEvent";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
-import Layout from "@/components/layout";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
-import PhoneComponent from "@/components/PhoneComponent";
 import AboutUsSection from "@/components/AboutUsSection";
 
 const inter = Inter({subsets: ["latin"]});
@@ -27,14 +21,14 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <h1>Illinois Women in Computer Science</h1>
         <div className={`${styles.windowContainer}`}>
-          <ComputerWindow>
-            <div className={`${styles.windowImageContainer}`}>
+          <div className={`${styles.windowGrid}`}>
+            <ComputerWindow>
               <img
-                src="assets/img/members/committees23-24.jpg"
                 className={`${styles.windowImage}`}
+                src="assets/img/members/committees23-24.jpg"
               ></img>
-            </div>
-          </ComputerWindow>
+            </ComputerWindow>
+          </div>
         </div>
         <AboutUsSection />
         <UpcomingEventsSection />
