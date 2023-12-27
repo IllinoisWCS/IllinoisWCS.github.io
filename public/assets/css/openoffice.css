@@ -1,0 +1,62 @@
+th,
+tr {
+  border-radius: 20px;
+  border: 3px solid white;
+  padding: 10%;
+  text-align: center;
+  position: relative;
+}
+
+td {
+  border-radius: 20px;
+  border: 3px solid white;
+  padding: 10%;
+  text-align: center;
+  position: relative;
+  height: 100px;
+}
+
+#open-office-heading {
+  margin-top: 10%;
+}
+
+#open-office-subheading {
+  margin: 1% auto;
+  width: 80%;
+  font-size: 16px;
+}
+
+.open-office-day {
+  background-color: #fbd5de;
+  width: 18%;
+}
+
+.open-office-vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.open-office-cell {
+  background-color: #fcf7e6;
+}
+
+.open-office-highlight {
+  background-color: #faddc8;
+  border-radius: 20%;
+}
+
+#open-office-space {
+  width: 10%;
+}
+
+#week-indication {
+  margin: 5% auto;
+  width: 80%;
+  font-size: 16px;
+}

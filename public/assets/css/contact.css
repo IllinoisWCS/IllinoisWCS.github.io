@@ -1,0 +1,118 @@
+#contact {
+  display: block;
+  padding: 5% 5%;
+  color: #e84c3d;
+  background-color: white;
+}
+
+#contact-alumni {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5% 5%;
+  color: #e84c3d;
+  background-color: white;
+  align-items: center;
+}
+
+#contact .form-control {
+  font-family: "Mallanna", sans-serif;
+}
+
+#contact .label {
+  font-family: "Mallanna", sans-serif;
+}
+
+#contact .btn-primary {
+  background-color: #e84c3d;
+  border-color: #e84c3d;
+  color: #fff;
+}
+
+#contact .btn-primary:hover {
+  background-color: #e84c3d;
+  color: #f5f3ee;
+}
+
+#contact .contact-form {
+  padding-top: 5%;
+}
+
+.contacts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-detail {
+  margin: 20px;
+  overflow: wrap;
+}
+
+.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.contact-icon img {
+  width: 100%;
+}
+
+.contact-description {
+  width: 200px;
+  /* padding: 6px 12px; */
+  text-align: center;
+  /* white-space: nowrap; */
+}
+
+@media (max-width: 749px) {
+  #contact {
+    padding: 10%;
+  }
+}
+
+.stay-connected {
+  font-size: 1.28em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0%;
+}
+
+.stay-connected-alumni {
+  font-size: 1.28em;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding-top: 8%;
+}
+
+.stay-connected-link {
+  color: black;
+}
+
+.stay-connected-link-wcs-pink {
+  color: #e84c3d;
+}
+
+.stay-connected img {
+  padding-top: 40px;
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+#sponsors .sponsor-level {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
