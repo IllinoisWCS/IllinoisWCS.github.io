@@ -1,9 +1,9 @@
 .container {
   background-color: white;
-  width: 373px;
-  height: 650px;
-  border-radius: 33px;
-  border: 13px solid #baa7ff;
+  width: 300px;
+  height: 520px;
+  border-radius: 25px;
+  border: 10px solid #baa7ff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,12 +13,12 @@
 }
 
 .container img {
-  height: 778px;
+  height: 520px;
 }
 
 .notch {
-  width: 117px;
-  height: 28px;
+  width: 80px;
+  height: 20px;
   border-radius: 63px;
   background-color: #baa7ff;
   margin-top: 12px;
@@ -26,7 +26,7 @@
 }
 
 .rectangle {
-  width: 211px;
+  width: 150px;
   height: 9px;
   border-radius: 63px;
   background-color: #baa7ff;

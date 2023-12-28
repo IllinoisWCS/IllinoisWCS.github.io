@@ -18,7 +18,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 5rem;
+  padding: 2rem 4rem;
   position: relative;
   background-image: url("../../assets/design-vectors/grid.svg");
   background-position: center center;

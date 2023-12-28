@@ -126,7 +126,6 @@
   position: absolute;
   height: 24px;
   width: 24px;
-  top: 0.75rem;
   left: -1.5rem;
   background-image: url("../../assets/design-vectors/arrow.svg");
   background-repeat: no-repeat;
@@ -171,8 +170,11 @@
 }
 
 .upcomingEventSection {
+  display: flex;
+  flex-direction: column;
   margin-top: 4rem;
   width: 100%;
+  align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -186,12 +188,19 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem 3rem;
   position: relative;
+  width: fit-content;
   background-image: url("../../assets/design-vectors/grid.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .eventContainer {
+    padding: 1rem;
+  }
 }
 
 .eventText {
