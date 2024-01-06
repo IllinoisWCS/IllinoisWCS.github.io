@@ -7,6 +7,7 @@ import EventsWindow from "@/components/EventsWindow";
 import UpcomingEvent from "@/components/UpcomingEvent";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
+import Key from "@/components/Key";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -81,10 +82,14 @@ export default function Home({ events }) {
             }
           </div>
         </div>
+        <br />
         <div className={styles.stayInTouchSection}>
           <h2 className={styles.sectionHeader}>Stay in Touch▮</h2>
           <div className={styles.communicationLinks}>
-
+            <div className={styles.linkOne}><Key>Slack</Key></div>
+            <div className={styles.linkTwo}><Key>Instagram</Key></div>
+            <div className={styles.linkThree}><Key>Mailing List</Key></div>
+            <div className={styles.linkFour}><Key>Medium</Key></div>
           </div>
         </div>
       </main>

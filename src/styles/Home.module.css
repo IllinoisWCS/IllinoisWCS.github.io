@@ -149,6 +149,37 @@
   width: 20rem;
 }
 
+.communicationLinks {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  place-content: center;
+  place-items: center;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.linkOne {
+  grid-row: 1;
+  grid-column: 1 / 5;
+}
+
+.linkTwo {
+  grid-row: 1;
+  grid-column: 5 / 9;
+}
+
+.linkThree {
+  grid-row: 2;
+  grid-column: 2 / 6;
+}
+
+.linkFour {
+  grid-row: 2;
+  grid-column: 6 / 10;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
