@@ -107,7 +107,7 @@
   position: relative;
 }
 
-.upcomingEventHeader {
+.sectionHeader {
   display: flex;
   align-items: center;
   margin-left: 2rem;
@@ -115,7 +115,7 @@
   position: relative;
 }
 
-.upcomingEventHeader::before {
+.sectionHeader::before {
   content: '';
   position: absolute;
   height: 24px;
