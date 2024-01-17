@@ -14,14 +14,10 @@
 }
 
 .container h3 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #21636C;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
 
 .dateTime {
@@ -32,7 +28,6 @@
 }
 
 .dateTime p {
-  font-size: 16px;
   font-weight: 400;
-  color: #21636C;
+  color: #21636c;
 }

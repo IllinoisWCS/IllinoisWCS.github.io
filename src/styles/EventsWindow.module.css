@@ -18,10 +18,7 @@
 
 .eventButton p {
   margin: 0;
-  font-weight: bold;
-  font-size: 14px;
   text-align: center;
-  color: #21636c;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

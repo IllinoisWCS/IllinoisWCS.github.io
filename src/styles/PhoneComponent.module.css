@@ -1,7 +1,7 @@
 .container {
   background-color: white;
-  width: 300px;
-  height: 520px;
+  width: 275px;
+  height: 475px;
   border-radius: 25px;
   border: 10px solid #baa7ff;
   display: flex;
@@ -13,12 +13,12 @@
 }
 
 .container img {
-  height: 520px;
+  height: 475px;
 }
 
 .notch {
   width: 80px;
-  height: 20px;
+  height: 15px;
   border-radius: 63px;
   background-color: #baa7ff;
   margin-top: 12px;
@@ -27,7 +27,7 @@
 
 .rectangle {
   width: 150px;
-  height: 9px;
+  height: 8px;
   border-radius: 63px;
   background-color: #baa7ff;
   margin-bottom: 12px;

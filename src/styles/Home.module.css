@@ -133,19 +133,7 @@
 }
 
 .windowContainer {
-  max-width: 950px;
-}
-
-@media only screen and (max-width: 768px) {
-  .windowContainer {
-    max-width: 650px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .windowContainer {
-    max-width: 500px;
-  }
+  max-width: 825px;
 }
 
 .windowGrid {
@@ -205,9 +193,6 @@
 
 .eventText {
   text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  color: #21636c;
 }
 
 .noEvents {

@@ -132,13 +132,13 @@ h3 {
   font-family: "Lato" !important;
   font-weight: 700;
   color: #21636c;
-  font-size: 32px;
+  font-size: 28px; /* Adjusted to 28px */
 }
 
 p {
   font-family: "Lato";
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   color: #21636c;
 }
 
@@ -149,7 +149,7 @@ ul {
 li {
   font-family: "Lato";
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   color: #21636c;
 }
 
