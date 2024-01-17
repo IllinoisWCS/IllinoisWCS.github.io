@@ -20,7 +20,7 @@
   justify-content: center;
   padding: 2rem 4rem;
   position: relative;
-  background-image: url("../../assets/design-vectors/grid.svg");
+  background-image: url("/assets/design-vectors/grid.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
