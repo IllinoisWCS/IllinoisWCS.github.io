@@ -9,13 +9,41 @@
   height: fit-content;
 }
 
-.key {
-  padding: 0.5rem;
-  background-image: url("../../assets/design-vectors/key.svg");
-  background-size: cover;
-  height: 4rem;
-  aspect-ratio: 3.287;
+.keyContainerLeft {
   position: relative;
+}
+
+.keyContainerRight {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.keyContainerLeft::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 25px;
+  background-image: url("../../assets/design-vectors/key_left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.keyContainerRight::before {
+  content: '';
+  position: absolute;
+  inset: 0 -5px 0 auto;
+  width: 25px;
+  background-image: url("../../assets/design-vectors/key_right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.keyBody {
+  margin: 0;
+  padding: 0.5rem;
+  background-image: url("../../assets/design-vectors/key_center.svg");
+  background-size: contain;
 }
 
 .content {

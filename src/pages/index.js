@@ -23,7 +23,7 @@ async function getEvents() {
   const eventsUrl = "https://script.google.com/macros/s/AKfycbwjW5AGzBRydqUY0Bs1J6SpYbC3q4U7KY9RcJyxzLkyzUp9EyBG/exec";
   const res = await fetch(eventsUrl);
   const { events } = await res.json();
-  return events.slice(0, 5).map(({ startTime, endTime, title, location, description }) => {
+  return events.slice(0, 5).map(({ startTime, endTime, title, location, description=null }) => {
     const startDate = new Date(startTime);
     const endDate = new Date(endTime);
 
