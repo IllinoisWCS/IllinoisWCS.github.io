@@ -101,7 +101,7 @@ export default function Home({events}) {
         <div className={styles.stayInTouchSection}>
           <h2 className={styles.sectionHeader}>Stay in Touch▮</h2>
           <div className={styles.communicationLinks}>
-            <div className={styles.linkOne}><Key>Slack</Key></div>
+            <div className={styles.linkOne}><Key bold>Slack</Key></div>
             <div className={styles.linkTwo}><Key>Instagram</Key></div>
             <div className={styles.linkThree}><Key>Mailing List</Key></div>
             <div className={styles.linkFour}><Key>Medium</Key></div>
