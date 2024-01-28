@@ -6,11 +6,14 @@
   background-image: url("../../assets/design-vectors/grid.svg");
   background-size: 250%;
   width: fit-content;
-  height: fit-content;
+  height: 6rem;
 }
 
 .keyLeft {
   position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .keyRight {
@@ -51,8 +54,9 @@
   margin: 0;
   padding: 0.5rem;
   background-image: url("../../assets/design-vectors/key/key_center.svg");
-  background-size: contain;
+  background-size: auto 3.6rem;
   color: #734448;
+  overflow: hidden;
 }
 
 .boldBody {
@@ -65,4 +69,5 @@
   font-size: 28px;
   font-weight: 400;
   color: inherit;
+  white-space: nowrap;
 }

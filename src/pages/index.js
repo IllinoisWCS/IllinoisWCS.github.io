@@ -101,10 +101,10 @@ export default function Home({events}) {
         <div className={styles.stayInTouchSection}>
           <h2 className={styles.sectionHeader}>Stay in Touch▮</h2>
           <div className={styles.communicationLinks}>
-            <div className={styles.linkOne}><Key bold>Slack</Key></div>
-            <div className={styles.linkTwo}><Key>Instagram</Key></div>
-            <div className={styles.linkThree}><Key>Mailing List</Key></div>
-            <div className={styles.linkFour}><Key>Medium</Key></div>
+            <div className={styles.linkOne}><Key bold url={"https://join.slack.com/t/wcs-uiuc/shared_invite/zt-1tut8j6pi-51ilAwG8CNmYNolsQP25ew"}>Slack</Key></div>
+            <div className={styles.linkTwo}><Key url="http://www.instagram.com/illinoiswcs">Instagram</Key></div>
+            <div className={styles.linkThree}><Key url="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5">Mailing List</Key></div>
+            <div className={styles.linkFour}><Key url="https://medium.com/@illinoiswcs">Medium</Key></div>
           </div>
         </div>
       </main>
