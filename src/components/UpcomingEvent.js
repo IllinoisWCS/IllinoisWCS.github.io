@@ -25,7 +25,7 @@ export default function UpcomingEvent({
   return (
     <>
       <div onClick={openModal}>
-        <EventsWindow location={location} hasDescription={description}>
+        <EventsWindow location={location} hasDescription={hasDescription}>
           <div className={styles.container}>
             <h3>{title}</h3>
             <div className={styles.dateTime}>
