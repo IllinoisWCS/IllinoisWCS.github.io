@@ -13,11 +13,24 @@
   margin: 0;
 }
 
-.container h3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
+.wrapper {
+  cursor: auto;
+}
+
+.wrapperCanClick {
+  cursor: pointer;
+  position: relative;
+}
+
+.wrapperCanClick::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url("/assets/design-vectors/pointer.svg");
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
 }
 
 .dateTime {

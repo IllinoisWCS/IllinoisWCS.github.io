@@ -11,7 +11,7 @@ const UpcomingEventsSection = () => {
     const fetchEvents = async () => {
       try {
         const eventsUrl =
-          "https://script.google.com/macros/s/AKfycbwjW5AGzBRydqUY0Bs1J6SpYbC3q4U7KY9RcJyxzLkyzUp9EyBG/exec";
+          "https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec";
         const res = await fetch(eventsUrl);
         const {events: fetchedEvents} = await res.json();
         setEvents(

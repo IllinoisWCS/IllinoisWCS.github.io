@@ -1,3 +1,23 @@
+.wrapper {
+  cursor: auto;
+}
+
+.wrapperCanClick {
+  cursor: pointer;
+  position: relative;
+}
+
+.wrapperCanClick::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url("/assets/design-vectors/pointer.svg");
+  position: absolute;
+  right: -0.125rem;
+  bottom: -0.125rem;
+  pointer-events: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -24,15 +44,4 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-}
-
-.eventButton::after {
-  content: "";
-  width: 22px;
-  height: 22px;
-  background-image: url("/assets/design-vectors/pointer.svg");
-  position: absolute;
-  right: -0.5rem;
-  bottom: -0.5rem;
-  pointer-events: none;
 }
