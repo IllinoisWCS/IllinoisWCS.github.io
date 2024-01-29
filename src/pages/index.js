@@ -7,6 +7,7 @@ import EventsWindow from "@/components/EventsWindow";
 import UpcomingEvent from "@/components/UpcomingEvent";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
+import Committees from "@/pages/committees.js";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -65,6 +66,9 @@ export default function Home({events}) {
         <p>Welcome to My Next.js App</p>
         <Button variant="primary">Click Me</Button>
         <br />
+        <Committees>
+
+        </Committees>
         <div className={styles.upcomingEventSection}>
           <h2 className={styles.upcomingEventHeader}>Upcoming Events▮</h2>
           <div className={styles.eventContainer}>
