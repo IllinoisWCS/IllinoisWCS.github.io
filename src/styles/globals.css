@@ -1,14 +1,14 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Lato:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Gloock&family=Lato:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Gloock&family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Lato", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+    "Lato", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
+    "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -98,9 +98,9 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-    background: linear-gradient(#FFB2DA, #CBEDFF);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  background: linear-gradient(#ffb2da, #cbedff);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -130,15 +130,64 @@ h2 {
 
 h3 {
   font-family: "Lato" !important;
-  font-weight: 300;
-  color: black;
-  font-size: 32px;
+  font-weight: 700;
+  color: #21636c;
+  font-size: 28px; /* Adjusted to 28px */
 }
-
 
 p {
   font-family: "Lato";
   font-weight: 700;
-  font-size: 24px;
-  color: black;
+  font-size: 20px;
+  color: #21636c;
+}
+
+ul {
+  color: #21636c;
+}
+
+li {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 20px;
+  color: #21636c;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p,
+  li {
+    font-size: 18px;
+  }
+}
+
+/* Mobile responsive font sizes */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+  }
 }

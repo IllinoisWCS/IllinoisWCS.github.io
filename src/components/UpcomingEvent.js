@@ -24,11 +24,8 @@ export default function UpcomingEvent({
 
   return (
     <>
-      <div
-        style={{cursor: description ? "pointer" : "auto"}}
-        onClick={openModal}
-      >
-        <EventsWindow location={location}>
+      <div onClick={openModal}>
+        <EventsWindow location={location} hasDescription={description}>
           <div className={styles.container}>
             <h3>{title}</h3>
             <div className={styles.dateTime}>

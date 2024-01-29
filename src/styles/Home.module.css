@@ -1,9 +1,15 @@
 .main {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 6rem;
+  align-items: center;
+  padding: 3rem 6rem;
   min-height: 100vh;
+}
+
+@media only screen and (max-width: 786px) {
+  .main {
+    padding: 2rem; /* New padding for mobile view */
+  }
 }
 
 .description {
@@ -107,7 +113,7 @@
   position: relative;
 }
 
-.upcomingEventHeader {
+.header {
   display: flex;
   align-items: center;
   margin-left: 2rem;
@@ -115,16 +121,54 @@
   position: relative;
 }
 
-.upcomingEventHeader::before {
-  content: '';
+.header::before {
+  content: "";
   position: absolute;
   height: 24px;
   width: 24px;
-  top: 0.75rem;
   left: -1.5rem;
-  background-image: url("../../assets/design-vectors/arrow.svg");
+  background-image: url("/assets/design-vectors/arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.windowContainer {
+  max-width: 825px;
+}
+
+.windowGrid {
+  margin-top: 3rem;
+  padding: 2rem 4rem;
+  background-image: url("/assets/design-vectors/grid.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .windowGrid {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+.windowImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.upcomingEventSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 100%;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .upcomingEventSection {
+    margin-top: 2rem;
+  }
 }
 
 .eventContainer {
@@ -132,21 +176,28 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem 3rem;
   position: relative;
-  background-image: url("../../assets/design-vectors/grid.svg");
+  width: fit-content;
+  background-image: url("/assets/design-vectors/grid.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .eventContainer {
+    padding: 1rem;
+  }
 }
 
 .eventText {
   text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  color: #21636C;
 }
 
 .noEvents {
   padding: 0.75rem;
-  width: 20rem;
+  max-width: 20rem;
 }
 
 /* Enable hover only on non-touch devices */
