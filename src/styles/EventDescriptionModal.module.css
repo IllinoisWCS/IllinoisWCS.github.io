@@ -4,7 +4,7 @@
   position: fixed;
   inset: 0;
   z-index: 999;
-  background-color: rgba(10, 10, 10, 0.60);
+  background-color: rgba(10, 10, 10, 0.6);
 }
 
 .window {
@@ -27,14 +27,14 @@
 .eventInfo p {
   font-size: 20px;
   font-weight: 400;
-  color: #21636C;
+  color: #21636c;
 }
 
 .title {
   margin-bottom: 1rem;
   font-size: 36px;
   font-weight: 700;
-  color: #21636C;
+  color: #21636c;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -62,8 +62,8 @@
   width: 100%;
   height: 3rem;
   border: none;
-  color: #21636C;
-  background-color: #CBEDFF;
+  color: #21636c;
+  background-color: #cbedff;
   font-weight: 700;
   font-size: 16px;
 }
