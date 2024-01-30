@@ -1,0 +1,35 @@
+.container {
+    margin-bottom: 3rem;
+}
+
+.content {
+    display: flex;
+}
+
+.window {
+    width: 50%;
+}
+
+.name {
+    text-decoration: #21636C wavy underline;
+    padding-bottom: 15px;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #21636C;
+    width: 50%;
+    padding-left: 15px;
+}
+
+.officers {
+    width: fit-content;
+    padding: 10px;
+    font-size: 16px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    float: right;
+    color: #21636C;
+}
