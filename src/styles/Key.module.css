@@ -42,14 +42,6 @@
   background-repeat: no-repeat;
 }
 
-.boldLeft::before {
-  background-image: url("/assets/design-vectors/bold_key/bold_key_left.svg");
-}
-
-.boldRight::before {
-  background-image: url("/assets/design-vectors/bold_key/bold_key_right.svg");
-}
-
 .keyBody {
   margin: 0;
   padding: 0.5rem;
@@ -59,7 +51,15 @@
   overflow: hidden;
 }
 
-.boldBody {
+.keyLeft:hover::before {
+  background-image: url("/assets/design-vectors/bold_key/bold_key_left.svg");
+}
+
+.keyLeft:hover .keyRight::before {
+  background-image: url("/assets/design-vectors/bold_key/bold_key_right.svg");
+}
+
+.keyLeft:hover .keyBody {
   background-image: url("/assets/design-vectors/bold_key/bold_key_center.svg");
   color: #FFE3F2;
 }
