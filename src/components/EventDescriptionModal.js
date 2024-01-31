@@ -1,11 +1,14 @@
 import ComputerWindow from "./ComputerWindow";
 import styles from "@/styles/EventDescriptionModal.module.css";
 
-export default function EventDescriptionModal({ data, isOpen, closeModal }) {
+export default function EventDescriptionModal({data, isOpen, closeModal}) {
   return isOpen ? EventDescription(data, closeModal) : null;
 }
 
-function EventDescription({ title, date, time, location, description }, closeModal) {
+function EventDescription(
+  {title, date, time, location, description},
+  closeModal
+) {
   return (
     <>
       <div className={styles.container}>
@@ -15,10 +18,15 @@ function EventDescription({ title, date, time, location, description }, closeMod
             <p>{date}</p>
             <p>{time}</p>
             <p className={styles.location}>{location}</p>
-            <p className={styles.description}>{description}</p>
+            <p
+              className={styles.description}
+              dangerouslySetInnerHTML={{__html: description}}
+            />
           </div>
-          <button onClick={closeModal} className={styles.closeButton}>Close</button>
-        </ComputerWindow>     
+          <button onClick={closeModal} className={styles.closeButton}>
+            Close
+          </button>
+        </ComputerWindow>
       </div>
     </>
   );

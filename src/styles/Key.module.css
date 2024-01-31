@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  background-image: url("../../assets/design-vectors/grid.svg");
-  background-size: 250%;
+  background-image: url("/assets/design-vectors/grid.svg");
+  background-size: 32rem;
   width: fit-content;
   height: 6rem;
 }
@@ -27,7 +27,7 @@
   position: absolute;
   inset: 0;
   width: 25px;
-  background-image: url("../../assets/design-vectors/key/key_left.svg");
+  background-image: url("/assets/design-vectors/key/key_left.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -37,30 +37,30 @@
   position: absolute;
   inset: 0 -5px 0 auto;
   width: 25px;
-  background-image: url("../../assets/design-vectors/key/key_right.svg");
+  background-image: url("/assets/design-vectors/key/key_right.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .boldLeft::before {
-  background-image: url("../../assets/design-vectors/bold_key/bold_key_left.svg");
+  background-image: url("/assets/design-vectors/bold_key/bold_key_left.svg");
 }
 
 .boldRight::before {
-  background-image: url("../../assets/design-vectors/bold_key/bold_key_right.svg");
+  background-image: url("/assets/design-vectors/bold_key/bold_key_right.svg");
 }
 
 .keyBody {
   margin: 0;
   padding: 0.5rem;
-  background-image: url("../../assets/design-vectors/key/key_center.svg");
+  background-image: url("/assets/design-vectors/key/key_center.svg");
   background-size: auto 3.6rem;
   color: #734448;
   overflow: hidden;
 }
 
 .boldBody {
-  background-image: url("../../assets/design-vectors/bold_key/bold_key_center.svg");
+  background-image: url("/assets/design-vectors/bold_key/bold_key_center.svg");
   color: #FFE3F2;
 }
 

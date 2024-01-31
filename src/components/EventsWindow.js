@@ -6,9 +6,10 @@ export default function EventsWindow({
   topbarColor = "#65C7CC",
   buttonColor = "#CBEDFF",
   location,
+  hasDescription,
 }) {
   return (
-    <>
+    <div className={hasDescription ? styles.wrapperCanClick : styles.wrapper}>
       <ComputerWindow topbarColor={topbarColor}>
         <div className={styles.container}>
           <div>{children}</div>
@@ -22,6 +23,6 @@ export default function EventsWindow({
           )}
         </div>
       </ComputerWindow>
-    </>
+    </div>
   );
 }
