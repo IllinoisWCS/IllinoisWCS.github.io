@@ -17,12 +17,12 @@ export default function Committees({children}) {
   return (
      <div>
         <h1 style={{textAlign: "center"}}>Our Committees</h1>
-        <CommitteesSection name="Infrastructure" description={values["Infrastructure"][0]} officers={values["Infrastructure"][1]} color="#FB79C3" bColor="#FFCEE7"></CommitteesSection>
-        <CommitteesSection name="Corporate" description={values["Corporate"][0]} officers={values["Corporate"][1]}></CommitteesSection>
-        <CommitteesSection name="Explorations" description={values["Explorations"][0]} officers={values["Explorations"][1]} color="#FB79C3" bColor="#FFCEE7"></CommitteesSection>
-        <CommitteesSection name="Mentoring" description={values["Mentoring"][0]} officers={values["Mentoring"][1]}></CommitteesSection>
-        <CommitteesSection name="Social" description={values["Social"][0]} officers={values["Social"][1]} color="#FB79C3" bColor="#FFCEE7"></CommitteesSection>
-        <CommitteesSection name="Outreach" description={values["Outreach"][0]} officers={values["Outreach"][1]}></CommitteesSection>
+        <CommitteesSection isLeft={true} isRight={false} name="Infrastructure" description={values["Infrastructure"][0]} officers={values["Infrastructure"][1]} color="#FB79C3" bColor="#FFCEE7"></CommitteesSection>
+        <CommitteesSection isLeft={false} isRight={true} name="Corporate" description={values["Corporate"][0]} officers={values["Corporate"][1]}></CommitteesSection>
+        <CommitteesSection isLeft={true} isRight={false} name="Explorations" description={values["Explorations"][0]} officers={values["Explorations"][1]} color="#FB79C3" bColor="#FFCEE7"></CommitteesSection>
+        <CommitteesSection isLeft={false} isRight={true} name="Mentoring" description={values["Mentoring"][0]} officers={values["Mentoring"][1]}></CommitteesSection>
+        <CommitteesSection isLeft={true} isRight={false} name="Social" description={values["Social"][0]} officers={values["Social"][1]} color="#FB79C3" bColor="#FFCEE7"></CommitteesSection>
+        <CommitteesSection isLeft={false} isRight={true} name="Outreach" description={values["Outreach"][0]} officers={values["Outreach"][1]}></CommitteesSection>
     </div>
   );
 };

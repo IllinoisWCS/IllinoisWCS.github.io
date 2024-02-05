@@ -1,5 +1,5 @@
 .container {
-    margin-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 
 .content {
@@ -10,12 +10,27 @@
     width: 50%;
 }
 
-.name {
-    text-decoration: #21636C wavy underline;
+.nameLeft {
+    text-decoration: #21636C underline;
     padding-bottom: 15px;
+    text-align: left;
 }
 
-.description {
+.nameRight {
+    text-decoration: #21636C underline;
+    padding-bottom: 15px;
+    text-align: right;
+}
+
+.descriptionLeft {
+    font-size: 16px;
+    font-weight: 400;
+    color: #21636C;
+    width: 50%;
+    padding-right: 15px;
+}
+
+.descriptionRight {
     font-size: 16px;
     font-weight: 400;
     color: #21636C;
@@ -23,13 +38,22 @@
     padding-left: 15px;
 }
 
-.officers {
+.officersLeft {
     width: fit-content;
-    padding: 10px;
     font-size: 16px;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 0.5rem;
     text-align: center;
-    float: right;
+    float: left;
     color: #21636C;
+}
+
+.officersRight {
+    width: fit-content;
+    font-size: 16px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: #21636C;
+    float: right;
 }
