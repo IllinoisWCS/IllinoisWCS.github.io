@@ -1,0 +1,34 @@
+.container {
+    background-color: rgba(10, 10, 10, 0.6);
+}
+
+.heading {
+  background-color: #df636a;
+  
+}
+
+.body {
+    color: black;
+}
+
+.name {
+  color: #00B6C0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.photo {
+    padding: 1%;
+}
+
+.footer {
+  background-color: #EAE1E6;
+}
+
+.contact {
+  position: absolute;
+  bottom: 0.5rem;
+  padding: 5%;
+}
+
+  
