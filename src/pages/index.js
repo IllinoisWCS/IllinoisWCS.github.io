@@ -3,6 +3,7 @@ import React from "react";
 import ComputerWindow from "@/components/ComputerWindow";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
+import StayInTouchSection from "@/components/StayInTouchSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import AboutUsSection from "@/components/AboutUsSection";
 
@@ -32,6 +33,7 @@ export default function Home() {
         </div>
         <AboutUsSection />
         <UpcomingEventsSection />
+        <StayInTouchSection />
       </main>
     </>
   );
