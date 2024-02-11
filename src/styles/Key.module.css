@@ -6,7 +6,7 @@
   background-image: url("/assets/design-vectors/grid.svg");
   background-size: 32rem;
   width: fit-content;
-  height: 6rem;
+  height: 8rem;
 }
 
 .keyLeft {
@@ -14,6 +14,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  width: 100%;
 }
 
 .keyRight {
@@ -26,7 +27,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  width: 25px;
+  width: 75px;
   background-image: url("/assets/design-vectors/key/left.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -35,8 +36,8 @@
 .keyRight::before {
   content: '';
   position: absolute;
-  inset: 0 -5px 0 auto;
-  width: 25px;
+  inset: 0 -50px 0 auto;
+  width: 75px;
   background-image: url("/assets/design-vectors/key/right.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -46,7 +47,7 @@
   margin: 0;
   padding: 0.5rem;
   background-image: url("/assets/design-vectors/key/center.svg");
-  background-size: auto 3.6rem;
+  background-size: auto 5.1rem;
   color: #734448;
   overflow: hidden;
 }
@@ -78,8 +79,9 @@
 }
 
 .content {
+  padding: 0 2rem 0 2rem;
   text-align: center;
-  font-size: 28px;
+  font-size: 48px;
   font-weight: 400;
   color: inherit;
   white-space: nowrap;
