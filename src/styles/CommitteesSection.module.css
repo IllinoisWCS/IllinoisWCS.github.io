@@ -10,18 +10,6 @@
     width: 50%;
 }
 
-.nameLeft {
-    text-decoration: #21636C underline;
-    padding-bottom: 15px;
-    text-align: left;
-}
-
-.nameRight {
-    text-decoration: #21636C underline;
-    padding-bottom: 15px;
-    text-align: right;
-}
-
 .descriptionLeft {
     font-size: 16px;
     font-weight: 400;
@@ -36,6 +24,20 @@
     color: #21636C;
     width: 50%;
     padding-left: 15px;
+}
+
+.nameLeft {
+    text-decoration: #21636C underline;
+    padding-bottom: 15px;
+    padding-top: 2rem;
+    text-align: left;
+}
+
+.nameRight {
+    text-decoration: #21636C underline;
+    padding-bottom: 15px;
+    padding-top: 2rem;
+    text-align: right;
 }
 
 .officersLeft {
