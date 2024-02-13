@@ -23,10 +23,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
   gap: 0.25rem;
+  margin: 1rem;
   min-width: fit-content;
-  max-width: 14rem;
+  aspect-ratio: 1.5;
   color: #21636c;
 }
 
@@ -34,6 +34,7 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;
   position: relative;
+  max-width: 200px;
 }
 
 .eventButton p {
