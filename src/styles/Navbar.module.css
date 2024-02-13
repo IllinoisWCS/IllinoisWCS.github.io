@@ -1,0 +1,18 @@
+.container {
+  background-image: linear-gradient(
+    rgba(255, 143, 205, 1),
+    rgba(253, 176, 218, 1)
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 75px 15px 25px;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4rem;
+}
