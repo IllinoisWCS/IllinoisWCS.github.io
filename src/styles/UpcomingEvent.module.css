@@ -13,15 +13,24 @@
   margin: 0;
 }
 
-.container h3 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #21636C;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+.wrapper {
+  cursor: auto;
+}
+
+.wrapperCanClick {
+  cursor: pointer;
+  position: relative;
+}
+
+.wrapperCanClick::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url("/assets/design-vectors/pointer.svg");
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
 }
 
 .dateTime {
@@ -32,7 +41,6 @@
 }
 
 .dateTime p {
-  font-size: 16px;
   font-weight: 400;
-  color: #21636C;
+  color: #21636c;
 }

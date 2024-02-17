@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  gap: 4rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-top: 2rem;
+  }
+}
+
+.phoneContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 4rem;
+  position: relative;
+  background-image: url("/assets/design-vectors/grid.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1160px) {
+  .phoneContainer {
+    display: none;
+  }
+}
+
+.textContainer {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
