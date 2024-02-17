@@ -1,4 +1,5 @@
 import CommitteesSection from "@/components/CommitteesSection";
+import styles from "@/styles/Committees.module.css";
 
 const values = {"Infrastructure": ["Welcome to WCS Infrastructure! We are responsible for the design, development, and deployment of the WCS website, as well as its ongoing maintenance. We work closely with other committees and members to ensure that the website is up-to-date and provides information about the club's events, activities, and resources. We play a key role in advancing the mission of WCS by providing a centralized hub for members and promoting the club to the broader community.", 
                                   "Anushri Mittal, Neha Vardhaman", "assets/img/members/techteam.jpg"], 
@@ -15,7 +16,7 @@ const values = {"Infrastructure": ["Welcome to WCS Infrastructure! We are respon
               };
 export default function Committees({children}) {
   return (
-     <div>
+     <div className={`${styles.main}`}>
         <h1 style={{textAlign: "center"}}>Our Committees</h1>
         <CommitteesSection isLeft={true} isRight={false} name="Infrastructure" description={values["Infrastructure"][0]} officers={values["Infrastructure"][1]} color="#FB79C3" bColor="#FFCEE7" img={values["Infrastructure"][2]}></CommitteesSection>
         <CommitteesSection isLeft={false} isRight={true} name="Corporate" description={values["Corporate"][0]} officers={values["Corporate"][1]} img={values["Corporate"][2]}></CommitteesSection>

@@ -9,23 +9,28 @@ export default function CommitteesSection({isLeft, isRight, name, description, o
                     <h2 className={`${styles.nameLeft}`}>{name}</h2> 
                     <div className={`${styles.content}`}>
                         <ComputerWindow className={`${styles.window}`} topbarColor={color}>
-                            <img src={img}></img>
+                            <img className={`${styles.windowImage}`} src={img}></img>
                         </ComputerWindow>
-                        <p className={`${styles.descriptionRight}`}>{description}</p>
+                        <div className={`${styles.description}`}>
+                            <p className={`${styles.descriptionRight}`}>{description}</p>
+                            <p className={`${styles.officersRight}`} style={{backgroundColor: bColor}}>{officers}</p>
+                        </div>
+                        
                     </div>
-                    <p className={`${styles.officersRight}`} style={{backgroundColor: bColor}}>{officers}</p>
                 </>
             }
             {isRight && 
                 <>
                     <h2 className={`${styles.nameRight}`}>{name}</h2>
                     <div className={`${styles.content}`}>
-                        <p className={`${styles.descriptionLeft}`}>{description}</p>
+                        <div className={`${styles.description}`}>
+                            <p className={`${styles.descriptionLeft}`}>{description}</p>
+                            <p className={`${styles.officersLeft}`} style={{backgroundColor: bColor}}>{officers}</p>
+                        </div>
                         <ComputerWindow className={`${styles.window}`} topbarColor={color}>
-                            <img src={img}></img>
+                            <img className={`${styles.windowImage}`} src={img}></img>
                         </ComputerWindow>
                     </div>
-                    <p className={`${styles.officersLeft}`} style={{backgroundColor: bColor}}>{officers}</p>
                 </>
             }
         </div>

@@ -4,26 +4,26 @@
 
 .content {
     display: flex;
+    width: 100%;
 }
 
-.window {
+.description {
     width: 50%;
+    flex: 1;
 }
 
 .descriptionLeft {
     font-size: 16px;
     font-weight: 400;
     color: #21636C;
-    width: 50%;
-    padding-right: 15px;
+    padding-right: 5%;
 }
 
 .descriptionRight {
     font-size: 16px;
     font-weight: 400;
     color: #21636C;
-    width: 50%;
-    padding-left: 15px;
+    padding-left: 5%;
 }
 
 .nameLeft {
@@ -48,6 +48,7 @@
     text-align: center;
     float: left;
     color: #21636C;
+    margin-top: 5%;
 }
 
 .officersRight {
@@ -58,4 +59,13 @@
     text-align: center;
     color: #21636C;
     float: right;
+    margin-top: 5%;
+}
+
+.window {
+    flex: 1;
+}
+
+.windowImage {
+    width: 100%;
 }
