@@ -1,0 +1,69 @@
+.container {
+  width: 100svw;
+  height: 100svh;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(10, 10, 10, 0.6);
+}
+
+.window {
+  position: absolute;
+  top: 5svh;
+  right: 5svw;
+  width: 90svw;
+}
+
+.eventInfo {
+  padding: 1rem 5svw 1rem 5svw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-height: 85svh;
+}
+
+.eventInfo p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #21636c;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 36px;
+  font-weight: 700;
+  color: #21636c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.location {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 15;
+}
+
+.closeButton {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  color: #21636c;
+  background-color: #cbedff;
+  font-weight: 700;
+  font-size: 16px;
+}
