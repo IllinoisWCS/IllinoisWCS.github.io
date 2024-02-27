@@ -5,6 +5,7 @@
 .content {
     display: flex;
     width: 100%;
+    align-items: center;
 }
 
 .description {
@@ -14,14 +15,14 @@
 
 .descriptionLeft {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     color: #21636C;
     padding-right: 5%;
 }
 
 .descriptionRight {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     color: #21636C;
     padding-left: 5%;
 }
@@ -42,22 +43,18 @@
 
 .officersLeft {
     width: fit-content;
-    font-size: 16px;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 0.5rem;
     text-align: center;
     float: left;
-    color: #21636C;
     margin-top: 5%;
 }
 
 .officersRight {
     width: fit-content;
-    font-size: 16px;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 0.5rem;
     text-align: center;
-    color: #21636C;
     float: right;
     margin-top: 5%;
 }
