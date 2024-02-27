@@ -1,0 +1,358 @@
+[
+    { "week1": [
+         {
+            "heading": "Monday",
+            "rows": [
+                {
+                    "time": "2:00 - 2:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "2:30 - 3:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:00 - 3:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:30 - 4:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:00 - 4:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:30 - 5:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                }
+            ]
+        },
+        {
+            "heading": "Tuesday",
+            "rows": [
+                {
+                    "time": "2:00 - 2:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "2:30 - 3:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:00 - 3:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:30 - 4:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:00 - 4:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:30 - 5:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                }
+            ]
+        },
+        {
+            "heading": "Wednesday",
+            "rows": [
+                {
+                    "time": "2:00 - 2:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "2:30 - 3:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:00 - 3:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:30 - 4:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:00 - 4:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:30 - 5:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                }
+            ]
+        },
+        {
+            "heading": "Thursday",
+            "rows": [
+                {
+                    "time": "2:00 - 2:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "2:30 - 3:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:00 - 3:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:30 - 4:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:00 - 4:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:30 - 5:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                }
+            ]
+        },
+        {
+            "heading": "Friday",
+            "rows": [
+                {
+                    "time": "2:00 - 2:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "2:30 - 3:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:00 - 3:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:30 - 4:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:00 - 4:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:30 - 5:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                }
+            ]
+        } 
+    ] },
+    
+    { "week2": [
+        {
+            "heading": "Monday",
+            "rows": [
+                {
+                    "time": "2:00 - 2:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "2:30 - 3:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:00 - 3:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:30 - 4:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:00 - 4:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:30 - 5:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                }
+            ]
+        },
+        {
+            "heading": "Tuesday",
+            "rows": [
+                {
+                    "time": "2:00 - 2:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "2:30 - 3:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:00 - 3:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:30 - 4:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:00 - 4:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:30 - 5:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                }
+            ]
+        },
+        {
+            "heading": "Wednesday",
+            "rows": [
+                {
+                    "time": "2:00 - 2:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "2:30 - 3:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:00 - 3:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:30 - 4:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:00 - 4:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:30 - 5:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                }
+            ]
+        },
+        {
+            "heading": "Thursday",
+            "rows": [
+                {
+                    "time": "2:00 - 2:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "2:30 - 3:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:00 - 3:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:30 - 4:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:00 - 4:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:30 - 5:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                }
+            ]
+        },
+        {
+            "heading": "Friday",
+            "rows": [
+                {
+                    "time": "2:00 - 2:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "2:30 - 3:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:00 - 3:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "3:30 - 4:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:00 - 4:30", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                },
+                {
+                    "time": "4:30 - 5:00", 
+                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
+                    "committees": ["Elaina Xiao"]
+                }
+            ]
+        } 
+   ]
+}
+]

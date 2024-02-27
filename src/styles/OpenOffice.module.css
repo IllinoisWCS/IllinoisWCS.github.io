@@ -1,0 +1,100 @@
+.th {
+  border-radius: 20px;
+  border: 3px solid white;
+  padding: 10%;
+  text-align: center;
+  position: relative;
+}
+
+.tr {
+  display: table-row;
+  border-radius: 20px;
+  border: 3px solid white;
+  padding: 10%;
+  text-align: center;
+  position: relative;
+}
+
+
+.td {
+  display: table-cell;
+  border-radius: 20px;
+  border: 3px solid white;
+  padding: 10%;
+  text-align: center;
+  position: relative;
+  height: 130px;
+}
+
+.times {
+  padding: 4%;
+  background-color: #C6F6F8;
+}
+
+.table {
+  display: table;
+}
+
+.tableBody {
+  display: table-row-group;
+}
+
+.openOfficeDay {
+  /* background-color: #fbd5de; */
+  padding: 1%;
+  
+}
+
+.openOfficeCellContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.openOfficeCell {
+  text-align: center;
+  background-color: #fcf7e6;
+}
+
+.openOfficeHighlight {
+  background-color: #faddc8;
+  border-radius: 20%;
+}
+
+#openOfficeSpace {
+  width: 10%;
+}
+
+#week-indication {
+  margin: 5% auto;
+  width: 80%;
+  font-size: 16px;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+#openoffice {
+  padding: 5% 5%;
+  display: block;
+}
+
+#open-office-width {
+  width: 100%;
+  overflow-x: auto;
+}
+
+
+/* styles.css file */
+
+.nav {
+  font-family: "Mallanna", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.tabs-left>.nav-tabs {
+  border-bottom: 0;
+}
