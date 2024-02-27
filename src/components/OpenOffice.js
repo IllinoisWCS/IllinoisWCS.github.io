@@ -15,10 +15,6 @@ export default function OpenOffice() {
       week_num = 1;
     }
 
-
-
-    // console.log(data[0]["week1"][0]["rows"][0]["time"]);
-
     let nums = [0, 1, 2, 3, 4, 5];
 
   return (
@@ -28,8 +24,7 @@ export default function OpenOffice() {
           <table>
               <thead>
                 <tr className="tr">
-                  <th id={`${styles.openOfficeSpace}`}> </th>
-                  {console.log(data[week_num])}
+                  <th id={`${styles.openOfficeSpace} ${styles.th}`}> </th>
                   {
                     data[week_num][week].map(({heading, rows}) => {
                       return <th className={`${styles.openOfficeDay} ${styles.th}`}>{heading}</th>;
@@ -47,22 +42,22 @@ export default function OpenOffice() {
                     let row_data = data[week_num][week][0]["rows"]
                     return <>
                       <tr className={`${styles.tr}`}>
-                        <td className={`${styles.td} ${styles.times}`}>
+                        <td className={`${styles.td} ${styles.openOfficeTimes}`}>
                             <div className={`${styles.openOfficeCellContainer}`}>{data[week_num][week][0]["rows"][x]["time"]}</div>
 
                         </td>
 
                         {data[week_num][week].map(({heading, rows}) => {
                           return <>
-                            <td className={`${styles.openOfficeCell}`}>
+                            <td className={`${styles.openOfficeCell} ${styles.td}`}>
                               <div className={`${styles.openOfficeCellContainer}`}>
                                 {/* returns officers */}
                                 {rows[x]["officers"].map((name) => {
-                                  return <div><span className={`${styles.openOfficeHighlight}`}>{name}</span></div>
+                                  return <div><span className={`${styles.openOfficeHighlight} ${styles.openOfficeName}`}>{name}</span></div>
                                 })}
                                 {/* returns committees */}
                                 {rows[x]["committees"].map((name) => {
-                                  return <div><span>{name}</span></div>
+                                  return <div><span className={`${styles.openOfficeName}`}>{name}</span></div>
                                 })}
                               </div>
                             </td>
