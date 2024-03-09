@@ -14,24 +14,24 @@
                     "committees": ["Elaina Xiao"]
                 },
                 {
-                    "time": "3:00 - 3:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "time": "3:00-3:30", 
+                    "officers": ["Kavya Puranam"],
+                    "committees": ["Sami Duby", "Jacob Edley", "Aditi Kumar"]
                 },
                 {
-                    "time": "3:30 - 4:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "time": "3:30-4:00", 
+                    "officers": ["Kavya Puranam", "Anushri Mittal"],
+                    "committees": ["Jacob Edley"]
                 },
                 {
                     "time": "4:00 - 4:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Sailaja Nallacheruvu", "Riya Jain", "Divya Koya"],
+                    "committees": ["Saloni Vaishnav"]
                 },
                 {
                     "time": "4:30 - 5:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Sailaja Nallacheruvu", "Riya Jain", "Divya Koya"],
+                    "committees": []
                 }
             ]
         },
@@ -40,33 +40,33 @@
             "rows": [
                 {
                     "time": "2:00 - 2:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Ananya Rajagopal", "Garima Sharma"],
+                    "committees": ["Grace Ren", "Brillina Wang"]
                 },
                 {
                     "time": "2:30 - 3:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Ananya Rajagopal", "Shreya Deshpande", "Kalika Raje"],
+                    "committees": ["Shagun Khare", "Grace Ren", "Brillina Wang"]
                 },
                 {
                     "time": "3:00 - 3:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Riya Jain", "Shreya Deshpande", "Kalika Raje"],
+                    "committees": ["Shagun Khare", "Anagha Shenoy"]
                 },
                 {
                     "time": "3:30 - 4:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Riya Jain", "Shreya Vinjamuri"],
+                    "committees": ["Anagha Shenoy"]
                 },
                 {
                     "time": "4:00 - 4:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Shreya Vinjamuri", "Jillian Nylund"],
+                    "committees": ["Annapoorna Narayan", "Karen Gao", "Sarena Yang"]
                 },
                 {
                     "time": "4:30 - 5:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Shreya Vinjamuri", "Jillian Nylund"],
+                    "committees": ["Annapoorna Narayan", "Karen Gao", "Sarena Yang"]
                 }
             ]
         },
@@ -75,33 +75,33 @@
             "rows": [
                 {
                     "time": "2:00 - 2:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Jillian Nylund"],
+                    "committees": ["Navya Ahuja"]
                 },
                 {
                     "time": "2:30 - 3:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Jillian Nylund", "Sailaja Nallacheruvu"],
+                    "committees": ["Navya Ahuja"]
                 },
                 {
                     "time": "3:00 - 3:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Sailaja Nallacheruvu"],
+                    "committees": ["Shriya Dave", "Anisha Nagaraj", "Tia Kashyap"]
                 },
                 {
                     "time": "3:30 - 4:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Akshata Tiwari", "Shreya Deshpande", "Anushri Mittal"],
+                    "committees": ["Shriya Dave", "Anisha Nagaraj", "Tia Kashyap"]
                 },
                 {
                     "time": "4:00 - 4:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Shreya Deshpande", "Kalika Raje", "Divya Koya"],
+                    "committees": ["Emma Maxwell", "Simone Schwaighart", "Hetvi Patel"]
                 },
                 {
                     "time": "4:30 - 5:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Kalika Raje", "Shreya Vinjamuri", "Divya Koya"],
+                    "committees": ["Emma Maxwell", "Simone Schwaighart", "Hetvi Patel"]
                 }
             ]
         },
@@ -110,33 +110,33 @@
             "rows": [
                 {
                     "time": "2:00 - 2:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Ananya Rajagopal", "Garima Sharma", "Anushri Mittal"],
+                    "committees": ["Madhumita Narayan"]
                 },
                 {
                     "time": "2:30 - 3:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Ananya Rajagopal", "Garima Sharma", "Anushri Mittal"],
+                    "committees": ["Madhumita Narayan", "Srushti Nerkar"]
                 },
                 {
                     "time": "3:00 - 3:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Garima Sharma"],
+                    "committees": ["Mahima Agrawal", "Srushti Nerkar"]
                 },
                 {
                     "time": "3:30 - 4:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Akshata Tiwari"],
+                    "committees": ["Prisha Singh", "Aditi Prasad", "Mahima Agrawal"]
                 },
                 {
                     "time": "4:00 - 4:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Akshata Tiwari"],
+                    "committees": ["Prisha Singh", "Aditi Prasad", "Thea Surya"]
                 },
                 {
                     "time": "4:30 - 5:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Akshata Tiwari"],
+                    "committees": []
                 }
             ]
         },
@@ -145,33 +145,33 @@
             "rows": [
                 {
                     "time": "2:00 - 2:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Neha Vardhaman", "Akriti Arora", "Twinkle Yeruva"],
+                    "committees": ["Helena Ilic"]
                 },
                 {
                     "time": "2:30 - 3:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Neha Vardhaman", "Akriti Arora", "Twinkle Yeruva"],
+                    "committees": ["Michelle Sun", "Sanjana Settipalli", "Helena Ilic"]
                 },
                 {
                     "time": "3:00 - 3:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Aarthi Balaji", "Akriti Arora", "Twinkle Yeruva"],
+                    "committees": ["Michelle Sun", "Ashika Koripelly", "Sanjana Settipalli"]
                 },
                 {
                     "time": "3:30 - 4:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Aarthi Balaji", "Akriti Arora", "Twinkle Yeruva"],
+                    "committees": ["Maya Ashok", "Ashika Koripelly", "Prisha Thogulva"]
                 },
                 {
                     "time": "4:00 - 4:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Aarthi Balaji"],
+                    "committees": ["Maya Ashok", "Prisha Thogulva"]
                 },
                 {
                     "time": "4:30 - 5:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Aarthi Balaji"],
+                    "committees": []
                 }
             ]
         } 
@@ -184,32 +184,32 @@
                 {
                     "time": "2:00 - 2:30", 
                     "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "committees": []
                 },
                 {
                     "time": "2:30 - 3:00", 
                     "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "committees": []
                 },
                 {
-                    "time": "3:00 - 3:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "time": "3:00-3:30", 
+                    "officers": ["Kavya Puranam"],
+                    "committees": ["Sami Duby", "Aditi Kumar", "Kay Rivera"]
                 },
                 {
-                    "time": "3:30 - 4:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "time": "3:30-4:00", 
+                    "officers": ["Kavya Puranam", "Anushri Mittal"],
+                    "committees": ["Kay Rivera"]
                 },
                 {
                     "time": "4:00 - 4:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Sailaja Nallacheruvu", "Riya Jain", "Divya Koya"],
+                    "committees": ["Saloni Vaishnav"]
                 },
                 {
                     "time": "4:30 - 5:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Sailaja Nallacheruvu", "Riya Jain", "Divya Koya"],
+                    "committees": []
                 }
             ]
         },
@@ -218,33 +218,33 @@
             "rows": [
                 {
                     "time": "2:00 - 2:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Ananya Rajagopal", "Garima Sharma"],
+                    "committees": []
                 },
                 {
                     "time": "2:30 - 3:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Ananya Rajagopal", "Shreya Deshpande", "Kalika Raje"],
+                    "committees": []
                 },
                 {
                     "time": "3:00 - 3:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Riya Jain", "Shreya Deshpande", "Kalika Raje"],
+                    "committees": ["Abigail Gillham", "Kathryn Lee"]
                 },
                 {
                     "time": "3:30 - 4:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Riya Jain", "Shreya Vinjamuri"],
+                    "committees": ["Abigail Gillham", "Kathryn Lee"]
                 },
                 {
                     "time": "4:00 - 4:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Shreya Vinjamuri", "Jillian Nylund"],
+                    "committees": ["Anshi Mathur", "Julia Koite", "Maya Ajit"]
                 },
                 {
                     "time": "4:30 - 5:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Shreya Vinjamuri", "Jillian Nylund"],
+                    "committees": ["Anshi Mathur", "Julia Koite", "Maya Ajit"]
                 }
             ]
         },
@@ -253,33 +253,33 @@
             "rows": [
                 {
                     "time": "2:00 - 2:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Jillian Nylund"],
+                    "committees": []
                 },
                 {
                     "time": "2:30 - 3:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Jillian Nylund", "Sailaja Nallacheruvu"],
+                    "committees": []
                 },
                 {
                     "time": "3:00 - 3:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Sailaja Nallacheruvu"],
+                    "committees": ["Jade Huang", "Shyamala Vasireddy", "Kashvi Panjolia"]
                 },
                 {
                     "time": "3:30 - 4:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Akshata Tiwari", "Shreya Deshpande", "Anushri Mittal"],
+                    "committees": ["Jade Huang", "Shyamala Vasireddy", "Kashvi Panjolia"]
                 },
                 {
                     "time": "4:00 - 4:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Shreya Deshpande", "Kalika Raje", "Divya Koya"],
+                    "committees": ["Shreya Jangada"]
                 },
                 {
                     "time": "4:30 - 5:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Kalika Raje", "Shreya Vinjamuri", "Divya Koya"],
+                    "committees": ["Shreya Jangada"]
                 }
             ]
         },
@@ -288,33 +288,33 @@
             "rows": [
                 {
                     "time": "2:00 - 2:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Ananya Rajagopal", "Garima Sharma", "Anushri Mittal"],
+                    "committees": ["Aditi Shrivastava"]
                 },
                 {
                     "time": "2:30 - 3:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Ananya Rajagopal", "Garima Sharma", "Anushri Mittal"],
+                    "committees": ["Aditi Shrivastava"]
                 },
                 {
                     "time": "3:00 - 3:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Garima Sharma"],
+                    "committees": []
                 },
                 {
                     "time": "3:30 - 4:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Akshata Tiwari"],
+                    "committees": []
                 },
                 {
                     "time": "4:00 - 4:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Akshata Tiwari"],
+                    "committees": ["Firmiana Wang", "Thea Surya", "Shalini Sivakumar"]
                 },
                 {
                     "time": "4:30 - 5:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Akshata Tiwari"],
+                    "committees": ["Firmiana Wang", "Thea Surya", "Shalini Sivakumar"]
                 }
             ]
         },
@@ -323,33 +323,33 @@
             "rows": [
                 {
                     "time": "2:00 - 2:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Neha Vardhaman", "Akriti Arora", "Twinkle Yeruva"],
+                    "committees": []
                 },
                 {
                     "time": "2:30 - 3:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Neha Vardhaman", "Akriti Arora", "Twinkle Yeruva"],
+                    "committees": []
                 },
                 {
                     "time": "3:00 - 3:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Aarthi Balaji", "Akriti Arora", "Twinkle Yeruva"],
+                    "committees": ["Nancy Zhang"]
                 },
                 {
                     "time": "3:30 - 4:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Aarthi Balaji", "Akriti Arora", "Twinkle Yeruva"],
+                    "committees": ["Nancy Zhang"]
                 },
                 {
                     "time": "4:00 - 4:30", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Aarthi Balaji"],
+                    "committees": []
                 },
                 {
                     "time": "4:30 - 5:00", 
-                    "officers": ["Kavya Puranam", "Neha Vardhaman"],
-                    "committees": ["Elaina Xiao"]
+                    "officers": ["Aarthi Balaji"],
+                    "committees": []
                 }
             ]
         } 
