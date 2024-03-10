@@ -1,0 +1,16 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main {
+    padding: 3rem 6rem;
+    text-align: center;
+}
+
+
+.officers {
+    text-align: center;
+    padding-bottom: 2rem;
+}
