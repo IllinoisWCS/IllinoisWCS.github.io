@@ -4,6 +4,11 @@
     justify-content: center;
 }
 
+.description {
+    color: #21636C;
+    padding-bottom: 1rem;
+}
+
 .main {
     padding: 3rem 6rem;
     text-align: center;
@@ -12,5 +17,4 @@
 
 .officers {
     text-align: center;
-    padding-bottom: 2rem;
 }
