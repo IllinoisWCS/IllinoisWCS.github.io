@@ -33,11 +33,16 @@
   pointer-events: none;
 }
 
+.title {
+  max-width: 250px;
+}
+
 .dateTime {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 200px;
 }
 
 .dateTime p {
