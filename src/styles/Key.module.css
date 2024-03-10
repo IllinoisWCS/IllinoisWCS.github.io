@@ -1,0 +1,92 @@
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-image: url("/assets/design-vectors/grid.svg");
+  background-size: 32rem;
+  width: fit-content;
+  height: 8rem;
+}
+
+.keyLeft {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.keyRight {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.keyLeft::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 75px;
+  background-image: url("/assets/design-vectors/key/left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.keyRight::before {
+  content: '';
+  position: absolute;
+  inset: 0 -50px 0 auto;
+  width: 75px;
+  background-image: url("/assets/design-vectors/key/right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.keyBody {
+  margin: 0;
+  padding: 0.5rem;
+  background-image: url("/assets/design-vectors/key/center.svg");
+  background-size: auto 5.1rem;
+  color: #734448;
+  overflow: hidden;
+}
+
+.keyLeft:hover::before {
+  background-image: url("/assets/design-vectors/bold_key/left.svg");
+}
+
+.keyLeft:hover .keyRight::before {
+  background-image: url("/assets/design-vectors/bold_key/right.svg");
+}
+
+.keyLeft:hover .keyBody {
+  background-image: url("/assets/design-vectors/bold_key/center.svg");
+  color: #FFE3F2;
+}
+
+.keyLeft:active::before {
+  background-image: url("/assets/design-vectors/pressed_key/left.svg");
+}
+
+.keyLeft:active .keyRight::before {
+  background-image: url("/assets/design-vectors/pressed_key/right.svg");
+}
+
+.keyLeft:active .keyBody {
+  background-image: url("/assets/design-vectors/pressed_key/center.svg");
+  color: #FFE3F2;
+}
+
+.content {
+  padding: 0 2rem 0 2rem;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.keyLeft:active .content {
+  transform: translate(8px, 3px);
+}
