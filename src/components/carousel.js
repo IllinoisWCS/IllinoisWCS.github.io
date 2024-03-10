@@ -19,7 +19,36 @@ export default function Carousel() {
         <input className={styles.radio} type="radio" name="slider" id="item-2" ></input>
         <input className={styles.radio} type="radio" name="slider" id="item-3" ></input>
         <div class="cards" className={styles.cards}>
-            {/* <div className={styles.carousel}> */}
+            <button className={styles.rightButton} onClick={(e) => {
+                e.preventDefault();
+                if (document.getElementById("item-1").checked) {
+                    document.getElementById("item-1").checked = false;
+                    document.getElementById("item-2").checked = true;
+                } else if (document.getElementById("item-2").checked) {
+                    document.getElementById("item-2").checked = false;
+                    document.getElementById("item-3").checked = true;
+                } else {
+                    document.getElementById("item-3").checked = false;
+                    document.getElementById("item-1").checked = true;
+                }
+            }}>
+            </button>
+
+            <button className={styles.leftButton} onClick={(e) => {
+                e.preventDefault();
+                if (document.getElementById("item-1").checked) {
+                    document.getElementById("item-1").checked = false;
+                    document.getElementById("item-3").checked = true;
+                } else if (document.getElementById("item-2").checked) {
+                    document.getElementById("item-2").checked = false;
+                    document.getElementById("item-1").checked = true;
+                } else {
+                    document.getElementById("item-3").checked = false;
+                    document.getElementById("item-2").checked = true;
+                }
+            }}>
+            </button>
+
                 <div className={styles.card}>
                     <label className={styles.card} htmlFor="item-1" id="pic-1">
                             <ComputerWindow className={styles.imgstyle}>
@@ -42,19 +71,6 @@ export default function Carousel() {
                         </ComputerWindow>
                     </label>
                 </div>
-                {/*<Image style={{ height: 266, width: 400, objectFit: "cover" }} src={slideshow2}  alt="slideshow picture" />*/}
-                {/*<div className={styles.carouselBg}>
-                    <div className={styles.carouselBgItems}>
-                        <ComputerWindow >
-                            <Image style={{ height: 266, width: 400, objectFit: "cover" }} src={slideshow2}  alt="slideshow picture" />
-                        </ComputerWindow>
-
-                        <ComputerWindow >
-                            <Image style={{ height: 266, width: 500, objectFit: "cover" }} src={slideshow3}  alt="slideshow picture" />
-                        </ComputerWindow>
-                    </div>
-                </div>*/}
-            {/* </div> */}
         </div>
     </div>
 

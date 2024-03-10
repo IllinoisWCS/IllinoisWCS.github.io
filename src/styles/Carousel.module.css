@@ -45,13 +45,43 @@
   right: 0;
   margin: auto;
   transition: transform .4s ease;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .cards {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.rightButton {
+  position: fixed;
+  background-image: url(../../assets/design-vectors/rightButton.svg);
+  background-repeat: no-repeat;
+  background-size: 10vh 10vh;
+  height: 10vh;
+  width: 10vh;
+  border: none;
+  background-color: transparent;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(110deg) brightness(98%) contrast(108%);
+  z-index: 10;
+  margin-top: 25%;
+  margin-left: 45%;
+}
+
+.leftButton {
+  position: fixed;
+  background-image: url(../../assets/design-vectors/leftButton.svg);
+  background-repeat: no-repeat;
+  background-size: 10vh 10vh;
+  height: 10vh;
+  width: 10vh;
+  border: none;
+  background-color: transparent;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(110deg) brightness(98%) contrast(108%);
+  z-index: 10;
+  margin-top: 25%;
+  margin-left: -15%;
 }
 /* 
 .grid {
