@@ -1,6 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Lato:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Gloock&family=Lato:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Gloock&family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 
 :root {
   --max-width: 1100px;
@@ -91,12 +92,6 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
     background: linear-gradient(#FFB2DA, #CBEDFF);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -104,8 +99,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*padding: 30px 10px;*/
-}
 
 a {
   color: inherit;
@@ -134,17 +127,9 @@ h2 {
 
 h3 {
   font-family: "Lato" !important;
-  font-weight: 300;
-  color: black;
-  font-size: 32px;
-}
-
-
-p {
-  font-family: "Lato";
   font-weight: 700;
-  font-size: 24px;
-  color: black;
+  color: #21636c;
+  font-size: 28px; /* Adjusted to 28px */
 }
 
  /* code for carousel to work */
@@ -179,3 +164,60 @@ p {
   z-index: 1;
 }
 
+p {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 20px;
+  color: #21636c;
+}
+
+ul {
+  color: #21636c;
+}
+
+li {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 20px;
+  color: #21636c;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p,
+  li {
+    font-size: 18px;
+  }
+}
+
+/* Mobile responsive font sizes */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+  }
+}
+}

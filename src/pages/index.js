@@ -1,14 +1,19 @@
 import Head from "next/head";
-import Link from "next/link";
 import React from "react";
-import {Button} from "react-bootstrap";
+import ComputerWindow from "@/components/ComputerWindow";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
+<<<<<<< HEAD
 import ComputerWindow from "@/components/computer-window";
 import { Container } from "react-bootstrap";
 import slideshow from '../../assets/img/events/wcs google workshop.png';
 import Image from "next/image";
 import Carousel from "@/components/carousel";
+=======
+import StayInTouchSection from "@/components/StayInTouchSection";
+import UpcomingEventsSection from "@/components/UpcomingEventsSection";
+import AboutUsSection from "@/components/AboutUsSection";
+>>>>>>> a4ae7d1e40ecd4d0d2624e7d4a9e154fb65f5a53
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -21,13 +26,31 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className={`${styles.main} ${inter.className}`}>
+<<<<<<< HEAD
         <Container>
           <h1>UIUC Women in Computer Science</h1>
           <Carousel />
         </Container>
 
 
+=======
+        <h1>Illinois Women in Computer Science</h1>
+        <div className={`${styles.windowContainer}`}>
+          <div className={`${styles.windowGrid}`}>
+            <ComputerWindow>
+              <img
+                className={`${styles.windowImage}`}
+                src="assets/img/members/committees23-24.jpg"
+              ></img>
+            </ComputerWindow>
+          </div>
+        </div>
+        <AboutUsSection />
+        <UpcomingEventsSection />
+        <StayInTouchSection />
+>>>>>>> a4ae7d1e40ecd4d0d2624e7d4a9e154fb65f5a53
       </main>
     </>
   );
