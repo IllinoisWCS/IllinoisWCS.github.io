@@ -1,7 +1,8 @@
 .container {
   width: 100%;
   gap: 4rem;
-  margin-top: 4rem;
+  /*margin-top: 4rem;*/
+  margin-top: 30rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -26,6 +27,54 @@
   background-size: cover;
 }
 
+
+/* .phoneContainer:hover {
+  animation-name: shine;
+  animation-duration: 500ms;
+}
+
+@keyframes shine {
+  0% {
+    background: linear-gradient(
+      30deg, 
+      hsl(260, 85%, 95%) 0%, 
+      hsl(260, 90%, 40%) 25%
+    );
+  }
+
+  25% {
+    background: linear-gradient(
+      30deg, 
+      hsl(260, 90%, 40%) 0%, 
+      hsl(260, 85%, 95%) 25%, 
+      hsl(260, 90%, 40%) 50%);
+  }
+
+  50% {
+    background: linear-gradient(
+      30deg,
+      hsl(260, 90%, 40%) 0%, 
+      hsl(260, 85%, 95%) 50%, 
+      hsl(260, 90%, 40%) 75%); 
+  }
+
+  75% {
+    background: linear-gradient(
+      30deg, 
+      hsl(260, 90%, 40%) 0%, 
+      hsl(260, 85%, 95%) 75%, 
+      hsl(260, 90%, 40%) 100%); 
+  }
+
+  100% {
+    background: linear-gradient(
+      30deg, 
+      hsl(260, 90%, 40%) 0%, 
+      hsl(260, 85%, 95%) 100%); 
+  }
+} */
+
+
 @media only screen and (max-width: 1160px) {
   .phoneContainer {
     display: none;
@@ -36,3 +85,5 @@
   margin-left: 2rem;
   margin-top: 2rem;
 }
+
+

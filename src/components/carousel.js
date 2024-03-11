@@ -5,7 +5,8 @@ import slideshow2 from "../../assets/img/events/wcs bits and bytes.png"
 import slideshow3 from "../../assets/img/events/wcs google workshop.png"
 
 import grid from "../../assets/design-vectors/grid.svg"
-import ComputerWindow from "@/components/computer-window";
+/*import ComputerWindow from "@/components/computer-window";*/
+import ComputerWindow from "./ComputerWindow";
 
 export default function Carousel() {
   return (
