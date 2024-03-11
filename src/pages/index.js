@@ -1,8 +1,12 @@
 import Head from "next/head";
 import React from "react";
-import ComputerWindow from "@/components/ComputerWindow";
+/*import ComputerWindow from "@/components/ComputerWindow";*/
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
+/*import { Container } from "react-bootstrap";*/
+/*import slideshow from '../../assets/img/events/wcs google workshop.png';
+import Image from "next/image"; */
+import Carousel from "@/components/carousel";
 import StayInTouchSection from "@/components/StayInTouchSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import AboutUsSection from "@/components/AboutUsSection";
@@ -21,16 +25,7 @@ export default function Home() {
 
       <main className={`${styles.main} ${inter.className}`}>
         <h1>Illinois Women in Computer Science</h1>
-        <div className={`${styles.windowContainer}`}>
-          <div className={`${styles.windowGrid}`}>
-            <ComputerWindow>
-              <img
-                className={`${styles.windowImage}`}
-                src="assets/img/members/committees23-24.jpg"
-              ></img>
-            </ComputerWindow>
-          </div>
-        </div>
+        <Carousel />
         <AboutUsSection />
         <UpcomingEventsSection />
         <StayInTouchSection />
