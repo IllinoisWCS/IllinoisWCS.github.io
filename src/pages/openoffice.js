@@ -1,6 +1,6 @@
 import styles from "@/styles/OpenOffice.module.css";
 import data from "../data/openOffice.json";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
 export default function OpenOffice() {
   const [week, setWeek] = useState("week1");
@@ -20,71 +20,60 @@ export default function OpenOffice() {
   let nums = [0, 1, 2, 3, 4, 5];
 
   return (
-    <>
+    <div className={`${styles.main}`}>
       <div className={`${styles.openOfficeHeader}`}>
-        <h2 className={`${styles.openOfficeTitle}`}>Open Office Calendar</h2>
-        {
-          week == "week1" ? (
-            // <div className={`${styles.openOfficeWeekContainer}`}>
-            <>
-              <p className={`${styles.openOfficeWeekIndication}`}>
-                {" "}
-                We&apos;re currently on Week 1{" "}
-              </p>
-              <button
-                className={`${styles.openOfficeWeekButton}`}
-                onClick={() => {
-                  setWeek("week2");
-                  setWeekNum(1);
-                }}
-              >
-                {" "}
-                Check out week 2{" "}
-              </button>
-            </>
-          ) : (
-            // </div>
-            // <div className={`${styles.openOfficeWeekContainer}`}>
-            <>
-              <p className={`${styles.openOfficeWeekIndication}`}>
-                {" "}
-                We&apos;re currently on Week 2{" "}
-              </p>
-              <button
-                className={`${styles.openOfficeWeekButton}`}
-                onClick={() => {
-                  setWeek("week1");
-                  setWeekNum(0);
-                }}
-              >
-                {" "}
-                Check out week 1{" "}
-              </button>
-            </>
-          )
-          // </div>
-        }
+        <h1>Open Office Calendar</h1>
+        {week == "week1" ? (
+          <>
+            <p>You&apos;re viewing the Week 1 schedule</p>
+            <button
+              className={`${styles.openOfficeWeekButton}`}
+              onClick={() => {
+                setWeek("week2");
+                setWeekNum(1);
+              }}
+            >
+              <p>Check out week 2</p>
+            </button>
+          </>
+        ) : (
+          <>
+            <p>You&apos;re viewing the Week 2 schedule</p>
+            <button
+              className={`${styles.openOfficeWeekButton}`}
+              onClick={() => {
+                setWeek("week1");
+                setWeekNum(0);
+              }}
+            >
+              <p>Check out week 1</p>
+            </button>
+          </>
+        )}
       </div>
 
       <div className={`${styles.tableContainer}`}>
         <table className={`${styles.table}`}>
           <thead>
             <tr className={`${styles.tr}`}>
-              <th id={`${styles.openOfficeSpace} ${styles.th}`}> </th>
-              {data[weekNum][week].map(({ heading, rows }, index) => {
+              <th
+                className={`${styles.space}`}
+                id={`${styles.openOfficeSpace} ${styles.th}`}
+              >
+                {" "}
+              </th>
+              {data[weekNum][week].map(({heading, rows}, index) => {
                 return (
                   <th
                     key={index}
                     className={`${styles.openOfficeDay} ${styles.th}`}
                   >
-                    {heading}
+                    <p>{heading}</p>
                   </th>
                 );
               })}
             </tr>
           </thead>
-
-          {/* row data */}
 
           <tbody>
             {nums.map((x) => {
@@ -94,11 +83,11 @@ export default function OpenOffice() {
                   <tr key={x} className={`${styles.tr}`}>
                     <td className={`${styles.td} ${styles.openOfficeTimes}`}>
                       <div className={`${styles.openOfficeCellContainer}`}>
-                        {data[weekNum][week][0]["rows"][x]["time"]}
+                        <p>{data[weekNum][week][0]["rows"][x]["time"]}</p>
                       </div>
                     </td>
 
-                    {data[weekNum][week].map(({ heading, rows }, index) => {
+                    {data[weekNum][week].map(({heading, rows}, index) => {
                       return (
                         <>
                           <td
@@ -114,7 +103,7 @@ export default function OpenOffice() {
                                     <span
                                       className={`${styles.openOfficeHighlight} ${styles.openOfficeName}`}
                                     >
-                                      {name}
+                                      <p>{name}</p>
                                     </span>
                                   </div>
                                 );
@@ -125,7 +114,7 @@ export default function OpenOffice() {
                                     <span
                                       className={`${styles.openOfficeName}`}
                                     >
-                                      {name}
+                                      <p>{name}</p>
                                     </span>
                                   </div>
                                 );
@@ -142,6 +131,6 @@ export default function OpenOffice() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }

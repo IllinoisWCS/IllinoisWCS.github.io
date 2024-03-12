@@ -1,9 +1,24 @@
+.main {
+  padding: 3rem 0rem 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    align-items: center;
+  }
+}
+
 .openOfficeHeader {
   display: flex;
+  text-align: center;
   align-items: center;
   align-content: center;
   flex-direction: column;
   margin: 10px;
+  gap: 1rem;
 }
 
 .openOfficeWeekIndication {
@@ -20,8 +35,7 @@
 }
 
 .tableContainer {
-  display: flex;
-  justify-content: center;
+  overflow-x: auto;
 }
 
 .th {
@@ -49,11 +63,14 @@
   /* height: 130px; */
 }
 
+.table {
+}
+
 .openOfficeTimes {
   background-color: #c6f6f8;
   font-size: small;
   height: fit-content;
-  padding: 0% 2%;
+  /* padding: 0% 2%; */
 }
 
 .openOfficeDay {
@@ -79,17 +96,18 @@
   border-radius: 20px;
 }
 
-.openOfficeHighlight {
+.openOfficeHighlight p {
   background-color: #faddc8;
   border-radius: 20%;
 }
 
-.openOfficeName {
-  font-size: small;
+.openOfficeName p {
+  font-weight: 500;
+  color: black;
+  opacity: 0.7;
+  margin: 2px;
 }
 
 #openOfficeSpace {
   width: 10%;
 }
-
-/* styles.css file */
