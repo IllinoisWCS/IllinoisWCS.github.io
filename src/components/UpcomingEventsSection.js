@@ -3,6 +3,8 @@ import EventsWindow from "@/components/EventsWindow";
 import ComputerWindow from "@/components/ComputerWindow";
 import UpcomingEvent from "@/components/UpcomingEvent";
 import styles from "@/styles/Home.module.css";
+import styles2 from "@/styles/EventDescriptionModal.module.css";
+import Link from "next/link";
 
 const UpcomingEventsSection = () => {
   const [events, setEvents] = useState([]);
@@ -52,20 +54,57 @@ const UpcomingEventsSection = () => {
     fetchEvents();
   }, []);
 
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Upcoming Events</h2>
       <div className={styles.upcomingEventSection}>
         <div className={styles.eventContainer}>
-          <EventsWindow
-            location={"Siebel CS 0211"}
-            topbarColor={"#FB79C3"}
-            buttonColor={"#FFCEE7"}
-          >
-            <p className={styles.eventText}>
-              Come to our office to chat, ask questions, or just study:
-            </p>
-          </EventsWindow>
+          <div onClick={openModal}>
+            <EventsWindow
+              location={"Siebel CS 0211"}
+              topbarColor={"#FB79C3"}
+              buttonColor={"#FFCEE7"}
+              hasDescription={true}
+            >
+              <p className={styles.eventText}>
+                Come to our office to chat, ask questions, or just study!
+              </p>
+              <p
+                className={styles.eventText}
+                style={{ textDecoration: "underline" }}
+              >
+                Click to learn more!
+              </p>
+            </EventsWindow>
+          </div>
+          {showModal && (
+            <div className={styles2.container}>
+              <ComputerWindow className={styles2.window} topbarColor="#FB79C3">
+                <div className={styles2.eventInfo}>
+                  <h3 className={styles2.title}>Open Office</h3>
+                  <Link href="/openoffice">
+                    <h3 style={{ textDecoration: "underline" }}>
+                      View the open office calendar
+                    </h3>
+                  </Link>
+                </div>
+                <button onClick={closeModal} className={styles2.closeButton}>
+                  Close
+                </button>
+              </ComputerWindow>
+            </div>
+          )}
+
           {events.length === 0 ? (
             <ComputerWindow>
               <p className={`${styles.noEvents} ${styles.eventText}`}>
