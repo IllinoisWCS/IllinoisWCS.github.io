@@ -1,29 +1,29 @@
 .container {
-    background: #FFCEE7;
-    width: 350px;
-    height: 450px;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    margin: 1rem;
+  background: #ffcee7;
+  width: 350px;
+  height: 450px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 1rem;
 }
 
 .img {
-    border: 6px solid #65C7CC;
-    border-radius: 100%;
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
+  border: 6px solid #65c7cc;
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
 }
 
 .name {
-    color: #21636C;
-    text-align: center;
+  color: #21636c;
+  text-align: center;
 }
 
 .position {
-    color: #65C7CC;
+  color: #65c7cc;
 }
