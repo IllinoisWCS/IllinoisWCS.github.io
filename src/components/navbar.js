@@ -1,28 +1,35 @@
 import React from "react";
-import { Inter } from "next/font/google";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "@/styles/Navbar.module.css";
 
 export default function WCSNavbar() {
+  const router = useRouter();
+
   return (
     <div className={styles.container}>
       <Link href="/">
         <img
           src="https://points.illinoiswcs.org/assets/logo-9d49d730.png"
           width="140"
-        ></img>
+        />
       </Link>
       <div className={styles.linksContainer}>
-        <Link href="https://points.illinoiswcs.org/">
-          <h3>points</h3>
-        </Link>
-        <Link href="/committees">
-          <h3>committees</h3>
-        </Link>
-        <Link href="/resources">
-          <h3>resources</h3>
-        </Link>
+        <NavLink href="https://points.illinoiswcs.org/" label="points" />
+        <NavLink href="/officers" label="officers" />
+        <NavLink href="/committees" label="committees" />
+        <NavLink href="/resources" label="resources" />
       </div>
     </div>
   );
+
+  function NavLink({ href, label }) {
+    const isActive = router.pathname === href;
+
+    return (
+      <Link href={href}>
+        <h3 className={`${isActive ? styles.activeLink : ""}`}>{label}</h3>
+      </Link>
+    );
+  }
 }
