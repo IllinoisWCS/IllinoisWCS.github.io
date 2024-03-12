@@ -24,7 +24,7 @@
 }
 
 .keyLeft::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   width: 75px;
@@ -34,7 +34,7 @@
 }
 
 .keyRight::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0 -50px 0 auto;
   width: 75px;
@@ -62,7 +62,7 @@
 
 .keyLeft:hover .keyBody {
   background-image: url("/assets/design-vectors/bold_key/center.svg");
-  color: #FFE3F2;
+  color: #ffe3f2;
 }
 
 .keyLeft:active::before {
@@ -75,7 +75,7 @@
 
 .keyLeft:active .keyBody {
   background-image: url("/assets/design-vectors/pressed_key/center.svg");
-  color: #FFE3F2;
+  color: #ffe3f2;
 }
 
 .content {
