@@ -138,12 +138,56 @@ h3 {
 p {
   font-family: "Lato";
   font-weight: 700;
-  font-size: 24px;
-  color: black;
+  font-size: 20px;
+  color: #21636c;
 }
-h4 {
-  color: rgb(3, 68, 68);
-  font-size: 30px;
-  font-weight: 500;
-  margin-right: 100px;
+
+ul {
+  color: #21636c;
+}
+
+li {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 20px;
+  color: #21636c;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p,
+  li {
+    font-size: 18px;
+  }
+}
+
+/* Mobile responsive font sizes */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+  }
 }
