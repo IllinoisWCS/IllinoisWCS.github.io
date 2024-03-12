@@ -16,7 +16,7 @@ export default function EventsWindow({
           {location && location.length && (
             <div
               className={styles.eventButton}
-              style={{backgroundColor: buttonColor}}
+              style={{ backgroundColor: buttonColor }}
             >
               <p>{location}</p>
             </div>
