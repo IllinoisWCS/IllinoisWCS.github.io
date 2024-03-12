@@ -13,23 +13,17 @@ td {
   padding: 10%;
   text-align: center;
   position: relative;
-  height: 130px;
+  height: 100px;
 }
 
 #open-office-heading {
-  text-align: center;
-  padding-bottom: 2rem;
   margin-top: 10%;
-
 }
 
 #open-office-subheading {
   margin: 1% auto;
   width: 80%;
   font-size: 16px;
-  @media (max-width: 768px) {
-    text-align: center;
-  }
 }
 
 .open-office-day {
@@ -37,16 +31,18 @@ td {
   width: 18%;
 }
 
-.open-office-cell-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.open-office-vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 .open-office-cell {
-  text-align: center;
   background-color: #fcf7e6;
 }
 
@@ -63,17 +59,4 @@ td {
   margin: 5% auto;
   width: 80%;
   font-size: 16px;
-  @media (max-width: 768px) {
-    text-align: center;
-  }
-}
-
-#openoffice {
-  padding: 5% 5%;
-  display: block;
-}
-
-#open-office-width {
-  width: 100%;
-  overflow-x: auto;
 }
