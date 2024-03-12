@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import EventsWindow from "./EventsWindow";
 import styles from "@/styles/UpcomingEvent.module.css";
 import EventDescriptionModal from "./EventDescriptionModal";
@@ -27,7 +27,7 @@ export default function UpcomingEvent({
       <div onClick={openModal}>
         <EventsWindow location={location} hasDescription={hasDescription}>
           <div className={styles.container}>
-            <h3>{title}</h3>
+            <h3 className={styles.title}>{title}</h3>
             <div className={styles.dateTime}>
               <p>{date}</p>
               <p>{time}</p>
@@ -36,7 +36,7 @@ export default function UpcomingEvent({
         </EventsWindow>
       </div>
       <EventDescriptionModal
-        data={{title, date, time, location, description}}
+        data={{ title, date, time, location, description }}
         isOpen={showModal}
         closeModal={closeModal}
       />

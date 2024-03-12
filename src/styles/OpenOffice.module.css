@@ -39,19 +39,18 @@
   position: relative;
 }
 
-
 .td {
   border-radius: 20px;
   border: 3px solid transparent;
   width: fit-content;
   padding: 2% 5px;
   text-align: center;
-  position: relative;  
+  position: relative;
   /* height: 130px; */
 }
 
 .openOfficeTimes {
-  background-color: #C6F6F8;
+  background-color: #c6f6f8;
   font-size: small;
   height: fit-content;
   padding: 0% 2%;
