@@ -1,8 +1,12 @@
 import styles from "@/styles/Key.module.css";
 
-export default function Key({children, url}) {
-  const link = url ? () => { window.open(url, "_blank").focus() } : null
-  
+export default function Key({ children, url }) {
+  const link = url
+    ? () => {
+        window.open(url, "_blank").focus();
+      }
+    : null;
+
   return (
     <div className={styles.grid}>
       <div onClick={link} className={styles.keyLeft}>

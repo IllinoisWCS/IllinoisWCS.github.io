@@ -56,7 +56,9 @@
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+  transition:
+    background 200ms,
+    border 200ms;
 }
 
 .card span {
@@ -197,6 +199,7 @@
 .eventText {
   text-align: center;
   max-width: 250px;
+  margin-bottom: 1rem;
 }
 
 .noEvents {

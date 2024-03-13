@@ -1,0 +1,19 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.description {
+  color: #21636c;
+  padding-bottom: 1rem;
+}
+
+.main {
+  padding: 3rem 6rem;
+  text-align: center;
+}
+
+.officers {
+  text-align: center;
+}

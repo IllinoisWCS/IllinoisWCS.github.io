@@ -9,6 +9,12 @@
   height: 8rem;
 }
 
+@media only screen and (max-width: 786px) {
+  .grid {
+    height: 6rem;
+  }
+}
+
 .keyLeft {
   position: relative;
   background: none;
@@ -24,7 +30,7 @@
 }
 
 .keyLeft::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   width: 75px;
@@ -34,7 +40,7 @@
 }
 
 .keyRight::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0 -50px 0 auto;
   width: 75px;
@@ -52,6 +58,12 @@
   overflow: hidden;
 }
 
+@media only screen and (max-width: 786px) {
+  .keyBody {
+    background-size: auto 3.85rem;
+  }
+}
+
 .keyLeft:hover::before {
   background-image: url("/assets/design-vectors/bold_key/left.svg");
 }
@@ -62,7 +74,7 @@
 
 .keyLeft:hover .keyBody {
   background-image: url("/assets/design-vectors/bold_key/center.svg");
-  color: #FFE3F2;
+  color: #ffe3f2;
 }
 
 .keyLeft:active::before {
@@ -75,7 +87,7 @@
 
 .keyLeft:active .keyBody {
   background-image: url("/assets/design-vectors/pressed_key/center.svg");
-  color: #FFE3F2;
+  color: #ffe3f2;
 }
 
 .content {
@@ -85,6 +97,13 @@
   font-weight: 400;
   color: inherit;
   white-space: nowrap;
+}
+
+@media only screen and (max-width: 786px) {
+  .content {
+    font-size: 31px;
+    padding: 0 1rem 0 1rem;
+  }
 }
 
 .keyLeft:active .content {
