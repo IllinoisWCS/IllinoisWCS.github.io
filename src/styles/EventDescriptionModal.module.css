@@ -9,9 +9,11 @@
 
 .window {
   position: absolute;
-  top: 5svh;
-  right: 5svw;
-  width: 90svw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90svw;
+  width: max-content;
 }
 
 .eventInfo {
@@ -25,9 +27,7 @@
 }
 
 .eventInfo p {
-  font-size: 20px;
-  font-weight: 400;
-  color: #21636c;
+  /* font-weight: 400; */
 }
 
 .title {
@@ -35,14 +35,10 @@
   font-size: 36px;
   font-weight: 700;
   color: #21636c;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
 
 .location {
+  margin-bottom: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -51,6 +47,7 @@
 }
 
 .description {
+  font-weight: 400;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -78,7 +75,7 @@
   font-size: 16px;
 }
 
-.closeButton {
+.closeButton2 {
   width: 100%;
   height: 3rem;
   border: none;

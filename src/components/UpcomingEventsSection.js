@@ -5,6 +5,7 @@ import UpcomingEvent from "@/components/UpcomingEvent";
 import styles from "@/styles/Home.module.css";
 import styles2 from "@/styles/EventDescriptionModal.module.css";
 import Link from "next/link";
+import PhoneComponent from "./PhoneComponent";
 
 const UpcomingEventsSection = () => {
   const [events, setEvents] = useState([]);
@@ -92,13 +93,42 @@ const UpcomingEventsSection = () => {
               <ComputerWindow className={styles2.window} topbarColor="#FB79C3">
                 <div className={styles2.eventInfo}>
                   <h3 className={styles2.title}>Open Office</h3>
-                  <Link href="/openoffice">
-                    <h3 style={{ textDecoration: "underline" }}>
-                      View the open office calendar
-                    </h3>
-                  </Link>
+                  <div className={styles.modalContainer}>
+                    <div className={styles.modalContainerLeft}>
+                      <div className={styles.modalSection}>
+                        <h3>Drop In</h3>
+                        <ul>
+                          <li>Resume reviews</li>
+                          <li>Class help</li>
+                          <li>Schedule and four year plan advice</li>
+                          <li>General advice or help</li>
+                          <li>Just a chat!</li>
+                        </ul>
+                        <div className={styles.modalButton}>
+                          <Link href="/openoffice">
+                            <p>View the open office calendar!</p>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className={styles.modalSection}>
+                        <h3>Appointment Required</h3>
+                        <ul>
+                          <li>Technical interview prep</li>
+                          <li>Behavioral interview prep</li>
+                        </ul>
+                        <a className={styles.modalButton}>
+                          <p>Make an appointment!</p>
+                        </a>
+                      </div>
+                    </div>
+                    <div className={styles.modalPhone}>
+                      <PhoneComponent>
+                        <img src="assets/img/events/corporate-retreat-22-23.jpg" />
+                      </PhoneComponent>
+                    </div>
+                  </div>
                 </div>
-                <button onClick={closeModal} className={styles2.closeButton}>
+                <button onClick={closeModal} className={styles2.closeButton2}>
                   Close
                 </button>
               </ComputerWindow>
