@@ -249,8 +249,22 @@
 .sponsorsSection {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
+  justify-content: center;
+  padding: 2rem 3rem;
+  position: relative;
+  width: fit-content;
+  background-image: url("/assets/design-vectors/grid.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sponsors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.5rem;
 }
 
 /* Enable hover only on non-touch devices */

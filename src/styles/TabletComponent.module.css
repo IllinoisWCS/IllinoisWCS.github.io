@@ -1,11 +1,12 @@
 .container {
   background-color: white;
   width: 1000px;
-  height: 575px;
+  min-height: 575px;
+  height: fit-content;
   border-radius: 25px;
-  border: 10px solid #baa7ff;
+  border: 10px solid #ff7cc0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
@@ -17,20 +18,27 @@
 }
 
 .notch {
-  width: 80px;
-  height: 15px;
+  width: 30px;
+  height: 125px;
   border-radius: 63px;
-  background-color: #baa7ff;
-  margin-top: 12px;
+  background-color: #ff7cc0;
   position: absolute;
 }
 
-.rectangle {
-  width: 150px;
-  height: 8px;
-  border-radius: 63px;
-  background-color: #baa7ff;
-  margin-bottom: 12px;
-  position: absolute;
-  bottom: 0;
+.border {
+  width: 1000px;
+  min-height: 575px;
+  background-color:#ffcee7;
+  padding: 1rem;
+}
+
+.body {
+  width: 100%;
+  min-height: 543px;
+  height: 100%;
+  background-color: #ffe3f2;
+}
+
+.child {
+  width: 100%;
 }
