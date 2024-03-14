@@ -26,10 +26,10 @@
 }
 
 .border {
-  width: 1000px;
+  width: inherit;
   min-height: 575px;
   background-color:#ffcee7;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .body {
@@ -41,4 +41,27 @@
 
 .child {
   width: 100%;
+}
+
+@media (max-width: 1120px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .notch {
+    width: 125px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 350px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1120px) {
+  .container {
+    width: 600px;
+  }
 }
