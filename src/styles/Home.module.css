@@ -365,6 +365,10 @@
     display: flex;
     flex-direction: column;
   }
+
+  .sponsorsSection {
+    padding: 0.5rem 0.5rem;
+  }
 }
 
 /* Tablet and Smaller Desktop */
