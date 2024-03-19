@@ -6,9 +6,27 @@ import {Inter} from "next/font/google";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import AboutUsSection from "@/components/AboutUsSection";
 
+// modal
+import OfficerModal from "@/components/OfficerModal.js"
+import {Button} from "react-bootstrap";
+
+
 const inter = Inter({subsets: ["latin"]});
 
 export default function Home() {
+
+  // modal
+  const [modalShow, setModalShow] = React.useState(false);
+  
+  const openModal = () => {
+    setModalShow(true);
+  };
+
+  const closeModal = () => {
+    setModalShow(false);
+  };
+
+
   return (
     <>
       <Head>
@@ -32,7 +50,18 @@ export default function Home() {
         </div>
         <AboutUsSection />
         <UpcomingEventsSection />
+
+        {/* Modal Testing Button */}
+        <Button variant="primary" onClick={openModal}>Click Me</Button>  {/* onclick for modal */}
+
       </main>
+
+      {/* modal */}
+      <OfficerModal
+        isOpen={modalShow}
+        closeModal={closeModal}
+      />
+
     </>
   );
 }

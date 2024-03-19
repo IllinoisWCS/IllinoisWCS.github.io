@@ -1,34 +1,78 @@
 .container {
-    background-color: rgba(10, 10, 10, 0.6);
+  width: 100svw;
+  height: 100svh;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(10, 10, 10, 0.6);
 }
 
-.heading {
-  background-color: #df636a;
-  
+.window {
+  position: absolute;
+  top: 5svh;
+  right: 5svw;
+  width: 90svw;
 }
 
-.body {
-    color: black;
+.officerInfo {
+  padding: 1rem 5svw 1rem 5svw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-height: 85svh;
+  color: black;
 }
+
+/* .eventInfo p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #21636c;
+} */
+
 
 .name {
-  color: #00B6C0;
+  margin-bottom: 1rem;
   font-size: 2rem;
-  text-align: center;
+  font-weight: 700;
+  color: #00B6C0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
-.photo {
-    padding: 1%;
+.location {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
-.footer {
-  background-color: #EAE1E6;
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 15;
+}
+
+.closeButton {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  color: black;
+  background-color: #E9E1E6;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .contact {
-  position: absolute;
+  position: relative;
   bottom: 0.5rem;
   padding: 5%;
+  max-width: 20rem;
 }
-
-  
