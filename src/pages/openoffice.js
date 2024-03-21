@@ -1,6 +1,6 @@
 import styles from "@/styles/OpenOffice.module.css";
 import data from "../data/openOffice.json";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 export default function OpenOffice() {
   const [week, setWeek] = useState("week1");
@@ -62,7 +62,7 @@ export default function OpenOffice() {
               >
                 {" "}
               </th>
-              {data[weekNum][week].map(({heading, rows}, index) => {
+              {data[weekNum][week].map(({ heading, rows }, index) => {
                 return (
                   <th
                     key={index}
@@ -87,7 +87,7 @@ export default function OpenOffice() {
                       </div>
                     </td>
 
-                    {data[weekNum][week].map(({heading, rows}, index) => {
+                    {data[weekNum][week].map(({ heading, rows }, index) => {
                       return (
                         <>
                           <td
