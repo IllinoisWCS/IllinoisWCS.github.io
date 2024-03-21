@@ -1,7 +1,6 @@
 .container {
   background-color: white;
   width: 1000px;
-  min-height: 575px;
   height: fit-content;
   border-radius: 25px;
   border: 10px solid #ff7cc0;
@@ -27,14 +26,12 @@
 
 .border {
   width: inherit;
-  min-height: 575px;
   background-color:#ffcee7;
   padding: 1.5rem;
 }
 
 .body {
   width: 100%;
-  min-height: 543px;
   height: 100%;
   background-color: #ffe3f2;
 }

@@ -1,8 +1,8 @@
 .container {
   display: flex;
   padding: 0.5rem;
-  width: 12rem;
-  height: 11rem;
+  width: 9rem;
+  height: 8rem;
   border-radius: 2rem;
   background-color: #ffffff;
   position: relative;
@@ -15,13 +15,13 @@
   right: -1rem;
   top: -1rem;
   border-radius: 100%;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .image {
-  max-width: 11rem;
-  max-height: 10rem;
+  max-width: 8rem;
+  max-height: 7rem;
   object-fit: contain;
 }
 
