@@ -7,6 +7,7 @@
   background-color: #ffffff;
   position: relative;
   margin: 1rem;
+  cursor: pointer;
 }
 
 .container::after {

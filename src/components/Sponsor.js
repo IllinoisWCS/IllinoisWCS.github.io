@@ -1,8 +1,14 @@
 import styles from "@/styles/Sponsor.module.css";
 
-const Sponsor = ({ sponsor, tier }) => {
+const Sponsor = ({ sponsor, url, tier }) => {
+  const link = url
+    ? () => {
+        window.open(url, "_blank").focus();
+      }
+    : null;
+  
   return (
-    <div className={`${styles.container} ${styles[tier]}`}>
+    <div onClick={link} className={`${styles.container} ${styles[tier]}`}>
       <img className={styles.image} src={`assets/img/logos/sponsors/${sponsor}`} />
     </div>
   )
