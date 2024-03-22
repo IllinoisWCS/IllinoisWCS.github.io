@@ -9,10 +9,12 @@ export default function Key({ children, url }) {
 
   return (
     <div className={styles.grid}>
-      <div onClick={link} className={styles.keyLeft}>
-        <div className={styles.keyRight}>
-          <div className={styles.keyBody}>
-            <h3 className={styles.content}>{children}</h3>
+      <div onClick={link} className={styles.keyTop}>
+        <div className={styles.keyBottom}>
+          <div className={styles.keyRight}>
+            <div className={styles.keyBody}>
+              <h3 className={styles.content}>{children}</h3>
+            </div>
           </div>
         </div>
       </div>
