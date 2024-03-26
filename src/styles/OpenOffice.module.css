@@ -1,3 +1,32 @@
+.main {
+  padding: 3rem 0rem 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+.desktop {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+.mobile {
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+  .main {
+    align-items: center;
+  }
+}
+
 .openOfficeHeader {
   display: flex;
   align-items: center;
@@ -20,8 +49,10 @@
 }
 
 .tableContainer {
-  display: flex;
-  justify-content: center;
+  overflow-x: auto;
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 }
 
 .th {
@@ -48,6 +79,16 @@
   position: relative;
   /* height: 130px; */
 }
+
+.chevronLeft {
+  transform: rotate(180deg);
+  margin-left: 40px;
+}
+
+.chevronRight {
+  margin-left: 40px;
+}
+
 
 .openOfficeTimes {
   background-color: #c6f6f8;
