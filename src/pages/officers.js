@@ -17,6 +17,7 @@ export default function Officers({ children }) {
             name={officer.name}
             position={officer.position}
             netid={officer.netid}
+            officer={officer}
           ></OfficerCard>
         ))}
       </div>
