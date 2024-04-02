@@ -331,6 +331,10 @@
   align-self: center;
 }
 
+.modalButton p:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 767px) {
   .modalPhone {
     display: none;
