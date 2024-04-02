@@ -2,13 +2,14 @@ import Head from "next/head";
 import React from "react";
 import ComputerWindow from "@/components/ComputerWindow";
 import styles from "@/styles/Home.module.css";
-import { Inter } from "next/font/google";
+import {Inter} from "next/font/google";
 import StayInTouchSection from "@/components/StayInTouchSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import AboutUsSection from "@/components/AboutUsSection";
+import SponsorsSection from "@/components/SponsorsSection";
 import OpenOffice from "./openoffice";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({subsets: ["latin"]});
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
       </Head>
 
       <main className={`${styles.main} ${inter.className}`}>
-        <h1>Illinois Women in Computer Science</h1>
+        <h1 className={styles.title}>Illinois Women in Computer Science</h1>
         <div className={`${styles.windowContainer}`}>
           <div className={`${styles.windowGrid}`}>
             <ComputerWindow>
@@ -35,6 +36,7 @@ export default function Home() {
         <AboutUsSection />
         <UpcomingEventsSection />
         <StayInTouchSection />
+        <SponsorsSection />
       </main>
     </>
   );
