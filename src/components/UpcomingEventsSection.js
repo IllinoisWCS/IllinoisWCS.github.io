@@ -129,7 +129,7 @@ const UpcomingEventsSection = () => {
                     </div>
                     <div className={styles.modalPhone}>
                       <PhoneComponent>
-                        <img src="assets/img/events/corporate-retreat-22-23.jpg" />
+                        <img src="assets/img/events/explorations-painting-social.jpg" />
                       </PhoneComponent>
                     </div>
                   </div>

@@ -7,14 +7,14 @@ const values = [
     description:
       "As part of the corporate committee, we speak with company representatives to arrange partnerships and secure sponsorships to support WCS's events and operations over the course of the year. We then collaborate with our corporate sponsors to plan and host events including General Meetings, networking events, tech talks, workshops, and more. Additionally, we organize WCS's annual Chicago retreat where our members spend a day immersing themselves in Chicago's tech environment.",
     officers: "Divya Koya, Riya Jain",
-    image: "assets/img/members/corporate.png",
+    image: "assets/img/events/corporate-retreat-24.jpg",
   },
   {
     name: "Explorations",
     description:
       "Welcome to WCS Explorations! We aspire to support your CS journey. We provide beginner friendly workshops and resources to help members gain technical skills and prepare for interviews. Check our our annual hackathon Code Ada and our project cycle Dev Ada! Don't miss the opportunity to attend our events, as they offer a chance to make new connections and gain valuable knowledge!",
     officers: "Jillian Nylund, Shreya Vinjamuri",
-    image: "assets/img/members/memberportal.jpg",
+    image: "assets/img/events/code-ada-23.jpg",
   },
   {
     name: "Infrastructure",
@@ -28,7 +28,7 @@ const values = [
     description:
       "Welcome to WCS Mentoring! We are a committee that is focused on providing resources and opportunities, whether it be professional, academic, or personal, for both new and current UIUC students. We host the Bits and Bytes program that is focused on connecting mentors and mentees within the CS program to provide incoming freshman, transfer students, and sophomores support. Additionally, we provide events to help students develop their professional skills.",
     officers: "Kalika Raje, Shreya Deshpande",
-    image: "assets/img/members/mentoring.jpg",
+    image: "assets/img/events/bits-and-bytes-kickoff-23.jpg",
   },
   {
     name: "Outreach",
@@ -42,14 +42,14 @@ const values = [
     description:
       "Welcome to WCS Social Committee! We strive to make new and upcoming events inclusive and engaging, participate in internal and external networking to hold unique experiences, and design and create enjoyable and amicable social events. Our main events include Spring Banquet, internal and external socials, and small-scale frequent activities.",
     officers: "Kavya Puranam, Twinkle Yeruva",
-    image: "assets/img/members/social.jpg",
+    image: "assets/img/events/field-day-23.jpg",
   },
 ];
 
-export default function Committees({ children }) {
+export default function Committees({children}) {
   return (
     <div className={`${styles.main}`}>
-      <h1 style={{ textAlign: "center" }}>Our Committees</h1>
+      <h1 style={{textAlign: "center"}}>Our Committees</h1>
       {values.map((committee, index) => (
         <CommitteesSection
           key={index}
