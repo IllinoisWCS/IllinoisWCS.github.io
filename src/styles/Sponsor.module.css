@@ -3,7 +3,7 @@
   padding: 0.5rem;
   width: 9rem;
   height: 8rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   background-color: #ffffff;
   position: relative;
   margin: 1rem;
@@ -11,7 +11,7 @@
 }
 
 .container::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -1rem;
   top: -1rem;
