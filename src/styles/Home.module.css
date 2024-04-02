@@ -294,13 +294,13 @@
   padding: 20px;
   border-radius: 30px;
   text-align: left;
-  /* align-items: center; */
 }
 
 .modalSection h3 {
   margin-bottom: 0.5rem;
   font-weight: 700;
   color: white;
+  /* text-align: center; */
 }
 
 .modalSection li {
@@ -323,6 +323,7 @@
 }
 
 .modalButton {
+  margin-top: 10px;
   width: max-content;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;

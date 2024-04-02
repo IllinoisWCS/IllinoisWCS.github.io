@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import EventsWindow from "@/components/EventsWindow";
 import ComputerWindow from "@/components/ComputerWindow";
 import UpcomingEvent from "@/components/UpcomingEvent";
@@ -16,11 +16,11 @@ const UpcomingEventsSection = () => {
         const eventsUrl =
           "https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec";
         const res = await fetch(eventsUrl);
-        const { events: fetchedEvents } = await res.json();
+        const {events: fetchedEvents} = await res.json();
         setEvents(
           fetchedEvents
             .slice(0, 5)
-            .map(({ startTime, endTime, title, location, description }) => {
+            .map(({startTime, endTime, title, location, description}) => {
               const startDate = new Date(startTime);
               const endDate = new Date(endTime);
 
@@ -45,7 +45,7 @@ const UpcomingEventsSection = () => {
                 location,
                 description,
               };
-            }),
+            })
         );
       } catch (error) {
         console.error("Error fetching events:", error);
@@ -82,7 +82,7 @@ const UpcomingEventsSection = () => {
               </p>
               <p
                 className={styles.eventText}
-                style={{ textDecoration: "underline" }}
+                style={{textDecoration: "underline"}}
               >
                 Click to learn more!
               </p>
@@ -96,14 +96,10 @@ const UpcomingEventsSection = () => {
                   <div className={styles.modalContainer}>
                     <div className={styles.modalContainerLeft}>
                       <div className={styles.modalSection}>
-                        <h3>Drop In</h3>
-                        <ul>
-                          <li>Resume reviews</li>
-                          <li>Class help</li>
-                          <li>Schedule and four year plan advice</li>
-                          <li>General advice or help</li>
-                          <li>Just a chat!</li>
-                        </ul>
+                        <h3 style={{textAlign: "center"}}>
+                          Open Office happens Monday-Friday from 2-5 PM in the
+                          WCS Office!
+                        </h3>
                         <div className={styles.modalButton}>
                           <Link href="/openoffice">
                             <p>View the open office calendar!</p>
@@ -111,6 +107,16 @@ const UpcomingEventsSection = () => {
                         </div>
                       </div>
                       <div className={styles.modalSection}>
+                        <h3>Drop by for:</h3>
+                        <ul>
+                          <li>Resume reviews</li>
+                          <li>Class help</li>
+                          <li>Schedule and four year plan advice</li>
+                          <li>General advice or help</li>
+                          <li>Just a chat!</li>
+                        </ul>
+                      </div>
+                      {/* <div className={styles.modalSection}>
                         <h3>Appointment Required</h3>
                         <ul>
                           <li>Technical interview prep</li>
@@ -119,7 +125,7 @@ const UpcomingEventsSection = () => {
                         <a className={styles.modalButton}>
                           <p>Make an appointment!</p>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className={styles.modalPhone}>
                       <PhoneComponent>
@@ -142,18 +148,16 @@ const UpcomingEventsSection = () => {
               </p>
             </ComputerWindow>
           ) : (
-            events.map(
-              ({ title, date, time, location, description }, index) => (
-                <UpcomingEvent
-                  key={index}
-                  title={title}
-                  date={date}
-                  time={time}
-                  location={location}
-                  description={description}
-                />
-              ),
-            )
+            events.map(({title, date, time, location, description}, index) => (
+              <UpcomingEvent
+                key={index}
+                title={title}
+                date={date}
+                time={time}
+                location={location}
+                description={description}
+              />
+            ))
           )}
         </div>
       </div>
