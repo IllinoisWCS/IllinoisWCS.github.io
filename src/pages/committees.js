@@ -28,7 +28,7 @@ const values = [
     description:
       "Welcome to WCS Mentoring! We are a committee that is focused on providing resources and opportunities, whether it be professional, academic, or personal, for both new and current UIUC students. We host the Bits and Bytes program that is focused on connecting mentors and mentees within the CS program to provide incoming freshman, transfer students, and sophomores support. Additionally, we provide events to help students develop their professional skills.",
     officers: "Kalika Raje, Shreya Deshpande",
-    image: "assets/img/events/bits-and-bytes-kickoff-23.jpg",
+    image: "assets/img/events/bits-and-bytes-kickoff-22.jpg",
   },
   {
     name: "Outreach",
