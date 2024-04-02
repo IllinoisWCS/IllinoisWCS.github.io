@@ -7,7 +7,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 75px 15px 25px;
+  gap: 2rem;
+  width: 100%;
+}
+
+.logo {
+  padding: 15px 25px 15px 25px;
 }
 
 .linksContainer {
@@ -15,4 +20,71 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 4rem;
+  padding-right: 50px;
+  padding: 15px 25px 15px 25px;
+}
+
+.linksContainer h3:hover {
+  color: black;
+  opacity: 0.7;
+}
+
+.hamburger {
+  display: none; /* Initially hidden */
+  cursor: pointer;
+  padding: 15px 25px 15px 25px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #21636c;
+  margin: 5px 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.open1 {
+  transform: rotate(45deg) translate(8px, 3px);
+}
+
+.open2 {
+  opacity: 0;
+}
+
+.open3 {
+  transform: rotate(-45deg) translate(8px, -3px);
+}
+
+.show {
+  display: flex; /* Show the links when menu is open */
+}
+
+@media (max-width: 1000px) {
+  .linksContainer {
+    display: none; /* Hide links in mobile view */
+    position: absolute;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu */
+  }
+}
+
+.activeLink {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 820px) {
+  .linksContainer {
+    padding-right: 0px;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .linksContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
