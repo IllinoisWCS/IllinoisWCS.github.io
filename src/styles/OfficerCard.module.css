@@ -10,6 +10,7 @@
   justify-content: space-between;
   padding: 2rem;
   margin: 1rem;
+  cursor: pointer;
 }
 
 .img {
