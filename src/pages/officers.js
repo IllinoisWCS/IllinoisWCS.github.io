@@ -7,9 +7,9 @@ export default function Officers({children}) {
   return (
     <div className={`${styles.main}`}>
       <h1 className={`${styles.officers}`}>WCS Officer Board</h1>
-      {/* <p className={`${styles.description}`}>
+      <p className={`${styles.description}`}>
         Click on a photo to learn more about our officers!
-      </p> */}
+      </p>
       <div className={`${styles.cards}`}>
         {officerData.admin.map((officer, index) => (
           <OfficerCard
@@ -17,6 +17,7 @@ export default function Officers({children}) {
             name={officer.name}
             position={officer.position}
             netid={officer.netid}
+            officer={officer}
           ></OfficerCard>
         ))}
       </div>
