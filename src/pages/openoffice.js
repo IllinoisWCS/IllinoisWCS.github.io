@@ -120,10 +120,8 @@ export default function OpenOffice() {
                                 {rows[x]["officers"].map((name, index) => {
                                   return (
                                     <div key={index}>
-                                      <span
-                                        className={`${styles.openOfficeHighlight} ${styles.openOfficeName}`}
-                                      >
-                                        <p>{name}</p>
+                                      <span>
+                                        <p className={`${styles.openOfficeHighlight}`}>{name}</p>
                                       </span>
                                     </div>
                                   );
@@ -227,10 +225,8 @@ export default function OpenOffice() {
                                   {rows[x]["officers"].map((name, index) => {
                                     return (
                                       <div key={index}>
-                                        <span
-                                          className={`${styles.openOfficeHighlight} ${styles.openOfficeName}`}
-                                        >
-                                          <p>{name}</p>
+                                        <span>
+                                        <p className={`${styles.openOfficeHighlight}`}>{name}</p>
                                         </span>
                                       </div>
                                     );
