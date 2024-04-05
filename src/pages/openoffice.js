@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import chevron from "../../public/assets/design-vectors/chevron.svg";
 
 export const DesktopContainer = ({children}) => <div className={`${styles.desktop}`}>{children}</div>
-
 export const MobileContainer = ({children}) => <div className={`${styles.mobile}`}>{children}</div>
+
 
 export default function OpenOffice() {
   const [week, setWeek] = useState("week1");
@@ -22,7 +22,7 @@ export default function OpenOffice() {
       setWeekDays(new Set(['Monday', 'Tuesday', 'Wednesday']));
     }
   }
-
+  
   
   useEffect(() => {
     let currentDate = new Date();
@@ -260,5 +260,6 @@ export default function OpenOffice() {
       </MobileContainer>
     </div>
     </>
+
   );
 }

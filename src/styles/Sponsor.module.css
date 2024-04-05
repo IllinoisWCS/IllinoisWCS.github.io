@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  padding: 0.5rem;
+  width: 9rem;
+  height: 8rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  position: relative;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.image {
+  max-width: 8rem;
+  max-height: 7rem;
+  object-fit: contain;
+}
+
+.platinum::after {
+  background-color: #337ab7;
+}
+
+.gold::after {
+  background-color: #f0ad4e;
+}
+
+.silver::after {
+  background-color: #808080;
+}
+
+.bronze::after {
+  background-color: #d9534f;
+}

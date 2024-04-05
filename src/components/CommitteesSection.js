@@ -3,14 +3,13 @@ import ComputerWindow from "./ComputerWindow";
 
 export default function CommitteesSection({
   isLeft,
-  isRight,
   name,
   description,
   officers,
-  color = "#65C7CC",
-  bColor = "#CBEDFF",
   img,
 }) {
+  const color = isLeft ? "#FB79C3" : "#65C7CC";
+  const bColor = isLeft ? "#FFCEE7" : "#CBEDFF";
   return (
     <div className={`${styles.container}`}>
       {isLeft && (
@@ -19,6 +18,12 @@ export default function CommitteesSection({
           <div className={`${styles.content}`}>
             <ComputerWindow className={`${styles.window}`} topbarColor={color}>
               <img className={`${styles.windowImage}`} src={img}></img>
+            </ComputerWindow>
+            <ComputerWindow
+              className={`${styles.mobileWindow}`}
+              topbarColor={color}
+            >
+              <img className={`${styles.mobileImage}`} src={img}></img>
             </ComputerWindow>
             <div className={`${styles.description}`}>
               <p className={`${styles.descriptionRight}`}>{description}</p>
@@ -32,10 +37,16 @@ export default function CommitteesSection({
           </div>
         </>
       )}
-      {isRight && (
+      {!isLeft && (
         <>
           <h2 className={`${styles.nameRight}`}>{name}</h2>
           <div className={`${styles.content}`}>
+            <ComputerWindow
+              className={`${styles.mobileWindow}`}
+              topbarColor={color}
+            >
+              <img className={`${styles.mobileImage}`} src={img}></img>
+            </ComputerWindow>
             <div className={`${styles.description}`}>
               <p className={`${styles.descriptionLeft}`}>{description}</p>
               <p
