@@ -20,8 +20,8 @@ const AboutUsSection = () => {
               Science Department
             </li>
             <li>
-              dedicated to supporting the efforts of young women pursuing
-              careers in CS or show interests in technology
+              dedicated to supporting the efforts of young women and non-binary
+              people pursuing careers in CS or show interests in technology
             </li>
           </ul>
           <h3>We host...</h3>

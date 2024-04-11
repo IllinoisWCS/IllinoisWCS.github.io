@@ -20,7 +20,7 @@ export default function Home() {
           name="description"
           content="Women in Computer Science is an organization under
                      CS@Illinois that strives to provide opportunities and a
-                     community for female CS students at University of Illinois."
+                     community for female and non-binary CS students at University of Illinois."
         />
         <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
         <meta
