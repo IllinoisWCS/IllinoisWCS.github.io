@@ -101,12 +101,12 @@
           {
             "time": "4:00 - 4:30",
             "officers": ["Shreya Deshpande", "Kalika Raje", "Divya Koya"],
-            "committees": ["Emma Maxwell", "Simone Schwaighart", "Hetvi Patel"]
+            "committees": ["Simone Schwaighart", "Hetvi Patel"]
           },
           {
             "time": "4:30 - 5:00",
             "officers": ["Kalika Raje", "Shreya Vinjamuri", "Divya Koya"],
-            "committees": ["Emma Maxwell", "Simone Schwaighart", "Hetvi Patel"]
+            "committees": ["Simone Schwaighart", "Hetvi Patel"]
           }
         ]
       },
