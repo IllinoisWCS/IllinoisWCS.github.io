@@ -1,41 +1,120 @@
+/* 
+  Phone: 767 to 320 px
+  Tablet: 1023 to 768 px
+  Computer: 1024+ px
+*/
+
+/* Phone */
+@media (max-width: 767px) {
+  .container{
+    width: 100%;
+    /* justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+  }
+  .card {
+    position: absolute;
+    /* height: 100%;
+    width: 100%; */
+    height: 700px;
+    width: 400px;
+    /* margin-top: -20%; */
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
+  .cards {
+    position: relative;
+  }
+  .rightButton {
+    position: absolute;
+    /* margin-top: 40%; */
+    margin-top: 20rem;
+    margin-left: 23rem;
+  }
+  .leftButton {
+    position: absolute;
+    margin-top: 20rem;
+    margin-left: 3rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .container {
+    max-width: 800px;
+    max-height: 600px;
+    transform-style: preserve-3d;
+    display: flex;
+    width: 50%;
+    margin-left: -45rem;
+    margin-top: 10px;
+  }
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .cards {
+    position: relative;
+  }
+  .rightButton {
+    position: absolute;
+    margin-top: 12rem;
+    margin-left: 33rem;
+  }
+  .leftButton {
+    position: absolute;
+    margin-top: 12rem;
+    margin-left: 2rem;
+  }
+}
 
 .container {
-  width: 100%;
+  /* width: 100%;
   max-width: 800px;
   max-height: 600px;
-  height: 100%;
-  transform-style: preserve-3d;
-  display: flex;
+  height: 100%; */
+  /* transform-style: preserve-3d;
+  display: flex; */
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-left: -20vw;
-  margin-top: 10px;
+  /*margin-left: -20vw;*/
+  /* margin-top: 10px; */
 }
-
 .radio {
   display: none;
 }
-
+.card {
+  transition: transform .4s ease;
+  /* z-index: -10; */
+}
+/*
 .card {
   position: absolute;
-  width: 60%;
+  /*width: 60%;*/
+  /*
+  width: 100%;
   height: 100%;
   left: 0;
   right: 0;
   margin: auto;
-  transition: transform .4s ease;
+  transition: transform .4s ease; */
   /*cursor: pointer;*/
+  /*
 }
+*/
 
+/*
 .cards {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
+*/
 .rightButton {
-  position: fixed;
+  /*position: fixed;*/
+  /* position: relative; */
   background-image: url(../../assets/design-vectors/rightButton.svg);
   background-repeat: no-repeat;
   background-size: 6vh 6vh;
@@ -45,12 +124,14 @@
   background-color: transparent;
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(110deg) brightness(98%) contrast(108%);
   z-index: 10;
+  /*
   margin-top: 25%;
   margin-left: 45%;
+  */
 }
 
 .leftButton {
-  position: fixed;
+  /* position: relative; */
   background-image: url(../../assets/design-vectors/leftButton.svg);
   background-repeat: no-repeat;
   background-size: 6vh 6vh;
@@ -60,9 +141,14 @@
   background-color: transparent;
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(110deg) brightness(98%) contrast(108%);
   z-index: 10;
+  /*
   margin-top: 25%;
   margin-left: -15%;
+  */
 }
+
+
+
 /* 
 .grid {
   position: absolute;
