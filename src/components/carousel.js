@@ -1,8 +1,12 @@
 import styles from "@/styles/Carousel.module.css";
 import Image from "next/image";
-import slideshow1 from "../../assets/img/events/wcs and stripe.png"
-import slideshow2 from "../../assets/img/events/wcs bits and bytes.png"
-import slideshow3 from "../../assets/img/events/wcs google workshop.png"
+// import slideshow1 from "../../assets/img/events/wcs and stripe.png"
+// import slideshow2 from "../../assets/img/events/wcs bits and bytes.png"
+// import slideshow3 from "../../assets/img/events/wcs google workshop.png"
+import slideshow1 from "public/assets/img/members/committees23-24.jpg";
+import slideshow2 from "public/assets/img/slideshow/allofficers.jpg";
+import slideshow3 from "public/assets/img/slideshow/slideshow9.jpg";
+
 import React, { useState, useEffect } from "react";
 
 import grid from "../../assets/design-vectors/grid.svg"
@@ -12,6 +16,7 @@ import ComputerWindow from "./ComputerWindow";
 
 export default function Carousel() {
     const checkSelected = () => {
+        console.log("Inside checkSelected");
         if (document.getElementById("item-1").checked) {
             document.getElementById("item-1").checked = false;
             document.getElementById("item-2").checked = true;
@@ -42,6 +47,7 @@ export default function Carousel() {
             <div class="cards" className={styles.cards}>
                 <button className={styles.rightButton} onClick={(e) => {
                     e.preventDefault();
+                    console.log("Right button clicked");
                     if (document.getElementById("item-1").checked) {
                         document.getElementById("item-1").checked = false;
                         document.getElementById("item-2").checked = true;
@@ -57,6 +63,7 @@ export default function Carousel() {
 
                 <button className={styles.leftButton} onClick={(e) => {
                     e.preventDefault();
+                    console.log("Left button clicked");
                     if (document.getElementById("item-1").checked) {
                         document.getElementById("item-1").checked = false;
                         document.getElementById("item-3").checked = true;
