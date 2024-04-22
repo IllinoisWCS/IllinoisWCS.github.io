@@ -1,6 +1,6 @@
 import WCSNavbar from "./navbar";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <div>
       <WCSNavbar />

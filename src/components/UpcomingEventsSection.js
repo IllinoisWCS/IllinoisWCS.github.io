@@ -3,6 +3,9 @@ import EventsWindow from "@/components/EventsWindow";
 import ComputerWindow from "@/components/ComputerWindow";
 import UpcomingEvent from "@/components/UpcomingEvent";
 import styles from "@/styles/Home.module.css";
+import styles2 from "@/styles/EventDescriptionModal.module.css";
+import Link from "next/link";
+import PhoneComponent from "./PhoneComponent";
 
 const UpcomingEventsSection = () => {
   const [events, setEvents] = useState([]);
@@ -52,20 +55,92 @@ const UpcomingEventsSection = () => {
     fetchEvents();
   }, []);
 
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Upcoming Events</h2>
       <div className={styles.upcomingEventSection}>
         <div className={styles.eventContainer}>
-          <EventsWindow
-            location={"Siebel CS 0211"}
-            topbarColor={"#FB79C3"}
-            buttonColor={"#FFCEE7"}
-          >
-            <p className={styles.eventText}>
-              Come to our office to chat, ask questions, or just study:
-            </p>
-          </EventsWindow>
+          <div onClick={openModal}>
+            <EventsWindow
+              location={"Siebel CS 0211"}
+              topbarColor={"#FB79C3"}
+              buttonColor={"#FFCEE7"}
+              hasDescription={true}
+            >
+              <p className={styles.eventText}>
+                Come to our office to chat, ask questions, or just study!
+              </p>
+              <p
+                className={styles.eventText}
+                style={{textDecoration: "underline"}}
+              >
+                Click to learn more!
+              </p>
+            </EventsWindow>
+          </div>
+          {showModal && (
+            <div className={styles2.container}>
+              <ComputerWindow className={styles2.window} topbarColor="#FB79C3">
+                <div className={styles2.eventInfo}>
+                  <h3 className={styles2.title}>Open Office</h3>
+                  <div className={styles.modalContainer}>
+                    <div className={styles.modalContainerLeft}>
+                      <div className={styles.modalSection}>
+                        <h3 style={{textAlign: "center"}}>
+                          Open Office happens Monday-Friday from 2-5 PM in the
+                          WCS Office!
+                        </h3>
+                        <div className={styles.modalButton}>
+                          <Link href="/openoffice">
+                            <p>View the open office calendar!</p>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className={styles.modalSection}>
+                        <h3>Drop by for:</h3>
+                        <ul>
+                          <li>Resume reviews</li>
+                          <li>Class help</li>
+                          <li>Schedule and four year plan advice</li>
+                          <li>General advice or help</li>
+                          <li>Just a chat!</li>
+                        </ul>
+                      </div>
+                      {/* <div className={styles.modalSection}>
+                        <h3>Appointment Required</h3>
+                        <ul>
+                          <li>Technical interview prep</li>
+                          <li>Behavioral interview prep</li>
+                        </ul>
+                        <a className={styles.modalButton}>
+                          <p>Make an appointment!</p>
+                        </a>
+                      </div> */}
+                    </div>
+                    <div className={styles.modalPhone}>
+                      <PhoneComponent>
+                        <img src="assets/img/events/explorations-painting-social.jpg" />
+                      </PhoneComponent>
+                    </div>
+                  </div>
+                </div>
+                <button onClick={closeModal} className={styles2.closeButton2}>
+                  Close
+                </button>
+              </ComputerWindow>
+            </div>
+          )}
+
           {events.length === 0 ? (
             <ComputerWindow>
               <p className={`${styles.noEvents} ${styles.eventText}`}>
