@@ -3,12 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Gloock&family=Lato:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"); */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Lato", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
-    "Droid Sans Mono", "Courier New", monospace;
+    "Lato", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -92,16 +96,13 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-  background: linear-gradient(#ffb2da, #cbedff);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
+    background: linear-gradient(#FFB2DA, #CBEDFF);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 a {
   color: inherit;
@@ -133,6 +134,38 @@ h3 {
   font-weight: 700;
   color: #21636c;
   font-size: 28px; /* Adjusted to 28px */
+}
+
+ /* code for carousel to work */
+
+#item-1:checked ~ .cards #pic-3, #item-2:checked ~ .cards #pic-1, #item-3:checked ~ .cards #pic-2 {
+  transform: translatex(-60%) scale(.8);
+  opacity: .4;
+  z-index: 0s;
+  /* padding-top: 50px; */
+}
+
+#item-1:checked ~ .cards #pic-2, #item-2:checked ~ .cards #pic-3, #item-3:checked ~ .cards #pic-1 {
+  transform: translatex(80%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+  /* padding-top: 50px; */
+}
+
+#item-1:checked ~ .cards #pic-1, #item-2:checked ~ .cards #pic-2, #item-3:checked ~ .cards #pic-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+  
+  Image {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+
+#item-1:checked ~ .cards #pic-1, #item-2:checked ~ .cards #pic-2, #item-3:checked ~ .cards #pic-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
 }
 
 p {
@@ -191,4 +224,5 @@ li {
   li {
     font-size: 16px;
   }
+}
 }

@@ -3,6 +3,10 @@ import React from "react";
 import ComputerWindow from "@/components/ComputerWindow";
 import styles from "@/styles/Home.module.css";
 import {Inter} from "next/font/google";
+/*import { Container } from "react-bootstrap";*/
+/*import slideshow from '../../assets/img/events/wcs google workshop.png';
+import Image from "next/image"; */
+import Carousel from "@/components/carousel";
 import StayInTouchSection from "@/components/StayInTouchSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import AboutUsSection from "@/components/AboutUsSection";
@@ -20,7 +24,7 @@ export default function Home() {
           name="description"
           content="Women in Computer Science is an organization under
                      CS@Illinois that strives to provide opportunities and a
-                     community for female CS students at University of Illinois."
+                     community for female and non-binary CS students at University of Illinois."
         />
         <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
         <meta
@@ -76,7 +80,8 @@ export default function Home() {
 
       <main className={`${styles.main} ${inter.className}`}>
         <h1 className={styles.title}>Illinois Women in Computer Science</h1>
-        <div className={`${styles.windowContainer}`}>
+        <Carousel />
+        {/* <div className={`${styles.windowContainer}`}>
           <div className={`${styles.windowGrid}`}>
             <ComputerWindow>
               <img
@@ -85,7 +90,7 @@ export default function Home() {
               ></img>
             </ComputerWindow>
           </div>
-        </div>
+        </div> */}
         <AboutUsSection />
         <UpcomingEventsSection />
         <StayInTouchSection />
