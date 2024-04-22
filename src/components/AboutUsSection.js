@@ -5,11 +5,11 @@ import stylesHome from "@/styles/Home.module.css";
 const AboutUsSection = () => {
   return (
     <div className={`${styles.container}`}>
-      <div className={`${styles.phoneContainer}`}>
-        <PhoneComponent>
-          <img src="assets/img/events/corporate-retreat-22-23.jpg" />
-        </PhoneComponent>
-      </div>
+        <div className={`${styles.phoneContainer}`}>
+          <PhoneComponent>
+            <img src="assets/img/events/corporate-retreat-22-23.jpg" />
+          </PhoneComponent>
+        </div>
       <div>
         <h2 className={`${stylesHome.header}`}>About Us</h2>
         <div className={`${styles.textContainer}`}>
