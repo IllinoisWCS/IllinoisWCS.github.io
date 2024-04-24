@@ -8,6 +8,7 @@ import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import AboutUsSection from "@/components/AboutUsSection";
 import SponsorsSection from "@/components/SponsorsSection";
 import OpenOffice from "./openoffice";
+import CollapsableTextComponent from "@/components/CollapsableTextComponent";
 
 const inter = Inter({subsets: ["latin"]});
 
