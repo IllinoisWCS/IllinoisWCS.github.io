@@ -1,4 +1,5 @@
 import styles from "@/styles/Sponsor.module.css";
+import Image from "next/image";
 
 const Sponsor = ({ sponsor, url, tier }) => {
   const link = url
@@ -9,7 +10,14 @@ const Sponsor = ({ sponsor, url, tier }) => {
   
   return (
     <div onClick={link} className={`${styles.container} ${styles[tier]}`}>
-      <img className={styles.image} src={`assets/img/logos/sponsors/${sponsor}`} />
+      <Image 
+        className={styles.image} 
+        src={`/assets/img/logos/sponsors/${sponsor}`} 
+        layout='fill'
+        width={0} 
+        height={0}
+        alt={sponsor}
+      />
     </div>
   )
 }

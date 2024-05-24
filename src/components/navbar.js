@@ -4,6 +4,7 @@ import {useRouter} from "next/router";
 import styles from "@/styles/Navbar.module.css";
 import NavBarMobile from "./NavBarMobile";
 import {Navbar} from "react-bootstrap";
+import Image from "next/image";
 
 export default function WCSNavbar() {
   const router = useRouter();
@@ -31,9 +32,11 @@ export default function WCSNavbar() {
   return (
     <div className={styles.container}>
       <Link className={styles.logo} href="/">
-        <img
-          src="https://points.illinoiswcs.org/assets/logo-9d49d730.png"
-          width="140"
+        <Image
+          src="/assets/img/wcs/logo.png"
+          width={140}
+          height={35}
+          alt="wcs logo"
         />
       </Link>
       <div

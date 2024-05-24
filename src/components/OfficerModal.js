@@ -1,5 +1,6 @@
 import ComputerWindow from "./ComputerWindow";
 import styles from "@/styles/OfficerModal.module.css";
+import Image from "next/image";
 
 export default function OfficerModal({isOpen, closeModal, officer}) {
   return isOpen ? OfficerInformation(closeModal, officer) : null;
@@ -17,10 +18,13 @@ function OfficerInformation(closeModal, officer) {
 
             <div className="columnContainer">
               <div className={styles.left}>
-                <img
+                <Image
                   className={`${styles.photo}`}
                   src={`/assets/img/officers/${officer.netid}.jpg`}
-                ></img>
+                  width={400}
+                  height={400}
+                  alt={officer.name}
+                />
               </div>
 
               <div className={styles.right}>
@@ -51,16 +55,24 @@ function OfficerInformation(closeModal, officer) {
                 <br></br>
 
                 <a href={`mailto:${officer.email}`}>
-                  <img
+                  <Image
                     className={`${styles.socials}`}
-                    src="assets/img/logos/contacts/email.png"
-                  ></img>
+                    src="/assets/img/logos/contacts/email.png"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    alt="email logo"
+                  />
                 </a>
                 <a href={officer.linkedin}>
-                  <img
+                  <Image
                     className={`${styles.socials}`}
-                    src="assets/img/logos/contacts/linkedin.png"
-                  ></img>
+                    src="/assets/img/logos/contacts/linkedin.png"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    alt="linkedin logo"
+                  />
                 </a>
               </div>
             </div>

@@ -8,6 +8,7 @@
   position: relative;
   margin: 1rem;
   cursor: pointer;
+  display: flex;
 }
 
 .container::after {
@@ -18,9 +19,12 @@
   border-radius: 100%;
   width: 3rem;
   height: 3rem;
+  display: flex;
 }
 
 .image {
+  justify-self: center;
+  align-self: center;
   max-width: 8rem;
   max-height: 7rem;
   object-fit: contain;

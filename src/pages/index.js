@@ -8,6 +8,7 @@ import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import AboutUsSection from "@/components/AboutUsSection";
 import SponsorsSection from "@/components/SponsorsSection";
 import OpenOffice from "./openoffice";
+import Image from "next/image";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -79,10 +80,14 @@ export default function Home() {
         <div className={`${styles.windowContainer}`}>
           <div className={`${styles.windowGrid}`}>
             <ComputerWindow>
-              <img
+              <Image
                 className={`${styles.windowImage}`}
-                src="assets/img/members/committees23-24.jpg"
-              ></img>
+                src="/assets/img/members/committees23-24.jpg"
+                width={0}
+                height={0}
+                sizes="100wv"
+                alt="wcs committee photo"
+             />
             </ComputerWindow>
           </div>
         </div>

@@ -6,6 +6,7 @@ import styles from "@/styles/Home.module.css";
 import styles2 from "@/styles/EventDescriptionModal.module.css";
 import Link from "next/link";
 import PhoneComponent from "./PhoneComponent";
+import Image from "next/image";
 
 const UpcomingEventsSection = () => {
   const [events, setEvents] = useState([]);
@@ -129,7 +130,7 @@ const UpcomingEventsSection = () => {
                     </div>
                     <div className={styles.modalPhone}>
                       <PhoneComponent>
-                        <img src="assets/img/events/explorations-painting-social.jpg" />
+                        <Image src="/assets/img/events/explorations-painting-social.jpg" height={475} width={594} alt="explorations painting social"/>
                       </PhoneComponent>
                     </div>
                   </div>

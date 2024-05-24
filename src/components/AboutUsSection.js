@@ -1,13 +1,14 @@
 import PhoneComponent from "./PhoneComponent";
 import styles from "@/styles/AboutUsSection.module.css";
 import stylesHome from "@/styles/Home.module.css";
+import Image from "next/image";
 
 const AboutUsSection = () => {
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.phoneContainer}`}>
         <PhoneComponent>
-          <img src="assets/img/events/corporate-retreat-22-23.jpg" />
+          <Image width="0" height="0" src="/assets/img/events/corporate-retreat-22-23.jpg" alt="corporate retreat 22-23"/>
         </PhoneComponent>
       </div>
       <div>

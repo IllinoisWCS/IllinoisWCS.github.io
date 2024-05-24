@@ -1,5 +1,6 @@
 import styles from "@/styles/CommitteesSection.module.css";
 import ComputerWindow from "./ComputerWindow";
+import Image from "next/image";
 
 export default function CommitteesSection({
   isLeft,
@@ -17,13 +18,13 @@ export default function CommitteesSection({
           <h2 className={`${styles.nameLeft}`}>{name}</h2>
           <div className={`${styles.content}`}>
             <ComputerWindow className={`${styles.window}`} topbarColor={color}>
-              <img className={`${styles.windowImage}`} src={img}></img>
+              <Image className={`${styles.windowImage}`} src={img} width={0} height={0} sizes={"100vw"} alt={img}/>
             </ComputerWindow>
             <ComputerWindow
               className={`${styles.mobileWindow}`}
               topbarColor={color}
             >
-              <img className={`${styles.mobileImage}`} src={img}></img>
+              <Image className={`${styles.mobileImage}`} src={img} width="0" height="0" sizes={"100vw"} alt={img}/>
             </ComputerWindow>
             <div className={`${styles.description}`}>
               <p className={`${styles.descriptionRight}`}>{description}</p>
@@ -45,7 +46,7 @@ export default function CommitteesSection({
               className={`${styles.mobileWindow}`}
               topbarColor={color}
             >
-              <img className={`${styles.mobileImage}`} src={img}></img>
+              <Image className={`${styles.mobileImage}`} src={img} width={0} height={0} sizes={"100vw"} alt={img}/>
             </ComputerWindow>
             <div className={`${styles.description}`}>
               <p className={`${styles.descriptionLeft}`}>{description}</p>
@@ -57,7 +58,7 @@ export default function CommitteesSection({
               </p>
             </div>
             <ComputerWindow className={`${styles.window}`} topbarColor={color}>
-              <img className={`${styles.windowImage}`} src={img}></img>
+              <Image className={`${styles.windowImage}`} src={img} width={0} height={0} sizes={"100vw"} alt={img}/>
             </ComputerWindow>
           </div>
         </>
