@@ -1,4 +1,4 @@
-import styles from '@/styles/ComputerWindow.module.css';
+import styles from '@/styles/components/ComputerWindow.module.css';
 
 export default function ComputerWindow({
   children,

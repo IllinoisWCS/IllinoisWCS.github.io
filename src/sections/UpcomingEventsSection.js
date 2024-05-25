@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import ComputerWindow from './ComputerWindow';
-import EventsWindow from './EventsWindow';
-import PhoneComponent from './PhoneComponent';
-import styles from '@/styles/Home.module.css';
-import styles2 from '@/styles/EventDescriptionModal.module.css';
-import UpcomingEvent from './UpcomingEvent';
+import ComputerWindow from '../components/general/ComputerWindowComponent';
+import EventsWindow from '../components/events/EventsWindow';
+import PhoneComponent from '../components/general/PhoneComponent';
+import UpcomingEvent from '../components/events/UpcomingEvent';
+
+import styles from '@/styles/pages/Home.module.css';
+import styles2 from '@/styles/components/EventDescriptionModal.module.css';
 
 export default function UpcomingEventsSection() {
   const [events, setEvents] = useState([]);

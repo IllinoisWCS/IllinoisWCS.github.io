@@ -1,4 +1,4 @@
-import NavbarLayout from '../components/layout';
+import NavbarLayout from '../sections/layout';
 import '@/styles/globals.css';
 
 export default function App({

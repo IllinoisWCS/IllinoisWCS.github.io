@@ -1,6 +1,6 @@
-import Sponsor from './Sponsor';
-import styles from '@/styles/Home.module.css';
-import TabletComponent from './TabletComponent';
+import Sponsor from '../components/Sponsor';
+import styles from '@/styles/pages/Home.module.css';
+import TabletComponent from '../components/general/TabletComponent';
 
 export default function SponsorsSection() {
   return (

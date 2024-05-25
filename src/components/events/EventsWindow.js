@@ -1,5 +1,5 @@
-import ComputerWindow from './ComputerWindow';
-import styles from '@/styles/EventsWindow.module.css';
+import ComputerWindow from '../general/ComputerWindowComponent';
+import styles from '@/styles/components/EventsWindow.module.css';
 
 export default function EventsWindow({
   children,

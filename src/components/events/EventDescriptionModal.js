@@ -1,5 +1,5 @@
-import ComputerWindow from './ComputerWindow';
-import styles from '@/styles/EventDescriptionModal.module.css';
+import ComputerWindow from '../general/ComputerWindowComponent';
+import styles from '@/styles/components/EventDescriptionModal.module.css';
 
 function EventDescription(
   {

@@ -1,4 +1,4 @@
-import styles from '@/styles/PhoneComponent.module.css';
+import styles from '@/styles/components/PhoneComponent.module.css';
 
 export default function PhoneComponent({
   children,

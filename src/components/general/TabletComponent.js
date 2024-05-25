@@ -1,4 +1,4 @@
-import styles from '@/styles/TabletComponent.module.css';
+import styles from '@/styles/components/TabletComponent.module.css';
 
 export default function TabletComponent({
   children,

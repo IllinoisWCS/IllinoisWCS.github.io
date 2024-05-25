@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import OfficerModal from './OfficerModal';
-import styles from '@/styles/OfficerCard.module.css';
+import styles from '@/styles/components/OfficerCard.module.css';
 
 export default function OfficerCard({
   name,

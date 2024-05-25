@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import EventDescriptionModal from './EventDescriptionModal';
 import EventsWindow from './EventsWindow';
-import styles from '@/styles/UpcomingEvent.module.css';
+import styles from '@/styles/components/UpcomingEvent.module.css';
 
 export default function UpcomingEvent({
   title,

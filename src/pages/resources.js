@@ -1,4 +1,4 @@
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/pages/Home.module.css';
 // import cloud from '@/public/assets/design-vectors/cloud.svg'
 
 export default function Resources() {

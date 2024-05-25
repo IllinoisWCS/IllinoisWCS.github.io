@@ -1,5 +1,5 @@
-import Key from './Key';
-import styles from '@/styles/Home.module.css';
+import Key from '../components/StayInTouchKey';
+import styles from '@/styles/pages/Home.module.css';
 
 export default function StayInTouchSection() {
   return (

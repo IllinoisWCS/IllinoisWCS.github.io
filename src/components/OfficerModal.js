@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import ComputerWindow from './ComputerWindow';
-import styles from '@/styles/OfficerModal.module.css';
+import ComputerWindow from './general/ComputerWindowComponent';
+import styles from '@/styles/components/OfficerModal.module.css';
 
 function OfficerInformation(
   closeModal,

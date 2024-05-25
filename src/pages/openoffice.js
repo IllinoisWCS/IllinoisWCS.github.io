@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import data from '../data/openOffice.json';
-import styles from '@/styles/OpenOffice.module.css';
+import styles from '@/styles/pages/OpenOffice.module.css';
 
 export default function OpenOffice() {
   const [week, setWeek] = useState('week1');

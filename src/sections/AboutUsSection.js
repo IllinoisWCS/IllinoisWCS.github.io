@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import PhoneComponent from './PhoneComponent';
-import styles from '@/styles/AboutUsSection.module.css';
-import stylesHome from '@/styles/Home.module.css';
+import PhoneComponent from '../components/general/PhoneComponent';
+import styles from '@/styles/sections/AboutUsSection.module.css';
+import stylesHome from '@/styles/pages/Home.module.css';
 
 export default function AboutUsSection() {
   return (

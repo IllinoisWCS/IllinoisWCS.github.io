@@ -1,4 +1,4 @@
-import styles from '@/styles/Key.module.css';
+import styles from '@/styles/components/Key.module.css';
 
 export default function Key({
   children,

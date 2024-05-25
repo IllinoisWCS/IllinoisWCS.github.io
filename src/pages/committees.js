@@ -1,5 +1,5 @@
-import CommitteesSection from '../components/CommitteesSection';
-import styles from '@/styles/Committees.module.css';
+import CommitteesSection from '../sections/CommitteesSection';
+import styles from '@/styles/pages/Committees.module.css';
 
 const values = [
   {

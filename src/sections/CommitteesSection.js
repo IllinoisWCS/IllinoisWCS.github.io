@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import ComputerWindow from './ComputerWindow';
-import styles from '@/styles/CommitteesSection.module.css';
+import ComputerWindow from '../components/general/ComputerWindowComponent';
+import styles from '@/styles/sections/CommitteesSection.module.css';
 
 export default function CommitteesSection({
   isLeft,

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '@/styles/Sponsor.module.css';
+import styles from '@/styles/components/Sponsor.module.css';
 
 export default function Sponsor({
   sponsor,

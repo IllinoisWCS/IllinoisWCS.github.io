@@ -3,13 +3,13 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 
-import AboutUsSection from '../components/AboutUsSection';
-import ComputerWindow from '../components/ComputerWindow';
-import StayInTouchSection from '../components/StayInTouchSection';
-import SponsorsSection from '../components/SponsorsSection';
-import UpcomingEventsSection from '../components/UpcomingEventsSection';
+import AboutUsSection from '../sections/AboutUsSection';
+import ComputerWindow from '../components/general/ComputerWindowComponent';
+import StayInTouchSection from '../sections/StayInTouchSection';
+import SponsorsSection from '../sections/SponsorsSection';
+import UpcomingEventsSection from '../sections/UpcomingEventsSection';
 
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/pages/Home.module.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
