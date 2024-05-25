@@ -1,13 +1,30 @@
-import React, {useState, useEffect} from "react";
-import Link from "next/link";
-import {useRouter} from "next/router";
-import styles from "@/styles/Navbar.module.css";
-import NavBarMobile from "./NavBarMobile";
-import {Navbar} from "react-bootstrap";
-import Image from "next/image";
+import React, { useState, useEffect } from 'react';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+import NavbarMobile from './NavbarMobile';
+// import {Navbar} from 'react-bootstrap';
+import styles from '@/styles/Navbar.module.css';
+
+function NavLink({
+  href,
+  label,
+}) {
+  const router = useRouter();
+  const isActive = router.pathname === href;
+
+  return (
+    <Link href={href}>
+      <h3 className={`${isActive ? styles.activeLink : ''}`}>
+        {label}
+      </h3>
+    </Link>
+  );
+}
 
 export default function WCSNavbar() {
-  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -23,9 +40,9 @@ export default function WCSNavbar() {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", closeMenuOnResize);
+    window.addEventListener('resize', closeMenuOnResize);
     return () => {
-      window.removeEventListener("resize", closeMenuOnResize);
+      window.removeEventListener('resize', closeMenuOnResize);
     };
   }, []);
 
@@ -39,36 +56,33 @@ export default function WCSNavbar() {
           alt="wcs logo"
         />
       </Link>
-      <div
-        className={`${styles.linksContainer} ${isMenuOpen ? styles.show : ""}`}
-      >
-        <NavLink href="https://points.illinoiswcs.org/" label="points" />
-        <NavLink href="/officers" label="officers" />
-        <NavLink href="/committees" label="committees" />
-        {/* <NavLink href="/resources" label="resources" /> */}
+
+      <div className={`${styles.linksContainer} ${isMenuOpen ? styles.show : ''}`}>
+        <NavLink
+          href="https://points.illinoiswcs.org/"
+          label="points"
+          onClick={handleLinkClick}
+        />
+        <NavLink
+          href="/officers"
+          label="officers"
+          onClick={handleLinkClick}
+        />
+        <NavLink
+          href="/committees"
+          label="committees"
+          onClick={handleLinkClick}
+        />
+        {/* <NavLink href="/resources" label="resources" onClick={handleLinkClick} /> */}
       </div>
-      <div className={styles.hamburger} onClick={toggleMenu}>
-        <div
-          className={`${styles.bar} ${isMenuOpen ? styles.open1 : ""}`}
-        ></div>
-        <div
-          className={`${styles.bar} ${isMenuOpen ? styles.open2 : ""}`}
-        ></div>
-        <div
-          className={`${styles.bar} ${isMenuOpen ? styles.open3 : ""}`}
-        ></div>
-      </div>
-      {isMenuOpen && <NavBarMobile />}
+
+      <button type="button" className={styles.hamburger} onClick={toggleMenu}>
+        <div className={`${styles.bar} ${isMenuOpen ? styles.open1 : ''}`} />
+        <div className={`${styles.bar} ${isMenuOpen ? styles.open2 : ''}`} />
+        <div className={`${styles.bar} ${isMenuOpen ? styles.open3 : ''}`} />
+      </button>
+
+      {isMenuOpen && <NavbarMobile />}
     </div>
   );
-
-  function NavLink({href, label}) {
-    const isActive = router.pathname === href;
-
-    return (
-      <Link href={href}>
-        <h3 className={`${isActive ? styles.activeLink : ""}`}>{label}</h3>
-      </Link>
-    );
-  }
 }

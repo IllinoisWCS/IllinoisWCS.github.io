@@ -1,14 +1,19 @@
-import PhoneComponent from "./PhoneComponent";
-import styles from "@/styles/AboutUsSection.module.css";
-import stylesHome from "@/styles/Home.module.css";
-import Image from "next/image";
+import Image from 'next/image';
+import PhoneComponent from './PhoneComponent';
+import styles from '@/styles/AboutUsSection.module.css';
+import stylesHome from '@/styles/Home.module.css';
 
-const AboutUsSection = () => {
+export default function AboutUsSection() {
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.phoneContainer}`}>
         <PhoneComponent>
-          <Image width="0" height="0" src="/assets/img/events/corporate-retreat-22-23.jpg" alt="corporate retreat 22-23"/>
+          <Image
+            src="/assets/img/events/corporate-retreat-22-23.jpg"
+            alt="corporate retreat 22-23"
+            height={475}
+            width={353}
+          />
         </PhoneComponent>
       </div>
       <div>
@@ -39,6 +44,4 @@ const AboutUsSection = () => {
       </div>
     </div>
   );
-};
-
-export default AboutUsSection;
+}

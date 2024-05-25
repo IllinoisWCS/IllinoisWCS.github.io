@@ -1,25 +1,28 @@
-import styles from "@/styles/Sponsor.module.css";
-import Image from "next/image";
+import Image from 'next/image';
+import styles from '@/styles/Sponsor.module.css';
 
-const Sponsor = ({ sponsor, url, tier }) => {
+export default function Sponsor({
+  sponsor,
+  url,
+  tier,
+}) {
   const link = url
     ? () => {
-        window.open(url, "_blank").focus();
-      }
+      window.open(url, '_blank').focus();
+    }
     : null;
-  
+
   return (
-    <div onClick={link} className={`${styles.container} ${styles[tier]}`}>
-      <Image 
-        className={styles.image} 
-        src={`/assets/img/logos/sponsors/${sponsor}`} 
-        layout='fill'
-        width={0} 
+    <button type="button" onClick={link} className={`${styles.container} ${styles[tier]}`}>
+      <Image
+        className={styles.image}
+        src={`/assets/img/logos/sponsors/${sponsor}`}
+        fill
+        width={0}
         height={0}
+        sizes="100wv"
         alt={sponsor}
       />
-    </div>
-  )
+    </button>
+  );
 }
-
-export default Sponsor;

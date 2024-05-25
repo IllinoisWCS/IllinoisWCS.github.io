@@ -1,4 +1,4 @@
-import Layout from "@/components/layout";
+import NavbarLayout from "@/components/layout";
 import styles from "@/styles/Home.module.css";
 import cloud from "/public/assets/design-vectors/cloud.svg"
 

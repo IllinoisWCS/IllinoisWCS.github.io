@@ -33,6 +33,8 @@
   display: none; /* Initially hidden */
   cursor: pointer;
   padding: 15px 25px 15px 25px;
+  background-color: transparent;
+  border: none;
 }
 
 .bar {

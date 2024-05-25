@@ -196,6 +196,11 @@
   background-size: cover;
 }
 
+.hiddenButton {
+  border: none;
+  background-color: transparent;
+}
+
 @media only screen and (max-width: 768px) {
   .eventContainer {
     padding: 3.75rem;

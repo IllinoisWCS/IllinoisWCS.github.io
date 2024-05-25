@@ -49,3 +49,8 @@
   font-weight: 400;
   color: #21636c;
 }
+
+.hiddenButton {
+  border: none;
+  background-color: transparent;
+}

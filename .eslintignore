@@ -1,0 +1,4 @@
+# Start by ignoring everything by default
+src/**/*.js
+# Enable linting just for some files
+!src/components/UpcomingEventsSection.js

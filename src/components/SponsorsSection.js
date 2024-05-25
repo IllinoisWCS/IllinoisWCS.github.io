@@ -1,17 +1,15 @@
-import Sponsor from "./Sponsor";
-import TabletComponent from "./TabletComponent";
-import styles from "@/styles/Home.module.css";
+import Sponsor from './Sponsor';
+import styles from '@/styles/Home.module.css';
+import TabletComponent from './TabletComponent';
 
-const SponsorsSection = () => {
+export default function SponsorsSection() {
   return (
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Our Sponsors</h2>
       <h3 className={styles.sponsorCall}>
-        If you are interested in sponsoring us, please email{" "}
-        <a
-          className={styles.sponsorEmail}
-          href="mailto:contact@illinoiswcs.org"
-        >
+        If you are interested in sponsoring us, please email
+        {' '}
+        <a className={styles.sponsorEmail} href="mailto:contact@illinoiswcs.org">
           contact@illinoiswcs.org
         </a>
         !
@@ -78,6 +76,4 @@ const SponsorsSection = () => {
       </div>
     </div>
   );
-};
-
-export default SponsorsSection;
+}

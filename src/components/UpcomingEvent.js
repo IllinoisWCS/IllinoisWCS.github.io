@@ -1,7 +1,8 @@
-import { useState } from "react";
-import EventsWindow from "./EventsWindow";
-import styles from "@/styles/UpcomingEvent.module.css";
-import EventDescriptionModal from "./EventDescriptionModal";
+import { useState } from 'react';
+
+import EventDescriptionModal from './EventDescriptionModal';
+import EventsWindow from './EventsWindow';
+import styles from '@/styles/UpcomingEvent.module.css';
 
 export default function UpcomingEvent({
   title,
@@ -24,7 +25,7 @@ export default function UpcomingEvent({
 
   return (
     <>
-      <div onClick={openModal}>
+      <button type="button" onClick={openModal} className={styles.hiddenButton}>
         <EventsWindow location={location} hasDescription={hasDescription}>
           <div className={styles.container}>
             <h3 className={styles.title}>{title}</h3>
@@ -34,9 +35,15 @@ export default function UpcomingEvent({
             </div>
           </div>
         </EventsWindow>
-      </div>
+      </button>
       <EventDescriptionModal
-        data={{ title, date, time, location, description }}
+        data={{
+          title,
+          date,
+          time,
+          location,
+          description,
+        }}
         isOpen={showModal}
         closeModal={closeModal}
       />

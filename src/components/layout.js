@@ -1,12 +1,12 @@
-import WCSNavbar from "./navbar";
+import WCSNavbar from './Navbar';
 
-const Layout = ({ children }) => {
+export default function NavbarLayout({
+    children,
+}) {
   return (
     <div>
       <WCSNavbar />
       {children}
     </div>
   );
-};
-
-export default Layout;
+}
