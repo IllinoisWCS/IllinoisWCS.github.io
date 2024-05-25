@@ -23,9 +23,10 @@
     ],
     "import/no-unresolved": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": "error",
+    "react/jsx-props-no-spreading": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/no-array-index-key": "off"
   }
 }

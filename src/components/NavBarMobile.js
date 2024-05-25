@@ -23,7 +23,6 @@ export default function NavbarMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const handleLinkClick = () => {
-    console.log("hi")
     setIsMenuOpen(false); // Close the dropdown menu when link is clicked
   };
 

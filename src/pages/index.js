@@ -1,16 +1,17 @@
-import Head from "next/head";
-import React from "react";
-import ComputerWindow from "@/components/ComputerWindow";
-import styles from "@/styles/Home.module.css";
-import {Inter} from "next/font/google";
-import StayInTouchSection from "@/components/StayInTouchSection";
-import UpcomingEventsSection from "@/components/UpcomingEventsSection";
-import AboutUsSection from "@/components/AboutUsSection";
-import SponsorsSection from "@/components/SponsorsSection";
-import OpenOffice from "./openoffice";
-import Image from "next/image";
+import React from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import { Inter } from 'next/font/google';
 
-const inter = Inter({subsets: ["latin"]});
+import AboutUsSection from '../components/AboutUsSection';
+import ComputerWindow from '../components/ComputerWindow';
+import StayInTouchSection from '../components/StayInTouchSection';
+import SponsorsSection from '../components/SponsorsSection';
+import UpcomingEventsSection from '../components/UpcomingEventsSection';
+
+import styles from '@/styles/Home.module.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
                      CS@Illinois that strives to provide opportunities and a
                      community for female and non-binary CS students at University of Illinois."
         />
-        <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+        <meta httpEquiv="content-type" content="text/html" charset="UTF-8" />
         <meta
           name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
@@ -87,7 +88,7 @@ export default function Home() {
                 height={0}
                 sizes="100wv"
                 alt="wcs committee photo"
-             />
+              />
             </ComputerWindow>
           </div>
         </div>

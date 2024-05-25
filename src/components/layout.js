@@ -1,7 +1,7 @@
 import WCSNavbar from './Navbar';
 
 export default function NavbarLayout({
-    children,
+  children,
 }) {
   return (
     <div>

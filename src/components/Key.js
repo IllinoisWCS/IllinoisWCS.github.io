@@ -1,8 +1,8 @@
 import styles from '@/styles/Key.module.css';
 
 export default function Key({
-    children,
-    url,
+  children,
+  url,
 }) {
   const link = url
     ? () => {
