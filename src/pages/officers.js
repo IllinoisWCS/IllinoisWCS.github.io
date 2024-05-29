@@ -1,6 +1,6 @@
 import OfficerCard from "@/components/OfficerCard";
 import React from "react";
-import officerData from "public/assets/js/officers.json";
+import officerData from '../data/officers.json';
 import styles from "@/styles/Officers.module.css";
 
 export default function Officers({children}) {
