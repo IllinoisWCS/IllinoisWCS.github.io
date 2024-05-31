@@ -83,7 +83,7 @@ export default function Home() {
             <ComputerWindow>
               <Image
                 className={`${styles.windowImage}`}
-                src="/assets/img/members/committees23-24.jpg"
+                src="/assets/img/home-page/committees23-24.jpg"
                 width={0}
                 height={0}
                 sizes="100wv"

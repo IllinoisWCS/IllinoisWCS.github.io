@@ -135,7 +135,7 @@ export default function UpcomingEventsSection() {
                     <div className={styles.modalPhone}>
                       <PhoneComponent>
                         <Image
-                          src="/assets/img/events/explorations-painting-social.jpg"
+                          src="/assets/img/open-office/explorations-painting-social.jpg"
                           height={475}
                           width={594}
                           alt="explorations painting social"

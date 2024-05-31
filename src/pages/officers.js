@@ -1,6 +1,6 @@
 import React from 'react';
 
-import officerData from 'public/assets/js/officers.json';
+import officerData from '../data/officers.json';
 import OfficerCard from '../components/OfficerCard';
 import styles from '@/styles/pages/Officers.module.css';
 
