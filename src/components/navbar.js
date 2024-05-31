@@ -32,7 +32,7 @@ export default function WCSNavbar() {
     <div className={styles.container}>
       <Link className={styles.logo} href="/">
         <img
-          src="https://points.illinoiswcs.org/assets/logo-9d49d730.png"
+          src="/assets/img/wcs/logo.png"
           width="140"
         />
       </Link>
