@@ -1,0 +1,12 @@
+.hamburger {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 76.66px;
+  background-image: linear-gradient(
+    rgba(253, 176, 218, 1),
+    rgba(255, 143, 205, 1)
+  );
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
