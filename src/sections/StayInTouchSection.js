@@ -13,9 +13,7 @@ export default function StayInTouchSection() {
             </Key>
           </div>
           <div className={styles.linkTwo}>
-            <Key url="http://www.instagram.com/illinoiswcs">
-              Instagram
-            </Key>
+            <Key url="http://www.instagram.com/illinoiswcs">Instagram</Key>
           </div>
           <div className={styles.linkThree}>
             <Key url="http://illinoiswcs.us8.list-manage.com/subscribe?u=6f053b4b1cec0f29449538eff&id=65a43965f5">
@@ -23,9 +21,7 @@ export default function StayInTouchSection() {
             </Key>
           </div>
           <div className={styles.linkFour}>
-            <Key url="https://medium.com/@illinoiswcs">
-              Medium
-            </Key>
+            <Key url="https://medium.com/@illinoiswcs">Medium</Key>
           </div>
         </div>
       </div>

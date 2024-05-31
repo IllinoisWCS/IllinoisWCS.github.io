@@ -8,18 +8,13 @@ import NavbarMobile from './NavbarMobile';
 // import {Navbar} from 'react-bootstrap';
 import styles from '@/styles/sections/Navbar.module.css';
 
-function NavLink({
-  href,
-  label,
-}) {
+function NavLink({ href, label }) {
   const router = useRouter();
   const isActive = router.pathname === href;
 
   return (
     <Link href={href}>
-      <h3 className={`${isActive ? styles.activeLink : ''}`}>
-        {label}
-      </h3>
+      <h3 className={`${isActive ? styles.activeLink : ''}`}>{label}</h3>
     </Link>
   );
 }
@@ -57,17 +52,15 @@ export default function WCSNavbar() {
         />
       </Link>
 
-      <div className={`${styles.linksContainer} ${isMenuOpen ? styles.show : ''}`}>
+      <div
+        className={`${styles.linksContainer} ${isMenuOpen ? styles.show : ''}`}
+      >
         <NavLink
           href="https://points.illinoiswcs.org/"
           label="points"
           onClick={handleLinkClick}
         />
-        <NavLink
-          href="/officers"
-          label="officers"
-          onClick={handleLinkClick}
-        />
+        <NavLink href="/officers" label="officers" onClick={handleLinkClick} />
         <NavLink
           href="/committees"
           label="committees"

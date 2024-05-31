@@ -59,14 +59,18 @@ export default function OpenOffice() {
         <table className={`${styles.table}`}>
           <thead>
             <tr className={`${styles.tr}`}>
-              <th className={`${styles.space}`} id={`${styles.openOfficeSpace} ${styles.th}`}>
+              <th
+                className={`${styles.space}`}
+                id={`${styles.openOfficeSpace} ${styles.th}`}
+              >
                 {' '}
               </th>
               {data[weekNum][week].map(({ heading, rows }, index) => (
-                <th key={index} className={`${styles.openOfficeDay} ${styles.th}`}>
-                  <p>
-                    {heading}
-                  </p>
+                <th
+                  key={index}
+                  className={`${styles.openOfficeDay} ${styles.th}`}
+                >
+                  <p>{heading}</p>
                 </th>
               ))}
             </tr>
@@ -77,30 +81,29 @@ export default function OpenOffice() {
               <tr key={x} className={`${styles.tr}`}>
                 <td className={`${styles.td} ${styles.openOfficeTimes}`}>
                   <div className={`${styles.openOfficeCellContainer}`}>
-                    <p>
-                      {data[weekNum][week][0].rows[x].time}
-                    </p>
+                    <p>{data[weekNum][week][0].rows[x].time}</p>
                   </div>
                 </td>
 
                 {data[weekNum][week].map(({ heading, rows }, index) => (
-                  <td key={index} className={`${styles.openOfficeCell} ${styles.td}`}>
+                  <td
+                    key={index}
+                    className={`${styles.openOfficeCell} ${styles.td}`}
+                  >
                     <div className={`${styles.openOfficeCellContainer}`}>
                       {rows[x].officers.map((name, index1) => (
                         <div key={index1}>
-                          <span className={`${styles.openOfficeHighlight} ${styles.openOfficeName}`}>
-                            <p>
-                              {name}
-                            </p>
+                          <span
+                            className={`${styles.openOfficeHighlight} ${styles.openOfficeName}`}
+                          >
+                            <p>{name}</p>
                           </span>
                         </div>
                       ))}
                       {rows[x].committees.map((name, index2) => (
                         <div key={index2}>
                           <span className={`${styles.openOfficeName}`}>
-                            <p>
-                              {name}
-                            </p>
+                            <p>{name}</p>
                           </span>
                         </div>
                       ))}

@@ -16,9 +16,7 @@ export default function CommitteesSection({
     <div className={`${styles.container}`}>
       {isLeft && (
         <>
-          <h2 className={`${styles.nameLeft}`}>
-            {name}
-          </h2>
+          <h2 className={`${styles.nameLeft}`}>{name}</h2>
           <div className={`${styles.content}`}>
             <ComputerWindow className={`${styles.window}`} topbarColor={color}>
               <Image
@@ -30,7 +28,10 @@ export default function CommitteesSection({
                 alt={img}
               />
             </ComputerWindow>
-            <ComputerWindow className={`${styles.mobileWindow}`} topbarColor={color}>
+            <ComputerWindow
+              className={`${styles.mobileWindow}`}
+              topbarColor={color}
+            >
               <Image
                 className={`${styles.mobileImage}`}
                 src={img}
@@ -41,10 +42,11 @@ export default function CommitteesSection({
               />
             </ComputerWindow>
             <div className={`${styles.description}`}>
-              <p className={`${styles.descriptionRight}`}>
-                {description}
-              </p>
-              <p className={`${styles.officersRight}`} style={{ backgroundColor: bColor }}>
+              <p className={`${styles.descriptionRight}`}>{description}</p>
+              <p
+                className={`${styles.officersRight}`}
+                style={{ backgroundColor: bColor }}
+              >
                 {officers}
               </p>
             </div>
@@ -54,11 +56,12 @@ export default function CommitteesSection({
 
       {!isLeft && (
         <>
-          <h2 className={`${styles.nameRight}`}>
-            {name}
-          </h2>
+          <h2 className={`${styles.nameRight}`}>{name}</h2>
           <div className={`${styles.content}`}>
-            <ComputerWindow className={`${styles.mobileWindow}`} topbarColor={color}>
+            <ComputerWindow
+              className={`${styles.mobileWindow}`}
+              topbarColor={color}
+            >
               <Image
                 className={`${styles.mobileImage}`}
                 src={img}
@@ -69,10 +72,11 @@ export default function CommitteesSection({
               />
             </ComputerWindow>
             <div className={`${styles.description}`}>
-              <p className={`${styles.descriptionLeft}`}>
-                {description}
-              </p>
-              <p className={`${styles.officersLeft}`} style={{ backgroundColor: bColor }}>
+              <p className={`${styles.descriptionLeft}`}>{description}</p>
+              <p
+                className={`${styles.officersLeft}`}
+                style={{ backgroundColor: bColor }}
+              >
                 {officers}
               </p>
             </div>

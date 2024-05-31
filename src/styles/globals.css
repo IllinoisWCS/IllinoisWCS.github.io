@@ -1,4 +1,4 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
 /* @import url("https://fonts.googleapis.com/css2?family=Gloock&family=Lato:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Gloock&family=Lato:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"); */
@@ -6,9 +6,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Lato", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono",
-    "Droid Sans Mono", "Courier New", monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Lato', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono',
+    'Droid Sans Mono', 'Courier New', monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -115,28 +115,28 @@ a {
 }
 
 h1 {
-  font-family: "Audiowide" !important;
+  font-family: 'Audiowide' !important;
   font-weight: 400;
   font-size: 64px;
   color: black;
 }
 
 h2 {
-  font-family: "Audiowide" !important;
+  font-family: 'Audiowide' !important;
   font-weight: 400;
   font-size: 40px;
   color: black;
 }
 
 h3 {
-  font-family: "Lato" !important;
+  font-family: 'Lato' !important;
   font-weight: 700;
   color: #21636c;
   font-size: 28px; /* Adjusted to 28px */
 }
 
 p {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 700;
   font-size: 20px;
   color: #21636c;
@@ -148,7 +148,7 @@ ul {
 }
 
 li {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 700;
   font-size: 20px;
   color: #21636c;

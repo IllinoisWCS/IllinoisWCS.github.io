@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  background-image: url("/assets/design-vectors/grid.svg");
+  background-image: url('/assets/design-vectors/grid.svg');
   background-size: 32rem;
   width: fit-content;
   height: 8rem;
@@ -25,7 +25,7 @@
 
 .keyTop::before {
   content: '';
-  background-color: #FFCEE7;
+  background-color: #ffcee7;
   width: calc(100% - 10px);
   height: 6px;
   position: absolute;
@@ -50,7 +50,7 @@
   top: 5px;
   width: 0;
   height: calc(100% - 15px);
-  border-right: 10px solid #FFCEE7;
+  border-right: 10px solid #ffcee7;
   border-top: 6px solid transparent;
   border-bottom: 10px solid transparent;
 }
@@ -67,7 +67,7 @@
 
 .keyBottom::before {
   content: '';
-  background-color: #FFCEE7;
+  background-color: #ffcee7;
   width: calc(100% - 10px);
   height: 10px;
   position: absolute;
@@ -86,7 +86,7 @@
 .keyBody {
   margin: 5px 10px 10px 0;
   padding: 0 0.75rem;
-  background-color: #FFCEE7;
+  background-color: #ffcee7;
   color: #734448;
   overflow: hidden;
   border: black solid 1px;
@@ -99,19 +99,19 @@
 }
 
 .keyTop:hover::before {
-  background-color: #FF7CC0;
+  background-color: #ff7cc0;
 }
 
 .keyTop:hover .keyRight::before {
-  border-right: 10px solid #FF7CC0;
+  border-right: 10px solid #ff7cc0;
 }
 
 .keyTop:hover .keyBottom::before {
-  background-color: #FF7CC0;
+  background-color: #ff7cc0;
 }
 
 .keyTop:hover .keyBody {
-  background-color: #FF7CC0;
+  background-color: #ff7cc0;
   color: #ffe3f2;
 }
 

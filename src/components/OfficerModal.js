@@ -98,7 +98,11 @@ function OfficerInformation(
             </div>
           </div>
         </div>
-        <button type="button" onClick={closeModal} className={styles.closeButton}>
+        <button
+          type="button"
+          onClick={closeModal}
+          className={styles.closeButton}
+        >
           Close
         </button>
       </ComputerWindow>
@@ -106,10 +110,6 @@ function OfficerInformation(
   );
 }
 
-export default function OfficerModal({
-  isOpen,
-  closeModal,
-  officer,
-}) {
+export default function OfficerModal({ isOpen, closeModal, officer }) {
   return isOpen ? OfficerInformation(closeModal, officer) : null;
 }

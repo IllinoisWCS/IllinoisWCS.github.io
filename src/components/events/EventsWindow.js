@@ -12,17 +12,13 @@ export default function EventsWindow({
     <div className={hasDescription ? styles.wrapperCanClick : styles.wrapper}>
       <ComputerWindow topbarColor={topbarColor}>
         <div className={styles.container}>
-          <div>
-            {children}
-          </div>
+          <div>{children}</div>
           {location && location.length && (
             <div
               className={styles.eventButton}
               style={{ backgroundColor: buttonColor }}
             >
-              <p>
-                {location}
-              </p>
+              <p>{location}</p>
             </div>
           )}
         </div>

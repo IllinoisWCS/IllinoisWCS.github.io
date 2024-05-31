@@ -5,10 +5,7 @@ import { useRouter } from 'next/router';
 
 import styles from '@/styles/sections/NavbarMobile.module.css';
 
-function NavLink({
-  href,
-  label,
-}) {
+function NavLink({ href, label }) {
   const router = useRouter();
   const isActive = router.pathname === href;
 
@@ -27,8 +24,7 @@ export default function NavbarMobile() {
   };
 
   return (
-    isMenuOpen
-    && (
+    isMenuOpen && (
       <div className={styles.hamburger}>
         <NavLink
           className={styles.burger}

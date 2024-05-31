@@ -16,19 +16,14 @@ export default function UpcomingEventsSection() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const eventsUrl = 'https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
+        const eventsUrl =
+          'https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
         const res = await fetch(eventsUrl);
         const { events: fetchedEvents } = await res.json();
         setEvents(
           fetchedEvents
             .slice(0, 5)
-            .map(({
-              startTime,
-              endTime,
-              title,
-              location,
-              description,
-            }) => {
+            .map(({ startTime, endTime, title, location, description }) => {
               const startDate = new Date(startTime);
               const endDate = new Date(endTime);
 
@@ -78,7 +73,11 @@ export default function UpcomingEventsSection() {
       <h2 className={styles.header}>Upcoming Events</h2>
       <div className={styles.upcomingEventSection}>
         <div className={styles.eventContainer}>
-          <button type="button" onClick={openModal} className={`${styles.hiddenButton}`}>
+          <button
+            type="button"
+            onClick={openModal}
+            className={`${styles.hiddenButton}`}
+          >
             <EventsWindow
               location="Siebel CS 0211"
               topbarColor="#FB79C3"
@@ -88,7 +87,10 @@ export default function UpcomingEventsSection() {
               <p className={styles.eventText}>
                 Come to our office to chat, ask questions, or just study!
               </p>
-              <p className={styles.eventText} style={{ textDecoration: 'underline' }}>
+              <p
+                className={styles.eventText}
+                style={{ textDecoration: 'underline' }}
+              >
                 Click to learn more!
               </p>
             </EventsWindow>
@@ -101,7 +103,11 @@ export default function UpcomingEventsSection() {
                   <div className={styles.modalContainer}>
                     <div className={styles.modalContainerLeft}>
                       <div className={styles.modalSection}>
-                        <h3 style={{ textAlign: 'center' }}>
+                        <h3
+                          style={{
+                            textAlign: 'center',
+                          }}
+                        >
                           Open Office happens Monday-Friday from 2-5 PM in the
                           WCS Office!
                         </h3>
@@ -144,7 +150,11 @@ export default function UpcomingEventsSection() {
                     </div>
                   </div>
                 </div>
-                <button type="button" onClick={closeModal} className={styles2.closeButton2}>
+                <button
+                  type="button"
+                  onClick={closeModal}
+                  className={styles2.closeButton2}
+                >
                   Close
                 </button>
               </ComputerWindow>
@@ -158,25 +168,18 @@ export default function UpcomingEventsSection() {
               </p>
             </ComputerWindow>
           ) : (
-            events.map((
-              {
-                title,
-                date,
-                time,
-                location,
-                description,
-              },
-              index,
-            ) => (
-              <UpcomingEvent
-                key={index}
-                title={title}
-                date={date}
-                time={time}
-                location={location}
-                description={description}
-              />
-            ))
+            events.map(
+              ({ title, date, time, location, description }, index) => (
+                <UpcomingEvent
+                  key={index}
+                  title={title}
+                  date={date}
+                  time={time}
+                  location={location}
+                  description={description}
+                />
+              ),
+            )
           )}
         </div>
       </div>

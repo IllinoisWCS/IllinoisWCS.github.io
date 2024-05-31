@@ -108,7 +108,7 @@
 
 .center::before,
 .center::after {
-  content: "";
+  content: '';
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -134,12 +134,12 @@
 }
 
 .header::before {
-  content: "";
+  content: '';
   position: absolute;
   height: 24px;
   width: 24px;
   left: -1.5rem;
-  background-image: url("/assets/design-vectors/arrow.svg");
+  background-image: url('/assets/design-vectors/arrow.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -151,7 +151,7 @@
 .windowGrid {
   margin-top: 3rem;
   padding: 2rem 4rem;
-  background-image: url("/assets/design-vectors/grid.svg");
+  background-image: url('/assets/design-vectors/grid.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -190,7 +190,7 @@
   padding: 2rem 3rem;
   position: relative;
   width: fit-content;
-  background-image: url("/assets/design-vectors/grid.svg");
+  background-image: url('/assets/design-vectors/grid.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -267,7 +267,7 @@
   padding: 2rem 3rem;
   position: relative;
   width: fit-content;
-  background-image: url("/assets/design-vectors/grid.svg");
+  background-image: url('/assets/design-vectors/grid.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -9,9 +9,7 @@ export default function ComputerWindow({
     <div className={`${styles.container} ${className}`}>
       <div className={styles.topbar} style={{ backgroundColor: topbarColor }}>
         <ul>
-          <li
-            className={`${styles.topbarButtons} ${styles.topbarRedButton}`}
-          />
+          <li className={`${styles.topbarButtons} ${styles.topbarRedButton}`} />
           <li
             className={`${styles.topbarButtons} ${styles.topbarYellowButton}`}
           />
@@ -20,9 +18,7 @@ export default function ComputerWindow({
           />
         </ul>
       </div>
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
   );
 }
