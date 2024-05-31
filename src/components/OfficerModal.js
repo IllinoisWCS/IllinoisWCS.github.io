@@ -26,7 +26,11 @@ function OfficerInformation(
       <ComputerWindow className={styles.window} topbarColor="#D2616C">
         <div className={styles.officerInfo}>
           <h3 className={styles.title}>
-            {name} - {position}
+            {name}
+            {' '}
+            -
+            {' '}
+            {position}
           </h3>
 
           <div className="columnContainer">

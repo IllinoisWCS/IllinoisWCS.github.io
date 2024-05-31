@@ -16,8 +16,7 @@ export default function UpcomingEventsSection() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const eventsUrl =
-          'https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
+        const eventsUrl = 'https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
         const res = await fetch(eventsUrl);
         const { events: fetchedEvents } = await res.json();
         setEvents(
@@ -51,7 +50,7 @@ export default function UpcomingEventsSection() {
             }),
         );
       } catch (error) {
-        console.error('Error fetching events:', error);
+        // console.error('Error fetching events:', error);
       }
     };
 

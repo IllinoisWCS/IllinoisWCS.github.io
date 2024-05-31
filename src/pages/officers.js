@@ -1,6 +1,6 @@
-import OfficerCard from "@/components/OfficerCard";
-import React from "react";
+import React from 'react';
 
+import OfficerCard from '../components/OfficerCard';
 import officerData from '../data/officers.json';
 import styles from '@/styles/pages/Officers.module.css';
 
