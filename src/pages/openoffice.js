@@ -65,9 +65,9 @@ export default function OpenOffice() {
               >
                 {' '}
               </th>
-              {data[weekNum][week].map(({ heading, rows }, index) => (
+              {data[weekNum][week].map(({ heading, rows }) => (
                 <th
-                  key={index}
+                  key={rows}
                   className={`${styles.openOfficeDay} ${styles.th}`}
                 >
                   <p>{heading}</p>
@@ -85,9 +85,9 @@ export default function OpenOffice() {
                   </div>
                 </td>
 
-                {data[weekNum][week].map(({ heading, rows }, index) => (
+                {data[weekNum][week].map(({ heading, rows }) => (
                   <td
-                    key={index}
+                    key={heading}
                     className={`${styles.openOfficeCell} ${styles.td}`}
                   >
                     <div className={`${styles.openOfficeCellContainer}`}>
