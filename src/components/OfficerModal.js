@@ -82,7 +82,7 @@ function OfficerInformation(
               <a href={`mailto:${email}`}>
                 <Image
                   className={`${styles.socials}`}
-                  src="/assets/logos/media/email.png"
+                  src="/assets/img/logos/media/email.png"
                   width={0}
                   height={0}
                   sizes="100vw"
