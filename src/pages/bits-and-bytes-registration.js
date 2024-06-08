@@ -1,6 +1,6 @@
 export default function BBRegistration() {
   return (
-    <div align="center">
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSehtJGfdHCoDi8AdfGRzU2-xy1wQeY05to5FRrdQO9B2amF7g/viewform?embedded=true"
         width="640"
