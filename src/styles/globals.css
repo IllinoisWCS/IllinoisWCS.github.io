@@ -37,12 +37,19 @@
     #00000010,
     #00000010,
     #00000080
+    
   );
 
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --wcs-pink: #F65563;
+  --wcs-blue: #31CACE;
+  --light-pink: #FDC8CC;
+  --light-blue: #B1F0F2;
+  --light-light-pink: #FFF8F9;
 }
 
 @media (prefers-color-scheme: dark) {
