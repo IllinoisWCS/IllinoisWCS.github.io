@@ -44,12 +44,7 @@ export default function WCSNavbar() {
   return (
     <div className={styles.container}>
       <Link className={styles.logo} href="/">
-        <Image
-          src="/wcs-logo.png"
-          width={140}
-          height={35}
-          alt="wcs logo"
-        />
+        <Image src="/wcs-logo.png" width={140} height={35} alt="wcs logo" />
       </Link>
 
       <div
