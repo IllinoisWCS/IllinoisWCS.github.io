@@ -41,3 +41,8 @@
 .resourceText {
   font-size: small;
 }
+
+.resourceName {
+  font-size: small;
+  text-decoration: underline;
+}

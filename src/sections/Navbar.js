@@ -61,7 +61,11 @@ export default function WCSNavbar() {
           label="committees"
           onClick={handleLinkClick}
         />
-        {/* <NavLink href="/resources" label="resources" onClick={handleLinkClick} /> */}
+        <NavLink
+          href="/resources"
+          label="resources"
+          onClick={handleLinkClick}
+        />
       </div>
 
       <button type="button" className={styles.hamburger} onClick={toggleMenu}>

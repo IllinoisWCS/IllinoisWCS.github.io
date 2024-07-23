@@ -1,5 +1,7 @@
 import GetHelpSection from '../sections/GetHelpSection';
 import styles from '@/styles/pages/Home.module.css';
+import resourcesStyles from '@/styles/pages/Resources.module.css';
+
 import ExternalOpportunitiesSection from '../sections/ExternalOpportunitiesSection';
 
 export default function Resources() {
@@ -7,11 +9,14 @@ export default function Resources() {
     <main className={`${styles.main}`}>
       <h1 style={{ textAlign: 'center' }}>Resources</h1>
 
-      <p style={{ textAlign: 'center', padding: '2em' }}>
-        From _ to _ blah blah blah explain this page here. There is some more
-        explanation here. It shouldnt be long but it should be good and
-        readblae. And spelled correclty.
-      </p>
+      <div className={`${resourcesStyles.descriptionContainer}`}>
+        <p className={`${resourcesStyles.description}`}>
+          We&apos;ve compiled some helpful resources for our members to utilize,
+          from external opportunities like job postings and scholarships, to
+          mental health and academic help. See something missing? Reach out to
+          us at illinoiswcs@gmail.com
+        </p>
+      </div>
 
       <h2 className={`${styles.header}`}>External Opportunities</h2>
       <ExternalOpportunitiesSection />
