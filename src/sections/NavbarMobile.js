@@ -44,12 +44,12 @@ export default function NavbarMobile() {
           label="committees"
           onClick={handleLinkClick}
         />
-        {/* <NavLink
+        <NavLink
           className={styles.burger}
           href="/resources"
           label="resources"
           onClick={handleLinkClick}
-        /> */}
+        />
       </div>
     )
   );

@@ -7,8 +7,8 @@ export default function SponsorsSection() {
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Our Sponsors</h2>
       <h3 className={styles.sponsorCall}>
-        If you are interested in sponsoring us, please email
-        {' '}
+        {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+        If you are interested in sponsoring us, please email{' '}
         <a
           className={styles.sponsorEmail}
           href="mailto:contact@illinoiswcs.org"
