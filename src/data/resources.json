@@ -1,0 +1,133 @@
+[
+  {
+    "type": "Mental Health, External",
+    "items": [
+      {
+        "name": "National Suicide Prevention Lifeline",
+        "description": "988 to speak with a trained crisis counselor."
+      },
+
+      {
+        "name": "Crisis Text Line",
+        "description": "Text 741-741 to connect with a trained crisis counselor to receive crisis support via text message."
+      },
+
+      {
+        "name": "Champaign-Urbana Crisis Line",
+        "description": "This is similar to the national crisis line but specifically for those in the local area. This one is especially useful in that a crisis counselor can help you access local resources or help. Phone: (217) 359-4141"
+      },
+
+      {
+        "name": "911 Emergency",
+        "description": "You can also call 911 if the crisis is a life-threatening emergency. Make sure to notify the operator that it is a psychiatric emergency and ask for an officer trained in crisis intervention or trained to assist people experiencing a psychiatric emergency."
+      },
+
+      {
+        "name": "National Domestic Violence Hotline",
+        "description": "Call 800-799-SAFE (7233) to speak with trained experts who provide confidential support to anyone experiencing domestic violence or seeking resources and information."
+      },
+
+      {
+        "name": "Disaster Distress Helpline",
+        "description": "Call 1-800-985-5990 or text “TalkWithUs” to 66746. The disaster distress helpline provides immediate crisis counseling for people who are experiencing emotional distress related to any natural or human-caused disaster. The helpline is free, multilingual, confidential, and available 24 hours a day, seven days a week."
+      },
+
+      {
+        "name": "Rosecrance Substance/Mental Health Helpline",
+        "description": "Call 1-866-330-8729. This group does mental health triage at hospitals and offers partial hospitalization, mental health recovery services, and recovery living. They also have substance abuse centers (with one located in Champaign). Website: https://rosecrance.org"
+      },
+
+      {
+        "name": "Social Media Support",
+        "description": "If you are worried about someone on social media, you can contact the safety team on various social media sites (Facebook, Twitter, Instagram, Snapchat, YouTube, and Periscope) to ensure that they are connected with the help they need Support on Social Media."
+      },
+
+      {
+        "name": "Illinois WarmLine",
+        "description": "Website: http://illinoismentalhealthcollaborative.com, Phone: (866) 359-7953"
+      }
+    ]
+  },
+  {
+    "type": "Mental Health, UIUC Specific",
+    "items": [
+      {
+        "name": "Dean of Students Office",
+        "description": "A catch-all for general issues. Reach out to them for helping you advocate for yourself with staff, faculty, students, and other organizations on campus. Website: https://odos.illinois.edu/"
+      },
+
+      {
+        "name": "Counseling Center",
+        "description": "The UIUC Counseling Center is committed to providing a range of resources intended to help students develop improved coping skills to address emotional, interpersonal, and academic concerns. Website: https://www.counselingcenter.illinois.edu/"
+      },
+
+      {
+        "name": "Office of Access and Equity",
+        "description": "For reporting descrimination and barrier to access on campus. Website https://oae.illinois.edu/our-services/events/"
+      },
+
+      {
+        "name": "Telehelp",
+        "description": "Online counseling for students with United Healthcare. Website: http://telehelp4students.com"
+      },
+
+      {
+        "name": "McKinley Health Center Mental Health",
+        "description": "Website: https://mckinley.illinois.edu/medical-services/mental-health"
+      },
+
+      {
+        "name": "Psychological Services Center",
+        "description": "Website: http://psc.illinois.edu/, Phone: (217) 333-0041"
+      },
+
+      {
+        "name": "College of Engineering Embedded Counselor: Juvenal George, Psy.D",
+        "description": "Contact: juvegeor@illinois.edu"
+      },
+
+      {
+        "name": "College of LAS Embedded Counselor: Andrew Novinska, LCPC",
+        "description": "Contact: anovinsk@illinois.edu"
+      },
+
+      {
+        "name": "Full List of embedded counselors",
+        "description": "Website: https://counselingcenter.illinois.edu/about-us/embedded-counselors"
+      }
+    ]
+  },
+  {
+    "type": "Academic",
+    "items": [
+      {
+        "name": "Computer Science Undergraduate Advising",
+        "description": "Website: https://cs.illinois.edu/academics/undergraduate/undergraduate-advising, Phone: (217) 333-4428"
+      },
+
+      {
+        "name": "Grainger CARE (Center for Academic Resources In Engineering)",
+        "description": "Website: https://care.grainger.illinois.edu/, Phone: (217) 244-2678, Email: engr-care@illinois.edu"
+      },
+
+      {
+        "name": "UIUC Disability Resources and Educational Services",
+        "description": "Website: https://dres.illinois.edu/"
+      }
+    ]
+  },
+  {
+    "type": "Other",
+    "items": [
+      {
+        "name": "Women’s Resource Center",
+        "description": "A completely no-strings-attached*, anonymous resource center for women with a wide variety of resources. Website: https://wrc.illinois.edu/, *The WRC has 4 confidential advisors not mandated to report to the Title IX office. Pursuing accountability/safety options requires a report to the Title IX Coordinator in a survivor-led, well-informed, guided manner. More info at FAQs about Employee Reporting Obligations, At Illinois We Care and at Policy Definitions & Key Terms, At Illinois We Care"
+      },
+
+      {
+        "name": "National Sexual Assault Hotline",
+        "description": "Call 800-656-HOPE (4673) to connect with a trained staff member from a sexual assault service provider in your area that offers access to a range of free services. Crisis chat support is also available at Online Hotline."
+      }
+    ]
+  }
+]

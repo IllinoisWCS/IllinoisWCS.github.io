@@ -3,8 +3,8 @@ import styles from '@/styles/components/Key.module.css';
 export default function Key({ children, url }) {
   const link = url
     ? () => {
-      window.open(url, '_blank').focus();
-    }
+        window.open(url, '_blank').focus(); // eslint-disable-line indent
+      } // eslint-disable-line indent
     : null;
 
   return (

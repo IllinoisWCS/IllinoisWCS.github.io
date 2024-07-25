@@ -44,12 +44,7 @@ export default function WCSNavbar() {
   return (
     <div className={styles.container}>
       <Link className={styles.logo} href="/">
-        <Image
-          src="/wcs-logo.png"
-          width={140}
-          height={35}
-          alt="wcs logo"
-        />
+        <Image src="/wcs-logo.png" width={140} height={35} alt="wcs logo" />
       </Link>
 
       <div
@@ -66,7 +61,11 @@ export default function WCSNavbar() {
           label="committees"
           onClick={handleLinkClick}
         />
-        {/* <NavLink href="/resources" label="resources" onClick={handleLinkClick} /> */}
+        <NavLink
+          href="/resources"
+          label="resources"
+          onClick={handleLinkClick}
+        />
       </div>
 
       <button type="button" className={styles.hamburger} onClick={toggleMenu}>
