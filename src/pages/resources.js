@@ -14,7 +14,10 @@ export default function Resources() {
           We&apos;ve compiled some helpful resources for our members to utilize,
           from external opportunities like job postings and scholarships, to
           mental health and academic help. See something missing? Reach out to
-          us at <a href="mailto:illinoiswcs@gmail.com" style={{ textDecoration: 'underline' }}>illinoiswcs@gmail.com</a>.
+          us at 
+          {' '}
+          <a href="mailto:illinoiswcs@gmail.com" style={{ textDecoration: 'underline' }}>illinoiswcs@gmail.com</a>
+          .
         </p>
       </div>
 
