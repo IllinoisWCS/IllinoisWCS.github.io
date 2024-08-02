@@ -72,6 +72,15 @@ export default function UpcomingEventsSection() {
   return (
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Upcoming Events</h2>
+      <p>
+        <a
+          href="https://calendar.google.com/calendar/u/6?cid=M2MyOGdwcHJjbm9zMHEyNTFvZG5sODc3bWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Click <u>here</u> to get a copy of the WCS calendar.
+        </a>
+      </p>
       <div className={styles.upcomingEventSection}>
         <div className={styles.eventContainer}>
           <button
