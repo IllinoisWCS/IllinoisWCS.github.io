@@ -1,14 +1,15 @@
-import styles from "@/styles/OpenOffice.module.css";
-import data from "../data/openOffice.json";
-import { useEffect, useState } from "react";
-import chevron from "../../public/assets/design-vectors/chevron.svg";
+
+import { useEffect, useState } from 'react';
+
+import data from '../data/openOffice.json';
+import styles from '@/styles/pages/OpenOffice.module.css';
 
 export const DesktopContainer = ({children}) => <div className={`${styles.desktop}`}>{children}</div>
 export const MobileContainer = ({children}) => <div className={`${styles.mobile}`}>{children}</div>
 
 
 export default function OpenOffice() {
-  const [week, setWeek] = useState("week1");
+  const [week, setWeek] = useState('week1');
   const [weekNum, setWeekNum] = useState(0);
   const [weekDays, setWeekDays] = useState(new Set(['Monday', 'Tuesday', 'Wednesday']));
   const [weekHalf, setWeekHalf] = useState("first") // toggle with "second" if arrow clicked
@@ -25,17 +26,17 @@ export default function OpenOffice() {
   
   
   useEffect(() => {
-    let currentDate = new Date();
-    let startDate = new Date(currentDate.getFullYear(), 0, 1);
-    var days = Math.floor(currentDate - startDate) / (1000 * 60 * 60 * 24);
-    var weekNumber = Math.ceil(days / 7);
-    if (weekNumber % 2 == 1) {
-      setWeek("week2");
+    const currentDate = new Date();
+    const startDate = new Date(currentDate.getFullYear(), 0, 1);
+    const days = Math.floor(currentDate - startDate) / (1000 * 60 * 60 * 24);
+    const weekNumber = Math.ceil(days / 7);
+    if (weekNumber % 2 === 1) {
+      setWeek('week2');
       setWeekNum(1);
     }
   }, []);
 
-  let nums = [0, 1, 2, 3, 4, 5];
+  const nums = [0, 1, 2, 3, 4, 5];
 
   return (
     <>

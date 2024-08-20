@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 70em;
+}
+
+.mentalhContainer {
+  display: flex;
+  flex-grow: 0;
+  flex-direction: column;
+
+  border-left: 10px;
+  border-color: var(--light-pink);
+  background-color: var(--light-light-pink);
+  padding: 2em;
+}
+
+.academicContainer {
+  display: flex;
+  flex-grow: 0;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.otherContainer {
+  display: flex;
+  flex-grow: 0;
+  flex-direction: column;
+
+  border-right: 10px;
+  border-color: var(--light-pink);
+  background-color: var(--light-light-pink);
+  padding: 2em;
+}
+
+.resourceItem {
+  flex-grow: 0;
+  padding: 1em;
+}
+
+.resourceText {
+  font-size: small;
+}
+
+.resourceName {
+  font-size: small;
+  text-decoration: underline;
+}
