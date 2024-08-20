@@ -1,30 +1,35 @@
-
 import { useEffect, useState } from 'react';
+
+import Image from 'next/image';
 
 import data from '../data/openOffice.json';
 import styles from '@/styles/pages/OpenOffice.module.css';
 
-export const DesktopContainer = ({children}) => <div className={`${styles.desktop}`}>{children}</div>
-export const MobileContainer = ({children}) => <div className={`${styles.mobile}`}>{children}</div>
+export function DesktopContainer({ children }) {
+  return <div className={`${styles.desktop}`}>{children}</div>;
+}
 
+export function MobileContainer({ children }) {
+  return <div className={`${styles.mobile}`}>{children}</div>;
+}
 
 export default function OpenOffice() {
   const [week, setWeek] = useState('week1');
   const [weekNum, setWeekNum] = useState(0);
-  const [weekDays, setWeekDays] = useState(new Set(['Monday', 'Tuesday', 'Wednesday']));
-  const [weekHalf, setWeekHalf] = useState("first") // toggle with "second" if arrow clicked
-
+  const [weekDays, setWeekDays] = useState(
+    new Set(['Monday', 'Tuesday', 'Wednesday']),
+  );
+  const [weekHalf, setWeekHalf] = useState('first'); // toggle with "second" if arrow clicked
 
   function updateWeekDays(half) {
     setWeekHalf(half);
-    if (half == "second") {
+    if (half === 'second') {
       setWeekDays(new Set(['Wednesday', 'Thursday', 'Friday']));
     } else {
       setWeekDays(new Set(['Monday', 'Tuesday', 'Wednesday']));
     }
   }
-  
-  
+
   useEffect(() => {
     const currentDate = new Date();
     const startDate = new Date(currentDate.getFullYear(), 0, 1);
@@ -39,40 +44,40 @@ export default function OpenOffice() {
   const nums = [0, 1, 2, 3, 4, 5];
 
   return (
-    <>
-      <div className={`${styles.main}`}>
-        <div className={`${styles.openOfficeHeader}`}>
-          <h1>Open Office Calendar</h1>
-          {week == "week1" ? (
-            <>
-              <p>You&apos;re viewing the Week 1 schedule</p>
-              <button
-                className={`${styles.openOfficeWeekButton}`}
-                onClick={() => {
-                  setWeek("week2");
-                  setWeekNum(1);
-                }}
-              >
-                <p>Check out week 2</p>
-              </button>
-            </>
-          ) : (
-            <>
-              <p>You&apos;re viewing the Week 2 schedule</p>
-              <button
-                className={`${styles.openOfficeWeekButton}`}
-                onClick={() => {
-                  setWeek("week1");
-                  setWeekNum(0);
-                }}
-              >
-                <p>Check out week 1</p>
-              </button>
-            </>
-          )}
-        </div>
-
-        <DesktopContainer>
+    <div className={`${styles.main}`}>
+      <div className={`${styles.openOfficeHeader}`}>
+        <h1>Open Office Calendar</h1>
+        {week === 'week1' ? (
+          <>
+            <p>You&apos;re viewing the Week 1 schedule</p>
+            <button
+              type="button"
+              className={`${styles.openOfficeWeekButton}`}
+              onClick={() => {
+                setWeek('week2');
+                setWeekNum(1);
+              }}
+            >
+              <p>Check out week 2</p>
+            </button>
+          </>
+        ) : (
+          <>
+            <p>You&apos;re viewing the Week 2 schedule</p>
+            <button
+              type="button"
+              className={`${styles.openOfficeWeekButton}`}
+              onClick={() => {
+                setWeek('week1');
+                setWeekNum(0);
+              }}
+            >
+              <p>Check out week 1</p>
+            </button>
+          </>
+        )}
+      </div>
+      <DesktopContainer>
         <div className={`${styles.tableContainer}`}>
           <table className={`${styles.table}`}>
             <thead>
@@ -81,82 +86,62 @@ export default function OpenOffice() {
                   className={`${styles.space}`}
                   id={`${styles.openOfficeSpace} ${styles.th}`}
                 >
-                  {" "}
+                  {' '}
                 </th>
-                {data[weekNum][week].map(({ heading, rows }, index) => {
-                  return (
-                    <th
-                      key={index}
-                      className={`${styles.openOfficeDay} ${styles.th}`}
-                    >
-                      <p>{heading}</p>
-                    </th>
-                  );
-                })}
+                {data[weekNum][week].map(({ heading }, index) => (
+                  <th
+                    key={index}
+                    className={`${styles.openOfficeDay} ${styles.th}`}
+                  >
+                    <p>{heading}</p>
+                  </th>
+                ))}
               </tr>
             </thead>
 
             <tbody>
-              {nums.map((x) => {
-                let row_data = data[weekNum][week][0]["rows"];
-                return (
-                  <>
-                    <tr key={x} className={`${styles.tr}`}>
-                      <td className={`${styles.td} ${styles.openOfficeTimes}`}>
-                        <div className={`${styles.openOfficeCellContainer}`}>
-                          <p>{data[weekNum][week][0]["rows"][x]["time"]}</p>
-                        </div>
-                      </td>
+              {nums.map((x) => (
+                <tr key={x} className={`${styles.tr}`}>
+                  <td className={`${styles.td} ${styles.openOfficeTimes}`}>
+                    <div className={`${styles.openOfficeCellContainer}`}>
+                      <p>{data[weekNum][week][0].rows[x].time}</p>
+                    </div>
+                  </td>
 
-                      {data[weekNum][week].map(({ heading, rows }, index) => {
-                        return (
-                          <>
-                            <td
-                              key={index}
-                              className={`${styles.openOfficeCell} ${styles.td}`}
-                            >
-                              <div
-                                className={`${styles.openOfficeCellContainer}`}
-                              >
-                                {rows[x]["officers"].map((name, index) => {
-                                  return (
-                                    <div key={index}>
-                                      <span>
-                                        <p className={`${styles.openOfficeHighlight}`}>{name}</p>
-                                      </span>
-                                    </div>
-                                  );
-                                })}
-                                {rows[x]["committees"].map((name, index) => {
-                                  return (
-                                    <div key={index}>
-                                      <span
-                                        className={`${styles.openOfficeName}`}
-                                      >
-                                        <p>{name}</p>
-                                      </span>
-                                    </div>
-                                  );
-                                })}
-                              </div>
-                            </td>
-                          </>
-                        );
-                      })}
-                    </tr>
-                  </>
-                );
-              })}
+                  {data[weekNum][week].map(({ rows }, index) => (
+                    <td
+                      key={index}
+                      className={`${styles.openOfficeCell} ${styles.td}`}
+                    >
+                      <div className={`${styles.openOfficeCellContainer}`}>
+                        {rows[x].officers.map((name, i) => (
+                          <div key={i}>
+                            <span>
+                              <p className={`${styles.openOfficeHighlight}`}>
+                                {name}
+                              </p>
+                            </span>
+                          </div>
+                        ))}
+                        {rows[x].committees.map((name, i) => (
+                          <div key={i}>
+                            <span className={`${styles.openOfficeName}`}>
+                              <p>{name}</p>
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
       </DesktopContainer>
-      
+
       <MobileContainer>
-        
-      
         <div className={`${styles.tableContainer}`}>
-          
           <table className={`${styles.table}`}>
             <thead>
               <tr className={`${styles.tr}`}>
@@ -164,26 +149,41 @@ export default function OpenOffice() {
                   className={`${styles.space}`}
                   id={`${styles.openOfficeSpace} ${styles.th}`}
                 >
-                  {(weekHalf == "first") ? 
-
-                  <img
+                  {weekHalf === 'first' ? (
+                    <button
+                      className={`${styles.hiddenChevronButton}`}
+                      type="button"
+                      onClick={() => {
+                        updateWeekDays('second');
+                      }}
+                    >
+                      <Image
                         className={`${styles.chevronRight}`}
-                        src="assets/design-vectors/chevron.svg" width="20" height="20" 
-                        onClick={() => {
-                          updateWeekDays("second");
-                        }}
-                    />
-                  : 
-                    <img
+                        src="assets/design-vectors/chevron.svg"
+                        width="20"
+                        height="20"
+                        alt="chevronRight"
+                      />
+                    </button>
+                  ) : (
+                    <button
+                      className={`${styles.hiddenChevronButton}`}
+                      type="button"
+                      onClick={() => {
+                        updateWeekDays('first');
+                      }}
+                    >
+                      <Image
                         className={`${styles.chevronLeft}`}
-                        src="assets/design-vectors/chevron.svg" width="20" height="20"   
-                        onClick={() => {
-                          updateWeekDays("first");
-                        }}
-                    />}
-
+                        src="assets/design-vectors/chevron.svg"
+                        width="20"
+                        height="20"
+                        alt="chevronLeft"
+                      />
+                    </button>
+                  )}
                 </th>
-                {data[weekNum][week].map(({ heading, rows }, index) => {
+                {data[weekNum][week].map(({ heading }, index) => {
                   if (weekDays.has(heading)) {
                     return (
                       <th
@@ -193,74 +193,59 @@ export default function OpenOffice() {
                         <p>{heading}</p>
                       </th>
                     );
-                  } else {
-                    return;
                   }
+                  return undefined;
                 })}
               </tr>
             </thead>
 
             <tbody>
-              {nums.map((x) => {
-                let row_data = data[weekNum][week][0]["rows"];
-                return (
-                  <>
-                    <tr key={x} className={`${styles.tr}`}>
-                      <td className={`${styles.td} ${styles.openOfficeTimes}`}>
-                        <div className={`${styles.openOfficeCellContainer}`}>
-                          <p>{data[weekNum][week][0]["rows"][x]["time"]}</p>
-                        </div>
-                      </td>
+              {nums.map((x) => (
+                <tr key={x} className={`${styles.tr}`}>
+                  <td className={`${styles.td} ${styles.openOfficeTimes}`}>
+                    <div className={`${styles.openOfficeCellContainer}`}>
+                      <p>{data[weekNum][week][0].rows[x].time}</p>
+                    </div>
+                  </td>
 
-                      {data[weekNum][week].map(({ heading, rows }, index) => {
-                        if (weekDays.has(heading)) {
-                          return (
-                            <>
-                              <td
-                                key={index}
-                                className={`${styles.openOfficeCell} ${styles.td}`}
-                              >
-                                <div
-                                  className={`${styles.openOfficeCellContainer}`}
-                                >
-                                  {rows[x]["officers"].map((name, index) => {
-                                    return (
-                                      <div key={index}>
-                                        <span>
-                                        <p className={`${styles.openOfficeHighlight}`}>{name}</p>
-                                        </span>
-                                      </div>
-                                    );
-                                  })}
-                                  {rows[x]["committees"].map((name, index) => {
-                                    return (
-                                      <div key={index}>
-                                        <span
-                                          className={`${styles.openOfficeName}`}
-                                        >
-                                          <p>{name}</p>
-                                        </span>
-                                      </div>
-                                    );
-                                  })}
-                                </div>
-                              </td>
-                            </>
-                          );
-                        } else {
-                          return;
-                        }
-                      })}
-                    </tr>
-                  </>
-                );
-              })}
+                  {data[weekNum][week].map(({ heading, rows }, index) => {
+                    if (weekDays.has(heading)) {
+                      return (
+                        <td
+                          key={index}
+                          className={`${styles.openOfficeCell} ${styles.td}`}
+                        >
+                          <div className={`${styles.openOfficeCellContainer}`}>
+                            {rows[x].officers.map((name, i) => (
+                              <div key={i}>
+                                <span>
+                                  <p
+                                    className={`${styles.openOfficeHighlight}`}
+                                  >
+                                    {name}
+                                  </p>
+                                </span>
+                              </div>
+                            ))}
+                            {rows[x].committees.map((name, i) => (
+                              <div key={i}>
+                                <span className={`${styles.openOfficeName}`}>
+                                  <p>{name}</p>
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </td>
+                      );
+                    }
+                    return undefined;
+                  })}
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
       </MobileContainer>
     </div>
-    </>
-
   );
 }
