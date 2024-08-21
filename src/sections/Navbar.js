@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import NavbarMobile from './NavbarMobile';
-// import {Navbar} from 'react-bootstrap';
+
 import styles from '@/styles/sections/Navbar.module.css';
 
 function NavLink({ href, label }) {
@@ -21,6 +21,8 @@ function NavLink({ href, label }) {
 
 export default function WCSNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
+  const { pathname } = router;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -41,6 +43,10 @@ export default function WCSNavbar() {
     };
   }, []);
 
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
   return (
     <div className={styles.container}>
       <Link className={styles.logo} href="/">
@@ -53,18 +59,15 @@ export default function WCSNavbar() {
         <NavLink
           href="https://points.illinoiswcs.org/"
           label="points"
-          onClick={handleLinkClick}
         />
         <NavLink href="/officers" label="officers" onClick={handleLinkClick} />
         <NavLink
           href="/committees"
           label="committees"
-          onClick={handleLinkClick}
         />
         <NavLink
           href="/resources"
           label="resources"
-          onClick={handleLinkClick}
         />
       </div>
 
@@ -74,7 +77,12 @@ export default function WCSNavbar() {
         <div className={`${styles.bar} ${isMenuOpen ? styles.open3 : ''}`} />
       </button>
 
-      {isMenuOpen && <NavbarMobile />}
+      {isMenuOpen
+      && (
+        <NavbarMobile
+          handleLinkClick={handleLinkClick}
+        />
+      )}
     </div>
   );
 }
