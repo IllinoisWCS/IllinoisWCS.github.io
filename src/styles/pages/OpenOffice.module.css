@@ -5,6 +5,18 @@
   gap: 2rem;
 }
 
+.desktop {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+.mobile {
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .main {
     align-items: center;
@@ -13,12 +25,10 @@
 
 .openOfficeHeader {
   display: flex;
-  text-align: center;
   align-items: center;
   align-content: center;
   flex-direction: column;
   margin: 10px;
-  gap: 1rem;
 }
 
 .openOfficeWeekIndication {
@@ -36,6 +46,9 @@
 
 .tableContainer {
   overflow-x: auto;
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 }
 
 .th {
@@ -63,14 +76,25 @@
   /* height: 130px; */
 }
 
-.table {
+.chevronLeft {
+  transform: rotate(180deg);
+  margin-left: 40px;
+}
+
+.chevronRight {
+  margin-left: 40px;
+}
+
+.hiddenChevronButton {
+  border: none;
+  background: transparent;
 }
 
 .openOfficeTimes {
   background-color: #c6f6f8;
   font-size: small;
   height: fit-content;
-  /* padding: 0% 2%; */
+  padding: 0% 2%;
 }
 
 .openOfficeDay {
@@ -96,18 +120,17 @@
   border-radius: 20px;
 }
 
-.openOfficeHighlight p {
+.openOfficeHighlight {
   background-color: #faddc8;
   border-radius: 20%;
 }
 
-.openOfficeName p {
-  font-weight: 500;
-  color: black;
-  opacity: 0.7;
-  margin: 2px;
+.openOfficeName {
+  font-size: small;
 }
 
 #openOfficeSpace {
   width: 10%;
 }
+
+/* styles.css file */
