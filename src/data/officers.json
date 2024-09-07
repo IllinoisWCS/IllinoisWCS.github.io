@@ -7,7 +7,7 @@
       "position": "President",
       "place": "Carmel, Indiana",
       "involvements": "Illini Strings",
-      "interests": "",
+      "interests": "Software Engineering, AI/Machine Learning, and Human Computer Interaction",
       "hobbies": "Cooking, music",
       "fact": "I love any and everything chocolate!",
       "advice": "We're here to support you for any of your needs, so take advantage of the resources that are available to you for any concern or questions you have.",
@@ -74,6 +74,21 @@
       "email": "msun55@illinois.edu",
       "netid": "msun55",
       "linkedin": "https://www.linkedin.com/in/michelle-sun-171239217/"
+    },
+    {
+      "name": "Aditi Prasad",
+      "year": "Sophomore",
+      "major": "Computer Science",
+      "position": "Corporate Co-Chair",
+      "place": "Arlington Heights, Illinois",
+      "involvements": "Founders Illinois Entrepreneurs, Illini Strings",
+      "interests": "SWE, Human Computer Interactions, AI/ML",
+      "hobbies": "Hiking, swimming, anything outdoors!",
+      "fact": "My favorite book is The Little Prince",
+      "advice": "Say yes more! Being open to new things will bring you either a great experience or good story to tell :)",
+      "email": "apras5@illinois.edu",
+      "netid": "apras5",
+      "linkedin": "https://www.linkedin.com/in/aditinprasad/"
     },
     {
       "name": "Emma Maxwell",
@@ -211,7 +226,7 @@
       "linkedin": "https://www.linkedin.com/in/shagunkhare917/"
     },
     {
-      "name": "Elania Xiao",
+      "name": "Elaina Xiao",
       "year": "Sophomore",
       "major": "Computer Science + Crop Sciences",
       "position": "Social Co-Chair",
