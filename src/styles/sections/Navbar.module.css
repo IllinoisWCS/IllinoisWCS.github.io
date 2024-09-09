@@ -1,14 +1,16 @@
 .container {
   background-image: linear-gradient(
+    to bottom,
     rgba(255, 143, 205, 1),
     rgba(253, 176, 218, 1)
   );
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
   width: 100%;
+  float: top;
 }
 
 .logo {
@@ -22,6 +24,7 @@
   gap: 4rem;
   padding-right: 50px;
   padding: 15px 25px 15px 25px;
+  position: relative;
 }
 
 .linksContainer h3:hover {
@@ -30,7 +33,7 @@
 }
 
 .hamburger {
-  display: none; /* Initially hidden */
+  display: none; 
   cursor: pointer;
   padding: 15px 25px 15px 25px;
   background-color: transparent;
@@ -59,18 +62,22 @@
 }
 
 .show {
-  display: flex; /* Show the links when menu is open */
+  display: flex;
 }
 
 @media (max-width: 1000px) {
   .linksContainer {
-    display: none; /* Hide links in mobile view */
+    display: none; 
     position: absolute;
   }
 
   .hamburger {
-    display: block; /* Show hamburger menu */
+    display: block; 
   }
+}
+
+.navBarSticky {
+  position: static;
 }
 
 .activeLink {

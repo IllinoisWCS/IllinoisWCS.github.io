@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -16,41 +14,33 @@ function NavLink({ href, label }) {
   );
 }
 
-export default function NavbarMobile() {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
-
-  const handleLinkClick = () => {
-    setIsMenuOpen(false); // Close the dropdown menu when link is clicked
-  };
-
+export default function NavbarMobile({ handleLinkClick }) {
   return (
-    isMenuOpen && (
-      <div className={styles.hamburger}>
-        <NavLink
-          className={styles.burger}
-          href="https://points.illinoiswcs.org/"
-          label="points"
-          onClick={handleLinkClick}
-        />
-        <NavLink
-          className={styles.burger}
-          href="/officers"
-          label="officers"
-          onClick={handleLinkClick}
-        />
-        <NavLink
-          className={styles.burger}
-          href="/committees"
-          label="committees"
-          onClick={handleLinkClick}
-        />
-        <NavLink
-          className={styles.burger}
-          href="/resources"
-          label="resources"
-          onClick={handleLinkClick}
-        />
-      </div>
-    )
+    <div className={styles.hamburger}>
+      <NavLink
+        className={styles.burger}
+        href="https://points.illinoiswcs.org/"
+        label="points"
+        onClick={handleLinkClick}
+      />
+      <NavLink
+        className={styles.burger}
+        href="/officers"
+        label="officers"
+        onClick={handleLinkClick}
+      />
+      <NavLink
+        className={styles.burger}
+        href="/committees"
+        label="committees"
+        onClick={handleLinkClick}
+      />
+      <NavLink
+        className={styles.burger}
+        href="/resources"
+        label="resources"
+        onClick={handleLinkClick}
+      />
+    </div>
   );
 }
