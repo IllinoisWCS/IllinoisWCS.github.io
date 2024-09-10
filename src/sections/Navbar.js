@@ -56,19 +56,10 @@ export default function WCSNavbar() {
       <div
         className={`${styles.linksContainer} ${isMenuOpen ? styles.show : ''}`}
       >
-        <NavLink
-          href="https://points.illinoiswcs.org/"
-          label="points"
-        />
+        <NavLink href="https://points.illinoiswcs.org/" label="points" />
         <NavLink href="/officers" label="officers" onClick={handleLinkClick} />
-        <NavLink
-          href="/committees"
-          label="committees"
-        />
-        <NavLink
-          href="/resources"
-          label="resources"
-        />
+        <NavLink href="/committees" label="committees" />
+        <NavLink href="/resources" label="resources" />
       </div>
 
       <button type="button" className={styles.hamburger} onClick={toggleMenu}>
@@ -77,12 +68,7 @@ export default function WCSNavbar() {
         <div className={`${styles.bar} ${isMenuOpen ? styles.open3 : ''}`} />
       </button>
 
-      {isMenuOpen
-      && (
-        <NavbarMobile
-          handleLinkClick={handleLinkClick}
-        />
-      )}
+      {isMenuOpen && <NavbarMobile handleLinkClick={handleLinkClick} />}
     </div>
   );
 }
