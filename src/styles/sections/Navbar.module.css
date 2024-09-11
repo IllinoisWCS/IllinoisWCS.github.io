@@ -33,7 +33,7 @@
 }
 
 .hamburger {
-  display: none; 
+  display: none;
   cursor: pointer;
   padding: 15px 25px 15px 25px;
   background-color: transparent;
@@ -67,12 +67,12 @@
 
 @media (max-width: 1000px) {
   .linksContainer {
-    display: none; 
+    display: none;
     position: absolute;
   }
 
   .hamburger {
-    display: block; 
+    display: block;
   }
 }
 
