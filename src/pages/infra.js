@@ -1,3 +1,5 @@
+import Kirthi from '../components/infra-committee/Kirthi';
+
 export default function InfraCommittee() {
   return (
     <div>
@@ -6,7 +8,11 @@ export default function InfraCommittee() {
         our wonderful infrastructure committee
       </h3>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-        {/* put something here... */}
+        <Kirthi
+          name="Kirthi Shankar"
+          funFact="Fun Fact: I love Phantom of the Opera!"
+          netid="kirthis2"
+        />
       </div>
     </div>
   );
