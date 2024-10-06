@@ -1,3 +1,5 @@
+import Becky from '../components/infra-committee/becky';
+
 export default function InfraCommittee() {
   return (
     <div>
@@ -7,6 +9,7 @@ export default function InfraCommittee() {
       </h3>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         {/* put something here... */}
+        <Becky name="Becky Blake" />
       </div>
     </div>
   );
