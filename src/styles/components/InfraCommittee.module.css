@@ -1,16 +1,12 @@
 .zlCard {
-  width: 25%; /* Set width to 25% of the parent container */
+  width: 25%;
   border: 2px solid #d1e8f9;
   border-radius: 8px;
   padding: 16px;
   margin: 16px;
   text-align: center;
-  cursor: pointer; /* Change cursor to pointer for better UX */
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s; /* Smooth transition */
-  background-color: #ffffff; /* Background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .zlHeadshot {
