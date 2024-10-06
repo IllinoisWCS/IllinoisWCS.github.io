@@ -1,3 +1,5 @@
+import Ashley from '../components/infra-committee/ashley';
+
 export default function InfraCommittee() {
   return (
     <div>
@@ -7,6 +9,7 @@ export default function InfraCommittee() {
       </h3>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         {/* put something here... */}
+        <Ashley name="Ashley Li" />
       </div>
     </div>
   );
