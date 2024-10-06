@@ -1,3 +1,5 @@
+import Card from '../components/infra-committee/zl-card';
+
 export default function InfraCommittee() {
   return (
     <div>
@@ -6,7 +8,11 @@ export default function InfraCommittee() {
         our wonderful infrastructure committee
       </h3>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-        {/* put something here... */}
+        <Card
+          name="Zia Lu"
+          description="I like taking photos of my dog!"
+          imageUrl="/assets/img/other/members/zl-headshot.png"
+        />
       </div>
     </div>
   );
