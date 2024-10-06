@@ -1,3 +1,4 @@
+import styles from '../styles/components/InfraCommittee.modules.css';
 export default function InfraCommittee() {
   return (
     <div>
