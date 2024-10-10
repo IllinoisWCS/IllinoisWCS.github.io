@@ -1,3 +1,5 @@
+import SkylasCard from '../components/infra-committee/skyla';
+
 export default function InfraCommittee() {
   return (
     <div>
@@ -6,7 +8,7 @@ export default function InfraCommittee() {
         our wonderful infrastructure committee
       </h3>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-        {/* put something here... */}
+        <SkylasCard />
       </div>
     </div>
   );
