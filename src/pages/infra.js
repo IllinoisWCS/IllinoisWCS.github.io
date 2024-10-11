@@ -14,6 +14,7 @@ export default function InfraCommittee() {
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         <Helena />
         <Nyssa />
+        <Becky name="Becky Blake" />
         <Kirthi
           name="Kirthi Shankar"
           funFact="Fun Fact: I love Phantom of the Opera!"
