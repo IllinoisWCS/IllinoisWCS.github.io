@@ -1,5 +1,5 @@
-.kscontainer {
-  background: rgba(255, 255, 255, 0.3);
+.bb_container {
+  background: rgba(252, 147, 201, 0.3);
   width: 350px;
   height: 450px;
   border-radius: 1rem;
@@ -13,14 +13,38 @@
   border: none;
 }
 
-.ksimg {
-  border: 6px solid #65c7cc;
+.bb_fact {
+  color: black;
+  opacity: 0.7;
+}
+
+.bb_img {
+  border: 6px solid #af65cc;
   border-radius: 100%;
   height: 200px;
   width: 200px;
   object-fit: cover;
 }
 
+.bb_name {
+  color: #21636c;
+  text-align: center;
+}
+
+.kscontainer {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ksfunfact {
+  color: black;
+  opacity: 0.7;
+}
+  
+.ksimg {
+  border: 6px solid #65c7cc;
+  margin: auto;
+}
+  
 .ksname {
   color: #21636c;
   background-color: transparent;
@@ -32,7 +56,21 @@
   font-size: 40px;
 }
 
-.ksfunfact {
-  color: black;
-  opacity: 0.7;
+.zlCard {
+  width: 25%;
+  border: 2px solid #d1e8f9;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.zlHeadshot {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(80, 1, 98, 0.324);
+  margin-bottom: 10px;
 }

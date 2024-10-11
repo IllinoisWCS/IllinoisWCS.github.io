@@ -1,4 +1,6 @@
 import Kirthi from '../components/infra-committee/Kirthi';
+import Becky from '../components/infra-committee/becky';
+import Card from '../components/infra-committee/zl-card';
 
 export default function InfraCommittee() {
   return (
@@ -12,6 +14,11 @@ export default function InfraCommittee() {
           name="Kirthi Shankar"
           funFact="Fun Fact: I love Phantom of the Opera!"
           netid="kirthis2"
+        <Becky name="Becky Blake" />
+        <Card
+          name="Zia Lu"
+          description="I like taking photos of my dog!"
+          imageUrl="/assets/img/other/members/zl-headshot.png"
         />
       </div>
     </div>
