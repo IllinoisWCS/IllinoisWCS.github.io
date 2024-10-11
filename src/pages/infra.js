@@ -1,3 +1,5 @@
+import SkylasCard from '../components/infra-committee/skyla';
+
 import Nyssa from '../components/infra-committee/nyssa';
 import Kirthi from '../components/infra-committee/Kirthi';
 import Becky from '../components/infra-committee/becky';
@@ -25,6 +27,7 @@ export default function InfraCommittee() {
           description="I like taking photos of my dog!"
           imageUrl="/assets/img/other/members/zl-headshot.png"
         />
+        <SkylasCard />
       </div>
     </div>
   );
