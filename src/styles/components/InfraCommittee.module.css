@@ -8,7 +8,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  margin: auto;
+  margin: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.bb_fact {
+  color: black;
+  opacity: 0.7;
 }
 
 .bb_img {
@@ -24,9 +31,30 @@
   text-align: center;
 }
 
-.bb_fact {
+.kscontainer {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ksfunfact {
   color: black;
   opacity: 0.7;
+}
+  
+.ksimg {
+  border: 6px solid #65c7cc;
+  margin: auto;
+}
+  
+.ksname {
+  color: #21636c;
+  background-color: transparent;
+  border: none;
+  background: none;
+  text-align: center;
+  font-family: 'Audiowide' !important;
+  font-weight: 400;
+  font-size: 40px;
+}
 
 .zlCard {
   width: 25%;

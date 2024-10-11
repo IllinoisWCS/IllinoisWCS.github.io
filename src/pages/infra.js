@@ -1,3 +1,4 @@
+import Kirthi from '../components/infra-committee/Kirthi';
 import Becky from '../components/infra-committee/becky';
 import Card from '../components/infra-committee/zl-card';
 
@@ -9,6 +10,10 @@ export default function InfraCommittee() {
         our wonderful infrastructure committee
       </h3>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+        <Kirthi
+          name="Kirthi Shankar"
+          funFact="Fun Fact: I love Phantom of the Opera!"
+          netid="kirthis2"
         <Becky name="Becky Blake" />
         <Card
           name="Zia Lu"
