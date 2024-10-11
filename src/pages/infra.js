@@ -1,3 +1,4 @@
+import Nyssa from '../components/infra-committee/nyssa';
 export default function InfraCommittee() {
   return (
     <div>
@@ -7,6 +8,7 @@ export default function InfraCommittee() {
       </h3>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         {/* put something here... */}
+        <Nyssa />
       </div>
     </div>
   );
