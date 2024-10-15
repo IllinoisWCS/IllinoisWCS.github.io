@@ -1,27 +1,25 @@
-// TODO add padding around image
-// TODO add padding around about me
-
 import Image from 'next/image';
-
-function Header({ title }) {
-  return <h1>{title}</h1>;
-}
+import styles from '@/styles/components/InfraCommittee.module.css';
 
 function Text({ text }) {
-  return <p>{text}</p>;
+  return <p className={`${styles.al_text}`}>{text}</p>;
 }
 
 export default function Ashley() {
   return (
-    <div>
-      <Header title="Ashley!" />
+    <div className={`${styles.al_card}`}>
       <Image
-        src="/assets/img/other/members/AshleyPicture.jpg"
+        src="/assets/img/other/members/AshleyHeadshot.jpg"
+        className={`${styles.al_image}`}
         width="150"
         height="200"
         alt="Ashley"
       />
-      <Text text="Fun fact: I'm terrible at using vending machines!" />
+      <div>
+        <h1 className={`${styles.al_name}`}>Ashley Li </h1>
+        <Text text="Fun fact: I'm terrible at using vending machines." />
+        <Text text="Right now, I'm interested in nail art, pottery, and reading!" />
+      </div>
     </div>
   );
 }
