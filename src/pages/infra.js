@@ -6,6 +6,8 @@ import Becky from '../components/infra-committee/becky';
 import Card from '../components/infra-committee/zl-card';
 import Helena from '../components/infra-committee/helena';
 
+import Ashley from '../components/infra-committee/ashley';
+
 export default function InfraCommittee() {
   return (
     <div>
@@ -28,6 +30,7 @@ export default function InfraCommittee() {
           imageUrl="/assets/img/other/members/zl-headshot.png"
         />
         <SkylasCard />
+        <Ashley name="Ashley Li" />
       </div>
     </div>
   );
