@@ -265,6 +265,33 @@
   font-size: 20px;
   white-space: pre-line;
 }
-.mlcard {
-    width: 50%;
+
+.ml-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.ml-image {
+  border-radius: 50%;
+  margin-bottom: 15px;
+  width: 100%;
+  height: auto;
+}
+
+.ml-fact {
+  font-style: italic;
+}
+
+.ml-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }

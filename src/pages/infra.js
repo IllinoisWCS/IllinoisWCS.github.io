@@ -9,7 +9,7 @@ import Helena from '../components/infra-committee/helena';
 import Ashley from '../components/infra-committee/ashley';
 import Prisha from '../components/infra-committee/prisha';
 
-import ProfileCard from "@/components/infra-committee/madison";
+import ProfileCard from '../components/infra-committee/madison';
 
 export default function InfraCommittee() {
   return (
@@ -35,7 +35,7 @@ export default function InfraCommittee() {
         <SkylasCard />
         <Ashley name="Ashley Li" />
         <Prisha />
-        <ProfileCard/>
+        <ProfileCard />
       </div>
     </div>
   );
