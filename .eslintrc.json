@@ -4,7 +4,6 @@
     "next/core-web-vitals", 
     "prettier",
     "airbnb",
-    "airbnb/hooks",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended"
   ],

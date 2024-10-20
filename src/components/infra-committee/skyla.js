@@ -26,7 +26,13 @@ function SkylasCard() {
         onClick={handleClick}
         className={`${styles.sjButton}`}
       >
-        <Image className={`${styles.sjImg}`} src={displayedImage} alt="" />
+        <Image
+          className={`${styles.sjImg}`}
+          src={displayedImage}
+          width={300}
+          height={300}
+          alt=""
+        />
       </button>
 
       <p className={`${styles.sjPressMe}`}>press to see baby me ↑</p>

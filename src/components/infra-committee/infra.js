@@ -8,7 +8,7 @@ export default function InfraCommittee() {
         our wonderful infrastructure committee
       </h3>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-          <p>Team member profiles!</p>
+        <p>Team member profiles!</p>
         <div
           style={{
             margin: '10px',
