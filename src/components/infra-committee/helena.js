@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import styles from '@/styles/components/InfraCommittee.module.css';
 import Image from 'next/image';
+import styles from '@/styles/components/InfraCommittee.module.css';
 
 export default function Helena() {
   const [show, setShow] = useState(false);

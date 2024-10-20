@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 import styles from '@/styles/components/InfraCommittee.module.css';
 
@@ -25,7 +26,7 @@ function SkylasCard() {
         onClick={handleClick}
         className={`${styles.sjButton}`}
       >
-        <img className={`${styles.sjImg}`} src={displayedImage} alt="" />
+        <Image className={`${styles.sjImg}`} src={displayedImage} alt="" />
       </button>
 
       <p className={`${styles.sjPressMe}`}>press to see baby me ↑</p>

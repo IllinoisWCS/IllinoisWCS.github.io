@@ -22,7 +22,7 @@ export default function Nyssa() {
       {hover && (
         <div className={styles['na-text']}>
           <p className={styles['na-fact']}>
-            Fun/shameful fact: I still haven't finished decorating my
+            Fun/shameful fact: I still haven&#39;t finished decorating my
             apartment...
           </p>
         </div>
