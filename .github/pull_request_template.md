@@ -13,6 +13,7 @@ A few sentences describing the overall goals of the pull request's commits. If a
 -->
 
 <!-- Addresses #<number> -->
+
 Addresses: <(link notion task here)>
 
 ## Screenshots
