@@ -7,6 +7,10 @@
   background-color: rgba(10, 10, 10, 0.6);
 }
 
+.outerModalContainer {
+  display: flex;
+}
+
 .window {
   position: absolute;
   top: 50%;
@@ -17,13 +21,13 @@
 }
 
 .eventInfo {
-  padding: 1rem 5svw 1rem 5svw;
+  padding: 3rem 5svw 8rem 5svw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
   text-align: center;
   max-height: 85svh;
+  min-width: 50vh;
 }
 
 .eventInfo p {
@@ -31,10 +35,18 @@
 }
 
 .title {
-  margin-bottom: 1rem;
-  font-size: 36px;
-  font-weight: 700;
-  color: #21636c;
+  margin-top: 1em;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.bullets {
+  text-align: left;
+  margin: 0;
+}
+
+.left {
+  background-color: var(--light-light-pink);
 }
 
 .location {
@@ -66,11 +78,12 @@
 }
 
 .closeButton2 {
-  width: 100%;
-  height: 3rem;
+  min-width: 200px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 10px;
   border: none;
-  color: #21636c;
-  background-color: #ffcee7;
-  font-weight: 700;
-  font-size: 16px;
+  background-color: var(--light-pink);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -150%);
 }

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import EventsWindow from '../components/events/EventsWindow';
-import PhoneComponent from '../components/general/PhoneComponent';
+// import PhoneComponent from '../components/general/PhoneComponent';
 import UpcomingEvent from '../components/events/UpcomingEvent';
 
 import styles from '@/styles/pages/Home.module.css';
@@ -107,56 +107,57 @@ export default function UpcomingEventsSection() {
           </button>
           {showModal && (
             <div className={styles2.container}>
-              <ComputerWindow className={styles2.window} topbarColor="#FB79C3">
-                <div className={styles2.eventInfo}>
-                  <h3 className={styles2.title}>Open Office</h3>
-                  <div className={styles.modalContainer}>
+              <ComputerWindow className={styles2.window} topbarColor="#E2626A">
+                <div className={styles2.outerModalContainer}>
+                  <div className={`${styles2.eventInfo} ${styles2.left}`}>
                     <div className={styles.modalContainerLeft}>
-                      <div className={styles.modalSection}>
-                        <h3
-                          style={{
-                            textAlign: 'center',
-                          }}
-                        >
-                          Open Office happens Monday-Friday from 2-5 PM in the
-                          WCS Office!
-                        </h3>
-                        <div className={styles.modalButton}>
-                          <Link href="/openoffice">
-                            <p>View the open office calendar!</p>
-                          </Link>
-                        </div>
-                      </div>
-                      <div className={styles.modalSection}>
-                        <h3>Drop by for:</h3>
-                        <ul>
-                          <li>Resume reviews</li>
-                          <li>Class help</li>
-                          <li>Schedule and four year plan advice</li>
-                          <li>General advice or help</li>
-                          <li>Just a chat!</li>
-                        </ul>
-                      </div>
-                      {/* <div className={styles.modalSection}>
-                        <h3>Appointment Required</h3>
-                        <ul>
-                          <li>Technical interview prep</li>
-                          <li>Behavioral interview prep</li>
-                        </ul>
-                        <a className={styles.modalButton}>
-                          <p>Make an appointment!</p>
-                        </a>
-                      </div> */}
-                    </div>
-                    <div className={styles.modalPhone}>
-                      <PhoneComponent>
+                      <h4 className={styles2.title}>Drop In Services</h4>
+                      <ul className={styles2.bullets}>
+                        <li>Resume reviews</li>
+                        <li>Class help</li>
+                        <li>Schedule and four year plan advice</li>
+                        <li>General advice or help</li>
+                        <li>Just a chat!</li>
+                      </ul>
+                      <h4 className={styles2.title}>Appointment Required</h4>
+                      <ul className={styles2.bullets}>
+                        <li>Technical interview prep</li>
+                        <li>Behavioral interview prep</li>
+                      </ul>
+                      <div className={styles.modalButton}>
+                        <Link href="/openoffice">
+                          <p>Make an Appointment</p>
+                        </Link>
                         <Image
-                          src="/assets/img/open-office/explorations-painting-social.jpg"
-                          height={475}
-                          width={594}
-                          alt="explorations painting social"
+                          src="/assets/design-vectors/pointer.svg"
+                          width="22"
+                          height="22"
+                          className={styles.modalCursor}
                         />
-                      </PhoneComponent>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles2.eventInfo}>
+                    <div className={styles.modalContainerLeft}>
+                      <h4 className={styles2.title}>Office Schedule</h4>
+                      <p>Who&rsquo;s in today:</p>
+                      <ul className={styles2.bullets}>
+                        <li>Name</li>
+                        <li>Name</li>
+                        <li>Name</li>
+                        <li>Name</li>
+                      </ul>
+                      <div className={styles.modalButton}>
+                        <Link href="/openoffice">
+                          <p>Check out the Calendar</p>
+                        </Link>
+                        <Image
+                          src="/assets/design-vectors/pointer.svg"
+                          width="22"
+                          height="22"
+                          className={styles.modalCursor}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -165,7 +166,7 @@ export default function UpcomingEventsSection() {
                   onClick={closeModal}
                   className={styles2.closeButton2}
                 >
-                  Close
+                  <p>Close</p>
                 </button>
               </ComputerWindow>
             </div>

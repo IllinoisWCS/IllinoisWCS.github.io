@@ -46,6 +46,7 @@ export default function UpcomingEvent({
         }}
         isOpen={showModal}
         closeModal={closeModal}
+        styles={{ backgroundColor: 'red' }}
       />
     </>
   );
