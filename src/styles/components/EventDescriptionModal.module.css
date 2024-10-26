@@ -24,7 +24,7 @@
   padding: 3rem 5svw 8rem 5svw;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   text-align: center;
   max-height: 85svh;
   min-width: 50vh;

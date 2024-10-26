@@ -1,17 +1,86 @@
+/* eslint-disable operator-linebreak */
+/* eslint-disable function-paren-newline */
+/* eslint-disable implicit-arrow-linebreak */
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import EventsWindow from '../components/events/EventsWindow';
-// import PhoneComponent from '../components/general/PhoneComponent';
 import UpcomingEvent from '../components/events/UpcomingEvent';
+import data from '../data/openOffice.json';
 
 import styles from '@/styles/pages/Home.module.css';
 import styles2 from '@/styles/components/EventDescriptionModal.module.css';
 
 export default function UpcomingEventsSection() {
   const [events, setEvents] = useState([]);
+  const [week, setWeek] = useState('week1');
+  const [weekNum, setWeekNum] = useState(0);
+  const [uniqueOfficers, setUniqueOfficers] = useState([]);
+  const [uniqueCommittees, setUniqueCommittees] = useState([]);
+  const [day, setDay] = useState('');
+
+  const getUniqueNames = (rows, officer) => {
+    const uniqueNames = new Set();
+    if (officer) {
+      rows.forEach(({ officers }) => {
+        officers.forEach((name) => uniqueNames.add(`${name} (Officer)`));
+      });
+    } else {
+      rows.forEach(({ committees }) => {
+        committees.forEach((name) => uniqueNames.add(name));
+      });
+    }
+
+    return Array.from(uniqueNames);
+  };
+
+  useEffect(() => {
+    const currentDate = new Date();
+    const startDate = new Date(currentDate.getFullYear(), 0, 1);
+    const days = Math.floor(currentDate - startDate) / (1000 * 60 * 60 * 24);
+    const weekNumber = Math.ceil(days / 7);
+    if (weekNumber % 2 === 1) {
+      setWeek('week2');
+      setWeekNum(1);
+    }
+    const dayNames = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ];
+
+    const weekday = currentDate.getDay();
+    setDay(dayNames[weekday]);
+  }, [day]);
+
+  useEffect(() => {
+    if (weekNum !== null && week && day) {
+      const filteredData =
+        data[weekNum]?.[week]?.filter(({ heading }) => heading === day) || [];
+
+      if (filteredData.length === 0) {
+        setUniqueOfficers([]);
+        setUniqueCommittees([]);
+        return;
+      }
+
+      const officers = filteredData.flatMap(({ rows }) =>
+        getUniqueNames(rows, true),
+      );
+      const committees = filteredData.flatMap(({ rows }) =>
+        getUniqueNames(rows, false),
+      );
+
+      setUniqueOfficers(officers);
+      setUniqueCommittees(committees);
+    }
+  }, [weekNum, week, day]);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -125,7 +194,7 @@ export default function UpcomingEventsSection() {
                         <li>Behavioral interview prep</li>
                       </ul>
                       <div className={styles.modalButton}>
-                        <Link href="/openoffice">
+                        <Link href="/" onClick={closeModal}>
                           <p>Make an Appointment</p>
                         </Link>
                         <Image
@@ -133,6 +202,7 @@ export default function UpcomingEventsSection() {
                           width="22"
                           height="22"
                           className={styles.modalCursor}
+                          alt="pointer"
                         />
                       </div>
                     </div>
@@ -142,10 +212,18 @@ export default function UpcomingEventsSection() {
                       <h4 className={styles2.title}>Office Schedule</h4>
                       <p>Who&rsquo;s in today:</p>
                       <ul className={styles2.bullets}>
-                        <li>Name</li>
-                        <li>Name</li>
-                        <li>Name</li>
-                        <li>Name</li>
+                        {day === 'Saturday' || day === 'Sunday' ? (
+                          <p>No open office on weekends</p>
+                        ) : (
+                          <>
+                            {uniqueOfficers.map((name, i) => (
+                              <li key={`officer-${i}`}>{name}</li>
+                            ))}
+                            {uniqueCommittees.map((name, i) => (
+                              <li key={`committee-${i}`}>{name}</li>
+                            ))}
+                          </>
+                        )}
                       </ul>
                       <div className={styles.modalButton}>
                         <Link href="/openoffice">
@@ -156,6 +234,7 @@ export default function UpcomingEventsSection() {
                           width="22"
                           height="22"
                           className={styles.modalCursor}
+                          alt="pointer"
                         />
                       </div>
                     </div>
