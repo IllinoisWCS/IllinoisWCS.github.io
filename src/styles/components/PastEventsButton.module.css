@@ -1,0 +1,14 @@
+.container {
+  @apply block w-full max-w-3xl mx-auto mt-8 transition-transform duration-200 hover:scale-105;
+  text-decoration: none;
+}
+
+.button {
+  @apply bg-white rounded-2xl p-4 shadow-md;
+  border: 4px solid #fb79c3;
+  background: linear-gradient(to bottom, #ffe5f0, #fff0f6);
+}
+
+.text {
+  @apply text-center font-mono text-2xl text-gray-800;
+}

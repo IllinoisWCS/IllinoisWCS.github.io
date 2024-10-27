@@ -7,14 +7,22 @@ function EventDescription(
 ) {
   return (
     <div className={styles.container}>
-      <ComputerWindow className={styles.window}>
+      <ComputerWindow className={styles.window} topbarColor="#FB79C#">
         <div className={styles.eventInfo}>
           <h3 className={styles.title}>{title}</h3>
           <p>{date}</p>
           <p>{time}</p>
-          <p className={styles.location}>{location}</p>
-          <p className={styles.description}>{description}</p>
+          {location && (
+            <div className={styles.location}>
+              <span>{location}</span>
+            </div>
+          )}
         </div>
+        {description && (
+          <div className={styles.description}>
+            <p>{description}</p>
+          </div>
+        )}
         <button
           type="button"
           onClick={closeModal}

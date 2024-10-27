@@ -70,9 +70,10 @@ export default function UpcomingEventsSection() {
   };
 
   return (
-    <div className={styles.sectionContainer}>
+    <div className="w-full bg-pink-50 py-12">
+      <div className="max-w-6xl mx-auto px-4" />
       <h2 className={styles.header}>Upcoming Events</h2>
-      <p>
+      <p className="text-center mb-8">
         <a
           href="https://calendar.google.com/calendar/u/6?cid=M2MyOGdwcHJjbm9zMHEyNTFvZG5sODc3bWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
           target="_blank"
@@ -81,7 +82,7 @@ export default function UpcomingEventsSection() {
           Click <u>here</u> to get a copy of the WCS calendar.
         </a>
       </p>
-      <div className={styles.upcomingEventSection}>
+      <div className="grid grid-cls-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className={styles.eventContainer}>
           <button
             type="button"
@@ -154,7 +155,8 @@ export default function UpcomingEventsSection() {
                           src="/assets/img/open-office/explorations-painting-social.jpg"
                           height={475}
                           width={594}
-                          alt="explorations painting social"
+                          alt="Open office activities"
+                          className="w-full h-full object-cover"
                         />
                       </PhoneComponent>
                     </div>

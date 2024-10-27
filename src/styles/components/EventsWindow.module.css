@@ -2,6 +2,9 @@
   cursor: auto;
 }
 
+.window {
+  border: 1px solid #e5e7eb;
+}
 .wrapperCanClick {
   cursor: pointer;
   position: relative;
