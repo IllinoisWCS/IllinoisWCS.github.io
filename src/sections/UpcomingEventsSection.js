@@ -1,6 +1,3 @@
-/* eslint-disable operator-linebreak */
-/* eslint-disable function-paren-newline */
-/* eslint-disable implicit-arrow-linebreak */
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -61,6 +58,7 @@ export default function UpcomingEventsSection() {
 
   useEffect(() => {
     if (weekNum !== null && week && day) {
+      // eslint-disable-next-line operator-linebreak
       const filteredData =
         data[weekNum]?.[week]?.filter(({ heading }) => heading === day) || [];
 
@@ -70,11 +68,17 @@ export default function UpcomingEventsSection() {
         return;
       }
 
-      const officers = filteredData.flatMap(({ rows }) =>
-        getUniqueNames(rows, true),
+      const officers = filteredData.flatMap(
+        ({ rows }) =>
+          // eslint-disable-next-line implicit-arrow-linebreak
+          getUniqueNames(rows, true),
+        // eslint-disable-next-line function-paren-newline
       );
-      const committees = filteredData.flatMap(({ rows }) =>
-        getUniqueNames(rows, false),
+      const committees = filteredData.flatMap(
+        ({ rows }) =>
+          // eslint-disable-next-line implicit-arrow-linebreak
+          getUniqueNames(rows, false),
+        // eslint-disable-next-line function-paren-newline
       );
 
       setUniqueOfficers(officers);
@@ -176,7 +180,10 @@ export default function UpcomingEventsSection() {
           </button>
           {showModal && (
             <div className={styles2.container}>
-              <ComputerWindow className={styles2.window} topbarColor="#E2626A">
+              <ComputerWindow
+                className={styles2.window}
+                topbarColor="var(--wcs-pink)"
+              >
                 <div className={styles2.outerModalContainer}>
                   <div className={`${styles2.eventInfo} ${styles2.left}`}>
                     <div className={styles.modalContainerLeft}>

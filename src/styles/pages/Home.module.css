@@ -278,12 +278,15 @@
 }
 
 .modalButton {
-  margin-top: 10px;
   width: max-content;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 10px;
   background-color: var(--light-pink);
   position: relative;
+}
+
+.modalButton p {
+  font-size: 1rem;
 }
 
 .modalCursor {
@@ -298,16 +301,62 @@
   text-decoration: underline;
 }
 
+@media (max-width: 992px) {
+  .modalButton p {
+    font-size: 0.6rem;
+  }
+
+  .modalButton {
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  }
+
+  .modalCursor {
+    position: absolute;
+    width: 0.8rem;
+  }
+
+  .modalContainerLeft p {
+    margin: 0;
+  }
+
+  .modalContainerLeft {
+    gap: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
 @media only screen and (max-width: 767px) {
   .modalPhone {
     display: none;
+  }
+
+  .modalButton p {
+    font-size: 0.4rem;
+  }
+
+  .modalButton {
+    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+  }
+
+  .modalCursor {
+    position: absolute;
+    width: 0.6rem;
+  }
+
+  .modalContainerLeft p {
+    margin: 0;
+  }
+
+  .modalContainerLeft {
+    gap: 0.5rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .modalContainer {
     align-items: center;
-    overflow-y: auto;
   }
 }
 
@@ -324,6 +373,10 @@
 
   .sponsorsSection {
     padding: 0.5rem 0.5rem;
+  }
+
+  .modalContainerLeft {
+    align-items: center;
   }
 }
 
