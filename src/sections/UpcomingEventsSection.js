@@ -18,15 +18,25 @@ export default function UpcomingEventsSection() {
   const [uniqueCommittees, setUniqueCommittees] = useState([]);
   const [day, setDay] = useState('');
 
+  const shortenName = (name) => {
+    const tokens = name.split(' ');
+    return `${tokens[0]} ${tokens[1][0]}.`;
+  };
+
   const getUniqueNames = (rows, officer) => {
     const uniqueNames = new Set();
     if (officer) {
       rows.forEach(({ officers }) => {
-        officers.forEach((name) => uniqueNames.add(`${name} (Officer)`));
+        officers.forEach(
+          (name) =>
+            // eslint-disable-next-line implicit-arrow-linebreak
+            uniqueNames.add(`${shortenName(name)} (Officer)`),
+          // eslint-disable-next-line function-paren-newline
+        );
       });
     } else {
       rows.forEach(({ committees }) => {
-        committees.forEach((name) => uniqueNames.add(name));
+        committees.forEach((name) => uniqueNames.add(shortenName(name)));
       });
     }
 
@@ -186,74 +196,74 @@ export default function UpcomingEventsSection() {
               >
                 <div className={styles2.outerModalContainer}>
                   <div className={`${styles2.eventInfo} ${styles2.left}`}>
-                    <div className={styles.modalContainerLeft}>
-                      <h4 className={styles2.title}>Drop In Services</h4>
-                      <ul className={styles2.bullets}>
-                        <li>Resume reviews</li>
-                        <li>Class help</li>
-                        <li>Schedule and four year plan advice</li>
-                        <li>General advice or help</li>
-                        <li>Just a chat!</li>
-                      </ul>
-                      <h4 className={styles2.title}>Appointment Required</h4>
-                      <ul className={styles2.bullets}>
-                        <li>Technical interview prep</li>
-                        <li>Behavioral interview prep</li>
-                      </ul>
-                      <div className={styles.modalButton}>
-                        <Link href="/" onClick={closeModal}>
-                          <p>Make an Appointment</p>
-                        </Link>
-                        <Image
-                          src="/assets/design-vectors/pointer.svg"
-                          width="22"
-                          height="22"
-                          className={styles.modalCursor}
-                          alt="pointer"
-                        />
-                      </div>
+                    {/* <div className={styles.modalContainerLeft}> */}
+                    <h4 className={styles2.title}>Drop In Services</h4>
+                    <ul className={styles2.bullets}>
+                      <li>Resume reviews</li>
+                      <li>Class help</li>
+                      <li>Schedule and four year plan advice</li>
+                      <li>General advice or help</li>
+                      <li>Just a chat!</li>
+                    </ul>
+                    <h4 className={styles2.title}>Appointment Required</h4>
+                    <ul className={styles2.bullets}>
+                      <li>Technical interview prep</li>
+                      <li>Behavioral interview prep</li>
+                    </ul>
+                    <div className={styles.modalButton}>
+                      <Link href="/" onClick={closeModal}>
+                        <p>Make an Appointment</p>
+                      </Link>
+                      <Image
+                        src="/assets/design-vectors/pointer.svg"
+                        width="22"
+                        height="22"
+                        className={styles.modalCursor}
+                        alt="pointer"
+                      />
                     </div>
+                    {/* </div> */}
                   </div>
                   <div className={styles2.eventInfo}>
-                    <div className={styles.modalContainerLeft}>
-                      <h4 className={styles2.title}>Office Schedule</h4>
-                      <p>Who&rsquo;s in today:</p>
-                      <ul className={styles2.bullets}>
-                        {day === 'Saturday' || day === 'Sunday' ? (
-                          <p>No open office on weekends</p>
-                        ) : (
-                          <>
-                            {uniqueOfficers.map((name, i) => (
-                              <li key={`officer-${i}`}>{name}</li>
-                            ))}
-                            {uniqueCommittees.map((name, i) => (
-                              <li key={`committee-${i}`}>{name}</li>
-                            ))}
-                          </>
-                        )}
-                      </ul>
-                      <div className={styles.modalButton}>
-                        <Link href="/openoffice">
-                          <p>Check out the Calendar</p>
-                        </Link>
-                        <Image
-                          src="/assets/design-vectors/pointer.svg"
-                          width="22"
-                          height="22"
-                          className={styles.modalCursor}
-                          alt="pointer"
-                        />
-                      </div>
+                    {/* <div className={styles.modalContainerLeft}> */}
+                    <h4 className={styles2.title}>Office Schedule</h4>
+                    <p>Who&rsquo;s in today:</p>
+                    <ul className={styles2.bullets}>
+                      {day === 'Saturday' || day === 'Sunday' ? (
+                        <p>No open office on weekends</p>
+                      ) : (
+                        <>
+                          {uniqueOfficers.map((name, i) => (
+                            <li key={`officer-${i}`}>{name}</li>
+                          ))}
+                          {uniqueCommittees.map((name, i) => (
+                            <li key={`committee-${i}`}>{name}</li>
+                          ))}
+                        </>
+                      )}
+                    </ul>
+                    <div className={styles.modalButton}>
+                      <Link href="/openoffice">
+                        <p>Check out the Calendar</p>
+                      </Link>
+                      <Image
+                        src="/assets/design-vectors/pointer.svg"
+                        width="22"
+                        height="22"
+                        className={styles.modalCursor}
+                        alt="pointer"
+                      />
                     </div>
+                    {/* </div> */}
                   </div>
+                  <button
+                    type="button"
+                    onClick={closeModal}
+                    className={styles2.closeButton2}
+                  >
+                    <p>Close</p>
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  className={styles2.closeButton2}
-                >
-                  <p>Close</p>
-                </button>
               </ComputerWindow>
             </div>
           )}

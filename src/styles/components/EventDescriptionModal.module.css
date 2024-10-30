@@ -8,8 +8,10 @@
 }
 
 .outerModalContainer {
-  display: flex;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 0 50%;
+  grid-template-rows: 1fr;
+  max-height: 90svh;
 }
 
 .window {
@@ -17,7 +19,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 90svw;
   width: max-content;
   align-items: stretch;
   overflow-y: auto;
@@ -26,11 +27,11 @@
 .eventInfo {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
   text-align: center;
-  max-height: 85svh;
+  gap: 1rem;
   min-width: 50vh;
-  padding: 5rem;
+  padding: 3rem;
   flex: 1;
 }
 
@@ -45,7 +46,6 @@
 
 .bullets {
   text-align: left;
-  margin: 0;
 }
 
 .left {
@@ -85,10 +85,11 @@
   border-radius: 10px;
   border: none;
   background-color: var(--light-pink);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10px;
+  min-width: fit-content;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  transform: translate(-50%, -50%);
 }
 
 .closeButton2 p {
@@ -120,8 +121,12 @@
 }
 
 @media (max-width: 768px) {
+  .window {
+    max-width: 95vw;
+  }
   .closeButton2 {
-    padding: 0.1rem 0.4rem 0.1rem 0.4rem;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 5px;
   }
 
   .closeButton2 p,
@@ -139,31 +144,6 @@
   }
 
   .eventInfo {
-    padding: 1rem;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .window {
-    max-height: 95vh;
-  }
-
-  .outerModalContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .eventInfo {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .closeButton2 {
-    position: relative;
-  }
-
-  .title {
-    font-size: 0.6rem;
-    margin-bottom: 0.5rem;
+    gap: 0;
   }
 }
