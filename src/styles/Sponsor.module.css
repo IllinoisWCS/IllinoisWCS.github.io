@@ -1,0 +1,51 @@
+.phoneContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px; 
+  height: 160px; 
+  padding: 1rem;
+  background-color: white;
+  border: 8px solid #ff7cc0; /* Phone border color */
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.phoneNotch {
+  width: 20px;
+  height: 80px;
+  background-color: #ff7cc0;
+  border-radius: 50px;
+  position: absolute;
+  left: 10px; 
+}
+.header {
+  text-align: center;
+}
+.phoneImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.phoneTierCircle {
+  width: 25px;
+  height: 25px;
+  background-color: #f0ad4e; /* Default color */
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* Tier colors */
+.gold .phoneTierCircle {
+  background-color: #f0ad4e;
+}
+
+.bronze .phoneTierCircle {
+  background-color: #d9534f;
+}
+
