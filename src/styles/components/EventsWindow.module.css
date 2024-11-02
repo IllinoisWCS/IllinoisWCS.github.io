@@ -19,6 +19,9 @@
 }
 
 .container {
+  width: 80%;
+  max-width: 600px;
+  aspect-ratio: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +29,6 @@
   gap: 0.25rem;
   margin: 1rem;
   min-width: fit-content;
-  aspect-ratio: 1.5;
   color: #21636c;
 }
 
@@ -34,7 +36,9 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;
   position: relative;
-  max-width: 200px;
+  max-width: 300px;
+  padding: 1rem;
+  width: 100%;
 }
 
 .eventButton p {

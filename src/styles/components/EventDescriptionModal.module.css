@@ -8,18 +8,24 @@
 }
 
 .outerModalContainer {
-  display: grid;
+  display: flex;
   grid-template-columns: 50% 0 50%;
   grid-template-rows: 1fr;
   max-height: 90svh;
+  padding: 1rem;
 }
 
 .window {
   position: absolute;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
-  width: max-content;
+  width: 80vw;
+  max-width: 600px;
+  height: auto;
+  max-height: 85vh;
+  border-radius: 8px;
   align-items: stretch;
   overflow-y: auto;
 }
@@ -33,10 +39,6 @@
   min-width: 50vh;
   padding: 3rem;
   flex: 1;
-}
-
-.eventInfo p {
-  /* font-weight: 400; */
 }
 
 .title {
