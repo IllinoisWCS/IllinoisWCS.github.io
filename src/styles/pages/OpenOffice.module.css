@@ -1,0 +1,144 @@
+.main {
+  padding: 3rem 0rem 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.desktop {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    align-items: center;
+  }
+}
+
+.openOfficeHeader {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.openOfficeWeekIndication {
+  color: rgb(127, 97, 97);
+}
+
+.openOfficeWeekButton {
+  background-color: #cbedff;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: #cbedff;
+  font-size: small;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.th {
+  border: 3px solid transparent;
+  padding: 20% 5%;
+  text-align: center;
+  position: relative;
+}
+
+.tr {
+  border-radius: 20px;
+  border: 3px solid transparent;
+  padding: 20% 5%;
+  text-align: center;
+  position: relative;
+}
+
+.td {
+  border-radius: 20px;
+  border: 3px solid transparent;
+  width: fit-content;
+  padding: 2% 5px;
+  text-align: center;
+  position: relative;
+  /* height: 130px; */
+}
+
+.chevronLeft {
+  transform: rotate(180deg);
+  margin-left: 40px;
+}
+
+.chevronRight {
+  margin-left: 40px;
+}
+
+.hiddenChevronButton {
+  border: none;
+  background: transparent;
+}
+
+.openOfficeTimes {
+  background-color: #c6f6f8;
+  font-size: small;
+  height: fit-content;
+  padding: 0% 2%;
+}
+
+.openOfficeDay {
+  background-color: #fbd5de;
+  padding: 1%;
+  border-radius: 20px;
+}
+
+.openOfficeCellContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  /* height: 100%; */
+}
+
+.openOfficeCell {
+  text-align: center;
+  background-color: #fcf7e6;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+.openOfficeHighlight {
+  background-color: #faddc8;
+  border-radius: 20%;
+}
+
+.openOfficeName {
+  font-size: small;
+}
+
+#openOfficeSpace {
+  width: 10%;
+}
+
+/* styles.css file */

@@ -1,0 +1,112 @@
+.container {
+  padding-bottom: 5%;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+@media (max-width: 875px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.description {
+  width: 50%;
+  flex: 1;
+}
+
+@media (max-width: 875px) {
+  .description {
+    width: 100%;
+    padding: 0%;
+  }
+}
+
+.descriptionLeft {
+  font-weight: 500;
+  color: #21636c;
+  padding-right: 5%;
+}
+
+.descriptionRight {
+  font-weight: 500;
+  color: #21636c;
+  padding-left: 5%;
+}
+
+@media (max-width: 875px) {
+  .descriptionLeft,
+  .descriptionRight {
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 5%;
+  }
+}
+
+.mobileWindow,
+.mobileImage {
+  display: none;
+  flex: 0;
+  height: auto;
+}
+
+@media (max-width: 875px) {
+  .mobileWindow,
+  .mobileImage {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.nameLeft {
+  text-decoration: #21636c underline;
+  padding-bottom: 15px;
+  padding-top: 5%;
+  text-align: left;
+}
+
+.nameRight {
+  text-decoration: #21636c underline;
+  padding-bottom: 15px;
+  padding-top: 5%;
+  text-align: right;
+}
+
+.officersLeft {
+  width: fit-content;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  float: left;
+  margin-top: 3%;
+}
+
+.officersRight {
+  width: fit-content;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  float: right;
+  margin-top: 3%;
+}
+
+.window {
+  flex: 1;
+  width: auto;
+}
+
+.windowImage {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 875px) {
+  .window div {
+    display: none;
+  }
+}

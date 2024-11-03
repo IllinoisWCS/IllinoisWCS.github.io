@@ -1,9 +1,10 @@
-import OfficerCard from "@/components/OfficerCard";
-import React from "react";
-import officerData from "public/assets/js/officers.json";
-import styles from "@/styles/Officers.module.css";
+import React from 'react';
 
-export default function Officers({children}) {
+import OfficerCard from '../components/OfficerCard';
+import officerData from '../data/officers.json';
+import styles from '@/styles/pages/Officers.module.css';
+
+export default function Officers() {
   return (
     <div className={`${styles.main}`}>
       <h1 className={`${styles.officers}`}>WCS Officer Board</h1>
@@ -18,7 +19,7 @@ export default function Officers({children}) {
             position={officer.position}
             netid={officer.netid}
             officer={officer}
-          ></OfficerCard>
+          />
         ))}
       </div>
     </div>

@@ -1,0 +1,2 @@
+npx pretty-quick --check
+npm run lint

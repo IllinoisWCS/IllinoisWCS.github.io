@@ -1,0 +1,67 @@
+<<<<<<< HEAD:src/styles/TabletComponent.module.css
+=======
+.container {
+  background-color: white;
+  width: 1000px;
+  height: fit-content;
+  border-radius: 25px;
+  border: 10px solid #ff7cc0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.container img {
+  height: 475px;
+}
+
+.notch {
+  width: 30px;
+  height: 125px;
+  border-radius: 63px;
+  background-color: #ff7cc0;
+  position: absolute;
+}
+
+.border {
+  width: inherit;
+  background-color: #ffcee7;
+  padding: 1.5rem;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffe3f2;
+}
+
+.child {
+  width: 100%;
+}
+
+@media (max-width: 1120px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .notch {
+    width: 125px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 300px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1120px) {
+  .container {
+    width: 600px;
+  }
+}
+>>>>>>> 375a0b520254bdfb5fc6f896e1411a54449e0050:src/styles/components/TabletComponent.module.css

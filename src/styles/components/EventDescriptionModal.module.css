@@ -1,0 +1,149 @@
+.container {
+  width: 100svw;
+  height: 100svh;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(10, 10, 10, 0.6);
+}
+
+.outerModalContainer {
+  display: grid;
+  grid-template-columns: 50% 0 50%;
+  grid-template-rows: 1fr;
+  max-height: 90svh;
+}
+
+.window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  align-items: stretch;
+  overflow-y: auto;
+}
+
+.eventInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  gap: 1rem;
+  min-width: 50vh;
+  padding: 3rem;
+  flex: 1;
+}
+
+.eventInfo p {
+  /* font-weight: 400; */
+}
+
+.title {
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.bullets {
+  text-align: left;
+}
+
+.left {
+  background-color: var(--light-light-pink);
+}
+
+.location {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.description {
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 15;
+}
+
+.closeButton {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  color: #21636c;
+  background-color: #cbedff;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.closeButton2 {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--light-pink);
+  min-width: fit-content;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  transform: translate(-50%, -50%);
+}
+
+.closeButton2 p {
+  font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+  .closeButton2 {
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+  }
+
+  .closeButton2 p,
+  .bullets li {
+    font-size: 0.6rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .container p {
+    font-size: 0.7rem;
+  }
+
+  .eventInfo {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .window {
+    max-width: 95vw;
+  }
+  .closeButton2 {
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 5px;
+  }
+
+  .closeButton2 p,
+  .bullets li {
+    font-size: 0.4rem;
+  }
+
+  .title {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+
+  .container p {
+    font-size: 0.4rem;
+  }
+
+  .eventInfo {
+    gap: 0;
+  }
+}

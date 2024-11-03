@@ -1,0 +1,7 @@
+.hamburger {
+  position: static;
+  width: 100%;
+  z-index: 1;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}

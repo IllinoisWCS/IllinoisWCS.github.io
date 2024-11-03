@@ -1,17 +1,22 @@
-import Head from "next/head";
-import React from "react";
-import ComputerWindow from "@/components/ComputerWindow";
-import styles from "@/styles/Home.module.css";
-import {Inter} from "next/font/google";
-import StayInTouchSection from "@/components/StayInTouchSection";
-import UpcomingEventsSection from "@/components/UpcomingEventsSection";
-import AboutUsSection from "@/components/AboutUsSection";
-import SponsorsSection from "@/components/SponsorsSection";
-import OpenOffice from "./openoffice";
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
-const inter = Inter({subsets: ["latin"]});
+import AboutUsSection from '../sections/AboutUsSection';
+import ComputerWindow from '../components/general/ComputerWindowComponent';
+import StayInTouchSection from '../sections/StayInTouchSection';
+import SponsorsSection from '../sections/SponsorsSection';
+import UpcomingEventsSection from '../sections/UpcomingEventsSection';
+
+import styles from '@/styles/pages/Home.module.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+  const [showTempModal, setShowTempModal] = useState(true);
+
   return (
     <>
       <Head>
@@ -20,9 +25,9 @@ export default function Home() {
           name="description"
           content="Women in Computer Science is an organization under
                      CS@Illinois that strives to provide opportunities and a
-                     community for female CS students at University of Illinois."
+                     community for female and non-binary CS students at University of Illinois."
         />
-        <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+        <meta httpEquiv="content-type" content="text/html" charset="UTF-8" />
         <meta
           name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
@@ -75,14 +80,43 @@ export default function Home() {
       </Head>
 
       <main className={`${styles.main} ${inter.className}`}>
+        {/* temporary for chic tech 2024: */}
+        {showTempModal && (
+          <ComputerWindow className={styles.tempModalContainer}>
+            <div className={styles.tempModal}>
+              <p>Interested in attending ChicTech 2024?</p>
+              <div className={styles.tempModalButtonContainer}>
+                <Link
+                  href="https://docs.google.com/document/d/1EPZ560SkJqddTxeHNtoeSmiy8rWYRWTMnXCYQOhYF18/edit"
+                  className={styles.tempModalButton}
+                >
+                  Learn More
+                </Link>
+                <button
+                  type="button"
+                  className={styles.tempModalButton}
+                  onClick={() => setShowTempModal(false)}
+                >
+                  Dismiss
+                </button>
+              </div>
+            </div>
+          </ComputerWindow>
+        )}
+        {/* */}
+
         <h1 className={styles.title}>Illinois Women in Computer Science</h1>
         <div className={`${styles.windowContainer}`}>
           <div className={`${styles.windowGrid}`}>
             <ComputerWindow>
-              <img
+              <Image
                 className={`${styles.windowImage}`}
-                src="assets/img/members/committees23-24.jpg"
-              ></img>
+                src="/assets/img/home-page/committees23-24.jpg"
+                width={0}
+                height={0}
+                sizes="100wv"
+                alt="wcs committee photo"
+              />
             </ComputerWindow>
           </div>
         </div>
