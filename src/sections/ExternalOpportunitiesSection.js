@@ -3,14 +3,14 @@ import styles from '@/styles/sections/ExternalOpportunitiesSection.module.css';
 
 const cardsData = [
   { title: 'Conferences and Events', topbarColor: '#E2626A' },
-  { title: 'Corporate', topbarColor: '#A4DDDF' },
-  { title: 'Grad School', topbarColor: '#AA4465' },
-  { title: 'RSO', topbarColor: '#007090' },
-  { title: 'Research and Focus Group', topbarColor: '#98E2A7' },
-  { title: 'Scholarships', topbarColor: '#DCC2FF' },
-  { title: 'Workshops and Education', topbarColor: '#FFA69E' },
-  { title: 'Non-Profit', topbarColor: '#5E2087' },
-  { title: 'Volunteering', topbarColor: '#6FB2FF' },
+  { title: 'Corporate', topbarColor: '#69C7CB' },
+  { title: 'Grad School', topbarColor: '#E2626A' },
+  { title: 'RSO', topbarColor: '#69C7CB' },
+  { title: 'Research and Focus Group', topbarColor: '#E2626A' },
+  { title: 'Scholarships', topbarColor: '#69C7CB' },
+  { title: 'Workshops and Education', topbarColor: '#E2626A' },
+  { title: 'Non-Profit', topbarColor: '#69C7CB' },
+  { title: 'Volunteering', topbarColor: '#E2626A' },
 ];
 
 // will have to change later; just a placeholder
