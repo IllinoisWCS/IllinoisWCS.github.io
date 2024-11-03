@@ -192,7 +192,8 @@ export default function UpcomingEventsSection() {
             <div className={styles2.container}>
               <ComputerWindow
                 className={styles2.window}
-                topbarColor="var(--wcs-pink)"
+                topbarColor="wcs-pink"
+                onButtonClick={closeModal}
               >
                 <div className={styles2.outerModalContainer}>
                   <div className={`${styles2.eventInfo} ${styles2.left}`}>
@@ -270,7 +271,9 @@ export default function UpcomingEventsSection() {
 
           {events.length === 0 ? (
             <ComputerWindow>
-              <p className={`${styles.noEvents} ${styles.eventText}`}>
+              <p className={`${styles.noEvents} ${styles.eventText}`} 
+              topbarColor="wcs-pink"
+              onButtonClick={closeModal}>
                 No upcoming events this week. Check again next week!
               </p>
             </ComputerWindow>
