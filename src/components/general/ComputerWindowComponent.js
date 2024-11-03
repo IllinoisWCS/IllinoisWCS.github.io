@@ -3,11 +3,20 @@ import styles from '@/styles/components/ComputerWindow.module.css';
 export default function ComputerWindow({
   children,
   className,
-  topbarColor = '#65C7CC',
+  topbarColor = 'wcs-blue',
+  showDots = true,
 }) {
+
+  const colorOptions = {
+    'wcs-pink': 'var(--wcs-pink)',
+    'wcs-blue': 'var(--wcs-blue)',
+  };
+
+  const selectedColor = colorOptions[topbarColor] || colorOptions['wcs-blue'];
   return (
     <div className={`${styles.container} ${className}`}>
-      <div className={styles.topbar} style={{ backgroundColor: topbarColor }}>
+      <div className={styles.topbar} style={{ backgroundColor: selectedColor }}>
+        {showDots && (
         <ul>
           <li className={`${styles.topbarButtons} ${styles.topbarRedButton}`} />
           <li
@@ -17,8 +26,10 @@ export default function ComputerWindow({
             className={`${styles.topbarButtons} ${styles.topbarGreenButton}`}
           />
         </ul>
+        )}
       </div>
       <div>{children}</div>
     </div>
   );
 }
+
