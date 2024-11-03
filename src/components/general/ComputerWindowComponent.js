@@ -4,7 +4,8 @@ export default function ComputerWindow({
   children,
   className,
   topbarColor = 'wcs-blue',
-  showDots = true,
+  showButtons = true,
+  onButtonClick,
 }) {
 
   const colorOptions = {
@@ -16,9 +17,10 @@ export default function ComputerWindow({
   return (
     <div className={`${styles.container} ${className}`}>
       <div className={styles.topbar} style={{ backgroundColor: selectedColor }}>
-        {showDots && (
+        {showButtons && (
         <ul>
-          <li className={`${styles.topbarButtons} ${styles.topbarRedButton}`} />
+          <li className={`${styles.topbarButtons} ${styles.topbarRedButton}`} 
+          onClick={onButtonClick} />
           <li
             className={`${styles.topbarButtons} ${styles.topbarYellowButton}`}
           />
