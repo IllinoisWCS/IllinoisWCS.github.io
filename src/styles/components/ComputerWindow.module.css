@@ -31,6 +31,7 @@
 .topbarRedButton {
   background-color: red;
   left: 0.5rem;
+  cursor: pointer;
 }
 
 .topbarYellowButton {
