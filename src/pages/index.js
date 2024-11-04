@@ -107,7 +107,7 @@ export default function Home() {
 
         <h1 className={styles.title}>Illinois Women in Computer Science</h1>
         <div className={`${styles.windowContainer}`}>
-          <div className={`${styles.windowGrid}`}>
+        <div className={`${styles.windowGrid}`}>
             <ComputerWindow>
               <Image
                 className={`${styles.windowImage}`}
