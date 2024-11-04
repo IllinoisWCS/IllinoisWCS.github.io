@@ -5,7 +5,7 @@ import Kirthi from '../components/infra-committee/Kirthi';
 import Becky from '../components/infra-committee/becky';
 import Card from '../components/infra-committee/zl-card';
 import Helena from '../components/infra-committee/helena';
-
+import Camryn from '../components/infra-committee/camryn';
 import Ashley from '../components/infra-committee/ashley';
 
 export default function InfraCommittee() {
@@ -24,6 +24,7 @@ export default function InfraCommittee() {
           funFact="Fun Fact: I love Phantom of the Opera!"
           netid="kirthis2"
         />
+        <Camryn name="Camryn Lee" />
         <Card
           name="Zia Lu"
           description="I like taking photos of my dog!"
