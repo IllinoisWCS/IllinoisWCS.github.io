@@ -33,7 +33,7 @@
   align-items: center;
   cursor: pointer;
   margin: 8px auto 4px auto;
-  background-color: #f6cbce;
+  background-color: var(--light-pink);
 }
 
 .viewMoreButton p {
@@ -50,7 +50,7 @@
   height: 1px;
   margin: 16px 0;
   width: 100%;
-  background-color: #f6cbce;
+  background-color: var(--light-pink);
 }
 
 .itemsList {
