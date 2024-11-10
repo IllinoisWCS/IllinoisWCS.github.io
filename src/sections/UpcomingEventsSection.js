@@ -270,12 +270,12 @@ export default function UpcomingEventsSection() {
           )}
 
           {events.length === 0 ? (
-            <ComputerWindow>
-              <p className={`${styles.noEvents} ${styles.eventText}`} 
+            <ComputerWindow
+              className={`${styles.noEvents} ${styles.eventText}`}
               topbarColor="wcs-pink"
-              onButtonClick={closeModal}>
-                No upcoming events this week. Check again next week!
-              </p>
+              onButtonClick={closeModal}
+            >
+              <p>No upcoming events this week. Check again next week!</p>
             </ComputerWindow>
           ) : (
             events.map(
