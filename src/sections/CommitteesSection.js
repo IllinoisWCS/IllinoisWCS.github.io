@@ -18,9 +18,9 @@ export default function CommitteesSection({
         <>
           <h2 className={`${styles.nameLeft}`}>{name}</h2>
           <div className={`${styles.content}`}>
-            <ComputerWindow 
-            className={`${styles.window}`} 
-            topbarColor="wcs-pink"
+            <ComputerWindow
+              className={`${styles.window}`}
+              topbarColor="wcs-pink"
             >
               <Image
                 className={`${styles.windowImage}`}
@@ -83,7 +83,10 @@ export default function CommitteesSection({
                 {officers}
               </p>
             </div>
-            <ComputerWindow className={`${styles.window}`} topbarColor="wcs-pink">
+            <ComputerWindow
+              className={`${styles.window}`}
+              topbarColor="wcs-pink"
+            >
               <Image
                 className={`${styles.windowImage}`}
                 src={img}

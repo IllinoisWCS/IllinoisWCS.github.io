@@ -97,21 +97,6 @@ export default function Home() {
           </ComputerWindow>
         )}
 
-        <h1 className={styles.title}>Illinois Women in Computer Science</h1>
-        <div className={`${styles.windowContainer}`}>
-          <div className={`${styles.windowGrid}`}>
-            <ComputerWindow>
-              <Image
-                className={`${styles.windowImage}`}
-                src="/assets/img/home-page/committees23-24.jpg"
-                width={0}
-                height={0}
-                sizes="100wv"
-                alt="wcs committee photo"
-              />
-            </ComputerWindow>
-          </div>
-        </div>
         <AboutUsSection />
         <UpcomingEventsSection />
         <StayInTouchSection />
