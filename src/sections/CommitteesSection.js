@@ -9,7 +9,6 @@ export default function CommitteesSection({
   officers,
   img,
 }) {
-  const color = isLeft ? '#FB79C3' : '#65C7CC';
   const bColor = isLeft ? '#FFCEE7' : '#CBEDFF';
 
   return (
