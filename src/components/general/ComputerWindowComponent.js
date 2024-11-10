@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import styles from '@/styles/components/ComputerWindow.module.css';
 
 export default function ComputerWindow({
@@ -7,6 +8,11 @@ export default function ComputerWindow({
   showButtons = true,
   onButtonClick,
 }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const colorOptions = {
     'wcs-pink': 'var(--wcs-pink)',
@@ -17,21 +23,26 @@ export default function ComputerWindow({
   return (
     <div className={`${styles.container} ${className}`}>
       <div className={styles.topbar} style={{ backgroundColor: selectedColor }}>
-        {showButtons && (
-        <ul>
-          <li className={`${styles.topbarButtons} ${styles.topbarRedButton}`} 
-          onClick={onButtonClick} />
-          <li
-            className={`${styles.topbarButtons} ${styles.topbarYellowButton}`}
-          />
-          <li
-            className={`${styles.topbarButtons} ${styles.topbarGreenButton}`}
-          />
-        </ul>
+        {showButtons && isMounted && (
+          <ul className={styles.buttonList}>
+            <li className={styles.topbarButtons}>
+              <button
+                type="button"
+                className={`${styles.topbarRedButton}`}
+                onClick={onButtonClick}
+                aria-label="Close"
+              />
+            </li>
+            <li
+              className={`${styles.topbarButtons} ${styles.topbarYellowButton}`}
+            />
+            <li
+              className={`${styles.topbarButtons} ${styles.topbarGreenButton}`}
+            />
+          </ul>
         )}
       </div>
       <div>{children}</div>
     </div>
   );
 }
-
