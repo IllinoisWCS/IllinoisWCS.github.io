@@ -8,7 +8,7 @@ export default function AboutUsSection() {
     <div className={`${styles.container}`}>
       <div className={styles.computerWindowContainer}>
         <ComputerWindow className={styles.window}>
-          <div className={styles.windowContent}>  
+          <div className={styles.windowContent}>
             <h1>Illinois Women in Computer Science</h1>
           </div>
         </ComputerWindow>

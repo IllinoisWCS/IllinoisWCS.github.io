@@ -105,7 +105,7 @@ export default function Home() {
         )}
         {/* */}
 
-        <h1 className={styles.title}>Illinois Women in Computer Science</h1>
+        {/* <h1 className={styles.title}>Illinois Women in Computer Science</h1>
         <div className={`${styles.windowContainer}`}>
           <div className={`${styles.windowGrid}`}>
             <ComputerWindow>
@@ -119,7 +119,7 @@ export default function Home() {
               />
             </ComputerWindow>
           </div>
-        </div>
+        </div> */}
         <AboutUsSection />
         <UpcomingEventsSection />
         <StayInTouchSection />

@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,6 +10,10 @@
 
 .main {
   display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  width: 90%;
 }
 
 .text {
@@ -30,9 +34,7 @@
 .windowContent {
   padding: 1rem;
 }
-.main {
-  align-items: center;
-}
+
 .computerWindowContainer {
   align-self: center;
   padding: 0rem;
@@ -50,7 +52,7 @@
   padding: 0rem;
   color: var(--wcs-pink);
   width: 100%;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
 }
 
 .panelContainer {
@@ -71,7 +73,6 @@
 }
 
 .diversityContainer {
-  /* not sure why this isn't working to extend the width of the statement */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -80,7 +81,6 @@
 .diversityStatement {
   padding: 1.5rem;
   text-align: center;
-  /* or here? */
   width: 100%;
 }
 
@@ -89,7 +89,9 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem 4rem;
+  padding: 2rem;
+  padding-left: 4rem;
+  padding-right: 0rem;
   position: relative;
   background-size: cover;
   margin-left: rem;
