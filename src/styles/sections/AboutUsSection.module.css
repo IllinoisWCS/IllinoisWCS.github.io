@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  gap: 4rem;
+  gap: 2rem;
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
@@ -27,9 +27,15 @@
   align-items: center;
 }
 
+.windowContent {
+  padding: 1rem;
+}
+.main {
+  align-items: center;
+}
 .computerWindowContainer {
   align-self: center;
-  padding: 2rem;
+  padding: 0rem;
   margin-top: 0;
   text-align: center;
   justify-content: center;
@@ -38,17 +44,20 @@
   margin: auto;
 }
 
-.computerTabContainer {
+.aboutContainer {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 0rem;
   color: var(--wcs-pink);
+  width: 100%;
+  margin-bottom: 2rem
 }
 
 .panelContainer {
   display: flex;
-  gap: 2rem;
+  gap: 0rem;
   flex-direction: row;
+  width: 100%;
 }
 
 .leftPanel {
@@ -83,7 +92,7 @@
   padding: 2rem 4rem;
   position: relative;
   background-size: cover;
-  margin-left: 1rem;
+  margin-left: rem;
 }
 
 @media only screen and (max-width: 1160px) {
