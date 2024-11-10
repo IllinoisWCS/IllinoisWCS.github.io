@@ -6,8 +6,6 @@ export default function SponsorsSection() {
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Sponsors</h2>
       <h3 className={styles.sponsorCall}>
-        {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-      
       </h3>
       <div className={styles.sponsorsSection}>
           <div>
@@ -23,7 +21,7 @@ export default function SponsorsSection() {
                 tier="gold"
               />
               <Sponsor
-                sponsor="IMCTrading1.png"
+                sponsor="IMCTrading.png"
                 url="https://www.imc.com/us/search-careers"
                 tier="bronze"
               />
@@ -40,7 +38,7 @@ export default function SponsorsSection() {
                 tier="bronze"
               />
             <Sponsor
-                sponsor="hrt.png"
+                sponsor="hrt2.png"
                 url="https://www.hudsonrivertrading.com/careers/"
                 tier="bronze"
               />

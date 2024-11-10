@@ -36,12 +36,12 @@
   height: 80px;
   display: block;
   background-color: #ffffff;
+  margin-bottom: -25px;
   text: "Sponsors";
   text-align: center;
   padding: 20px 0;
   border-radius: 25px;
 }
-
 
 .header::before {
   content: '';
@@ -207,7 +207,7 @@
 }
 
 .sponsorsSection {
-  margin-top: 30px;
+  margin-bottom: 30px;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -220,19 +220,16 @@
   background-size: cover;
 }
 
-
 .sponsorCall {
   margin-top: 30px;
   align-self: center;
   text-align: center;
 }
 
-
 .sponsorEmail {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
-
 
 .sponsors {
   display: flex;
@@ -240,7 +237,6 @@
   flex-wrap: wrap;
   padding: 0.5rem;
 }
-
 
 .modalSection {
   display: flex;
