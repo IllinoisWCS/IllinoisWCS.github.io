@@ -33,6 +33,11 @@ export default function OpenOffice() {
     }
   }
 
+  const shortenName = (name) => {
+    const tokens = name.split(' ');
+    return `${tokens[0]} ${tokens[1][0]}.`;
+  };
+
   useEffect(() => {
     const currentDate = new Date();
     const startDate = new Date(currentDate.getFullYear(), 0, 1);
@@ -122,7 +127,7 @@ export default function OpenOffice() {
                           <div key={i}>
                             <span>
                               <p className={`${styles.openOfficeHighlight}`}>
-                                {name}
+                                {shortenName(name)}
                               </p>
                             </span>
                           </div>
@@ -130,7 +135,7 @@ export default function OpenOffice() {
                         {rows[x].committees.map((name, i) => (
                           <div key={i}>
                             <span className={`${styles.openOfficeName}`}>
-                              <p>{name}</p>
+                              <p>{shortenName(name)}</p>
                             </span>
                           </div>
                         ))}
