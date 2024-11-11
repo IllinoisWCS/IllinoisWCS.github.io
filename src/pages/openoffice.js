@@ -65,7 +65,7 @@ export default function OpenOffice() {
                 setWeekNum(1);
               }}
             >
-              <h2>Check out week 2</h2>
+              <p>Check out week 2</p>
             </Button>
           </>
         ) : (
@@ -77,7 +77,7 @@ export default function OpenOffice() {
                 setWeekNum(0);
               }}
             >
-              <h2>Check out week 1</h2>
+              <p>Check out week 2</p>
             </Button>
           </>
         )}
