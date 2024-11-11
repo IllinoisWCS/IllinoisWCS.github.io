@@ -19,8 +19,8 @@
   position: relative;
   border-style: solid;
   cursor: pointer;
-
-  width: 200px;
+  white-space: nowrap;
+  padding: 1rem;
   height: 90px;
   border-radius: 10px;
   border-width: 6px;
@@ -28,9 +28,9 @@
 }
 
 .button::after {
-  content: '';
+  content: ' ';
   display: block;
-  width: 200px;
+  width: calc(100% + 0.7rem);
   height: 90px;
   border-radius: 10px;
   background-color: var(--wcs-pink);
@@ -40,39 +40,30 @@
   top: 8px;
 }
 
-.button::before {
-  z-index: 1;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 12%;
-  width: 20%;
-  height: 100%;
-  transform: skewX(-30deg);
-  transition: 0.3s;
-}
-
-.button:hover::before {
-  left: 65%;
+.button h2 {
+  margin: 0;
 }
 
 @media screen and (max-width: 768px) {
   .button {
-    width: 170px;
-    height: 80px;
+    height: fit-content;
     border-width: 4px;
-    border-radius: 10px;
+    border-radius: 20px;
   }
 
   .button h2 {
-    font-size: 24px;
+    font-size: 14px;
   }
 
   .button::after {
-    width: 170px;
-    height: 80px;
-    border-radius: 10px;
+    border-radius: 20px;
+    height: 120%;
     left: -4px;
-    top: 6px;
+    top: 8px;
+    width: calc(100% + 0.5rem);
+  }
+
+  .buttonWrapper {
+    height: fit-content;
   }
 }

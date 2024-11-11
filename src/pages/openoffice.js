@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
-import Button from '../components/Button';
+import Button from '../components/OpenOfficeButton';
 
 import data from '../data/openOffice.json';
 import styles from '@/styles/pages/OpenOffice.module.css';
@@ -22,7 +22,6 @@ export default function OpenOffice() {
     new Set(['Monday', 'Tuesday', 'Wednesday']),
   );
   const [weekHalf, setWeekHalf] = useState('first'); // toggle with "second" if arrow clicked
-  // const [curWeek, setCurWeek] = useState(1);
 
   function updateWeekDays(half) {
     setWeekHalf(half);
@@ -46,7 +45,6 @@ export default function OpenOffice() {
     if (weekNumber % 2 === 1) {
       setWeek('week2');
       setWeekNum(1);
-      // setCurWeek(2);
     }
   }, []);
 
@@ -60,7 +58,6 @@ export default function OpenOffice() {
         </ComputerWindow>
         {week === 'week1' ? (
           <>
-            {/* <p>We are currently on Week {curWeek} shifts.</p> */}
             <p>You&apos;re viewing the Week 1 schedule.</p>
             <Button
               onClick={() => {
@@ -68,12 +65,11 @@ export default function OpenOffice() {
                 setWeekNum(1);
               }}
             >
-              <h2>Week 2</h2>
+              <h2>Check out week 2</h2>
             </Button>
           </>
         ) : (
           <>
-            {/* <p>We are currently on Week {curWeek} shifts.</p> */}
             <p>You&apos;re viewing the Week 2 schedule.</p>
             <Button
               onClick={() => {
@@ -81,7 +77,7 @@ export default function OpenOffice() {
                 setWeekNum(0);
               }}
             >
-              <h2>Week 1</h2>
+              <h2>Check out week 1</h2>
             </Button>
           </>
         )}
@@ -231,7 +227,7 @@ export default function OpenOffice() {
                                   <p
                                     className={`${styles.openOfficeHighlight}`}
                                   >
-                                    {name}
+                                    {shortenName(name)}
                                   </p>
                                 </span>
                               </div>
@@ -239,7 +235,7 @@ export default function OpenOffice() {
                             {rows[x].committees.map((name, i) => (
                               <div key={i}>
                                 <span className={`${styles.openOfficeName}`}>
-                                  <p>{name}</p>
+                                  <p>{shortenName(name)}</p>
                                 </span>
                               </div>
                             ))}

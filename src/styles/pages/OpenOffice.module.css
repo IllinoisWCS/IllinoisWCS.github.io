@@ -7,6 +7,7 @@
 
 .desktop {
   display: block;
+  width: 80%;
 }
 
 @media (max-width: 768px) {
@@ -46,6 +47,7 @@
 
 .tableContainer {
   overflow-x: auto;
+  width: 100%;
   @media (max-width: 768px) {
     padding: 20px;
   }
@@ -53,6 +55,8 @@
 
 .table {
   margin: auto;
+  table-layout: auto;
+  width: 100%;
 }
 
 .table tr td:first-child {
@@ -74,8 +78,6 @@
 .th {
   border: 1px solid white;
   border-top: none;
-  text-align: center;
-  position: relative;
 }
 
 .tr {
@@ -84,7 +86,6 @@
 }
 
 .td {
-  width: fit-content;
   text-align: center;
   position: relative;
   border: 1px solid white;
@@ -92,11 +93,19 @@
 
 .chevronLeft {
   transform: rotate(180deg);
-  margin-left: 40px;
+  margin: auto;
 }
 
 .chevronRight {
-  margin-left: 40px;
+  margin: auto;
+}
+
+.chevronRight:hover {
+  transform: scale(1.2);
+}
+
+.chevronLeft:hover {
+  transform: rotate(180deg) scale(1.2);
 }
 
 .hiddenChevronButton {
@@ -113,13 +122,15 @@
 
 .openOfficeDay {
   background-color: var(--wcs-pink);
-  padding: 1%;
+  padding: 1% 0;
 }
 
 .openOfficeDay p {
   color: white;
   font-size: 26px;
   font-weight: normal;
+  width: fit-content;
+  margin: auto;
 }
 
 #openOfficeSpace {
@@ -136,20 +147,18 @@
 .openOfficeCell {
   text-align: center;
   background-color: #f6cbce;
-  width: fit-content;
-  height: fit-content;
   padding: 1rem;
-  min-width: 190px;
+  white-space: nowrap;
 }
 
 .openOfficeHighlight {
   text-decoration: underline;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: normal;
 }
 
 .openOfficeName p {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .space {
@@ -164,6 +173,34 @@
   width: 80%;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .openOfficeDay p {
+    font-size: 24px;
+  }
+
+  .openOfficeCell p {
+    font-size: 14px;
+  }
+
+  .openOfficeTimes p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .openOfficeDay p {
+    font-size: 18px;
+  }
+
+  .openOfficeCell p {
+    font-size: 12px;
+  }
+
+  .space {
+    padding: 1rem;
+  }
 }
 
 /* styles.css file */
