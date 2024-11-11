@@ -18,7 +18,7 @@ export default function Key({ children, url }) {
         <div className={styles.keyBottom}>
           <div className={styles.keyRight}>
             <div className={styles.keyBody}>
-              <h3 className={styles.content}>{children}</h3>
+              <div className={styles.content}>{children}</div>
             </div>
           </div>
         </div>
