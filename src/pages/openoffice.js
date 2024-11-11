@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
+import Button from '../components/Button';
 
 import data from '../data/openOffice.json';
 import styles from '@/styles/pages/OpenOffice.module.css';
@@ -56,35 +57,27 @@ export default function OpenOffice() {
           <>
             {/* <p>We are currently on Week {curWeek} shifts.</p> */}
             <p>You&apos;re viewing the Week 1 schedule.</p>
-            <div className={styles.openOfficeWeekButtonWrapper}>
-              <button
-                type="button"
-                className={`${styles.openOfficeWeekButton}`}
-                onClick={() => {
-                  setWeek('week2');
-                  setWeekNum(1);
-                }}
-              >
-                <h2>Week 2</h2>
-              </button>
-            </div>
+            <Button
+              onClick={() => {
+                setWeek('week2');
+                setWeekNum(1);
+              }}
+            >
+              <h2>Week 2</h2>
+            </Button>
           </>
         ) : (
           <>
             {/* <p>We are currently on Week {curWeek} shifts.</p> */}
             <p>You&apos;re viewing the Week 2 schedule.</p>
-            <div className={styles.openOfficeWeekButtonWrapper}>
-              <button
-                type="button"
-                className={`${styles.openOfficeWeekButton}`}
-                onClick={() => {
-                  setWeek('week1');
-                  setWeekNum(0);
-                }}
-              >
-                <h2>Week 1</h2>
-              </button>
-            </div>
+            <Button
+              onClick={() => {
+                setWeek('week1');
+                setWeekNum(0);
+              }}
+            >
+              <h2>Week 1</h2>
+            </Button>
           </>
         )}
       </div>
