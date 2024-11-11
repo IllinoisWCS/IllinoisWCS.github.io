@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
-import Link from 'next/link';
 
 import AboutUsSection from '../sections/AboutUsSection';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
@@ -15,7 +14,7 @@ import styles from '@/styles/pages/Home.module.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  const [showTempModal, setShowTempModal] = useState(true);
+  const [showTempModal, setShowTempModal] = useState(false);
 
   return (
     <>
@@ -80,18 +79,12 @@ export default function Home() {
       </Head>
 
       <main className={`${styles.main} ${inter.className}`}>
-        {/* temporary for chic tech 2024: */}
+        {/* temporary modal, to dispaly, change initial state of showTempModal to True */}
         {showTempModal && (
           <ComputerWindow className={styles.tempModalContainer}>
             <div className={styles.tempModal}>
-              <p>Interested in attending ChicTech 2024?</p>
+              <p>.</p>
               <div className={styles.tempModalButtonContainer}>
-                <Link
-                  href="https://docs.google.com/document/d/1EPZ560SkJqddTxeHNtoeSmiy8rWYRWTMnXCYQOhYF18/edit"
-                  className={styles.tempModalButton}
-                >
-                  Learn More
-                </Link>
                 <button
                   type="button"
                   className={styles.tempModalButton}
@@ -103,7 +96,6 @@ export default function Home() {
             </div>
           </ComputerWindow>
         )}
-        {/* */}
 
         <h1 className={styles.title}>Illinois Women in Computer Science</h1>
         <div className={`${styles.windowContainer}`}>
