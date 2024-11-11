@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
+import ComputerWindow from '../components/general/ComputerWindowComponent';
 
 import data from '../data/openOffice.json';
 import styles from '@/styles/pages/OpenOffice.module.css';
@@ -20,6 +21,7 @@ export default function OpenOffice() {
     new Set(['Monday', 'Tuesday', 'Wednesday']),
   );
   const [weekHalf, setWeekHalf] = useState('first'); // toggle with "second" if arrow clicked
+  // const [curWeek, setCurWeek] = useState(1);
 
   function updateWeekDays(half) {
     setWeekHalf(half);
@@ -38,6 +40,7 @@ export default function OpenOffice() {
     if (weekNumber % 2 === 1) {
       setWeek('week2');
       setWeekNum(1);
+      // setCurWeek(2);
     }
   }, []);
 
@@ -46,34 +49,42 @@ export default function OpenOffice() {
   return (
     <div className={`${styles.main}`}>
       <div className={`${styles.openOfficeHeader}`}>
-        <h1>Open Office Calendar</h1>
+        <ComputerWindow className={styles.title}>
+          <h2>Open Office Calendar</h2>
+        </ComputerWindow>
         {week === 'week1' ? (
           <>
-            <p>You&apos;re viewing the Week 1 schedule</p>
-            <button
-              type="button"
-              className={`${styles.openOfficeWeekButton}`}
-              onClick={() => {
-                setWeek('week2');
-                setWeekNum(1);
-              }}
-            >
-              <p>Check out week 2</p>
-            </button>
+            {/* <p>We are currently on Week {curWeek} shifts.</p> */}
+            <p>You&apos;re viewing the Week 1 schedule.</p>
+            <div className={styles.openOfficeWeekButtonWrapper}>
+              <button
+                type="button"
+                className={`${styles.openOfficeWeekButton}`}
+                onClick={() => {
+                  setWeek('week2');
+                  setWeekNum(1);
+                }}
+              >
+                <h2>Week 2</h2>
+              </button>
+            </div>
           </>
         ) : (
           <>
-            <p>You&apos;re viewing the Week 2 schedule</p>
-            <button
-              type="button"
-              className={`${styles.openOfficeWeekButton}`}
-              onClick={() => {
-                setWeek('week1');
-                setWeekNum(0);
-              }}
-            >
-              <p>Check out week 1</p>
-            </button>
+            {/* <p>We are currently on Week {curWeek} shifts.</p> */}
+            <p>You&apos;re viewing the Week 2 schedule.</p>
+            <div className={styles.openOfficeWeekButtonWrapper}>
+              <button
+                type="button"
+                className={`${styles.openOfficeWeekButton}`}
+                onClick={() => {
+                  setWeek('week1');
+                  setWeekNum(0);
+                }}
+              >
+                <h2>Week 1</h2>
+              </button>
+            </div>
           </>
         )}
       </div>
@@ -83,8 +94,8 @@ export default function OpenOffice() {
             <thead>
               <tr className={`${styles.tr}`}>
                 <th
-                  className={`${styles.space}`}
-                  id={`${styles.openOfficeSpace} ${styles.th}`}
+                  className={`${styles.space} ${styles.th}`}
+                  id={`${styles.openOfficeSpace}`}
                 >
                   {' '}
                 </th>
