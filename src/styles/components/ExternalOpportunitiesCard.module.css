@@ -10,15 +10,12 @@
   flex: 1 1 calc(33.333% - 1rem);
   min-width: 250px;
 }
-.icon {
-}
 
 .title {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
   margin-bottom: 0.5rem;
-  /* text-decoration: underline; */
 }
 
 .link {

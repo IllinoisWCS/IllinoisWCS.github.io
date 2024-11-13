@@ -16,9 +16,9 @@
   background-color: var(--light-light-pink);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 90%; /* Ensure the window takes up 90% of the viewport height */
+  height: 90%;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
+  flex-direction: column;
 }
 
 .headingBlock {
@@ -39,7 +39,7 @@
   padding: 1rem 5svw 1rem 5svw;
   display: flex;
   flex-direction: row;
-  flex-grow: 1; /* Take remaining space */
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ExternalOpportunitiesModal from '../components/events/ExternalOpportunitiesModal';
-import styles from '@/styles/sections/ExternalOpportunitiesSection.module.css';
 
 const eventData = [
   {
@@ -74,8 +73,9 @@ export default function ExternalOpportunitiesSection() {
 
   return (
     <div>
-      <button onClick={toggleModal}>Show Event</button>
-
+      <button type="button" onClick={toggleModal}>
+        Show Event
+      </button>
       <ExternalOpportunitiesModal
         category="Conferences and Events"
         data={eventData}
