@@ -9,11 +9,8 @@ export default function SponsorsSection() {
       <h3 className={styles.sponsorCall}>
         {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
         If you are interested in sponsoring us, please email{' '}
-        <a
-          className={styles.sponsorEmail}
-          href="mailto:contact@illinoiswcs.org"
-        >
-          contact@illinoiswcs.org
+        <a className={styles.sponsorEmail} href="mailto:illinoiswcs@gmail.org">
+          illinoiswcs@gmail.org
         </a>
         !
       </h3>
