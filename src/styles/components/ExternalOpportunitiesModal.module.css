@@ -1,6 +1,6 @@
 .container {
-  width: 100svw;
-  height: 100svh;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   inset: 0;
   z-index: 999;
@@ -14,11 +14,18 @@
   position: relative;
   width: 80%;
   background-color: var(--light-light-pink);
-  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   height: 90%;
   display: flex;
   flex-direction: column;
+}
+
+.window-wcs-pink-light-light {
+  background-color: var(--light-light-pink);
+}
+
+.window-wcs-blue-light-light {
+  background-color: var(--light-light-blue);
 }
 
 .headingBlock {
@@ -28,6 +35,14 @@
   height: 7rem;
   display: flex;
   align-items: center;
+}
+
+.headingBlock-wcs-pink-light {
+  border-bottom: solid var(--light-pink);
+}
+
+.headingBlock-wcs-blue-light {
+  border-bottom: solid var(--light-blue);
 }
 
 .heading {
@@ -61,7 +76,22 @@
   bottom: 0;
 }
 
-.closeButton:hover {
+.closeButton-wcs-pink-light {
+  color: var(--wcs-pink);
+  background-color: var(--light-pink);
+}
+
+.closeButton-wcs-blue-light {
+  color: var(--wcs-blue);
+  background-color: var(--light-blue);
+}
+
+.closeButton-wcs-pink-light:hover {
   color: var(--light-light-pink);
   background-color: var(--wcs-pink);
+}
+
+.closeButton-wcs-blue-light:hover {
+  color: var(--light-light-blue);
+  background-color: var(--wcs-blue);
 }

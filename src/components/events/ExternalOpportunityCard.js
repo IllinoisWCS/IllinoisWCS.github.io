@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '@/styles/components/ExternalOpportunitiesCard.module.css';
 
 export default function ExternalOpportunityCard({
+  color,
   icon,
   title,
   location,
@@ -10,7 +11,7 @@ export default function ExternalOpportunityCard({
   link,
 }) {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${styles[`card-${color}`]}`}>
       <p className={styles.icon}>{icon}</p>
       {link ? (
         <a
@@ -22,7 +23,7 @@ export default function ExternalOpportunityCard({
           <p className={styles.title}>{title}</p>
         </a>
       ) : (
-        <p className={styles.title}>{title}</p> // Render title as plain text if link is empty
+        <p className={styles.title}>{title}</p>
       )}
       <p className={styles.location}>{location}</p>
       <p className={styles.time}>{time}</p>

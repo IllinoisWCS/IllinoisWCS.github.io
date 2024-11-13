@@ -77,6 +77,7 @@ export default function ExternalOpportunitiesSection() {
         Show Event
       </button>
       <ExternalOpportunitiesModal
+        color="wcs-blue"
         category="Conferences and Events"
         data={eventData}
         isOpen={isModalOpen}

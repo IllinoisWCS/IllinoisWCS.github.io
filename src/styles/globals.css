@@ -49,6 +49,7 @@
   --light-pink: #fdc8cc;
   --light-blue: #b1f0f2;
   --light-light-pink: #fff8f9;
+  --light-light-blue: #f8fffe;
 }
 
 @media (prefers-color-scheme: dark) {
