@@ -61,20 +61,3 @@ function ExternalOpportunitiesModal({
 }
 
 export default ExternalOpportunitiesModal;
-
-// export default function ExternalOpportunitiesModal({
-//   color,
-//   category,
-//   data,
-//   isOpen,
-//   closeModal,
-// }) {
-//   return isOpen ? (
-//     <ExternalOpportunitiesModalContent
-//       color={color}
-//       category={category}
-//       events={data}
-//       closeModal={closeModal}
-//     />
-//   ) : null;
-// }
