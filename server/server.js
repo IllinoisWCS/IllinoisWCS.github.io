@@ -12,12 +12,12 @@ const PORT = 5000;
 const HOST = 'localhost';
 
 const notion = new Client({
-  auth: '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',
+  auth: process.env.NOTION_API_KEY,
 });
 
 app.get('/external-opps-api', jsonParser, async (req, res) => {
   results = await notion.databases.query({
-    database_id: '12ce552db9f280f8b892ccbcded321a5',
+    database_id: process.env.NOTION_DATABASE_ID,
   });
 
   res.json(results.results);
