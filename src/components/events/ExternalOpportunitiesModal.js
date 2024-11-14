@@ -12,12 +12,16 @@ const colorOptions = {
   'wcs-blue-light-light': 'var(--light-light-blue)',
 };
 
-function ExternalOpportunitiesModalContent({
+function ExternalOpportunitiesModal({
   color = 'wcs-pink',
   category,
-  events,
+  events = [],
+  isOpen,
   closeModal,
 }) {
+  if (!isOpen) {
+    return null;
+  }
   return (
     <div className={styles.container}>
       <ComputerWindow
@@ -56,19 +60,21 @@ function ExternalOpportunitiesModalContent({
   );
 }
 
-export default function ExternalOpportunitiesModal({
-  color,
-  category,
-  data,
-  isOpen,
-  closeModal,
-}) {
-  return isOpen ? (
-    <ExternalOpportunitiesModalContent
-      color={color}
-      category={category}
-      events={data}
-      closeModal={closeModal}
-    />
-  ) : null;
-}
+export default ExternalOpportunitiesModal;
+
+// export default function ExternalOpportunitiesModal({
+//   color,
+//   category,
+//   data,
+//   isOpen,
+//   closeModal,
+// }) {
+//   return isOpen ? (
+//     <ExternalOpportunitiesModalContent
+//       color={color}
+//       category={category}
+//       events={data}
+//       closeModal={closeModal}
+//     />
+//   ) : null;
+// }

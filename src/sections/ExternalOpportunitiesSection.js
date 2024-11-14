@@ -79,7 +79,7 @@ export default function ExternalOpportunitiesSection() {
       <ExternalOpportunitiesModal
         color="wcs-blue"
         category="Conferences and Events"
-        data={eventData}
+        events={eventData}
         isOpen={isModalOpen}
         closeModal={toggleModal}
       />
