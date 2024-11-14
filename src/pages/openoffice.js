@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
-import Button from '../components/OpenOfficeButton';
+import Button from '../components/StyledButton';
 
 import data from '../data/openOffice.json';
 import styles from '@/styles/pages/OpenOffice.module.css';
@@ -77,7 +77,7 @@ export default function OpenOffice() {
                 setWeekNum(0);
               }}
             >
-              <p>Check out week 2</p>
+              <p>Check out week 1</p>
             </Button>
           </>
         )}

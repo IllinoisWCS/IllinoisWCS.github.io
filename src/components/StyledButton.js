@@ -1,6 +1,6 @@
-import styles from '../styles/components/OpenOfficeButton.module.css';
+import styles from '../styles/components/StyledButton.module.css';
 
-export default function OpenOfficeButton({ onClick, children }) {
+export default function StyledButton({ onClick, children }) {
   return (
     <div className={styles.buttonWrapper}>
       <button type="button" onClick={onClick} className={styles.button}>
