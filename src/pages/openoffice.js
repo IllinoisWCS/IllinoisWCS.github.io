@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
+import ComputerWindow from '../components/general/ComputerWindowComponent';
+import Button from '../components/StyledButton';
 
 import data from '../data/openOffice.json';
 import styles from '@/styles/pages/OpenOffice.module.css';
@@ -30,6 +32,11 @@ export default function OpenOffice() {
     }
   }
 
+  const shortenName = (name) => {
+    const tokens = name.split(' ');
+    return `${tokens[0]} ${tokens[1][0]}.`;
+  };
+
   useEffect(() => {
     const currentDate = new Date();
     const startDate = new Date(currentDate.getFullYear(), 0, 1);
@@ -46,34 +53,32 @@ export default function OpenOffice() {
   return (
     <div className={`${styles.main}`}>
       <div className={`${styles.openOfficeHeader}`}>
-        <h1>Open Office Calendar</h1>
+        <ComputerWindow className={styles.title}>
+          <h2>Open Office Calendar</h2>
+        </ComputerWindow>
         {week === 'week1' ? (
           <>
-            <p>You&apos;re viewing the Week 1 schedule</p>
-            <button
-              type="button"
-              className={`${styles.openOfficeWeekButton}`}
+            <p>You&apos;re viewing the Week 1 schedule.</p>
+            <Button
               onClick={() => {
                 setWeek('week2');
                 setWeekNum(1);
               }}
             >
               <p>Check out week 2</p>
-            </button>
+            </Button>
           </>
         ) : (
           <>
-            <p>You&apos;re viewing the Week 2 schedule</p>
-            <button
-              type="button"
-              className={`${styles.openOfficeWeekButton}`}
+            <p>You&apos;re viewing the Week 2 schedule.</p>
+            <Button
               onClick={() => {
                 setWeek('week1');
                 setWeekNum(0);
               }}
             >
               <p>Check out week 1</p>
-            </button>
+            </Button>
           </>
         )}
       </div>
@@ -83,8 +88,8 @@ export default function OpenOffice() {
             <thead>
               <tr className={`${styles.tr}`}>
                 <th
-                  className={`${styles.space}`}
-                  id={`${styles.openOfficeSpace} ${styles.th}`}
+                  className={`${styles.space} ${styles.th}`}
+                  id={`${styles.openOfficeSpace}`}
                 >
                   {' '}
                 </th>
@@ -118,7 +123,7 @@ export default function OpenOffice() {
                           <div key={i}>
                             <span>
                               <p className={`${styles.openOfficeHighlight}`}>
-                                {name}
+                                {shortenName(name)}
                               </p>
                             </span>
                           </div>
@@ -126,7 +131,7 @@ export default function OpenOffice() {
                         {rows[x].committees.map((name, i) => (
                           <div key={i}>
                             <span className={`${styles.openOfficeName}`}>
-                              <p>{name}</p>
+                              <p>{shortenName(name)}</p>
                             </span>
                           </div>
                         ))}
@@ -222,7 +227,7 @@ export default function OpenOffice() {
                                   <p
                                     className={`${styles.openOfficeHighlight}`}
                                   >
-                                    {name}
+                                    {shortenName(name)}
                                   </p>
                                 </span>
                               </div>
@@ -230,7 +235,7 @@ export default function OpenOffice() {
                             {rows[x].committees.map((name, i) => (
                               <div key={i}>
                                 <span className={`${styles.openOfficeName}`}>
-                                  <p>{name}</p>
+                                  <p>{shortenName(name)}</p>
                                 </span>
                               </div>
                             ))}

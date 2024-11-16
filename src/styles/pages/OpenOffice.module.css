@@ -7,6 +7,7 @@
 
 .desktop {
   display: block;
+  width: 80%;
 }
 
 @media (max-width: 768px) {
@@ -37,60 +38,74 @@
   align-content: center;
   flex-direction: column;
   margin: 10px;
+  width: 100%;
 }
 
 .openOfficeWeekIndication {
   color: rgb(127, 97, 97);
 }
 
-.openOfficeWeekButton {
-  background-color: #cbedff;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border-width: 1px;
-  border-color: #cbedff;
-  font-size: small;
-}
-
 .tableContainer {
   overflow-x: auto;
+  width: 100%;
   @media (max-width: 768px) {
     padding: 20px;
   }
 }
 
+.table {
+  margin: auto;
+  table-layout: auto;
+  width: 100%;
+}
+
+.table tr td:first-child {
+  border-left: none;
+}
+
+.table tr td:last-child {
+  border-right: none;
+}
+
+.tr .th:last-child {
+  border-right: none;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
 .th {
-  border: 3px solid transparent;
-  padding: 20% 5%;
-  text-align: center;
-  position: relative;
+  border: 1px solid white;
+  border-top: none;
 }
 
 .tr {
-  border-radius: 20px;
-  border: 3px solid transparent;
-  padding: 20% 5%;
   text-align: center;
   position: relative;
 }
 
 .td {
-  border-radius: 20px;
-  border: 3px solid transparent;
-  width: fit-content;
-  padding: 2% 5px;
   text-align: center;
   position: relative;
-  /* height: 130px; */
+  border: 1px solid white;
 }
 
 .chevronLeft {
   transform: rotate(180deg);
-  margin-left: 40px;
+  margin: auto;
 }
 
 .chevronRight {
-  margin-left: 40px;
+  margin: auto;
+}
+
+.chevronRight:hover {
+  transform: scale(1.2);
+}
+
+.chevronLeft:hover {
+  transform: rotate(180deg) scale(1.2);
 }
 
 .hiddenChevronButton {
@@ -99,16 +114,27 @@
 }
 
 .openOfficeTimes {
-  background-color: #c6f6f8;
+  background-color: var(--light-light-pink);
   font-size: small;
   height: fit-content;
   padding: 0% 2%;
 }
 
 .openOfficeDay {
-  background-color: #fbd5de;
-  padding: 1%;
-  border-radius: 20px;
+  background-color: var(--wcs-pink);
+  padding: 1% 0;
+}
+
+.openOfficeDay p {
+  color: white;
+  font-size: 26px;
+  font-weight: normal;
+  width: fit-content;
+  margin: auto;
+}
+
+#openOfficeSpace {
+  border-left: none;
 }
 
 .openOfficeCellContainer {
@@ -116,29 +142,65 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  /* height: 100%; */
 }
 
 .openOfficeCell {
   text-align: center;
-  background-color: #fcf7e6;
-  width: fit-content;
-  height: fit-content;
-  border-radius: 20px;
+  background-color: #f6cbce;
+  padding: 1rem;
+  white-space: nowrap;
 }
 
 .openOfficeHighlight {
-  background-color: #faddc8;
-  border-radius: 20%;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: normal;
 }
 
-.openOfficeName {
-  font-size: small;
+.openOfficeName p {
+  font-size: 18px;
 }
 
-#openOfficeSpace {
-  width: 10%;
+.space {
+  background-color: var(--wcs-pink);
+}
+
+.title h2 {
+  margin: 1rem 5rem;
+}
+
+.title {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .openOfficeDay p {
+    font-size: 24px;
+  }
+
+  .openOfficeCell p {
+    font-size: 14px;
+  }
+
+  .openOfficeTimes p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .openOfficeDay p {
+    font-size: 18px;
+  }
+
+  .openOfficeCell p {
+    font-size: 12px;
+  }
+
+  .space {
+    padding: 1rem;
+  }
 }
 
 /* styles.css file */
