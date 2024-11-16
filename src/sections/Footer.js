@@ -33,7 +33,7 @@ export default function WCSFooter() {
                 height="30"
               />
             </Key>
-            <Key url="mailto:contact@illinoiswcs.org">
+            <Key url="mailto:illinoiswcs@gmail.com">
               <Image
                 src="/assets/design-vectors/email.svg"
                 alt="email"
