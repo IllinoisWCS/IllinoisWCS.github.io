@@ -8,6 +8,7 @@
   justify-content: start;
   align-self: stretch;
   flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
   min-width: 250px;
 }
 
