@@ -1,8 +1,7 @@
-import ComputerWindow from './general/ComputerWindowComponent';
-import ExternalOpportunitiesModal from '../components/events/ExternalOpportunitiesModal';
-import styles from '@/styles/components/ExternalOpportunityCategoryCard.module.css';
 import React, { useState } from 'react';
-// import opportunitiesData from '../data/externalOpportunities.json';
+import ComputerWindow from './general/ComputerWindowComponent';
+import ExternalOpportunitiesModal from './events/ExternalOpportunitiesModal';
+import styles from '@/styles/components/ExternalOpportunityCategoryCard.module.css';
 
 const colorOptions = {
   'wcs-pink': '#e2626a',
@@ -24,6 +23,13 @@ export default function ExternalOpportunityCategoryCard({
     (event) => event.category === categoryName,
   );
 
+  const blankLinesCount = 3 - filteredEvents.length;
+
+  const displayEvents = [
+    ...filteredEvents,
+    ...Array(blankLinesCount).fill({ title: '', icon: '' }), // Blank items for the remaining space
+  ];
+
   return (
     <div className={styles.card}>
       <ComputerWindow
@@ -34,9 +40,15 @@ export default function ExternalOpportunityCategoryCard({
           <h3>{categoryName}</h3>
           <div className={styles.separator} />
           <ul className={styles.itemsList}>
-            {filteredEvents.slice(0, 3).map((item, index) => (
+            {displayEvents.map((item, index) => (
               <li key={index}>
-                {item.icon} {item.title}
+                {item.icon && item.title ? (
+                  <>
+                    {item.icon} {item.title}
+                  </>
+                ) : (
+                  <span>&nbsp;</span>
+                )}
               </li>
             ))}
           </ul>
