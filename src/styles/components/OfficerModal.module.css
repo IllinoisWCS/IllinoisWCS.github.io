@@ -1,12 +1,11 @@
-
-
-
 .columnContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  gap: 2rem;
+  height: 100%;
+  background-color: blue;
+
 }
 
 .container {
@@ -24,7 +23,7 @@
   text-align: center;
   max-height: 85svh;
   overflow-y: auto;
-  background-color: var(--light-light-pink);
+  background-color: rgb(193, 104, 53);
   border-right: solid 2px var(--light-pink);
   height: 100%;
 }
@@ -37,6 +36,7 @@
   float: left;
   background-color: var(--light-light-pink);
   border-right: solid 2px var(--light-pink);
+  margin: 0;
 }
 
 .officerInfo .right {
@@ -99,10 +99,9 @@
   max-width: 100%;
   float: center;
   /* super janky ask abt this */
-
 }
 
- /* .title {
+/* .title {
   font-family: 'Audiowide' !important;
   margin-bottom: 1rem;
   font-size: 36px;
@@ -118,4 +117,17 @@
   max-width: 80svw;
   width: 100%;
   width: max-content;
+}
+
+.icons {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}
+
+.email {
+  padding-right: 1rem;
+}
+.linkedin {
+  padding-left: 1rem;
 }

@@ -31,7 +31,7 @@ function OfficerInformation(
         onButtonClick={closeModal}
       >
         <div className={styles.officerInfo}>
-          <div className="columnContainer">
+        <div className={styles.columnContainer}>
             <div className={styles.left}>
               <div className={styles.photoContainer}>
                 <Image
@@ -43,34 +43,31 @@ function OfficerInformation(
                 />
               </div>
 
-              <div className={styles.links}>
-                <a href={`mailto:${email}`}>
-                  {/* <Image
-                    className={`${styles.socials}`}
-                    src="/assets/img/logos/media/email.png"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    alt="email logo"
-                  /> */}
-                  <Key url={email}>
-              email
-            </Key>
-                  
-                </a>
-                <a href={linkedin}>
-                  {/* <Image
-                    className={`${styles.socials}`}
-                    src="/assets/img/logos/media/linkedin.png"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    alt="linkedin logo"
-                  /> */}
-                  <Key url={linkedin}>
-              LinkedIn
-            </Key>
-                </a>
+              <div className={styles.icons}>
+                <div className={styles.email}>
+                  <a href={`mailto:${email}`}>
+                    <Key url={email}>
+                      <Image
+                        src="/assets/design-vectors/email.svg"
+                        alt="email"
+                        width="30"
+                        height="30"
+                      />
+                    </Key>
+                  </a>
+                </div>
+                <div className={styles.linkedin}>
+                  <a href={linkedin}>
+                    <Key url={linkedin}>
+                      <Image
+                        src="/assets/design-vectors/linkedin.svg"
+                        alt="linkedin"
+                        width="30"
+                        height="30"
+                      />
+                    </Key>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -118,22 +115,19 @@ function OfficerInformation(
                   <b>Advice: </b>
                   {advice}
                 </p>
-
               </div>
 
               <div className={styles.closeButtonContainer}>
                 <button
-                type="button"
-                onClick={closeModal}
-                className={styles.closeButton}
-              >
-                Close
-              </button>
+                  type="button"
+                  onClick={closeModal}
+                  className={styles.closeButton}
+                >
+                  Close
+                </button>
               </div>
 
               <br />
-
-              
             </div>
           </div>
         </div>
