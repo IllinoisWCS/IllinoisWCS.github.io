@@ -5,8 +5,7 @@ export default function SponsorsSection() {
   return (
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Sponsors</h2>
-      <h3 className={styles.sponsorCall}>
-      </h3>
+      <h3 className={styles.sponsorCall}></h3>
       <div className={styles.sponsorsSection}>
           <div>
             <div className={styles.sponsors}>
@@ -52,9 +51,9 @@ export default function SponsorsSection() {
           If you are interested in sponsoring us, please email{' '}
         <a
           className={styles.sponsorEmail}
-          href="mailto:contact@illinoiswcs.org"
-        >
-          contact@illinoiswcs.org!
+          href="illinoiswcs@gmail.com"
+          >
+          illinoiswcs@gmail.com!
         </a>
       </div>
     </div>

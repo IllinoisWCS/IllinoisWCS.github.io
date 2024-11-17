@@ -14,23 +14,22 @@
 }
 
 .container::before {
-  content: ''; /* Placeholder for the label */
+  content: ''; 
   position: absolute;
-  bottom: -2rem; /* Adjusted for smaller container */
+  bottom: -2rem; 
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background for label */
+  background-color: rgba(0, 0, 0, 0.8); 
   color: #ffffff;
-  padding: 0.4rem 0.8rem; /* Reduced padding */
-  border-radius: 0.4rem; /* Smaller radius */
-  font-size: 0.8rem; /* Reduced font size */
+  padding: 0.4rem 0.8rem; 
+  border-radius: 0.4rem; 
+  font-size: 0.8rem; 
   white-space: nowrap;
-  opacity: 0; /* Hidden by default */
-  visibility: hidden; /* Hidden by default */
+  opacity: 0; 
+  visibility: hidden; 
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Show Label on Hover */
 .container:hover::before {
   visibility: visible;
   opacity: 1;
@@ -96,4 +95,3 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
