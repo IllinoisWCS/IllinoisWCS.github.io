@@ -1,2 +1,2 @@
-npm run format
+npx pretty-quick --check
 npm run lint

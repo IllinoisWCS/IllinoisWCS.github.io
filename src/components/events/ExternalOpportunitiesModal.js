@@ -22,6 +22,9 @@ function ExternalOpportunitiesModal({
   if (!isOpen) {
     return null;
   }
+
+  const filteredEvents = events.filter((event) => event.category === category);
+
   return (
     <div className={styles.container}>
       <ComputerWindow
@@ -34,7 +37,7 @@ function ExternalOpportunitiesModal({
           <h2 className={styles.heading}>{category}</h2>
         </div>
         <div className={styles.eventsCards}>
-          {events.map((event, index) => (
+          {filteredEvents.map((event, index) => (
             <ExternalOpportunityCard
               key={index}
               color={color}
