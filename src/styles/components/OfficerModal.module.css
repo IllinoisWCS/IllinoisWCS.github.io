@@ -24,7 +24,8 @@
   text-align: center;
   max-height: 85svh;
   overflow-y: auto;
-  background-color: lightslategrey;
+  background-color: var(--light-light-pink);
+  border-right: solid 2px var(--light-pink);
   height: 100%;
 }
 

@@ -2,12 +2,13 @@ import Image from 'next/image';
 
 import ComputerWindow from './general/ComputerWindowComponent';
 import styles from '@/styles/components/OfficerModal.module.css';
+import Key from '../components/StayInTouchKey';
 
 function OfficerInformation(
   closeModal,
   {
     name,
-    pronouns,
+    // pronouns,
     year,
     major,
     position,
@@ -44,25 +45,31 @@ function OfficerInformation(
 
               <div className={styles.links}>
                 <a href={`mailto:${email}`}>
-                  <Image
+                  {/* <Image
                     className={`${styles.socials}`}
                     src="/assets/img/logos/media/email.png"
                     width={0}
                     height={0}
                     sizes="100vw"
                     alt="email logo"
-                  />
+                  /> */}
+                  <Key url={email}>
+              email
+            </Key>
                   
                 </a>
                 <a href={linkedin}>
-                  <Image
+                  {/* <Image
                     className={`${styles.socials}`}
                     src="/assets/img/logos/media/linkedin.png"
                     width={0}
                     height={0}
                     sizes="100vw"
                     alt="linkedin logo"
-                  />
+                  /> */}
+                  <Key url={linkedin}>
+              LinkedIn
+            </Key>
                 </a>
               </div>
             </div>
