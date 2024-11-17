@@ -14,15 +14,26 @@
 }
 
 .container::before {
-  content: '';
+  content: ''; /* Placeholder for the label */
   position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  left: 0.25rem; 
-  z-index: 4;
-  width: 0.25rem; 
-  height: 2rem; 
-  background-color: var(--wcs-pink);  
+  bottom: -2rem; /* Adjusted for smaller container */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for label */
+  color: #ffffff;
+  padding: 0.4rem 0.8rem; /* Reduced padding */
+  border-radius: 0.4rem; /* Smaller radius */
+  font-size: 0.8rem; /* Reduced font size */
+  white-space: nowrap;
+  opacity: 0; /* Hidden by default */
+  visibility: hidden; /* Hidden by default */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show Label on Hover */
+.container:hover::before {
+  visibility: visible;
+  opacity: 1;
 }
 
 .container::after {
@@ -34,7 +45,7 @@
   border-radius: 50%;
   width: 1.5rem; 
   height: 1.5rem;
-}
+} 
 
 .image {
   max-width: 13rem; 
@@ -48,10 +59,41 @@
   padding-bottom: 20px;
 }
 
+.gold::before {
+  content: 'Gold Tier';
+}
+
 .gold::after {
   background-color: hsl(35, 84%, 62%);
+}
+
+.bronze::before {
+  content: 'Bronze Tier';
 }
 
 .bronze::after {
   background-color: #A91C04;
 }
+
+.silver::before {
+  content: 'Silver Tier';
+}
+
+.silver::after {
+  background-color: #808080;
+  background-color: hsl(35, 84%, 62%);
+}
+
+.platinum::before {
+  content: 'Platinum Tier'
+}
+
+.platinum::after {
+  background-color: #337ab7;
+  z-index: 1;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
