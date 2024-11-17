@@ -1,12 +1,5 @@
-.closeButton {
-  width: 100%;
-  height: 3rem;
-  border: none;
-  color: #21636c;
-  background-color: #e9e1e6;
-  font-weight: 700;
-  font-size: 16px;
-}
+
+
 
 .columnContainer {
   display: flex;
@@ -26,27 +19,54 @@
 }
 
 .officerInfo {
-  padding: 1rem 5svw 1rem 5svw;
   display: flex;
   flex-direction: column;
   text-align: center;
   max-height: 85svh;
   overflow-y: auto;
+  background-color: lightslategrey;
+  height: 100%;
 }
 
 .officerInfo .left {
-  width: calc(50% - 10px);
-  padding: 10px;
+  width: 30%;
+  height: 100%;
+  padding: 2rem;
   box-sizing: border-box;
   float: left;
+  background-color: var(--light-light-pink);
+  border-right: solid 2px var(--light-pink);
 }
 
 .officerInfo .right {
-  width: calc(50% - 10px);
-  padding: 10px;
+  width: 70%;
+  padding: 2rem;
+  padding-bottom: 1rem;
   box-sizing: border-box;
   float: right;
   text-align: left;
+  background-color: white;
+}
+
+.list {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.closeButtonContainer {
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.closeButton {
+  width: 50%;
+  height: 3rem;
+  border: none;
+  border-radius: 1rem;
+  color: #21636c;
+  background-color: var(--light-pink);
+  font-weight: 700;
+  font-size: 16px;
 }
 
 @media (max-width: 767px) {
@@ -56,37 +76,45 @@
   }
 }
 
+.photoContainer {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
 .photo {
-  border: 6px solid #65c7cc;
-  border-radius: 10%;
-  height: 400px;
-  width: 400px;
+  border-radius: 100%;
   object-fit: cover;
   max-width: 100%;
+  width: 200px;
+  height: 200px;
+  border: 6px solid #65c7cc;
+  border-radius: 100%;
 }
 
 .socials {
   height: 100px;
   width: 100px;
-  margin: 1%;
+  margin: 4%;
   object-fit: cover;
   max-width: 100%;
-  float: right;
+  float: center;
+  /* super janky ask abt this */
+
 }
 
-.title {
+ /* .title {
   font-family: 'Audiowide' !important;
   margin-bottom: 1rem;
   font-size: 36px;
   font-weight: 400;
   color: #65c7cc;
-}
+}  */
 
 .window {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 90svw;
+  max-width: 80svw;
+  width: 100%;
   width: max-content;
 }
