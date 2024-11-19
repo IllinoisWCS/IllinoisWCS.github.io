@@ -6,7 +6,8 @@ import styles from '@/styles/components/UpcomingEvent.module.css';
 
 export default function UpcomingEvent({
   title,
-  date,
+  dayOfWeek,
+  dayDate,
   time,
   location,
   description,
@@ -30,7 +31,8 @@ export default function UpcomingEvent({
           <div className={styles.container}>
             <h3 className={styles.title}>{title}</h3>
             <div className={styles.dateTime}>
-              <p>{date}</p>
+              <p>{dayOfWeek},</p>
+              <p>{dayDate}</p>
               <p>{time}</p>
             </div>
           </div>
@@ -39,7 +41,8 @@ export default function UpcomingEvent({
       <EventDescriptionModal
         data={{
           title,
-          date,
+          dayOfWeek,
+          dayDate,
           time,
           location,
           description,
