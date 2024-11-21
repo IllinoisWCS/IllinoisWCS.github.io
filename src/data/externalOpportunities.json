@@ -1,0 +1,202 @@
+[
+  {
+    "icon": "🎨",
+    "title": "UX Days at Siebel Center for Design",
+    "location": "Siebel Center for Design",
+    "date": "Friday, March 22 | 11:30 AM to 6:00 PM",
+    "time": "Saturday, March 23 | 8:45 AM - 6:00 PM",
+    "description": "UX Days 2024 is not just a conference; it's an immersive journey designed to empower students pursuing careers in UX design. We're expanding from a single-day event to a thrilling two-day experience from March 22nd to 23rd, packed with enlightening sessions, inspiring speakers, and unparalleled networking opportunities. Registration is $25 for one day, or $50 for the full conference.",
+    "link": "https://en.wikipedia.org/wiki/Link",
+    "category": "Conferences and Events"
+  },
+  {
+    "icon": "🎤",
+    "title": "Design Thinking Conference",
+    "location": "Chicago Convention Center",
+    "date": "Saturday, June 5 | 9:00 AM to 5:00 PM",
+    "time": "Saturday, June 5 | 9:00 AM - 5:00 PM",
+    "description": "Explore the world of design thinking with workshops and talks from top designers. Learn about empathy, ideation, and prototyping through interactive sessions designed to give you real-world experience.",
+    "link": "https://en.wikipedia.org/wiki/DesignThinking",
+    "category": "Conferences and Events"
+  },
+  {
+    "icon": "🎮",
+    "title": "Game Development Summit",
+    "location": "Los Angeles Convention Center",
+    "date": "Friday, July 19 | 10:00 AM to 6:00 PM",
+    "time": "Saturday, July 20 | 9:00 AM - 5:00 PM",
+    "description": "Join industry experts at the Game Development Summit to learn about the latest trends in game design, VR development, and indie game publishing. Connect with like-minded professionals and potential collaborators.",
+    "link": "https://en.wikipedia.org/wiki/GameDevelopment",
+    "category": "Conferences and Events"
+  },
+  {
+    "icon": "💼",
+    "title": "Corporate Leadership Development",
+    "location": "Downtown Conference Hall",
+    "date": "Monday, June 10 | 9:00 AM to 5:00 PM",
+    "time": "Monday, June 10 | 9:00 AM - 5:00 PM",
+    "description": "A one-day event dedicated to leadership development in the corporate world. Join top executives and leadership coaches for insightful sessions on improving communication, team management, and strategy execution.",
+    "link": "https://en.wikipedia.org/wiki/CorporateLeadership",
+    "category": "Corporate"
+  },
+  {
+    "icon": "🏢",
+    "title": "Corporate Networking Mixer",
+    "location": "City Center Hotel",
+    "date": "Thursday, April 18 | 6:00 PM to 9:00 PM",
+    "time": "Thursday, April 18 | 6:00 PM - 9:00 PM",
+    "description": "Meet and network with professionals from various industries in an informal, relaxed setting. Enjoy drinks, appetizers, and great conversation while making new business connections.",
+    "link": "https://en.wikipedia.org/wiki/CorporateNetworking",
+    "category": "Corporate"
+  },
+  {
+    "icon": "🔬",
+    "title": "User Research Focus Group",
+    "location": "Online",
+    "date": "Monday, March 15 | 1:00 PM to 3:00 PM",
+    "time": "Monday, March 15 | 1:00 PM - 3:00 PM",
+    "description": "Join our virtual user research focus group where we’ll gather feedback on new product concepts. Your insights will help shape the future of our product. Participants will receive a thank-you gift for their time and valuable input.",
+    "link": "https://en.wikipedia.org/wiki/User_Research",
+    "category": "Research and Focus Group"
+  },
+  {
+    "icon": "🎓",
+    "title": "Grad School Admissions Info Session",
+    "location": "University Admissions Office",
+    "date": "Wednesday, February 5 | 5:00 PM to 7:00 PM",
+    "time": "Wednesday, February 5 | 5:00 PM - 7:00 PM",
+    "description": "Learn about the admissions process for graduate school, application tips, and financial aid options. Meet current students and professors to hear about their experiences and get advice for applying.",
+    "link": "https://en.wikipedia.org/wiki/GradSchoolAdmissions",
+    "category": "Grad School"
+  },
+  {
+    "icon": "📚",
+    "title": "Grad School Research Symposium",
+    "location": "Campus Research Lab",
+    "date": "Saturday, March 15 | 9:00 AM to 4:00 PM",
+    "time": "Saturday, March 15 | 9:00 AM - 4:00 PM",
+    "description": "Graduate students from various fields will present their research at this annual symposium. It's a great opportunity for networking and gaining insights into cutting-edge academic work.",
+    "link": "https://en.wikipedia.org/wiki/GradSchoolResearch",
+    "category": "Grad School"
+  },
+  {
+    "icon": "🤝",
+    "title": "RSO Volunteer Fair",
+    "location": "Campus Activity Center",
+    "date": "Thursday, September 10 | 11:00 AM to 3:00 PM",
+    "time": "Thursday, September 10 | 11:00 AM - 3:00 PM",
+    "description": "Explore various RSOs and student organizations on campus. Learn about opportunities for volunteering, networking, and getting involved in campus activities.",
+    "link": "https://en.wikipedia.org/wiki/RSO",
+    "category": "RSO"
+  },
+  {
+    "icon": "🏅",
+    "title": "RSO Leadership Training",
+    "location": "Student Union",
+    "date": "Friday, November 15 | 10:00 AM to 4:00 PM",
+    "time": "Friday, November 15 | 10:00 AM - 4:00 PM",
+    "description": "A one-day leadership workshop for RSO members. Attendees will learn valuable leadership and teamwork skills, as well as how to manage and grow their organizations.",
+    "link": "https://en.wikipedia.org/wiki/RSO",
+    "category": "RSO"
+  },
+  {
+    "icon": "🔗",
+    "title": "Web Development Bootcamp",
+    "location": "Online",
+    "date": "Monday, April 1 | 10:00 AM to 4:00 PM",
+    "time": "Monday, April 1 | 10:00 AM - 4:00 PM",
+    "description": "Join us for an intensive full-day bootcamp covering the fundamentals of web development. From HTML and CSS to JavaScript, this event is perfect for beginners eager to start building websites.",
+    "link": "https://en.wikipedia.org/wiki/Bootcamp",
+    "category": "Workshops and Education"
+  },
+  {
+    "icon": "📊",
+    "title": "Data Science Workshop",
+    "location": "Virtual",
+    "date": "Saturday, March 30 | 9:00 AM to 1:00 PM",
+    "time": "Saturday, March 30 | 9:00 AM - 1:00 PM",
+    "description": "Learn the fundamentals of data science in this hands-on workshop. Topics include data analysis, Python programming, and machine learning basics. Perfect for aspiring data scientists.",
+    "link": "https://en.wikipedia.org/wiki/DataScienceWorkshop",
+    "category": "Workshops and Education"
+  },
+  {
+    "icon": "🌍",
+    "title": "Non-Profit Leadership Summit",
+    "location": "Downtown Conference Center",
+    "date": "Friday, June 7 | 9:00 AM to 3:00 PM",
+    "time": "Friday, June 7 | 9:00 AM - 3:00 PM",
+    "description": "This summit brings together non-profit leaders to discuss challenges, opportunities, and strategies in the sector. Topics include fundraising, volunteer management, and non-profit sustainability.",
+    "link": "https://en.wikipedia.org/wiki/NonProfitLeadership",
+    "category": "Non-Profit"
+  },
+  {
+    "icon": "💡",
+    "title": "Community Impact Day",
+    "location": "City Hall Plaza",
+    "date": "Saturday, April 20 | 8:00 AM to 4:00 PM",
+    "time": "Saturday, April 20 | 8:00 AM - 4:00 PM",
+    "description": "Join local non-profit organizations for a day of community service and engagement. Participate in projects that directly impact the local community, from cleaning up parks to organizing food drives.",
+    "link": "https://en.wikipedia.org/wiki/CommunityImpact",
+    "category": "Non-Profit"
+  },
+  {
+    "icon": "🎓",
+    "title": "National Merit Scholarship Information Session",
+    "location": "Online",
+    "date": "Monday, January 15 | 6:00 PM to 7:00 PM",
+    "time": "Monday, January 15 | 6:00 PM - 7:00 PM",
+    "description": "Join us for a session that covers everything you need to know about applying for the National Merit Scholarship. Get tips on how to increase your chances of winning and learn more about the application process.",
+    "link": "https://en.wikipedia.org/wiki/NationalMeritScholarship",
+    "category": "Scholarships"
+  },
+  {
+    "icon": "💰",
+    "title": "Community College Scholarship Opportunities",
+    "location": "Campus Library",
+    "date": "Wednesday, February 20 | 3:00 PM to 5:00 PM",
+    "time": "Wednesday, February 20 | 3:00 PM - 5:00 PM",
+    "description": "Explore various scholarship opportunities available to community college students. Meet scholarship providers and hear about their requirements and benefits.",
+    "link": "https://en.wikipedia.org/wiki/CommunityCollegeScholarships",
+    "category": "Scholarships"
+  },
+  {
+    "icon": "📜",
+    "title": "Women in STEM Scholarship Program",
+    "location": "Online",
+    "date": "Thursday, March 12 | 7:00 PM to 8:00 PM",
+    "time": "Thursday, March 12 | 7:00 PM - 8:00 PM",
+    "description": "This virtual event provides information about scholarships for women pursuing careers in science, technology, engineering, and mathematics (STEM). Learn how to apply and hear from scholarship recipients.",
+    "link": "https://en.wikipedia.org/wiki/WomenInSTEMScholarships",
+    "category": "Scholarships"
+  },
+  {
+    "icon": "🤝",
+    "title": "Park Cleanup Volunteer Event",
+    "location": "Central Park",
+    "date": "Saturday, March 10 | 9:00 AM to 12:00 PM",
+    "time": "Saturday, March 10 | 9:00 AM - 12:00 PM",
+    "description": "Join us for a park cleanup day! Volunteers will help clean up trash, plant new trees, and maintain the park's walking paths. Perfect for those who want to give back to the community.",
+    "link": "https://en.wikipedia.org/wiki/ParkCleanup",
+    "category": "Volunteering"
+  },
+  {
+    "icon": "🛍️",
+    "title": "Food Bank Volunteer Drive",
+    "location": "City Food Bank",
+    "date": "Tuesday, April 5 | 10:00 AM to 2:00 PM",
+    "time": "Tuesday, April 5 | 10:00 AM - 2:00 PM",
+    "description": "Help us sort and package food for families in need. This is a great opportunity to give back to the community and make a difference in the lives of those facing food insecurity.",
+    "link": "https://en.wikipedia.org/wiki/FoodBankVolunteer",
+    "category": "Volunteering"
+  },
+  {
+    "icon": "❤️",
+    "title": "Homeless Shelter Volunteer Day",
+    "location": "Downtown Shelter",
+    "date": "Friday, May 8 | 5:00 PM to 9:00 PM",
+    "time": "Friday, May 8 | 5:00 PM - 9:00 PM",
+    "description": "Volunteer at the local homeless shelter by preparing meals, distributing food, and assisting with community outreach programs. This event is focused on making a positive impact on the lives of those experiencing homelessness.",
+    "link": "https://en.wikipedia.org/wiki/HomelessShelterVolunteer",
+    "category": "Volunteering"
+  }
+]

@@ -1,24 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import ExternalOpportunityCategoryCard from '../components/ExternalOpportunityCategoryCard';
 import styles from '@/styles/sections/ExternalOpportunitiesSection.module.css';
+import opportunitiesData from '../data/externalOpportunities.json';
 
 const cardsData = [
-  { title: 'Conferences and Events', topbarColor: '#E2626A' },
-  { title: 'Corporate', topbarColor: '#69C7CB' },
-  { title: 'Grad School', topbarColor: '#E2626A' },
-  { title: 'RSO', topbarColor: '#69C7CB' },
-  { title: 'Research and Focus Group', topbarColor: '#E2626A' },
-  { title: 'Scholarships', topbarColor: '#69C7CB' },
-  { title: 'Workshops and Education', topbarColor: '#E2626A' },
-  { title: 'Non-Profit', topbarColor: '#69C7CB' },
-  { title: 'Volunteering', topbarColor: '#E2626A' },
-];
-
-// will have to change later; just a placeholder
-const opportunitiesData = [
-  { title: 'UX Days at Siebel Center for Design', emoji: '🎨' },
-  { title: 'UX Days at Siebel Center for Design', emoji: '🎨' },
-  { title: 'UX Days at Siebel Center for Design', emoji: '🎨' },
+  { title: 'Conferences and Events', topbarColor: 'wcs-pink' },
+  { title: 'Corporate', topbarColor: 'wcs-blue' },
+  { title: 'Grad School', topbarColor: 'wcs-pink' },
+  { title: 'RSO', topbarColor: 'wcs-blue' },
+  { title: 'Research and Focus Group', topbarColor: 'wcs-pink' },
+  { title: 'Scholarships', topbarColor: 'wcs-blue' },
+  { title: 'Workshops and Education', topbarColor: 'wcs-pink' },
+  { title: 'Non-Profit', topbarColor: 'wcs-blue' },
+  { title: 'Volunteering', topbarColor: 'wcs-pink' },
 ];
 
 export default function ExternalOpportunitiesSection() {
