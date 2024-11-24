@@ -1,5 +1,4 @@
-IllinoisWCS.github.io
-=====================
+# IllinoisWCS.github.io
 
 ## About
 
@@ -14,18 +13,17 @@ To install and set up locally, first run `npm i` and then `npm run dev`. The app
 
 This application is built with Next.js
 
-
 ## Pull Requests
 
 Please never commit to master, even if you have permission.
 Run all changes by the Infrastructure Chairs. Here are the steps to making a change and solving an issue:
 
-1) Make a branch off ```master```. Please give it a descriptive message.
+1. Make a branch off `master`. Please give it a descriptive message.
 
-2) Commit your changes onto your branch.
+2. Commit your changes onto your branch.
 
-3) Push your branch changes.
+3. Push your branch changes.
 
-4) Once you're ready, create a pull request with base as the ```master```.
+4. Once you're ready, create a pull request with base as the `master`.
 
-5) Write a descriptive title and comment. You can reference the associated issue with a #.
+5. Write a descriptive title and comment. You can reference the associated issue with a #.

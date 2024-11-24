@@ -11,7 +11,8 @@
   content: '';
   width: 22px;
   height: 22px;
-  background-image: url('/assets/design-vectors/pointer.svg');
+  /* background-image: url('/assets/design-vectors/pointer.svg');
+*/
   position: absolute;
   right: -0.125rem;
   bottom: -0.125rem;
@@ -19,14 +20,18 @@
 }
 
 .container {
+  max-width: 500px;
+  height: 300px;
+  width: 300px;
+  aspect-ratio: auto;
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
-  gap: 0.25rem;
+  gap: 1rem;
   margin: 1rem;
-  min-width: fit-content;
-  aspect-ratio: 1.5;
+
   color: #21636c;
 }
 
@@ -34,7 +39,9 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;
   position: relative;
-  max-width: 200px;
+  max-width: 300px;
+  padding: 1rem;
+  width: 100%;
 }
 
 .eventButton p {

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import EventsWindow from '../components/events/EventsWindow';
 import UpcomingEvent from '../components/events/UpcomingEvent';
 import data from '../data/openOffice.json';
-
 import styles from '@/styles/pages/Home.module.css';
 import styles2 from '@/styles/components/EventDescriptionModal.module.css';
 
@@ -17,12 +15,11 @@ export default function UpcomingEventsSection() {
   const [uniqueOfficers, setUniqueOfficers] = useState([]);
   const [uniqueCommittees, setUniqueCommittees] = useState([]);
   const [day, setDay] = useState('');
-
+  const [showModal, setShowModal] = useState(false);
   const shortenName = (name) => {
     const tokens = name.split(' ');
     return `${tokens[0]} ${tokens[1][0]}.`;
   };
-
   const getUniqueNames = (rows, officer) => {
     const uniqueNames = new Set();
     if (officer) {
@@ -42,11 +39,10 @@ export default function UpcomingEventsSection() {
 
     return Array.from(uniqueNames);
   };
-
   useEffect(() => {
     const currentDate = new Date();
     const startDate = new Date(currentDate.getFullYear(), 0, 1);
-    const days = Math.floor(currentDate - startDate) / (1000 * 60 * 60 * 24);
+    const days = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
     const weekNumber = Math.ceil(days / 7);
     if (weekNumber % 2 === 1) {
       setWeek('week2');
@@ -61,23 +57,18 @@ export default function UpcomingEventsSection() {
       'Friday',
       'Saturday',
     ];
-
-    const weekday = currentDate.getDay();
-    setDay(dayNames[weekday]);
-  }, [day]);
-
+    setDay(dayNames[currentDate.getDay()]);
+  }, []);
   useEffect(() => {
     if (weekNum !== null && week && day) {
       // eslint-disable-next-line operator-linebreak
       const filteredData =
         data[weekNum]?.[week]?.filter(({ heading }) => heading === day) || [];
-
       if (filteredData.length === 0) {
         setUniqueOfficers([]);
         setUniqueCommittees([]);
         return;
       }
-
       const officers = filteredData.flatMap(
         ({ rows }) =>
           // eslint-disable-next-line implicit-arrow-linebreak
@@ -90,18 +81,19 @@ export default function UpcomingEventsSection() {
           getUniqueNames(rows, false),
         // eslint-disable-next-line function-paren-newline
       );
-
       setUniqueOfficers(officers);
       setUniqueCommittees(committees);
     }
-  }, [weekNum, week, day]);
-
+  }, [weekNum, week, day, getUniqueNames]);
   useEffect(() => {
     const fetchEvents = async () => {
       try {
         // eslint-disable-next-line operator-linebreak
         const eventsUrl =
-          'https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
+          // eslint-disable-next-line operator-linebreak
+          'https://script.google.com/macros/s/' +
+          'AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
+
         const res = await fetch(eventsUrl);
         const { events: fetchedEvents } = await res.json();
         setEvents(
@@ -116,18 +108,20 @@ export default function UpcomingEventsSection() {
                 month: 'long',
                 day: '2-digit',
               };
-              const date = startDate.toLocaleDateString('en-US', dateOptions);
+              const dateString = startDate.toLocaleDateString(
+                'en-US',
+                dateOptions,
+              );
+              const [dayOfWeek, dayDate] = dateString.split(', ');
 
-              const timeOptions = {
-                hour: 'numeric',
-                minute: '2-digit',
-              };
+              const timeOptions = { hour: 'numeric', minute: '2-digit' };
               const start = startDate.toLocaleTimeString('en-US', timeOptions);
               const end = endDate.toLocaleTimeString('en-US', timeOptions);
 
               return {
                 title,
-                date,
+                dayOfWeek,
+                dayDate,
                 time: `${start} - ${end}`,
                 location,
                 description,
@@ -142,15 +136,8 @@ export default function UpcomingEventsSection() {
     fetchEvents();
   }, []);
 
-  const [showModal, setShowModal] = useState(false);
-
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   return (
     <div className={styles.sectionContainer}>
@@ -169,7 +156,7 @@ export default function UpcomingEventsSection() {
           <button
             type="button"
             onClick={openModal}
-            className={`${styles.hiddenButton}`}
+            className={styles.hiddenButton}
           >
             <EventsWindow
               location="Siebel CS 0211"
@@ -197,12 +184,11 @@ export default function UpcomingEventsSection() {
               >
                 <div className={styles2.outerModalContainer}>
                   <div className={`${styles2.eventInfo} ${styles2.left}`}>
-                    {/* <div className={styles.modalContainerLeft}> */}
                     <h4 className={styles2.title}>Drop In Services</h4>
                     <ul className={styles2.bullets}>
                       <li>Resume reviews</li>
                       <li>Class help</li>
-                      <li>Schedule and four year plan advice</li>
+                      <li>Schedule and four-year plan advice</li>
                       <li>General advice or help</li>
                       <li>Just a chat!</li>
                     </ul>
@@ -217,16 +203,14 @@ export default function UpcomingEventsSection() {
                       </Link>
                       <Image
                         src="/assets/design-vectors/pointer.svg"
-                        width="22"
-                        height="22"
+                        width={22}
+                        height={22}
                         className={styles.modalCursor}
                         alt="pointer"
                       />
                     </div>
-                    {/* </div> */}
                   </div>
                   <div className={styles2.eventInfo}>
-                    {/* <div className={styles.modalContainerLeft}> */}
                     <h4 className={styles2.title}>Office Schedule</h4>
                     <p>Who&rsquo;s in today:</p>
                     <ul className={styles2.bullets}>
@@ -249,13 +233,12 @@ export default function UpcomingEventsSection() {
                       </Link>
                       <Image
                         src="/assets/design-vectors/pointer.svg"
-                        width="22"
-                        height="22"
+                        width={22}
+                        height={22}
                         className={styles.modalCursor}
                         alt="pointer"
                       />
                     </div>
-                    {/* </div> */}
                   </div>
                   <button
                     type="button"
@@ -268,7 +251,6 @@ export default function UpcomingEventsSection() {
               </ComputerWindow>
             </div>
           )}
-
           {events.length === 0 ? (
             <ComputerWindow
               className={`${styles.noEvents} ${styles.eventText}`}
@@ -279,11 +261,15 @@ export default function UpcomingEventsSection() {
             </ComputerWindow>
           ) : (
             events.map(
-              ({ title, date, time, location, description }, index) => (
+              (
+                { title, dayOfWeek, dayDate, time, location, description },
+                index,
+              ) => (
                 <UpcomingEvent
                   key={index}
                   title={title}
-                  date={date}
+                  dayOfWeek={dayOfWeek}
+                  dayDate={dayDate}
                   time={time}
                   location={location}
                   description={description}
