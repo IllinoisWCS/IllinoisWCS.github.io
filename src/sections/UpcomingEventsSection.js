@@ -69,25 +69,22 @@ export default function UpcomingEventsSection() {
         setUniqueCommittees([]);
         return;
       }
-      // eslint-disable-next-line implicit-arrow-linebreak
       const officers = filteredData.flatMap(
         ({ rows }) =>
           // eslint-disable-next-line implicit-arrow-linebreak
           getUniqueNames(rows, true),
-        // eslint-disable-next-line implicit-arrow-linebreak
+        // eslint-disable-next-line function-paren-newline
       );
-      // eslint-disable-next-line implicit-arrow-linebreak
       const committees = filteredData.flatMap(
         ({ rows }) =>
           // eslint-disable-next-line implicit-arrow-linebreak
           getUniqueNames(rows, false),
-        // eslint-disable-next-line implicit-arrow-linebreak
+        // eslint-disable-next-line function-paren-newline
       );
       setUniqueOfficers(officers);
       setUniqueCommittees(committees);
     }
   }, [weekNum, week, day, getUniqueNames]);
-  // eslint-disable-next-line implicit-arrow-linebreak
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -95,7 +92,6 @@ export default function UpcomingEventsSection() {
         const eventsUrl =
           // eslint-disable-next-line operator-linebreak
           'https://script.google.com/macros/s/' +
-          // eslint-disable-next-line operator-linebreak
           'AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
 
         const res = await fetch(eventsUrl);
@@ -269,13 +265,6 @@ export default function UpcomingEventsSection() {
                 <UpcomingEvent
                   key={index}
                   title={title}
-                  // date={
-                  //   <div>
-                  //     <span>{dayOfWeek},</span>
-                  //     <br />
-                  //     <span>{dayDate}</span>
-                  //   </div>
-                  // }
                   dayOfWeek={dayOfWeek}
                   dayDate={dayDate}
                   time={time}

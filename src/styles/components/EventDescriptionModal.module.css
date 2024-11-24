@@ -15,8 +15,8 @@
 
 .window {
   z-index: 99;
-  /* position: absolute;
-  top: 50%;
+  position: absolute;
+  /* top: 50%;
   left: 50%;
 
   transform: translate(-50%, -50%);
@@ -26,7 +26,7 @@
   max-height: 85vh;
   border-radius: 8px;
   align-items: stretch;
-  overflow-y: auto; */
+  overflow-y: auto;  */
   width: 500px; /* Set fixed width */
   height: 600px; /* Set fixed height */
   display: flex;

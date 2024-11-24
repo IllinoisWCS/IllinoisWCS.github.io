@@ -1,11 +1,16 @@
 .container {
   color: black;
   display: flex;
-  gap: 0.5rem;
+  /* gap: 0.5rem; */
   flex-direction: column;
-  align-items: center;
+  /* align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: center; */
+  /* added */
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 1rem;
 }
 
 .container * {
@@ -15,6 +20,8 @@
 
 .wrapper {
   cursor: auto;
+  /* added */
+  height: 100%;
 }
 
 .wrapperCanClick {
@@ -26,7 +33,7 @@
   content: '';
   width: 22px;
   height: 22px;
-  /*  background-image: url('/assets/design-vectors/pointer.svg'); */
+  background-image: url('/assets/design-vectors/pointer.svg');
   position: absolute;
   right: 0;
   bottom: 0;
@@ -35,6 +42,12 @@
 
 .title {
   max-width: 250px;
+  /* added */
+  text-align: center;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .dateTime {
@@ -43,14 +56,37 @@
   align-items: center;
   justify-content: center;
   max-width: 200px;
+  /* added */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .dateTime p {
   font-weight: 400;
   color: #21636c;
+  /* added */
+  text-align: center;
 }
 
 .hiddenButton {
   border: none;
   background-color: transparent;
+  /* added */
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+/* added below */
+.location {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--light-blue);
+  border-radius: 4px;
 }
