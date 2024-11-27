@@ -131,13 +131,6 @@ function OfficerInformation(
             </div>
           </div>
         </div>
-        {/* <button
-          type="button"
-          onClick={closeModal}
-          className={styles.closeButton}
-        >
-          Close
-        </button> */}
       </ComputerWindow>
     </div>
   );

@@ -1,3 +1,23 @@
+
+
+.container {
+  width: 100svw;
+  height: 100svh;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(10, 10, 10, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  max-width: 80svw;
+  background-color: white;
+  overflow: hidden;
+}
+
 .columnContainer {
   display: flex;
   flex-direction: row;
@@ -8,46 +28,35 @@
 
 }
 
-.container {
-  width: 100svw;
-  height: 100svh;
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  background-color: rgba(10, 10, 10, 0.6);
-}
 
 .officerInfo {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  max-height: 85svh;
-  overflow-y: auto;
-  background-color: rgb(193, 104, 53);
-  border-right: solid 2px var(--light-pink);
+  flex-direction: row;
+  max-height: 85svh; 
+  overflow-y: auto; 
+  border-right: solid 2px var(--light-pink); 
   height: 100%;
 }
 
-.officerInfo .left {
-  width: 30%;
-  height: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
-  float: left;
+.left {
+  flex: 1;
+  max-width: 30%;
   background-color: var(--light-light-pink);
-  border-right: solid 2px var(--light-pink);
-  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid var(--light-pink);
 }
 
-.officerInfo .right {
-  width: 70%;
-  padding: 2rem;
-  padding-bottom: 1rem;
-  box-sizing: border-box;
-  float: right;
-  text-align: left;
+.right {
+  flex: 1;
+  max-width: 70%;
   background-color: white;
+  padding: 2rem;
+  text-align: left;
+  overflow-y: auto;
 }
+
 
 .list {
   padding-top: 1rem;
@@ -85,8 +94,8 @@
   border-radius: 100%;
   object-fit: cover;
   max-width: 100%;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border: 6px solid #65c7cc;
   border-radius: 100%;
 }
@@ -98,29 +107,9 @@
   object-fit: cover;
   max-width: 100%;
   float: center;
-  /* super janky ask abt this */
-}
-
-/* .title {
-  font-family: 'Audiowide' !important;
-  margin-bottom: 1rem;
-  font-size: 36px;
-  font-weight: 400;
-  color: #65c7cc;
-}  */
-
-.window {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 80svw;
-  width: 100%;
-  width: max-content;
 }
 
 .icons {
-  background-color: red;
   display: flex;
   justify-content: center;
 }
