@@ -1,0 +1,53 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.title h2 {
+  margin: 1rem 37rem;
+}
+
+.title {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.teamPic {
+  background-color: white;
+  width: 780px;
+  height: 411px;
+  margin: 4rem auto;
+  border-radius: 10px;
+}
+
+.execBoard {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.execBoard h3 {
+  margin: 1rem 25rem;
+  font-weight: 300;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 3rem;
+  margin-bottom: 7rem;
+}
+
+.committees {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.committees h3 {
+  margin: 1rem 25rem;
+  font-weight: 300;
+}
