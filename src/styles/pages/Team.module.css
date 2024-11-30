@@ -21,16 +21,20 @@
   height: 411px;
   margin: 4rem auto;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.execBoard {
+.subHeader h3 {
+  margin: 1rem;
+  font-weight: 300;
+}
+
+.main .subHeader {
+  width: 80%;
   text-align: center;
   margin: 2rem auto;
-}
-
-.execBoard h3 {
-  margin: 1rem 25rem;
-  font-weight: 300;
 }
 
 .cards {
@@ -42,12 +46,43 @@
   margin-bottom: 7rem;
 }
 
-.committees {
-  text-align: center;
-  margin: 2rem auto;
+.committeeLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 4rem;
 }
 
-.committees h3 {
-  margin: 1rem 25rem;
-  font-weight: 300;
+.committeeRight {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 4rem;
+}
+
+.committee {
+  margin-top: 5rem;
+}
+
+.committeeDescription {
+  width: 560px;
+  height: 430px;
+  padding: 3rem;
+}
+
+.committeeDescription h4 {
+  font-size: 24px;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+.committeeDescription p {
+  font-size: 16px;
+}
+
+.officerPics {
+  display: flex;
 }
