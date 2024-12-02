@@ -1,10 +1,14 @@
-const express = require('express');
-const { Client } = require('@notionhq/client');
-const cors = require('cors');
-var bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
 require('dotenv').config();
 
+const express = require('express');
+
+const { Client } = require('@notionhq/client');
+
+const cors = require('cors');
+
+const bodyParser = require('body-parser');
+
+const jsonParser = bodyParser.json();
 const app = express();
 
 app.use(cors());
@@ -12,17 +16,15 @@ const PORT = 5000;
 const HOST = 'localhost';
 
 const notion = new Client({
-  auth: process.env.NOTION_API_KEY,
+  auth: process.env.REACT_APP_NOTION_API_KEY,
 });
 
 app.get('/external-opps-api', jsonParser, async (req, res) => {
-  results = await notion.databases.query({
-    database_id: process.env.NOTION_DATABASE_ID,
+  const results = await notion.databases.query({
+    database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
   });
 
   res.json(results.results);
 });
 
-app.listen(PORT, HOST, () => {
-  console.log('Starting proxy at ' + HOST + ':' + PORT);
-});
+app.listen(PORT, HOST, () => {});
