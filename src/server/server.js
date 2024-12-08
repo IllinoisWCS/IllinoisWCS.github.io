@@ -11,6 +11,13 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 const app = express();
 
+// "@notionhq/client": "^2.2.15",
+// "body-parser": "^1.20.3",
+// "cors": "^2.8.5",
+// "dotenv": "^16.4.5",
+// "express": "^4.21.1",
+// "find-config": "^1.0.0"
+
 app.use(cors());
 const PORT = 5000;
 const HOST = 'localhost';
