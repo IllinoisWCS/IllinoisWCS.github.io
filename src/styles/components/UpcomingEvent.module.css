@@ -1,12 +1,7 @@
 .container {
   color: black;
   display: flex;
-  /* gap: 0.5rem; */
   flex-direction: column;
-  /* align-items: center;
-  justify-content: center;
-  text-align: center; */
-  /* added */
   height: 100%;
   width: 100%;
   position: relative;
@@ -20,7 +15,6 @@
 
 .wrapper {
   cursor: auto;
-  /* added */
   height: 100%;
 }
 
@@ -42,7 +36,6 @@
 
 .title {
   max-width: 250px;
-  /* added */
   text-align: center;
   position: absolute;
   top: 1rem;
@@ -63,22 +56,13 @@
   transform: translate(-50%, -50%);
 }
 
-.dateTime p {
-  font-weight: 400;
-  color: #21636c;
-  /* added */
-  text-align: center;
-}
-
 .hiddenButton {
   border: none;
   background-color: transparent;
-  /* added */
   width: 100%;
   height: 100%;
   padding: 0;
 }
-/* added below */
 .location {
   position: absolute;
   bottom: 1rem;

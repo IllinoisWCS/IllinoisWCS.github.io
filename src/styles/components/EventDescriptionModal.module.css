@@ -16,19 +16,8 @@
 .window {
   z-index: 99;
   position: absolute;
-  /* top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-  width: 80vw;
-  max-width: 600px;
-  height: auto;
-  max-height: 85vh;
-  border-radius: 8px;
-  align-items: stretch;
-  overflow-y: auto;  */
-  width: 500px; /* Set fixed width */
-  height: 600px; /* Set fixed height */
+  width: 500px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,7 +37,7 @@
   gap: 1rem;
   padding: 1rem;
   flex: 1;
-  overflow-y: auto; /* Enable scrolling if content exceeds container size */
+  overflow-y: auto;
 }
 
 .title {
