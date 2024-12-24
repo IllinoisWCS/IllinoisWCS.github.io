@@ -53,13 +53,18 @@
 .committeeInnerContainer {
   height: 250vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 400px;
   view-timeline: --inner;
-  width: 100%;
+  width: 200%;
+  margin-left: -110%;
+
+  /* background-color: red; */
+  /* width: 100vw; */
+  /* overflow-x: hidden; */
 }
 
 @keyframes slideOut {
@@ -113,14 +118,18 @@
   align-items: center;
   justify-content: center;
   position: sticky;
+  gap: 2rem;
   top: calc(50% - 30vh);
-  /* transform: translate(0%, 0%); */
+  /* width: fit-content; */
+  /* flex: 0; */
+  width: 80vw !important;
+  /* transform: translateX(50%); */
 
-  animation-name: slideOut;
+  /* animation-name: slideOut;
   animation-fill-mode: both;
   animation-timing-function: ease;
   animation-timeline: --inner;
-  animation-range: entry 100% exit 0%;
+  animation-range: entry 100% exit 0%; */
 }
 
 .img {
@@ -129,14 +138,35 @@
   max-width: 80%;
   height: auto;
   max-height: 430px;
-  animation-name: slideIn;
+  border-radius: 20px;
+  border: 10px solid var(--wcs-pink);
+  /* margin-left: 100%; */
+  /* margin-left: 500%; */
+  /* transform: translateX(-100%); */
+  /* display: none; */
+  /* margin-left: -100%; */
+  /* left: 0%; */
+
+  /* animation-name: slideIn;
   animation-fill-mode: both;
   animation-timing-function: ease;
   animation-timeline: --inner;
-  animation-range: entry 100% exit 0%;
-  border-radius: 20px;
-  border: 10px solid var(--wcs-pink);
+  animation-range: entry 100% exit 0%; */
 }
+
+/* .committee.active {
+  animation-name: slideOut;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+.img.active {
+  animation-name: slideIn;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+} */
 
 .committeeLeft {
   flex-direction: row;
@@ -170,7 +200,7 @@
 .officerPics {
   display: flex;
   gap: 1rem;
-  margin: 0 2rem;
+  /* margin: 0 2rem; */
 }
 
 @media (max-width: 992px) {
@@ -218,11 +248,14 @@
   }
 
   .committeeInnerContainer {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 1rem;
     height: fit-content;
     margin-bottom: 4rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .committeeDescription {
@@ -236,7 +269,8 @@
 
   .officerPics {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     gap: 0;
     justify-content: center;
   }
