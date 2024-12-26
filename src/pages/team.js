@@ -11,9 +11,8 @@ export default function Team() {
   // eslint-disable-next-line consistent-return
   useEffect(() => {
     const screenWidth = window.innerWidth;
-    if (screenWidth > 800) {
+    if (screenWidth > 768) {
       const header = document.getElementById('committeeHeader');
-      // const committees = document.querySelectorAll(`.${styles.committee}`);
       const images = document.querySelectorAll(`.${styles.img}`);
       const committeeContainers = document.querySelectorAll(
         `.${styles.committeeInnerContainer}`,
@@ -48,12 +47,10 @@ export default function Team() {
       };
 
       calculateTriggerPoints();
-      window.addEventListener('resize', calculateTriggerPoints); // Recalculate on resize
 
       // Step 3: Add scroll listener to handle animations
       const handleScroll = () => {
         if (headerIntersected) {
-          // console.log('header intersected');
           return;
         }
 
@@ -66,12 +63,9 @@ export default function Team() {
             triggerPoints[index + 1] || triggerPoints[index] + triggerInterval;
 
           if (scrollOffset >= triggerPoint && scrollOffset < nextTriggerPoint) {
-            // console.log('trigger for ', committees[index]);
             const range = nextTriggerPoint - triggerPoint;
             const progress = (scrollOffset - triggerPoint) / range;
-
-            const translation = progress * 400;
-
+            const translation = progress * 350;
             const imgWidth = images[index].getBoundingClientRect().width;
 
             // eslint-disable-next-line no-param-reassign
@@ -87,7 +81,6 @@ export default function Team() {
 
       return () => {
         window.removeEventListener('scroll', handleScroll);
-        window.removeEventListener('resize', calculateTriggerPoints);
         if (header) observer.disconnect();
       };
     }
