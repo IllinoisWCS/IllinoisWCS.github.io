@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useEffect } from 'react';
+import { gsap } from 'gsap';
 
 import OfficerCard from '../components/OfficerCard';
 import officerData from '../data/officers.json';
@@ -8,81 +9,35 @@ import styles from '@/styles/pages/Team.module.css';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 
 export default function Team() {
-  // eslint-disable-next-line consistent-return
   useEffect(() => {
     const screenWidth = window.innerWidth;
-    if (screenWidth > 768) {
-      const header = document.getElementById('committeeHeader');
+    if (screenWidth > 780) {
+      // eslint-disable-next-line global-require
+      const { ScrollTrigger } = require('gsap/ScrollTrigger');
+
+      gsap.registerPlugin(ScrollTrigger);
       const images = document.querySelectorAll(`.${styles.img}`);
       const committeeContainers = document.querySelectorAll(
         `.${styles.committeeInnerContainer}`,
       );
-      let headerIntersected = false;
-      const lastTriggerPoint = 0.5 * window.innerHeight + header.offsetTop;
 
-      let triggerPoints = [];
+      committeeContainers.forEach((container, index) => {
+        const img = images[index];
+        const imgWidth = img.getBoundingClientRect().width;
 
-      // Step 1: Detect when the header comes into view
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              headerIntersected = true;
-            } else {
-              headerIntersected = false;
-            }
-          });
-        },
-        { threshold: 1.0 }, // Trigger when the header is fully in view
-      );
-      if (header) observer.observe(header);
-      const triggerInterval = 2.5 * window.innerHeight + 400;
+        gsap.set(container, { marginLeft: '-110%' });
 
-      // Step 2: Calculate trigger points for each item
-      const calculateTriggerPoints = () => {
-        // eslint-disable-next-line arrow-body-style
-        triggerPoints = Array.from(committeeContainers).map((_, index) => {
-          return lastTriggerPoint + index * triggerInterval;
+        gsap.to(container, {
+          marginLeft: `calc(50% - ${imgWidth / 2}px)`,
+          scrollTrigger: {
+            trigger: container,
+            start: 'center 80%',
+            end: '70% 20%',
+            scrub: true,
+            // markers: true,
+          },
         });
-      };
-
-      calculateTriggerPoints();
-
-      // Step 3: Add scroll listener to handle animations
-      const handleScroll = () => {
-        if (headerIntersected) {
-          return;
-        }
-
-        const scrollOffset = window.scrollY;
-
-        committeeContainers.forEach((item, index) => {
-          const triggerPoint = triggerPoints[index];
-          // eslint-disable-next-line operator-linebreak
-          const nextTriggerPoint =
-            triggerPoints[index + 1] || triggerPoints[index] + triggerInterval;
-
-          if (scrollOffset >= triggerPoint && scrollOffset < nextTriggerPoint) {
-            const range = nextTriggerPoint - triggerPoint;
-            const progress = (scrollOffset - triggerPoint) / range;
-            const translation = progress * 350;
-            const imgWidth = images[index].getBoundingClientRect().width;
-
-            // eslint-disable-next-line no-param-reassign
-            item.style.marginLeft = `calc(min(50% - ${imgWidth / 2}px, -110% + ${translation}%))`;
-          } else {
-            // eslint-disable-next-line no-param-reassign
-            item.style.marginLeft = '-110%';
-          }
-        });
-      };
-
-      window.addEventListener('scroll', handleScroll);
-
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-        if (header) observer.disconnect();
-      };
+      });
     }
   }, []);
 
