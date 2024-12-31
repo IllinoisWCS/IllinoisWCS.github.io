@@ -23,6 +23,32 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   res.json(results.results);
 });
 
+app.post('/filter-type', jsonParser, async (req, res) => {
+  console.log(req.body);
+  const { type } = req.body;
+
+  if (!type) {
+    return res.status(400).json({ error: 'Type is required' });
+  }
+
+  try {
+    const results = await notion.databases.query({
+      database_id: process.env.NOTION_DATABASE_ID,
+      filter: {
+        property: 'Type',
+        select: {
+          equals: type,
+        },
+      },
+    });
+
+    res.json(results.results);
+  } catch (error) {
+    console.error('Error fetching data from Notion:', error);
+    res.status(500).json({ error: 'Failed to fetch data from Notion' });
+  }
+});
+
 app.listen(PORT, HOST, () => {
   console.log('Starting proxy at ' + HOST + ':' + PORT);
 });
