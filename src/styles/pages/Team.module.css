@@ -20,9 +20,10 @@
 
 .teamPic {
   background-color: white;
-  height: 411px;
-  width: 50%;
-  margin: 4rem auto;
+  height: auto;
+  max-width: 80%;
+  max-height: 411px;
+  margin: 3rem auto;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -61,56 +62,6 @@
   view-timeline: --inner;
   width: 200%;
   margin-left: -110%;
-
-  /* background-color: red; */
-  /* width: 100vw; */
-  /* overflow-x: hidden; */
-}
-
-@keyframes slideOut {
-  0% {
-    /* transform: translateX(0%); */
-    /* opacity: 1; */
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-
-  50% {
-    display: flex;
-  }
-  70% {
-    display: none;
-  }
-  100% {
-    /* transform: translateX(100%); */
-    /* opacity: 0; */
-    display: none;
-    margin-left: 100%;
-    margin-right: -100%;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-    display: none;
-    /* margin-left: -100%; */
-  }
-
-  70% {
-    transform: translateX(-100%);
-    display: none;
-    /* margin-left: -100%; */
-  }
-  85% {
-    transform: translateX(-50%);
-    /* margin-left: -50%; */
-    /* display: none; */
-  }
-  100% {
-    transform: translateX(0%);
-    /* margin-left: 0; */
-  }
 }
 
 .committee {
@@ -120,16 +71,7 @@
   position: sticky;
   gap: 2rem;
   top: calc(50% - 30vh);
-  /* width: fit-content; */
-  /* flex: 0; */
   width: 80vw !important;
-  /* transform: translateX(50%); */
-
-  /* animation-name: slideOut;
-  animation-fill-mode: both;
-  animation-timing-function: ease;
-  animation-timeline: --inner;
-  animation-range: entry 100% exit 0%; */
 }
 
 .img {
@@ -140,33 +82,7 @@
   max-height: 430px;
   border-radius: 20px;
   border: 10px solid var(--wcs-pink);
-  /* margin-left: 100%; */
-  /* margin-left: 500%; */
-  /* transform: translateX(-100%); */
-  /* display: none; */
-  /* margin-left: -100%; */
-  /* left: 0%; */
-
-  /* animation-name: slideIn;
-  animation-fill-mode: both;
-  animation-timing-function: ease;
-  animation-timeline: --inner;
-  animation-range: entry 100% exit 0%; */
 }
-
-/* .committee.active {
-  animation-name: slideOut;
-  animation-duration: 10s;
-  animation-fill-mode: both;
-  animation-timing-function: ease;
-}
-
-.img.active {
-  animation-name: slideIn;
-  animation-duration: 10s;
-  animation-fill-mode: both;
-  animation-timing-function: ease;
-} */
 
 .committeeLeft {
   flex-direction: row;
@@ -202,7 +118,6 @@
 .officerPics {
   display: flex;
   gap: 1rem;
-  /* margin: 0 2rem; */
 }
 
 @media (max-width: 992px) {
@@ -271,7 +186,6 @@
 
   .officerPics {
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     gap: 0;
     justify-content: center;

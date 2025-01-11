@@ -34,7 +34,6 @@ export default function Team() {
             start: 'center 80%',
             end: '70% 20%',
             scrub: true,
-            // markers: true,
           },
         });
       });
@@ -92,9 +91,13 @@ export default function Team() {
       <ComputerWindow className={styles.title}>
         <h2>Our Team</h2>
       </ComputerWindow>
-
-      <div className={styles.teamPic}>Team Picture Placeholder</div>
-
+      <Image
+        className={styles.teamPic}
+        src="/assets/img/committees/team.jpg"
+        width={600}
+        height={400}
+        alt="team"
+      />
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h3>Executive Board</h3>
       </ComputerWindow>
@@ -123,15 +126,10 @@ export default function Team() {
           ))}
       </div>
 
-      <ComputerWindow
-        className={styles.subHeader}
-        showTopbar={false}
-        // id={styles.committeeHeader}
-      >
+      <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h3 id="committeeHeader">Committees</h3>
       </ComputerWindow>
 
-      {/* <div className={styles.committeeOuterContainer}> */}
       {committeeData.map(
         (committee, index) =>
           // eslint-disable-next-line implicit-arrow-linebreak
@@ -144,6 +142,5 @@ export default function Team() {
         // eslint-disable-next-line function-paren-newline
       )}
     </div>
-    // </div>
   );
 }
