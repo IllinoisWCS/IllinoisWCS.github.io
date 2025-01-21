@@ -9,6 +9,15 @@ import styles from '@/styles/pages/Team.module.css';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 
 export default function Team() {
+  const committeeCaptions = [
+    'Corporate Retreat 2024',
+    'Code Ada 2023',
+    'Tech Team',
+    'Bits and Bytes Kickoff 2022',
+    'Outreach',
+    'Field Day 2023',
+  ];
+
   useEffect(() => {
     const screenWidth = window.innerWidth;
     if (screenWidth > 780) {
@@ -25,7 +34,7 @@ export default function Team() {
         const img = images[index];
         const imgWidth = img.getBoundingClientRect().width;
 
-        gsap.set(container, { marginLeft: '-110%' });
+        gsap.set(container, { marginLeft: '-50%' });
 
         gsap.to(container, {
           marginLeft: `calc(50% - ${imgWidth / 2}px)`,
@@ -40,7 +49,13 @@ export default function Team() {
     }
   }, []);
 
-  const renderCommitteeSection = (position, title, description, image) => {
+  const renderCommitteeSection = (
+    position,
+    title,
+    description,
+    image,
+    caption,
+  ) => {
     const officersList = officerData.admin.filter(
       (officer) => [`${title} Co-Chair`].includes(officer.position),
       // eslint-disable-next-line function-paren-newline
@@ -48,13 +63,16 @@ export default function Team() {
 
     return (
       <div className={styles.committeeInnerContainer}>
-        <Image
-          className={styles.img}
-          src={image}
-          width={800}
-          height={800}
-          alt={image}
-        />
+        <div className={styles.imgContainer}>
+          <Image
+            className={styles.img}
+            src={image}
+            width={800}
+            height={800}
+            alt={image}
+          />
+          <div className={styles.imgCaption}>{caption}</div>
+        </div>
         <div
           className={`${styles[`committee${position}`]} ${styles.committee}`}
           // id={`${styles[`${position}Committee`]}`}
@@ -138,6 +156,7 @@ export default function Team() {
             committee.name,
             committee.description,
             committee.image,
+            committeeCaptions[index],
           ),
         // eslint-disable-next-line function-paren-newline
       )}
