@@ -5,7 +5,7 @@
   border: 3px solid var(--wcs-pink);
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-self: stretch;
   flex: 1 1 calc(33.333% - 1rem);
   max-width: calc(33.333% - 1rem);

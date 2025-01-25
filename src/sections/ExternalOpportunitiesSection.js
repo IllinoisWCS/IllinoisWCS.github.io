@@ -42,19 +42,21 @@ export default function ExternalOpportunitiesSection() {
   //  returns time of opportunity
   const getTime = (properties) => {
     const time = properties.Time;
-    return time.rich_text[0] ? time.rich_text[0].text.content : 'None';
+    return time.rich_text[0] ? time.rich_text[0].text.content : 'No Time';
   };
 
   //  returns expiration date of opportunity
   const getExpiration = (properties) => {
     const expires = properties.Expires;
-    return expires.date ? expires.date.start : 'NA';
+    return expires.date ? expires.date.start : 'No Expiration';
   };
 
   //  returns location of opportunity
   const getLocation = (properties) => {
     const location = properties.Location;
-    return location.rich_text[0] ? location.rich_text[0].text.content : 'None';
+    return location.rich_text[0]
+      ? location.rich_text[0].text.content
+      : 'No Location';
   };
 
   //  returns description of opportunity (formatting of this might be wonky atm)
