@@ -28,6 +28,7 @@ const notion = new Client({
   auth: process.env.REACT_APP_NOTION_API_KEY,
 });
 
+
 async function filterRecentOpportunities(data) {
   const curr = moment().subtract(1, 'days');
   const filteredData = data.filter(
