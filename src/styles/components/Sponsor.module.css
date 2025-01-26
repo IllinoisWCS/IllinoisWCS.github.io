@@ -1,15 +1,38 @@
 .container {
   display: flex;
-  padding: 0.5rem;
-  width: 9rem;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
   height: 8rem;
   border-radius: 1rem;
   background-color: #ffffff;
   position: relative;
   margin: 1rem;
+  z-index: 3;
   cursor: pointer;
-  display: flex;
-  border: none;
+  border: 4px solid var(--wcs-pink);
+}
+
+.container::before {
+  content: ''; 
+  position: absolute;
+  bottom: -2rem; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); 
+  color: #ffffff;
+  padding: 0.4rem 0.8rem; 
+  border-radius: 0.4rem; 
+  font-size: 0.8rem; 
+  white-space: nowrap;
+  opacity: 0; 
+  visibility: hidden; 
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.container:hover::before {
+  visibility: visible;
+  opacity: 1;
 }
 
 .container::after {
@@ -17,33 +40,58 @@
   position: absolute;
   right: -1rem;
   top: -1rem;
-  border-radius: 100%;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  border: none;
-}
+  z-index: 2;
+  border-radius: 50%;
+  width: 1.5rem; 
+  height: 1.5rem;
+} 
 
 .image {
-  justify-self: center;
-  align-self: center;
-  max-width: 8rem;
-  max-height: 7rem;
+  max-width: 13rem; 
+  max-height: 8rem;
+  position: absolute;
   object-fit: contain;
+  z-index: 1;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.platinum::after {
-  background-color: #337ab7;
+.gold::before {
+  content: 'Gold Tier';
 }
 
 .gold::after {
-  background-color: #f0ad4e;
+  background-color: hsl(35, 84%, 62%);
+}
+
+.bronze::before {
+  content: 'Bronze Tier';
+}
+
+.bronze::after {
+  background-color: #A91C04;
+}
+
+.silver::before {
+  content: 'Silver Tier';
 }
 
 .silver::after {
   background-color: #808080;
+  background-color: hsl(35, 84%, 62%);
 }
 
-.bronze::after {
-  background-color: #d9534f;
+.platinum::before {
+  content: 'Platinum Tier'
+}
+
+.platinum::after {
+  background-color: #337ab7;
+  z-index: 1;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

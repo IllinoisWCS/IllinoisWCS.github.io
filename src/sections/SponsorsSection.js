@@ -1,82 +1,62 @@
 import Sponsor from '../components/Sponsor';
 import styles from '@/styles/pages/Home.module.css';
-import TabletComponent from '../components/general/TabletComponent';
 
 export default function SponsorsSection() {
   return (
     <div className={styles.sectionContainer}>
-      <h2 className={styles.header}>Our Sponsors</h2>
-      <h3 className={styles.sponsorCall}>
-        {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-        If you are interested in sponsoring us, please email{' '}
-        <a
-          className={styles.sponsorEmail}
-          href="mailto:contact@illinoiswcs.org"
-        >
-          contact@illinoiswcs.org
-        </a>
-        !
-      </h3>
+      <h2 className={styles.header}>Sponsors</h2>
+      <h3 className={styles.sponsorCall}></h3>
       <div className={styles.sponsorsSection}>
-        <TabletComponent>
           <div>
             <div className={styles.sponsors}>
               <Sponsor
-                sponsor="google.png"
-                url="https://careers.google.com/"
+                sponsor="Peak6.jpg"
+                url="https://peak6.com/careers/"
                 tier="gold"
               />
               <Sponsor
-                sponsor="crowdstrike.png"
-                url="https://www.crowdstrike.com/careers/"
+                sponsor="Motorola.jpg"
+                url="https://www.motorolasolutions.com/en_us/about/careers.html"
                 tier="gold"
               />
               <Sponsor
-                sponsor="cmegroup.jpg"
-                url="https://www.cmegroup.com/careers.html"
-                tier="gold"
+                sponsor="IMCTrading.png"
+                url="https://www.imc.com/us/search-careers"
+                tier="bronze"
               />
               <Sponsor
-                sponsor="twoSigma.png"
-                url="https://www.twosigma.com/careers/"
-                tier="gold"
-              />
-              <Sponsor
-                sponsor="drw.png"
-                url="https://drw.com/work-at-drw"
-                tier="gold"
-              />
-              <Sponsor
-                sponsor="omc.png"
+                sponsor="OldMission.png"
                 url="https://www.oldmissioncapital.com/careers/"
-                tier="gold"
-              />
-              <Sponsor
-                sponsor="hrt.png"
-                url="https://www.hudsonrivertrading.com/careers//"
                 tier="gold"
               />
             </div>
             <div className={styles.sponsors}>
-              <Sponsor
-                sponsor="bloomberg.png"
-                url="https://www.bloomberg.com/company/careers/early-career/"
+            <Sponsor
+                sponsor="drw.png"
+                url="https://drw.com/work-at-drw"
+                tier="bronze"
+              />
+            <Sponsor
+                sponsor="hrt2.png"
+                url="https://www.hudsonrivertrading.com/careers/"
                 tier="bronze"
               />
               <Sponsor
-                sponsor="activeCampaign.png"
-                url="https://www.activecampaign.com/about/careers"
-                tier="bronze"
-              />
-              <Sponsor
-                sponsor="citadel.png"
-                url="https://www.citadel.com/careers/"
+                sponsor="CMEGroup1.png"
+                url="https://www.cmegroup.com/careers.html"
                 tier="bronze"
               />
             </div>
           </div>
-        </TabletComponent>
+          If you are interested in sponsoring us, please email{' '}
+        <a
+          className={styles.sponsorEmail}
+          href="illinoiswcs@gmail.com"
+          >
+          illinoiswcs@gmail.com!
+        </a>
       </div>
     </div>
   );
 }
+
