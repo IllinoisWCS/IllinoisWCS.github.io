@@ -31,24 +31,24 @@ export default function ExternalOpportunitiesSection() {
   }, []);
 
   //  returns type of opportunity (ex. Conferences and Events)
-  const getType = (properties) => properties.Type.select.name;
+  const getType = (properties) => properties.Type.multi_select[0].name;
 
   //  returns name/title of opportunity
   const getName = (properties) => {
     const name = properties.Name;
-    return name.title[0] ? name.title[0].text.content : 'No Title';
+    return name ? name.title[0].text.content : '';
   };
 
   //  returns time of opportunity
   const getTime = (properties) => {
     const time = properties.Time;
-    return time.rich_text[0] ? time.rich_text[0].text.content : 'No Time';
+    return time.rich_text[0] ? time.rich_text[0].text.content : '';
   };
 
   //  returns expiration date of opportunity
   const getExpiration = (properties) => {
     const expires = properties.Expires;
-    return expires.date ? expires.date.start : 'No Expiration';
+    return expires.date ? expires.date.start : '';
   };
 
   //  returns location of opportunity
