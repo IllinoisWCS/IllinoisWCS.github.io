@@ -8,17 +8,25 @@ require('dotenv').config();
 const app = express();
 const router = express.Router();
 
+console.log("HAIHDIJASIDJIASJD");
+console.log('Notion API Key:', process.env.REACT_APP_NOTION_API_KEY);
+console.log('Notion Database ID:', process.env.REACT_APP_NOTION_DATABASE_ID);
+
+
 const notion = new Client({
   auth: process.env.REACT_APP_NOTION_API_KEY,
 });
 
 router.get('/external-opps-api', jsonParser, async (req, res) => {
+  console.log("GET");
   results = await notion.databases.query({
     database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
   });
 
+  console.log(results);  // Log the entire response
   res.json(results.results);
 });
+
 
 router.post('/filter-type', jsonParser, async (req, res) => {
   // console.log(req.body);
@@ -30,11 +38,11 @@ router.post('/filter-type', jsonParser, async (req, res) => {
 
   try {
     const results = await notion.databases.query({
-      database_id: process.env.NOTION_DATABASE_ID,
+      database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
       filter: {
         property: 'Type',
-        select: {
-          equals: type,
+        multi_select: {
+          contains: type,
         },
       },
     });
