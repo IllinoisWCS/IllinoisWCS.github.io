@@ -1,0 +1,41 @@
+.pastEventsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.title h2 {
+  margin: 1rem;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin: 2rem auto 0;
+  width: 90%;
+}
+
+.subHeader h3 {
+  margin: 1rem;
+}
+
+.subHeader {
+  width: 80vw;
+  text-align: center;
+  margin: 3rem auto 2rem;
+}
+
+.monthContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80vw;
+  gap: 2rem;
+  margin: auto;
+}
+
+.eventsContainer {
+  margin: auto;
+}
