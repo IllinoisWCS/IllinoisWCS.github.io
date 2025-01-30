@@ -37,7 +37,7 @@
   display: block;
   background-color: #ffffff;
   margin-bottom: -25px;
-  text: "Sponsors";
+  text: 'Sponsors';
   text-align: center;
   padding: 20px 0;
   border-radius: 25px;
@@ -218,12 +218,6 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.sponsorCall {
-  margin-top: 30px;
-  align-self: center;
-  text-align: center;
 }
 
 .sponsorEmail {

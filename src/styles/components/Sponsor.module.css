@@ -14,20 +14,22 @@
 }
 
 .container::before {
-  content: ''; 
+  content: '';
   position: absolute;
-  bottom: -2rem; 
+  bottom: -2rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8); 
+  background-color: rgba(0, 0, 0, 0.8);
   color: #ffffff;
-  padding: 0.4rem 0.8rem; 
-  border-radius: 0.4rem; 
-  font-size: 0.8rem; 
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
   white-space: nowrap;
-  opacity: 0; 
-  visibility: hidden; 
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .container:hover::before {
@@ -42,12 +44,12 @@
   top: -1rem;
   z-index: 2;
   border-radius: 50%;
-  width: 1.5rem; 
+  width: 1.5rem;
   height: 1.5rem;
-} 
+}
 
 .image {
-  max-width: 13rem; 
+  max-width: 13rem;
   max-height: 8rem;
   position: absolute;
   object-fit: contain;
@@ -71,7 +73,7 @@
 }
 
 .bronze::after {
-  background-color: #A91C04;
+  background-color: #a91c04;
 }
 
 .silver::before {
@@ -84,7 +86,7 @@
 }
 
 .platinum::before {
-  content: 'Platinum Tier'
+  content: 'Platinum Tier';
 }
 
 .platinum::after {

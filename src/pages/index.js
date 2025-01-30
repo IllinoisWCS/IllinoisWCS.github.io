@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import AboutUsSection from '../sections/AboutUsSection';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
@@ -106,7 +107,7 @@ export default function Home() {
 
         <h1 className={styles.title}>Illinois Women in Computer Science</h1>
         <div className={`${styles.windowContainer}`}>
-        <div className={`${styles.windowGrid}`}>
+          <div className={`${styles.windowGrid}`}>
             <ComputerWindow>
               <Image
                 className={`${styles.windowImage}`}

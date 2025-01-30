@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import ComputerWindow from './general/ComputerWindowComponent';
 import styles from '@/styles/components/OfficerModal.module.css';
-import Key from '../components/StayInTouchKey';
+import Key from './StayInTouchKey';
 
 function OfficerInformation(
   closeModal,
@@ -31,7 +31,7 @@ function OfficerInformation(
         onButtonClick={closeModal}
       >
         <div className={styles.officerInfo}>
-        <div className={styles.columnContainer}>
+          <div className={styles.columnContainer}>
             <div className={styles.left}>
               <div className={styles.photoContainer}>
                 <Image
