@@ -4,9 +4,9 @@ import styles from '@/styles/pages/PastEvents.module.css';
 import UpcomingEvent from '../components/events/UpcomingEvent';
 
 function PastEvents() {
-  //   const events = [];
   const [events, setEvents] = useState([]);
   const [eventsByMonth, setEventsByMonth] = useState({});
+  const [errorFetchingEvents, setErrorFetchingEvents] = useState(false);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -47,7 +47,7 @@ function PastEvents() {
             .reverse(),
         );
       } catch (error) {
-        // console.error('Error fetching events:', error);
+        setErrorFetchingEvents(true);
       }
     };
 
@@ -58,7 +58,6 @@ function PastEvents() {
     const eventsMap = new Map();
     events.forEach((event) => {
       const month = event.date.split(' ')[1];
-      // console.log(event.date);
       if (eventsMap.has(month)) {
         eventsMap.get(month).push(event);
       } else {
@@ -68,8 +67,27 @@ function PastEvents() {
     setEventsByMonth(eventsMap);
   }, [events]);
 
+  if (errorFetchingEvents) {
+    return (
+      <div className={styles.pastEventsContainer}>
+        <ComputerWindow className={styles.title}>
+          <h2>Past Events</h2>
+        </ComputerWindow>
+        <ComputerWindow showTopbar={false} className={styles.subHeader}>
+          <h3>
+            Error fetching events. Check out our{' '}
+            <a href="https://calendar.google.com/calendar/u/6?cid=M2MyOGdwcHJjbm9zMHEyNTFvZG5sODc3bWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
+              <u>Google Calendar</u>
+            </a>
+            .
+          </h3>
+        </ComputerWindow>
+      </div>
+    );
+  }
+
   return (
-    <div className={styles.main}>
+    <div className={styles.pastEventsContainer}>
       <ComputerWindow className={styles.title}>
         <h2>Past Events</h2>
       </ComputerWindow>

@@ -1,4 +1,4 @@
-.main {
+.pastEventsContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -8,11 +8,10 @@
 
 .title h2 {
   margin: 1rem;
-  font-size: 42px;
   text-align: center;
 }
 
-.main .title {
+.title {
   text-align: center;
   margin: 2rem auto 0;
   width: 90%;
@@ -20,11 +19,9 @@
 
 .subHeader h3 {
   margin: 1rem;
-  font-weight: 300;
-  font-size: 32px;
 }
 
-.main .subHeader {
+.subHeader {
   width: 80vw;
   text-align: center;
   margin: 3rem auto 2rem;
