@@ -31,12 +31,12 @@ export default function ExternalOpportunitiesSection() {
   }, []);
 
   //  returns type of opportunity (ex. Conferences and Events)
-  const getType = (properties) => properties.Type.select.name;
+  const getType = (properties) => properties.Type.multi_select[0].name;
 
   //  returns name/title of opportunity
   const getName = (properties) => {
     const name = properties.Name;
-    return name.title[0] ? name.title[0].text.content : 'No Title';
+    return name ? name.title[0].text.content : '';
   };
 
   //  returns time of opportunity

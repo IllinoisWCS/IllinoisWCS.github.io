@@ -13,6 +13,9 @@ const app = express();
 
 const moment = require('moment');
 
+const fs = require('fs');
+
+
 // "@notionhq/client": "^2.2.15",
 // "body-parser": "^1.20.3",
 // "cors": "^2.8.5",
@@ -43,8 +46,29 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   const results = await notion.databases.query({
     database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
   });
-  const tempRes = await filterRecentOpportunities(results.results);
+
+  const filteredRes = await filterRecentOpportunities(results.results)
+  
+  const tempRes = filteredRes.map(item => {
+    return {
+      icon: icon = item.icon?.emoji || "💡",
+      title: item.properties.Name.title[0]?.text?.content || "No Title",
+      location: item.properties.Location.rich_text[0]?.text?.content || "No Location",
+      date: item.properties.Expires.date.start || "No Expiry Date",
+      time: item.properties.Time.rich_text[0]?.text?.content || "No Time",
+      description: item.properties.Description.rich_text[0]?.text?.content || "No Description",
+      link: item.properties.Link.url || "",
+      category: item.properties.Type.multi_select[0]?.name || "No Category",
+    };
+  });
+
   res.json(tempRes);
+
+  fs.writeFile('src/data/externalOpportunities.json', JSON.stringify(tempRes), err => {
+    if (err) {
+      console.error(err);
+    }
+  });
 });
 
 app.listen(PORT, HOST, () => {});
