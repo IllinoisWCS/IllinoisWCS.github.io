@@ -32,7 +32,8 @@ async function filterRecentOpportunities(data) {
   const curr = moment().subtract(1, 'days');
   const filteredData = data.filter(
     (page) =>
-      page.properties.Expires.date &&
+      // eslint-disable-next-line implicit-arrow-linebreak
+      page.properties.Expires.date && // eslint-disable-line operator-linebreak
       moment(page.properties.Expires.date.start).isAfter(curr),
   );
   return filteredData;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '@/styles/sections/ResourcesNotLoaded.module.css';
-import Cloud from '@/components/CloudComponent';
+import Cloud from '../components/CloudComponent';
 
 function ResourcesNotLoaded() {
   return (
@@ -11,7 +11,7 @@ function ResourcesNotLoaded() {
 
       <div className={styles.cloudText}>
         <p>
-          We're having trouble right now.
+          We&apos;re having trouble right now.
           <br />
           {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
           Please visit{' '}
@@ -23,7 +23,9 @@ function ResourcesNotLoaded() {
             <u>this link</u>
             {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
           </a>{' '}
-          for our most up to date version of external opportunities.
+          for our most up to date version
+          <br />
+          of external opportunities.
         </p>
       </div>
 

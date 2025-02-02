@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ExternalOpportunityCategoryCard from '../components/ExternalOpportunityCategoryCard';
 import styles from '@/styles/sections/ExternalOpportunitiesSection.module.css';
 import opportunitiesData from '../data/externalOpportunities.json';
-import ResourcesNotLoaded from '@/sections/ResourcesNotLoaded';
+import ResourcesNotLoaded from './ResourcesNotLoaded';
 
 const cardsData = [
   { title: 'Conferences and Events', topbarColor: 'wcs-pink' },
