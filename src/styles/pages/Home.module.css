@@ -12,10 +12,6 @@
   }
 }
 
-.title {
-  text-align: center;
-}
-
 .logo {
   position: relative;
 }
@@ -98,31 +94,6 @@
   }
 }
 
-.windowContainer {
-  max-width: 825px;
-}
-
-.windowGrid {
-  margin-top: 3rem;
-  padding: 2rem 4rem;
-  background-image: url('/assets/design-vectors/grid.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media only screen and (max-width: 768px) {
-  .windowGrid {
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-}
-
-.windowImage {
-  width: 100%;
-  height: auto;
-}
-
 .upcomingEventSection {
   display: flex;
   flex-direction: column;
@@ -165,13 +136,6 @@
 .noEvents {
   padding: 0.75rem;
   max-width: 20rem;
-}
-
-.stayInTouchSection {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
 }
 
 .communicationLinks {
