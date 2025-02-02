@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ExternalOpportunityCategoryCard from '../components/ExternalOpportunityCategoryCard';
 import styles from '@/styles/sections/ExternalOpportunitiesSection.module.css';
 import opportunitiesData from '../data/externalOpportunities.json';
+import ResourcesNotLoaded from './ResourcesNotLoaded';
 
 const cardsData = [
   { title: 'Conferences and Events', topbarColor: 'wcs-pink' },
@@ -18,6 +19,7 @@ const cardsData = [
 export default function ExternalOpportunitiesSection() {
   //  this will contain the data from notion
   const [opportunities, setOpportunities] = useState([{}]);
+  const [notionDataFetched, setNotionDataFetched] = useState(true);
 
   //  this fetches the opportunities data and assigns it to opportunities (above)
   //   You can use the map function to iterate through the opportunities.
@@ -27,36 +29,37 @@ export default function ExternalOpportunitiesSection() {
       .then((response) => response.json())
       .then((data) => {
         setOpportunities(data);
+      })
+      .catch(() => {
+        setNotionDataFetched(false);
       });
   }, []);
 
   //  returns type of opportunity (ex. Conferences and Events)
-  const getType = (properties) => properties.Type.select.name;
+  const getType = (properties) => properties.Type.multi_select[0].name;
 
   //  returns name/title of opportunity
   const getName = (properties) => {
     const name = properties.Name;
-    return name.title[0] ? name.title[0].text.content : 'No Title';
+    return name ? name.title[0].text.content : '';
   };
 
   //  returns time of opportunity
   const getTime = (properties) => {
     const time = properties.Time;
-    return time.rich_text[0] ? time.rich_text[0].text.content : 'No Time';
+    return time.rich_text[0] ? time.rich_text[0].text.content : '';
   };
 
   //  returns expiration date of opportunity
   const getExpiration = (properties) => {
     const expires = properties.Expires;
-    return expires.date ? expires.date.start : 'No Expiration';
+    return expires.date ? expires.date.start : '';
   };
 
   //  returns location of opportunity
   const getLocation = (properties) => {
     const location = properties.Location;
-    return location.rich_text[0]
-      ? location.rich_text[0].text.content
-      : 'No Location';
+    return location.rich_text[0] ? location.rich_text[0].text.content : '';
   };
 
   //  returns description of opportunity (formatting of this might be wonky atm)
@@ -70,7 +73,7 @@ export default function ExternalOpportunitiesSection() {
         return '';
       });
     }
-    return 'No Description';
+    return '';
   };
 
   //  returns url
@@ -80,6 +83,10 @@ export default function ExternalOpportunitiesSection() {
   Please see the commented section below the return statement for an
   example of how to use the functions above to access the opportunities data.
   */
+
+  if (!notionDataFetched) {
+    return <ResourcesNotLoaded />;
+  }
 
   return (
     <>
