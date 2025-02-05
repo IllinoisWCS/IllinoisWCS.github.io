@@ -56,10 +56,10 @@ export default function WCSNavbar() {
       <div
         className={`${styles.linksContainer} ${isMenuOpen ? styles.show : ''}`}
       >
-        <NavLink href="https://points.illinoiswcs.org/" label="points" />
-        <NavLink href="/officers" label="officers" onClick={handleLinkClick} />
-        <NavLink href="/committees" label="committees" />
-        <NavLink href="/resources" label="resources" />
+        <NavLink href="/resources" label="Resources" />
+        <NavLink href="/ourteam" label="Our Team" />
+        <NavLink href="https://illinoiswcs.medium.com/" label="Medium" />
+        <NavLink href="https://points.illinoiswcs.org/" label="Points" />
       </div>
 
       <button type="button" className={styles.hamburger} onClick={toggleMenu}>

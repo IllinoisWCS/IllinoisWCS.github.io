@@ -15,7 +15,7 @@ export default function ExternalOpportunitiesSection() {
           {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
           Check out {/* eslint-disable-next-line react/jsx-no-target-blank */}
           <a
-            href="https://illinoiswcs.notion.site/External-Opportunities-Board-55cf543f69934c79b46a5df5dbec1512"
+            href="https://possible-surf-e96.notion.site/External-Opportunities-Board-d743b796b2d147dc9005efc6362d4166"
             target="_blank"
           >
             <u>this link</u>
