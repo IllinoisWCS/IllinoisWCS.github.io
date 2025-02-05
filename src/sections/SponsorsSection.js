@@ -36,25 +36,21 @@ export default function SponsorsSection() {
               tier="bronze"
             />
             <Sponsor
-                sponsor="hrt2.png"
-                url="https://www.hudsonrivertrading.com/careers/"
-                tier="bronze"
-              />
-              <Sponsor
-                sponsor="CMEGroup1.png"
-                url="https://www.cmegroup.com/careers.html"
-                tier="bronze"
-              />
-            </div>
+              sponsor="hrt2.png"
+              url="https://www.hudsonrivertrading.com/careers/"
+              tier="bronze"
+            />
+            <Sponsor
+              sponsor="CMEGroup1.png"
+              url="https://www.cmegroup.com/careers.html"
+              tier="bronze"
+            />
           </div>
-          If you are interested in sponsoring us, please email{' '}
-        <a
-          className={styles.sponsorEmail}
-          href="illinoiswcs@gmail.com"
-          >
+        </div>
+        If you are interested in sponsoring us, please email{' '}
+        <a className={styles.sponsorEmail} href="illinoiswcs@gmail.com">
           illinoiswcs@gmail.com!
         </a>
->>>>>>> Stashed changes
       </div>
     </div>
   );
