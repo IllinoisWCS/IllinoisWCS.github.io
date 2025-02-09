@@ -151,6 +151,55 @@ export default function UpcomingEventsSection() {
             time: 'HH:MM - HH:MM',
             description: 'Event Description',
           },
+          {
+            title: 'Event Title',
+            date: 'Day, Month DD',
+            time: 'HH:MM - HH:MM',
+            location: 'Location',
+            description: 'Event Description',
+          },
+          {
+            title: 'Event Title',
+            date: 'Day, Month DD',
+            time: 'HH:MM - HH:MM',
+            location: 'Location',
+            description: 'Event Description',
+          },
+          {
+            title: 'Event Title',
+            date: 'Day, Month DD',
+            time: 'HH:MM - HH:MM',
+            location: 'Location',
+            description: 'Event Description',
+          },
+          {
+            title: 'Event Title',
+            date: 'Day, Month DD',
+            time: 'HH:MM - HH:MM',
+            location: 'Location',
+            description: 'Event Description',
+          },
+          {
+            title: 'Event Title',
+            date: 'Day, Month DD',
+            time: 'HH:MM - HH:MM',
+            location: 'Location',
+            description: 'Event Description',
+          },
+          {
+            title: 'Event Title',
+            date: 'Day, Month DD',
+            time: 'HH:MM - HH:MM',
+            location: 'Location',
+            description: 'Event Description',
+          },
+          {
+            title: 'Event Title',
+            date: 'Day, Month DD',
+            time: 'HH:MM - HH:MM',
+            location: 'Location',
+            description: 'Event Description',
+          },
         ]);
       } catch (error) {
         // console.error('Error fetching events:', error);
@@ -187,12 +236,10 @@ export default function UpcomingEventsSection() {
               hasDescription
               className={styles.openOffice}
             >
-              <div>
-                <h3>Open Office</h3>
-                <div>
-                  <p>Mon-Fri</p>
-                  <p>2:00 PM - 5:00 PM</p>
-                </div>
+              <h3 style={{ margin: '0' }}>Open Office</h3>
+              <div className={styles.dateTime}>
+                <p>Mon-Fri</p>
+                <p>2:00 PM - 5:00 PM</p>
               </div>
             </EventsWindow>
           </button>

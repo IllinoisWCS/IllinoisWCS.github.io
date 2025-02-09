@@ -20,6 +20,8 @@
 
 .title {
   max-width: 250px;
+  margin: 0;
+  text-align: center;
 }
 
 .dateTime {
@@ -32,6 +34,7 @@
 
 .dateTime p {
   font-weight: 400;
+  font-size: 16px;
 }
 
 .hiddenButton {

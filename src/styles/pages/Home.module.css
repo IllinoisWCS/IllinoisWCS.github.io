@@ -28,21 +28,13 @@
   align-items: center;
   gap: 0.25rem;
   position: relative;
-  width: 1200px;
-  height: 80px;
   display: block;
   background-color: #ffffff;
   text-align: center;
   padding: 20px 0;
   border-radius: 25px;
-}
-
-.header::before {
-  content: '';
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  left: -1.5rem;
+  width: 100%;
+  margin: 2rem auto;
 }
 
 .tempModal {
@@ -132,17 +124,7 @@
 }
 
 .noEvents {
-  /* padding: 0.75rem; */
   max-width: 20rem;
-  /* background-color: red; */
-  /* width: 20vw;
-  height: 15vw; */
-  /* width: 300px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 .communicationLinks {
@@ -263,6 +245,10 @@
 
 .modalButton p:hover {
   text-decoration: underline;
+}
+
+.dateTime p {
+  font-size: 16px;
 }
 
 @media (max-width: 992px) {
