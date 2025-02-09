@@ -36,11 +36,8 @@
 
 .title {
   max-width: 250px;
+  margin: 0;
   text-align: center;
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .dateTime {
@@ -49,11 +46,11 @@
   align-items: center;
   justify-content: center;
   max-width: 200px;
-  /* added */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+
+.dateTime p {
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .hiddenButton {

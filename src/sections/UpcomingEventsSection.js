@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import EventsWindow from '../components/events/EventsWindow';
 import UpcomingEvent from '../components/events/UpcomingEvent';
+import StyledButton from '../components/StyledButton';
 import data from '../data/openOffice.json';
 import styles from '@/styles/pages/Home.module.css';
 import styles2 from '@/styles/components/EventDescriptionModal.module.css';
@@ -144,15 +145,6 @@ export default function UpcomingEventsSection() {
   return (
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Upcoming Events</h2>
-      <p>
-        <a
-          href="https://calendar.google.com/calendar/u/6?cid=M2MyOGdwcHJjbm9zMHEyNTFvZG5sODc3bWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Click <u>here</u> to get a copy of the WCS calendar.
-        </a>
-      </p>
       <div className={styles.upcomingEventSection}>
         <div className={styles.eventContainer}>
           <button
@@ -162,19 +154,16 @@ export default function UpcomingEventsSection() {
           >
             <EventsWindow
               location="Siebel CS 0211"
-              topbarColor="#FB79C3"
-              buttonColor="#FFCEE7"
+              topbarColor="wcs-pink"
+              buttonColor="var(--light-pink)"
               hasDescription
+              className={styles.openOffice}
             >
-              <p className={styles.eventText}>
-                Come to our office to chat, ask questions, or just study!
-              </p>
-              <p
-                className={styles.eventText}
-                style={{ textDecoration: 'underline' }}
-              >
-                Click to learn more!
-              </p>
+              <h3 style={{ margin: '0' }}>Open Office</h3>
+              <div className={styles.dateTime}>
+                <p>Mon-Fri</p>
+                <p>2:00 PM - 5:00 PM</p>
+              </div>
             </EventsWindow>
           </button>
           {showModal && (
@@ -254,13 +243,15 @@ export default function UpcomingEventsSection() {
             </div>
           )}
           {events.length === 0 ? (
-            <ComputerWindow
-              className={`${styles.noEvents} ${styles.eventText}`}
-              topbarColor="wcs-pink"
-              onButtonClick={closeModal}
+            <EventsWindow
+              topbarColor="wcs-blue"
+              buttonColor="var(--light-blue)"
+              className={styles.noEvents}
             >
-              <p>No upcoming events this week. Check again next week!</p>
-            </ComputerWindow>
+              <div className={`${styles.noEvents} ${styles.eventText}`}>
+                <p>No upcoming events this week. Check again next week!</p>
+              </div>
+            </EventsWindow>
           ) : (
             events.map(
               (
@@ -280,6 +271,13 @@ export default function UpcomingEventsSection() {
             )
           )}
         </div>
+        <StyledButton
+          onClick={() => {
+            window.location.href = '/past-events';
+          }}
+        >
+          <h2 className={styles.pastEventsButtonText}>View our Past Events</h2>
+        </StyledButton>
       </div>
     </div>
   );
