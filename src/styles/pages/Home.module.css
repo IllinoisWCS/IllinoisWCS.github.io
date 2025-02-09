@@ -12,10 +12,6 @@
   }
 }
 
-.title {
-  text-align: center;
-}
-
 .logo {
   position: relative;
 }
@@ -32,6 +28,15 @@
   align-items: center;
   gap: 0.25rem;
   position: relative;
+  width: 1200px;
+  height: 80px;
+  display: block;
+  background-color: #ffffff;
+  margin-bottom: -25px;
+  text: 'Sponsors';
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 25px;
 }
 
 .header::before {
@@ -40,9 +45,6 @@
   height: 24px;
   width: 24px;
   left: -1.5rem;
-  background-image: url('/assets/design-vectors/arrow.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .tempModal {
@@ -92,31 +94,6 @@
   }
 }
 
-.windowContainer {
-  max-width: 825px;
-}
-
-.windowGrid {
-  margin-top: 3rem;
-  padding: 2rem 4rem;
-  background-image: url('/assets/design-vectors/grid.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media only screen and (max-width: 768px) {
-  .windowGrid {
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-}
-
-.windowImage {
-  width: 100%;
-  height: auto;
-}
-
 .upcomingEventSection {
   display: flex;
   flex-direction: column;
@@ -137,10 +114,6 @@
   justify-content: center;
   padding: 2rem 3rem;
   position: relative;
-  width: fit-content;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .hiddenButton {
@@ -163,13 +136,6 @@
 .noEvents {
   padding: 0.75rem;
   max-width: 20rem;
-}
-
-.stayInTouchSection {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
 }
 
 .communicationLinks {
@@ -205,7 +171,7 @@
 }
 
 .sponsorsSection {
-  margin-top: 30px;
+  margin-bottom: 30px;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -213,17 +179,9 @@
   justify-content: center;
   padding: 2rem 3rem;
   position: relative;
-  width: fit-content;
-  background-image: url('/assets/design-vectors/grid.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.sponsorCall {
-  margin-top: 30px;
-  align-self: center;
-  text-align: center;
 }
 
 .sponsorEmail {

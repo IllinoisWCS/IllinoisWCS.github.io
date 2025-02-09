@@ -1,10 +1,13 @@
 .topbarButtons {
   border-radius: 100%;
   height: 0.5rem;
-  list-style: none;
-  position: absolute;
+  /* list-style: none;
+  position: absolute; */
   top: 0.75rem;
   width: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -19,8 +22,20 @@
 
 .topbar {
   height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
   position: relative;
   width: 100%;
+}
+
+.buttonList {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .topbarGreenButton {
@@ -30,7 +45,12 @@
 
 .topbarRedButton {
   background-color: red;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: none;
+  border-radius: 50%;
   left: 0.5rem;
+  cursor: pointer;
 }
 
 .topbarYellowButton {

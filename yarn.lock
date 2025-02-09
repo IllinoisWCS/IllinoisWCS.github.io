@@ -65,10 +65,10 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@next/env@14.2.10":
-  version "14.2.10"
-  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.10.tgz"
-  integrity sha512-dZIu93Bf5LUtluBXIv4woQw2cZVZ2DJTjax5/5DOs3lzEOeKLy7GxRSr4caK9/SCPdaW6bCgpye6+n4Dh9oJPw==
+"@next/env@14.2.22":
+  version "14.2.22"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.22.tgz"
+  integrity sha512-EQ6y1QeNQglNmNIXvwP/Bb+lf7n9WtgcWvtoFsHquVLCJUuxRs+6SfZ5EK0/EqkkLex4RrDySvKgKNN7PXip7Q==
 
 "@next/eslint-plugin-next@13.5.4":
   version "13.5.4"
@@ -77,10 +77,10 @@
   dependencies:
     glob "7.1.7"
 
-"@next/swc-win32-x64-msvc@14.2.10":
-  version "14.2.10"
-  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.10.tgz"
-  integrity sha512-UjeVoRGKNL2zfbcQ6fscmgjBAS/inHBh63mjIlfPg/NG8Yn2ztqylXt5qilYb6hoHIwaU2ogHknHWWmahJjgZQ==
+"@next/swc-darwin-arm64@14.2.22":
+  version "14.2.22"
+  resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.22.tgz"
+  integrity sha512-HUaLiehovgnqY4TMBZJ3pDaOsTE1spIXeR10pWgdQVPYqDGQmHJBj3h3V6yC0uuo/RoY2GC0YBFRkOX3dI9WVQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -479,9 +479,9 @@ confusing-browser-globals@^1.0.10:
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
 cross-spawn@^7.0.2, cross-spawn@^7.0.3:
-  version "7.0.3"
-  resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
-  integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
+  version "7.0.6"
+  resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz"
+  integrity sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==
   dependencies:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
@@ -1120,6 +1120,11 @@ graphemer@^1.4.0:
   resolved "https://registry.npmjs.org/graphemer/-/graphemer-1.4.0.tgz"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
 
+gsap@^3.12.5:
+  version "3.12.5"
+  resolved "https://registry.npmjs.org/gsap/-/gsap-3.12.5.tgz"
+  integrity sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==
+
 has-bigints@^1.0.1, has-bigints@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/has-bigints/-/has-bigints-1.0.2.tgz"
@@ -1549,9 +1554,9 @@ ms@^2.1.1, ms@2.1.2:
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
 nanoid@^3.3.6:
-  version "3.3.6"
-  resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.6.tgz"
-  integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
+  version "3.3.8"
+  resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.8.tgz"
+  integrity sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -1559,11 +1564,11 @@ natural-compare@^1.4.0:
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
 next@^14.2.10:
-  version "14.2.10"
-  resolved "https://registry.npmjs.org/next/-/next-14.2.10.tgz"
-  integrity sha512-sDDExXnh33cY3RkS9JuFEKaS4HmlWmDKP1VJioucCG6z5KuA008DPsDZOzi8UfqEk3Ii+2NCQSJrfbEWtZZfww==
+  version "14.2.22"
+  resolved "https://registry.npmjs.org/next/-/next-14.2.22.tgz"
+  integrity sha512-Ps2caobQ9hlEhscLPiPm3J3SYhfwfpMqzsoCMZGWxt9jBRK9hoBZj2A37i8joKhsyth2EuVKDVJCTF5/H4iEDw==
   dependencies:
-    "@next/env" "14.2.10"
+    "@next/env" "14.2.22"
     "@swc/helpers" "0.5.5"
     busboy "1.6.0"
     caniuse-lite "^1.0.30001579"
@@ -1571,15 +1576,15 @@ next@^14.2.10:
     postcss "8.4.31"
     styled-jsx "5.1.1"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "14.2.10"
-    "@next/swc-darwin-x64" "14.2.10"
-    "@next/swc-linux-arm64-gnu" "14.2.10"
-    "@next/swc-linux-arm64-musl" "14.2.10"
-    "@next/swc-linux-x64-gnu" "14.2.10"
-    "@next/swc-linux-x64-musl" "14.2.10"
-    "@next/swc-win32-arm64-msvc" "14.2.10"
-    "@next/swc-win32-ia32-msvc" "14.2.10"
-    "@next/swc-win32-x64-msvc" "14.2.10"
+    "@next/swc-darwin-arm64" "14.2.22"
+    "@next/swc-darwin-x64" "14.2.22"
+    "@next/swc-linux-arm64-gnu" "14.2.22"
+    "@next/swc-linux-arm64-musl" "14.2.22"
+    "@next/swc-linux-x64-gnu" "14.2.22"
+    "@next/swc-linux-x64-musl" "14.2.22"
+    "@next/swc-win32-arm64-msvc" "14.2.22"
+    "@next/swc-win32-ia32-msvc" "14.2.22"
+    "@next/swc-win32-x64-msvc" "14.2.22"
 
 npm-run-path@^4.0.1:
   version "4.0.1"

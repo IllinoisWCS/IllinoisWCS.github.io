@@ -20,25 +20,7 @@ export default function UpcomingEventsSection() {
     const tokens = name.split(' ');
     return `${tokens[0]} ${tokens[1][0]}.`;
   };
-  const getUniqueNames = (rows, officer) => {
-    const uniqueNames = new Set();
-    if (officer) {
-      rows.forEach(({ officers }) => {
-        officers.forEach(
-          (name) =>
-            // eslint-disable-next-line implicit-arrow-linebreak
-            uniqueNames.add(`${shortenName(name)} (Officer)`),
-          // eslint-disable-next-line function-paren-newline
-        );
-      });
-    } else {
-      rows.forEach(({ committees }) => {
-        committees.forEach((name) => uniqueNames.add(shortenName(name)));
-      });
-    }
 
-    return Array.from(uniqueNames);
-  };
   useEffect(() => {
     const currentDate = new Date();
     const startDate = new Date(currentDate.getFullYear(), 0, 1);
@@ -60,6 +42,26 @@ export default function UpcomingEventsSection() {
     setDay(dayNames[currentDate.getDay()]);
   }, []);
   useEffect(() => {
+    const getUniqueNames = (rows, officer) => {
+      const uniqueNames = new Set();
+      if (officer) {
+        rows.forEach(({ officers }) => {
+          officers.forEach(
+            (name) =>
+              // eslint-disable-next-line implicit-arrow-linebreak
+              uniqueNames.add(`${shortenName(name)} (Officer)`),
+            // eslint-disable-next-line function-paren-newline
+          );
+        });
+      } else {
+        rows.forEach(({ committees }) => {
+          committees.forEach((name) => uniqueNames.add(shortenName(name)));
+        });
+      }
+
+      return Array.from(uniqueNames);
+    };
+
     if (weekNum !== null && week && day) {
       // eslint-disable-next-line operator-linebreak
       const filteredData =
@@ -179,7 +181,8 @@ export default function UpcomingEventsSection() {
             <div className={styles2.container}>
               <ComputerWindow
                 className={styles2.window}
-                topbarColor="var(--wcs-pink)"
+                topbarColor="wcs-pink"
+                onButtonClick={closeModal}
               >
                 <div className={styles2.outerModalContainer}>
                   <div className={`${styles2.eventInfo} ${styles2.left}`}>
@@ -251,10 +254,12 @@ export default function UpcomingEventsSection() {
             </div>
           )}
           {events.length === 0 ? (
-            <ComputerWindow>
-              <p className={`${styles.noEvents} ${styles.eventText}`}>
-                No upcoming events this week. Check again next week!
-              </p>
+            <ComputerWindow
+              className={`${styles.noEvents} ${styles.eventText}`}
+              topbarColor="wcs-pink"
+              onButtonClick={closeModal}
+            >
+              <p>No upcoming events this week. Check again next week!</p>
             </ComputerWindow>
           ) : (
             events.map(
