@@ -5,6 +5,7 @@ import Image from 'next/image';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import EventsWindow from '../components/events/EventsWindow';
 import UpcomingEvent from '../components/events/UpcomingEvent';
+import StyledButton from '../components/StyledButton';
 import data from '../data/openOffice.json';
 
 import styles from '@/styles/pages/Home.module.css';
@@ -258,11 +259,6 @@ export default function UpcomingEventsSection() {
           )}
 
           {events.length === 0 ? (
-            // <ComputerWindow topbarColor="wcs-blue" onButtonClick={closeModal}>
-            //   <div className={`${styles.noEvents} ${styles.eventText}`}>
-            //     <p>No upcoming events this week. Check again next week!</p>
-            //   </div>
-            // </ComputerWindow>
             <EventsWindow
               topbarColor="wcs-blue"
               buttonColor="var(--light-blue)"
@@ -287,6 +283,13 @@ export default function UpcomingEventsSection() {
             )
           )}
         </div>
+        <StyledButton
+          onClick={() => {
+            window.location.href = '/past-events';
+          }}
+        >
+          <h2 className={styles.pastEventsButtonText}>View our Past Events</h2>
+        </StyledButton>
       </div>
     </div>
   );

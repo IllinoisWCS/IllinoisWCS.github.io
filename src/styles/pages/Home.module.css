@@ -89,6 +89,7 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
+  gap: 3rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -106,6 +107,11 @@
   position: relative;
 }
 
+.pastEventsButtonText {
+  margin: 0;
+  padding: 1rem 10vw;
+}
+
 .hiddenButton {
   border: none;
   background-color: transparent;
@@ -115,11 +121,15 @@
   .eventContainer {
     padding: 3.75rem;
   }
+
+  .pastEventsButtonText {
+    font-size: 20px;
+    padding: 1rem 5vw;
+  }
 }
 
 .eventText {
   text-align: center;
-  /* max-width: 250px; */
   margin-bottom: 1rem;
 }
 
