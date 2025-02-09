@@ -27,13 +27,13 @@ export default function UpcomingEvent({
     <>
       <button type="button" onClick={openModal} className={styles.hiddenButton}>
         <EventsWindow location={location} hasDescription={hasDescription}>
-          <div className={styles.container}>
-            <h3 className={styles.title}>{title}</h3>
-            <div className={styles.dateTime}>
-              <p>{date}</p>
-              <p>{time}</p>
-            </div>
+          {/* <div className={styles.container}> */}
+          <h3 className={styles.title}>{title}</h3>
+          <div className={styles.dateTime}>
+            <p>{date}</p>
+            <p>{time}</p>
           </div>
+          {/* </div> */}
         </EventsWindow>
       </button>
       <EventDescriptionModal

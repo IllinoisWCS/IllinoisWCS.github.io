@@ -134,6 +134,24 @@ export default function UpcomingEventsSection() {
               };
             }),
         );
+
+        // add another event to events array
+        setEvents((prevEvents) => [
+          ...prevEvents,
+          {
+            title: 'Event Title',
+            date: 'Day, Month DD',
+            time: 'HH:MM - HH:MM',
+            location: 'Location',
+            description: 'Event Description',
+          },
+          {
+            title: 'Event Title',
+            date: 'Day, Month DD',
+            time: 'HH:MM - HH:MM',
+            description: 'Event Description',
+          },
+        ]);
       } catch (error) {
         // console.error('Error fetching events:', error);
       }
@@ -155,15 +173,6 @@ export default function UpcomingEventsSection() {
   return (
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Upcoming Events</h2>
-      <p>
-        <a
-          href="https://calendar.google.com/calendar/u/6?cid=M2MyOGdwcHJjbm9zMHEyNTFvZG5sODc3bWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Click <u>here</u> to get a copy of the WCS calendar.
-        </a>
-      </p>
       <div className={styles.upcomingEventSection}>
         <div className={styles.eventContainer}>
           <button
@@ -173,19 +182,18 @@ export default function UpcomingEventsSection() {
           >
             <EventsWindow
               location="Siebel CS 0211"
-              topbarColor="#FB79C3"
-              buttonColor="#FFCEE7"
+              topbarColor="wcs-pink"
+              buttonColor="var(--light-pink)"
               hasDescription
+              className={styles.openOffice}
             >
-              <p className={styles.eventText}>
-                Come to our office to chat, ask questions, or just study!
-              </p>
-              <p
-                className={styles.eventText}
-                style={{ textDecoration: 'underline' }}
-              >
-                Click to learn more!
-              </p>
+              <div>
+                <h3>Open Office</h3>
+                <div>
+                  <p>Mon-Fri</p>
+                  <p>2:00 PM - 5:00 PM</p>
+                </div>
+              </div>
             </EventsWindow>
           </button>
           {showModal && (
@@ -270,13 +278,20 @@ export default function UpcomingEventsSection() {
           )}
 
           {events.length === 0 ? (
-            <ComputerWindow
-              className={`${styles.noEvents} ${styles.eventText}`}
-              topbarColor="wcs-pink"
-              onButtonClick={closeModal}
+            // <ComputerWindow topbarColor="wcs-blue" onButtonClick={closeModal}>
+            //   <div className={`${styles.noEvents} ${styles.eventText}`}>
+            //     <p>No upcoming events this week. Check again next week!</p>
+            //   </div>
+            // </ComputerWindow>
+            <EventsWindow
+              topbarColor="wcs-blue"
+              buttonColor="var(--light-blue)"
+              className={styles.noEvents}
             >
-              <p>No upcoming events this week. Check again next week!</p>
-            </ComputerWindow>
+              <div className={`${styles.noEvents} ${styles.eventText}`}>
+                <p>No upcoming events this week. Check again next week!</p>
+              </div>
+            </EventsWindow>
           ) : (
             events.map(
               ({ title, date, time, location, description }, index) => (
