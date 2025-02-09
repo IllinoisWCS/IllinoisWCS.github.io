@@ -57,7 +57,7 @@ export default function WCSNavbar() {
         className={`${styles.linksContainer} ${isMenuOpen ? styles.show : ''}`}
       >
         <NavLink href="/resources" label="Resources" />
-        <NavLink href="/ourteam" label="Our Team" />
+        <NavLink href="/team" label="Our Team" />
         <NavLink href="https://illinoiswcs.medium.com/" label="Medium" />
         <NavLink href="https://points.illinoiswcs.org/" label="Points" />
       </div>
