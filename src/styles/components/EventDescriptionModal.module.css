@@ -1,12 +1,14 @@
 .container {
-  display: flex;
-  gap: 1rem;
-  align-items: stretch;
-  justify-content: center;
+  width: 100svw;
+  height: 100svh;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(10, 10, 10, 0.6);
 }
 
 .outerModalContainer {
-  display: flex;
+  display: grid;
   grid-template-columns: 50% 0 50%;
   grid-template-rows: 1fr;
   max-height: 90svh;
@@ -14,19 +16,22 @@
 }
 
 .window {
-  z-index: 99;
+  /* z-index: 99;
   position: absolute;
   width: 500px;
   height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
-  /* Center modal */
+  overflow: hidden; */
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: max-content;
+  align-items: stretch;
+  overflow-y: auto;
 }
 
 .eventInfo {
@@ -35,9 +40,9 @@
   align-items: flex-start;
   text-align: center;
   gap: 1rem;
-  padding: 1rem;
+  min-width: 50vh;
+  padding: 3rem;
   flex: 1;
-  overflow-y: auto;
 }
 
 .title {

@@ -1,21 +1,5 @@
-.container {
-  color: black;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  padding: 1rem;
-}
-
-.container * {
-  padding: 0;
-  margin: 0;
-}
-
 .wrapper {
   cursor: auto;
-  height: 100%;
 }
 
 .wrapperCanClick {
@@ -56,18 +40,4 @@
 .hiddenButton {
   border: none;
   background-color: transparent;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-}
-.location {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  padding: 0.5rem;
-  background-color: var(--light-blue);
-  border-radius: 4px;
 }

@@ -25,7 +25,7 @@ export default function UpcomingEventsSection() {
   useEffect(() => {
     const currentDate = new Date();
     const startDate = new Date(currentDate.getFullYear(), 0, 1);
-    const days = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
+    const days = Math.floor(currentDate - startDate) / (1000 * 60 * 60 * 24);
     const weekNumber = Math.ceil(days / 7);
     if (weekNumber % 2 === 1) {
       setWeek('week2');
@@ -41,7 +41,7 @@ export default function UpcomingEventsSection() {
       'Saturday',
     ];
     setDay(dayNames[currentDate.getDay()]);
-  }, []);
+  }, [day]);
   useEffect(() => {
     const getUniqueNames = (rows, officer) => {
       const uniqueNames = new Set();
@@ -87,15 +87,13 @@ export default function UpcomingEventsSection() {
       setUniqueOfficers(officers);
       setUniqueCommittees(committees);
     }
-  }, [weekNum, week, day, getUniqueNames]);
+  }, [weekNum, week, day]);
   useEffect(() => {
     const fetchEvents = async () => {
       try {
         // eslint-disable-next-line operator-linebreak
         const eventsUrl =
-          // eslint-disable-next-line operator-linebreak
-          'https://script.google.com/macros/s/' +
-          'AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
+          'https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
 
         const res = await fetch(eventsUrl);
         const { events: fetchedEvents } = await res.json();
@@ -111,11 +109,7 @@ export default function UpcomingEventsSection() {
                 month: 'long',
                 day: '2-digit',
               };
-              const dateString = startDate.toLocaleDateString(
-                'en-US',
-                dateOptions,
-              );
-              const [dayOfWeek, dayDate] = dateString.split(', ');
+              const date = startDate.toLocaleDateString('en-US', dateOptions);
 
               const timeOptions = { hour: 'numeric', minute: '2-digit' };
               const start = startDate.toLocaleTimeString('en-US', timeOptions);
@@ -123,8 +117,7 @@ export default function UpcomingEventsSection() {
 
               return {
                 title,
-                dayOfWeek,
-                dayDate,
+                date,
                 time: `${start} - ${end}`,
                 location,
                 description,
@@ -254,15 +247,11 @@ export default function UpcomingEventsSection() {
             </EventsWindow>
           ) : (
             events.map(
-              (
-                { title, dayOfWeek, dayDate, time, location, description },
-                index,
-              ) => (
+              ({ title, date, time, location, description }, index) => (
                 <UpcomingEvent
                   key={index}
                   title={title}
-                  dayOfWeek={dayOfWeek}
-                  dayDate={dayDate}
+                  date={date}
                   time={time}
                   location={location}
                   description={description}
