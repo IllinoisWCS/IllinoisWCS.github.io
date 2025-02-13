@@ -16,15 +16,6 @@
 }
 
 .window {
-  /* z-index: 99;
-  position: absolute;
-  width: 500px;
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden; */
-
   position: absolute;
   top: 50%;
   left: 50%;
