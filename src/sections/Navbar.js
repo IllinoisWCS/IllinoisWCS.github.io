@@ -58,8 +58,30 @@ export default function WCSNavbar() {
       >
         <NavLink href="/resources" label="Resources" />
         <NavLink href="/team" label="Our Team" />
-        <NavLink href="https://illinoiswcs.medium.com/" label="Medium" />
-        <NavLink href="https://points.illinoiswcs.org/" label="Points" />
+
+        <div className={styles.medium}>
+          <NavLink href="https://illinoiswcs.medium.com/" label="Medium" />
+          <Link href="https://illinoiswcs.medium.com/">
+            <Image
+              src="/assets/design-vectors/externallink.svg"
+              alt="extlink"
+              width="25"
+              height="25"
+            />
+          </Link>
+        </div>
+
+        <div className={styles.points}>
+          <NavLink href="https://points.illinoiswcs.org/" label="Points" />
+          <Link href="https://points.illinoiswcs.org/">
+            <Image
+              src="/assets/design-vectors/externallink.svg"
+              alt="extlink"
+              width="25"
+              height="25"
+            />
+          </Link>
+        </div>
       </div>
 
       <button type="button" className={styles.hamburger} onClick={toggleMenu}>
