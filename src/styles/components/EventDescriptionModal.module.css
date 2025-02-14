@@ -27,7 +27,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
   padding: 3rem;
   flex: 1;
 }
@@ -46,7 +45,6 @@
 }
 
 .location {
-  margin-bottom: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -61,6 +59,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 15;
+  margin-top: 1rem;
 }
 
 .closeButton {
