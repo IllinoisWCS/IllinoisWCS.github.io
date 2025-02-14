@@ -4,7 +4,7 @@ import styles from '@/styles/components/EventsWindow.module.css';
 export default function EventsWindow({
   children,
   topbarColor = 'var(--wcs-blue)',
-  buttonColor = '#D1EEEF',
+  buttonColor = 'var(--light-blue)',
   location,
   hasDescription,
 }) {
