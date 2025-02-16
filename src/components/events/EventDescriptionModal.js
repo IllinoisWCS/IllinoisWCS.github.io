@@ -7,7 +7,7 @@ function EventDescription(
 ) {
   return (
     <div className={styles.container}>
-      <ComputerWindow className={styles.window}>
+      <ComputerWindow className={styles.window} onButtonClick={closeModal}>
         <div className={styles.eventInfo}>
           <h3 className={styles.title}>{title}</h3>
           <p>{date}</p>
