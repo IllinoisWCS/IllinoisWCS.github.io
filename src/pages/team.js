@@ -35,17 +35,29 @@ export default function Team() {
         const img = images[index];
         const imgWidth = img.getBoundingClientRect().width;
 
-        gsap.set(container, { marginLeft: '-50%' });
-
-        gsap.to(container, {
-          marginLeft: `calc(50% - ${imgWidth / 2}px)`,
-          scrollTrigger: {
-            trigger: container,
-            start: 'center 80%',
-            end: '70% 20%',
-            scrub: true,
-          },
-        });
+        if (index % 2 === 1) {
+          gsap.set(container, { marginLeft: '10%' });
+          gsap.to(container, {
+            marginLeft: `calc(-50% - ${imgWidth / 4}px)`,
+            scrollTrigger: {
+              trigger: container,
+              start: 'center 80%',
+              end: '70% 20%',
+              scrub: true,
+            },
+          });
+        } else {
+          gsap.set(container, { marginLeft: '-50%' });
+          gsap.to(container, {
+            marginLeft: `calc(50% - ${imgWidth / 2}px)`,
+            scrollTrigger: {
+              trigger: container,
+              start: 'center 80%',
+              end: '70% 20%',
+              scrub: true,
+            },
+          });
+        }
       });
     }
   }, []);
