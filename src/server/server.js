@@ -11,8 +11,6 @@ const app = express();
 
 const moment = require('moment');
 
-const fs = require('fs');
-
 // "@notionhq/client": "^2.2.15",
 // "body-parser": "^1.20.3",
 // "cors": "^2.8.5",
@@ -27,7 +25,6 @@ const HOST = 'localhost';
 const notion = new Client({
   auth: process.env.REACT_APP_NOTION_API_KEY,
 });
-
 
 // returns category
 const getType = (properties) => properties.Type.multi_select[0].name;
@@ -108,16 +105,6 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   }));
 
   res.json(tempRes);
-
-  fs.writeFile(
-    'src/data/externalOpportunities.json',
-    JSON.stringify(tempRes),
-    (err) => {
-      if (err) {
-        console.error(err); // eslint-disable-line no-console
-      }
-    },
-  );
 });
 
 app.listen(PORT, HOST, () => {});
