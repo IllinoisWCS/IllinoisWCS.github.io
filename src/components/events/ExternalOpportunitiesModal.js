@@ -1,8 +1,8 @@
 import React from 'react';
+import moment from 'moment';
 import ComputerWindow from '../general/ComputerWindowComponent';
 import ExternalOpportunityCard from './ExternalOpportunityCard';
 import styles from '@/styles/components/ExternalOpportunitiesModal.module.css';
-import moment from 'moment';
 
 const colorOptions = {
   'wcs-pink': 'var(--wcs-pink)',
@@ -24,7 +24,9 @@ function ExternalOpportunitiesModal({
     return null;
   }
 
-  const filteredEvents = events.filter((event) => event.category === category).sort((a, b) => moment(a.expires) - moment(b.expires));
+  const filteredEvents = events
+    .filter((event) => event.category === category)
+    .sort((a, b) => moment(a.expires) - moment(b.expires));
 
   return (
     <div className={styles.container}>
