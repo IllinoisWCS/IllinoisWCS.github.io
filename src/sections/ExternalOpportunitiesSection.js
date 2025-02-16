@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import ExternalOpportunityCategoryCard from '../components/ExternalOpportunityCategoryCard';
 import styles from '@/styles/sections/ExternalOpportunitiesSection.module.css';
 import opportunitiesData from '../data/externalOpportunities.json';
+import ResourcesNotLoaded from './ResourcesNotLoaded';
 
 const cardsData = [
   { title: 'Conferences and Events', topbarColor: 'wcs-pink' },
@@ -16,19 +17,27 @@ const cardsData = [
 ];
 
 export default function ExternalOpportunitiesSection() {
+  //  this will contain the data from notion
+  const [opportunities, setOpportunities] = useState([{}]);
+  const [notionDataFetched, setNotionDataFetched] = useState(true);
+
+  //  this fetches the opportunities data and assigns it to opportunities (above)
+  //   You can use the map function to iterate through the opportunities.
+
   useEffect(() => {
-    fetch('http://localhost:5000/external-opps-api').then(
-      (response) =>
-        // eslint-disable-next-line implicit-arrow-linebreak
-        response.json(),
-      // eslint-disable-next-line function-paren-newline
-    );
+    fetch('http://localhost:5000/external-opps-api')
+      .then((response) => response.json())
+      .then((data) => {
+        setOpportunities(data);
+      })
+      .catch(() => {
+        setNotionDataFetched(false);
+      });
   }, []);
 
-  /*
-  Please see the commented section below the return statement for an
-  example of how to use the functions above to access the opportunities data.
-  */
+  if (!notionDataFetched) {
+    return <ResourcesNotLoaded />;
+  }
 
   return (
     <div className={styles.container}>
@@ -43,22 +52,3 @@ export default function ExternalOpportunitiesSection() {
     </div>
   );
 }
-
-//  example of how to access data per opportunity in our database:
-
-// { (opportunities) ? (opportunities.map((opp) => (
-//   <div key = {opp.id}>
-//     {(opp.properties) ? (
-//       <>
-//         <p>{getName(opp.properties)}</p>
-//         <p>{getTime(opp.properties)}</p>
-//         <p>{getExpiration(opp.properties)}</p>
-//         <p>{getLocation(opp.properties)}</p>
-//         <p>{getDescription(opp.properties)}</p>
-//         <p>{getUrl(opp.properties)}</p>
-//       </>
-//     ) : (
-//       <p>Loading...</p>
-//     )}
-//   </div>
-// ))) : (<p>Data not loaded....</p>)}

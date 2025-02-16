@@ -28,6 +28,7 @@ const notion = new Client({
   auth: process.env.REACT_APP_NOTION_API_KEY,
 });
 
+
 // returns category
 const getType = (properties) => properties.Type.multi_select[0].name;
 
@@ -103,6 +104,7 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
       getDescription(item.properties), // eslint-disable-line operator-linebreak
     link: getURL(item.properties), // eslint-disable-line operator-linebreak
     category: getType(item.properties), // eslint-disable-line operator-linebreak
+    expires: getExpiration(item.properties), // eslint-disable-line operator-linebreak
   }));
 
   res.json(tempRes);
