@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import EventsWindow from '../components/events/EventsWindow';
 import UpcomingEvent from '../components/events/UpcomingEvent';
+import StyledButton from '../components/StyledButton';
 import data from '../data/openOffice.json';
-
 import styles from '@/styles/pages/Home.module.css';
 import styles2 from '@/styles/components/EventDescriptionModal.module.css';
 
@@ -17,7 +16,7 @@ export default function UpcomingEventsSection() {
   const [uniqueOfficers, setUniqueOfficers] = useState([]);
   const [uniqueCommittees, setUniqueCommittees] = useState([]);
   const [day, setDay] = useState('');
-
+  const [showModal, setShowModal] = useState(false);
   const shortenName = (name) => {
     const tokens = name.split(' ');
     return `${tokens[0]} ${tokens[1][0]}.`;
@@ -41,11 +40,8 @@ export default function UpcomingEventsSection() {
       'Friday',
       'Saturday',
     ];
-
-    const weekday = currentDate.getDay();
-    setDay(dayNames[weekday]);
+    setDay(dayNames[currentDate.getDay()]);
   }, [day]);
-
   useEffect(() => {
     const getUniqueNames = (rows, officer) => {
       const uniqueNames = new Set();
@@ -71,13 +67,11 @@ export default function UpcomingEventsSection() {
       // eslint-disable-next-line operator-linebreak
       const filteredData =
         data[weekNum]?.[week]?.filter(({ heading }) => heading === day) || [];
-
       if (filteredData.length === 0) {
         setUniqueOfficers([]);
         setUniqueCommittees([]);
         return;
       }
-
       const officers = filteredData.flatMap(
         ({ rows }) =>
           // eslint-disable-next-line implicit-arrow-linebreak
@@ -90,18 +84,17 @@ export default function UpcomingEventsSection() {
           getUniqueNames(rows, false),
         // eslint-disable-next-line function-paren-newline
       );
-
       setUniqueOfficers(officers);
       setUniqueCommittees(committees);
     }
   }, [weekNum, week, day]);
-
   useEffect(() => {
     const fetchEvents = async () => {
       try {
         // eslint-disable-next-line operator-linebreak
         const eventsUrl =
           'https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
+
         const res = await fetch(eventsUrl);
         const { events: fetchedEvents } = await res.json();
         setEvents(
@@ -118,10 +111,7 @@ export default function UpcomingEventsSection() {
               };
               const date = startDate.toLocaleDateString('en-US', dateOptions);
 
-              const timeOptions = {
-                hour: 'numeric',
-                minute: '2-digit',
-              };
+              const timeOptions = { hour: 'numeric', minute: '2-digit' };
               const start = startDate.toLocaleTimeString('en-US', timeOptions);
               const end = endDate.toLocaleTimeString('en-US', timeOptions);
 
@@ -142,50 +132,31 @@ export default function UpcomingEventsSection() {
     fetchEvents();
   }, []);
 
-  const [showModal, setShowModal] = useState(false);
-
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   return (
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Upcoming Events</h2>
-      <p>
-        <a
-          href="https://calendar.google.com/calendar/u/6?cid=M2MyOGdwcHJjbm9zMHEyNTFvZG5sODc3bWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Click <u>here</u> to get a copy of the WCS calendar.
-        </a>
-      </p>
       <div className={styles.upcomingEventSection}>
         <div className={styles.eventContainer}>
           <button
             type="button"
             onClick={openModal}
-            className={`${styles.hiddenButton}`}
+            className={styles.hiddenButton}
           >
             <EventsWindow
               location="Siebel CS 0211"
-              topbarColor="#FB79C3"
-              buttonColor="#FFCEE7"
+              topbarColor="wcs-pink"
+              buttonColor="var(--light-pink)"
               hasDescription
+              className={styles.openOffice}
             >
-              <p className={styles.eventText}>
-                Come to our office to chat, ask questions, or just study!
-              </p>
-              <p
-                className={styles.eventText}
-                style={{ textDecoration: 'underline' }}
-              >
-                Click to learn more!
-              </p>
+              <h3 style={{ margin: '0' }}>Open Office</h3>
+              <div className={styles.dateTime}>
+                <p>Mon-Fri</p>
+                <p>2:00 PM - 5:00 PM</p>
+              </div>
             </EventsWindow>
           </button>
           {showModal && (
@@ -197,12 +168,11 @@ export default function UpcomingEventsSection() {
               >
                 <div className={styles2.outerModalContainer}>
                   <div className={`${styles2.eventInfo} ${styles2.left}`}>
-                    {/* <div className={styles.modalContainerLeft}> */}
                     <h4 className={styles2.title}>Drop In Services</h4>
                     <ul className={styles2.bullets}>
                       <li>Resume reviews</li>
                       <li>Class help</li>
-                      <li>Schedule and four year plan advice</li>
+                      <li>Schedule and four-year plan advice</li>
                       <li>General advice or help</li>
                       <li>Just a chat!</li>
                     </ul>
@@ -217,16 +187,14 @@ export default function UpcomingEventsSection() {
                       </Link>
                       <Image
                         src="/assets/design-vectors/pointer.svg"
-                        width="22"
-                        height="22"
+                        width={22}
+                        height={22}
                         className={styles.modalCursor}
                         alt="pointer"
                       />
                     </div>
-                    {/* </div> */}
                   </div>
                   <div className={styles2.eventInfo}>
-                    {/* <div className={styles.modalContainerLeft}> */}
                     <h4 className={styles2.title}>Office Schedule</h4>
                     <p>Who&rsquo;s in today:</p>
                     <ul className={styles2.bullets}>
@@ -249,13 +217,12 @@ export default function UpcomingEventsSection() {
                       </Link>
                       <Image
                         src="/assets/design-vectors/pointer.svg"
-                        width="22"
-                        height="22"
+                        width={22}
+                        height={22}
                         className={styles.modalCursor}
                         alt="pointer"
                       />
                     </div>
-                    {/* </div> */}
                   </div>
                   <button
                     type="button"
@@ -268,15 +235,16 @@ export default function UpcomingEventsSection() {
               </ComputerWindow>
             </div>
           )}
-
           {events.length === 0 ? (
-            <ComputerWindow
-              className={`${styles.noEvents} ${styles.eventText}`}
-              topbarColor="wcs-pink"
-              onButtonClick={closeModal}
+            <EventsWindow
+              topbarColor="wcs-blue"
+              buttonColor="var(--light-blue)"
+              className={styles.noEvents}
             >
-              <p>No upcoming events this week. Check again next week!</p>
-            </ComputerWindow>
+              <div className={`${styles.noEvents} ${styles.eventText}`}>
+                <p>No upcoming events this week. Check again next week!</p>
+              </div>
+            </EventsWindow>
           ) : (
             events.map(
               ({ title, date, time, location, description }, index) => (
@@ -292,6 +260,13 @@ export default function UpcomingEventsSection() {
             )
           )}
         </div>
+        <StyledButton
+          onClick={() => {
+            window.location.href = '/past-events';
+          }}
+        >
+          <h2 className={styles.pastEventsButtonText}>View our Past Events</h2>
+        </StyledButton>
       </div>
     </div>
   );

@@ -28,23 +28,13 @@
   align-items: center;
   gap: 0.25rem;
   position: relative;
-  width: 1200px;
-  height: 80px;
   display: block;
   background-color: #ffffff;
-  margin-bottom: -25px;
-  text: 'Sponsors';
   text-align: center;
   padding: 20px 0;
   border-radius: 25px;
-}
-
-.header::before {
-  content: '';
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  left: -1.5rem;
+  width: 100%;
+  margin: 2rem auto;
 }
 
 .tempModal {
@@ -99,6 +89,7 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
+  gap: 3rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -116,6 +107,11 @@
   position: relative;
 }
 
+.pastEventsButtonText {
+  margin: 0;
+  padding: 1rem 10vw;
+}
+
 .hiddenButton {
   border: none;
   background-color: transparent;
@@ -125,16 +121,19 @@
   .eventContainer {
     padding: 3.75rem;
   }
+
+  .pastEventsButtonText {
+    font-size: 20px;
+    padding: 1rem 5vw;
+  }
 }
 
 .eventText {
   text-align: center;
-  max-width: 250px;
   margin-bottom: 1rem;
 }
 
 .noEvents {
-  padding: 0.75rem;
   max-width: 20rem;
 }
 
@@ -256,6 +255,10 @@
 
 .modalButton p:hover {
   text-decoration: underline;
+}
+
+.dateTime p {
+  font-size: 16px;
 }
 
 @media (max-width: 992px) {
