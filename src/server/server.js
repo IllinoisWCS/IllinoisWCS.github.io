@@ -40,21 +40,19 @@ const getName = (properties) => {
 //  returns time of opportunity
 const getTime = (properties) => {
   const time = properties.Time;
-  return time.rich_text[0] ? time.rich_text[0].text.content : 'No Time';
+  return time.rich_text[0] ? time.rich_text[0].text.content : '';
 };
 
 //  returns expiration date of opportunity
 const getExpiration = (properties) => {
   const expires = properties.Expires;
-  return expires.date ? expires.date.start : 'No Expiration';
+  return expires.date ? expires.date.start : '';
 };
 
 //  returns location of opportunity
 const getLocation = (properties) => {
   const location = properties.Location;
-  return location.rich_text[0]
-    ? location.rich_text[0].text.content
-    : 'No Location';
+  return location.rich_text[0] ? location.rich_text[0].text.content : '';
 };
 
 //  returns description of opportunity (formatting of this might be wonky atm)
@@ -103,6 +101,7 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
       getDescription(item.properties), // eslint-disable-line operator-linebreak
     link: getURL(item.properties), // eslint-disable-line operator-linebreak
     category: getType(item.properties), // eslint-disable-line operator-linebreak
+    expires: getExpiration(item.properties), // eslint-disable-line operator-linebreak
   }));
 
   res.json(tempRes);

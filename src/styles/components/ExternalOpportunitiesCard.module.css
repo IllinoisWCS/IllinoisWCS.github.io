@@ -22,7 +22,9 @@
 
 .icon {
   margin-bottom: 0.3rem;
+  font-size: 28px;
 }
+
 .title {
   font-size: 16px;
   font-weight: 400;
@@ -45,8 +47,9 @@
   margin-bottom: 0.25rem;
   font-weight: 400;
   color: #000000;
+  overflow-wrap: break-word;
 }
 
 .description {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
