@@ -16,6 +16,7 @@ export default function Team() {
     'Bits and Bytes Kickoff 2022',
     'Outreach',
     'Field Day 2023',
+    'Marketing Committee',
   ];
 
   useEffect(() => {
@@ -57,22 +58,59 @@ export default function Team() {
     caption,
   ) => {
     const officersList = officerData.admin.filter(
-      (officer) => [`${title} Co-Chair`].includes(officer.position),
+      (officer) =>
+        // eslint-disable-next-line implicit-arrow-linebreak, operator-linebreak
+        [`${title} Co-Chair`].includes(officer.position) ||
+        [`${title} Chair`].includes(officer.position),
       // eslint-disable-next-line function-paren-newline
     );
 
+    if (position === 'Left') {
+      return (
+        <div className={styles.committeeInnerContainer}>
+          <div className={styles.imgContainer}>
+            <Image
+              className={styles.img}
+              src={image}
+              width={800}
+              height={800}
+              alt={image}
+            />
+            <div className={styles.imgCaption}>{caption}</div>
+          </div>
+          <div
+            className={`${styles[`committee${position}`]} ${styles.committee}`}
+            // id={`${styles[`${position}Committee`]}`}
+          >
+            <ComputerWindow
+              topbarColor="wcs-pink"
+              className={styles.committeeWindow}
+            >
+              <div className={styles.committeeDescription}>
+                <h4>{title} Committee</h4>
+                <p>{description}</p>
+              </div>
+            </ComputerWindow>
+
+            <div className={styles.officerPics}>
+              {officersList.map((officer, index) => (
+                <OfficerCard
+                  key={index}
+                  name={officer.name}
+                  position={officer.position}
+                  netid={officer.netid}
+                  officer={officer}
+                  className={styles.officerCard}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className={styles.committeeInnerContainer}>
-        <div className={styles.imgContainer}>
-          <Image
-            className={styles.img}
-            src={image}
-            width={800}
-            height={800}
-            alt={image}
-          />
-          <div className={styles.imgCaption}>{caption}</div>
-        </div>
         <div
           className={`${styles[`committee${position}`]} ${styles.committee}`}
           // id={`${styles[`${position}Committee`]}`}
@@ -99,6 +137,16 @@ export default function Team() {
               />
             ))}
           </div>
+        </div>
+        <div className={styles.imgContainer}>
+          <Image
+            className={styles.img}
+            src={image}
+            width={800}
+            height={800}
+            alt={image}
+          />
+          <div className={styles.imgCaption}>{caption}</div>
         </div>
       </div>
     );
