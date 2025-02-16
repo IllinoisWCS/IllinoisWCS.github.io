@@ -27,7 +27,7 @@ export default function ExternalOpportunityCategoryCard({
 
   const displayEvents = [
     ...filteredEvents,
-    ...Array(blankLinesCount).fill({ title: '', icon: '' }), // Blank items for the remaining space
+    ...Array(blankLinesCount).fill({ title: '', icon: '' }),
   ];
 
   return (
