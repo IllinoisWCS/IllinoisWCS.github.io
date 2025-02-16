@@ -193,7 +193,6 @@ export default function UpcomingEventsSection() {
                         alt="pointer"
                       />
                     </div>
-                    {/* </div> */}
                   </div>
                   <div className={styles2.eventInfo}>
                     <h4 className={styles2.title}>Office Schedule</h4>
