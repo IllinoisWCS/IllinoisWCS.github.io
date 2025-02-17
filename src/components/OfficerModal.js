@@ -31,7 +31,7 @@ function OfficerInformation(
         onButtonClick={closeModal}
       >
         <div className={styles.officerInfo}>
-        <div className={styles.columnContainer}>
+          <div className={styles.columnContainer}>
             <div className={styles.left}>
               <div className={styles.photoContainer}>
                 <Image
