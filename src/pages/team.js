@@ -26,63 +26,61 @@ export default function Team() {
       const { ScrollTrigger } = require('gsap/ScrollTrigger');
 
       gsap.registerPlugin(ScrollTrigger);
-      const images = document.querySelectorAll(`.${styles.img}`);
       const committeeContainers = document.querySelectorAll(
         `.${styles.committeeInnerContainer}`,
       );
 
       committeeContainers.forEach((container, index) => {
-        const img = images[index];
-        const imgWidth = img.getBoundingClientRect().width;
-
         gsap.set(container, {
           marginTop: '0px',
           marginBottom: '0px',
         });
 
         gsap.to(container, {
-          marginTop: '40%',
+          marginTop: '50%',
           scrollTrigger: {
             trigger: container,
             start: '33% 80%',
-            end: '80% 40%',
+            end: '90% 40%',
             scrub: true,
           },
         });
 
         gsap.to(container, {
-          marginBottom: '-40%',
+          marginBottom: '-50%',
           scrollTrigger: {
             trigger: container,
             start: '33% 80%',
-            end: '80% 40%',
+            end: '90% 40%',
             scrub: true,
           },
         });
 
         if (index % 2 === 0) {
           gsap.set(container, {
-            marginLeft: '-50%',
+            marginLeft: 'calc((100vw/2) - 1450px)',
           });
+          const newMarginLeft = (window.innerWidth - 800) / 2;
           gsap.to(container, {
-            marginLeft: `calc(50% - ${imgWidth / 2}px)`,
+            marginLeft: `${newMarginLeft}px`,
             scrollTrigger: {
               trigger: container,
               start: '50% 80%',
-              end: '55% 60%',
+              end: '55% 70%',
               scrub: true,
             },
           });
         } else {
           gsap.set(container, {
-            marginLeft: '10%',
+            marginLeft: 'calc((100vw - 900px)/2)',
           });
+          const newMarginLeft = window.innerWidth / 2 - 1500;
           gsap.to(container, {
-            marginLeft: `calc(-50% - ${imgWidth / 4}px)`,
+            marginLeft: `${newMarginLeft}px`,
             scrollTrigger: {
               trigger: container,
               start: '50% 80%',
-              end: '55% 60%',
+              end: '55% 70%',
               scrub: true,
             },
           });
