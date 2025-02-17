@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import ComputerWindow from './general/ComputerWindowComponent';
 import styles from '@/styles/components/OfficerModal.module.css';
-import Key from '../components/StayInTouchKey';
+import Key from './StayInTouchKey';
 
 function OfficerInformation(
   closeModal,
