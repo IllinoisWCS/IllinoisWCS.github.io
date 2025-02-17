@@ -23,26 +23,6 @@ export default function UpcomingEventsSection() {
     return `${tokens[0]} ${tokens[1][0]}.`;
   };
 
-  const getUniqueNames = (rows, officer) => {
-    const uniqueNames = new Set();
-    if (officer) {
-      rows.forEach(({ officers }) => {
-        officers.forEach(
-          (name) =>
-            // eslint-disable-next-line implicit-arrow-linebreak
-            uniqueNames.add(`${shortenName(name)} (Officer)`),
-          // eslint-disable-next-line function-paren-newline
-        );
-      });
-    } else {
-      rows.forEach(({ committees }) => {
-        committees.forEach((name) => uniqueNames.add(shortenName(name)));
-      });
-    }
-
-    return Array.from(uniqueNames);
-  };
-
   useEffect(() => {
     const currentDate = new Date();
     const startDate = new Date(currentDate.getFullYear(), 0, 1);
@@ -67,6 +47,26 @@ export default function UpcomingEventsSection() {
   }, [day]);
 
   useEffect(() => {
+    const getUniqueNames = (rows, officer) => {
+      const uniqueNames = new Set();
+      if (officer) {
+        rows.forEach(({ officers }) => {
+          officers.forEach(
+            (name) =>
+              // eslint-disable-next-line implicit-arrow-linebreak
+              uniqueNames.add(`${shortenName(name)} (Officer)`),
+            // eslint-disable-next-line function-paren-newline
+          );
+        });
+      } else {
+        rows.forEach(({ committees }) => {
+          committees.forEach((name) => uniqueNames.add(shortenName(name)));
+        });
+      }
+
+      return Array.from(uniqueNames);
+    };
+
     if (weekNum !== null && week && day) {
       // eslint-disable-next-line operator-linebreak
       const filteredData =

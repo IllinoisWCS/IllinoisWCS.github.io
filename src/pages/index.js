@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
+import Image from 'next/image';
 
 import AboutUsSection from '../sections/AboutUsSection';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
