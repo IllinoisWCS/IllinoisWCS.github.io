@@ -4,6 +4,7 @@
   align-items: flex-start;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .title h2 {
@@ -52,13 +53,12 @@
 }
 
 .committeeInnerContainer {
-  height: 250vh;
+  height: 180vh;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 400px;
   width: 140%;
 }
 
@@ -66,9 +66,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
   gap: 2rem;
-  top: calc(50% - 30vh);
   width: 80vw !important;
 }
 
@@ -80,12 +78,11 @@
 }
 
 .imgContainer {
-  position: sticky;
-  top: calc(50% - 30vh);
   max-width: 80%;
   width: auto;
   height: auto;
   max-height: 430px;
+  position: relative;
 }
 
 .imgCaption {
@@ -133,6 +130,20 @@
 .officerPics {
   display: flex;
   gap: 1rem;
+}
+
+.blah {
+  display: flex;
+  background-color: red;
+  /* position: sticky; */
+  /* position: relative; */
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  /* top: calc(50% - 30vh); */
+  /* top: 100px; */
+  /* margin: auto; */
+  /* width: 100vw; */
 }
 
 @media (max-width: 992px) {

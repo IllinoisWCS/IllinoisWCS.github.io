@@ -35,25 +35,54 @@ export default function Team() {
         const img = images[index];
         const imgWidth = img.getBoundingClientRect().width;
 
-        if (index % 2 === 1) {
-          gsap.set(container, { marginLeft: '10%' });
-          gsap.to(container, {
-            marginLeft: `calc(-50% - ${imgWidth / 4}px)`,
-            scrollTrigger: {
-              trigger: container,
-              start: 'center 80%',
-              end: '70% 20%',
-              scrub: true,
-            },
+        gsap.set(container, {
+          marginTop: '0px',
+          marginBottom: '0px',
+        });
+
+        gsap.to(container, {
+          marginTop: '40%',
+          scrollTrigger: {
+            trigger: container,
+            start: '33% 80%',
+            end: '80% 40%',
+            scrub: true,
+          },
+        });
+
+        gsap.to(container, {
+          marginBottom: '-40%',
+          scrollTrigger: {
+            trigger: container,
+            start: '33% 80%',
+            end: '80% 40%',
+            scrub: true,
+          },
+        });
+
+        if (index % 2 === 0) {
+          gsap.set(container, {
+            marginLeft: '-50%',
           });
-        } else {
-          gsap.set(container, { marginLeft: '-50%' });
           gsap.to(container, {
             marginLeft: `calc(50% - ${imgWidth / 2}px)`,
             scrollTrigger: {
               trigger: container,
-              start: 'center 80%',
-              end: '70% 20%',
+              start: '50% 80%',
+              end: '55% 60%',
+              scrub: true,
+            },
+          });
+        } else {
+          gsap.set(container, {
+            marginLeft: '10%',
+          });
+          gsap.to(container, {
+            marginLeft: `calc(-50% - ${imgWidth / 4}px)`,
+            scrollTrigger: {
+              trigger: container,
+              start: '50% 80%',
+              end: '55% 60%',
               scrub: true,
             },
           });
@@ -92,7 +121,6 @@ export default function Team() {
           </div>
           <div
             className={`${styles[`committee${position}`]} ${styles.committee}`}
-            // id={`${styles[`${position}Committee`]}`}
           >
             <ComputerWindow
               topbarColor="wcs-pink"
@@ -125,7 +153,6 @@ export default function Team() {
       <div className={styles.committeeInnerContainer}>
         <div
           className={`${styles[`committee${position}`]} ${styles.committee}`}
-          // id={`${styles[`${position}Committee`]}`}
         >
           <ComputerWindow
             topbarColor="wcs-pink"
