@@ -72,9 +72,9 @@ export default function Team() {
           });
         } else {
           gsap.set(container, {
-            marginLeft: 'calc((100vw - 900px)/2)',
+            marginLeft: 'calc((100vw - 1000px)/2)',
           });
-          const newMarginLeft = window.innerWidth / 2 - 1500;
+          const newMarginLeft = window.innerWidth / 2 - 1550;
           gsap.to(container, {
             marginLeft: `${newMarginLeft}px`,
             scrollTrigger: {
