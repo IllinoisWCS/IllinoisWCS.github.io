@@ -1,9 +1,5 @@
 .container {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 143, 205, 1),
-    rgba(253, 176, 218, 1)
-  );
+  background-color: #ffeaf5;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -11,6 +7,7 @@
   justify-content: space-between;
   width: 100%;
   float: top;
+  border-bottom: solid var(--light-pink);
 }
 
 .logo {
@@ -25,6 +22,19 @@
   padding-right: 50px;
   padding: 15px 25px 15px 25px;
   position: relative;
+}
+
+.medium,
+.points {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.medium img,
+.points img {
+  margin-left: 6px;
+  transform: translateY(-5px);
 }
 
 .linksContainer h3:hover {
