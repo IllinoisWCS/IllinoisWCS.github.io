@@ -6,6 +6,7 @@ export default function ComputerWindow({
   className,
   topbarColor = 'wcs-blue',
   showButtons = true,
+  showTopbar = true,
   onButtonClick,
 }) {
   const [isMounted, setIsMounted] = useState(false);
@@ -22,26 +23,31 @@ export default function ComputerWindow({
   const selectedColor = colorOptions[topbarColor] || colorOptions['wcs-blue'];
   return (
     <div className={`${styles.container} ${className}`}>
-      <div className={styles.topbar} style={{ backgroundColor: selectedColor }}>
-        {showButtons && isMounted && (
-          <ul className={styles.buttonList}>
-            <li className={styles.topbarButtons}>
-              <button
-                type="button"
-                className={`${styles.topbarRedButton}`}
-                onClick={onButtonClick}
-                aria-label="Close"
+      {showTopbar && (
+        <div
+          className={styles.topbar}
+          style={{ backgroundColor: selectedColor }}
+        >
+          {showButtons && isMounted && (
+            <ul className={styles.buttonList}>
+              <li className={styles.topbarButtons}>
+                <button
+                  type="button"
+                  className={`${styles.topbarRedButton}`}
+                  onClick={onButtonClick}
+                  aria-label="Close"
+                />
+              </li>
+              <li
+                className={`${styles.topbarButtons} ${styles.topbarYellowButton}`}
               />
-            </li>
-            <li
-              className={`${styles.topbarButtons} ${styles.topbarYellowButton}`}
-            />
-            <li
-              className={`${styles.topbarButtons} ${styles.topbarGreenButton}`}
-            />
-          </ul>
-        )}
-      </div>
+              <li
+                className={`${styles.topbarButtons} ${styles.topbarGreenButton}`}
+              />
+            </ul>
+          )}
+        </div>
+      )}
       <div>{children}</div>
     </div>
   );
