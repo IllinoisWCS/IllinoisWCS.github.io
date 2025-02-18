@@ -67,19 +67,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  width: 1000px;
+  gap: 2vw;
+  width: 1600px;
 }
 
 .img {
-  height: auto;
-  max-height: 430px;
   border-radius: 20px;
   border: 10px solid var(--wcs-pink);
 }
 
 .imgContainer {
-  flex: 1;
   max-width: 80%;
   width: auto;
   height: auto;
@@ -133,28 +130,26 @@
 
 .officerPics {
   display: flex;
-  gap: 1rem;
+  gap: 1vw;
 }
 
 @media (max-width: 992px) {
-  .committeeDescription {
-    padding: 1rem;
-    min-height: 380px;
-  }
-
   .committeeDescription h4 {
     font-size: 20px;
-    margin-bottom: 0.5rem;
   }
 
   .committeeDescription p {
     font-size: 14px;
-    margin-bottom: 0.5rem;
   }
 
-  .imgContainer,
-  .img {
-    width: 80vw;
+  .committee {
+    width: 780px;
+  }
+
+  .committeeInnerContainer {
+    width: 1400px;
+    gap: 100px;
+    height: 100vh;
   }
 }
 
@@ -168,7 +163,13 @@
     animation: none;
     transform: none;
     opacity: 1;
-    max-width: 85%;
+    /* max-width: 85%; */
+    /* preserve aspect ratio */
+    /* max-height: 430px;
+    max-width: 100%; */
+    width: 100%;
+    height: auto;
+
     border: 5px solid var(--wcs-pink);
     margin: auto;
     padding: 0;
@@ -183,6 +184,8 @@
     display: flex;
     flex-direction: column;
     top: 0;
+    gap: 2rem;
+    width: 100%;
   }
 
   .committeeInnerContainer {
@@ -208,7 +211,7 @@
   .officerPics {
     display: flex;
     flex-wrap: wrap;
-    gap: 0;
+    gap: 0.5rem;
     justify-content: center;
   }
 
