@@ -31,73 +31,42 @@ export default function Team() {
       const { ScrollTrigger } = require('gsap/ScrollTrigger');
 
       gsap.registerPlugin(ScrollTrigger);
-      const committeeContainers = document.querySelectorAll(
-        `.${styles.committeeInnerContainer}`,
+      const committeeInnerContainers = document.querySelectorAll(
+        `.${styles.outerContainer}`,
       );
 
-      committeeContainers.forEach((container, index) => {
-        gsap.set(container, {
-          marginTop: '0px',
-          marginBottom: '0px',
-        });
+      const committees = document.querySelectorAll(`.${styles.committee}`);
+      const imgContainers = document.querySelectorAll(
+        `.${styles.imgContainer}`,
+      );
 
-        gsap.to(container, {
-          marginTop: '50%',
-          scrollTrigger: {
-            trigger: container,
-            start: '33% 80%',
-            end: '90% 40%',
-            scrub: true,
-          },
-        });
-
-        gsap.to(container, {
-          marginBottom: '-50%',
-          scrollTrigger: {
-            trigger: container,
-            start: '33% 80%',
-            end: '90% 40%',
-            scrub: true,
-          },
-        });
+      committeeInnerContainers.forEach((container, index) => {
+        const committeeWidth = committees[index].offsetWidth;
+        const imgContainerWidth = imgContainers[index].offsetWidth;
 
         if (index % 2 === 0) {
-          if (screenWidth < 992) {
-            gsap.set(container, {
-              marginLeft: 'calc((100vw/2) - 1200px)',
-            });
-            const newMarginLeft = (window.innerWidth - 700) / 2;
-            gsap.to(container, {
-              marginLeft: `${newMarginLeft}px`,
-              scrollTrigger: {
-                trigger: container,
-                start: '30% 65%',
-                end: '45% 70%',
-                scrub: true,
-              },
-            });
-          } else {
-            gsap.set(container, {
-              marginLeft: 'calc((100vw/2) - 1375px)',
-            });
-            const newMarginLeft = (window.innerWidth - 750) / 2;
-            gsap.to(container, {
-              marginLeft: `${newMarginLeft}px`,
-              scrollTrigger: {
-                trigger: container,
-                start: '50% 80%',
-                end: '55% 70%',
-                scrub: true,
-              },
-            });
-          }
-        } else {
           gsap.set(container, {
-            marginLeft: 'calc((100vw - 1050px)/2)',
+            marginLeft: `${-(imgContainerWidth + 200 - screenWidth / 2 + committeeWidth / 2)}px`,
           });
-          const newMarginLeft = window.innerWidth / 2 - 1550;
+          const newMarginLeft = screenWidth / 2 - imgContainerWidth / 2;
           gsap.to(container, {
             marginLeft: `${newMarginLeft}px`,
+            scrollTrigger: {
+              trigger: container,
+              start: '40% 80%',
+              end: '80% 70%',
+              scrub: true,
+            },
+          });
+        } else {
+          gsap.set(container, {
+            marginLeft: `${screenWidth / 2 - committeeWidth / 2}px`,
+          });
+          // eslint-disable-next-line operator-linebreak
+          const newMarginLeft =
+            committeeWidth + 200 - screenWidth / 2 + imgContainerWidth / 2;
+          gsap.to(container, {
+            marginLeft: `-${newMarginLeft}px`,
             scrollTrigger: {
               trigger: container,
               start: '50% 80%',
@@ -127,41 +96,45 @@ export default function Team() {
 
     if (position === 'Left' || screenWidth < 780) {
       return (
-        <div className={styles.committeeInnerContainer}>
-          <div className={styles.imgContainer}>
-            <Image
-              className={styles.img}
-              src={image}
-              width={720}
-              height={450}
-              alt={image}
-            />
-            <div className={styles.imgCaption}>{caption}</div>
-          </div>
-          <div
-            className={`${styles[`committee${position}`]} ${styles.committee}`}
-          >
-            <ComputerWindow
-              topbarColor="wcs-pink"
-              className={styles.committeeWindow}
-            >
-              <div className={styles.committeeDescription}>
-                <h4>{title} Committee</h4>
-                <p>{description}</p>
-              </div>
-            </ComputerWindow>
-
-            <div className={styles.officerPics}>
-              {officersList.map((officer, index) => (
-                <OfficerCard
-                  key={index}
-                  name={officer.name}
-                  position={officer.position}
-                  netid={officer.netid}
-                  officer={officer}
-                  className={styles.officerCard}
+        <div className={styles.outerContainer}>
+          <div className={styles.middleContainer}>
+            <div className={styles.innerContainer}>
+              <div className={styles.imgContainer}>
+                <Image
+                  className={styles.img}
+                  src={image}
+                  width={720}
+                  height={450}
+                  alt={image}
                 />
-              ))}
+                <div className={styles.imgCaption}>{caption}</div>
+              </div>
+              <div
+                className={`${styles[`committee${position}`]} ${styles.committee}`}
+              >
+                <ComputerWindow
+                  topbarColor="wcs-pink"
+                  className={styles.committeeWindow}
+                >
+                  <div className={styles.committeeDescription}>
+                    <h4>{title} Committee</h4>
+                    <p>{description}</p>
+                  </div>
+                </ComputerWindow>
+
+                <div className={styles.officerPics}>
+                  {officersList.map((officer, index) => (
+                    <OfficerCard
+                      key={index}
+                      name={officer.name}
+                      position={officer.position}
+                      netid={officer.netid}
+                      officer={officer}
+                      className={styles.officerCard}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -169,42 +142,46 @@ export default function Team() {
     }
 
     return (
-      <div className={styles.committeeInnerContainer}>
-        <div
-          className={`${styles[`committee${position}`]} ${styles.committee}`}
-        >
-          <ComputerWindow
-            topbarColor="wcs-pink"
-            className={styles.committeeWindow}
-          >
-            <div className={styles.committeeDescription}>
-              <h4>{title} Committee</h4>
-              <p>{description}</p>
-            </div>
-          </ComputerWindow>
+      <div className={styles.outerContainer}>
+        <div className={styles.middleContainer}>
+          <div className={styles.innerContainer}>
+            <div
+              className={`${styles[`committee${position}`]} ${styles.committee}`}
+            >
+              <ComputerWindow
+                topbarColor="wcs-pink"
+                className={styles.committeeWindow}
+              >
+                <div className={styles.committeeDescription}>
+                  <h4>{title} Committee</h4>
+                  <p>{description}</p>
+                </div>
+              </ComputerWindow>
 
-          <div className={styles.officerPics}>
-            {officersList.map((officer, index) => (
-              <OfficerCard
-                key={index}
-                name={officer.name}
-                position={officer.position}
-                netid={officer.netid}
-                officer={officer}
-                className={styles.officerCard}
+              <div className={styles.officerPics}>
+                {officersList.map((officer, index) => (
+                  <OfficerCard
+                    key={index}
+                    name={officer.name}
+                    position={officer.position}
+                    netid={officer.netid}
+                    officer={officer}
+                    className={styles.officerCard}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className={styles.imgContainer}>
+              <Image
+                className={styles.img}
+                src={image}
+                width={720}
+                height={450}
+                alt={image}
               />
-            ))}
+              <div className={styles.imgCaption}>{caption}</div>
+            </div>
           </div>
-        </div>
-        <div className={styles.imgContainer}>
-          <Image
-            className={styles.img}
-            src={image}
-            width={720}
-            height={450}
-            alt={image}
-          />
-          <div className={styles.imgCaption}>{caption}</div>
         </div>
       </div>
     );

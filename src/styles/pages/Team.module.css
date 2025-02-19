@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  width: 100vw;
   position: relative;
-  overflow: hidden;
 }
 
 .title h2 {
@@ -52,15 +51,22 @@
   margin-bottom: 7rem;
 }
 
-.committeeInnerContainer {
-  height: 180vh;
+.outerContainer {
+  height: 200vh;
+  width: 100vw;
+  position: relative;
+  margin-bottom: 400px;
+}
+
+.innerContainer {
   display: flex;
-  gap: 150px;
-  align-items: flex-start;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1900px;
-  padding: 0;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  position: sticky;
+  top: 125px;
+  gap: 200px;
+  height: 500px;
 }
 
 .committee {
@@ -68,7 +74,7 @@
   align-items: center;
   justify-content: center;
   gap: 2vw;
-  width: 1600px;
+  width: fit-content;
 }
 
 .img {
@@ -79,9 +85,14 @@
 .imgContainer {
   max-width: 80%;
   width: auto;
-  height: auto;
   max-height: 430px;
+  height: 500px;
   position: relative;
+}
+
+.middleContainer {
+  position: relative;
+  height: 100%;
 }
 
 .imgCaption {
@@ -145,12 +156,6 @@
   .committee {
     width: 780px;
   }
-
-  .committeeInnerContainer {
-    width: 1400px;
-    gap: 100px;
-    height: 100vh;
-  }
 }
 
 @media (max-width: 780px) {
@@ -163,10 +168,6 @@
     animation: none;
     transform: none;
     opacity: 1;
-    /* max-width: 85%; */
-    /* preserve aspect ratio */
-    /* max-height: 430px;
-    max-width: 100%; */
     width: 100%;
     height: auto;
 
@@ -186,17 +187,29 @@
     top: 0;
     gap: 2rem;
     width: 100%;
+    height: fit-content;
   }
 
-  .committeeInnerContainer {
+  .innerContainer {
     flex-direction: column-reverse;
     align-items: center;
     gap: 1rem;
-    height: fit-content;
-    margin-bottom: 4rem;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    position: relative;
+    height: fit-content;
+    top: 0;
+  }
+
+  .middleContainer {
+    height: fit-content;
+    width: 100%;
+  }
+
+  .outerContainer {
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 5rem;
   }
 
   .committeeDescription {
@@ -219,6 +232,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    height: fit-content;
   }
 
   .imgCaption {
