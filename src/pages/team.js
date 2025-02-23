@@ -11,12 +11,12 @@ import ComputerWindow from '../components/general/ComputerWindowComponent';
 export default function Team() {
   const committeeCaptions = [
     'September General Meeting 2024',
-    'Explorations Committee',
-    'Infrastructure Committee',
-    'Mentoring Event',
-    'Outreach Committee',
+    'ML Workshop Series',
+    'Git Gud Workshop',
+    'Bits & Bytes Social',
+    'ChicTech 2024',
     'Friendsgiving 2024',
-    'Marketing Committee',
+    'Quad Day',
   ];
 
   const [screenWidth, setScreenWidth] = useState(0);
