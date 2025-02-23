@@ -13,6 +13,7 @@ export default function ExternalOpportunityCard({
   return (
     <div className={`${styles.card} ${styles[`card-${color}`]}`}>
       <p className={styles.icon}>{icon}</p>
+
       {link !== '' ? (
         <a
           className={styles.link}
@@ -20,7 +21,14 @@ export default function ExternalOpportunityCard({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p className={styles.title}>{title}</p>
+          <p className={styles.title}>
+            {title}
+            <img
+              src="/assets/design-vectors/externallink.svg"
+              alt="External Link"
+              className={styles.linkicon}
+            />
+          </p>
         </a>
       ) : (
         <p className={styles.title}>{title}</p>
