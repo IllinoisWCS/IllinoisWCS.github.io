@@ -41,7 +41,11 @@
 
 .position {
   color: #6dc7cc;
+  position: relative;
   opacity: 0.7;
+  bottom: 16px;
+  float: middle;
   font-size: 16px;
+  place-items: center;
   margin: 0;
 }
