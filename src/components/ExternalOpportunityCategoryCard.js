@@ -24,11 +24,12 @@ export default function ExternalOpportunityCategoryCard({
   );
 
   const blankLinesCount = 3 - filteredEvents.length;
-
   const displayEvents = [
     ...filteredEvents,
     ...Array(blankLinesCount).fill({ title: '', icon: '' }),
   ];
+
+  const hasEvents = filteredEvents.length > 0;
 
   return (
     <div className={styles.card}>
@@ -39,35 +40,45 @@ export default function ExternalOpportunityCategoryCard({
         <div className={styles.container}>
           <h3>{categoryName}</h3>
           <div className={styles.separator} />
-          <ul className={styles.itemsList}>
-            {displayEvents.map((item, index) => (
-              <li key={index}>
-                {item.icon && item.title ? (
-                  <>
-                    {item.icon} {item.title}
-                  </>
-                ) : (
-                  <span>&nbsp;</span>
-                )}
-              </li>
-            ))}
-          </ul>
-          <div>
-            <button
-              className={styles.viewMoreButton}
-              type="button"
-              onClick={toggleModal}
-            >
-              View more
-            </button>
-            <ExternalOpportunitiesModal
-              color={topbarColor}
-              category={categoryName}
-              events={items}
-              isOpen={isModalOpen}
-              closeModal={toggleModal}
-            />
+
+          <div className={styles.listContainer}>
+            <ul className={styles.itemsList}>
+              {displayEvents.map((item, index) => (
+                <li key={index}>
+                  {item.icon && item.title ? (
+                    <>
+                      {item.icon} {item.title}
+                    </>
+                  ) : (
+                    <span>&nbsp;</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+
+            {hasEvents ? (
+              <div />
+            ) : (
+              <p className={styles.noEvents}>No upcoming events</p>
+            )}
           </div>
+        </div>
+        <div>
+          <button
+            className={styles.viewMoreButton}
+            type="button"
+            onClick={toggleModal}
+            disabled={!hasEvents}
+          >
+            View more
+          </button>
+          <ExternalOpportunitiesModal
+            color={topbarColor}
+            category={categoryName}
+            events={items}
+            isOpen={isModalOpen}
+            closeModal={toggleModal}
+          />
         </div>
       </ComputerWindow>
     </div>
