@@ -25,10 +25,15 @@ export default function Resources() {
         </p>
       </div>
 
-      <h2 className={`${styles.header}`}>External Opportunities</h2>
-      <ExternalOpportunitiesSection />
+      <h2 className={`${styles.header} ${resourcesStyles.header}`}>
+        External Opportunities
+      </h2>
 
-      <h2 className={`${styles.header}`}>Get Help</h2>
+      <div className={`${resourcesStyles.ExternalOpportunitiesSection}`}>
+        <ExternalOpportunitiesSection />
+      </div>
+
+      <h2 className={`${styles.header} ${resourcesStyles.header}`}>Get Help</h2>
       <GetHelpSection />
     </main>
   );

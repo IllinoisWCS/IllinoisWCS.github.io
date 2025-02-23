@@ -4,6 +4,14 @@
 
 .description {
   display: inline;
-  padding: 2em;
+  padding: 2em 2em 3em;
   text-align: center;
+}
+
+.header {
+  margin-bottom: 1em;
+}
+
+.ExternalOpportunitiesSection {
+  margin-bottom: 4em;
 }
