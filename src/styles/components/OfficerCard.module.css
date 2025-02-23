@@ -12,6 +12,16 @@
   border: 7px solid var(--wcs-pink);
 }
 
+.container:hover {
+  background-color: var(--light-light-pink);
+  border: 2px solid #f6cbce;
+  border-width: 7px;
+  font-weight: bold;
+  color: #f5f5f5;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px var(--light-pink);
+}
+
 .img {
   border: 6px solid var(--wcs-blue);
   border-radius: 100%;
@@ -30,7 +40,11 @@
 
 .position {
   color: #6dc7cc;
+  position: relative;
   opacity: 0.7;
+  bottom: 16px;
+  float: middle;
   font-size: 16px;
+  place-items: center;
   margin: 0;
 }
