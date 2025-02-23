@@ -26,7 +26,7 @@ export default function ExternalOpportunityCard({
             <img
               src="/assets/design-vectors/externallink.svg"
               alt="External Link"
-              className={styles.linkicon}
+              className={styles.linkIcon}
             />
           </p>
         </a>
