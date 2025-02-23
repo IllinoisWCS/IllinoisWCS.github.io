@@ -80,6 +80,7 @@
 .img {
   border-radius: 20px;
   border: 10px solid var(--wcs-pink);
+  height: 450px;
 }
 
 .imgContainer {
@@ -103,7 +104,7 @@
   padding: 1rem;
 
   border-radius: 20px;
-  transform: translate(-30%, 50%);
+  transform: translate(-30%, 80%);
 }
 
 .committeeLeft {

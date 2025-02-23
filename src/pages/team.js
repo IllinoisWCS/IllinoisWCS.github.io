@@ -10,12 +10,12 @@ import ComputerWindow from '../components/general/ComputerWindowComponent';
 
 export default function Team() {
   const committeeCaptions = [
-    'Corporate Retreat 2024',
-    'Code Ada 2023',
-    'Tech Team',
-    'Bits and Bytes Kickoff 2022',
-    'Outreach',
-    'Field Day 2023',
+    'September General Meeting 2024',
+    'Explorations Committee',
+    'Infrastructure Committee',
+    'Mentoring Event',
+    'Outreach Committee',
+    'Friendsgiving 2024',
     'Marketing Committee',
   ];
 
@@ -96,17 +96,14 @@ export default function Team() {
 
     if (position === 'Left' || screenWidth < 780) {
       return (
-        <div className={styles.outerContainer}>
+        <div
+          className={styles.outerContainer}
+          style={title === 'Marketing' ? { marginBottom: '0' } : {}}
+        >
           <div className={styles.middleContainer}>
             <div className={styles.innerContainer}>
               <div className={styles.imgContainer}>
-                <Image
-                  className={styles.img}
-                  src={image}
-                  width={720}
-                  height={450}
-                  alt={image}
-                />
+                <img className={styles.img} src={image} alt={image} />
                 <div className={styles.imgCaption}>{caption}</div>
               </div>
               <div
@@ -172,13 +169,7 @@ export default function Team() {
               </div>
             </div>
             <div className={styles.imgContainer}>
-              <Image
-                className={styles.img}
-                src={image}
-                width={720}
-                height={450}
-                alt={image}
-              />
+              <img className={styles.img} src={image} alt={image} />
               <div className={styles.imgCaption}>{caption}</div>
             </div>
           </div>
