@@ -24,6 +24,10 @@
   display: flex;
 }
 
+.listContainer {
+  position: relative;
+}
+
 .viewMoreButton {
   display: flex;
   padding: 0.5rem 1rem;
@@ -48,6 +52,11 @@
   background-color: #dfb2b5;
 }
 
+.viewMoreButton:disabled {
+  background-color: #f8d6d8;
+  cursor: default;
+}
+
 .separator {
   height: 1px;
   margin: 16px 0;
@@ -67,4 +76,15 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.noEvents {
+  position: absolute;
+  font-size: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-style: italic;
+  color: lightgray;
 }

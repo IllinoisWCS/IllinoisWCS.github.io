@@ -22,12 +22,21 @@
 
 .icon {
   margin-bottom: 0.3rem;
+  font-size: 28px;
 }
+
+.linkIcon {
+  margin-left: 0.3rem;
+  margin-top: -0.2rem;
+  width: 16px;
+}
+
 .title {
   font-size: 16px;
   font-weight: 400;
   color: #000000;
   margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
 }
 
 .link {
@@ -48,5 +57,5 @@
 }
 
 .description {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
