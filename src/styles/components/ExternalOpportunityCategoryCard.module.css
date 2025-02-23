@@ -53,10 +53,8 @@
 }
 
 .viewMoreButton:disabled {
-  background-color: #f4dedf;
+  background-color: #f8d6d8;
   cursor: default;
-  /* color: #a0a0a0; */
-  /* border-color: #d6d6d6; */
 }
 
 .separator {
