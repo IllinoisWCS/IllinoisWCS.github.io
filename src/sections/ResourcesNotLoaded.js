@@ -13,15 +13,13 @@ function ResourcesNotLoaded() {
         <p>
           We&apos;re having trouble right now.
           <br />
-          {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
           Please visit{' '}
-          {/* eslint-disable-next-line react/jsx-no-target-blank */}
           <a
-            href="https://illinoiswcs.notion.site/External-Opportunities-Board-55cf543f69934c79b46a5df5dbec1512"
+            href="https://possible-surf-e96.notion.site/External-Opportunities-Board-d743b796b2d147dc9005efc6362d4166"
             target="_blank"
+            rel="noreferrer"
           >
             <u>this link</u>
-            {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
           </a>{' '}
           for our most up to date version
           <br />
