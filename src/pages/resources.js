@@ -28,6 +28,21 @@ export default function Resources() {
       <h2 className={`${styles.header}`}>External Opportunities</h2>
       <ExternalOpportunitiesSection />
 
+      <br />
+      <p>
+        For more resources, check{' '}
+        {/* eslint-disable-next-line react/jsx-no-target-blank */}
+        <a
+          href="https://illinoiswcs.notion.site/External-Opportunities-Board-55cf543f69934c79b46a5df5dbec1512"
+          target="_blank"
+        >
+          <u>this</u>
+          {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+        </a>{' '}
+        out!
+      </p>
+      <br />
+
       <h2 className={`${styles.header}`}>Get Help</h2>
       <GetHelpSection />
     </main>
