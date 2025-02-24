@@ -28,10 +28,27 @@ export default function Resources() {
       <h2 className={`${styles.header} ${resourcesStyles.header}`}>
         External Opportunities
       </h2>
-
       <div className={`${resourcesStyles.ExternalOpportunitiesSection}`}>
         <ExternalOpportunitiesSection />
       </div>
+      
+      <br />
+      <p>
+        For more resources, check{' '}
+        {/* eslint-disable-next-line react/jsx-no-target-blank */}
+        <a
+          href="https://possible-surf-e96.notion.site/External-Opportunities-Board-d743b796b2d147dc9005efc6362d4166"
+          target="_blank"
+        >
+          <u>this</u>
+          {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+        </a>{' '}
+        out!
+      </p>
+      <br />
+
+      <h2 className={`${styles.header}`}>Get Help</h2>
+
 
       <h2 className={`${styles.header} ${resourcesStyles.header}`}>Get Help</h2>
       <GetHelpSection />
