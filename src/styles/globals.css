@@ -38,7 +38,16 @@ body {
 }
 
 body {
-  background-color: #ffeaf5;
+  color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+  background: linear-gradient(#ffb2da, #cbedff);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -53,24 +62,24 @@ a {
 }
 
 h1 {
-  font-family: 'Roboto Mono';
-  font-weight: normal;
-  font-size: 48px;
+  font-family: 'Audiowide' !important;
+  font-weight: 400;
+  font-size: 64px;
   color: black;
 }
 
 h2 {
-  font-family: 'Roboto Mono';
-  font-weight: normal;
-  font-size: 32px;
+  font-family: 'Audiowide' !important;
+  font-weight: 400;
+  font-size: 40px;
   color: black;
 }
 
 h3 {
-  font-family: 'Roboto Mono';
-  color: black;
-  font-size: 30px;
-  font-weight: bold;
+  font-family: 'Lato' !important;
+  font-weight: 700;
+  color: #21636c;
+  font-size: 28px; /* Adjusted to 28px */
 }
 
 h4 {
@@ -86,22 +95,22 @@ h5 {
 }
 
 p {
-  font-family: 'Roboto';
-  font-weight: normal;
+  font-family: 'Lato';
+  font-weight: 700;
   font-size: 20px;
+  color: #21636c;
   margin-bottom: 0;
-  color: black;
 }
 
 ul {
-  color: black;
+  color: #21636c;
 }
 
 li {
-  font-family: 'Roboto';
-  font-weight: normal;
-  font-size: 16px;
-  color: black;
+  font-family: 'Lato';
+  font-weight: 700;
+  font-size: 20px;
+  color: #21636c;
 }
 
 @media only screen and (max-width: 768px) {

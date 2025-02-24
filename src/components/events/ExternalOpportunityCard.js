@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '@/styles/components/ExternalOpportunitiesCard.module.css';
 
 export default function ExternalOpportunityCard({
@@ -23,10 +24,12 @@ export default function ExternalOpportunityCard({
         >
           <p className={styles.title}>
             {title}
-            <img
+            <Image
               src="/assets/design-vectors/externallink.svg"
               alt="External Link"
               className={styles.linkIcon}
+              width={16}
+              height={16}
             />
           </p>
         </a>
@@ -34,14 +37,14 @@ export default function ExternalOpportunityCard({
         <p className={styles.title}>{title}</p>
       )}
 
-      {location !== '' ? (
+      {location !== 'No Location' ? (
         <p className={styles.location}>
           <strong>Location: </strong>
           {location}
         </p>
       ) : null}
 
-      {time !== '' ? (
+      {time !== 'No Time' ? (
         <p className={styles.time}>
           <strong>Time: </strong>
           {time}
