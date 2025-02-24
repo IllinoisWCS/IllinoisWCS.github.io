@@ -48,6 +48,17 @@ export default function ExternalOpportunitiesSection() {
           items={opportunities}
         />
       ))}
+      <p className={`${styles.description}`}>
+        For more resources, check{' '}
+        <a
+          href="https://possible-surf-e96.notion.site/External-Opportunities-Board-d743b796b2d147dc9005efc6362d4166"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <u>this</u>{' '}
+        </a>
+        out!
+      </p>
     </div>
   );
 }
