@@ -6,7 +6,7 @@
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:server\"",
     "dev:next": "next dev",
     "dev:server": "node src/server/server.js",
-    "build": "next build",
+    "build": "concurrently \"next build\" \"node src/server/server.js\"",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write src",
