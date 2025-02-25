@@ -1,13 +1,20 @@
 import GetHelpSection from '../sections/GetHelpSection';
 import styles from '@/styles/pages/Home.module.css';
 import resourcesStyles from '@/styles/pages/Resources.module.css';
+import ComputerWindow from '../components/general/ComputerWindowComponent';
 
 import ExternalOpportunitiesSection from '../sections/ExternalOpportunitiesSection';
 
 export default function Resources() {
   return (
     <main className={`${styles.main}`}>
-      <h1 style={{ textAlign: 'center' }}>Resources</h1>
+      <div className={styles.computerWindowContainer}>
+        <ComputerWindow className={styles.window} showButtons={false}>
+          <div className={styles.windowContent}>
+            <h1>Resources</h1>
+          </div>
+        </ComputerWindow>
+      </div>
 
       <div className={`${resourcesStyles.descriptionContainer}`}>
         <p className={`${resourcesStyles.description}`}>
