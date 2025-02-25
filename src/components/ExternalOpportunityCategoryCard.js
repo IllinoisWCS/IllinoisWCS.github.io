@@ -24,10 +24,11 @@ export default function ExternalOpportunityCategoryCard({
   );
 
   const blankLinesCount = 3 - filteredEvents.length;
-  const displayEvents = [
-    ...filteredEvents,
-    ...Array(blankLinesCount).fill({ title: '', icon: '' }),
-  ];
+  const blankLinesArray =
+    blankLinesCount >= 0
+      ? [...Array(blankLinesCount).fill({ title: '', icon: '' })]
+      : [];
+  const displayEvents = [...filteredEvents.slice(0, 3), ...blankLinesArray];
 
   const hasEvents = filteredEvents.length > 0;
 
@@ -59,7 +60,7 @@ export default function ExternalOpportunityCategoryCard({
             {hasEvents ? (
               <div />
             ) : (
-              <p className={styles.noEvents}>No upcoming events</p>
+              <p className={styles.noEvents}>No upcoming opportunities</p>
             )}
           </div>
         </div>
