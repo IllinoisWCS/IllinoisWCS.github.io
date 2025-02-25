@@ -12,9 +12,7 @@
 A few sentences describing the overall goals of the pull request's commits. If applicable, link the PR to the corresponding issue below by filling out the number.
 -->
 
-<!-- Addresses #<number> -->
-
-Addresses: <(link notion task here)>
+Addresses #<number>
 
 ## Screenshots
 
