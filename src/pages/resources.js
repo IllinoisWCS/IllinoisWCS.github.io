@@ -8,13 +8,18 @@ import ExternalOpportunitiesSection from '../sections/ExternalOpportunitiesSecti
 export default function Resources() {
   return (
     <main className={`${styles.main}`}>
-      <div className={styles.computerWindowContainer}>
-        <ComputerWindow className={styles.window} showButtons={false}>
-          <div className={styles.windowContent}>
-            <h1>Resources</h1>
-          </div>
-        </ComputerWindow>
-      </div>
+      <ComputerWindow className={styles.window} showButtons={false}>
+        <h1
+          style={{
+            width: '100%',
+            textAlign: 'center',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          Resources
+        </h1>
+      </ComputerWindow>
 
       <div className={`${resourcesStyles.descriptionContainer}`}>
         <p className={`${resourcesStyles.description}`}>

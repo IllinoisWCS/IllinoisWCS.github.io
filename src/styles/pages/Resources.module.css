@@ -1,3 +1,21 @@
+.window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem auto 0;
+  width: 90%;
+}
+
+.window h1 {
+  width: 100%;
+  text-align: center !important;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+}
+
 .descriptionContainer {
   display: flex;
 }
@@ -6,19 +24,4 @@
   display: inline;
   padding: 2em;
   text-align: center;
-}
-
-.window {
-  width: 100%;
-  padding: 5rem;
-}
-
-.computerWindowContainer {
-  width: 100%;
-  padding: 5rem;
-}
-
-.windowContent {
-  width: 100%;
-  padding: 5rem;
 }
