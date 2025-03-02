@@ -1,0 +1,97 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(10, 10, 10, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  position: relative;
+  width: 80%;
+  background-color: var(--light-light-pink);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-wcs-pink-light-light {
+  background-color: var(--light-light-pink);
+}
+
+.window-wcs-blue-light-light {
+  background-color: var(--light-light-blue);
+}
+
+.headingBlock {
+  background-color: white;
+  padding: 15px 20px;
+  border-bottom: solid var(--light-pink);
+  height: 7rem;
+  display: flex;
+  align-items: center;
+}
+
+.headingBlock-wcs-pink-light {
+  border-bottom: solid var(--light-pink);
+}
+
+.headingBlock-wcs-blue-light {
+  border-bottom: solid var(--light-blue);
+}
+
+.heading {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.eventsCards {
+  padding: 1rem 5svw 1rem 5svw;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  max-height: calc(90svh - 12rem);
+  overflow-y: auto;
+}
+
+.closeButton {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  color: var(--wcs-pink);
+  background-color: var(--light-pink);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+}
+
+.closeButton-wcs-pink-light {
+  color: var(--wcs-pink);
+  background-color: var(--light-pink);
+}
+
+.closeButton-wcs-blue-light {
+  color: var(--wcs-blue);
+  background-color: var(--light-blue);
+}
+
+.closeButton-wcs-pink-light:hover {
+  color: var(--light-light-pink);
+  background-color: var(--wcs-pink);
+}
+
+.closeButton-wcs-blue-light:hover {
+  color: var(--light-light-blue);
+  background-color: var(--wcs-blue);
+}

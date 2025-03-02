@@ -20,7 +20,7 @@ export default function Cloud({ color, size }) {
   } else if (size === 'medium') {
     width = '357';
   } else {
-    width = '457';
+    width = '700';
   }
 
   return (
