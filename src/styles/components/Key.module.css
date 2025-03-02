@@ -72,19 +72,19 @@
 }
 
 .keyTop:hover::before {
-  background-color: #ff7cc0;
+  background-color: var(--wcs-pink);
 }
 
 .keyTop:hover .keyRight::before {
-  border-right: 10px solid #ff7cc0;
+  border-right: 10px solid var(--wcs-pink);
 }
 
 .keyTop:hover .keyBottom::before {
-  background-color: #ff7cc0;
+  background-color: var(--wcs-pink);
 }
 
 .keyTop:hover .keyBody {
-  background-color: #ff7cc0;
+  background-color: var(--wcs-pink);
   color: #ffe3f2;
 }
 
