@@ -19,55 +19,38 @@ export default function SponsorsSection() {
           <div>
             <div className={styles.sponsors}>
               <Sponsor
-                sponsor="google.png"
-                url="https://careers.google.com/"
+                sponsor="peak6.jpg"
+                url="https://www.peak6.com/careers/"
                 tier="gold"
               />
               <Sponsor
-                sponsor="crowdstrike.png"
-                url="https://www.crowdstrike.com/careers/"
+                sponsor="motorola.jpg"
+                url="https://www.motorolasolutions.com/en_us/about/careers.html"
                 tier="gold"
+              />
+              <Sponsor
+                sponsor="imc.png"
+                url="https://www.imc.com/us/careers/"
+                tier="bronze"
               />
               <Sponsor
                 sponsor="cmegroup.jpg"
                 url="https://www.cmegroup.com/careers.html"
-                tier="gold"
-              />
-              <Sponsor
-                sponsor="twoSigma.png"
-                url="https://www.twosigma.com/careers/"
-                tier="gold"
+                tier="bronze"
               />
               <Sponsor
                 sponsor="drw.png"
                 url="https://drw.com/work-at-drw"
-                tier="gold"
+                tier="bronze"
               />
               <Sponsor
-                sponsor="omc.png"
+                sponsor="oldmissioncapital.png"
                 url="https://www.oldmissioncapital.com/careers/"
                 tier="gold"
               />
               <Sponsor
                 sponsor="hrt.png"
-                url="https://www.hudsonrivertrading.com/careers//"
-                tier="gold"
-              />
-            </div>
-            <div className={styles.sponsors}>
-              <Sponsor
-                sponsor="bloomberg.png"
-                url="https://www.bloomberg.com/company/careers/early-career/"
-                tier="bronze"
-              />
-              <Sponsor
-                sponsor="activeCampaign.png"
-                url="https://www.activecampaign.com/about/careers"
-                tier="bronze"
-              />
-              <Sponsor
-                sponsor="citadel.png"
-                url="https://www.citadel.com/careers/"
+                url="https://www.hudsonrivertrading.com/careers/"
                 tier="bronze"
               />
             </div>
