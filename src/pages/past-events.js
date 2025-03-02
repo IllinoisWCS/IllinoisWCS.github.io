@@ -70,7 +70,7 @@ function PastEvents() {
   if (errorFetchingEvents) {
     return (
       <div className={styles.pastEventsContainer}>
-        <ComputerWindow className={styles.title}>
+        <ComputerWindow className={styles.title} showButtons={false}>
           <h2>Past Events</h2>
         </ComputerWindow>
         <ComputerWindow showTopbar={false} className={styles.subHeader}>
@@ -88,7 +88,7 @@ function PastEvents() {
 
   return (
     <div className={styles.pastEventsContainer}>
-      <ComputerWindow className={styles.title}>
+      <ComputerWindow className={styles.title} showButtons={false}>
         <h2>Past Events</h2>
       </ComputerWindow>
       {events.length === 0 ? (
