@@ -31,17 +31,17 @@ export default function SponsorsSection() {
               <Sponsor
                 sponsor="imc.png"
                 url="https://www.imc.com/us/careers/"
-                tier="gold"
+                tier="bronze"
               />
               <Sponsor
                 sponsor="cmegroup.jpg"
                 url="https://www.cmegroup.com/careers.html"
-                tier="gold"
+                tier="bronze"
               />
               <Sponsor
                 sponsor="drw.png"
                 url="https://drw.com/work-at-drw"
-                tier="gold"
+                tier="bronze"
               />
               <Sponsor
                 sponsor="oldmissioncapital.png"
@@ -51,7 +51,7 @@ export default function SponsorsSection() {
               <Sponsor
                 sponsor="hrt.png"
                 url="https://www.hudsonrivertrading.com/careers/"
-                tier="gold"
+                tier="bronze"
               />
             </div>
           </div>
