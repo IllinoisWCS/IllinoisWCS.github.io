@@ -9,7 +9,7 @@ export default function Resources() {
   return (
     <main className={`${styles.main}`}>
       <ComputerWindow className={resourcesStyles.window} showButtons={false}>
-        <h1>Resources</h1>
+        <h2>Resources</h2>
       </ComputerWindow>
 
       <div className={`${resourcesStyles.descriptionContainer}`}>
