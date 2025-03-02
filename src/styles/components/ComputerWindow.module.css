@@ -15,8 +15,8 @@
   flex-direction: column;
   height: fit-content;
   overflow: hidden;
-  width: 100%; /* Allow it to expand fully */
-  max-width: 1200px; /* Adjust based on your layout */
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
