@@ -15,9 +15,7 @@
   flex-direction: column;
   height: fit-content;
   overflow: hidden;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: fit-content;
 }
 
 .topbar {
