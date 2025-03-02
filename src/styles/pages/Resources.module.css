@@ -1,3 +1,14 @@
+.window h2 {
+  margin: 1rem;
+  text-align: center;
+}
+
+.window {
+  text-align: center;
+  margin: 2rem auto 0;
+  width: 90%;
+}
+
 .descriptionContainer {
   display: flex;
 }
