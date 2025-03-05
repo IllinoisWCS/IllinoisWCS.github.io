@@ -64,7 +64,6 @@
   justify-content: center;
   width: fit-content;
   position: sticky;
-  /* top: 125px; */
   top: calc(50vh - 250px);
   gap: 200px;
   height: 500px;
@@ -146,6 +145,10 @@
   gap: 1vw;
 }
 
+.outerContainer:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 992px) {
   .committeeDescription h4 {
     font-size: 20px;
@@ -211,7 +214,8 @@
   .outerContainer {
     height: fit-content;
     width: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 10vw;
+    position: relative;
   }
 
   .committeeDescription {
@@ -235,6 +239,7 @@
     flex-direction: column;
     gap: 1rem;
     height: fit-content;
+    max-height: none;
   }
 
   .imgCaption {
