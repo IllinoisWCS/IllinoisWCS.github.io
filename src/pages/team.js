@@ -22,11 +22,22 @@ export default function Team() {
   const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
     setScreenWidth(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
-    if (screenWidth > 780) {
+    const createAnimation = () => {
+      if (screenWidth <= 780) {
+        return;
+      }
+
       // eslint-disable-next-line global-require
       const { ScrollTrigger } = require('gsap/ScrollTrigger');
 
@@ -76,7 +87,15 @@ export default function Team() {
           });
         }
       });
+    };
+
+    if (screenWidth <= 780) {
+      gsap.utils.toArray(`.${styles.outerContainer}`).forEach((container) => {
+        gsap.killTweensOf(container);
+        gsap.set(container, { clearProps: 'all' });
+      });
     }
+    createAnimation();
   }, [screenWidth]);
 
   const renderCommitteeSection = (

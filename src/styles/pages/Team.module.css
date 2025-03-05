@@ -64,7 +64,8 @@
   justify-content: center;
   width: fit-content;
   position: sticky;
-  top: 125px;
+  /* top: 125px; */
+  top: calc(50vh - 250px);
   gap: 200px;
   height: 500px;
 }
