@@ -1,12 +1,15 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import OfficerCard from '../components/OfficerCard';
 import officerData from '../data/officers.json';
 import committeeData from '../data/committees.json';
 import styles from '@/styles/pages/Team.module.css';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Team() {
   const committeeCaptions = [
@@ -22,15 +25,22 @@ export default function Team() {
   const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+      setTimeout(() => ScrollTrigger.refresh(), 100);
+    };
     setScreenWidth(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
-    if (screenWidth > 780) {
-      // eslint-disable-next-line global-require
-      const { ScrollTrigger } = require('gsap/ScrollTrigger');
-
-      gsap.registerPlugin(ScrollTrigger);
+    const createAnimation = () => {
+      if (screenWidth <= 780) {
+        return;
+      }
       const committeeInnerContainers = document.querySelectorAll(
         `.${styles.outerContainer}`,
       );
@@ -56,6 +66,7 @@ export default function Team() {
               start: '40% 80%',
               end: '80% 70%',
               scrub: true,
+              onUpdate: () => ScrollTrigger.update(),
             },
           });
         } else {
@@ -72,11 +83,20 @@ export default function Team() {
               start: '50% 80%',
               end: '55% 70%',
               scrub: true,
+              onUpdate: () => ScrollTrigger.update(),
             },
           });
         }
       });
+    };
+
+    if (screenWidth <= 780) {
+      gsap.utils.toArray(`.${styles.outerContainer}`).forEach((container) => {
+        gsap.killTweensOf(container);
+        gsap.set(container, { clearProps: 'all' });
+      });
     }
+    createAnimation();
   }, [screenWidth]);
 
   const renderCommitteeSection = (
