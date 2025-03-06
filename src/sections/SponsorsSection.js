@@ -19,17 +19,17 @@ export default function SponsorsSection() {
               tier="gold"
             />
             <Sponsor
-              sponsor="IMCTrading.png"
-              url="https://www.imc.com/us/search-careers"
-              tier="bronze"
-            />
-            <Sponsor
               sponsor="OldMission.png"
               url="https://www.oldmissioncapital.com/careers/"
               tier="gold"
             />
           </div>
           <div className={styles.sponsors}>
+            <Sponsor
+              sponsor="IMCTrading.png"
+              url="https://www.imc.com/us/search-careers"
+              tier="bronze"
+            />
             <Sponsor
               sponsor="drw.png"
               url="https://drw.com/work-at-drw"
