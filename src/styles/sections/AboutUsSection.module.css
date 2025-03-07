@@ -97,6 +97,15 @@
   margin-left: rem;
 }
 
+.diversityLink {
+  color: var(--wcs-pink);
+  text-decoration: underline;
+}
+
+.diversityLink:hover {
+  color: var(--light-pink);
+}
+
 @media only screen and (max-width: 1160px) {
   .phoneContainer {
     display: none;
