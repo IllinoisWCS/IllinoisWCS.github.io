@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 5px;
+  gap: 10px;
   cursor: pointer;
   border: 7px solid var(--wcs-pink);
 }
@@ -27,7 +28,10 @@
   border-radius: 100%;
   height: 130px;
   width: 130px;
+  min-width: 130px;
+  min-height: 130px;
   object-fit: cover;
+  margin-top: 10px;
 }
 
 .name {
@@ -42,9 +46,16 @@
   color: #6dc7cc;
   position: relative;
   opacity: 0.7;
-  bottom: 16px;
   float: middle;
   font-size: 16px;
   place-items: center;
   margin: 0;
+}
+
+.namePosition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
 }
