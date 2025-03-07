@@ -167,35 +167,41 @@ export default function UpcomingEventsSection() {
                 onButtonClick={closeModal}
               >
                 <div className={styles2.outerModalContainer}>
-                  <div className={`${styles2.eventInfo} ${styles2.left}`}>
-                    <h4 className={styles2.title}>Drop In Services</h4>
-                    <ul className={styles2.bullets}>
-                      <li>Resume reviews</li>
-                      <li>Class help</li>
-                      <li>Schedule and four-year plan advice</li>
-                      <li>General advice or help</li>
-                      <li>Just a chat!</li>
-                    </ul>
-                    <h4 className={styles2.title}>Appointment Required</h4>
-                    <ul className={styles2.bullets}>
-                      <li>Technical interview prep</li>
-                      <li>Behavioral interview prep</li>
-                    </ul>
-                    <div className={styles.modalButton}>
-                      <Link href="/" onClick={closeModal}>
-                        <p>Make an Appointment</p>
-                      </Link>
-                      <Image
-                        src="/assets/design-vectors/pointer.svg"
-                        width={22}
-                        height={22}
-                        className={styles.modalCursor}
-                        alt="pointer"
-                      />
+                  <div className={`${styles2.modalPanel} ${styles2.left}`}>
+                    <div className={styles2.modalPanelDiv}>
+                      <h4 className={styles2.panelTitle}>Drop In Services</h4>
+                      <ul className={styles2.bullets}>
+                        <li>Resume reviews</li>
+                        <li>Class help</li>
+                        <li>Schedule and four-year plan advice</li>
+                        <li>General advice or help</li>
+                        <li>Just a chat!</li>
+                      </ul>
+                    </div>
+                    <div className={styles2.modalPanelDiv}>
+                      <h4 className={styles2.panelTitle}>
+                        Appointment Required
+                      </h4>
+                      <ul className={styles2.bullets}>
+                        <li>Technical interview prep</li>
+                        <li>Behavioral interview prep</li>
+                      </ul>
+                      <div className={styles.modalButton}>
+                        <Link href="/" onClick={closeModal}>
+                          <p>Make an Appointment</p>
+                        </Link>
+                        <Image
+                          src="/assets/design-vectors/pointer.svg"
+                          width={22}
+                          height={22}
+                          className={styles.modalCursor}
+                          alt="pointer"
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div className={styles2.eventInfo}>
-                    <h4 className={styles2.title}>Office Schedule</h4>
+                  <div className={styles2.modalPanel}>
+                    <h4 className={styles2.panelTitle}>Office Schedule</h4>
                     <p>Who&rsquo;s in today:</p>
                     <ul className={styles2.bullets}>
                       {day === 'Saturday' || day === 'Sunday' ? (
