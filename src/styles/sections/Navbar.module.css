@@ -53,7 +53,7 @@
 .bar {
   width: 25px;
   height: 3px;
-  background-color: #21636c;
+  background-color: black;
   margin: 5px 0;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
