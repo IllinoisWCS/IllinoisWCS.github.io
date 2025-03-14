@@ -202,9 +202,9 @@ export default function UpcomingEventsSection() {
                   </div>
                   <div className={styles2.modalPanel}>
                     <h4 className={styles2.panelTitle}>Office Schedule</h4>
-                    <p>Who&rsquo;s in today:</p>
+                    <p className={styles2.subtitle}>Who&rsquo;s in today:</p>
                     {day === 'Saturday' || day === 'Sunday' ? (
-                      <p className={styles2.noOpenOffice}>
+                      <p className={styles2.subtitle}>
                         No open office on weekends
                       </p>
                     ) : (

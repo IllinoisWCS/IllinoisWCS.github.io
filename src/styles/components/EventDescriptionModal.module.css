@@ -105,8 +105,8 @@
   flex-wrap: wrap;
 }
 
-.noOpenOffice {
-  margin: 1rem 0;
+.subtitle {
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -184,7 +184,7 @@
 
   .openOfficeList {
     max-height: 50%;
-    margin: 1rem auto;
+    margin: 0rem auto;
     align-items: flex-start;
   }
 
@@ -198,9 +198,14 @@
     width: 100%;
   }
 
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
   .bullets li,
   .openOfficeList li {
     font-size: 0.7rem;
+    margin-bottom: 0.2rem;
   }
 
   .panelTitle {
@@ -209,7 +214,6 @@
 
   .openOfficeList {
     width: fit-content;
-    margin: 0.5rem auto;
   }
 
   .modalPanel {
