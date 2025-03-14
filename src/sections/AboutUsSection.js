@@ -64,7 +64,7 @@ export default function AboutUsSection() {
               diversity, equity, and inclusion in the community. Read more about
               our stance and mission{' '}
               <a
-                href="https://file.notion.so/f/f/309da028-7a6e-4cc4-9bc5-43673f1e8e4a/573a07ca-af8c-4f37-a268-ffa2f40660ba/WCS_Commitment_to_Diversity_-_Google_Docs.pdf?table=block&id=1a7e552d-b9f2-8085-be44-e10a3d157c87&spaceId=309da028-7a6e-4cc4-9bc5-43673f1e8e4a&expirationTimestamp=1741478400000&signature=ikPwmthoggRegZIR2XY6ANT73rjBd2AQZqkIRXp5ogE&downloadName=WCS+Commitment+to+Diversity+-+Google+Docs.pdf"
+                href="/assets/WCS-Diversity-Statement.pdf"
                 className={styles.diversityLink}
               >
                 here
