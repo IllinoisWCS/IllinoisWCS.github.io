@@ -203,20 +203,20 @@ export default function UpcomingEventsSection() {
                   <div className={styles2.modalPanel}>
                     <h4 className={styles2.panelTitle}>Office Schedule</h4>
                     <p>Who&rsquo;s in today:</p>
-                    <ul className={styles2.bullets}>
-                      {day === 'Saturday' || day === 'Sunday' ? (
-                        <p>No open office on weekends</p>
-                      ) : (
-                        <>
-                          {uniqueOfficers.map((name, i) => (
-                            <li key={`officer-${i}`}>{name}</li>
-                          ))}
-                          {uniqueCommittees.map((name, i) => (
-                            <li key={`committee-${i}`}>{name}</li>
-                          ))}
-                        </>
-                      )}
-                    </ul>
+                    {day === 'Saturday' || day === 'Sunday' ? (
+                      <p className={styles2.noOpenOffice}>
+                        No open office on weekends
+                      </p>
+                    ) : (
+                      <ul className={`${styles2.openOfficeList}`}>
+                        {uniqueOfficers.map((name, i) => (
+                          <li key={`officer-${i}`}>{name}</li>
+                        ))}
+                        {uniqueCommittees.map((name, i) => (
+                          <li key={`committee-${i}`}>{name}</li>
+                        ))}
+                      </ul>
+                    )}
                     <div className={styles.modalButton}>
                       <Link href="/openoffice">
                         <p>Check out the Calendar</p>
