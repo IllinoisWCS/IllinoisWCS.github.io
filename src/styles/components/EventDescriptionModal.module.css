@@ -101,7 +101,6 @@
 .openOfficeList {
   display: flex;
   flex-direction: column;
-  align-items: space-between;
   flex-wrap: wrap;
 }
 
@@ -118,7 +117,6 @@
     display: flex;
     flex-direction: column;
     height: fit-content;
-    padding-bottom: 4rem;
     width: 70vw;
   }
 
@@ -152,11 +150,9 @@
   .closeButton2 {
     padding: 0.3rem 0.8rem;
     border-radius: 10px;
-    position: absolute;
-    align-self: center;
+    position: relative;
     transform: none;
-    margin: 0 auto 1rem;
-    bottom: 0;
+    margin: 0.5rem auto;
   }
 
   .bullets li,
@@ -181,11 +177,8 @@
   .eventInfo {
     gap: 0;
   }
-
   .openOfficeList {
-    max-height: 50%;
-    margin: 0rem auto;
-    align-items: flex-start;
+    max-height: 40vw;
   }
 
   .openOfficeList li {
@@ -210,10 +203,6 @@
 
   .panelTitle {
     font-size: 1rem;
-  }
-
-  .openOfficeList {
-    width: fit-content;
   }
 
   .modalPanel {

@@ -323,4 +323,9 @@
   .modalButton {
     padding: 0.5rem;
   }
+
+  .apptButton {
+    padding: 0;
+    width: 70%;
+  }
 }

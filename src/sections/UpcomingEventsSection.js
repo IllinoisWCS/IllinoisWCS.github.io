@@ -88,6 +88,7 @@ export default function UpcomingEventsSection() {
       setUniqueCommittees(committees);
     }
   }, [weekNum, week, day]);
+
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -186,7 +187,9 @@ export default function UpcomingEventsSection() {
                         <li>Technical interview prep</li>
                         <li>Behavioral interview prep</li>
                       </ul>
-                      <div className={styles.modalButton}>
+                      <div
+                        className={`${styles.modalButton} ${styles.apptButton}`}
+                      >
                         <Link href="/" onClick={closeModal}>
                           <p>Make an Appointment</p>
                         </Link>
