@@ -11,7 +11,6 @@
   grid-template-columns: 50% 0 50%;
   grid-template-rows: 1fr;
   max-height: 90svh;
-  padding: 1rem;
 }
 
 .window {
@@ -31,9 +30,20 @@
   flex: 1;
 }
 
-.title {
+.modalPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+.panelTitle {
   font-weight: normal;
   white-space: nowrap;
+}
+
+.title {
+  font-weight: normal;
 }
 
 .bullets {
@@ -88,54 +98,122 @@
   font-size: 1rem;
 }
 
-@media (max-width: 992px) {
-  .closeButton2 {
-    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
-  }
+.openOfficeList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
-  .closeButton2 p,
-  .bullets li {
-    font-size: 0.6rem;
-  }
-
-  .title {
-    font-size: 0.9rem;
-    margin: 0;
-  }
-
-  .container p {
-    font-size: 0.7rem;
-  }
-
-  .eventInfo {
-    padding: 2rem;
-  }
+.subtitle {
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
   .window {
     max-width: 95vw;
   }
+
+  .outerModalContainer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 70vw;
+  }
+
+  .modalPanel {
+    height: 50%;
+    padding: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .left {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .modalPanelDiv {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .panelTitle {
+    margin: 0.5rem auto;
+    white-space: normal;
+    text-align: center;
+  }
+
   .closeButton2 {
-    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
-    border-radius: 5px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 10px;
+    position: relative;
+    transform: none;
+    margin: 0.5rem auto;
   }
 
-  .closeButton2 p,
-  .bullets li {
-    font-size: 0.4rem;
+  .bullets li,
+  .openOfficeList li {
+    font-size: 2.5vw;
   }
 
-  .title {
-    font-size: 0.7rem;
-    margin: 0;
+  .bullets {
+    height: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    flex-wrap: wrap;
   }
 
-  .container p {
-    font-size: 0.4rem;
+  .left .bullets {
+    display: block;
+    height: fit-content;
   }
 
   .eventInfo {
     gap: 0;
+  }
+  .openOfficeList {
+    max-height: 40vw;
+  }
+
+  .openOfficeList li {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bullets {
+    width: 100%;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .bullets li,
+  .openOfficeList li {
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .panelTitle {
+    font-size: 1rem;
+  }
+
+  .modalPanel {
+    padding: 1rem 0.1rem;
+  }
+
+  .left {
+    align-items: flex-start;
+  }
+
+  .modalPanelDiv {
+    flex: 1;
   }
 }
