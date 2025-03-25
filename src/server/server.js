@@ -19,8 +19,8 @@ const moment = require('moment');
 // "find-config": "^1.0.0"
 
 app.use(cors());
-const PORT = 5000;
-const HOST = 'localhost';
+const PORT = 8080;
+const HOST = '0.0.0.0';
 
 const notion = new Client({
   auth: process.env.REACT_APP_NOTION_API_KEY,
