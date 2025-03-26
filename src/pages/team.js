@@ -1,15 +1,9 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
 import OfficerCard from '../components/OfficerCard';
 import officerData from '../data/officers.json';
 import committeeData from '../data/committees.json';
 import styles from '@/styles/pages/Team.module.css';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Team() {
   const committeeCaptions = [
@@ -21,83 +15,6 @@ export default function Team() {
     'Friendsgiving 2024',
     'Quad Day',
   ];
-
-  const [screenWidth, setScreenWidth] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-      setTimeout(() => ScrollTrigger.refresh(), 100);
-    };
-    setScreenWidth(window.innerWidth);
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const createAnimation = () => {
-      if (screenWidth <= 780) {
-        return;
-      }
-      const committeeInnerContainers = document.querySelectorAll(
-        `.${styles.outerContainer}`,
-      );
-
-      const committees = document.querySelectorAll(`.${styles.committee}`);
-      const imgContainers = document.querySelectorAll(
-        `.${styles.imgContainer}`,
-      );
-
-      committeeInnerContainers.forEach((container, index) => {
-        const committeeWidth = committees[index].offsetWidth;
-        const imgContainerWidth = imgContainers[index].offsetWidth;
-
-        if (index % 2 === 0) {
-          gsap.set(container, {
-            marginLeft: `${-(imgContainerWidth + 200 - screenWidth / 2 + committeeWidth / 2)}px`,
-          });
-          const newMarginLeft = screenWidth / 2 - imgContainerWidth / 2;
-          gsap.to(container, {
-            marginLeft: `${newMarginLeft}px`,
-            scrollTrigger: {
-              trigger: container,
-              start: '40% 80%',
-              end: '80% 70%',
-              scrub: true,
-              onUpdate: () => ScrollTrigger.update(),
-            },
-          });
-        } else {
-          gsap.set(container, {
-            marginLeft: `${screenWidth / 2 - committeeWidth / 2}px`,
-          });
-          // eslint-disable-next-line operator-linebreak
-          const newMarginLeft =
-            committeeWidth + 200 - screenWidth / 2 + imgContainerWidth / 2;
-          gsap.to(container, {
-            marginLeft: `-${newMarginLeft}px`,
-            scrollTrigger: {
-              trigger: container,
-              start: '50% 80%',
-              end: '55% 70%',
-              scrub: true,
-              onUpdate: () => ScrollTrigger.update(),
-            },
-          });
-        }
-      });
-    };
-
-    if (screenWidth <= 780) {
-      gsap.utils.toArray(`.${styles.outerContainer}`).forEach((container) => {
-        gsap.killTweensOf(container);
-        gsap.set(container, { clearProps: 'all' });
-      });
-    }
-    createAnimation();
-  }, [screenWidth]);
 
   const renderCommitteeSection = (
     position,
@@ -114,85 +31,37 @@ export default function Team() {
       // eslint-disable-next-line function-paren-newline
     );
 
-    if (position === 'Left' || screenWidth < 780) {
-      return (
-        <div
-          className={styles.outerContainer}
-          style={title === 'Marketing' ? { marginBottom: '0' } : {}}
-        >
-          <div className={styles.middleContainer}>
-            <div className={styles.innerContainer}>
-              <div className={styles.imgContainer}>
-                <img className={styles.img} src={image} alt={image} />
-                <div className={styles.imgCaption}>{caption}</div>
-              </div>
-              <div
-                className={`${styles[`committee${position}`]} ${styles.committee}`}
-              >
-                <ComputerWindow
-                  topbarColor="wcs-pink"
-                  className={styles.committeeWindow}
-                >
-                  <div className={styles.committeeDescription}>
-                    <h4>{title} Committee</h4>
-                    <p>{description}</p>
-                  </div>
-                </ComputerWindow>
-
-                <div className={styles.officerPics}>
-                  {officersList.map((officer, index) => (
-                    <OfficerCard
-                      key={index}
-                      name={officer.name}
-                      position={officer.position}
-                      netid={officer.netid}
-                      officer={officer}
-                      className={styles.officerCard}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
-    }
-
     return (
       <div className={styles.outerContainer}>
-        <div className={styles.middleContainer}>
-          <div className={styles.innerContainer}>
-            <div
-              className={`${styles[`committee${position}`]} ${styles.committee}`}
-            >
-              <ComputerWindow
-                topbarColor="wcs-pink"
-                className={styles.committeeWindow}
-              >
-                <div className={styles.committeeDescription}>
-                  <h4>{title} Committee</h4>
-                  <p>{description}</p>
-                </div>
-              </ComputerWindow>
+        <div
+          className={`${styles[`committee${position}`]} ${styles.committee}`}
+        >
+          <ComputerWindow
+            topbarColor="wcs-pink"
+            className={styles.committeeWindow}
+          >
+            <div className={styles.committeeDescription}>
+              <h4>{title} Committee</h4>
+              <p>{description}</p>
+            </div>
+          </ComputerWindow>
 
-              <div className={styles.officerPics}>
-                {officersList.map((officer, index) => (
-                  <OfficerCard
-                    key={index}
-                    name={officer.name}
-                    position={officer.position}
-                    netid={officer.netid}
-                    officer={officer}
-                    className={styles.officerCard}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className={styles.imgContainer}>
-              <img className={styles.img} src={image} alt={image} />
-              <div className={styles.imgCaption}>{caption}</div>
-            </div>
+          <div className={styles.officerPics}>
+            {officersList.map((officer, index) => (
+              <OfficerCard
+                key={index}
+                name={officer.name}
+                position={officer.position}
+                netid={officer.netid}
+                officer={officer}
+                className={styles.officerCard}
+              />
+            ))}
           </div>
+        </div>
+        <div className={styles.imgContainer}>
+          <img className={styles.img} src={image} alt={image} />
+          <div className={styles.imgCaption}>{caption}</div>
         </div>
       </div>
     );
