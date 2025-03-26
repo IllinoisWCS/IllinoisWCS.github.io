@@ -9,3 +9,9 @@
 .image {
   margin: 0 auto 0;
 }
+
+.text {
+  font-weight: normal;
+  margin-top: -6vh;
+  font-family: 'Roboto Mono';
+}

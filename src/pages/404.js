@@ -8,7 +8,7 @@ function Custom404() {
         alt="404"
         className={styles.image}
       />
-      <h3>This page could not be found.</h3>
+      <h5 className={styles.text}>This page could not be found.</h5>
     </div>
   );
 }
