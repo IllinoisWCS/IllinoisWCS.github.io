@@ -110,8 +110,8 @@ export default function Team() {
       (officer) =>
         // eslint-disable-next-line implicit-arrow-linebreak, operator-linebreak
         [`${title} Co-Chair`].includes(officer.position) ||
-        [`${title} Chair`].includes(officer.position),
-      // eslint-disable-next-line function-paren-newline
+        [`${title} Chair`].includes(officer.position) ||
+        [`${title.slice(0, 5)} Co-Chair`].includes(officer.position),
     );
 
     if (position === 'Left' || screenWidth < 780) {
