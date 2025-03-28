@@ -52,6 +52,9 @@ export default function WCSFooter() {
             />
           </Key>
         </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSddd_p3XFjAcTWoo8MBsMjLcTN1T6NXSuak7bCAeb5Fx7IsHQ/viewform">
+          <p>Report an incident.</p>
+        </a>
       </div>
     </div>
   );
