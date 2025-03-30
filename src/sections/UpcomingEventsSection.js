@@ -190,7 +190,10 @@ export default function UpcomingEventsSection() {
                       <div
                         className={`${styles.modalButton} ${styles.apptButton}`}
                       >
-                        <Link href="/" onClick={closeModal}>
+                        <Link
+                          href="https://docs.google.com/forms/d/e/1FAIpQLSdcSHnZdvpY5MjbdfkdfSMLHx_Mbm_hvBr9zk_b9dYbbG7nFQ/viewform?usp=sharing"
+                          onClick={closeModal}
+                        >
                           <p>Make an Appointment</p>
                         </Link>
                         <Image
