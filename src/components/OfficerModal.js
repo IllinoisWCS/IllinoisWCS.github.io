@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 
 import ComputerWindow from './general/ComputerWindowComponent';
 import styles from '@/styles/components/OfficerModal.module.css';
@@ -24,19 +23,6 @@ function OfficerInformation(
     linkedin,
   },
 ) {
-  const [screenWidth, setScreenWidth] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-    setScreenWidth(window.innerWidth);
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <div className={styles.container}>
       <ComputerWindow
@@ -88,34 +74,32 @@ function OfficerInformation(
             <div className={styles.right}>
               <h1 className={styles.title}>{name}</h1>
 
-              {screenWidth < 768 && (
-                <div className={styles.icons}>
-                  <div className={styles.email}>
-                    <a href={`mailto:${email}`}>
-                      <Key url={email}>
-                        <Image
-                          src="/assets/design-vectors/email.svg"
-                          alt="email"
-                          width="30"
-                          height="30"
-                        />
-                      </Key>
-                    </a>
-                  </div>
-                  <div className={styles.linkedin}>
-                    <a href={linkedin}>
-                      <Key url={linkedin}>
-                        <Image
-                          src="/assets/design-vectors/linkedin.svg"
-                          alt="linkedin"
-                          width="30"
-                          height="30"
-                        />
-                      </Key>
-                    </a>
-                  </div>
+              <div className={styles.iconsMobile}>
+                <div className={styles.email}>
+                  <a href={`mailto:${email}`}>
+                    <Key url={email}>
+                      <Image
+                        src="/assets/design-vectors/email.svg"
+                        alt="email"
+                        width="30"
+                        height="30"
+                      />
+                    </Key>
+                  </a>
                 </div>
-              )}
+                <div className={styles.linkedin}>
+                  <a href={linkedin}>
+                    <Key url={linkedin}>
+                      <Image
+                        src="/assets/design-vectors/linkedin.svg"
+                        alt="linkedin"
+                        width="30"
+                        height="30"
+                      />
+                    </Key>
+                  </a>
+                </div>
+              </div>
 
               <div className={styles.list}>
                 <p>

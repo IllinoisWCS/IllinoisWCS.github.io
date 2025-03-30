@@ -109,6 +109,10 @@
   gap: 2rem;
 }
 
+.iconsMobile {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .title {
     font-size: 1.5rem;
@@ -149,8 +153,7 @@
   }
 
   .icons {
-    justify-content: flex-start;
-    transform: scale(0.8);
+    display: none;
   }
 
   .title {
@@ -160,5 +163,15 @@
   .closeButton {
     width: fit-content;
     padding: 0 10vw;
+  }
+
+  .iconsMobile {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: flex-start;
+    transform: scale(0.8);
   }
 }
