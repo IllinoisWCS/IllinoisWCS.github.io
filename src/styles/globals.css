@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto Mono');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto Mono');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -8,13 +10,24 @@
   /* WCS Branding Colors */
   --wcs-pink: #e2626a;
   --wcs-blue: #69c7cb;
+
+  /* WCS Branding Colors */
+  --wcs-pink: #e2626a;
+  --wcs-blue: #69c7cb;
   --light-pink: #fdc8cc;
   --light-blue: #d1eeef;
   --light-light-pink: #fff8f9;
+  --light-light-blue: #f8fffe;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* WCS Branding Colors */
+    --wcs-pink: #e2626a;
+    --wcs-blue: #69c7cb;
+    --light-pink: #fdc8cc;
+    --light-blue: #b1f0f2;
+    --light-light-pink: #fff8f9;
     /* WCS Branding Colors */
     --wcs-pink: #e2626a;
     --wcs-blue: #69c7cb;
@@ -70,6 +83,18 @@ h3 {
   color: black;
   font-size: 30px;
   font-weight: normal;
+}
+
+h4 {
+  font-family: 'Roboto Mono';
+  font-size: 25px;
+  color: black;
+}
+
+h5 {
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: black;
 }
 
 h4 {
