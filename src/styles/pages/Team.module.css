@@ -86,11 +86,12 @@
 
 .imgCaption {
   background-color: var(--light-pink);
-  position: relative;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   padding: 1rem;
   border-radius: 20px;
-  width: fit-content;
-  margin: 1rem auto;
+  transform: translate(-30%, 80%);
 }
 
 .committeeLeft {
