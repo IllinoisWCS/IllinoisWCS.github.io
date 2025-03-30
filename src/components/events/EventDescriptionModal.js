@@ -13,7 +13,12 @@ function EventDescription(
           <p>{date}</p>
           <p>{time}</p>
           <p className={styles.location}>{location}</p>
-          <p className={styles.description}>{description}</p>
+          {description && (
+            <div
+              className={styles.description}
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+          )}
         </div>
         <button
           type="button"
