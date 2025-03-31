@@ -121,13 +121,13 @@
 }
 
 .openOfficeDay {
+  font-size: 10px;
   background-color: var(--wcs-pink);
   padding: 1% 0;
 }
 
 .openOfficeDay p {
   color: white;
-  font-size: 26px;
   font-weight: normal;
   width: fit-content;
   margin: auto;
@@ -195,7 +195,7 @@
   }
 
   .openOfficeCell p {
-    font-size: 12px;
+    font-size: 5px;
   }
 
   .space {
