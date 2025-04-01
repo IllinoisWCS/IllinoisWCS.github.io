@@ -25,6 +25,14 @@
   word-break: break-word;
 }
 
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
 .mentalhContainer {
   border-left: 10px;
   border-color: var(--light-pink);
@@ -61,6 +69,13 @@
   justify-content: space-between;
 }
 
+.changeContainer {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
 .resourceName:hover {
   color: var(--wcs-pink);
 }
@@ -84,4 +99,29 @@
 .resourceName:hover .dropdownIcon {
   filter: brightness(0) saturate(100%) invert(47%) sepia(57%) saturate(350%)
     hue-rotate(290deg) brightness(90%) contrast(95%);
+}
+
+.containerHeader {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.containerHeader h3 {
+  margin: 0;
+}
+
+@media (max-width: 1152px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+  }
 }
