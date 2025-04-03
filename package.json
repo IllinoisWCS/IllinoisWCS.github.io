@@ -23,7 +23,7 @@
     "express": "^4.21.2",
     "find-config": "^1.0.0",
     "moment": "^2.30.1",
-    "next": "^15.2.3",
+    "next": "^15.2.4",
     "react": "^18",
     "react-dom": "^18"
   },
