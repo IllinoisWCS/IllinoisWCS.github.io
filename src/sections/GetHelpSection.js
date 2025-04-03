@@ -25,6 +25,22 @@ export default function GetHelpSection() {
       return (
         <div className={styles.mentalhContainer}>
           <div className={styles.containerHeader}>
+            <button
+              type="button"
+              onClick={() => setContainerIndex(1)}
+              className={styles.changeContainer}
+            >
+              <Image
+                src="/assets/design-vectors/dropdown-arrow.svg"
+                alt="Dropdown icon"
+                width={18}
+                height={18}
+                className={styles.dropdownIcon}
+                style={{
+                  visibility: 'hidden',
+                }}
+              />
+            </button>
             <h3>Mental Health</h3>
             <button
               type="button"
@@ -158,6 +174,22 @@ export default function GetHelpSection() {
             />
           </button>
           <h3>Other</h3>
+          <button
+            type="button"
+            onClick={() => setContainerIndex(1)}
+            className={styles.changeContainer}
+          >
+            <Image
+              src="/assets/design-vectors/dropdown-arrow.svg"
+              alt="Dropdown icon"
+              width={18}
+              height={18}
+              className={styles.dropdownIcon}
+              style={{
+                visibility: 'hidden',
+              }}
+            />
+          </button>
         </div>
         {resourcesData[2].items.map((resource, index) => (
           <div key={index} className={styles.resourceItem}>

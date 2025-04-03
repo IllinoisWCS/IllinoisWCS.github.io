@@ -103,11 +103,14 @@
 
 .containerHeader {
   display: flex;
-  gap: 0.5rem;
+  justify-content: space-between;
+  width: 120%;
+  align-self: center;
 }
 
 .containerHeader h3 {
   margin: 0;
+  text-align: center;
 }
 
 @media (max-width: 1152px) {
