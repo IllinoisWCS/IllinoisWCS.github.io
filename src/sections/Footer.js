@@ -42,19 +42,21 @@ export default function WCSFooter() {
               />
             </Key>
           </div>
-          <Key url="https://docs.google.com/forms/d/e/1FAIpQLScLpzd9_t5pp-2H5pZlIsbRYvG2PjQMBHJLzXaDXo4gh-H52g/viewform">
-            <h4>Feedback</h4>
-            <Image
-              src="/assets/design-vectors/paper-plane.svg"
-              alt="feedback"
-              width="30"
-              height="30"
-            />
-          </Key>
+          <div className={styles.largeKeys}>
+            <Key url="https://docs.google.com/forms/d/e/1FAIpQLScLpzd9_t5pp-2H5pZlIsbRYvG2PjQMBHJLzXaDXo4gh-H52g/viewform">
+              <h4>Feedback</h4>
+              <Image
+                src="/assets/design-vectors/paper-plane.svg"
+                alt="feedback"
+                width="30"
+                height="30"
+              />
+            </Key>
+            <Key url="https://docs.google.com/forms/d/e/1FAIpQLSddd_p3XFjAcTWoo8MBsMjLcTN1T6NXSuak7bCAeb5Fx7IsHQ/viewform">
+              <h4>Report an Incident</h4>
+            </Key>
+          </div>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSddd_p3XFjAcTWoo8MBsMjLcTN1T6NXSuak7bCAeb5Fx7IsHQ/viewform">
-          <p>Report an incident.</p>
-        </a>
       </div>
     </div>
   );
