@@ -59,9 +59,18 @@ export default function AboutUsSection() {
             topbarColor="wcs-pink"
             showButtons={false}
           >
-            <p className={styles.diversityStatement}>
-              Blah blah diversity statement here
-            </p>
+            <div className={styles.diversityStatement}>
+              Women in Computer Science at UIUC is committed to promoting
+              diversity, equity, and inclusion in the community. Read more about
+              our stance and mission{' '}
+              <a
+                href="/assets/WCS-Diversity-Statement.pdf"
+                className={styles.diversityLink}
+              >
+                here
+              </a>
+              .
+            </div>
           </ComputerWindow>
         </div>
 
