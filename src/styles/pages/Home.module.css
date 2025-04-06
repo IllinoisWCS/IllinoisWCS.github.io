@@ -261,6 +261,10 @@
   font-size: 16px;
 }
 
+.sectionContainer:last-child {
+  margin-bottom: -20vw;
+}
+
 @media (max-width: 992px) {
   .modalButton p {
     font-size: 0.6rem;
