@@ -7,6 +7,7 @@ import StyledButton from '../components/StyledButton';
 import data from '../data/openOffice.json';
 import styles from '@/styles/pages/Home.module.css';
 import styles2 from '@/styles/components/EventDescriptionModal.module.css';
+import styles3 from '@/styles/components/UpcomingEvent.module.css';
 
 export default function UpcomingEventsSection() {
   const [events, setEvents] = useState([]);
