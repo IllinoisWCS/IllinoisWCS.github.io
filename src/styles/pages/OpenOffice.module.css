@@ -128,6 +128,7 @@
 
 .openOfficeDay p {
   color: white;
+  font-size: 26px;
   font-weight: normal;
   width: fit-content;
   margin: auto;
@@ -158,7 +159,7 @@
 }
 
 .openOfficeName p {
-  font-size: 18px;
+  font-size: 5px;
 }
 
 .space {
@@ -195,7 +196,7 @@
   }
 
   .openOfficeCell p {
-    font-size: 5px;
+    font-size: 12px;
   }
 
   .space {
