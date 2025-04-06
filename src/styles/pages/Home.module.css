@@ -262,7 +262,7 @@
 }
 
 .sectionContainer:last-child {
-  margin-bottom: -20vw;
+  margin-bottom: -6vw;
 }
 
 @media (max-width: 992px) {
