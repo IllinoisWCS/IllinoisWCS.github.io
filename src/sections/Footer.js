@@ -52,9 +52,7 @@ export default function WCSFooter() {
                 height="30"
               />
             </Key>
-            <Key url="https://docs.google.com/forms/d/e/1FAIpQLSddd_p3XFjAcTWoo8MBsMjLcTN1T6NXSuak7bCAeb5Fx7IsHQ/viewform">
-              <h4>Report an Incident</h4>
-            </Key>
+            
           </div>
         </div>
       </div>
