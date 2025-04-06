@@ -231,6 +231,7 @@
   border-radius: 10px;
   background-color: var(--light-pink);
   position: relative;
+  margin: 0 auto;
 }
 
 .modalButton p {
