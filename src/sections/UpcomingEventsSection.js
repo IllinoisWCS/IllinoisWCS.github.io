@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import EventsWindow from '../components/events/EventsWindow';
 import UpcomingEvent from '../components/events/UpcomingEvent';
@@ -185,13 +184,6 @@ export default function UpcomingEventsSection() {
                       <Link href="/" onClick={closeModal}>
                         <p>Make an Appointment</p>
                       </Link>
-                      <Image
-                        src="/assets/design-vectors/pointer.svg"
-                        width={22}
-                        height={22}
-                        className={styles.modalCursor}
-                        alt="pointer"
-                      />
                     </div>
                   </div>
                   <div className={styles2.eventInfo}>
@@ -215,13 +207,6 @@ export default function UpcomingEventsSection() {
                       <Link href="/openoffice">
                         <p>Check out the Calendar</p>
                       </Link>
-                      <Image
-                        src="/assets/design-vectors/pointer.svg"
-                        width={22}
-                        height={22}
-                        className={styles.modalCursor}
-                        alt="pointer"
-                      />
                     </div>
                   </div>
                   <button
