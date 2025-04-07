@@ -52,7 +52,6 @@ export default function WCSFooter() {
                 height="30"
               />
             </Key>
-            
           </div>
         </div>
       </div>
