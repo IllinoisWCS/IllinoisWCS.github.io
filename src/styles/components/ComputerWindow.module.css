@@ -37,12 +37,12 @@
 }
 
 .topbarGreenButton {
-  background-color: lime;
+  background-color: #62c755;
   left: 2.5rem;
 }
 
 .topbarRedButton {
-  background-color: red;
+  background-color: #ed6a5e;
   width: 0.5rem;
   height: 0.5rem;
   border: none;
@@ -52,6 +52,6 @@
 }
 
 .topbarYellowButton {
-  background-color: yellow;
+  background-color: #f5bf4f;
   left: 1.5rem;
 }
