@@ -1,6 +1,7 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto Mono');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
   --max-width: 1100px;
@@ -52,40 +53,39 @@ a {
 }
 
 h1 {
-  font-family: 'Roboto Mono';
-  font-weight: normal;
+  font-family: 'Zilla Slab', serif;
+  font-weight: bold;
   font-size: 48px;
   color: black;
 }
 
 h2 {
-  font-family: 'Roboto Mono';
-  font-weight: normal;
+  font-family: 'Zilla Slab', serif;
+  font-weight: bold;
   font-size: 32px;
   color: black;
 }
 
 h3 {
-  font-family: 'Roboto Mono';
+  font-family: 'Zilla Slab', serif;
   color: black;
   font-size: 30px;
-  font-weight: normal;
 }
 
 h4 {
-  font-family: 'Roboto Mono';
+  font-family: 'Zilla Slab', serif;
   font-size: 25px;
   color: black;
 }
 
 h5 {
-  font-family: 'Roboto';
+  font-family: 'Zilla Slab', serif;
   font-size: 16px;
   color: black;
 }
 
 p {
-  font-family: 'Roboto';
+  font-family: 'Nunito', sans-serif;
   font-weight: normal;
   font-size: 20px;
   margin-bottom: 0;
@@ -97,7 +97,7 @@ ul {
 }
 
 li {
-  font-family: 'Roboto';
+  font-family: 'Nunito', sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: black;
