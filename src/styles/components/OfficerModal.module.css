@@ -22,7 +22,6 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  background-color: blue;
 }
 
 .officerInfo {
@@ -67,7 +66,7 @@
   height: 3rem;
   border: none;
   border-radius: 1rem;
-  color: #21636c;
+  color: black;
   background-color: var(--light-pink);
   font-weight: 700;
   font-size: 16px;
@@ -87,9 +86,8 @@
 .photo {
   border-radius: 100%;
   object-fit: cover;
-  max-width: 100%;
-  width: 250px;
-  height: 250px;
+  width: 18vw;
+  height: 18vw;
   border: 6px solid #65c7cc;
   border-radius: 100%;
 }
@@ -106,11 +104,74 @@
 .icons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
 }
 
-.email {
-  padding-right: 1rem;
+.iconsMobile {
+  display: none;
 }
-.linkedin {
-  padding-left: 1rem;
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .list p {
+    font-size: 1rem;
+  }
+
+  .right,
+  .left {
+    padding: 1rem;
+  }
+
+  .left {
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .columnContainer {
+    flex-direction: column;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .closeButton {
+    width: fit-content;
+    padding: 0 10vw;
+  }
+
+  .iconsMobile {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: flex-start;
+    transform: scale(0.8);
+  }
 }

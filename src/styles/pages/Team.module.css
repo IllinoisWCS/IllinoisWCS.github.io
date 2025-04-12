@@ -52,21 +52,14 @@
 }
 
 .outerContainer {
-  height: 200vh;
+  height: fit-content;
   width: 100vw;
   position: relative;
-  margin-bottom: 400px;
-}
-
-.innerContainer {
+  margin-bottom: 250px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: fit-content;
-  position: sticky;
-  top: calc(50vh - 250px);
-  gap: 200px;
-  height: 500px;
+  gap: 2rem;
 }
 
 .committee {
@@ -91,18 +84,12 @@
   position: relative;
 }
 
-.middleContainer {
-  position: relative;
-  height: 100%;
-}
-
 .imgCaption {
   background-color: var(--light-pink);
   position: absolute;
   left: 0;
   bottom: 0;
   padding: 1rem;
-
   border-radius: 20px;
   transform: translate(-30%, 80%);
 }
@@ -193,22 +180,6 @@
     gap: 2rem;
     width: 100%;
     height: fit-content;
-  }
-
-  .innerContainer {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    height: fit-content;
-    top: 0;
-  }
-
-  .middleContainer {
-    height: fit-content;
-    width: 100%;
   }
 
   .outerContainer {
