@@ -262,7 +262,7 @@ export default function UpcomingEventsSection() {
             window.location.href = '/past-events';
           }}
         >
-          <h2 className={styles.pastEventsButtonText}>View our Past Events</h2>
+          <h3 className={styles.pastEventsButtonText}>View our Past Events</h3>
         </StyledButton>
       </div>
     </div>

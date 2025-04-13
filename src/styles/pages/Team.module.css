@@ -30,9 +30,8 @@
   align-items: center;
 }
 
-.subHeader h3 {
+.subHeader h2 {
   margin: 1rem;
-  font-weight: 300;
   font-size: 32px;
 }
 

@@ -80,7 +80,7 @@ export default function Team() {
         alt="team"
       />
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
-        <h3>Executive Board</h3>
+        <h2>Executive Board</h2>
       </ComputerWindow>
 
       <div className={styles.cards}>
@@ -108,7 +108,7 @@ export default function Team() {
       </div>
 
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
-        <h3 id="committeeHeader">Committees</h3>
+        <h2 id="committeeHeader">Committees</h2>
       </ComputerWindow>
 
       {committeeData.map(
