@@ -8,8 +8,8 @@
   /* WCS Branding Colors */
   --wcs-pink: #e2626a;
   --wcs-blue: #69c7cb;
-  --light-pink: #ffd6d9;
-  --light-blue: #d1eeef;
+  --light-pink: #efa9ae;
+  --light-blue: #a4dddf;
   --light-light-pink: #fff8f9;
 }
 
@@ -38,6 +38,11 @@ body {
 body {
   background-color: #ffd6d9;
   overflow-x: hidden;
+}
+
+header,
+footer {
+  background-color: #ffd6d9;
 }
 
 a {
