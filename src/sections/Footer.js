@@ -17,15 +17,16 @@ export default function WCSFooter() {
         <h2>Stay In Touch with WCS:</h2>
         <div className={styles.keysContainer}>
           <div className={styles.socialMediaIcons}>
-            <Key url="http://www.instagram.com/illinoiswcs">
+            <Key url="http://www.instagram.com/illinoiswcs" tooltip="Instagram">
               <Image
                 src="/assets/design-vectors/instagram.svg"
                 alt="instagram"
                 width="30"
                 height="30"
+              
               />
             </Key>
-            <Key url="https://join.slack.com/t/wcs-uiuc/shared_invite/zt-1tut8j6pi-51ilAwG8CNmYNolsQP25ew">
+            <Key url="https://join.slack.com/t/wcs-uiuc/shared_invite/zt-1tut8j6pi-51ilAwG8CNmYNolsQP25ew" tooltip="Slack">
               <Image
                 src="/assets/design-vectors/slack.svg"
                 alt="slack"
@@ -33,7 +34,7 @@ export default function WCSFooter() {
                 height="30"
               />
             </Key>
-            <Key url="mailto:illinoiswcs@gmail.com">
+            <Key url="mailto:illinoiswcs@gmail.com" tooltip="Email">
               <Image
                 src="/assets/design-vectors/email.svg"
                 alt="email"
@@ -42,7 +43,7 @@ export default function WCSFooter() {
               />
             </Key>
           </div>
-          <Key url="mailto:contact@illinoiswcs.org">
+          <Key url="mailto:contact@illinoiswcs.org" tooltip="Feedback">
             <h4>Ask a question</h4>
             <Image
               src="/assets/design-vectors/paper-plane.svg"
