@@ -74,7 +74,7 @@ export default function Team() {
       </ComputerWindow>
       <Image
         className={styles.teamPic}
-        src="/assets/img/committees/team.jpg"
+        src="/assets/img/committees/newteam.JPG"
         width={600}
         height={400}
         alt="team"
