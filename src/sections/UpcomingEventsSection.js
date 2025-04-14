@@ -8,7 +8,6 @@ import StyledButton from '../components/StyledButton';
 import data from '../data/openOffice.json';
 import styles from '@/styles/pages/Home.module.css';
 import styles2 from '@/styles/components/EventDescriptionModal.module.css';
-import styles3 from '@/styles/components/UpcomingEvent.module.css';
 
 export default function UpcomingEventsSection() {
   const [events, setEvents] = useState([]);
@@ -200,7 +199,7 @@ export default function UpcomingEventsSection() {
                     <p>Who&rsquo;s in today:</p>
                     <ul className={styles2.bullets}>
                       {day === 'Saturday' || day === 'Sunday' ? (
-                        <li className={styles3.weekendfont}>
+                        <li className={styles2.weekendfont}>
                           {' '}
                           No open office on weekends
                         </li>
