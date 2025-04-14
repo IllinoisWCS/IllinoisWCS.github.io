@@ -35,6 +35,10 @@
   padding: 1rem;
 }
 
+.windowContent h1 {
+  margin: 0;
+}
+
 .computerWindowContainer {
   align-self: center;
   padding: 0rem;

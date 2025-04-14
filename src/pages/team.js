@@ -70,7 +70,7 @@ export default function Team() {
   return (
     <div className={styles.main}>
       <ComputerWindow className={styles.title} showButtons={false}>
-        <h2>Our Team</h2>
+        <h1>Our Team</h1>
       </ComputerWindow>
       <Image
         className={styles.teamPic}
