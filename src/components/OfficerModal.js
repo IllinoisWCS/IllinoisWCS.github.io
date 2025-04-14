@@ -46,7 +46,7 @@ function OfficerInformation(
               <div className={styles.icons}>
                 <div className={styles.email}>
                   <a href={`mailto:${email}`}>
-                    <Key url={email}>
+                    <Key url={email} tooltip="Email">
                       <Image
                         src="/assets/design-vectors/email.svg"
                         alt="email"
@@ -58,7 +58,7 @@ function OfficerInformation(
                 </div>
                 <div className={styles.linkedin}>
                   <a href={linkedin}>
-                    <Key url={linkedin}>
+                    <Key url={linkedin} tooltip="LinkedIn">
                       <Image
                         src="/assets/design-vectors/linkedin.svg"
                         alt="linkedin"
