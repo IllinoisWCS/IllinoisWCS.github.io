@@ -1,3 +1,5 @@
+import parse from 'html-react-parser';
+import DOMPurify from 'dompurify';
 import ComputerWindow from '../general/ComputerWindowComponent';
 import styles from '@/styles/components/EventDescriptionModal.module.css';
 
@@ -5,6 +7,8 @@ function EventDescription(
   { title, date, time, location, description },
   closeModal,
 ) {
+  const cleanDescription = description ? DOMPurify.sanitize(description) : '';
+
   return (
     <div className={styles.container}>
       <ComputerWindow className={styles.window} onButtonClick={closeModal}>
@@ -13,7 +17,9 @@ function EventDescription(
           <p>{date}</p>
           <p>{time}</p>
           <p className={styles.location}>{location}</p>
-          <p className={styles.description}>{description}</p>
+          {cleanDescription && (
+            <div className={styles.description}>{parse(cleanDescription)}</div>
+          )}
         </div>
         <button
           type="button"

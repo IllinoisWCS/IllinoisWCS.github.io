@@ -46,6 +46,37 @@ function OfficerInformation(
               <div className={styles.icons}>
                 <div className={styles.email}>
                   <a href={`mailto:${email}`}>
+                    <Key url={email} tooltip="Email">
+                      <Image
+                        src="/assets/design-vectors/email.svg"
+                        alt="email"
+                        width="30"
+                        height="30"
+                      />
+                    </Key>
+                  </a>
+                </div>
+                <div className={styles.linkedin}>
+                  <a href={linkedin}>
+                    <Key url={linkedin} tooltip="LinkedIn">
+                      <Image
+                        src="/assets/design-vectors/linkedin.svg"
+                        alt="linkedin"
+                        width="30"
+                        height="30"
+                      />
+                    </Key>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.right}>
+              <h1 className={styles.title}>{name}</h1>
+
+              <div className={styles.iconsMobile}>
+                <div className={styles.email}>
+                  <a href={`mailto:${email}`}>
                     <Key url={email}>
                       <Image
                         src="/assets/design-vectors/email.svg"
@@ -69,10 +100,6 @@ function OfficerInformation(
                   </a>
                 </div>
               </div>
-            </div>
-
-            <div className={styles.right}>
-              <h1 className={styles.title}>{name}</h1>
 
               <div className={styles.list}>
                 <p>
