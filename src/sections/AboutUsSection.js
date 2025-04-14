@@ -60,16 +60,18 @@ export default function AboutUsSection() {
             showButtons={false}
           >
             <div className={styles.diversityStatement}>
-              Women in Computer Science at UIUC is committed to promoting
-              diversity, equity, and inclusion in the community. Read more about
-              our stance and mission{' '}
-              <a
-                href="/assets/WCS-Diversity-Statement.pdf"
-                className={styles.diversityLink}
-              >
-                here
-              </a>
-              .
+              <p>
+                Women in Computer Science at UIUC is committed to promoting
+                diversity, equity, and inclusion in the community. Read more
+                about our stance and mission{' '}
+                <a
+                  href="/assets/WCS-Diversity-Statement.pdf"
+                  className={styles.diversityLink}
+                >
+                  here
+                </a>
+                .
+              </p>
             </div>
           </ComputerWindow>
         </div>
