@@ -43,15 +43,18 @@ export default function WCSFooter() {
               />
             </Key>
           </div>
-          <Key url="mailto:contact@illinoiswcs.org" tooltip="Feedback">
-            <h4>Ask a question</h4>
-            <Image
-              src="/assets/design-vectors/paper-plane.svg"
-              alt="email"
-              width="30"
-              height="30"
-            />
-          </Key>
+          <div className={styles.largeKeys}>
+            <Key url="https://docs.google.com/forms/d/e/1FAIpQLScLpzd9_t5pp-2H5pZlIsbRYvG2PjQMBHJLzXaDXo4gh-H52g/viewform" tooltip="Feedback">
+              <h4>Feedback</h4>
+              <Image
+                src="/assets/design-vectors/paper-plane.svg"
+                alt="feedback"
+                width="30"
+                height="30"
+              />
+            </Key>
+          </div>
+
         </div>
       </div>
     </div>

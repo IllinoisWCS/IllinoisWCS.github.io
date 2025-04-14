@@ -32,6 +32,12 @@ export default function Resources() {
       <ExternalOpportunitiesSection />
 
       <h2 className={`${styles.header}`}>Get Help</h2>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSddd_p3XFjAcTWoo8MBsMjLcTN1T6NXSuak7bCAeb5Fx7IsHQ/viewform"
+        style={{ textDecoration: 'underline' }}
+      >
+        <p>Report an incident here</p>
+      </a>
       <GetHelpSection />
     </main>
   );

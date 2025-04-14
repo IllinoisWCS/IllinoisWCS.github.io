@@ -1,10 +1,23 @@
 .wrapper {
   cursor: auto;
+  overflow: visible;
 }
 
 .wrapperCanClick {
   cursor: pointer;
   position: relative;
+  overflow: visible;
+}
+
+.wrapperCanClick::after {
+  content: '';
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: -0.125rem;
+  bottom: -0.125rem;
+  pointer-events: none;
+  overflow: visible;
 }
 
 .container {
@@ -47,4 +60,5 @@
   bottom: -0.5rem;
   pointer-events: none;
   background-image: url('/assets/design-vectors/pointer.svg');
+  z-index: 100;
 }

@@ -26,6 +26,11 @@
   gap: 3rem;
 }
 
+.largeKeys {
+  display: flex;
+  gap: 3rem;
+}
+
 .binaryContainer {
   position: relative;
   width: 100%;
