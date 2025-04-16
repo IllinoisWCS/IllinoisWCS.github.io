@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import OfficerCard from '../components/OfficerCard';
 import officerData from '../data/officers.json';
 import committeeData from '../data/committees.json';
@@ -60,7 +59,7 @@ export default function Team() {
           </div>
         </div>
         <div className={styles.imgContainer}>
-          <Image className={styles.img} src={image} alt={image} />
+          <img className={styles.img} src={image} alt={image} />
           <div className={styles.imgCaption}>{caption}</div>
         </div>
       </div>
@@ -72,11 +71,9 @@ export default function Team() {
       <ComputerWindow className={styles.title} showButtons={false}>
         <h1>Our Team</h1>
       </ComputerWindow>
-      <Image
+      <img
         className={styles.teamPic}
-        src="/assets/img/committees/team.jpg"
-        width={600}
-        height={400}
+        src="/assets/img/committees/board.jpg"
         alt="team"
       />
       <ComputerWindow className={styles.subHeader} showTopbar={false}>

@@ -146,7 +146,7 @@
 
 .openOfficeCell {
   text-align: center;
-  background-color: #f6cbce;
+  background-color: var(--light-pink);
   padding: 1rem;
   white-space: nowrap;
 }
@@ -158,7 +158,7 @@
 }
 
 .openOfficeName p {
-  font-size: 5px;
+  font-size: 12px;
 }
 
 .space {

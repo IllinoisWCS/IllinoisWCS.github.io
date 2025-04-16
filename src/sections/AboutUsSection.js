@@ -79,7 +79,7 @@ export default function AboutUsSection() {
         <div className={`${styles.phoneContainer}`}>
           <PhoneComponent>
             <Image
-              src="/assets/img/committees/newteam.JPG"
+              src="/assets/img/home-page/newteam.JPG"
               alt="corporate retreat 22-23"
               height={475}
               width={353}

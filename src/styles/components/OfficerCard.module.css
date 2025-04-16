@@ -15,7 +15,7 @@
 
 .container:hover {
   background-color: var(--light-light-pink);
-  border: 2px solid #f6cbce;
+  border: 2px solid var(--light-pink);
   border-width: 7px;
   font-weight: bold;
   color: #f5f5f5;

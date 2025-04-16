@@ -13,7 +13,7 @@
 }
 
 .button {
-  background-color: #f6cbce;
+  background-color: var(--light-pink);
   border-color: #f65563;
   position: relative;
   border-style: solid;

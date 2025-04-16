@@ -7,6 +7,8 @@ function Custom404() {
       <Image
         src="/assets/img/other/404/image.png"
         alt="404"
+        width={360}
+        height={284}
         className={styles.image}
       />
       <h5 className={styles.text}>This page could not be found.</h5>
