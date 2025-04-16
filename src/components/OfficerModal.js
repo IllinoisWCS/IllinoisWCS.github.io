@@ -45,28 +45,24 @@ function OfficerInformation(
 
               <div className={styles.icons}>
                 <div className={styles.email}>
-                  <a href={`mailto:${email}`}>
-                    <Key url={email} tooltip="Email">
-                      <Image
-                        src="/assets/design-vectors/email.svg"
-                        alt="email"
-                        width="30"
-                        height="30"
-                      />
-                    </Key>
-                  </a>
+                  <Key url={`mailto:${email}`} tooltip="Email">
+                    <Image
+                      src="/assets/design-vectors/email.svg"
+                      alt="email"
+                      width="30"
+                      height="30"
+                    />
+                  </Key>
                 </div>
                 <div className={styles.linkedin}>
-                  <a href={linkedin}>
-                    <Key url={linkedin} tooltip="LinkedIn">
-                      <Image
-                        src="/assets/design-vectors/linkedin.svg"
-                        alt="linkedin"
-                        width="30"
-                        height="30"
-                      />
-                    </Key>
-                  </a>
+                  <Key url={linkedin} tooltip="LinkedIn">
+                    <Image
+                      src="/assets/design-vectors/linkedin.svg"
+                      alt="linkedin"
+                      width="30"
+                      height="30"
+                    />
+                  </Key>
                 </div>
               </div>
             </div>
@@ -76,28 +72,24 @@ function OfficerInformation(
 
               <div className={styles.iconsMobile}>
                 <div className={styles.email}>
-                  <a href={`mailto:${email}`}>
-                    <Key url={email}>
-                      <Image
-                        src="/assets/design-vectors/email.svg"
-                        alt="email"
-                        width="30"
-                        height="30"
-                      />
-                    </Key>
-                  </a>
+                  <Key url={`mailto:${email}`}>
+                    <Image
+                      src="/assets/design-vectors/email.svg"
+                      alt="email"
+                      width="30"
+                      height="30"
+                    />
+                  </Key>
                 </div>
                 <div className={styles.linkedin}>
-                  <a href={linkedin}>
-                    <Key url={linkedin}>
-                      <Image
-                        src="/assets/design-vectors/linkedin.svg"
-                        alt="linkedin"
-                        width="30"
-                        height="30"
-                      />
-                    </Key>
-                  </a>
+                  <Key url={linkedin}>
+                    <Image
+                      src="/assets/design-vectors/linkedin.svg"
+                      alt="linkedin"
+                      width="30"
+                      height="30"
+                    />
+                  </Key>
                 </div>
               </div>
 
