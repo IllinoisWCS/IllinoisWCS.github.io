@@ -1,9 +1,10 @@
+import Image from 'next/image';
 import styles from '@/styles/pages/404.module.css';
 
 function Custom404() {
   return (
     <div className={styles.container}>
-      <img
+      <Image
         src="/assets/img/other/404/image.png"
         alt="404"
         className={styles.image}

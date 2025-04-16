@@ -23,10 +23,12 @@ export default function WCSFooter() {
                 alt="instagram"
                 width="30"
                 height="30"
-              
               />
             </Key>
-            <Key url="https://join.slack.com/t/wcs-uiuc/shared_invite/zt-1tut8j6pi-51ilAwG8CNmYNolsQP25ew" tooltip="Slack">
+            <Key
+              url="https://join.slack.com/t/wcs-uiuc/shared_invite/zt-1tut8j6pi-51ilAwG8CNmYNolsQP25ew"
+              tooltip="Slack"
+            >
               <Image
                 src="/assets/design-vectors/slack.svg"
                 alt="slack"
@@ -44,7 +46,10 @@ export default function WCSFooter() {
             </Key>
           </div>
           <div className={styles.largeKeys}>
-            <Key url="https://docs.google.com/forms/d/e/1FAIpQLScLpzd9_t5pp-2H5pZlIsbRYvG2PjQMBHJLzXaDXo4gh-H52g/viewform" tooltip="Feedback">
+            <Key
+              url="https://docs.google.com/forms/d/e/1FAIpQLScLpzd9_t5pp-2H5pZlIsbRYvG2PjQMBHJLzXaDXo4gh-H52g/viewform"
+              tooltip="Feedback"
+            >
               <h4>Feedback</h4>
               <Image
                 src="/assets/design-vectors/paper-plane.svg"
@@ -54,7 +59,6 @@ export default function WCSFooter() {
               />
             </Key>
           </div>
-
         </div>
       </div>
     </div>
