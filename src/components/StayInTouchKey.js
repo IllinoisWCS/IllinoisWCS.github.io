@@ -27,7 +27,7 @@ export default function Key({ children, url, tooltip }) {
           </div>
         </div>
       </button>
-      {tooltip && <span className={styles.tooltipText}>{tooltip}</span>}
+      {tooltip && <p className={styles.tooltipText}>{tooltip}</p>}
     </div>
   );
 }

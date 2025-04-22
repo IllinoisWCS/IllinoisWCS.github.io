@@ -54,7 +54,6 @@
   display: flex;
   flex-direction: column;
   padding: 0rem;
-  color: var(--wcs-pink);
   width: 100%;
   margin-bottom: 2rem;
 }

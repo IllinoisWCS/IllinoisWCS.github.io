@@ -28,13 +28,13 @@
 .points {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
-.medium img,
-.points img {
+.medium .externalLink,
+.points .externalLink {
   margin-left: 6px;
   transform: translateY(-5px);
+  width: 20px;
 }
 
 .linksContainer h3:hover {
@@ -91,7 +91,17 @@
 }
 
 .activeLink {
+  font-family: 'Zilla Slab', serif;
+  color: black;
+  font-size: 30px;
   text-decoration: underline;
+}
+
+.unactiveLink {
+  font-family: 'Zilla Slab', serif;
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 820px) {

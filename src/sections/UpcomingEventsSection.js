@@ -202,7 +202,7 @@ export default function UpcomingEventsSection() {
                     <h4 className={styles2.panelTitle}>Office Schedule</h4>
                     <p className={styles2.subtitle}>Who&rsquo;s in today:</p>
                     {day === 'Saturday' || day === 'Sunday' ? (
-                      <p className={styles2.subtitle}>
+                      <p className={styles2.weekendfont}>
                         No open office on weekends
                       </p>
                     ) : (

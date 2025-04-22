@@ -60,7 +60,7 @@ export default function Team() {
         </div>
         <div className={styles.imgContainer}>
           <img className={styles.img} src={image} alt={image} />
-          <div className={styles.imgCaption}>{caption}</div>
+          <p className={styles.imgCaption}>{caption}</p>
         </div>
       </div>
     );

@@ -13,8 +13,11 @@ function NavLink({ href, label }) {
   const isActive = router.pathname === href;
 
   return (
-    <Link href={href}>
-      <h3 className={`${isActive ? styles.activeLink : ''}`}>{label}</h3>
+    <Link
+      href={href}
+      className={`${isActive ? styles.activeLink : styles.unactiveLink}`}
+    >
+      {label}
     </Link>
   );
 }
@@ -63,6 +66,7 @@ export default function WCSNavbar() {
           <NavLink href="https://illinoiswcs.medium.com/" label="Medium" />
           <Link href="https://illinoiswcs.medium.com/">
             <Image
+              className={styles.externalLink}
               src="/assets/design-vectors/externallink.svg"
               alt="extlink"
               width="25"
@@ -75,6 +79,7 @@ export default function WCSNavbar() {
           <NavLink href="https://points.illinoiswcs.org/" label="Points" />
           <Link href="https://points.illinoiswcs.org/">
             <Image
+              className={styles.externalLink}
               src="/assets/design-vectors/externallink.svg"
               alt="extlink"
               width="25"

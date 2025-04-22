@@ -18,6 +18,7 @@
   border-left: black solid 1px;
   border-right: black solid 1px;
   border-top: black solid 1px;
+  z-index: 1;
 }
 
 .keyRight {
@@ -29,19 +30,20 @@
 .keyRight::before {
   content: '';
   position: absolute;
-  right: 0;
+  right: -1.5px;
   top: 5px;
   width: 0;
-  height: calc(100% - 15px);
-  border-right: 10px solid var(--light-pink);
+  height: calc(100% - 30px);
+  border-right: 12px solid var(--light-pink);
   border-top: 6px solid transparent;
   border-bottom: 10px solid transparent;
+  z-index: 0;
 }
 
 .keyRight::after {
   content: '';
   position: absolute;
-  right: 0;
+  right: -1.5px;
   top: 5px;
   width: 0;
   height: calc(100% - 15px);
@@ -60,15 +62,18 @@
   border-left: black solid 1px;
   border-right: black solid 1px;
   border-bottom: black solid 1px;
+  z-index: 1;
 }
 
 .keyBody {
+  position: relative;
   margin: 5px 10px 10px 0;
   padding: 1rem;
   background-color: var(--light-pink);
   color: #734448;
   overflow: hidden;
   border: black solid 1px;
+  z-index: 2;
 }
 
 .keyTop:hover::before {
@@ -76,7 +81,7 @@
 }
 
 .keyTop:hover .keyRight::before {
-  border-right: 10px solid var(--wcs-pink);
+  border-right: 12px solid var(--wcs-pink);
 }
 
 .keyTop:hover .keyBottom::before {
@@ -85,7 +90,6 @@
 
 .keyTop:hover .keyBody {
   background-color: var(--wcs-pink);
-  color: #ffe3f2;
 }
 
 .keyTop:active::before {
@@ -138,9 +142,10 @@
 }
 
 .tooltipText {
+  z-index: 10;
   content: '';
   position: absolute;
-  bottom: -1rem;
+  bottom: -1.25rem;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.8);
