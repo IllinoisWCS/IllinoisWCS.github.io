@@ -67,6 +67,7 @@
   border-bottom: 1px solid var(--light-pink);
   transition: color 0.3s ease;
   justify-content: space-between;
+  color: black;
 }
 
 .changeContainer {
