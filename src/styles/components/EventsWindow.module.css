@@ -1,38 +1,41 @@
 .wrapper {
   cursor: auto;
+  overflow: visible;
 }
 
 .wrapperCanClick {
   cursor: pointer;
   position: relative;
+  overflow: visible;
 }
 
 .wrapperCanClick::after {
   content: '';
   width: 22px;
   height: 22px;
-  background-image: url('/assets/design-vectors/pointer.svg');
   position: absolute;
   right: -0.125rem;
   bottom: -0.125rem;
   pointer-events: none;
+  overflow: visible;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 0.25rem;
   margin: 1rem;
-  min-width: fit-content;
   aspect-ratio: 1.5;
   color: #21636c;
+  width: 280px;
+  height: 220px;
 }
 
 .eventButton {
   padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 20px;
   position: relative;
   max-width: 200px;
 }
@@ -45,4 +48,17 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  font-size: 16px;
+}
+
+.eventButton::after {
+  content: '';
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: -0.5rem;
+  bottom: -0.5rem;
+  pointer-events: none;
+  background-image: url('/assets/design-vectors/pointer.svg');
+  z-index: 100;
 }

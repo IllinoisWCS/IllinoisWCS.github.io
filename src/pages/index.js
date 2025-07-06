@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import { Inter } from 'next/font/google';
 
 import AboutUsSection from '../sections/AboutUsSection';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
-import StayInTouchSection from '../sections/StayInTouchSection';
 import SponsorsSection from '../sections/SponsorsSection';
 import UpcomingEventsSection from '../sections/UpcomingEventsSection';
 
@@ -97,24 +95,8 @@ export default function Home() {
           </ComputerWindow>
         )}
 
-        <h1 className={styles.title}>Illinois Women in Computer Science</h1>
-        <div className={`${styles.windowContainer}`}>
-          <div className={`${styles.windowGrid}`}>
-            <ComputerWindow>
-              <Image
-                className={`${styles.windowImage}`}
-                src="/assets/img/home-page/committees23-24.jpg"
-                width={0}
-                height={0}
-                sizes="100wv"
-                alt="wcs committee photo"
-              />
-            </ComputerWindow>
-          </div>
-        </div>
         <AboutUsSection />
         <UpcomingEventsSection />
-        <StayInTouchSection />
         <SponsorsSection />
       </main>
     </>

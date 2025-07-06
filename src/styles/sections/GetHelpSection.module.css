@@ -1,36 +1,48 @@
+.window {
+  margin-top: 4rem;
+}
+
 .container {
   display: flex;
   flex-direction: row;
   width: 70em;
+  min-width: 0;
+}
+
+.mentalhContainer,
+.academicContainer,
+.otherContainer {
+  display: flex;
+  flex-direction: column;
+  /* Fixed equal width with no shrinking */
+  width: calc(70em / 3);
+  flex: 0 0 calc(70em / 3);
+  /* Keep your existing padding */
+  padding: 2em;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
 }
 
 .mentalhContainer {
-  display: flex;
-  flex-grow: 0;
-  flex-direction: column;
-
   border-left: 10px;
   border-color: var(--light-pink);
   background-color: var(--light-light-pink);
-  padding: 2em;
-}
-
-.academicContainer {
-  display: flex;
-  flex-grow: 0;
-  flex-direction: column;
-  padding: 2em;
 }
 
 .otherContainer {
-  display: flex;
-  flex-grow: 0;
-  flex-direction: column;
-
   border-right: 10px;
   border-color: var(--light-pink);
   background-color: var(--light-light-pink);
-  padding: 2em;
 }
 
 .resourceItem {
@@ -40,9 +52,80 @@
 
 .resourceText {
   font-size: small;
+  font-size: 1em;
 }
 
 .resourceName {
-  font-size: small;
-  text-decoration: underline;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--light-pink);
+  transition: color 0.3s ease;
+  justify-content: space-between;
+  color: black;
+}
+
+.changeContainer {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.resourceName:hover {
+  color: var(--wcs-pink);
+}
+
+.dropdownContent {
+  margin-top: 0.5em;
+  padding: 0.5em;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.dropdownIcon {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.resourceName:hover .dropdownIcon {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(57%) saturate(350%)
+    hue-rotate(290deg) brightness(90%) contrast(95%);
+}
+
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 120%;
+  align-self: center;
+}
+
+.containerHeader h3 {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 1152px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+  }
 }

@@ -1,3 +1,14 @@
+.window h1 {
+  margin: 1rem;
+  text-align: center;
+}
+
+.window {
+  text-align: center;
+  margin: 1rem auto 0;
+  width: 100%;
+}
+
 .descriptionContainer {
   display: flex;
 }

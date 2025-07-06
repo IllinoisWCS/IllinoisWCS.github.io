@@ -1,17 +1,92 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import EventsWindow from '../components/events/EventsWindow';
-import PhoneComponent from '../components/general/PhoneComponent';
 import UpcomingEvent from '../components/events/UpcomingEvent';
-
+import StyledButton from '../components/StyledButton';
+import data from '../data/openOffice.json';
 import styles from '@/styles/pages/Home.module.css';
 import styles2 from '@/styles/components/EventDescriptionModal.module.css';
 
 export default function UpcomingEventsSection() {
   const [events, setEvents] = useState([]);
+  const [week, setWeek] = useState('week1');
+  const [weekNum, setWeekNum] = useState(0);
+  const [uniqueOfficers, setUniqueOfficers] = useState([]);
+  const [uniqueCommittees, setUniqueCommittees] = useState([]);
+  const [day, setDay] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const shortenName = (name) => {
+    const tokens = name.split(' ');
+    return `${tokens[0]} ${tokens[1][0]}.`;
+  };
+
+  useEffect(() => {
+    const currentDate = new Date();
+    const startDate = new Date(currentDate.getFullYear(), 0, 1);
+    const days = Math.floor(currentDate - startDate) / (1000 * 60 * 60 * 24);
+    const weekNumber = Math.ceil(days / 7);
+    if (weekNumber % 2 === 1) {
+      setWeek('week2');
+      setWeekNum(1);
+    }
+    const dayNames = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ];
+    setDay(dayNames[currentDate.getDay()]);
+  }, [day]);
+  useEffect(() => {
+    const getUniqueNames = (rows, officer) => {
+      const uniqueNames = new Set();
+      if (officer) {
+        rows.forEach(({ officers }) => {
+          officers.forEach(
+            (name) =>
+              // eslint-disable-next-line implicit-arrow-linebreak
+              uniqueNames.add(`${shortenName(name)} (Officer)`),
+            // eslint-disable-next-line function-paren-newline
+          );
+        });
+      } else {
+        rows.forEach(({ committees }) => {
+          committees.forEach((name) => uniqueNames.add(shortenName(name)));
+        });
+      }
+
+      return Array.from(uniqueNames);
+    };
+
+    if (weekNum !== null && week && day) {
+      // eslint-disable-next-line operator-linebreak
+      const filteredData =
+        data[weekNum]?.[week]?.filter(({ heading }) => heading === day) || [];
+      if (filteredData.length === 0) {
+        setUniqueOfficers([]);
+        setUniqueCommittees([]);
+        return;
+      }
+      const officers = filteredData.flatMap(
+        ({ rows }) =>
+          // eslint-disable-next-line implicit-arrow-linebreak
+          getUniqueNames(rows, true),
+        // eslint-disable-next-line function-paren-newline
+      );
+      const committees = filteredData.flatMap(
+        ({ rows }) =>
+          // eslint-disable-next-line implicit-arrow-linebreak
+          getUniqueNames(rows, false),
+        // eslint-disable-next-line function-paren-newline
+      );
+      setUniqueOfficers(officers);
+      setUniqueCommittees(committees);
+    }
+  }, [weekNum, week, day]);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -19,6 +94,7 @@ export default function UpcomingEventsSection() {
         // eslint-disable-next-line operator-linebreak
         const eventsUrl =
           'https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
+
         const res = await fetch(eventsUrl);
         const { events: fetchedEvents } = await res.json();
         setEvents(
@@ -35,10 +111,7 @@ export default function UpcomingEventsSection() {
               };
               const date = startDate.toLocaleDateString('en-US', dateOptions);
 
-              const timeOptions = {
-                hour: 'numeric',
-                minute: '2-digit',
-              };
+              const timeOptions = { hour: 'numeric', minute: '2-digit' };
               const start = startDate.toLocaleTimeString('en-US', timeOptions);
               const end = endDate.toLocaleTimeString('en-US', timeOptions);
 
@@ -59,124 +132,116 @@ export default function UpcomingEventsSection() {
     fetchEvents();
   }, []);
 
-  const [showModal, setShowModal] = useState(false);
-
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   return (
     <div className={styles.sectionContainer}>
       <h2 className={styles.header}>Upcoming Events</h2>
-      <p>
-        <a
-          href="https://calendar.google.com/calendar/u/6?cid=M2MyOGdwcHJjbm9zMHEyNTFvZG5sODc3bWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Click <u>here</u> to get a copy of the WCS calendar.
-        </a>
-      </p>
       <div className={styles.upcomingEventSection}>
         <div className={styles.eventContainer}>
           <button
             type="button"
             onClick={openModal}
-            className={`${styles.hiddenButton}`}
+            className={styles.hiddenButton}
           >
             <EventsWindow
               location="Siebel CS 0211"
-              topbarColor="#FB79C3"
-              buttonColor="#FFCEE7"
+              topbarColor="wcs-pink"
+              buttonColor="var(--light-pink)"
               hasDescription
+              className={styles.openOffice}
             >
-              <p className={styles.eventText}>
-                Come to our office to chat, ask questions, or just study!
-              </p>
-              <p
-                className={styles.eventText}
-                style={{ textDecoration: 'underline' }}
-              >
-                Click to learn more!
-              </p>
+              <h3 style={{ margin: '0' }}>Open Office</h3>
+              <div className={styles.dateTime}>
+                <p>Mon-Fri</p>
+                <p>2:00 PM - 5:00 PM</p>
+              </div>
             </EventsWindow>
           </button>
           {showModal && (
             <div className={styles2.container}>
-              <ComputerWindow className={styles2.window} topbarColor="#FB79C3">
-                <div className={styles2.eventInfo}>
-                  <h3 className={styles2.title}>Open Office</h3>
-                  <div className={styles.modalContainer}>
-                    <div className={styles.modalContainerLeft}>
-                      <div className={styles.modalSection}>
-                        <h3
-                          style={{
-                            textAlign: 'center',
-                          }}
-                        >
-                          Open Office happens Monday-Friday from 2-5 PM in the
-                          WCS Office!
-                        </h3>
-                        <div className={styles.modalButton}>
-                          <Link href="/openoffice">
-                            <p>View the open office calendar!</p>
-                          </Link>
-                        </div>
-                      </div>
-                      <div className={styles.modalSection}>
-                        <h3>Drop by for:</h3>
-                        <ul>
-                          <li>Resume reviews</li>
-                          <li>Class help</li>
-                          <li>Schedule and four year plan advice</li>
-                          <li>General advice or help</li>
-                          <li>Just a chat!</li>
-                        </ul>
-                      </div>
-                      {/* <div className={styles.modalSection}>
-                        <h3>Appointment Required</h3>
-                        <ul>
-                          <li>Technical interview prep</li>
-                          <li>Behavioral interview prep</li>
-                        </ul>
-                        <a className={styles.modalButton}>
-                          <p>Make an appointment!</p>
-                        </a>
-                      </div> */}
+              <ComputerWindow
+                className={styles2.window}
+                topbarColor="wcs-pink"
+                onButtonClick={closeModal}
+              >
+                <div className={styles2.outerModalContainer}>
+                  <div className={`${styles2.modalPanel} ${styles2.left}`}>
+                    <div className={styles2.modalPanelDiv}>
+                      <h4 className={styles2.panelTitle}>Drop In Services</h4>
+                      <ul className={styles2.bullets}>
+                        <li>Resume reviews</li>
+                        <li>Class help</li>
+                        <li>Schedule and four-year plan advice</li>
+                        <li>General advice or help</li>
+                        <li>Just a chat!</li>
+                      </ul>
                     </div>
-                    <div className={styles.modalPhone}>
-                      <PhoneComponent>
-                        <Image
-                          src="/assets/img/open-office/explorations-painting-social.jpg"
-                          height={475}
-                          width={594}
-                          alt="explorations painting social"
-                        />
-                      </PhoneComponent>
+                    <div className={styles2.modalPanelDiv}>
+                      <h4 className={styles2.panelTitle}>
+                        Appointment Required
+                      </h4>
+                      <ul className={styles2.bullets}>
+                        <li>Technical interview prep</li>
+                        <li>Behavioral interview prep</li>
+                      </ul>
+                      <div
+                        className={`${styles.modalButton} ${styles.apptButton}`}
+                      >
+                        <Link
+                          href="https://docs.google.com/forms/d/e/1FAIpQLSdcSHnZdvpY5MjbdfkdfSMLHx_Mbm_hvBr9zk_b9dYbbG7nFQ/viewform?usp=sharing"
+                          onClick={closeModal}
+                        >
+                          <p>Make an Appointment</p>
+                        </Link>
+                      </div>
                     </div>
                   </div>
+                  <div className={styles2.modalPanel}>
+                    <h4 className={styles2.panelTitle}>Office Schedule</h4>
+                    <p className={styles2.subtitle}>Who&rsquo;s in today:</p>
+                    {day === 'Saturday' || day === 'Sunday' ? (
+                      <p className={styles2.weekendfont}>
+                        No open office on weekends
+                      </p>
+                    ) : (
+                      <ul className={`${styles2.openOfficeList}`}>
+                        {uniqueOfficers.map((name, i) => (
+                          <li key={`officer-${i}`}>{name}</li>
+                        ))}
+                        {uniqueCommittees.map((name, i) => (
+                          <li key={`committee-${i}`}>{name}</li>
+                        ))}
+                      </ul>
+                    )}
+                    <div className={styles.modalButton}>
+                      <Link href="/openoffice">
+                        <p>Check out the Calendar</p>
+                      </Link>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={closeModal}
+                    className={styles2.closeButton2}
+                  >
+                    <p>Close</p>
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  className={styles2.closeButton2}
-                >
-                  Close
-                </button>
               </ComputerWindow>
             </div>
           )}
-
           {events.length === 0 ? (
-            <ComputerWindow>
-              <p className={`${styles.noEvents} ${styles.eventText}`}>
-                No upcoming events this week. Check again next week!
-              </p>
-            </ComputerWindow>
+            <EventsWindow
+              topbarColor="wcs-blue"
+              buttonColor="var(--light-blue)"
+              className={styles.noEvents}
+            >
+              <div className={`${styles.noEvents} ${styles.eventText}`}>
+                <p>No upcoming events this week. Check again next week!</p>
+              </div>
+            </EventsWindow>
           ) : (
             events.map(
               ({ title, date, time, location, description }, index) => (
@@ -192,6 +257,13 @@ export default function UpcomingEventsSection() {
             )
           )}
         </div>
+        <StyledButton
+          onClick={() => {
+            window.location.href = '/past-events';
+          }}
+        >
+          <h3 className={styles.pastEventsButtonText}>View our Past Events</h3>
+        </StyledButton>
       </div>
     </div>
   );

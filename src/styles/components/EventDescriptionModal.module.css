@@ -1,5 +1,4 @@
 .container {
-  width: 100svw;
   height: 100svh;
   position: fixed;
   inset: 0;
@@ -7,38 +6,55 @@
   background-color: rgba(10, 10, 10, 0.6);
 }
 
+.outerModalContainer {
+  display: grid;
+  grid-template-columns: 50% 0 50%;
+  grid-template-rows: 1fr;
+  max-height: 90svh;
+}
+
 .window {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 90svw;
-  width: max-content;
+  align-items: stretch;
+  overflow-y: auto;
 }
 
 .eventInfo {
-  padding: 1rem 5svw 1rem 5svw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  max-height: 85svh;
+  align-items: flex-start;
+  padding: 3rem;
+  flex: 1;
 }
 
-.eventInfo p {
-  /* font-weight: 400; */
+.modalPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+.panelTitle {
+  font-weight: normal;
+  white-space: nowrap;
 }
 
 .title {
-  margin-bottom: 1rem;
-  font-size: 36px;
-  font-weight: 700;
-  color: #21636c;
+  font-weight: normal;
+}
+
+.bullets {
+  text-align: left;
+}
+
+.left {
+  background-color: var(--light-light-pink);
 }
 
 .location {
-  margin-bottom: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -53,6 +69,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 15;
+  margin-top: 1rem;
 }
 
 .closeButton {
@@ -66,11 +83,142 @@
 }
 
 .closeButton2 {
-  width: 100%;
-  height: 3rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 10px;
   border: none;
-  color: #21636c;
-  background-color: #ffcee7;
-  font-weight: 700;
+  background-color: var(--light-pink);
+  min-width: fit-content;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  transform: translate(-50%, -50%);
+}
+
+.closeButton2 p {
+  font-size: 1rem;
+}
+
+.openOfficeList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 0em;
+}
+
+.weekendfont {
   font-size: 16px;
+}
+
+.subtitle {
+  margin-bottom: 0rem;
+}
+
+@media (max-width: 768px) {
+  .window {
+    max-width: 95vw;
+  }
+
+  .outerModalContainer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 70vw;
+  }
+
+  .modalPanel {
+    height: 50%;
+    padding: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .left {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .modalPanelDiv {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .panelTitle {
+    margin: 0.5rem auto;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .closeButton2 {
+    padding: 0.3rem 0.8rem;
+    border-radius: 10px;
+    position: relative;
+    transform: none;
+    margin: 0.5rem auto;
+  }
+
+  .bullets li,
+  .openOfficeList li {
+    font-size: 2.5vw;
+  }
+
+  .bullets {
+    height: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    flex-wrap: wrap;
+  }
+
+  .left .bullets {
+    display: block;
+    height: fit-content;
+  }
+
+  .eventInfo {
+    gap: 0;
+  }
+  .openOfficeList {
+    max-height: 40vw;
+  }
+
+  .openOfficeList li {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bullets {
+    width: 100%;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .bullets li,
+  .openOfficeList li {
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .panelTitle {
+    font-size: 1rem;
+  }
+
+  .modalPanel {
+    padding: 1rem 0.1rem;
+  }
+
+  .left {
+    align-items: flex-start;
+  }
+
+  .modalPanelDiv {
+    flex: 1;
+  }
 }

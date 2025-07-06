@@ -7,7 +7,7 @@ export default function Cloud({ color, size }) {
   let lightColor;
   let darkColor;
   if (color === 'pink') {
-    lightColor = '#FDC8CC';
+    lightColor = '#efa9ae';
     darkColor = '#F65563';
   } else {
     lightColor = '#B1F0F2';

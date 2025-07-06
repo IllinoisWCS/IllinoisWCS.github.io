@@ -29,8 +29,10 @@ export default function OfficerCard({ name, position, netid, officer }) {
           height={200}
           alt={officer}
         />
-        <h2 className={`${styles.name}`}>{name}</h2>
-        <p className={`${styles.position}`}>{position}</p>
+        <div className={styles.namePosition}>
+          <h4 className={`${styles.name}`}>{name}</h4>
+          <p className={`${styles.position}`}>{position}</p>
+        </div>
       </button>
 
       <OfficerModal isOpen={show} closeModal={closeModal} officer={officer} />

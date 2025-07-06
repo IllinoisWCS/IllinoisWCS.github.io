@@ -1,20 +1,3 @@
-.grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;
-  background-image: url('/assets/design-vectors/grid.svg');
-  background-size: 32rem;
-  width: fit-content;
-  height: 8rem;
-}
-
-@media only screen and (max-width: 786px) {
-  .grid {
-    height: 6rem;
-  }
-}
-
 .keyTop {
   position: relative;
   background: none;
@@ -25,7 +8,7 @@
 
 .keyTop::before {
   content: '';
-  background-color: #ffcee7;
+  background-color: var(--light-pink);
   width: calc(100% - 10px);
   height: 6px;
   position: absolute;
@@ -35,6 +18,7 @@
   border-left: black solid 1px;
   border-right: black solid 1px;
   border-top: black solid 1px;
+  z-index: 1;
 }
 
 .keyRight {
@@ -46,19 +30,20 @@
 .keyRight::before {
   content: '';
   position: absolute;
-  right: 0;
+  right: -1.5px;
   top: 5px;
   width: 0;
-  height: calc(100% - 15px);
-  border-right: 10px solid #ffcee7;
+  height: calc(100% - 30px);
+  border-right: 12px solid var(--light-pink);
   border-top: 6px solid transparent;
   border-bottom: 10px solid transparent;
+  z-index: 0;
 }
 
 .keyRight::after {
   content: '';
   position: absolute;
-  right: 0;
+  right: -1.5px;
   top: 5px;
   width: 0;
   height: calc(100% - 15px);
@@ -67,7 +52,7 @@
 
 .keyBottom::before {
   content: '';
-  background-color: #ffcee7;
+  background-color: var(--light-pink);
   width: calc(100% - 10px);
   height: 10px;
   position: absolute;
@@ -77,42 +62,34 @@
   border-left: black solid 1px;
   border-right: black solid 1px;
   border-bottom: black solid 1px;
-}
-
-.keyBody h3 {
-  margin: 0 0 4px 0;
+  z-index: 1;
 }
 
 .keyBody {
+  position: relative;
   margin: 5px 10px 10px 0;
-  padding: 0 0.75rem;
-  background-color: #ffcee7;
+  padding: 1rem;
+  background-color: var(--light-pink);
   color: #734448;
   overflow: hidden;
   border: black solid 1px;
-}
-
-@media only screen and (max-width: 786px) {
-  .keyBody {
-    background-size: auto 3.85rem;
-  }
+  z-index: 2;
 }
 
 .keyTop:hover::before {
-  background-color: #ff7cc0;
+  background-color: var(--wcs-pink);
 }
 
 .keyTop:hover .keyRight::before {
-  border-right: 10px solid #ff7cc0;
+  border-right: 12px solid var(--wcs-pink);
 }
 
 .keyTop:hover .keyBottom::before {
-  background-color: #ff7cc0;
+  background-color: var(--wcs-pink);
 }
 
 .keyTop:hover .keyBody {
-  background-color: #ff7cc0;
-  color: #ffe3f2;
+  background-color: var(--wcs-pink);
 }
 
 .keyTop:active::before {
@@ -139,21 +116,52 @@
 }
 
 .content {
-  padding: 0 2rem 0 2rem;
   text-align: center;
   font-size: 48px;
-  font-weight: 400;
+  font-weight: normal;
   color: inherit;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
 }
 
-@media only screen and (max-width: 786px) {
-  .content {
-    font-size: 31px;
-    padding: 0 1rem 0 1rem;
-  }
+.content h4 {
+  font-size: 24px;
+  font-weight: normal;
 }
 
 .keyLeft:active .content {
   transform: translate(8px, 3px);
+}
+.tooltipWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipText {
+  z-index: 10;
+  content: '';
+  position: absolute;
+  bottom: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.tooltipWrapper:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
 }

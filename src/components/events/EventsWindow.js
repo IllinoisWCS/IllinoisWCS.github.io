@@ -3,8 +3,8 @@ import styles from '@/styles/components/EventsWindow.module.css';
 
 export default function EventsWindow({
   children,
-  topbarColor = '#65C7CC',
-  buttonColor = '#CBEDFF',
+  topbarColor = 'var(--wcs-blue)',
+  buttonColor = 'var(--light-blue)',
   location,
   hasDescription,
 }) {
@@ -12,7 +12,7 @@ export default function EventsWindow({
     <div className={hasDescription ? styles.wrapperCanClick : styles.wrapper}>
       <ComputerWindow topbarColor={topbarColor}>
         <div className={styles.container}>
-          <div>{children}</div>
+          {children}
           {location && location.length && (
             <div
               className={styles.eventButton}

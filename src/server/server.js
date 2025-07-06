@@ -26,8 +26,9 @@ const notion = new Client({
   auth: process.env.REACT_APP_NOTION_API_KEY,
 });
 
-// returns category
-const getType = (properties) => properties.Type.multi_select[0].name;
+// // returns category : switch this out when using the actual board!!
+// const getType = (properties) =>  properties.Type.multi_select[0].name;
+const getType = (properties) => properties.Type.select.name;
 
 //  returns name/title of opportunity
 const getName = (properties) => {
@@ -85,7 +86,7 @@ async function filterRecentOpportunities(data) {
 
 app.get('/external-opps-api', jsonParser, async (req, res) => {
   const results = await notion.databases.query({
-    database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
+    database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
   });
 
   const filteredRes = await filterRecentOpportunities(results.results);
