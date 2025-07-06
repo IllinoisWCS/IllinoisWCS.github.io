@@ -11,7 +11,7 @@ function ResourcesNotLoaded() {
 
       <div className={styles.cloudText}>
         <p>
-          We&apos;re having trouble right now.
+          Coming soon!
           <br />
           Please visit{' '}
           <a
