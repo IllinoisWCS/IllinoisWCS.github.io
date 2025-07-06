@@ -88,6 +88,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: 'Create env file'
+        run: |
+          touch .env
+          echo "REACT_APP_NOTION_API_KEY=${{ secrets.REACT_APP_NOTION_API_KEY }}" >> .env
+          echo "REACT_APP_NOTION_DATABASE_ID=${{ secrets.REACT_APP_NOTION_DATABASE_ID }}" >> .env
+          cat .env
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

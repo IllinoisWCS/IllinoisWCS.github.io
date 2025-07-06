@@ -9,6 +9,7 @@
   --light-pink: #efa9ae;
   --light-blue: #a4dddf;
   --light-light-pink: #fff8f9;
+  --light-light-blue: #f8fffe;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,8 +84,8 @@ p {
   font-family: 'Nunito', sans-serif;
   font-weight: normal;
   font-size: 20px;
+  color: #21636c;
   margin-bottom: 0;
-  color: black;
 }
 
 ul {
