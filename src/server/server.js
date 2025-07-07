@@ -11,24 +11,17 @@ const app = express();
 
 const moment = require('moment');
 
-// "@notionhq/client": "^2.2.15",
-// "body-parser": "^1.20.3",
-// "cors": "^2.8.5",
-// "dotenv": "^16.4.5",
-// "express": "^4.21.1",
-// "find-config": "^1.0.0"
-
 app.use(cors());
 const PORT = 5000;
-const HOST = 'localhost';
+const HOST = '142.93.180.182';
 
 const notion = new Client({
   auth: process.env.REACT_APP_NOTION_API_KEY,
 });
 
 // // returns category : switch this out when using the actual board!!
-// const getType = (properties) =>  properties.Type.multi_select[0].name;
-const getType = (properties) => properties.Type.select.name;
+const getType = (properties) => properties.Type.multi_select[0].name;
+// const getType = (properties) => properties.Type.select.name;
 
 //  returns name/title of opportunity
 const getName = (properties) => {
@@ -86,7 +79,7 @@ async function filterRecentOpportunities(data) {
 
 app.get('/external-opps-api', jsonParser, async (req, res) => {
   const results = await notion.databases.query({
-    database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
+    database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
   });
 
   const filteredRes = await filterRecentOpportunities(results.results);

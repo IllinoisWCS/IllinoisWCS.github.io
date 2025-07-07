@@ -24,7 +24,7 @@ export default function ExternalOpportunitiesSection() {
   //   You can use the map function to iterate through the opportunities.
 
   useEffect(() => {
-    fetch('http://localhost:5000/external-opps-api')
+    fetch('http://142.93.180.182:5000/external-opps-api')
       .then((response) => response.json())
       .then((data) => {
         setOpportunities(data);
