@@ -1,5 +1,10 @@
 require('dotenv').config();
 
+const fs = require('fs');
+// creates https server with ssl certificate
+const https = require('https');
+//  creates http server for redirecting to https
+const http = require('http');
 const express = require('express');
 
 const { Client } = require('@notionhq/client');
@@ -12,12 +17,8 @@ const app = express();
 const moment = require('moment');
 
 app.use(cors());
-const PORT = 5000;
-const HOST = '142.93.180.182';
 
-const notion = new Client({
-  auth: process.env.REACT_APP_NOTION_API_KEY,
-});
+const notion = new Client({ auth: process.env.REACT_APP_NOTION_API_KEY });
 
 // // returns category : switch this out when using the actual board!!
 const getType = (properties) => properties.Type.multi_select[0].name;
@@ -101,4 +102,28 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   res.json(tempRes);
 });
 
-app.listen(PORT, HOST, () => {});
+// https server setup
+// reads sssl certificate files issued by let's encrypt
+const privateKey = fs.readFileSync(
+  '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
+  'utf8',
+);
+const certificate = fs.readFileSync(
+  '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
+  'utf8',
+);
+const credentials = { key: privateKey, cert: certificate };
+
+//  creates https server with express app and ssl credentials
+const httpsServer = https.createServer(credentials, app);
+
+httpsServer.listen(443);
+
+// redirects all http requests to http
+const httpApp = express();
+
+httpApp.use((req, res) => {
+  res.redirect(`https://${req.headers.host}${req.url}`);
+});
+
+http.createServer(httpApp).listen(80);
