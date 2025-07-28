@@ -32,15 +32,15 @@
     },
     {
       "name": "Karen Gao",
-      "year": "",
-      "major": "",
+      "year": "Masters",
+      "major": "Computer Science",
       "position": "Secretary",
-      "place": "",
+      "place": "Fremont, California",
       "involvements": "",
-      "interests": "",
-      "hobbies": "",
-      "fact": "",
-      "advice": "",
+      "interests": "AI / Machine Learning, data visualization",
+      "hobbies": "Volleyball, Ice Skating, Drawing",
+      "fact": "I am (slightly) addicted to coffee.",
+      "advice": "Don't deny yourself the chance to try!",
       "email": "karenyg2@illinois.edu",
       "netid": "karenyg2",
       "linkedin": ""
@@ -48,7 +48,7 @@
     {
       "name": "Michelle Sun",
       "year": "Junior",
-      "major": "",
+      "major": "Computer Science",
       "position": "Treasurer",
       "place": "Peoria, Illinois",
       "involvements": "Illini Blockchain",
@@ -62,15 +62,15 @@
     },
     {
       "name": "Shagun Khare",
-      "year": "Sophomore",
-      "major": "",
+      "year": "",
+      "major": "Computer Science",
       "position": "Corporate Co-Chair",
-      "place": "Peoria, Illinois",
-      "involvements": "Illini Blockchain",
-      "interests": "Fintech, API Software Engineering, ML",
-      "hobbies": "Running, Scrapbooking, Traveling with family",
-      "fact": "I've been in cross country and track for 7 years!",
-      "advice": "Try out as many new things as you can without over-committing yourself! You get to meet so many new people and gain amazing experiences.",
+      "place": "",
+      "involvements": "",
+      "interests": "",
+      "hobbies": "",
+      "fact": "",
+      "advice": "",
       "email": "",
       "netid": "",
       "linkedin": ""
@@ -80,12 +80,12 @@
       "year": "Sophomore",
       "major": "",
       "position": "Corporate Co-Chair",
-      "place": "Arlington Heights, Illinois",
-      "involvements": "Founders Illinois Entrepreneurs, Illini Strings",
-      "interests": "SWE, Human Computer Interactions, AI/ML",
-      "hobbies": "Hiking, swimming, anything outdoors!",
-      "fact": "My favorite book is The Little Prince",
-      "advice": "Say yes more! Being open to new things will bring you either a great experience or good story to tell :)",
+      "place": "",
+      "involvements": "",
+      "interests": "",
+      "hobbies": "",
+      "fact": "",
+      "advice": "",
       "email": "hazellu2@illinois.edu",
       "netid": "hazellu2",
       "linkedin": ""
@@ -156,19 +156,19 @@
       "major": "Computer Science + Linguistics",
       "position": "Infra Co-Chair",
       "place": "San Ramon, CA",
-      "involvements": "PrairieLearn, WCS, R|P, The Global Leaders Program",
+      "involvements": "PrairieLearn, WCS, R|P, ATLAS, The Global Leaders Program",
       "interests": "Web Development, Natural Language Processing, Game Development",
-      "hobbies": "writing, art",
+      "hobbies": "Writing, Drawing, Reading Webtoons",
       "fact": "I once performed in an opera!",
-      "advice": "",
+      "advice": "As you delve deeper into your areas of interest, make sure to appreciate how far you've come already!",
       "email": "kirthis2@illinois.edu",
       "netid": "kirthis2",
-      "linkedin": "https://www.linkedin.com/in/kirthi-shankar/"
+      "linkedin": "https://www.linkedin.com/in/kirthi-shankar-20497b227/"
     },
     {
       "name": "Shivi Narang",
       "year": "Sophomore",
-      "major": "",
+      "major": "CS + Bioengineering",
       "position": "Mentoring Co-Chair",
       "place": "Fremont, California",
       "involvements": "Women in CS, CS STARS, Biomedical Engineering Society (BMES)",
@@ -178,7 +178,7 @@
       "advice": "Taking care of your mental and physical health is key to surviving in college—make sure to find a support system of good friends who lift you up and don’t hesitate to reach out when you need help. Building those connections early will make your college experience much more manageable and rewarding.",
       "email": "shivin2@illinois.edu",
       "netid": "shivin2",
-      "linkedin": ""
+      "linkedin": "https://www.linkedin.com/in/shivinarang17/"
     },
     {
       "name": "Aditi Kumar",
@@ -198,7 +198,7 @@
     {
       "name": "Rachel Chen",
       "year": "Sophomore",
-      "major": "",
+      "major": "Computer Science",
       "position": "Outreach Co-Chair",
       "place": "Aurora, IL",
       "involvements": "RUF, CS 128 Course Assistant",
@@ -208,7 +208,7 @@
       "advice": "Find yourself a good community and don't be afraid to try new things!",
       "email": "rmchen3@illinois.edu",
       "netid": "rmchen3",
-      "linkedin": ""
+      "linkedin": "https://www.linkedin.com/in/rachel-chen10/"
     },
     {
       "name": "Hiral Palakurty",
@@ -238,12 +238,12 @@
       "advice": "It’s easy to fall into the trap of comparing yourself to others in our field. Remember to make time to recognize and celebrate the fact that your voice and perspective are uniquely valuable to the conversation.",
       "email": "jluribe2@illinois.edu",
       "netid": "jluribe2",
-      "linkedin": ""
+      "linkedin": "https://www.linkedin.com/in/jazmin-uribe-847b03328/"
     },
     {
       "name": "Ananya Kalidindi",
       "year": "Junior",
-      "major": "",
+      "major": "Computer Science + Philosophy",
       "position": "Social Co-Chair",
       "place": "Hyderabad, India",
       "involvements": "Women in Computer Science, International Consulting Network (ICON)",
@@ -253,7 +253,7 @@
       "advice": "Everything you do contributes to who you're becoming: the time you spend, the things you learn, the discipline you build, the friendships you have. It’s all worth it, even if the payoff isn’t obvious. So never feel guilt or regret for giving your best.",
       "email": "ananyak9@illinois.edu",
       "netid": "ananyak9",
-      "linkedin": ""
+      "linkedin": "https://www.linkedin.com/in/ananya-kalidindi/"
     }
   ]
 }
