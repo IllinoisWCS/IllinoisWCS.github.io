@@ -25,8 +25,9 @@ export default function QA() {
                   <h3>Got questions?</h3>
                   <ul>
                     <li>
-                      Have your own question about WCS or looking for something
-                      specific? Enter it in the form below!
+                      Have your own question about WCS, want some advice from
+                      your peers, or looking for something specific? Enter it in
+                      the form below!
                     </li>
                   </ul>
                 </div>
@@ -40,8 +41,16 @@ export default function QA() {
                       answers in a forum style environment to build community!
                     </li>
                     <li>
+                      We will start working on this project{' '}
+                      <strong>
+                        if we get enough responses showing that students will
+                        benefit from this tool
+                      </strong>
+                      .
+                    </li>
+                    <li>
                       Let us know if this is something you&apos;d find helpful
-                      or want to see on the website.
+                      or want to see on the website!
                     </li>
                   </ul>
                 </div>
@@ -55,6 +64,7 @@ export default function QA() {
             >
               <div className={styles.formWrapper}>
                 <iframe
+                  title="Q&A"
                   src="https://docs.google.com/forms/d/e/1FAIpQLSdtpDkiCVCu4t4AbRwvxHk4bijhB_LxBGhNyv97H6-gBeRJfw/viewform?embedded=true"
                   width="640"
                   height="851"
