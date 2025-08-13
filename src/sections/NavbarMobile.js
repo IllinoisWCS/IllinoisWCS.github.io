@@ -31,6 +31,12 @@ export default function NavbarMobile({ handleLinkClick }) {
       />
       <NavLink
         className={styles.burger}
+        href="/q&a"
+        label="Q&A"
+        onClick={handleLinkClick}
+      />
+      <NavLink
+        className={styles.burger}
         href="https://illinoiswcs.medium.com/"
         label="Medium"
         onClick={handleLinkClick}

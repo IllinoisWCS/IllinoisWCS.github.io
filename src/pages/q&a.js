@@ -38,7 +38,7 @@ export default function QA() {
                     <li>
                       Our goal is for this form to be expanded into a full page
                       on the website, where you can see all questions and
-                      answers in a forum style environment to build community!
+                      answers in a forum-style environment to build community!
                     </li>
                     <li>
                       We will start working on this project{' '}
