@@ -48,8 +48,11 @@ export default function SponsorsSection() {
           </div>
         </div>
         If you are interested in sponsoring us, please email{' '}
-        <a className={styles.sponsorEmail} href="illinoiswcs@gmail.com">
-          illinoiswcs@gmail.com!
+        <a
+          href="mailto:illinoiswcs@gmail.com"
+          style={{ textDecoration: 'underline' }}
+        >
+          illinoiswcs@gmail.com
         </a>
       </div>
     </div>
