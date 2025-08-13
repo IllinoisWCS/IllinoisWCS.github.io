@@ -73,6 +73,12 @@
   font-size: 16px;
 }
 
+@media (min-width: 767px) {
+  .left {
+    min-width: 400px;
+  }
+}
+
 @media (max-width: 767px) {
   .officerInfo .left,
   .officerInfo .right {

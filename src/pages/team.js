@@ -71,11 +71,11 @@ export default function Team() {
       <ComputerWindow className={styles.title} showButtons={false}>
         <h1>Our Team</h1>
       </ComputerWindow>
-      <img
+      {/* <img
         className={styles.teamPic}
         src="/assets/img/committees/board.jpg"
         alt="team"
-      />
+      /> */}
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h2>Executive Board</h2>
       </ComputerWindow>
