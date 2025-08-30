@@ -27,7 +27,7 @@
     "gsap": "^3.12.5",
     "html-react-parser": "^5.2.5",
     "moment": "^2.30.1",
-    "next": "^15.1.2",
+    "next": "^15.4.7",
     "react": "^18",
     "react-dom": "^18"
   },
