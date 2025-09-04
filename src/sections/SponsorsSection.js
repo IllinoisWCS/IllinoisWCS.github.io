@@ -9,25 +9,15 @@ export default function SponsorsSection() {
         <div>
           <div className={styles.sponsors}>
             <Sponsor
-              sponsor="Peak6.jpg"
-              url="https://peak6.com/careers/"
-              tier="gold"
-            />
-            <Sponsor
-              sponsor="Motorola.jpg"
-              url="https://www.motorolasolutions.com/en_us/about/careers.html"
-              tier="gold"
-            />
-            <Sponsor
-              sponsor="OldMission.png"
-              url="https://www.oldmissioncapital.com/careers/"
+              sponsor="visa.png"
+              url="https://usa.visa.com/careers.html"
               tier="gold"
             />
           </div>
           <div className={styles.sponsors}>
             <Sponsor
-              sponsor="IMCTrading.png"
-              url="https://www.imc.com/us/search-careers"
+              sponsor="gresearch.png"
+              url="https://www.gresearch.com/vacancies/"
               tier="bronze"
             />
             <Sponsor
@@ -36,13 +26,8 @@ export default function SponsorsSection() {
               tier="bronze"
             />
             <Sponsor
-              sponsor="hrt2.png"
-              url="https://www.hudsonrivertrading.com/careers/"
-              tier="bronze"
-            />
-            <Sponsor
-              sponsor="CMEGroup1.png"
-              url="https://www.cmegroup.com/careers.html"
+              sponsor="citadel.png"
+              url="https://www.citadel.com/careers/?utm_source=google&utm_medium=cpc&utm_campaign=MMI%7CGS%7CCitadel%7CTalent%7C&utm_content=147465864658&utm_term=citadel%20careers&gad_source=1&gad_campaignid=17602611048&gbraid=0AAAAABK5i5mBoQObUcAWUlHnJZIW4eOOI&gclid=Cj0KCQjw8eTFBhCXARIsAIkiuOxWVvh4MckMfKcBXUaOjv0Mrapv-NV77B4iK8McDbFN2NElEk41l6kaAm5UEALw_wcB"
               tier="bronze"
             />
           </div>
