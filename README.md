@@ -18,7 +18,7 @@ This application is built with Next.js
 Please never commit to main, even if you have permission.
 Run all changes by the Infrastructure Chairs. Here are the steps to making a change and solving an issue:
 
-1. Make a branch off `main`, or the branch of the project you are wokring on. Please give it a descriptive message.
+1. Make a branch off `main`, or the branch of the project you are working on. Please give it a descriptive message.
 
 2. Commit your changes onto your branch.
 
