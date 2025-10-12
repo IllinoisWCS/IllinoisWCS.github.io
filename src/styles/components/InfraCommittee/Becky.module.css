@@ -1,4 +1,26 @@
-.container {
+.flipCard {
+  background: none;
+  border: none;
+  perspective: 1000px;
+  width: 180px;
+  height: 271px;
+  cursor: pointer;
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flipped {
+  transform: rotateY(-180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
   background: white;
   width: 180px;
   height: 271px;
@@ -10,6 +32,13 @@
   padding: 10px 5px;
   gap: 10px;
   border: 7px solid var(--wcs-pink);
+  cursor: pointer;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flipCardBack {
+  transform: rotateY(180deg);
 }
 
 .img {
@@ -55,4 +84,13 @@
 
 .name:hover::before {
   text-shadow: var(--front-shadow-light);
+}
+
+.funFact {
+  color: #6dc7cc;
+  position: relative;
+  opacity: 0.7;
+  float: middle;
+  place-items: center;
+  margin: 0;
 }
