@@ -4,7 +4,7 @@ import Image from 'next/image';
 import OfficerModal from '../OfficerModal';
 import styles from '@/styles/components/InfraCommittee/Saumya.module.css';
 
-export default function SaumyaCard({ name, position, netid, officer }) {
+export default function SaumyaCard({ name, position, officer }) {
   const [show, setShow] = useState(false);
 
   const openModal = () => {
@@ -24,7 +24,7 @@ export default function SaumyaCard({ name, position, netid, officer }) {
       >
         <Image
           className={`${styles.img}`}
-          src={"/assets/img/infra-committee/saumya-image.jpeg"}
+          src="/assets/img/infra-committee/saumya-image.jpeg"
           width={200}
           height={200}
           alt={officer}
@@ -35,7 +35,7 @@ export default function SaumyaCard({ name, position, netid, officer }) {
         </div>
       </button>
 
-      <OfficerModal isOpen={show} closeModal={closeModal} officer={officer}/>
+      <OfficerModal isOpen={show} closeModal={closeModal} officer={officer} />
     </>
   );
 }
