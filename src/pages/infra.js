@@ -1,6 +1,6 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
-
+import SaumyaCard from '@/components/infra-committee/Saumya';
 export default function Infra() {
   return (
     <div className={styles.main}>
@@ -50,8 +50,28 @@ export default function Infra() {
         <h2>2025-2026</h2>
       </ComputerWindow>
       <div className={styles.cards}>
-        <p>This is where you&apos;ll put stuff (Delete this tag later)</p>
-      </div>
+        <SaumyaCard 
+            key={1}
+            name="Saumya Agarwal"
+            position="Infrastructure Committee Member"
+            netid="saumyaa4"
+            officer={{
+            name: "Saumya Agarwal",
+            year: "Sophomore",
+            major: "Computer Science",
+            position: "Infrastructure Committee Member",
+            place: "Buffalo Grove, Illinois",
+            involvements: "Disruption Lab, WCS",
+            interests: "Full Stack Development, AI/ML",
+            hobbies: "Running, spending time with friends, sometimes rock climbing!",
+            fact: "I have hilariously terrible vision",
+            advice: "Get involved early! It’s the best way to meet people and learn new things.",
+            email: "saumyaa4@illinois.edu",
+            netid: "saumyaa4",
+            linkedin: "https://www.linkedin.com/in/saumya-ag10/"
+            }}/>
+          
+            </div>
     </div>
   );
 }
