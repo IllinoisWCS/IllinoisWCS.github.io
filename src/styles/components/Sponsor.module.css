@@ -82,7 +82,33 @@
 
 .silver::after {
   background-color: #808080;
-  background-color: hsl(35, 84%, 62%);
+}
+
+.silver-codeada::before {
+  content: 'Silver Tier / Code Ada Sponsor';
+}
+
+.silver-codeada::after {
+  background: linear-gradient(
+    to right,
+    #b0b0b0 0%,
+    #b0b0b0 30%,
+    #998ee1 40%,
+    #b0b0b0 50%,
+    #b0b0b0 160%
+  );
+  rotate: 170deg;
+  background-size: 300% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 .platinum::before {
