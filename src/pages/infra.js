@@ -1,3 +1,4 @@
+import EvaInfoCard from 'src/components/infra-committee/eva';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
 
@@ -51,6 +52,7 @@ export default function Infra() {
       </ComputerWindow>
       <div className={styles.cards}>
         <p>This is where you&apos;ll put stuff (Delete this tag later)</p>
+        <EvaInfoCard />
       </div>
     </div>
   );
