@@ -1,4 +1,4 @@
-import EvaInfoCard from 'src/components/infra-committee/eva';
+import EvaInfoCard from '../components/infra-committee/eva';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
 
