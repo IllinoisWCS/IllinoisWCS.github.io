@@ -1,6 +1,7 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
 import BeckyCard from '../components/infra-committee/Becky';
+import RiaCard from '../components/infra-committee/Ria'
 
 export default function Infra() {
   return (
@@ -52,6 +53,9 @@ export default function Infra() {
       </ComputerWindow>
       <div className={styles.cards}>
         <BeckyCard />
+      </div>
+      <div className={styles.cards}>
+        <RiaCard />
       </div>
     </div>
   );
