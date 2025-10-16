@@ -1,6 +1,8 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
 import BeckyCard from '../components/infra-committee/Becky';
+// eslint-disable-next-line import/extensions
+import AngelinaCard from '@/components/infra-committee/Angelina';
 
 export default function Infra() {
   return (
@@ -52,6 +54,7 @@ export default function Infra() {
       </ComputerWindow>
       <div className={styles.cards}>
         <BeckyCard />
+        <AngelinaCard />
       </div>
     </div>
   );
