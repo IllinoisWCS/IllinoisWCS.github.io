@@ -53,8 +53,6 @@ export default function Infra() {
       </ComputerWindow>
       <div className={styles.cards}>
         <BeckyCard />
-      </div>
-      <div className={styles.cards}>
         <RiaCard />
       </div>
     </div>
