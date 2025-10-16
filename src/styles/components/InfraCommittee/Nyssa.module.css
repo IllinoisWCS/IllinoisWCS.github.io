@@ -1,0 +1,64 @@
+.na-card {
+    background: white;
+    border: 7px solid var(--wcs-pink);
+    width: 180px;
+    height: 271px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    position: relative;
+
+}
+
+.na-myname {
+    color: var(--wcs-pink);
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    position: relative;
+
+}
+
+.na-fact {
+    color: white;
+    text-align: center;
+}
+
+.na-img {
+    border: 6px solid var(--wcs-blue);
+    border-radius: 100%;
+    height: 130px;
+    width: 130px;
+    min-width: 130px;
+    min-height: 130px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.na-text {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    font-size: 10px;
+    background: rgba(255, 170, 67, 1); 
+    color: var(--wcs-blue); 
+    border: 6px solid var(--wcs-blue);
+    border-radius: .5rem;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    padding: 1rem;
+    
+}
+
+.na-fact {
+    font-size: 18px;
+}
