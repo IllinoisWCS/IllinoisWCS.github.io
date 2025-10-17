@@ -1,3 +1,4 @@
+import AshleyCard from '../components/infra-committee/ashleyl';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
 
@@ -50,7 +51,7 @@ export default function Infra() {
         <h2>2025-2026</h2>
       </ComputerWindow>
       <div className={styles.cards}>
-        <p>This is where you&apos;ll put stuff (Delete this tag later)</p>
+        <AshleyCard name="Ashley Li" />
       </div>
     </div>
   );
