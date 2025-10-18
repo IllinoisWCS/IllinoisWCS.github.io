@@ -2,7 +2,7 @@ import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
 import BeckyCard from '../components/infra-committee/Becky';
 import NyssaCard from '../components/infra-committee/Nyssa';
-
+import NancyCard from '../components/infra-committee/Nancy';
 
 export default function Infra() {
   return (
@@ -55,6 +55,7 @@ export default function Infra() {
       <div className={styles.cards}>
         <BeckyCard />
         <NyssaCard />
+        <NancyCard />
       </div>
     </div>
   );
