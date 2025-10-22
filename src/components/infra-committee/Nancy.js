@@ -18,7 +18,7 @@ export default function NancyCard() {
     <div
       className={`${styles.card} ${flipped ? styles.flipped : ''}`}
       onClick={handleFlip}
-      tabIndex={0}        
+      tabIndex={0}
       role="button"
       onKeyDown={handleKeyDown}
     >
@@ -45,11 +45,8 @@ export default function NancyCard() {
           height={130}
           className={styles.backImage}
         />
-        <div className={styles.backText}>
-          Fun Fact: I love Miffy!
-        </div>
+        <div className={styles.backText}>Fun Fact: I love Miffy!</div>
       </div>
     </div>
   );
 }
-

@@ -22,8 +22,8 @@ export default function NyssaCard() {
       {hover && (
         <div className={styles['na-text']}>
           <p className={styles['na-fact']}>
-            Fun/shameful fact: I still haven't finished decorating my apartment
-            (two years in a row)...
+            Fun/shameful fact: I still haven&apos;t finished decorating my
+            apartment (two years in a row)...
           </p>
         </div>
       )}
