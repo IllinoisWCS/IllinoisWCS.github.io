@@ -51,7 +51,6 @@ export default function Infra() {
         <h2>2025-2026</h2>
       </ComputerWindow>
       <div className={styles.cards}>
-        <p>This is where you&apos;ll put stuff (Delete this tag later)</p>
         <EvaInfoCard />
       </div>
     </div>
