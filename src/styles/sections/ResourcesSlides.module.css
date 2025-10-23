@@ -1,0 +1,64 @@
+.container {
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  color: #000000c8;
+  font-size: 2rem;
+  margin-bottom: 2%;
+}
+
+.topicsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.topicsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 70%;
+  max-width: 900px;
+}
+
+.topic {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+  border: 2px solid #ff8a9a;
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem;
+  background-color: #ffb3c1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.topic:hover {
+  background-color: #ff9aab;
+  transform: translateY(-2px);
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #ff6b7a;
+  transition: opacity 0.3s ease;
+}
+
+.arrowButton:hover:not(:disabled) {
+  opacity: 0.7;
+}
+
+.arrowButton:disabled {
+  cursor: not-allowed;
+}
