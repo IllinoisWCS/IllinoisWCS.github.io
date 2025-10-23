@@ -1,0 +1,216 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+}
+
+.instructions {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.main .title h1 {
+  margin: 1rem;
+  text-align: center;
+  width: 87%;
+}
+.main .title {
+  text-align: center;
+  margin: 4rem auto 0;
+  width: 87%;
+}
+
+.subHeader {
+  margin: 1rem;
+  text-align: center;
+  width: 60%;
+}
+
+.subHeader h2 {
+  margin: 1rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 3rem;
+  margin-bottom: 7rem;
+}
+
+.outerContainer {
+  height: fit-content;
+  width: 100vw;
+  position: relative;
+  margin-bottom: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.committee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  width: fit-content;
+}
+
+.img {
+  border-radius: 20px;
+  border: 10px solid var(--wcs-pink);
+  height: 450px;
+}
+
+.imgContainer {
+  max-width: 80%;
+  width: auto;
+  max-height: 430px;
+  height: 500px;
+  position: relative;
+}
+
+.imgCaption {
+  background-color: var(--light-pink);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  border-radius: 20px;
+  transform: translate(-30%, 80%);
+  font-size: 16px;
+}
+
+.committeeLeft {
+  flex-direction: row;
+}
+
+.committeeRight {
+  flex-direction: row-reverse;
+}
+
+.committeeWindow {
+  width: 560px;
+  height: 450px;
+  overflow: auto;
+}
+
+.committeeDescription {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.committeeDescription h4 {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+.committeeDescription p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.officerPics {
+  display: flex;
+  gap: 1vw;
+}
+
+.outerContainer:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .committeeDescription h4 {
+    font-size: 20px;
+  }
+
+  .committeeDescription p {
+    font-size: 14px;
+  }
+
+  .committee {
+    width: 780px;
+  }
+}
+
+@media (max-width: 780px) {
+  .cards {
+    gap: 1rem;
+  }
+
+  .img {
+    position: relative;
+    animation: none;
+    transform: none;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+
+    border: 5px solid var(--wcs-pink);
+    margin: auto;
+    padding: 0;
+    top: 0;
+  }
+
+  .committee {
+    position: relative;
+    animation: none;
+    transform: none;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    gap: 2rem;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .outerContainer {
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 10vw;
+    position: relative;
+  }
+
+  .committeeDescription {
+    min-height: 0;
+    padding: 1rem;
+  }
+  .committee .committeeWindow {
+    flex: none;
+    max-width: 80%;
+  }
+
+  .officerPics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .imgContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: fit-content;
+    max-height: none;
+  }
+
+  .imgCaption {
+    position: relative;
+    padding: 0.8rem;
+    border-radius: 10px;
+    margin: auto;
+    width: fit-content;
+    transform: none;
+  }
+}
