@@ -7,6 +7,7 @@ import styles from '@/styles/components/OfficerCard.module.css';
 export default function OfficerCard({ name, position, netid, officer }) {
   const [show, setShow] = useState(false);
 
+
   const openModal = () => {
     setShow(true);
   };
