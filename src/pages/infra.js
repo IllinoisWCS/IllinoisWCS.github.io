@@ -1,6 +1,8 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
 import IreneCard from '@/components/infra-committee/Irene.js';
+import BeckyCard from '../components/infra-committee/Becky';
+import NyssaCard from '../components/infra-committee/Nyssa';
 
 export default function Infra() {
   return (
@@ -55,7 +57,9 @@ export default function Infra() {
           name = "Irene Bobby"
           image = "Irene.jpeg"
           funFact = "I love creating art!"
-          />
+        />
+        <BeckyCard />
+        <NyssaCard />
       </div>
     </div>
   );
