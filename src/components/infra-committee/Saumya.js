@@ -1,41 +1,48 @@
 import { useState } from 'react';
 import Image from 'next/image';
-
-import OfficerModal from '../OfficerModal';
 import styles from '@/styles/components/InfraCommittee/Saumya.module.css';
 
-export default function SaumyaCard({ name, position, netid, officer }) {
-  const [show, setShow] = useState(false);
+export default function SaumyaCard() {
+  const [flipped, setFlipped] = useState(false);
 
-  const openModal = () => {
-    setShow(true);
-  };
+  const handleFlip = () => setFlipped(!flipped);
 
-  const closeModal = () => {
-    setShow(false);
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleFlip();
+    }
   };
 
   return (
-    <>
-      <button
-        type="button"
-        className={`${styles.container}`}
-        onClick={openModal}
-      >
+    <div
+      className={`${styles.card} ${flipped ? styles.flipped : ''}`}
+      onClick={handleFlip}
+      tabIndex={0}
+      role="button"
+      onKeyDown={handleKeyDown}
+    >
+      <div className={styles.cardFront}>
         <Image
-          className={`${styles.img}`}
-          src={"/assets/img/infra-committee/saumya-image.jpeg"}
-          width={200}
-          height={200}
-          alt={officer}
+          src="/assets/img/infra-committee/saumya-image.jpeg"
+          alt="Saumya Agarwal"
+          width={130}
+          height={130}
+          className={styles.profileImage}
         />
-        <div className={styles.namePosition}>
-          <h4 className={`${styles.name}`}>{name}</h4>
-          <p className={`${styles.position}`}>{position}</p>
-        </div>
-      </button>
+        <h2 className={styles.name}>Saumya Agarwal</h2>
+      </div>
 
-      <OfficerModal isOpen={show} closeModal={closeModal} officer={officer}/>
-    </>
+      <div className={styles.cardBack}>
+        <Image
+          src="/assets/img/infra-committee/gilmore_girls.png"
+          alt="Saumya Agarwal - Back"
+          width={130}
+          height={130}
+          className={styles.backImage}
+        />
+        <div className={styles.backText}>Fun Fact: I love gilmore girls!</div>
+      </div>
+    </div>
   );
 }
