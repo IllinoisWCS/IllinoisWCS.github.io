@@ -3,6 +3,7 @@ import styles from '@/styles/pages/Infra.module.css';
 import BeckyCard from '../components/infra-committee/Becky';
 import NyssaCard from '../components/infra-committee/Nyssa';
 import NancyCard from '../components/infra-committee/Nancy';
+import AliyaCard from '../components/infra-committee/Aliya';
 
 export default function Infra() {
   return (
@@ -56,6 +57,7 @@ export default function Infra() {
         <BeckyCard />
         <NyssaCard />
         <NancyCard />
+        <AliyaCard />
       </div>
     </div>
   );
