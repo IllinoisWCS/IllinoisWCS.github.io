@@ -4,6 +4,7 @@ import BeckyCard from '../components/infra-committee/Becky';
 import NyssaCard from '../components/infra-committee/Nyssa';
 import NancyCard from '../components/infra-committee/Nancy';
 import AliyaCard from '../components/infra-committee/Aliya';
+import AngelinaCard from '../components/infra-committee/Angelina';
 
 export default function Infra() {
   return (
@@ -58,6 +59,7 @@ export default function Infra() {
         <NyssaCard />
         <NancyCard />
         <AliyaCard />
+        <AngelinaCard />
       </div>
     </div>
   );
