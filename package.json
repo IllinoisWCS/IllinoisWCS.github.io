@@ -15,7 +15,10 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@huggingface/transformers": "^3.7.6",
     "@notionhq/client": "^2.2.15",
+    "@tensorflow-models/toxicity": "^1.2.2",
+    "@tensorflow/tfjs": "^4.22.0",
     "body-parser": "^1.20.3",
     "bootstrap": "^5.3.2",
     "concurrently": "^9.1.0",
