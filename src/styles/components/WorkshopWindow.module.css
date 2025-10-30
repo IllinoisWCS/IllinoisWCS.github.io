@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem;
+  aspect-ratio: 1.5;
+  color: #21636c;
+  width: 280px;
+  height: 160px;
+}
+
+.header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.linkButton {
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  position: relative;
+  max-width: 200px;
+}
+
+.linkButton p {
+  margin: 0;
+  font-size: 16px;
+  color: black;
+}
