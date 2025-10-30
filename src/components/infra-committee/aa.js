@@ -3,7 +3,6 @@ import Image from 'next/image';
 import styles from '../../styles/components/InfraCommittee/aa-styles.module.css';
 import QASpeechBubble from '../QASpeechBubble';
 
-// TODO: Remove this test implementation before PR
 function TestComponent() {
   return (
     <div style={{ margin: '20px', padding: '20px', backgroundColor: '#f5f5f5' }}>

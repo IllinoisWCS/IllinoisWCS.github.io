@@ -10,8 +10,8 @@ const SpeechBubbleContainer = styled.div`
 `;
 
 const SpeechBubbleText = styled.div`
-  background-color: #EFA9AE !important; /* Force light pink */
-  color: #000 !important; /* Force black text */
+  background-color: #EFA9AE;
+  color: #000;
   padding: 12px 16px;
   border-radius: 18px 18px 0 18px;
   font-family: 'Nunito', sans-serif;
@@ -19,21 +19,21 @@ const SpeechBubbleText = styled.div`
   line-height: 1.4;
   position: relative;
   word-wrap: break-word;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: fit-content;
   max-width: 80%;
   margin-left: auto;
 `;
 
+// this creates the small angled notch on the right edge
 const SpeechBubbleTail = styled.div`
   position: absolute;
-  right: 10px;
-  bottom: -8px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #EFA9AE;
+  right: 0px;
+  bottom: -15px;
+  width: 20px;
+  height: 15px;
+  background-color: #EFA9AE;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
 `;
 
 function QASpeechBubble({ answerText }) {
@@ -41,8 +41,8 @@ function QASpeechBubble({ answerText }) {
     <SpeechBubbleContainer>
       <SpeechBubbleText>
         {answerText}
+        <SpeechBubbleTail />
       </SpeechBubbleText>
-      <SpeechBubbleTail />
     </SpeechBubbleContainer>
   );
 }
