@@ -1,4 +1,5 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
+import QuestionStatusToggle from '../components/QuestionStatusToggle';
 import styles from '@/styles/pages/Q&A.module.css';
 
 export default function QA() {
@@ -13,67 +14,16 @@ export default function QA() {
           </ComputerWindow>
         </div>
 
+        <div className={`${styles.descriptionContainer}`}>
+          <p className={`${styles.description}`}>
+            Have your own question about WCS or looking for something specific?
+            Enter it here! If you&apos;re a WCS member, check out the available
+            questions to provide your own answers.
+          </p>
+        </div>
+
         <div className={styles.main}>
-          <div className={styles.text}>
-            <ComputerWindow
-              className={styles.questionContainer}
-              topbarColor="wcs-pink"
-              showButtons={false}
-            >
-              <div className={styles.panelContainer}>
-                <div className={styles.leftPanel}>
-                  <h3>Got questions?</h3>
-                  <ul>
-                    <li>
-                      Have your own question about WCS, want some advice from
-                      your peers, or looking for something specific? Enter it in
-                      the form below!
-                    </li>
-                  </ul>
-                </div>
-
-                <div className={styles.rightPanel}>
-                  <h3>Coming soon...</h3>
-                  <ul>
-                    <li>
-                      Our goal is for this form to be expanded into a full page
-                      on the website, where you can see all questions and
-                      answers in a forum-style environment to build community!
-                    </li>
-                    <li>
-                      We will start working on this project{' '}
-                      <strong>
-                        if we get enough responses showing that students will
-                        benefit from this tool
-                      </strong>
-                      .
-                    </li>
-                    <li>
-                      Let us know if this is something you&apos;d find helpful
-                      or want to see on the website!
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </ComputerWindow>
-
-            <ComputerWindow
-              className={styles.formContainer}
-              topbarColor="wcs-pink"
-              showButtons={false}
-            >
-              <div className={styles.formWrapper}>
-                <iframe
-                  title="Q&A"
-                  src="https://docs.google.com/forms/d/e/1FAIpQLSdtpDkiCVCu4t4AbRwvxHk4bijhB_LxBGhNyv97H6-gBeRJfw/viewform?embedded=true"
-                  width="640"
-                  height="851"
-                >
-                  Loading…
-                </iframe>
-              </div>
-            </ComputerWindow>
-          </div>
+          <QuestionStatusToggle />
         </div>
       </div>
     </main>
