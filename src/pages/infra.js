@@ -5,6 +5,7 @@ import NyssaCard from '../components/infra-committee/Nyssa';
 import NancyCard from '../components/infra-committee/Nancy';
 import AliyaCard from '../components/infra-committee/Aliya';
 import AngelinaCard from '../components/infra-committee/Angelina';
+import RiaCard from '../components/infra-committee/Ria';
 
 export default function Infra() {
   return (
@@ -60,6 +61,7 @@ export default function Infra() {
         <NancyCard />
         <AliyaCard />
         <AngelinaCard />
+        <RiaCard />
       </div>
     </div>
   );
