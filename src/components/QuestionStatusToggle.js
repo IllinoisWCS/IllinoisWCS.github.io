@@ -8,14 +8,14 @@ export default function QuestionStatusToggle() {
     <div className={styles.toggleContainer}>
       <button
         type="button"
-        className={`${styles.toggleButton} ${answered ? styles.active : ''}`}
+        className={`${styles.toggleButton} ${answered ? '' : styles.active}`}
         onClick={() => setAnswered(true)}
       >
         <h3>Answered</h3>
       </button>
       <button
         type="button"
-        className={`${styles.toggleButton} ${!answered ? styles.active : ''}`}
+        className={`${styles.toggleButton} ${!answered ? '' : styles.active}`}
         onClick={() => setAnswered(false)}
       >
         <h3>Unanswered</h3>
