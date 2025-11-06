@@ -1,0 +1,64 @@
+.card {
+  width: 180px;
+  height: 271px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  border: 7px solid var(--wcs-pink);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.cardFront:hover {
+  background-color: var(--light-light-pink);
+  box-shadow: 2px 2px 2px var(--light-pink);
+}
+
+.card.flipped .cardFront {
+  transform: rotateY(180deg);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  background-color: var(--wcs-blue);
+}
+
+.card.flipped .cardBack {
+  transform: rotateY(360deg);
+}
+
+.profileImage,
+.backImage {
+  border-radius: 100%;
+  border: 6px solid var(--wcs-blue);
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: var(--wcs-pink);
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.backText {
+  color: var(--wcs-pink);
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
