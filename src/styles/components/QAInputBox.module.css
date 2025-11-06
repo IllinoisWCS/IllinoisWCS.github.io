@@ -1,0 +1,22 @@
+.container {
+  width: 1345px;
+  font-family: 'Roboto', sans-serif;
+  color: #666666;
+}
+
+.input {
+  width: 100%;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  background-color: white;
+  padding: 16px 20px;
+  border-radius: 20px;
+  border: none;
+  color: #666666;
+  outline: none;
+}
+
+.input:focus {
+  outline: 2px solid #f38c93;
+}
