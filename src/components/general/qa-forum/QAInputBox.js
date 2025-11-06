@@ -1,10 +1,6 @@
 import styles from '@/styles/components/QAInputBox.module.css';
 
-export default function QAInputBox({
-  value,
-  onChange,
-  placeholder = 'Answer',
-}) {
+export default function QAInputBox({ value, onChange, placeholder }) {
   const handleChange = (e) => {
     e.target.style.height = 'auto';
     e.target.style.height = `${e.target.scrollHeight}px`;

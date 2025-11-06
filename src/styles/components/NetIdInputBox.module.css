@@ -13,3 +13,7 @@
   border-radius: 20px;
   border: none;
 }
+
+.input:focus {
+  outline: 2px solid #f38c93;
+}
