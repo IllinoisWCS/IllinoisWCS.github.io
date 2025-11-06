@@ -9,9 +9,6 @@ import QASubmitButton from '@/components/general/qa-forum/QASubmitButton';
 export default function AboutUsSection() {
   return (
     <div className={`${styles.container}`}>
-      <QAInputBox placeholder="Answer" />
-      <NetIdInputBox />
-      <QASubmitButton />
       <div className={styles.computerWindowContainer}>
         <ComputerWindow className={styles.window} showButtons={false}>
           <div className={styles.windowContent}>
