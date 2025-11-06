@@ -1,0 +1,14 @@
+.container {
+  color: var(--wcs-pink);
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-decoration: underline solid;
+  background-color: transparent;
+  border: none;
+}
+
+.container:hover {
+  cursor: pointer;
+  color: #f38c93;
+}
