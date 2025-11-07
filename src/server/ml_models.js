@@ -48,6 +48,11 @@ read.on('line', async (line) => {
     // higher score = more toxic/more neutral
     // console.log('Toxicity result:', result);
 
+    if (result.label === 'toxic') {
+      // console.log('True');
+    } else {
+      // console.log('False');
+    }
     if (result == null) {
       // done to avoid errors
     }
