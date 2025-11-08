@@ -1,5 +1,4 @@
 .toggleContainer {
-  border-top: 1px solid var(--wcs-pink);
   width: 100%;
   display: flex;
   position: absolute;
@@ -12,16 +11,21 @@
   cursor: pointer;
   background: none;
   border: none;
+  border-top: 1px solid var(--wcs-pink);
+  border-radius: 20px 20px 0 0;
 }
 
 .toggleButton h3 {
   color: var(--wcs-pink);
+  font-weight: bold;
 }
 
-.active {
-  background-color: var(--wcs-pink);
+.unactive {
+  background-color: #ffe8ea;
+  border: none;
+  border-bottom: 1px solid var(--wcs-pink);
 }
 
-.active h3 {
-  color: white;
+.unactive h3 {
+  font-weight: normal;
 }
