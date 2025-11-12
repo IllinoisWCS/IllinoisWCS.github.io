@@ -20,6 +20,109 @@ app.use(cors());
 
 const notion = new Client({ auth: process.env.REACT_APP_NOTION_API_KEY });
 
+
+//generic properties getters
+
+const getSelectName = (prop) => {
+  if (!prop) return null;
+  // select or multi select
+  if (prop.select && prop.select.name) return prop.select.name;
+  if (prop.multi_select && prop.multi_select.length) return prop.multi_select[0].name;
+  return null;
+};
+
+const getRichText = (prop) => {
+  if (!prop) return '';
+  // rich_text or title
+  if (prop.rich_text && prop.rich_text.length) {
+    return prop.rich_text.map(r => r.plain_text || (r.text && r.text.content) || '').join('');
+  }
+  if (prop.title && prop.title.length) {
+    return prop.title.map(t => t.plain_text || (t.text && t.text.content) || '').join('');
+  }
+  return '';
+};
+
+const getCheckbox = (prop) => (prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false);
+const getDateStart = (prop) => (prop && prop.date ? prop.date.start : null);
+
+async function getQuestionsAndAnswers(databaseId) {
+
+  let allPages = [];
+  let startCursor = undefined;
+
+  while (true) {
+    const resp = await notion.databases.query({
+      database_id: databaseId,
+      ...(startCursor ? { start_cursor: startCursor } : {}),
+    });
+    allPages = allPages.concat(resp.results || []);
+    if (resp.has_more) {
+      startCursor = resp.next_cursor;
+    } else {
+      break;
+    }
+  }
+
+  const questions = [];
+  const answers = {};
+
+  allPages.forEach((page) => {
+    const props = page.properties || {};
+    const type = getSelectName(props.Type);
+    const qid = getRichText(props.QuestionID) || '';
+    const content = getRichText(props.Content) || '';
+    const timestamp = getDateStart(props.Timestamp) || null;
+
+    if (type === 'Question') {
+      questions.push({
+        QuestionID: qid,
+        Content: content,
+        Answers: [],
+        Timestamp: timestamp,
+        _notionPageId: page.id
+      });
+    } else if (type === "Answer" && qid) {
+      const aid = getRichText(props.AnswerID) || '';
+      const netid = getRichText(props.NetID) || '';
+      const authenticated = getCheckbox(props.Authenticated);
+      const ansObj = {
+        AnswerID: aid,
+        Content: content,
+        NetID: netid,
+        Authenticated: authenticated,
+        Timestamp: timestamp,
+        _notionPageId: page.id,
+      };
+      answers[qid] = answers[qid] || [];
+      answers[qid].push(ansObj);
+    }
+  });
+
+  questions.forEach((q) => {
+    const list = answers[q.QuestionID] || [];
+    q.Answers = list;
+  });
+
+  return questions;
+}
+
+
+// get endpt
+app.get('/qas', async (req, res) => {
+  try {
+    const dbId = process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID;
+    if (!dbId) return res.status(500).json({ error: 'Notion DB ID not configured' });
+
+    const qa = await getQuestionsAndAnswers(dbId);
+    return res.json(qa);
+  } catch (err) {
+    console.error('Error fetching QAs:', err);
+    return res.status(500).json({ error: 'Failed to fetch QAs' });
+  }
+});
+
+
 // q&a post functions
 
 app.post('/post-question', jsonParser, async (req, res) => {
@@ -130,7 +233,6 @@ app.post('/post-answer', jsonParser, async (req, res) => {
 });
 
 
-
 // // returns category : switch this out when using the actual board!!
 const getType = (properties) => properties.Type.multi_select[0].name;
 // const getType = (properties) => properties.Type.select.name;
@@ -213,31 +315,68 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   res.json(tempRes);
 });
 
+const PORT = process.env.PORT || 4000; // dev port fallback
+
+if (process.env.NODE_ENV === 'production') {
+  // Production: use HTTPS with your Let's Encrypt certs
+  const privateKey = fs.readFileSync(
+    '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
+    'utf8'
+  );
+  const certificate = fs.readFileSync(
+    '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
+    'utf8'
+  );
+  const credentials = { key: privateKey, cert: certificate };
+
+  const httpsServer = https.createServer(credentials, app);
+  httpsServer.listen(443, () => {
+    console.log('HTTPS server running on port 443');
+  });
+
+  // redirect all HTTP traffic to HTTPS
+  const httpApp = express();
+  httpApp.use((req, res) => {
+    res.redirect(`https://${req.headers.host}${req.url}`);
+  });
+  http.createServer(httpApp).listen(80, () => {
+    console.log('HTTP redirect server running on port 80');
+  });
+} else {
+  // Development: just run HTTP locally
+  app.listen(PORT, () => {
+    console.log(`Dev server running on http://localhost:${PORT}`);
+  });
+}
+
+
 // https server setup
 // reads sssl certificate files issued by let's encrypt
-const privateKey = fs.readFileSync(
-  '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
-  'utf8',
-);
-const certificate = fs.readFileSync(
-  '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
-  'utf8',
-);
-const credentials = { key: privateKey, cert: certificate };
+// const privateKey = fs.readFileSync(
+//   '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
+//   'utf8',
+// );
+// const certificate = fs.readFileSync(
+//   '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
+//   'utf8',
+// );
+// const credentials = { key: privateKey, cert: certificate };
 
-//  creates https server with express app and ssl credentials
-const httpsServer = https.createServer(credentials, app);
+// //  creates https server with express app and ssl credentials
+// const httpsServer = https.createServer(credentials, app);
 
-httpsServer.listen(443);
+// httpsServer.listen(443);
 
 
-// redirects all http requests to http
-const httpApp = express();
+// // redirects all http requests to http
+// const httpApp = express();
 
-httpApp.use((req, res) => {
-  res.redirect(`https://${req.headers.host}${req.url}`);
-});
+// httpApp.use((req, res) => {
+//   res.redirect(`https://${req.headers.host}${req.url}`);
+// });
 
-http.createServer(httpApp).listen(80);
+// http.createServer(httpApp).listen(80);
+
+
 
 
