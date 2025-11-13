@@ -75,46 +75,6 @@ export default function PastWorkshopsSection() {
         },
       ],
     },
-    {
-      'workshop series': 'Data Science',
-      workshops: [
-        {
-          title: 'Data Science 1',
-          description: 'Description',
-          emoji: '/assets/design-vectors/cloud-computing.svg',
-          slides: 'https://example.com/ds1-slides',
-          code: 'https://example.com/ds1-code',
-        },
-        {
-          title: 'Data Science 2',
-          description: 'Description',
-          emoji: '/assets/design-vectors/cloud-computing.svg',
-          slides: 'https://example.com/ds2-slides',
-          code: 'https://example.com/ds2-code',
-        },
-        {
-          title: 'Data Science 3',
-          description: 'Description',
-          emoji: '/assets/design-vectors/cloud-computing.svg',
-          slides: 'https://example.com/ds2-slides',
-          code: 'https://example.com/ds2-code',
-        },
-        {
-          title: 'Data Science 4',
-          description: 'Description',
-          emoji: '/assets/design-vectors/cloud-computing.svg',
-          slides: 'https://example.com/ds2-slides',
-          code: 'https://example.com/ds2-code',
-        },
-        {
-          title: 'Data Science 5',
-          description: 'Description',
-          emoji: '/assets/design-vectors/cloud-computing.svg',
-          slides: 'https://example.com/ds2-slides',
-          code: 'https://example.com/ds2-code',
-        },
-      ],
-    },
   ];
 
   const [chunkSize, setChunkSize] = useState(3);

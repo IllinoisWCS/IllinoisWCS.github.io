@@ -28,9 +28,6 @@ export default function Resources() {
           .
         </p>
       </div>
-      <h2 className={`${styles.header} ${resourcesStyles.header}`}>
-        Past Workshops
-      </h2>
       <div className={`${resourcesStyles.PastWorkshopsSection}`}>
         <PastWorkshopsSection />
       </div>
