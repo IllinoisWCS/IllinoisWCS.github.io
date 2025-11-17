@@ -1,5 +1,6 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
+import AashnaAnand from '@/components/infra-committee/AashnaAnand';
 
 export default function Infra() {
   return (
@@ -49,9 +50,8 @@ export default function Infra() {
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h2>2025-2026</h2>
       </ComputerWindow>
-      <div className={styles.cards}>
-        <p>This is where you&apos;ll put stuff (Delete this tag later)</p>
-      </div>
+      <div className={styles.cards}></div>
+      <AashnaAnand />
     </div>
   );
 }
