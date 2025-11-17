@@ -1,6 +1,12 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
 import AashnaAnand from '@/components/infra-committee/AashnaAnand';
+import BeckyCard from '../components/infra-committee/Becky';
+import NyssaCard from '../components/infra-committee/Nyssa';
+import NancyCard from '../components/infra-committee/Nancy';
+import AliyaCard from '../components/infra-committee/Aliya';
+import AngelinaCard from '../components/infra-committee/Angelina';
+import RiaCard from '../components/infra-committee/Ria';
 
 export default function Infra() {
   return (
@@ -50,8 +56,15 @@ export default function Infra() {
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h2>2025-2026</h2>
       </ComputerWindow>
-      <div className={styles.cards}></div>
-      <AashnaAnand />
+      <div className={styles.cards}>
+        <AashnaAnand />
+        <BeckyCard />
+        <NyssaCard />
+        <NancyCard />
+        <AliyaCard />
+        <AngelinaCard />
+        <RiaCard />
+      </div>
     </div>
   );
 }
