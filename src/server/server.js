@@ -102,6 +102,90 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   res.json(tempRes);
 });
 
+// Explorations Resources
+const explorationNotion = new Client({
+  auth: process.env.REACT_APP_EXPLORATION_NOTION_API_KEY,
+});
+
+// get plain text from rich_text fields
+const getRichText = (field) => {
+  if (!field || !field.rich_text || field.rich_text.length === 0) return '';
+  return field.rich_text.map((t) => t.plain_text).join(' ');
+};
+
+// get plain text title
+const getTitle = (properties) =>
+  properties.Title?.title?.[0]?.plain_text || 'Untitled';
+
+// get description text
+const getDescriptionText = (properties) => getRichText(properties.Description);
+
+// get workshop series name
+const getWorkshopSeries = (properties) =>
+  properties['Workshop Series']?.select?.name || 'Uncategorized';
+
+// get workshop sequence - TODO: fix this
+const getWorkshopSequence = (properties) =>
+  properties['Workshop Sequence']?.number ?? null;
+
+// get slide/resource links
+const getSlidesLink = (properties) => properties['Slides Link']?.url || '';
+const getRecordingLink = (properties) =>
+  properties['Recording Link']?.url || '';
+const getOtherResourcesLink = (properties) =>
+  properties['Other Resources Link']?.url || '';
+
+// parse a single Notion record into a workshop object
+const parseWorkshop = (item) => {
+  const props = item.properties;
+
+  return {
+    title: getTitle(props),
+    description: getDescriptionText(props),
+    workshop_series: getWorkshopSeries(props),
+    workshop_sequence: getWorkshopSequence(props),
+    emoji: item.icon?.emoji || '💡',
+    slides_link: getSlidesLink(props),
+    recording_link: getRecordingLink(props),
+    other_resources_link: getOtherResourcesLink(props),
+  };
+};
+
+// group workshops by their series name
+const groupWorkshopsBySeries = (parsed) => {
+  const grouped = parsed.reduce((acc, curr) => {
+    const series = curr.workshop_series || 'Uncategorized';
+    if (!acc[series]) acc[series] = [];
+    acc[series].push(curr);
+    return acc;
+  }, {});
+
+  // sort each group by workshop_sequence (ascending)
+  return Object.keys(grouped).map((series) => ({
+    workshop_series: series,
+    workshops: grouped[series].sort((a, b) => {
+      const seqA = a.workshop_sequence ?? Infinity;
+      const seqB = b.workshop_sequence ?? Infinity;
+      return seqA - seqB;
+    }),
+  }));
+};
+
+app.get('/exploration-resources-api', jsonParser, async (req, res) => {
+  try {
+    const results = await explorationNotion.databases.query({
+      database_id: process.env.REACT_APP_EXPLORATION_NOTION_DATABASE_ID,
+    });
+
+    const parsed = results.results.map(parseWorkshop);
+    const formatted = groupWorkshopsBySeries(parsed);
+
+    res.json(formatted);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch from Notion' });
+  }
+});
+
 // https server setup
 // reads sssl certificate files issued by let's encrypt
 const privateKey = fs.readFileSync(
