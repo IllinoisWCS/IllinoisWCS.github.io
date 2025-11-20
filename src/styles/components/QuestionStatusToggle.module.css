@@ -1,0 +1,31 @@
+.toggleContainer {
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+
+.toggleButton {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--wcs-pink);
+  border-radius: 20px 20px 0 0;
+}
+
+.toggleButton h3 {
+  color: var(--wcs-pink);
+  font-weight: bold;
+}
+
+.unactive {
+  background-color: #ffe8ea;
+  border: none;
+  border-bottom: 1px solid var(--wcs-pink);
+}
+
+.unactive h3 {
+  font-weight: normal;
+}
