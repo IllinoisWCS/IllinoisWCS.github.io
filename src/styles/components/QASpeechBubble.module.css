@@ -1,9 +1,10 @@
 .speechBubbleContainer {
-  position: relative;
-  display: inline-block;
-  max-width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
   margin: 10px 0;
-  align-self: flex-end;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .speechBubbleText {
@@ -11,14 +12,9 @@
   color: #000;
   padding: 12px 16px;
   border-radius: 18px 18px 0 18px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
+  font-family: 'Arial', sans-serif;
+  max-width: 80%;
   position: relative;
-  word-wrap: break-word;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: fit-content;
-  max-width: 100%;
 }
 
 .speechBubbleTail {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../styles/components/QuestionStatusToggle.module.css';
+import styles from '@/styles/components/QuestionStatusToggle.module.css';
 
 export default function QuestionStatusToggle() {
   const [answered, setAnswered] = useState(true);

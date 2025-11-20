@@ -1,0 +1,55 @@
+.accordianContainer {
+  width: 1345px;
+  margin: 15px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  align-items: left;
+}
+
+.questionBar {
+  width: 1345px;
+  background-color: #e2626a;
+  padding: 16px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: left;
+  transition: all 0.2s ease;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.questionText {
+  margin-left: 20px;
+  align-content: left;
+  font-size: 18px;
+  color: white;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+.expandIcon {
+  width: 14px;
+  height: 14px;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  margin-right: 10px;
+  margin-top: 3px;
+  transform: rotate(-45deg); /* right arrow */
+  transition: transform 0.3s ease;
+}
+
+.expandIcon.open {
+  transform: rotate(45deg); /* down arrow */
+  margin-bottom: 10px;
+}
+
+.accordianContent {
+  background-color: #f8f8f8;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 0 0 12px 12px;
+  flex-direction: column;
+  align-items: flex-end;
+}
