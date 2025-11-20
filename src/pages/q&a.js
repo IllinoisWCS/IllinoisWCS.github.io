@@ -1,3 +1,5 @@
+import QASpeechBubble from '@/components/general/qa-forum/QASpeechBubble';
+import QAInputBox from '@/components/general/qa-forum/QAInputBox';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Q&A.module.css';
 

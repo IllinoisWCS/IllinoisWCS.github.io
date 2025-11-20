@@ -27,32 +27,34 @@ app.post('/post-question', jsonParser, async (req, res) => {
     const { question, netid, timestamp } = req.body;
 
     if (!question) {
-      return res.status(400).json({error: "Missing required content field" });
+      return res.status(400).json({ error: 'Missing required content field' });
     }
 
     // uses time stamp + random string
     const generateQuestionID = () =>
       `Q-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
-    
+
     const questionID = generateQuestionID();
 
     const response = await notion.pages.create({
-      parent: { database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID },
+      parent: {
+        database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
+      },
       properties: {
         Type: {
-          select: { name: "Question" },
+          select: { name: 'Question' },
         },
         Content: {
           title: [{ text: { content: question } }],
         },
         NetID: {
-          rich_text: [{ text: { content: netid || "" } }],
+          rich_text: [{ text: { content: netid || '' } }],
         },
         QuestionID: {
           rich_text: [{ text: { content: questionID } }],
         },
         AnswerID: {
-          rich_text: [{ text: { content: "" } }], // empty for questions
+          rich_text: [{ text: { content: '' } }], // empty for questions
         },
         Authenticated: {
           checkbox: false, // questions are not authenticated
@@ -62,11 +64,10 @@ app.post('/post-question', jsonParser, async (req, res) => {
             start: timestamp || new Date().toISOString(),
           },
         },
-
-      }
+      },
     });
     res.status(200).json({
-      message: "Question posted successfully",
+      message: 'Question posted successfully',
       notionId: response.id,
       questionID,
     });
@@ -81,7 +82,9 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     const { content, netid, questionID, authenticated, timestamp } = req.body;
 
     if (!content || !questionID) {
-      return res.status(400).json({ error: "Missing required fields: content or questionID" });
+      return res
+        .status(400)
+        .json({ error: 'Missing required fields: content or questionID' });
     }
 
     const generateAnswerID = () =>
@@ -90,16 +93,18 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     const answerID = generateAnswerID();
 
     const response = await notion.pages.create({
-      parent: { database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID },
+      parent: {
+        database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
+      },
       properties: {
         Type: {
-          select: { name: "Answer" },
+          select: { name: 'Answer' },
         },
         Content: {
           title: [{ text: { content } }],
         },
         NetID: {
-          rich_text: [{ text: { content: netid || "" } }],
+          rich_text: [{ text: { content: netid || '' } }],
         },
         QuestionID: {
           rich_text: [{ text: { content: questionID } }],
@@ -119,17 +124,15 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     });
 
     res.status(200).json({
-      message: "Answer posted successfully",
+      message: 'Answer posted successfully',
       notionId: response.id,
       answerID,
     });
   } catch (error) {
-    console.error("Error posting answer:", error);
-    res.status(500).json({ error: "Failed to post answer" });
+    console.error('Error posting answer:', error);
+    res.status(500).json({ error: 'Failed to post answer' });
   }
 });
-
-
 
 // // returns category : switch this out when using the actual board!!
 const getType = (properties) => properties.Type.multi_select[0].name;
@@ -230,7 +233,6 @@ const httpsServer = https.createServer(credentials, app);
 
 httpsServer.listen(443);
 
-
 // redirects all http requests to http
 const httpApp = express();
 
@@ -239,5 +241,3 @@ httpApp.use((req, res) => {
 });
 
 http.createServer(httpApp).listen(80);
-
-
