@@ -3,6 +3,7 @@ import styles from '@/styles/pages/Infra.module.css';
 import BeckyCard from '../components/infra-committee/Becky';
 import NyssaCard from '../components/infra-committee/Nyssa';
 import NancyCard from '../components/infra-committee/Nancy';
+import IreneCard from '../components/infra-committee/Irene';
 
 export default function Infra() {
   return (
@@ -56,6 +57,11 @@ export default function Infra() {
         <BeckyCard />
         <NyssaCard />
         <NancyCard />
+        <IreneCard
+          name="Irene Bobby"
+          image="Irene.jpeg"
+          funFact="I love creating art!"
+        />
       </div>
     </div>
   );

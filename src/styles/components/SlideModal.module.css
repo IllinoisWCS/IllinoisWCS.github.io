@@ -1,17 +1,22 @@
 .container {
-  position: relative;
+  position: fixed; /* pop up over everything */
+  top: 0; /* start from top */
+  left: 0; /* start from left */
+  width: 100vw; /* full width */
+  height: 100vh; /* full height */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
   flex-direction: column;
+  z-index: 9999; /* on top of everything */
+  background: rgba(0, 0, 0, 0.5); /* dim background */
 }
 
 .title {
   text-align: center;
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0; /* more space above and below */
 }
 
 .slidesFrame {
