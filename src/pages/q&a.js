@@ -7,19 +7,6 @@ import styles from '@/styles/pages/Q&A.module.css';
 // import QuestionAccordion from '@/components/general/qa-forum/QuestionAccordian';
 import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
 
-const toastSuccess = (msg) => {
-  toast.success(`🦄 ${msg}`, {
-    position: 'top-right',
-    autoClose: 2500,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: 'colored',
-  });
-};
-
 const toastError = (msg) => {
   toast.error(msg, {
     position: 'top-right',
@@ -35,10 +22,9 @@ const toastError = (msg) => {
 
 export default function QA() {
   const submitQuestion = () => {
-    const success = true; // We can call api here and check if successful or not
-    if (success) {
-      toastSuccess('Your question has been submitted!');
-    } else {
+    const success = false; // We can call api here and check if successful or not
+    // we can check if success here, redirect to points page
+    if (!success) {
       toastError(
         'There was an error submitting your question. Please try again.', // TODO: change message based on error type
       );
@@ -46,10 +32,8 @@ export default function QA() {
   };
 
   const submitAnswer = () => {
-    const success = true; // Simulate success or failure
-    if (success) {
-      toastSuccess('Your answer has been submitted!');
-    } else {
+    const success = false; // Simulate success or failure
+    if (!success) {
       toastError(
         'There was an error submitting your answer. Please try again.', // TODO: change message based on error type
       );
