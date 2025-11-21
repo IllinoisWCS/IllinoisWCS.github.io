@@ -39,6 +39,8 @@
 
 .descriptionContainer {
   display: flex;
+  width: 80%;
+  margin: auto;
 }
 
 .description {
@@ -115,7 +117,7 @@
   margin-top: 0;
   text-align: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   position: relative;
   margin: auto;
 }
