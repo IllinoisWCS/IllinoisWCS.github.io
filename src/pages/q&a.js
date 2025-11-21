@@ -1,4 +1,3 @@
-import { toast } from 'react-toastify';
 // import QASpeechBubble from '@/components/general/qa-forum/QASpeechBubble';
 // import QAInputBox from '@/components/general/qa-forum/QAInputBox';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
@@ -6,19 +5,7 @@ import QuestionStatusToggle from '../components/general/qa-forum/QuestionStatusT
 import styles from '@/styles/pages/Q&A.module.css';
 // import QuestionAccordion from '@/components/general/qa-forum/QuestionAccordian';
 import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
-
-const toastError = (msg) => {
-  toast.error(msg, {
-    position: 'top-right',
-    autoClose: 2500,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: 'colored',
-  });
-};
+import { toastError } from '../utils/toast';
 
 export default function QA() {
   const submitQuestion = () => {
