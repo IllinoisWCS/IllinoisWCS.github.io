@@ -9,6 +9,7 @@ import AliyaCard from '../components/infra-committee/Aliya';
 import AngelinaCard from '../components/infra-committee/Angelina';
 import RiaCard from '../components/infra-committee/Ria';
 import SaumyaCard from '../components/infra-committee/Saumya';
+import Avaya from '../components/infra-committee/Avaya';
 
 export default function Infra() {
   return (
@@ -59,6 +60,7 @@ export default function Infra() {
         <h2>2025-2026</h2>
       </ComputerWindow>
       <div className={styles.cards}>
+        <Avaya />
         <IreneCard
           name="Irene Bobby"
           image="Irene.jpeg"
