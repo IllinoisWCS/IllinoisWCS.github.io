@@ -6,23 +6,23 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Saloni Vaishnav", "Firmiana Wang", "Elaina Xiao"],
-            "committees": ["Becky Blake", "Rachel Chen", "Skyla Jin"]
+            "officers": ["Tia Kashyap", "Helena Ilic", "Hazel Lu"],
+            "committees": ["Taniya Agrawal"]
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Saloni Vaishnav", "Firmiana Wang", "Elaina Xiao"],
-            "committees": ["Becky Blake", "Alisha Virani"]
+            "officers": ["Tia Kashyap", "Helena Ilic", "Hazel Lu"],
+            "committees": ["Lilia Williams", "Aliya Ahmad", "Taniya Agrawal"]
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Firmiana Wang", "Aditi Prasad", "Elaina Xiao"],
-            "committees": ["Brillina Wang", "Aditi Kumar", "Alisha Virani"]
+            "officers": ["Hazel Lu", "Jazmin Uribe"],
+            "committees": ["Lilia Williams", "Aliya Ahmad ", "Rhea Shah"]
           },
           {
             "time": "3:30-4:00",
-            "officers": ["Firmiana Wang", "Aditi Prasad", "Elaina Xiao"],
-            "committees": ["Fiona Hu", "Jia Gill", "Helena Ilic"]
+            "officers": ["Karen Gao", "Hazel Lu", "Jazmin Uribe"],
+            "committees": ["Nancy Wang", "Nyssa Aftab"]
           },
           {
             "time": "4:00-4:30",
