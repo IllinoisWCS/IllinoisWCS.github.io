@@ -11,6 +11,7 @@ export default function MyCard() {
 
   return (
     <button
+      type="button"
       className={`${styles.container} ${expanded ? styles.expanded : ''}`}
       onClick={!expanded ? onClick : undefined}
     >

@@ -1,12 +1,13 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
-import AashnaAnand from '@/components/infra-committee/AashnaAnand';
+import AashnaAnand from '../components/infra-committee/AashnaAnand';
 import BeckyCard from '../components/infra-committee/Becky';
 import NyssaCard from '../components/infra-committee/Nyssa';
 import NancyCard from '../components/infra-committee/Nancy';
 import AliyaCard from '../components/infra-committee/Aliya';
 import AngelinaCard from '../components/infra-committee/Angelina';
 import RiaCard from '../components/infra-committee/Ria';
+import SaumyaCard from '../components/infra-committee/Saumya';
 
 export default function Infra() {
   return (
@@ -64,6 +65,7 @@ export default function Infra() {
         <AliyaCard />
         <AngelinaCard />
         <RiaCard />
+        <SaumyaCard />
       </div>
     </div>
   );
