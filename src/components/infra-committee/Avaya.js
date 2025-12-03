@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "../../styles/components/InfraCommittee/Avaya.module.css";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
+import styles from '../../styles/components/InfraCommittee/Avaya.module.css';
 
-const Avaya = () => {
+function Avaya() {
   return (
     <div className={styles.aaContainer}>
       <Image
@@ -19,6 +19,6 @@ const Avaya = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Avaya;

@@ -1,6 +1,6 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
-import Avaya from "../components/infra-committee/Avaya";
+import Avaya from '../components/infra-committee/Avaya';
 
 export default function Infra() {
   return (
