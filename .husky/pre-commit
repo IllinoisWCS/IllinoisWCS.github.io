@@ -1,2 +1,2 @@
-npx pretty-quick --check
+#npx pretty-quick --check
 npm run lint

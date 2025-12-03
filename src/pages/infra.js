@@ -1,5 +1,6 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
+import EvaInfoCard from '../components/infra-committee/eva';
 import AashnaAnand from '../components/infra-committee/AashnaAnand';
 import IreneCard from '../components/infra-committee/Irene';
 import BeckyCard from '../components/infra-committee/Becky';
@@ -66,13 +67,14 @@ export default function Infra() {
           image="Irene.jpeg"
           funFact="I love creating art!"
         />
-        <AashnaAnand />
         <BeckyCard />
         <NyssaCard />
         <NancyCard />
         <AliyaCard />
         <AngelinaCard />
         <RiaCard />
+        <EvaInfoCard />
+        <AashnaAnand />
         <SaumyaCard />
       </div>
     </div>
