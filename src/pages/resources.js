@@ -4,6 +4,7 @@ import resourcesStyles from '@/styles/pages/Resources.module.css';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 
 import ExternalOpportunitiesSection from '../sections/ExternalOpportunitiesSection';
+import ResourcesSlides from '../sections/ResourcesSlides';
 
 export default function Resources() {
   return (
@@ -33,6 +34,7 @@ export default function Resources() {
       </h2>
       <div className={`${resourcesStyles.ExternalOpportunitiesSection}`}>
         <ExternalOpportunitiesSection />
+        <ResourcesSlides />
       </div>
 
       <h2 className={`${styles.header}`}>Get Help</h2>
