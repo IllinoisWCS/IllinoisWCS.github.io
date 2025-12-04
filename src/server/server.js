@@ -22,7 +22,6 @@ const notion = new Client({ auth: process.env.REACT_APP_NOTION_API_KEY });
 
 
 //generic properties getters
-
 const getSelectName = (prop) => {
   if (!prop) return null;
   // select or multi select
@@ -45,6 +44,7 @@ const getRichText = (prop) => {
 
 const getCheckbox = (prop) => (prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false);
 const getDateStart = (prop) => (prop && prop.date ? prop.date.start : null);
+
 
 async function getQuestionsAndAnswers(databaseId) {
 
@@ -74,6 +74,7 @@ async function getQuestionsAndAnswers(databaseId) {
     const content = getRichText(props.Content) || '';
     const timestamp = getDateStart(props.Timestamp) || null;
 
+    //populate questions list 
     if (type === 'Question') {
       questions.push({
         QuestionID: qid,
@@ -82,6 +83,7 @@ async function getQuestionsAndAnswers(databaseId) {
         Timestamp: timestamp,
         _notionPageId: page.id
       });
+    //populate answers map
     } else if (type === "Answer" && qid) {
       const aid = getRichText(props.AnswerID) || '';
       const netid = getRichText(props.NetID) || '';
@@ -99,6 +101,7 @@ async function getQuestionsAndAnswers(databaseId) {
     }
   });
 
+  //attach answers to each questions at end
   questions.forEach((q) => {
     const list = answers[q.QuestionID] || [];
     q.Answers = list;
@@ -108,7 +111,7 @@ async function getQuestionsAndAnswers(databaseId) {
 }
 
 
-// get endpt
+// get questions and answers endpt
 app.get('/qas', async (req, res) => {
   try {
     const dbId = process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID;
@@ -124,7 +127,6 @@ app.get('/qas', async (req, res) => {
 
 
 // q&a post functions
-
 app.post('/post-question', jsonParser, async (req, res) => {
   try {
     const { question, netid, timestamp } = req.body;
@@ -139,6 +141,7 @@ app.post('/post-question', jsonParser, async (req, res) => {
     
     const questionID = generateQuestionID();
 
+    // gets question content & ids
     const response = await notion.pages.create({
       parent: { database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID },
       properties: {
@@ -147,9 +150,6 @@ app.post('/post-question', jsonParser, async (req, res) => {
         },
         Content: {
           title: [{ text: { content: question } }],
-        },
-        NetID: {
-          rich_text: [{ text: { content: netid || "" } }],
         },
         QuestionID: {
           rich_text: [{ text: { content: questionID } }],
@@ -192,6 +192,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
 
     const answerID = generateAnswerID();
 
+    // gets answer content, ids, and authentication status
     const response = await notion.pages.create({
       parent: { database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID },
       properties: {
