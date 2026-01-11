@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+.seriesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  gap: 4em;
+  position: relative;
+}
+
+.odd {
+  flex-direction: row-reverse;
+}
+
+.rowWrapper {
+  position: relative;
+}
+
+.horizontalLine {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: 14px;
+  background-color: var(--wcs-blue);
+}
+
+.verticalLine {
+  position: absolute;
+  width: 14px;
+  height: 5em;
+  background-color: var(--wcs-blue);
+}
+
+.rightSide {
+  right: 0;
+  top: 100%;
+  transform: translateX(-147px);
+}
+
+.leftSide {
+  left: 0;
+  top: 100%;
+  transform: translateX(147px);
+}

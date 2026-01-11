@@ -5,7 +5,6 @@ import ComputerWindow from '../components/general/ComputerWindowComponent';
 
 import ExternalOpportunitiesSection from '../sections/ExternalOpportunitiesSection';
 import PastWorkshopsSection from '../sections/PastWorkshopsSection';
-import ResourcesSlides from '../sections/ResourcesSlides';
 
 export default function Resources() {
   return (
@@ -29,16 +28,19 @@ export default function Resources() {
           .
         </p>
       </div>
-      <div className={`${resourcesStyles.PastWorkshopsSection}`}>
-        <PastWorkshopsSection />
-      </div>
 
       <h2 className={`${styles.header} ${resourcesStyles.header}`}>
         External Opportunities
       </h2>
       <div className={`${resourcesStyles.ExternalOpportunitiesSection}`}>
         <ExternalOpportunitiesSection />
-        <ResourcesSlides />
+      </div>
+
+      <h2 className={`${styles.header} ${resourcesStyles.header}`}>
+        Past Workshops
+      </h2>
+      <div className={`${resourcesStyles.PastWorkshops}`}>
+        <PastWorkshopsSection />
       </div>
 
       <h2 className={`${styles.header}`}>Get Help</h2>
