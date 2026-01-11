@@ -1,48 +1,94 @@
-.container,
-.seriesWrapper {
+.container {
+  padding: 3rem 0 5rem 0;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  color: #000000;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topicsWrapper {
   display: flex;
-  flex-direction: column;
-  gap: 4em;
-}
-
-.row {
-  display: flex;
-  gap: 4em;
-  position: relative;
-}
-
-.odd {
-  flex-direction: row-reverse;
-}
-
-.rowWrapper {
-  position: relative;
-}
-
-.horizontalLine {
-  position: absolute;
-  top: 50%;
-  right: 0;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 14px;
-  background-color: var(--wcs-blue);
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.verticalLine {
-  position: absolute;
-  width: 14px;
-  height: 5em;
-  background-color: var(--wcs-blue);
+.topicsContainer {
+  width: calc(222px * 4 + 1.5rem * 3);
+  overflow: hidden;
 }
 
-.rightSide {
-  right: 0;
-  top: 100%;
-  transform: translateX(-147px);
+.topicsTrack {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.5s ease-in-out;
 }
 
-.leftSide {
-  left: 0;
-  top: 100%;
-  transform: translateX(147px);
+.topic {
+  width: 222px;
+  height: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: 'Zilla Slab', serif;
+  color: #3d3939;
+  border: 6px solid #f45e75;
+  border-top: 3px solid #f45e75;
+  border-bottom: 12px solid #f45e75;
+  border-radius: 10px;
+  background-color: #ffcaca;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.topic:hover {
+  background-color: #fe768d;
+  transform: translateY(-1px);
+}
+
+.topic:active {
+  transform: translateY(2px);
+  border-bottom: 8px solid #c55a6a;
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #eb3a75;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.arrowButton:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.arrowButton:disabled {
+  cursor: not-allowed;
+  color: #999;
+}
+
+.seriesContainer {
+  margin-bottom: 4em;
 }
