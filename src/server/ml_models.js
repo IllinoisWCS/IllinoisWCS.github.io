@@ -125,3 +125,10 @@ read.on('close', () => {
   // console.log('Session ended.');
   process.exit(0);
 });
+
+// function exported for use in server.js
+export async function classifyToxicity(input) {
+  const classifier = await loadToxicityClassifier();
+  const output = await classifier(input);
+  return output; // Format: [ {'toxic', score: 0.99} ]
+}

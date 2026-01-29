@@ -1,3 +1,6 @@
+// importing toxic language ml model
+import { classifyToxicity } from './ml_models';
+
 require('dotenv').config();
 
 const fs = require('fs');
@@ -28,6 +31,12 @@ app.post('/post-question', jsonParser, async (req, res) => {
 
     if (!question) {
       return res.status(400).json({ error: 'Missing required content field' });
+    }
+
+    // checking toxicity
+    const result = await classifyToxicity(question);
+    if (result[0].label === 'toxic') {
+      return res.status(403).json({ error: 'Question rejected due to toxic language' });
     }
 
     // uses time stamp + random string
@@ -85,6 +94,12 @@ app.post('/post-answer', jsonParser, async (req, res) => {
       return res
         .status(400)
         .json({ error: 'Missing required fields: content or questionID' });
+    }
+
+    // checking toxicity
+    const result = await classifyToxicity(content);
+    if (result[0].label === 'toxic') {
+      return res.status(403).json({ error: 'Answer rejected due to toxic language' });
     }
 
     const generateAnswerID = () =>
