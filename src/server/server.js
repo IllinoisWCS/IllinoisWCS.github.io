@@ -20,13 +20,17 @@ app.use(cors());
 
 const notion = new Client({ auth: process.env.REACT_APP_NOTION_API_KEY });
 
+const qaForumNotion = new Client({
+  auth: process.env.REACT_APP_QA_FORUM_NOTION_API_KEY,
+});
 
 //generic properties getters
 const getSelectName = (prop) => {
   if (!prop) return null;
   // select or multi select
   if (prop.select && prop.select.name) return prop.select.name;
-  if (prop.multi_select && prop.multi_select.length) return prop.multi_select[0].name;
+  if (prop.multi_select && prop.multi_select.length)
+    return prop.multi_select[0].name;
   return null;
 };
 
@@ -34,25 +38,28 @@ const getRichText = (prop) => {
   if (!prop) return '';
   // rich_text or title
   if (prop.rich_text && prop.rich_text.length) {
-    return prop.rich_text.map(r => r.plain_text || (r.text && r.text.content) || '').join('');
+    return prop.rich_text
+      .map((r) => r.plain_text || (r.text && r.text.content) || '')
+      .join('');
   }
   if (prop.title && prop.title.length) {
-    return prop.title.map(t => t.plain_text || (t.text && t.text.content) || '').join('');
+    return prop.title
+      .map((t) => t.plain_text || (t.text && t.text.content) || '')
+      .join('');
   }
   return '';
 };
 
-const getCheckbox = (prop) => (prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false);
+const getCheckbox = (prop) =>
+  prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false;
 const getDateStart = (prop) => (prop && prop.date ? prop.date.start : null);
 
-
 async function getQuestionsAndAnswers(databaseId) {
-
   let allPages = [];
   let startCursor = undefined;
 
   while (true) {
-    const resp = await notion.databases.query({
+    const resp = await qaForumNotion.databases.query({
       database_id: databaseId,
       ...(startCursor ? { start_cursor: startCursor } : {}),
     });
@@ -74,17 +81,17 @@ async function getQuestionsAndAnswers(databaseId) {
     const content = getRichText(props.Content) || '';
     const timestamp = getDateStart(props.Timestamp) || null;
 
-    //populate questions list 
+    //populate questions list
     if (type === 'Question') {
       questions.push({
         QuestionID: qid,
         Content: content,
         Answers: [],
         Timestamp: timestamp,
-        _notionPageId: page.id
+        _notionPageId: page.id,
       });
-    //populate answers map
-    } else if (type === "Answer" && qid) {
+      //populate answers map
+    } else if (type === 'Answer' && qid) {
       const aid = getRichText(props.AnswerID) || '';
       const netid = getRichText(props.NetID) || '';
       const authenticated = getCheckbox(props.Authenticated);
@@ -110,21 +117,20 @@ async function getQuestionsAndAnswers(databaseId) {
   return questions;
 }
 
-
 // get questions and answers endpt
 app.get('/qas', async (req, res) => {
   try {
     const dbId = process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID;
-    if (!dbId) return res.status(500).json({ error: 'Notion DB ID not configured' });
+    if (!dbId)
+      return res.status(500).json({ error: 'Notion DB ID not configured' });
 
     const qa = await getQuestionsAndAnswers(dbId);
     return res.json(qa);
   } catch (err) {
-    console.error('Error fetching QAs:', err);
+    console.error('Error fetching QAs:', JSON.stringify(err, null, 2));
     return res.status(500).json({ error: 'Failed to fetch QAs' });
   }
 });
-
 
 // q&a post functions
 app.post('/post-question', jsonParser, async (req, res) => {
@@ -132,21 +138,23 @@ app.post('/post-question', jsonParser, async (req, res) => {
     const { question, netid, timestamp } = req.body;
 
     if (!question) {
-      return res.status(400).json({error: "Missing required content field" });
+      return res.status(400).json({ error: 'Missing required content field' });
     }
 
     // uses time stamp + random string
     const generateQuestionID = () =>
       `Q-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
-    
+
     const questionID = generateQuestionID();
 
     // gets question content & ids
-    const response = await notion.pages.create({
-      parent: { database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID },
+    const response = await qaForumNotion.pages.create({
+      parent: {
+        database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
+      },
       properties: {
         Type: {
-          select: { name: "Question" },
+          select: { name: 'Question' },
         },
         Content: {
           title: [{ text: { content: question } }],
@@ -155,7 +163,7 @@ app.post('/post-question', jsonParser, async (req, res) => {
           rich_text: [{ text: { content: questionID } }],
         },
         AnswerID: {
-          rich_text: [{ text: { content: "" } }], // empty for questions
+          rich_text: [{ text: { content: '' } }], // empty for questions
         },
         Authenticated: {
           checkbox: false, // questions are not authenticated
@@ -165,11 +173,10 @@ app.post('/post-question', jsonParser, async (req, res) => {
             start: timestamp || new Date().toISOString(),
           },
         },
-
-      }
+      },
     });
     res.status(200).json({
-      message: "Question posted successfully",
+      message: 'Question posted successfully',
       notionId: response.id,
       questionID,
     });
@@ -184,7 +191,9 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     const { content, netid, questionID, authenticated, timestamp } = req.body;
 
     if (!content || !questionID) {
-      return res.status(400).json({ error: "Missing required fields: content or questionID" });
+      return res
+        .status(400)
+        .json({ error: 'Missing required fields: content or questionID' });
     }
 
     const generateAnswerID = () =>
@@ -193,17 +202,19 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     const answerID = generateAnswerID();
 
     // gets answer content, ids, and authentication status
-    const response = await notion.pages.create({
-      parent: { database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID },
+    const response = await qaForumNotion.pages.create({
+      parent: {
+        database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
+      },
       properties: {
         Type: {
-          select: { name: "Answer" },
+          select: { name: 'Answer' },
         },
         Content: {
           title: [{ text: { content } }],
         },
         NetID: {
-          rich_text: [{ text: { content: netid || "" } }],
+          rich_text: [{ text: { content: netid || '' } }],
         },
         QuestionID: {
           rich_text: [{ text: { content: questionID } }],
@@ -223,16 +234,15 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     });
 
     res.status(200).json({
-      message: "Answer posted successfully",
+      message: 'Answer posted successfully',
       notionId: response.id,
       answerID,
     });
   } catch (error) {
-    console.error("Error posting answer:", error);
-    res.status(500).json({ error: "Failed to post answer" });
+    console.error('Error posting answer:', error);
+    res.status(500).json({ error: 'Failed to post answer' });
   }
 });
-
 
 // // returns category : switch this out when using the actual board!!
 const getType = (properties) => properties.Type.multi_select[0].name;
@@ -322,11 +332,11 @@ if (process.env.NODE_ENV === 'production') {
   // Production: use HTTPS with your Let's Encrypt certs
   const privateKey = fs.readFileSync(
     '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
-    'utf8'
+    'utf8',
   );
   const certificate = fs.readFileSync(
     '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
-    'utf8'
+    'utf8',
   );
   const credentials = { key: privateKey, cert: certificate };
 
@@ -350,7 +360,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-
 // https server setup
 // reads sssl certificate files issued by let's encrypt
 // const privateKey = fs.readFileSync(
@@ -368,7 +377,6 @@ if (process.env.NODE_ENV === 'production') {
 
 // httpsServer.listen(443);
 
-
 // // redirects all http requests to http
 // const httpApp = express();
 
@@ -377,7 +385,3 @@ if (process.env.NODE_ENV === 'production') {
 // });
 
 // http.createServer(httpApp).listen(80);
-
-
-
-
