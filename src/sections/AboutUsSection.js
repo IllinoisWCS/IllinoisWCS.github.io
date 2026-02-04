@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import PhoneComponent from '../components/general/PhoneComponent';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/sections/AboutUsSection.module.css';
+import PhoneComponent from '../components/general/PhoneComponent';
 
 export default function AboutUsSection() {
   return (
@@ -75,14 +75,13 @@ export default function AboutUsSection() {
             </div>
           </ComputerWindow>
         </div>
-
         <div className={`${styles.phoneContainer}`}>
           <PhoneComponent>
             <Image
               src="/assets/img/home-page/newteam.JPG"
-              alt="corporate retreat 22-23"
-              height={475}
-              width={353}
+              alt="Fall 2024 August GM"
+              height={266}
+              width={400}
             />
           </PhoneComponent>
         </div>
