@@ -186,28 +186,62 @@ app.get('/exploration-resources-api', jsonParser, async (req, res) => {
   }
 });
 
+const PORT = process.env.PORT || 4000; // dev port fallback
+
+if (process.env.NODE_ENV === 'production') {
+  // Production: use HTTPS with your Let's Encrypt certs
+  const privateKey = fs.readFileSync(
+    '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
+    'utf8',
+  );
+  const certificate = fs.readFileSync(
+    '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
+    'utf8',
+  );
+  const credentials = { key: privateKey, cert: certificate };
+
+  const httpsServer = https.createServer(credentials, app);
+  httpsServer.listen(443, () => {
+    // console.log('HTTPS server running on port 443');
+  });
+
+  // redirect all HTTP traffic to HTTPS
+  const httpApp = express();
+  httpApp.use((req, res) => {
+    res.redirect(`https://${req.headers.host}${req.url}`);
+  });
+  http.createServer(httpApp).listen(80, () => {
+    // console.log('HTTP redirect server running on port 80');
+  });
+} else {
+  // Development: just run HTTP locally
+  app.listen(PORT, () => {
+    // console.log(`Dev server running on http://localhost:${PORT}`);
+  });
+}
+
 // https server setup
 // reads sssl certificate files issued by let's encrypt
-const privateKey = fs.readFileSync(
-  '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
-  'utf8',
-);
-const certificate = fs.readFileSync(
-  '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
-  'utf8',
-);
-const credentials = { key: privateKey, cert: certificate };
+// const privateKey = fs.readFileSync(
+//   '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
+//   'utf8',
+// );
+// const certificate = fs.readFileSync(
+//   '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
+//   'utf8',
+// );
+// const credentials = { key: privateKey, cert: certificate };
 
-//  creates https server with express app and ssl credentials
-const httpsServer = https.createServer(credentials, app);
+// //  creates https server with express app and ssl credentials
+// const httpsServer = https.createServer(credentials, app);
 
-httpsServer.listen(443);
+// httpsServer.listen(443);
 
-// redirects all http requests to http
-const httpApp = express();
+// // redirects all http requests to http
+// const httpApp = express();
 
-httpApp.use((req, res) => {
-  res.redirect(`https://${req.headers.host}${req.url}`);
-});
+// httpApp.use((req, res) => {
+//   res.redirect(`https://${req.headers.host}${req.url}`);
+// });
 
-http.createServer(httpApp).listen(80);
+// http.createServer(httpApp).listen(80);
