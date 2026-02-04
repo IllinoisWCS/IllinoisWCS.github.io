@@ -37,6 +37,18 @@
   margin: 2rem auto;
 }
 
+.descriptionContainer {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.description {
+  display: inline;
+  padding: 2em 2em;
+  text-align: center;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .content {
@@ -105,7 +117,7 @@
   margin-top: 0;
   text-align: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   position: relative;
   margin: auto;
 }

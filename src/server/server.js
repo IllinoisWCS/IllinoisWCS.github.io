@@ -360,28 +360,9 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// https server setup
-// reads sssl certificate files issued by let's encrypt
-// const privateKey = fs.readFileSync(
-//   '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
-//   'utf8',
-// );
-// const certificate = fs.readFileSync(
-//   '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
-//   'utf8',
-// );
-// const credentials = { key: privateKey, cert: certificate };
-
-// //  creates https server with express app and ssl credentials
-// const httpsServer = https.createServer(credentials, app);
+// redirects all http requests to http
+const httpApp = express();
 
 // httpsServer.listen(443);
 
-// // redirects all http requests to http
-// const httpApp = express();
-
-// httpApp.use((req, res) => {
-//   res.redirect(`https://${req.headers.host}${req.url}`);
-// });
-
-// http.createServer(httpApp).listen(80);
+http.createServer(httpApp).listen(80);

@@ -1,0 +1,28 @@
+.speechBubbleContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 10px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.speechBubbleText {
+  background-color: #efa9ae;
+  color: #000;
+  padding: 12px 16px;
+  border-radius: 18px 18px 0 18px;
+  font-family: 'Arial', sans-serif;
+  max-width: 80%;
+  position: relative;
+}
+
+.speechBubbleTail {
+  position: absolute;
+  right: 0px;
+  bottom: -15px;
+  width: 20px;
+  height: 15px;
+  background-color: #efa9ae;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
