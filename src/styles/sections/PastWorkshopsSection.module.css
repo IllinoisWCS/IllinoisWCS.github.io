@@ -33,6 +33,24 @@
   overflow: hidden;
 }
 
+@media (max-width: 1200px) {
+  .topicsContainer {
+    width: calc(222px * 3 + 1.5rem * 2);
+  }
+}
+
+@media (max-width: 900px) {
+  .topicsContainer {
+    width: calc(222px * 2 + 1.5rem * 1);
+  }
+}
+
+@media (max-width: 600px) {
+  .topicsContainer {
+    width: 222px;
+  }
+}
+
 .topicsTrack {
   display: flex;
   gap: 1.5rem;
@@ -54,20 +72,20 @@
   border-top: 3px solid #f45e75;
   border-bottom: 12px solid #f45e75;
   border-radius: 10px;
-  background-color: #ffcaca;
+  background-color: var(--light-pink);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: none;
   flex-shrink: 0;
 }
 
 .topic:hover {
   background-color: #fe768d;
-  transform: translateY(-1px);
+  transform: translateY(2px);
+  border-bottom: 8px solid #c55a6a;
 }
 
 .topic:active {
-  transform: translateY(2px);
-  border-bottom: 8px solid #c55a6a;
+  background-color: #fe768d;
 }
 
 .arrowButton {

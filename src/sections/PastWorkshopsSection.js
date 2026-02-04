@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import styles from '@/styles/sections/PastWorkshopsSection.module.css';
 import WorkshopSeries from './WorkshopSeries';
 
 export default function PastWorkshops() {
   const topics = [
-    'Git',
+    'Hi',
+    "Git",
     'Cloud Computing',
     'Career Prep',
     'Web Development',
@@ -15,22 +16,41 @@ export default function PastWorkshops() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const TOPICS_PER_VIEW = 4;
+  const [topicsPerView, setTopicsPerView] = useState(4);
 
-  const showArrows = topics.length > TOPICS_PER_VIEW;
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        setTopicsPerView(1);
+      } else if (window.innerWidth < 900) {
+        setTopicsPerView(2);
+      } else if (window.innerWidth < 1200) {
+        setTopicsPerView(3);
+      } else {
+        setTopicsPerView(4);
+      }
+      setCurrentIndex(0);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const showArrows = topics.length > topicsPerView;
   const canScrollLeft = currentIndex > 0;
-  const canScrollRight = currentIndex + TOPICS_PER_VIEW < topics.length;
+  const canScrollRight = currentIndex + topicsPerView < topics.length;
 
   const scrollLeft = () => {
     if (canScrollLeft) {
-      setCurrentIndex(Math.max(0, currentIndex - TOPICS_PER_VIEW));
+      setCurrentIndex(Math.max(0, currentIndex - topicsPerView));
     }
   };
 
   const scrollRight = () => {
     if (canScrollRight) {
-      const maxIndex = Math.max(0, topics.length - TOPICS_PER_VIEW);
-      setCurrentIndex(Math.min(maxIndex, currentIndex + TOPICS_PER_VIEW));
+      const maxIndex = Math.max(0, topics.length - topicsPerView);
+      setCurrentIndex(Math.min(maxIndex, currentIndex + topicsPerView));
     }
   };
 
