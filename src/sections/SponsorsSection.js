@@ -16,6 +16,13 @@ export default function SponsorsSection() {
           </div>
           <div className={styles.sponsors}>
             <Sponsor
+              sponsor="Bayer.png"
+              url="https://www.bayer.com/en/"
+              tier="silver-codeada"
+            />
+          </div>
+          <div className={styles.sponsors}>
+            <Sponsor
               sponsor="gresearch.png"
               url="https://www.gresearch.com/vacancies/"
               tier="bronze"
