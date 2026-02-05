@@ -10,6 +10,7 @@ export default function WorkshopWindow({
   slides,
   recording,
   code,
+  onSlidesClick, // NEW
 }) {
   return (
     <div className={styles.wrapper}>
@@ -21,15 +22,14 @@ export default function WorkshopWindow({
           </div>
           <div className={styles.links}>
             {slides && (
-              <a
-                href={slides}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.linkButton}
-                style={{ backgroundColor: buttonColor }}
-              >
-                <p>Slides</p>
-              </a>
+            <button
+              type="button"
+              className={styles.linkButton}
+              style={{ backgroundColor: buttonColor }}
+              onClick={() => onSlidesClick(slides, topic)}
+            >
+              Slides
+            </button>
             )}
             {recording && (
               <a
