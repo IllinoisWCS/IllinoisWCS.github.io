@@ -153,7 +153,6 @@ export default function UpcomingEventsSection() {
               className={styles.openOffice}
             >
               <h3 style={{ margin: '0' }}>Open Office</h3>
-              <p> (students only)</p>
               <div className={styles.dateTime}>
                 <p>Mon-Fri</p>
                 <p>2:00 PM - 5:00 PM</p>
