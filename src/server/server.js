@@ -24,13 +24,12 @@ const qaForumNotion = new Client({
   auth: process.env.REACT_APP_QA_FORUM_NOTION_API_KEY,
 });
 
-//generic properties getters
+// generic properties getters
 const getSelectName = (prop) => {
   if (!prop) return null;
   // select or multi select
   if (prop.select && prop.select.name) return prop.select.name;
-  if (prop.multi_select && prop.multi_select.length)
-    return prop.multi_select[0].name;
+  if (prop.multi_select && prop.multi_select.length) return prop.multi_select[0].name;
   return null;
 };
 
@@ -51,12 +50,12 @@ const getRichText = (prop) => {
 };
 
 const getCheckbox = (prop) =>
-  prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false;
+  (prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false);
 const getDateStart = (prop) => (prop && prop.date ? prop.date.start : null);
 
 async function getQuestionsAndAnswers(databaseId) {
   let allPages = [];
-  let startCursor = undefined;
+  let startCursor;
 
   while (true) {
     const resp = await qaForumNotion.databases.query({
@@ -81,7 +80,7 @@ async function getQuestionsAndAnswers(databaseId) {
     const content = getRichText(props.Content) || '';
     const timestamp = getDateStart(props.Timestamp) || null;
 
-    //populate questions list
+    // populate questions list
     if (type === 'Question') {
       questions.push({
         QuestionID: qid,
@@ -90,7 +89,7 @@ async function getQuestionsAndAnswers(databaseId) {
         Timestamp: timestamp,
         _notionPageId: page.id,
       });
-      //populate answers map
+      // populate answers map
     } else if (type === 'Answer' && qid) {
       const aid = getRichText(props.AnswerID) || '';
       const netid = getRichText(props.NetID) || '';
@@ -108,7 +107,7 @@ async function getQuestionsAndAnswers(databaseId) {
     }
   });
 
-  //attach answers to each questions at end
+  // attach answers to each questions at end
   questions.forEach((q) => {
     const list = answers[q.QuestionID] || [];
     q.Answers = list;
@@ -121,8 +120,7 @@ async function getQuestionsAndAnswers(databaseId) {
 app.get('/qas', async (req, res) => {
   try {
     const dbId = process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID;
-    if (!dbId)
-      return res.status(500).json({ error: 'Notion DB ID not configured' });
+    if (!dbId) return res.status(500).json({ error: 'Notion DB ID not configured' });
 
     const qa = await getQuestionsAndAnswers(dbId);
     return res.json(qa);

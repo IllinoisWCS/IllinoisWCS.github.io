@@ -1,22 +1,22 @@
 .accordianContainer {
-  width: 1345px;
-  margin: 15px 0;
+  width: 100%;
+  max-width: 1400px;
+  margin: 15px auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background: white;
-  align-items: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  background: transparent;
 }
 
 .questionBar {
-  width: 1345px;
+  width: 100%;
   background-color: #e2626a;
   padding: 16px 20px;
   cursor: pointer;
   display: flex;
-  align-items: left;
+  align-items: center;
   transition: all 0.2s ease;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
 }
 
 .questionText {
@@ -44,12 +44,11 @@
 }
 
 .accordianContent {
-  background-color: #f8f8f8;
+  background-color: transparent;
   padding: 0 20px;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
   border-radius: 0 0 12px 12px;
-  flex-direction: column;
-  align-items: flex-end;
+  display: block;
 }
