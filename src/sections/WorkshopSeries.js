@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import WorkshopWindow from '../components/WorkshopWindow';
 import styles from '../styles/sections/WorkshopSeries.module.css';
+import SlideModal from '../components/SlideModal';
 
 export default function WorkshopSeries() {
   const data = [
@@ -77,7 +78,21 @@ export default function WorkshopSeries() {
     },
   ];
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentSlideLink, setCurrentSlideLink] = useState('');
+  const [currentTitle, setCurrentTitle] = useState('');
   const [chunkSize, setChunkSize] = useState(3);
+
+  const openSlidesModal = (link, title) => {
+    setCurrentSlideLink(link);
+    setCurrentTitle(title);
+    setIsModalOpen(true);
+  };
+
+  const closeSlidesModal = () => {
+    setIsModalOpen(false);
+    setCurrentSlideLink('');
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -123,15 +138,15 @@ export default function WorkshopSeries() {
                 <div
                   className={`${styles.row} ${rowIndex % 2 ? styles.odd : ''}`}
                 >
-                  {row.map((workshop, i) => (
+                  {row.map((workshop) => (
                     <WorkshopWindow
-                      key={i}
-                      className={styles.workshop}
+                      key={workshop.title}
                       emoji={workshop.emoji}
                       topic={workshop.title}
                       slides={workshop.slides}
                       code={workshop.code}
                       recording={workshop.recording}
+                      onSlidesClick={openSlidesModal}
                     />
                   ))}
                 </div>
@@ -148,6 +163,12 @@ export default function WorkshopSeries() {
           </div>
         );
       })}
+      <SlideModal
+        isOpen={isModalOpen}
+        closeModal={closeSlidesModal}
+        slideLink={currentSlideLink}
+        title={currentTitle}
+      />
     </div>
   );
 }
