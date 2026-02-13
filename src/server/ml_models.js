@@ -1,14 +1,36 @@
+import dotenv from 'dotenv'; //for api keys
+import path from "path";
+dotenv.config({path: path.resolve("../../.env")}); //not sure if this is for my system only...
+
 // Uncomment console.log statements for functionality
+//From Ria - anything marked with * is just temporary, for the JSON file, and will (hopefully) be deleted
 
 // Import huggingface model and readline
-import { pipeline } from '@huggingface/transformers';
 import readline from 'readline';
 
-//creating HNSW index
+//TEMPORARY - creating a JSON file to store number-to-questionid mapping.
+const ID_MAP_PATH = "temporary_mapping.json"; //*
+let idMap = JSON.parse(fs.readFileSync(ID_MAP_PATH)); //*
+let nextInternalId = //*
+  Object.keys(idMap).length > 0
+    ? Math.max(...Object.keys(idMap).map(Number)) + 1
+    : 0; // start from 0 if empty
+//*
+
+//IMPORTING HUGGING FACE MODEL
+import fetch from 'node-fetch';
+
+//creation/loading of HNSW index
 import hnswlib from 'hnswlib-node';
-const index = new hnswlib.HierarchicalNSW('cosine', 768); //768 is the embeddingsize of this model
-let databaseSize = 0; //number of questions in the notion database - need to find a way to pull this.
-index.initIndex(100); //maximum number of elements index can hold right now - need to resize later.
+import fs from "fs";
+const INDEX_FILE_PATH = "questions.index";
+let index = new hnswlib.HierarchicalNSW('cosine', 384); //384 is the dimension/embedding size
+if (fs.existsSync(INDEX_FILE_PATH)) {
+  index.readIndexSync(INDEX_FILE_PATH);
+} else {
+  index.initIndex(100); //maximum number of elements index can hold right now - need to add resizing mechanism.
+}
+
 
 // Load toxicity model only once for efficiency
 let toxicityModel = null;
@@ -25,43 +47,64 @@ async function loadToxicityClassifier() {
 }
 
 // ====== REPEAT DETECTION COMPONENTS ======
-//1) Load repeat detection model
-let repeatModel = null;
-async function loadRepeatModel() {
-  if (!repeatModel) {
-    repeatModel = await pipeline(
-      'feature-extraction',
-      'sentence-transformers/all-distilroberta-v1',
-    );
-  }
-  return repeatModel;
-}
+//1) set up API calling -  can't load repeat detection model, can only call via api
+const HF_API_KEY = process.env.HF_API_KEY;
 
-//2) Create an embedding using the model
-async function createEmbedding(input) {
-  const model = await loadRepeatModel();
-  const embedding = await model(input);
-  return embedding.data[0];
+//2) Create an embedding using the HuggingFace model by sending via API
+async function createEmbedding(text) {
+   //all-distilroberta-v1 formerly... but that Inference Endpoint is not supported.
+  const response = await fetch("https://router.huggingface.co/hf-inference/models/sentence-transformers/all-MiniLM-L6-v2/pipeline/feature-extraction",
+ {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${HF_API_KEY}`,
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: JSON.stringify({inputs: text})
+  });
+
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    console.error("HF API error: ", response.status, errorText);
+    throw new Error(`HF API failed: ${response.status}, ${errorText}`);
+  }
+  const embedding = await response.json();
+
+  // normalize the embedding to unit length for cosine similarity
+  const norm = Math.sqrt(
+    embedding.reduce((sum, val) => sum + val * val, 0)
+  );
+  const normalized = embedding.map(v => v / norm);
+  return normalized;
 }
 
 //3) Checking for duplicates
-async function checkDuplicate(input, threshold = 0.9) {
-  if (databaseSize == 0) {
-    return { isDuplicate: false, similarity: 0, nearestId: null };
-  }
+async function checkDuplicate(input, threshold = 0.5) {
   const embedding = await createEmbedding(input);
-  const result = index.search(embedding, 1);
+  const result = index.searchKnn(embedding, 1); //search for the nearest neighbor
+  //top few can be used for search function... for later.
   const nearest = result.neighbors[0];
   const distance = result.distances[0];
   return {
     isDuplicate: 1 - distance >= threshold,
     similarity: 1 - distance,
-    nearestId: nearest,
-  };
+    nearestId: idMap[nearest] //*,
+  }; //is the return type correct? need to update as to what it's going to be repeating
 }
 
-//------END OF REPEAT DETECTION COMPONENTS
+async function addToIndex(id, input) { //need to finish this function properly - this is called when the question is submitted
+  const embedding = await createEmbedding(input);
+  const internalId = nextInternalId++; //basically maintaining count to give everything an index //*
+  idMap[internalId] = id;
+  index.addPoint(embedding, internalId); //* - internalId should be changed to id later
+  index.writeIndexSync(INDEX_FILE_PATH);
+  fs.writeFileSync(ID_MAP_PATH, JSON.stringify(idMap));
+}
+//if question is deleted - need to remove from index too?? have to ask about this
 
+//------END OF REPEAT DETECTION COMPONENTS
 async function classifyToxicityInput(input) {
   const classifier = await loadToxicityClassifier();
   const output = await classifier(input);
@@ -125,3 +168,39 @@ read.on('close', () => {
   // console.log('Session ended.');
   process.exit(0);
 });
+
+/* THIS CODE WAS TO TEST ADDING THE QUESTION FROM ML_MODELS.JS - AI-generated, Ria.
+async function testAddQuestion() {
+  const testText = "Does anyone listen to music while coding? What playlists help you focus? ";
+
+  // Check duplicate
+  const duplicateResult = await checkDuplicate(testText);
+  console.log("Nearest ID:", duplicateResult.nearestId, "Similarity:", duplicateResult.similarity);
+  if (duplicateResult.isDuplicate) {
+    console.log("Duplicate detected!");
+    return;
+  }
+
+  // Generate a fake ID
+  const fakeId = "test-" + Date.now(); // could be any string for now
+
+  // Add to index
+  await addToIndex(fakeId, testText);
+
+  console.log("Question added to HNSW index with ID:", fakeId);
+}
+
+
+import { fileURLToPath } from "url";
+
+// Get the current file path
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Check if this script is being run directly
+if (process.argv[1] === __filename) {
+  testAddQuestion().then(() => {
+    console.log("Test complete");
+  });
+}
+*/
