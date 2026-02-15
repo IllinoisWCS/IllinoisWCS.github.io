@@ -3,19 +3,9 @@ import path from "path";
 dotenv.config({path: path.resolve("../../.env")}); //not sure if this is for my system only...
 
 // Uncomment console.log statements for functionality
-//From Ria - anything marked with * is just temporary, for the JSON file, and will (hopefully) be deleted
 
 // Import huggingface model and readline
 import readline from 'readline';
-
-//TEMPORARY - creating a JSON file to store number-to-questionid mapping.
-const ID_MAP_PATH = "temporary_mapping.json"; //*
-let idMap = JSON.parse(fs.readFileSync(ID_MAP_PATH)); //*
-let nextInternalId = //*
-  Object.keys(idMap).length > 0
-    ? Math.max(...Object.keys(idMap).map(Number)) + 1
-    : 0; // start from 0 if empty
-//*
 
 //IMPORTING HUGGING FACE MODEL
 import fetch from 'node-fetch';
@@ -23,12 +13,12 @@ import fetch from 'node-fetch';
 //creation/loading of HNSW index
 import hnswlib from 'hnswlib-node';
 import fs from "fs";
-const INDEX_FILE_PATH = "questions.index";
-let index = new hnswlib.HierarchicalNSW('cosine', 384); //384 is the dimension/embedding size
+const INDEX_FILE_PATH = "data/questions.index";
+let question_index = new hnswlib.HierarchicalNSW('cosine', 384); //384 is the dimension/embedding size
 if (fs.existsSync(INDEX_FILE_PATH)) {
-  index.readIndexSync(INDEX_FILE_PATH);
+  question_index.readIndexSync(INDEX_FILE_PATH);
 } else {
-  index.initIndex(100); //maximum number of elements index can hold right now - need to add resizing mechanism.
+  question_index.initIndex(100); //maximum number of elements index can hold right now - need to add resizing mechanism.
 }
 
 
@@ -83,24 +73,21 @@ async function createEmbedding(text) {
 //3) Checking for duplicates
 async function checkDuplicate(input, threshold = 0.5) {
   const embedding = await createEmbedding(input);
-  const result = index.searchKnn(embedding, 1); //search for the nearest neighbor
+  const result = question_index.searchKnn(embedding, 1); //search for the nearest neighbor
   //top few can be used for search function... for later.
   const nearest = result.neighbors[0];
   const distance = result.distances[0];
   return {
     isDuplicate: 1 - distance >= threshold,
     similarity: 1 - distance,
-    nearestId: idMap[nearest] //*,
-  }; //is the return type correct? need to update as to what it's going to be repeating
+    nearestId: nearest,
+  };
 }
 
-async function addToIndex(id, input) { //need to finish this function properly - this is called when the question is submitted
+async function addQuestionToIndex(id, input) { //when the question is posted, after passing similarity check
   const embedding = await createEmbedding(input);
-  const internalId = nextInternalId++; //basically maintaining count to give everything an index //*
-  idMap[internalId] = id;
-  index.addPoint(embedding, internalId); //* - internalId should be changed to id later
-  index.writeIndexSync(INDEX_FILE_PATH);
-  fs.writeFileSync(ID_MAP_PATH, JSON.stringify(idMap));
+  question_index.addPoint(embedding, id);
+  question_index.writeIndexSync(INDEX_FILE_PATH);
 }
 //if question is deleted - need to remove from index too?? have to ask about this
 
@@ -169,9 +156,9 @@ read.on('close', () => {
   process.exit(0);
 });
 
-/* THIS CODE WAS TO TEST ADDING THE QUESTION FROM ML_MODELS.JS - AI-generated, Ria.
+ //THIS CODE WAS TO TEST ADDING THE QUESTION FROM ML_MODELS.JS - AI-generated, Ria.
 async function testAddQuestion() {
-  const testText = "Does anyone listen to music while coding? What playlists help you focus? ";
+  const testText = "How do I approach a professor about research opportunities?";
 
   // Check duplicate
   const duplicateResult = await checkDuplicate(testText);
@@ -182,10 +169,10 @@ async function testAddQuestion() {
   }
 
   // Generate a fake ID
-  const fakeId = "test-" + Date.now(); // could be any string for now
+  const fakeId = Date.now(); // could be any string for now
 
   // Add to index
-  await addToIndex(fakeId, testText);
+  await addQuestionToIndex(fakeId, testText);
 
   console.log("Question added to HNSW index with ID:", fakeId);
 }
@@ -203,4 +190,3 @@ if (process.argv[1] === __filename) {
     console.log("Test complete");
   });
 }
-*/

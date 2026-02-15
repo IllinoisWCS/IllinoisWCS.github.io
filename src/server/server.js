@@ -141,9 +141,12 @@ app.post('/post-question', jsonParser, async (req, res) => {
       return res.status(400).json({ error: 'Missing required content field' });
     }
 
-    // uses time stamp + random string
-    const generateQuestionID = () =>
-      `Q-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
+    const generateQuestionID = () => {
+      const timestamp = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
+      const randomnum = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
+      return Number(`1${timestamp}${randomnum}`);
+      //FORMAT: 1 (to indicate it's a question) - timestamp (10 digits) - random number (5 digits)
+    }
 
     const questionID = generateQuestionID();
 
