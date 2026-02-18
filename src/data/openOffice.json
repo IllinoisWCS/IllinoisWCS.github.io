@@ -6,33 +6,33 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Saloni Vaishnav", "Firmiana Wang", "Elaina Xiao"],
-            "committees": ["Becky Blake", "Rachel Chen", "Skyla Jin"]
+            "officers": ["Jia Gill", "Jazmin Uribe"],
+            "committees": []
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Saloni Vaishnav", "Firmiana Wang", "Elaina Xiao"],
-            "committees": ["Becky Blake", "Alisha Virani"]
+            "officers": ["Jia Gill", "Jazmin Uribe"],
+            "committees": []
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Firmiana Wang", "Aditi Prasad", "Elaina Xiao"],
-            "committees": ["Brillina Wang", "Aditi Kumar", "Alisha Virani"]
+            "officers": ["Jia Gill", "Jazmin Uribe"],
+            "committees": ["Moukthika Nellutla", "Tanishka Suman", "Rakshita Kunde"]
           },
           {
             "time": "3:30-4:00",
-            "officers": ["Firmiana Wang", "Aditi Prasad", "Elaina Xiao"],
-            "committees": ["Fiona Hu", "Jia Gill", "Helena Ilic"]
+            "officers": ["Jia Gill", "Jazmin Uribe", "Aditi Kumar"],
+            "committees": ["Moukthika Nellutla", "Rakshita Kunde"]
           },
           {
             "time": "4:00-4:30",
-            "officers": ["Simone Schwaighart", "Aditi Prasad"],
-            "committees": []
+            "officers": ["Shivi Narang","Ananya Kalidindi", "Michelle Sun"],
+            "committees": ["Eva Noftz"]
           },
           {
             "time": "4:30-5:00",
-            "officers": ["Simone Schwaighart", "Aditi Prasad"],
-            "committees": []
+            "officers": ["Shivi Narang", "Ananya Kalidindi", "Michelle Sun"],
+            "committees": ["Eva Noftz", "Laura Zhang"]
           }
         ]
       },
@@ -41,33 +41,33 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Saloni Vaishnav", "Kathryn Lee"],
-            "committees": ["Vani Ramesh", "Abby Gillham"]
+            "officers": ["Julia Koite"],
+            "committees": ["Rea Sanguenza"]
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Saloni Vaishnav", "Kathryn Lee"],
-            "committees": ["Vani Ramesh", "Abby Gillham", "Madison Lee"]
+            "officers": ["Julia Koite"],
+            "committees": ["Rea Sanguenza"]
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Tia Kashyap", "Kathryn Lee"],
-            "committees": ["Prisha Thoguluva", "Shivi Narang", "Madison Lee"]
+            "officers": ["Julia Koite"],
+            "committees": []
           },
           {
             "time": "3:30-4:00",
-            "officers": ["Tia Kashyap", "Kathryn Lee"],
-            "committees": ["Prisha Thoguluva"]
+            "officers": ["Tia Kashyap", "Hiral Palakurty", "Julia Koite"],
+            "committees": ["Sara Grabowski"]
           },
           {
             "time": "4:00-4:30",
-            "officers": ["Kalika Raje", "Tia Kashyap"],
-            "committees": ["Julia Koite"]
+            "officers": ["Tia Kashyap", "Karen Gao", "Hiral Palakurty"],
+            "committees": ["Aisvarya Nagapudi"]
           },
           {
             "time": "4:30-5:00",
-            "officers": ["Kalika Raje", "Tia Kashyap"],
-            "committees": ["Julia Koite"]
+            "officers": ["Karen Gao"],
+            "committees": ["Aisvarya Nagapudi"]
           }
         ]
       },
@@ -76,45 +76,33 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Karen Gao", "Annapoorna Narayan", "Shagun Khare"],
-            "committees": ["Ashlee Tran"]
+            "officers": ["Anshi Mathur", "Hazel Lu"],
+            "committees": ["Priya Agrawal", "Taniya Agrawal"]
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Karen Gao", "Annapoorna Narayan", "Shagun Khare"],
-            "committees": ["Madhumita Narayan", "Ashlee Tran"]
+            "officers": ["Anshi Mathur", "Hazel Lu"],
+            "committees": ["Priya Agrawal", "Taniya Agrawal", "Irene Bobby"]
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Emma Maxwell", "Annapoorna Narayan"],
-            "committees": ["Madhumita Narayan"]
+            "officers": ["Emma Maxwell", "Anshi Mathur", "Rachel Chen"],
+            "committees": ["Grace Ren", "Taniya Agrawal", "Irene Bobby"]
           },
           {
             "time": "3:30-4:00",
-            "officers": [
-              "Emma Maxwell",
-              "Shreya Deshpande",
-              "Annapoorna Narayan"
-            ],
-            "committees": ["Sriya Gottiparthi", "Siya Choudhary"]
+            "officers": ["Emma Maxwell", "Anshi Mathur", "Rachel Chen"],
+            "committees": ["Grace Ren"]
           },
           {
             "time": "4:00-4:30",
-            "officers": [
-              "Emma Maxwell",
-              "Simone Schwaighart",
-              "Shreya Deshpande"
-            ],
-            "committees": ["Kashvi Panjolia"]
+            "officers": ["Emma Maxwell", "Shivi Narang", "Rachel Chen"],
+            "committees": []
           },
           {
             "time": "4:30-5:00",
-            "officers": ["Emma Maxwell", "Simone Schwaighart"],
-            "committees": [
-              "Kashvi Panjolia",
-              "Nicole Hu",
-              "Sailaja Nallacheruvu"
-            ]
+            "officers": ["Emma Maxwell", "Shivi Narang", "Rachel Chen"],
+            "committees": []
           }
         ]
       },
@@ -123,33 +111,33 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Shriya Dave"],
-            "committees": ["Hiral Palakurty", "Sahana Sankar"]
+            "officers": ["Kirthi Shankar", "Aditi Kumar"],
+            "committees": ["Saumya Agarwal", "Aliya Ahmad"]
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Shriya Dave"],
-            "committees": ["Hiral Palakurty", "Natalie DuShane"]
+            "officers": ["Kirthi Shankar", "Aditi Kumar"],
+            "committees": ["Aliya Ahmad"]
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Kavya Puranam", "Shriya Dave"],
-            "committees": ["Shivi Narang", "Natalie DuShane"]
+            "officers": ["Kirthi Shankar", "Aditi Kumar"],
+            "committees": ["Parul Saxena", "Angela Shao"]
           },
           {
             "time": "3:30-4:00",
-            "officers": ["Kavya Puranam", "Shreya Deshpande", "Shriya Dave"],
-            "committees": ["Lauren Peng", "Tanishka Suman", "Vaani Rometra"]
+            "officers": ["Tia Kashyap", "Kirthi Shankar", "Hiral Palakurty"],
+            "committees": ["Parul Saxena", "Angela Shao", "Sriya Gottiparthi"]
           },
           {
             "time": "4:00-4:30",
-            "officers": ["Kavya Puranam", "Kalika Raje", "Shreya Deshpande"],
-            "committees": ["Sofia Stoica", "Vaani Rometra"]
+            "officers": ["Tia Kashyap", "Karen Gao", "Karen Gao"],
+            "committees": ["Amy Wang"]
           },
           {
             "time": "4:30-5:00",
-            "officers": ["Kavya Puranam", "Kalika Raje"],
-            "committees": ["Sofia Stoica", "Anshi Mathur"]
+            "officers": ["Karen Gao"],
+            "committees": ["Amy Wang"]
           }
         ]
       },
@@ -158,33 +146,33 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Shagun Khare", "Karen Gao", "Shreya Vinjamuri"],
-            "committees": ["Megan Tran", "Sophia Moylan"]
+            "officers": ["Shagun Khare", "Hazel Lu", "Helena Ilic"],
+            "committees": ["Lilia Williams", "Anika Radhakrishnan"]
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Shagun Khare", "Karen Gao", "Shreya Vinjamuri"],
-            "committees": ["Sophia Moylan"]
+            "officers": ["Shagun Khare", "Hazel Lu", "Helena Ilic"],
+            "committees": ["Lilia Williams", "Anika Radhakrishnan"]
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Michelle Sun", "Shreya Vinjamuri"],
-            "committees": []
+            "officers": ["Michelle Sun", "Ananya Kalidindi", "Shagun Khare"],
+            "committees": ["Ashley Hua", "Avaya Agarwal"]
           },
           {
             "time": "3:30-4:00",
-            "officers": ["Michelle Sun", "Shreya Vinjamuri"],
-            "committees": []
+            "officers": ["Michelle Sun", "Ananya Kalidindi", "Shagun Khare"],
+            "committees": ["Ashley Hua", "Avaya Agarwal"]
           },
           {
             "time": "4:00-4:30",
-            "officers": ["Michelle Sun"],
-            "committees": ["Jessica Xu"]
+            "officers": ["Helena Ilic"],
+            "committees": ["Ria Sinha"]
           },
           {
             "time": "4:30-5:00",
-            "officers": ["Michelle Sun"],
-            "committees": ["Jessica Xu"]
+            "officers": ["Helena Ilic"],
+            "committees": []
           }
         ]
       }
@@ -197,33 +185,33 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Saloni Vaishnav", "Firmiana Wang", "Elaina Xiao"],
-            "committees": ["Rachel Chen", "Skyla Jin", "Swarnika Bhardwaj"]
+            "officers": ["Jia Gill", "Jazmin Uribe"],
+            "committees": []
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Saloni Vaishnav", "Firmiana Wang", "Elaina Xiao"],
-            "committees": ["Ananya Kalidindi", "Swarnika Bhardwaj"]
+            "officers": ["Jia Gill", "Jazmin Uribe"],
+            "committees": []
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Firmiana Wang", "Aditi Prasad", "Elaina Xiao"],
-            "committees": ["Brillina Wang", "Ananya Kalidindi", "Aditi Kumar"]
+            "officers": ["Jia Gill", "Jazmin Uribe"],
+            "committees": ["Chandini Chennakesavan", "Tanishka Suman", "Natalie DuShane"]
           },
           {
             "time": "3:30-4:00",
-            "officers": ["Firmiana Wang", "Aditi Prasad", "Elaina Xiao"],
-            "committees": ["Fiona Hu", "Jia Gill", "Helena Ilic"]
+            "officers": ["Jia Gill", "Jazmin Uribe", "Aditi Kumar"],
+            "committees": ["Chandini Chennakesavan", "Natalie DuShane"]
           },
           {
             "time": "4:00-4:30",
-            "officers": ["Simone Schwaighart", "Aditi Prasad"],
-            "committees": []
+            "officers": ["Shivi Narang","Ananya Kalidindi", "Michelle Sun"],
+            "committees": ["Aarushi Das"]
           },
           {
             "time": "4:30-5:00",
-            "officers": ["Simone Schwaighart", "Aditi Prasad"],
-            "committees": []
+            "officers": ["Shivi Narang", "Ananya Kalidindi", "Michelle Sun"],
+            "committees": ["Aarushi Das", "Laura Zhang"]
           }
         ]
       },
@@ -232,33 +220,33 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Saloni Vaishnav", "Kathryn Lee"],
-            "committees": ["Grace Ren", "Nyssa Aftab", "Ila Petrovic"]
+            "officers": ["Julia Koite"],
+            "committees": []
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Saloni Vaishnav", "Kathryn Lee"],
-            "committees": ["Grace Ren", "Nyssa Aftab", "Ila Petrovic"]
+            "officers": ["Julia Koite"],
+            "committees": ["Tanisha Mathur", "Victoria Zhang"]
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Tia Kashyap", "Kathryn Lee"],
-            "committees": ["Zia Lu", "Camryn Lee", "Blessita Charly"]
+            "officers": ["Julia Koite"],
+            "committees": ["Tanisha Mathur", "Victoria Zhang"]
           },
           {
             "time": "3:30-4:00",
-            "officers": ["Tia Kashyap", "Kathryn Lee"],
-            "committees": ["Zia Lu", "Camryn Lee", "Blessita Charly"]
+            "officers": ["Tia Kashyap", "Hiral Palakurty", "Julia Koite"],
+            "committees": ["Sara Grabowski", "Disha Dayalan", "Rhea Shah"]
           },
           {
             "time": "4:00-4:30",
-            "officers": ["Kalika Raje", "Tia Kashyap"],
-            "committees": ["Sanjana Settipalli", "Ashley Lee"]
+            "officers": ["Tia Kashyap", "Karen Gao", "Hiral Palakurty"],
+            "committees": ["Disha Dayalan","Rhea Shah"]
           },
           {
             "time": "4:30-5:00",
-            "officers": ["Kalika Raje", "Tia Kashyap"],
-            "committees": ["Sanjana Settipalli", "Ashley Lee"]
+            "officers": ["Karen Gao"],
+            "committees": []
           }
         ]
       },
@@ -267,49 +255,33 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Karen Gao", "Annapoorna Narayan", "Shagun Khare"],
-            "committees": ["Sahasra Kotarkonda"]
+            "officers": ["Anshi Mathur", "Hazel Lu"],
+            "committees": []
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Karen Gao", "Annapoorna Narayan", "Shagun Khare"],
-            "committees": ["Jazmin Uribe", "Chloe Bote"]
+            "officers": ["Anshi Mathur", "Hazel Lu"],
+            "committees": ["Amy Kodama"]
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Emma Maxwell", "Annapoorna Narayan"],
-            "committees": ["Jazmin Uribe", "Chloe Bote"]
+            "officers": ["Emma Maxwell", "Anshi Mathur", "Rachel Chen"],
+            "committees": ["Leysana M", "Caroline Feng"]
           },
           {
             "time": "3:30-4:00",
-            "officers": [
-              "Emma Maxwell",
-              "Shreya Deshpande",
-              "Annapoorna Narayan"
-            ],
-            "committees": [
-              "Sriya Gottiparthi",
-              "Siya Choudhary",
-              "Sahana Sankar"
-            ]
+            "officers": ["Emma Maxwell", "Anshi Mathur", "Rachel Chen"],
+            "committees": ["Leysana M", "Caroline Feng"]
           },
           {
             "time": "4:00-4:30",
-            "officers": [
-              "Emma Maxwell",
-              "Simone Schwaighart",
-              "Shreya Deshpande"
-            ],
-            "committees": ["Tanishka Suman", "Anisha Dasgupta"]
+            "officers": ["Emma Maxwell", "Shivi Narang", "Rachel Chen"],
+            "committees": ["Diya Deshpande", "Vittoria Gallina"]
           },
           {
             "time": "4:30-5:00",
-            "officers": ["Emma Maxwell", "Simone Schwaighart"],
-            "committees": [
-              "Nicole Hu",
-              "Anisha Dasgupta",
-              "Sailaja Nallacheruvu"
-            ]
+            "officers": ["Emma Maxwell", "Shivi Narang", "Rachel Chen"],
+            "committees": ["Diya Deshpande", "Vittoria Gallina"]
           }
         ]
       },
@@ -318,45 +290,33 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Shriya Dave"],
-            "committees": [
-              "Taniya Agrawal",
-              "Vittoria Gallina",
-              "Caroline Feng"
-            ]
+            "officers": ["Kirthi Shankar", "Aditi Kumar"],
+            "committees": ["Saumya Agarwal"]
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Shriya Dave"],
-            "committees": [
-              "Taniya Agrawal",
-              "Vittoria Gallina",
-              "Caroline Feng"
-            ]
+            "officers": ["Kirthi Shankar", "Aditi Kumar"],
+            "committees": []
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Kavya Puranam", "Shriya Dave"],
-            "committees": ["Ashley Li"]
+            "officers": ["Kirthi Shankar", "Aditi Kumar"],
+            "committees": ["Nadia Shastri"]
           },
           {
             "time": "3:30-4:00",
-            "officers": ["Kavya Puranam", "Shreya Deshpande", "Shriya Dave"],
-            "committees": ["Lauren Peng", "Ashley Li"]
+            "officers": ["Tia Kashyap", "Kirthi Shankar", "Hiral Palakurty"],
+            "committees": ["Sriya Gottiparthi", "Nadia Shastri"]
           },
           {
             "time": "4:00-4:30",
-            "officers": ["Kavya Puranam", "Kalika Raje", "Shreya Deshpande"],
-            "committees": ["Kirthi Shankar"]
+            "officers": ["Tia Kashyap", "Karen Gao", "Karen Gao"],
+            "committees": ["Shriya Dave"]
           },
           {
             "time": "4:30-5:00",
-            "officers": ["Kavya Puranam", "Kalika Raje"],
-            "committees": [
-              "Anshi Mathur",
-              "Kirthi Shankar",
-              "Sahasra Kotarkonda"
-            ]
+            "officers": ["Karen Gao"],
+            "committees": ["Shriya Dave"]
           }
         ]
       },
@@ -365,33 +325,33 @@
         "rows": [
           {
             "time": "2:00-2:30",
-            "officers": ["Shagun Khare", "Karen Gao", "Shreya Vinjamuri"],
-            "committees": ["Shruthi Vudaru", "Megan Tran"]
+            "officers": ["Shagun Khare", "Hazel Lu", "Helena Ilic"],
+            "committees": ["Jessica Xu"]
           },
           {
             "time": "2:30-3:00",
-            "officers": ["Shagun Khare", "Karen Gao", "Shreya Vinjamuri"],
-            "committees": ["Shruthi Vudaru"]
+            "officers": ["Shagun Khare", "Hazel Lu", "Helena Ilic"],
+            "committees": ["Jessica Xu"]
           },
           {
             "time": "3:00-3:30",
-            "officers": ["Michelle Sun", "Shreya Vinjamuri"],
+            "officers": ["Michelle Sun", "Ananya Kalidindi", "Shagun Khare"],
             "committees": []
           },
           {
             "time": "3:30-4:00",
-            "officers": ["Michelle Sun", "Shreya Vinjamuri"],
+            "officers": ["Michelle Sun", "Ananya Kalidindi", "Shagun Khare"],
             "committees": []
           },
           {
             "time": "4:00-4:30",
-            "officers": ["Michelle Sun"],
-            "committees": ["Aarthi Balaji", "Mayumi Suzue-Pan"]
+            "officers": ["Helena Ilic"],
+            "committees": ["Ria Sinha"]
           },
           {
             "time": "4:30-5:00",
-            "officers": ["Michelle Sun"],
-            "committees": ["Aarthi Balaji", "Mayumi Suzue-Pan"]
+            "officers": ["Helena Ilic"],
+            "committees": []
           }
         ]
       }

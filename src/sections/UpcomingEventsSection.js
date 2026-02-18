@@ -191,7 +191,8 @@ export default function UpcomingEventsSection() {
                       >
                         <Link
                           href="https://docs.google.com/forms/d/e/1FAIpQLSdcSHnZdvpY5MjbdfkdfSMLHx_Mbm_hvBr9zk_b9dYbbG7nFQ/viewform?usp=sharing"
-                          onClick={closeModal}
+                          // onClick={closeModal}
+                          target="_blank"
                         >
                           <p>Make an Appointment</p>
                         </Link>
