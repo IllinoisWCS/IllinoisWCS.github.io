@@ -2,9 +2,6 @@ import Image from 'next/image';
 import PhoneComponent from '../components/general/PhoneComponent';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/sections/AboutUsSection.module.css';
-import NetIdInputBox from '@/components/general/qa-forum/NetIdInputBox';
-import QAInputBox from '@/components/general/qa-forum/QAInputBox';
-import QASubmitButton from '@/components/general/qa-forum/QASubmitButton';
 
 export default function AboutUsSection() {
   return (

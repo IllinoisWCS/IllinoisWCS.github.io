@@ -28,7 +28,7 @@ export default function QA() {
           setQuestions(data || []);
         }
       } catch (error) {
-        console.error('Error fetching questions:', error);
+        toastError('Error fetching questions. Please try again.');
       } finally {
         setQuestionsLoading(false);
       }
@@ -58,7 +58,6 @@ export default function QA() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        console.error('Error response:', errorData);
         toastError(errorData.error || 'Failed to post question. Please try again.');
         return;
       }
@@ -70,7 +69,6 @@ export default function QA() {
         setQuestions(data || []);
       }
     } catch (error) {
-      console.error('Error posting question:', error);
       toastError('There was an error submitting your question. Please try again.');
     } finally {
       setIsLoading(false);
@@ -106,7 +104,6 @@ export default function QA() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        console.error('Error response:', errorData);
         toastError(errorData.error || 'Failed to post answer. Please try again.');
         return;
       }
@@ -120,7 +117,6 @@ export default function QA() {
         setQuestions(data || []);
       }
     } catch (error) {
-      console.error('Error posting answer:', error);
       toastError('There was an error submitting your answer. Please try again.');
     } finally {
       setIsLoading(false);
@@ -218,6 +214,7 @@ export default function QA() {
                               />
                             </div>
                             <button
+                              type="button"
                               onClick={() => {
                                 setSelectedQuestionID(null);
                                 setAnswerText('');
@@ -232,6 +229,7 @@ export default function QA() {
                         {/* Button to select question for answering */}
                         {selectedQuestionID !== question.QuestionID && (
                           <button
+                            type="button"
                             onClick={() => setSelectedQuestionID(question.QuestionID)}
                             className={styles.answerButton}
                           >

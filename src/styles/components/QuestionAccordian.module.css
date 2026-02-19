@@ -1,6 +1,14 @@
 .accordianContainer {
   width: 100%;
-  max-width: 1400px;
+  margin: 15px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  background: transparent;
+}
+
+.accordionContainer {
+  width: 100%;
   margin: 15px auto;
   border-radius: 12px;
   overflow: hidden;
@@ -46,8 +54,14 @@
 .accordianContent {
   background-color: transparent;
   padding: 0 20px;
-  max-height: 0;
-  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 0 0 12px 12px;
+  display: block;
+}
+
+.accordionContent {
+  background-color: transparent;
+  padding: 0 20px;
   transition: all 0.3s ease;
   border-radius: 0 0 12px 12px;
   display: block;

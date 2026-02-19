@@ -10,10 +10,12 @@
 .speechBubbleText {
   background-color: #efa9ae;
   color: #000;
-  padding: 12px 16px;
+  padding: 18px 22px;
   border-radius: 18px 18px 0 18px;
   font-family: 'Arial', sans-serif;
-  max-width: 1360px; 
+  font-size: 20px;
+  line-height: 1.35;
+  max-width: 1400px; 
   width: 100%;
   box-sizing: border-box;
   position: relative;
