@@ -1,4 +1,8 @@
+// importing toxic language ml model
+import { classifyToxicityInput } from './ml_models';
+
 require('dotenv').config();
+// import { configDotenv } from 'dotenv';
 
 const fs = require('fs');
 // creates https server with ssl certificate
@@ -28,6 +32,15 @@ app.post('/post-question', jsonParser, async (req, res) => {
 
     if (!question) {
       return res.status(400).json({ error: 'Missing required content field' });
+    }
+
+    // checking toxicity
+    const result = await classifyToxicityInput(question);
+    // const toxicThreshold = 0.8; // adjust as needed
+    // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
+    if (result[0].label === 'toxic') {
+      // console.log('Blocked question for toxicity:', result);
+      return res.status(403).json({ error: 'Question rejected due to toxic language' });
     }
 
     // uses time stamp + random string
@@ -72,7 +85,7 @@ app.post('/post-question', jsonParser, async (req, res) => {
       questionID,
     });
   } catch (error) {
-    console.error('Error posting question:', error);
+    // console.error('Error posting question:', error);
     res.status(500).json({ error: 'Failed to post question' });
   }
 });
@@ -85,6 +98,15 @@ app.post('/post-answer', jsonParser, async (req, res) => {
       return res
         .status(400)
         .json({ error: 'Missing required fields: content or questionID' });
+    }
+
+    // checking toxicity
+    const result = await classifyToxicityInput(content);
+    // const toxicThreshold = 0.8; // adjust as needed
+    // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
+    if (result[0].label) {
+      // console.log('Blocked question for toxicity:', result);
+      return res.status(403).json({ error: 'Question rejected due to toxic language' });
     }
 
     const generateAnswerID = () =>
@@ -129,7 +151,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
       answerID,
     });
   } catch (error) {
-    console.error('Error posting answer:', error);
+    // console.error('Error posting answer:', error);
     res.status(500).json({ error: 'Failed to post answer' });
   }
 });

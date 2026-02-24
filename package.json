@@ -1,6 +1,7 @@
 {
   "name": "migration",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:server\"",
@@ -16,7 +17,7 @@
   },
   "dependencies": {
     "@huggingface/transformers": "^3.7.6",
-    "@notionhq/client": "^2.2.15",
+    "@notionhq/client": "^2.3.0",
     "@tensorflow-models/toxicity": "^1.2.2",
     "@tensorflow/tfjs": "^4.22.0",
     "body-parser": "^1.20.3",
@@ -24,7 +25,7 @@
     "concurrently": "^9.1.0",
     "cors": "^2.8.5",
     "dompurify": "^3.2.5",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.6.1",
     "express": "^4.21.2",
     "find-config": "^1.0.0",
     "gsap": "^3.12.5",

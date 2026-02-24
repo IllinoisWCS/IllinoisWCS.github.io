@@ -18,7 +18,7 @@ async function loadToxicityClassifier() {
   return toxicityModel;
 }
 
-async function classifyToxicityInput(input) {
+export async function classifyToxicityInput(input) {
   const classifier = await loadToxicityClassifier();
   const output = await classifier(input);
   return output;
@@ -46,7 +46,7 @@ read.on('line', async (line) => {
     const result = await classifyToxicityInput(textInput);
     // Result will be either 'neutral' or 'toxic' with a score
     // higher score = more toxic/more neutral
-    // console.log('Toxicity result:', result);
+    // console.log('Toxicity result:', result[0].label);
 
     if (result.label === 'toxic') {
       // console.log('True');
