@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import QuestionStatusToggle from '../components/general/qa-forum/QuestionStatusToggle';
 import styles from '@/styles/pages/Q&A.module.css';
@@ -5,6 +6,11 @@ import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
 import { toastError } from '../utils/toast';
 
 export default function QA() {
+  // State hooks (how to get data for this??)
+  const [answerContent, setAnswerContent] = useState('hello');
+  const [questionID, setQuestionID] = useState('1234');
+  const [netID, setNetID] = useState('5678');
+
   const submitQuestion = () => {
     const success = false; // We can call api here and check if successful or not
     // we can check if success here, redirect to points page
@@ -15,9 +21,31 @@ export default function QA() {
     }
   };
 
-  const submitAnswer = () => {
-    const success = false; // Simulate success or failure
-    if (!success) {
+  const API_URL = 'http://localhost:4000';
+
+  const submitAnswer = async () => {
+    try {
+      const res = await fetch(`${API_URL}/post-answer`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          questionID,
+          netid: netID,
+          content: answerContent,
+        }),
+      });
+
+      let data;
+      try {
+        data = await res.json();
+      } catch (jsonError) {
+        console.error('Failed to parse JSON:', jsonError);
+        data = null;
+      }
+
+      // console.log("JWT token received: ", data.token);
+      alert('Answer submitted successfully!', data.token);
+    } catch (error) {
       toastError(
         'There was an error submitting your answer. Please try again.', // TODO: change message based on error type
       );
