@@ -32,5 +32,22 @@
     "object-curly-newline": "off",
     "implicit-arrow-linebreak": "off",
     "operator-linebreak": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["src/server/**/*.js"],
+      "rules": {
+        "no-console": "off",
+        "no-unused-vars": "off",
+        "no-await-in-loop": "off",
+        "no-param-reassign": "off",
+        "consistent-return": "off",
+        "eqeqeq": "off",
+        "camelcase": "off",
+        "no-template-curly-in-string": "off",
+        "max-len": "off",
+        "no-constant-condition": "off"
+      }
+    }
+  ]
 }

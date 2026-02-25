@@ -1,5 +1,5 @@
 .container {
-  width: 1345px;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
   color: #666666;
 }
@@ -8,9 +8,9 @@
   width: 100%;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   background-color: white;
-  padding: 16px 20px;
+  padding: 12px 18px;
   border-radius: 20px;
   border: none;
   color: #666666;

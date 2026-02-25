@@ -1,5 +1,7 @@
 .toggleContainer {
-  width: 100vw;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; 
   display: flex;
 }
 
