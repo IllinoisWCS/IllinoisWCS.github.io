@@ -192,6 +192,8 @@ read.on('close', () => {
   process.exit(0);
 });
 
+/*
+
  //THIS CODE WAS TO TEST ADDING THE QUESTION FROM ML_MODELS.JS - AI-generated, Ria.
 async function testAddQuestion() {
   const testText = "How do I approach a professor about research opportunities?";
@@ -213,26 +215,6 @@ async function testAddQuestion() {
   console.log("Question added to HNSW index with ID:", fakeId);
 }
 
- //THIS CODE WAS TO TEST ADDING THE QUESTION FROM ML_MODELS.JS - AI-generated, Ria.
-async function testAddAnswer() {
-  const testText = "How do I approach a professor about research opportunities?";
-
-  // Check duplicate
-  const duplicateResult = await checkDuplicate(testText);
-  console.log("Nearest ID:", duplicateResult.nearestId, "Similarity:", duplicateResult.similarity);
-  if (duplicateResult.isDuplicate) {
-    console.log("Duplicate detected!");
-    return;
-  }
-
-  // Generate a fake ID
-  const fakeId = Date.now(); // could be any string for now
-
-  // Add to index
-  await addAnswerToIndex(fakeId, testText);
-
-  console.log("Question added to HNSW index with ID:", fakeId);
-}
 
 
 import { fileURLToPath } from "url";
@@ -247,3 +229,4 @@ if (process.argv[1] === __filename) {
     console.log("Test complete");
   });
 }
+*/
