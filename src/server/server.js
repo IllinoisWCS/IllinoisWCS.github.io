@@ -149,7 +149,6 @@ app.post('/post-question', jsonParser, async (req, res) => {
     }
 
     const questionID = generateQuestionID();
-
     // gets question content & ids
     const response = await qaForumNotion.pages.create({
       parent: {
@@ -163,10 +162,12 @@ app.post('/post-question', jsonParser, async (req, res) => {
           title: [{ text: { content: question } }],
         },
         QuestionID: {
-          rich_text: [{ text: { content: questionID } }],
+          // rich_text: [{ text: { content: questionID } }],
+          number: questionID,
         },
         AnswerID: {
-          rich_text: [{ text: { content: '' } }], // empty for questions
+          // rich_text: [{ text: { content: '' } }], // empty for questions
+          number: 0, // 0 for questions, will be updated for answers
         },
         Authenticated: {
           checkbox: false, // questions are not authenticated
@@ -185,7 +186,7 @@ app.post('/post-question', jsonParser, async (req, res) => {
     });
   } catch (error) {
     console.error('Error posting question:', error);
-    res.status(500).json({ error: 'Failed to post question' });
+    res.status(500).json({ error: 'Failed to post question', details: error.message });
   }
 });
 
@@ -199,8 +200,13 @@ app.post('/post-answer', jsonParser, async (req, res) => {
         .json({ error: 'Missing required fields: content or questionID' });
     }
 
-    const generateAnswerID = () =>
-      `A-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
+    const generateAnswerID = () => {
+      const timestamp = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
+      // not technically a timestamp, but the time passed in seconds since epoch (Jan 1 1970)
+      const randomnum = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
+      return Number(`2${timestamp}${randomnum}`);
+      //FORMAT: 2 (to indicate it's an answer) - timestamp (10 digits) - random number (5 digits)
+    }
 
     const answerID = generateAnswerID();
 
@@ -220,10 +226,12 @@ app.post('/post-answer', jsonParser, async (req, res) => {
           rich_text: [{ text: { content: netid || '' } }],
         },
         QuestionID: {
-          rich_text: [{ text: { content: questionID } }],
+          number: questionID,
+          // rich_text: [{ text: { content: questionID } }],
         },
         AnswerID: {
-          rich_text: [{ text: { content: answerID } }],
+          // rich_text: [{ text: { content: answerID } }],
+          number: answerID,
         },
         Authenticated: {
           checkbox: !!authenticated, // true if user successfully authenticated
@@ -243,7 +251,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     });
   } catch (error) {
     console.error('Error posting answer:', error);
-    res.status(500).json({ error: 'Failed to post answer' });
+    res.status(500).json({ error: 'Failed to post answer', details: error.message});
   }
 });
 

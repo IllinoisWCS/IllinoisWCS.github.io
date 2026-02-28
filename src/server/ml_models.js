@@ -1,26 +1,27 @@
-import dotenv from 'dotenv'; //for api keys
-import path from "path";
+// // this file is using "import" but server.js is using "require"...
+// import dotenv from 'dotenv'; //for api keys
+// import path from "path";
+// dotenv.config({path: path.resolve("../../.env")}); //not sure if this is for my system only...
+// //needs to be able to use require, removed type=module in package.json... have to change this. 
+// // Uncomment console.log statements for functionality
+
+// // Import huggingface model and readline
+// import readline from 'readline';
+
+// //IMPORTING HUGGING FACE MODEL
+// import fetch from 'node-fetch';
+
+// //creation/loading of HNSW index
+// import hnswlib from 'hnswlib-node';
+// import fs from "fs";
+
+const dotenv = require('dotenv'); //for api keys
+const path = require("path");
 dotenv.config({path: path.resolve("../../.env")}); //not sure if this is for my system only...
-
-// Uncomment console.log statements for functionality
-
-// Import huggingface model and readline
-import readline from 'readline';
-
-//IMPORTING HUGGING FACE MODEL
-import fetch from 'node-fetch';
-
-//creation/loading of HNSW index
-import hnswlib from 'hnswlib-node';
-import fs from "fs";
-const INDEX_FILE_PATH = "data/questions.index";
-let question_index = new hnswlib.HierarchicalNSW('cosine', 384); //384 is the dimension/embedding size
-if (fs.existsSync(INDEX_FILE_PATH)) {
-  question_index.readIndexSync(INDEX_FILE_PATH);
-} else {
-  question_index.initIndex(100); //maximum number of elements index can hold right now - need to add resizing mechanism.
-}
-
+const readline = require('readline');
+// const fetch = require('node-fetch');
+const hnswlib = require('hnswlib-node');
+const fs = require("fs");
 
 // Load toxicity model only once for efficiency
 let toxicityModel = null;
@@ -71,9 +72,9 @@ async function createEmbedding(text) {
 }
 
 //3) Checking for duplicates
-async function checkDuplicate(input, threshold = 0.5) {
+async function checkDuplicate(index, input, threshold = 0.5) {
   const embedding = await createEmbedding(input);
-  const result = question_index.searchKnn(embedding, 1); //search for the nearest neighbor
+  const result = index.searchKnn(embedding, 5); //search for the nearest neighbor
   //top few can be used for search function... for later.
   const nearest = result.neighbors[0];
   const distance = result.distances[0];
@@ -84,12 +85,47 @@ async function checkDuplicate(input, threshold = 0.5) {
   };
 }
 
-async function addQuestionToIndex(id, input) { //when the question is posted, after passing similarity check
-  const embedding = await createEmbedding(input);
-  question_index.addPoint(embedding, id);
-  question_index.writeIndexSync(INDEX_FILE_PATH);
-}
 //if question is deleted - need to remove from index too?? have to ask about this
+async function questionIsRepeated(question, questionId) {
+  question_index = new hnswlib.HierarchicalNSW('cosine', 384); //384 is the dimension/embedding size
+  if (fs.existsSync("data/questions.index")) {
+    question_index.readIndexSync(QUESTION_INDEX_FILE_PATH);
+  } else {
+    question_index.initIndex(100); //maximum number of elements index can hold right now - need to add resizing mechanism.
+  }
+  const embedding = await createEmbedding(question);
+  result = checkDuplicate(question_index, question);
+  if (result.isDuplicate) {
+    return false;
+  } else {
+    question_index.addPoint(embedding, questionId);
+    question_index.writeIndexSync("data/questions.index");
+    return true;
+  } //return top 5 questions instead
+}
+
+async function buildAnswerIndex(questionId, listOfAnswers) {
+  let answerIndex = new hnswlib.HierarchicalNSW('cosine', 384);
+  for (let i = 0; i < listOfAnswers.length; i++) {
+    const ansEmbedding = await createEmbedding(listOfAnswers[i].text);
+    answerIndex.addPoint(ansEmbedding, listOfAnswers[i].id);
+  }
+  answerIndex.writeIndexSync(`data/questions_${questionId}.index`);
+}
+
+//bad/there is duplicate -> send false; good/no duplicate -> send true, and add to index
+async function answerIsRepeated(answer, questionId, answerId) {
+  let answerIndex = new hnswlib.HierarchicalNSW('cosine', 384);
+  answerIndex.readIndexSync(`data/questions_${questionId}.index`);
+  const result = checkDuplicate(answerIndex, answer);
+  if (result.isDuplicate) {
+    return false;
+  } else {
+    answerIndex.addPoint(await createEmbedding(answer), answerId);
+    answerIndex.writeIndexSync(`data/questions_${questionId}.index`);
+    return true;
+  }
+}
 
 //------END OF REPEAT DETECTION COMPONENTS
 async function classifyToxicityInput(input) {
@@ -173,6 +209,27 @@ async function testAddQuestion() {
 
   // Add to index
   await addQuestionToIndex(fakeId, testText);
+
+  console.log("Question added to HNSW index with ID:", fakeId);
+}
+
+ //THIS CODE WAS TO TEST ADDING THE QUESTION FROM ML_MODELS.JS - AI-generated, Ria.
+async function testAddAnswer() {
+  const testText = "How do I approach a professor about research opportunities?";
+
+  // Check duplicate
+  const duplicateResult = await checkDuplicate(testText);
+  console.log("Nearest ID:", duplicateResult.nearestId, "Similarity:", duplicateResult.similarity);
+  if (duplicateResult.isDuplicate) {
+    console.log("Duplicate detected!");
+    return;
+  }
+
+  // Generate a fake ID
+  const fakeId = Date.now(); // could be any string for now
+
+  // Add to index
+  await addAnswerToIndex(fakeId, testText);
 
   console.log("Question added to HNSW index with ID:", fakeId);
 }
