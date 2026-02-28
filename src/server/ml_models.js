@@ -104,27 +104,37 @@ async function questionIsRepeated(question, questionId) {
   } //return top 5 questions instead
 }
 
-async function buildAnswerIndex(questionId, listOfAnswers) {
+//bad/there is duplicate -> send false; good/no duplicate -> send true, and add to index
+async function answerIsRepeatedNoIndex(answer, questionId, answerId, listOfAnswers) {
   let answerIndex = new hnswlib.HierarchicalNSW('cosine', 384);
+  answerIndex.initIndex(100);
   for (let i = 0; i < listOfAnswers.length; i++) {
     const ansEmbedding = await createEmbedding(listOfAnswers[i].text);
     answerIndex.addPoint(ansEmbedding, listOfAnswers[i].id);
   }
-  answerIndex.writeIndexSync(`data/questions_${questionId}.index`);
-}
-
-//bad/there is duplicate -> send false; good/no duplicate -> send true, and add to index
-async function answerIsRepeated(answer, questionId, answerId) {
-  let answerIndex = new hnswlib.HierarchicalNSW('cosine', 384);
-  answerIndex.readIndexSync(`data/questions_${questionId}.index`);
   const result = checkDuplicate(answerIndex, answer);
   if (result.isDuplicate) {
     return false;
-  } else {
+  } 
+  if (listOfAnswers.length >= 50) {
     answerIndex.addPoint(await createEmbedding(answer), answerId);
-    answerIndex.writeIndexSync(`data/questions_${questionId}.index`);
-    return true;
+    answerIndex.writeIndexSync(`data/answers_${questionId}.index`);
   }
+  return true;
+}
+
+//bad/there is duplicate -> send false; good/no duplicate -> send true, and add to index
+async function answerIsRepeatedYesIndex(answer, questionId, answerId) {
+  let answerIndex = new hnswlib.HierarchicalNSW('cosine', 384);
+  answerIndex.readIndexSync(`data/answers_${questionId}.index`);
+  const result = checkDuplicate(answerIndex, answer);
+  if (result.isDuplicate) {
+    return false;
+  } 
+
+  answerIndex.addPoint(await createEmbedding(answer), answerId);
+  answerIndex.writeIndexSync(`data/answers_${questionId}.index`);
+  return true;
 }
 
 //------END OF REPEAT DETECTION COMPONENTS
