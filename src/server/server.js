@@ -185,6 +185,13 @@ app.post('/post-question', jsonParser, async (req, res) => {
   }
 });
 
+// returns JWT
+function getJWT(questID, netID, ansID, content) {
+  const payload = { questID, netID, ansID, content };
+  const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+  return [payload, token];
+}
+
 app.post('/post-answer', jsonParser, async (req, res) => {
   try {
     const { content, netid, questionID, authenticated, timestamp } = req.body;
@@ -233,8 +240,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     });
 
     // Creating JWT
-    const payload = { questionID, netid, answerID, content };
-    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const [payload, token] = getJWT(questionID, netid, answerID, content);
 
     res.status(200).json({
       message: 'Answer posted successfully',

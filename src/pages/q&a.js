@@ -4,6 +4,7 @@ import QuestionStatusToggle from '../components/general/qa-forum/QuestionStatusT
 import styles from '@/styles/pages/Q&A.module.css';
 import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
 import { toastError } from '../utils/toast';
+import QAInputBox from '@/components/general/qa-forum/QAInputBox';
 
 export default function QA() {
   // State hooks (how to get data for this??)
@@ -25,6 +26,10 @@ export default function QA() {
 
   const submitAnswer = async () => {
     try {
+      // console.log("Sending:");
+      // console.log("questionID:", questionID);
+      // console.log("netID:", netID);
+      // console.log("answerContent:", answerContent);
       const res = await fetch(`${API_URL}/post-answer`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -43,7 +48,7 @@ export default function QA() {
         data = null;
       }
 
-      // console.log("JWT token received: ", data.token);
+      console.log("JWT token received: ", data.token);
       alert('Answer submitted successfully!', data.token);
     } catch (error) {
       toastError(
@@ -73,6 +78,7 @@ export default function QA() {
 
         <div className={styles.main}>
           <QuestionStatusToggle />
+          <QAInputBox />
           <QASubmitButton onClick={submitQuestion} />
           <QASubmitButton onClick={submitAnswer} />
         </div>
