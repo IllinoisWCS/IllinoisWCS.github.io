@@ -1,0 +1,86 @@
+.eventsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Title Bar */
+.title {
+  margin-top: 2rem;
+  width: 90%;
+  text-align: center;
+}
+
+.title h2 {
+  margin: 1rem;
+}
+
+.header {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.subHeader {
+  width: 80%;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.subHeader h2 {
+  margin: 1rem;
+}
+
+.eventWindow {
+  width: 80%;
+  margin: 1.5rem auto;
+  box-sizing: border-box;
+}
+
+.eventContent {
+  display: flex;               /* side-by-side layout */
+  flex-direction: row;         /* horizontal alignment */
+  gap: 2rem;                   /* space between text and image */
+  align-items: flex-start;     /* align tops */
+  padding: 2rem;
+  text-align: left;
+}
+
+/* Left text column */
+.eventText {
+  flex: 2;                     /* takes most space */
+}
+
+/* Right image column */
+.eventImageWrapper {
+  flex: 1;                     /* image column */
+  max-width: 300px;            /* control size */
+}
+
+.eventImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.eventContent h3 {
+  margin-top: 0;
+  color: #d63384;
+}
+
+.eventContent ul {
+  margin-left: 1.5rem;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .eventContent {
+    flex-direction: column;
+  }
+
+  .eventImageWrapper {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "name": "Bits & Bytes",
+    "registrationLink": null,
+    "learnMoreBlurb": "Bits & Bytes is Women in CS’s flagship mentorship program that pairs underclassmen (Bits) with upperclassmen (Bytes) for a semester of honest advice, guidance, and community. It’s a great fit for freshmen, transfer students, or anyone looking for guidance around classes, majors, internships, or navigating campus life. We also host low-pressure events throughout the semester focused on bonding and mentorship. You do not need to be a woman or in CS to join, and the program is open to everyone, whether you want to become a Bit and get mentorship or become a Byte and mentor someone else.",
+    "category": "Fall",
+    "timeline": [
+      null
+    ],
+    "startDay": null,
+    "endDay": null,
+    "committee": "Mentoring"
+  },
+  {
+    "name": "Code Ada",
+    "registrationLink": null,
+    "learnMoreBlurb": "Are you looking for a way to build your computer science foundations through web and app dev? Or do you want to embrace the future and build your own AI model? Code Ada, WCS’s annual hackathon dedicated to women and non-binary individuals, invites you to harness your curiosity and coding skills to create a project of your choice. Each fall, WCS hosts a 2-day hackathon with technical workshops, multiple project tracks, and prizes. Teams of 2-6 students can develop a project over the course of the event with the help of project mentors, or PMs. Code Ada is designed to be beginner-friendly, so all skill levels are welcome!",
+    "category": "Fall",
+    "timeline": [
+      null
+    ],
+    "startDay": null,
+    "endDay": null,
+    "committee": "Explorations"
+  },
+  {
+    "name": "ChicTech",
+    "registrationLink": null,
+    "learnMoreBlurb": "ChicTech is WCS's annual flagship high school outreach event with the aims of encouraging high school students to pursue Computer Science! At ChicTech, high school students have the opportunity to learn more about CS and UIUC's program through a student Q&A panel, RSO Fair, professor talk, technical workshop, and scavenger hunt!",
+    "category": "Fall",
+    "timeline": [
+     null
+    ],
+    "startDay": null,
+    "endDay": null,
+    "committee": "Outreach"
+  },
+  {
+    "name": "Dev Ada",
+    "registrationLink": null,
+    "learnMoreBlurb": "Looking to gain technical and project management skills, add a personal project to your resume, and meet others in CS? Join Dev Ada! Dev Ada is WCS’s annual project development cycle, taking place throughout the spring semester. Teams of 3-5 will be matched with PMs to ideate and develop a project of their choice. Participants will have access to exclusive technical workshops, networking opportunities, and socials. At the end of Dev Ada, there will be a final presentation to a panel of judges and prizes for the best teams and their PMs! Dev Ada is open to all (we do ask that PMs be sophomores or above)!",
+    "category": "Spring",
+    "timeline": [
+     null
+    ],
+    "startDay": null,
+    "endDay": null,
+    "committee": "Explorations"
+  },
+  {
+    "name": "Bits & Bytes",
+    "registrationLink": null,
+    "learnMoreBlurb": "Bits & Bytes is Women in CS’s flagship mentorship program that pairs underclassmen (Bits) with upperclassmen (Bytes) for a semester of honest advice, guidance, and community. It’s a great fit for freshmen, transfer students, or anyone looking for guidance around classes, majors, internships, or navigating campus life. We also host low-pressure events throughout the semester focused on bonding and mentorship. You do not need to be a woman or in CS to join, and the program is open to everyone, whether you want to become a Bit and get mentorship or become a Byte and mentor someone else.",
+    "category": "Spring",
+    "timeline": [
+      null
+    ],
+    "startDay": null,
+    "endDay": null,
+    "committee": "Mentoring"
+  },
+  {
+    "name": "Chicago Retreat",
+    "registrationLink": null,
+    "learnMoreBlurb": "Join WCS on our annual day trip, where members spend a day immersed in Chicago’s tech scene! We’ll explore downtown Chicago and get an inside look at company offices. Some past companies include: Google, Peak6, Old Mission Capital, CNA, Motorola Solutions, IMC, and FTI Consulting.",
+    "category": "Spring",
+    "timeline": [
+      null
+    ],
+    "startDay": null,
+    "endDay": null,
+    "committee": "Corporate Committee"
+  },
+  {
+    "name": "Admitted Women’s Day",
+    "registrationLink": null,
+    "learnMoreBlurb": "Admitted Women's Day is WCS's annual event for admitted students in the Siebel School of Computing and Data Science who are interested in exploring what studying CS at Illinois is all about! Participants get a glimpse into the day in the life of a CS student, hear from notable CS faculty, and learn more about the program, community, research, and extracurricular opportunities at Illinois! In addition, students have the opportunity to participate in a hands-on tech workshop, meet current CS students and fellow admits, and take a tour of campus to experience campus life firsthand!",
+    "category": "Spring",
+    "timeline": [
+      null
+    ],
+    "startDay": null,
+    "endDay": null,
+    "committee": "Outreach"
+  },
+  {
+    "name": "Engineering Formal",
+    "registrationLink": null,
+    "learnMoreBlurb": "A dressed-up night of music, dancing, and unforgettable memories with members of collaborating engineering orgs, all set in the Union Ballroom. Celebrate our community with us as we near the end of year!",
+    "category": "Spring",
+    "timeline": [
+      null
+    ],
+    "startDay": null,
+    "endDay": null,
+    "committee": "Social"
+  },
+  {
+    "name": "Spring Banquet",
+    "registrationLink": null,
+    "learnMoreBlurb": "Wrap up the end of the year with us by recapping the last two semester's events hosted by all WCS committees over food and fun times. Join us in sending off our senior members while also shouting out our top point earners!",
+    "category": "Spring",
+    "timeline": [
+      null
+    ],
+    "startDay": null,
+    "endDay": null,
+    "committee": "Social"
+  }
+  
+]
