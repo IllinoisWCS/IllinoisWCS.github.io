@@ -171,6 +171,7 @@ const groupWorkshopsBySeries = (parsed) => {
   }));
 };
 
+// use this
 app.get('/exploration-resources-api', jsonParser, async (req, res) => {
   try {
     const results = await explorationNotion.databases.query({
