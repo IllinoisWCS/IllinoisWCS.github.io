@@ -82,7 +82,6 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   const results = await notion.databases.query({
     database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
   });
-
   const filteredRes = await filterRecentOpportunities(results.results);
 
   const tempRes = filteredRes.map((item) => ({
