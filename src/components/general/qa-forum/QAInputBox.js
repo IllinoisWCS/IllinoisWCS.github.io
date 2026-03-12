@@ -8,6 +8,8 @@ export default function QAInputBox({ value, onChange, placeholder }) {
       onChange(e);
     }
   };
+
+  
   return (
     <div className={styles.container}>
       <textarea
