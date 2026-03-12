@@ -1,0 +1,83 @@
+.eventsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.title {
+  margin-top: 2rem;
+  width: 90%;
+  text-align: center;
+}
+
+.title h2 {
+  margin: 1rem;
+}
+
+.subHeader {
+  width: 80%;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.subHeader h2 {
+  margin: 1rem;
+}
+
+/* ROW */
+
+.eventRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 95%;
+}
+
+/* TEXT WINDOW */
+
+.eventWindow {
+  flex: 1;
+  max-width: 650px;
+  min-width: 400px;
+}
+
+.eventTextWindow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.2rem;
+  min-height: 300px;
+}
+
+.eventTextWindow h3 {
+  margin-top: 0;
+  color: #d63384;
+}
+
+.eventTextWindow ul {
+  margin-left: 1.5rem;
+}
+
+.committeeNote {
+  color: #1590b1;
+  font-style: italic;
+}
+
+.registerLink {
+  color: #d63384;
+  font-weight: bold;
+}
+
+/* IMAGE */
+
+.eventImage {
+  width: 340px;
+  height: 240px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 5px solid var(--wcs-pink);
+}
