@@ -35,7 +35,6 @@ export default function ExternalOpportunitiesSection() {
       });
   }, []);
 
-
   if (!notionDataFetched || disabled) {
     return <ResourcesNotLoaded />;
   }
