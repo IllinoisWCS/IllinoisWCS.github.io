@@ -3,11 +3,10 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-bottom: 4rem;
 }
 
-/* Title Bar */
 .title {
   margin-top: 2rem;
   width: 90%;
@@ -16,11 +15,6 @@
 
 .title h2 {
   margin: 1rem;
-}
-
-.header {
-  margin-top: 3rem;
-  text-align: center;
 }
 
 .subHeader {
@@ -33,54 +27,57 @@
   margin: 1rem;
 }
 
+/* ROW */
+
+.eventRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 95%;
+}
+
+/* TEXT WINDOW */
+
 .eventWindow {
-  width: 80%;
-  margin: 1.5rem auto;
-  box-sizing: border-box;
+  flex: 1;
+  max-width: 650px;
+  min-width: 400px;
 }
 
-.eventContent {
-  display: flex;               /* side-by-side layout */
-  flex-direction: row;         /* horizontal alignment */
-  gap: 2rem;                   /* space between text and image */
-  align-items: flex-start;     /* align tops */
-  padding: 2rem;
-  text-align: left;
+.eventTextWindow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.2rem;
+  min-height: 300px;
 }
 
-/* Left text column */
-.eventText {
-  flex: 2;                     /* takes most space */
-}
-
-/* Right image column */
-.eventImageWrapper {
-  flex: 1;                     /* image column */
-  max-width: 300px;            /* control size */
-}
-
-.eventImage {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.eventContent h3 {
+.eventTextWindow h3 {
   margin-top: 0;
   color: #d63384;
 }
 
-.eventContent ul {
+.eventTextWindow ul {
   margin-left: 1.5rem;
 }
 
-/* Responsive: stack on mobile */
-@media (max-width: 768px) {
-  .eventContent {
-    flex-direction: column;
-  }
+.committeeNote {
+  color: #1590b1;
+  font-style: italic;
+}
 
-  .eventImageWrapper {
-    max-width: 100%;
-  }
+.registerLink {
+  color: #d63384;
+  font-weight: bold;
+}
+
+/* IMAGE */
+
+.eventImage {
+  width: 340px;
+  height: 240px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 5px solid var(--wcs-pink);
 }

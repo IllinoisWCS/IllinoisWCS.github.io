@@ -1,27 +1,28 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/events.module.css';
 import homeStyles from '@/styles/pages/Home.module.css';
-import events from '@/data/events.json'; // import JSON directly
+import events from '@/data/events.json';
 
 function Events() {
   const springEvents = events.filter((event) => event.category === 'Spring');
   const fallEvents = events.filter((event) => event.category === 'Fall');
 
-  const renderEventWindow = (event) => (
-    <ComputerWindow
-      key={event.name}
-      className={styles.eventWindow}
-      topbarColor="wcs-pink"
-      showButtons={false}
-    >
-      <div className={styles.eventContent}>
-        {/* Text on the left */}
-        <div className={styles.eventText}>
+  const renderEventRow = (event, idx) => {
+    const isEven = idx % 2 === 0;
+
+    const textWindow = (
+      <ComputerWindow
+        key={`${event.name}-text`}
+        className={styles.eventWindow}
+        topbarColor="wcs-pink"
+        showButtons={false}
+      >
+        <div className={styles.eventTextWindow}>
           <h3>{event.name}</h3>
 
           <p>{event.learnMoreBlurb}</p>
 
-          <p style={{ color: '#1590b1', fontStyle: 'italic', marginTop: '8px' }}>
+          <p className={styles.committeeNote}>
             Reach out to the {event.committee} Committee with questions.
           </p>
 
@@ -35,8 +36,8 @@ function Events() {
             <ul>
               {event.timeline
                 .filter((item) => item)
-                .map((item, idx) => (
-                  <li key={idx}>{item}</li>
+                .map((item, i) => (
+                  <li key={i}>{item}</li>
                 ))}
             </ul>
           )}
@@ -46,27 +47,43 @@ function Events() {
               href={event.registrationLink}
               target="_blank"
               rel="noreferrer"
-              style={{ color: '#d63384', fontWeight: 'bold' }}
+              className={styles.registerLink}
             >
               Register Here
             </a>
           )}
         </div>
+      </ComputerWindow>
+    );
 
-        {/* Image on the right */}
-        <div className={styles.eventImageWrapper}>
-          <img
-            src={`/assets/img/events/${event.name}.jpg`}
-            alt={event.name}
-            className={styles.eventImage}
-            onError={(e) => {
-              e.target.style.display = 'none';
-            }}
-          />
-        </div>
+    const image = (
+      <img
+        key={`${event.name}-image`}
+        src={`/assets/img/events/${event.name}.jpg`}
+        alt={event.name}
+        className={styles.eventImage}
+        onError={(e) => {
+          e.target.style.display = 'none';
+        }}
+      />
+    );
+
+    return (
+      <div key={`${event.name}-row`} className={styles.eventRow}>
+        {isEven ? (
+          <>
+            {textWindow}
+            {image}
+          </>
+        ) : (
+          <>
+            {image}
+            {textWindow}
+          </>
+        )}
       </div>
-    </ComputerWindow>
-  );
+    );
+  };
 
   return (
     <div className={styles.eventsContainer}>
@@ -75,20 +92,22 @@ function Events() {
       </ComputerWindow>
 
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
-        <h2 className={homeStyles.header}>Explore our Spring and Fall events!</h2>
+        <h2 className={homeStyles.header}>
+          Explore our Spring and Fall events!
+        </h2>
       </ComputerWindow>
 
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h2 className={homeStyles.header}>Spring Events</h2>
       </ComputerWindow>
 
-      {springEvents.map((event) => renderEventWindow(event))}
+      {springEvents.map((event, idx) => renderEventRow(event, idx))}
 
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h2 className={homeStyles.header}>Fall Events</h2>
       </ComputerWindow>
 
-      {fallEvents.map((event) => renderEventWindow(event))}
+      {fallEvents.map((event, idx) => renderEventRow(event, idx))}
     </div>
   );
 }
