@@ -3,7 +3,6 @@
   margin: 15px auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   background: transparent;
 }
 
@@ -12,7 +11,6 @@
   margin: 15px auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   background: transparent;
 }
 
@@ -25,6 +23,7 @@
   align-items: center;
   transition: all 0.2s ease;
   border-radius: 10px;
+  outline: none;
 }
 
 .questionText {

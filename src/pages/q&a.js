@@ -11,9 +11,8 @@ import { toastError } from '../utils/toast';
 
 export default function QA() {
   const [questionText, setQuestionText] = useState('');
-  const [answerText, setAnswerText] = useState('');
-  const [netId, setNetId] = useState('');
-  const [selectedQuestionID, setSelectedQuestionID] = useState(null);
+  const [answerTexts, setAnswerTexts] = useState({});
+  const [netIds, setNetIds] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [answered, setAnswered] = useState(true);
@@ -75,14 +74,17 @@ export default function QA() {
     }
   };
 
-  const submitAnswer = async () => {
-    if (!answerText.trim()) {
-      toastError('Please enter an answer.');
+  const submitAnswer = async (questionID) => {
+    const text = answerTexts[questionID] || '';
+    const nid = netIds[questionID] || '';
+
+    if (!questionID) {
+      toastError('Unable to submit: question ID is missing.');
       return;
     }
 
-    if (!selectedQuestionID) {
-      toastError('Please select a question to answer.');
+    if (!text.trim()) {
+      toastError('Please enter an answer.');
       return;
     }
 
@@ -94,9 +96,9 @@ export default function QA() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          content: answerText,
-          netid: netId,
-          questionID: selectedQuestionID,
+          content: text,
+          netid: nid,
+          questionID,
           authenticated: false,
           timestamp: new Date().toISOString(),
         }),
@@ -108,9 +110,8 @@ export default function QA() {
         return;
       }
 
-      setAnswerText('');
-      setNetId('');
-      setSelectedQuestionID(null);
+      setAnswerTexts((prev) => ({ ...prev, [questionID]: '' }));
+      setNetIds((prev) => ({ ...prev, [questionID]: '' }));
       const refreshResponse = await fetch('/qas');
       if (refreshResponse.ok) {
         const data = await refreshResponse.json();
@@ -191,51 +192,34 @@ export default function QA() {
                             />
                           ))
                         ) : (
-                          <p>No answers yet. Be the first to answer!</p>
+                          <p className={styles.firstToAnswer}>
+                            Be the first to answer this question!
+                          </p>
                         )}
 
                         {/* Answer Submission Form */}
-                        {selectedQuestionID === question.QuestionID && (
-                          <div className={styles.answerInputWrapper}>
-                            <QAInputBox
-                              value={answerText}
-                              onChange={(e) => setAnswerText(e.target.value)}
-                              placeholder="Answer"
-                            />
+                        <div className={styles.answerInputWrapper}>
+                          <QAInputBox
+                            value={answerTexts[question.QuestionID] || ''}
+                            onChange={(e) => setAnswerTexts(
+                              (prev) => ({ ...prev, [question.QuestionID]: e.target.value }),
+                            )}
+                            placeholder="Answer"
+                          />
+                          <div className={styles.answerSubmitWrapper}>
                             <NetIdInputBox
-                              value={netId}
-                              onChange={(e) => setNetId(e.target.value)}
+                              value={netIds[question.QuestionID] || ''}
+                              onChange={(e) => setNetIds(
+                                (prev) => ({ ...prev, [question.QuestionID]: e.target.value }),
+                              )}
                               placeholder="netId"
                             />
-                            <div className={styles.answerSubmitWrapper}>
-                              <QASubmitButton
-                                onClick={submitAnswer}
-                                disabled={isLoading}
-                              />
-                            </div>
-                            <button
-                              type="button"
-                              onClick={() => {
-                                setSelectedQuestionID(null);
-                                setAnswerText('');
-                              }}
-                              className={styles.cancelButton}
-                            >
-                              Cancel
-                            </button>
+                            <QASubmitButton
+                              onClick={() => submitAnswer(question.QuestionID)}
+                              disabled={isLoading}
+                            />
                           </div>
-                        )}
-
-                        {/* Button to select question for answering */}
-                        {selectedQuestionID !== question.QuestionID && (
-                          <button
-                            type="button"
-                            onClick={() => setSelectedQuestionID(question.QuestionID)}
-                            className={styles.answerButton}
-                          >
-                            Answer This Question
-                          </button>
-                        )}
+                        </div>
                       </div>
                     </QuestionAccordion>
                   </div>

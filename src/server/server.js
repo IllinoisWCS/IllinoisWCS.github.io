@@ -52,6 +52,7 @@ const getRichText = (prop) => {
 const getCheckbox = (prop) =>
   (prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false);
 const getDateStart = (prop) => (prop && prop.date ? prop.date.start : null);
+const getNumber = (prop) => (prop && prop.number !== undefined && prop.number !== null ? prop.number : null);
 
 async function getQuestionsAndAnswers(databaseId) {
   let allPages = [];
@@ -76,7 +77,7 @@ async function getQuestionsAndAnswers(databaseId) {
   allPages.forEach((page) => {
     const props = page.properties || {};
     const type = getSelectName(props.Type);
-    const qid = getRichText(props.QuestionID) || '';
+    const qid = getNumber(props.QuestionID);
     const content = getRichText(props.Content) || '';
     const timestamp = getDateStart(props.Timestamp) || null;
 
@@ -90,8 +91,8 @@ async function getQuestionsAndAnswers(databaseId) {
         _notionPageId: page.id,
       });
       // populate answers map
-    } else if (type === 'Answer' && qid) {
-      const aid = getRichText(props.AnswerID) || '';
+    } else if (type === 'Answer' && qid !== null) {
+      const aid = getNumber(props.AnswerID);
       const netid = getRichText(props.NetID) || '';
       const authenticated = getCheckbox(props.Authenticated);
       const ansObj = {
@@ -140,10 +141,7 @@ app.post('/post-question', jsonParser, async (req, res) => {
     }
 
     // uses time stamp + random string
-    const generateQuestionID = () =>
-      `Q-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
-
-    const questionID = generateQuestionID();
+    const questionID = Date.now();
 
     // gets question content & ids
     const response = await qaForumNotion.pages.create({
@@ -158,10 +156,10 @@ app.post('/post-question', jsonParser, async (req, res) => {
           title: [{ text: { content: question } }],
         },
         QuestionID: {
-          rich_text: [{ text: { content: questionID } }],
+          number: questionID,
         },
         AnswerID: {
-          rich_text: [{ text: { content: '' } }], // empty for questions
+          number: 0,
         },
         Authenticated: {
           checkbox: false, // questions are not authenticated
@@ -194,10 +192,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
         .json({ error: 'Missing required fields: content or questionID' });
     }
 
-    const generateAnswerID = () =>
-      `A-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
-
-    const answerID = generateAnswerID();
+    const answerID = Date.now();
 
     // gets answer content, ids, and authentication status
     const response = await qaForumNotion.pages.create({
@@ -215,10 +210,10 @@ app.post('/post-answer', jsonParser, async (req, res) => {
           rich_text: [{ text: { content: netid || '' } }],
         },
         QuestionID: {
-          rich_text: [{ text: { content: questionID } }],
+          number: questionID,
         },
         AnswerID: {
-          rich_text: [{ text: { content: answerID } }],
+          number: answerID,
         },
         Authenticated: {
           checkbox: !!authenticated, // true if user successfully authenticated

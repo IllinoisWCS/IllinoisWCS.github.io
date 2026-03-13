@@ -15,6 +15,7 @@
   border: none;
   color: #666666;
   outline: none;
+  resize: none;
 }
 
 .input:focus {

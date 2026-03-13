@@ -10,7 +10,7 @@ export default function QASubmitButton({ onClick, disabled = false }) {
         disabled={disabled}
         style={{ opacity: disabled ? 0.6 : 1, cursor: disabled ? 'not-allowed' : 'pointer' }}
       >
-        {disabled ? 'Submitting...' : 'Submit'}
+        Submit
       </button>
     </div>
   );
