@@ -145,9 +145,14 @@ app.post('/post-question', jsonParser, async (req, res) => {
       return res.status(400).json({ error: 'Missing required content field' });
     }
 
-    // uses time stamp + random string
-    const questionID = Date.now();
+    const generateQuestionID = () => {
+      const timestamp = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
+      const randomnum = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
+      return Number(`1${timestamp}${randomnum}`);
+      //FORMAT: 1 (to indicate it's a question) - timestamp (10 digits) - random number (5 digits)
+    }
 
+    const questionID = generateQuestionID();
     // gets question content & ids
     const response = await qaForumNotion.pages.create({
       parent: {
@@ -164,7 +169,8 @@ app.post('/post-question', jsonParser, async (req, res) => {
           number: questionID,
         },
         AnswerID: {
-          number: 0,
+          // rich_text: [{ text: { content: '' } }], // empty for questions
+          number: 0, // 0 for questions, will be updated for answers
         },
         Authenticated: {
           checkbox: false, // questions are not authenticated
@@ -183,7 +189,7 @@ app.post('/post-question', jsonParser, async (req, res) => {
     });
   } catch (error) {
     console.error('Error posting question:', error);
-    res.status(500).json({ error: 'Failed to post question' });
+    res.status(500).json({ error: 'Failed to post question', details: error.message });
   }
 });
 
@@ -197,7 +203,15 @@ app.post('/post-answer', jsonParser, async (req, res) => {
         .json({ error: 'Missing required fields: content or questionID' });
     }
 
-    const answerID = Date.now();
+    const generateAnswerID = () => {
+      const timestamp = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
+      // not technically a timestamp, but the time passed in seconds since epoch (Jan 1 1970)
+      const randomnum = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
+      return Number(`2${timestamp}${randomnum}`);
+      //FORMAT: 2 (to indicate it's an answer) - timestamp (10 digits) - random number (5 digits)
+    }
+
+    const answerID = generateAnswerID();
 
     // gets answer content, ids, and authentication status
     const response = await qaForumNotion.pages.create({
@@ -218,6 +232,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
           number: questionID,
         },
         AnswerID: {
+          // rich_text: [{ text: { content: answerID } }],
           number: answerID,
         },
         Authenticated: {
@@ -238,7 +253,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     });
   } catch (error) {
     console.error('Error posting answer:', error);
-    res.status(500).json({ error: 'Failed to post answer' });
+    res.status(500).json({ error: 'Failed to post answer', details: error.message});
   }
 });
 
@@ -357,10 +372,3 @@ if (process.env.NODE_ENV === 'production') {
     console.log(`Dev server running on http://localhost:${PORT}`);
   });
 }
-
-// redirects all http requests to http
-const httpApp = express();
-
-// httpsServer.listen(443);
-
-http.createServer(httpApp).listen(80);
