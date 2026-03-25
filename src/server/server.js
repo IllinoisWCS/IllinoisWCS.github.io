@@ -24,7 +24,7 @@ const qaForumNotion = new Client({
   auth: process.env.REACT_APP_QA_FORUM_NOTION_API_KEY,
 });
 
-//generic properties getters
+// generic properties getters
 const getSelectName = (prop) => {
   if (!prop) return null;
   // select or multi select
@@ -53,10 +53,14 @@ const getRichText = (prop) => {
 const getCheckbox = (prop) =>
   prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false;
 const getDateStart = (prop) => (prop && prop.date ? prop.date.start : null);
+const getNumber = (prop) =>
+  prop && prop.number !== undefined && prop.number !== null
+    ? prop.number
+    : null;
 
 async function getQuestionsAndAnswers(databaseId) {
   let allPages = [];
-  let startCursor = undefined;
+  let startCursor;
 
   while (true) {
     const resp = await qaForumNotion.databases.query({
@@ -77,11 +81,11 @@ async function getQuestionsAndAnswers(databaseId) {
   allPages.forEach((page) => {
     const props = page.properties || {};
     const type = getSelectName(props.Type);
-    const qid = getRichText(props.QuestionID) || '';
+    const qid = getNumber(props.QuestionID);
     const content = getRichText(props.Content) || '';
     const timestamp = getDateStart(props.Timestamp) || null;
 
-    //populate questions list
+    // populate questions list
     if (type === 'Question') {
       questions.push({
         QuestionID: qid,
@@ -90,9 +94,9 @@ async function getQuestionsAndAnswers(databaseId) {
         Timestamp: timestamp,
         _notionPageId: page.id,
       });
-      //populate answers map
-    } else if (type === 'Answer' && qid) {
-      const aid = getRichText(props.AnswerID) || '';
+      // populate answers map
+    } else if (type === 'Answer' && qid !== null) {
+      const aid = getNumber(props.AnswerID);
       const netid = getRichText(props.NetID) || '';
       const authenticated = getCheckbox(props.Authenticated);
       const ansObj = {
@@ -108,7 +112,7 @@ async function getQuestionsAndAnswers(databaseId) {
     }
   });
 
-  //attach answers to each questions at end
+  // attach answers to each questions at end
   questions.forEach((q) => {
     const list = answers[q.QuestionID] || [];
     q.Answers = list;
@@ -162,7 +166,6 @@ app.post('/post-question', jsonParser, async (req, res) => {
           title: [{ text: { content: question } }],
         },
         QuestionID: {
-          // rich_text: [{ text: { content: questionID } }],
           number: questionID,
         },
         AnswerID: {
@@ -227,7 +230,6 @@ app.post('/post-answer', jsonParser, async (req, res) => {
         },
         QuestionID: {
           number: questionID,
-          // rich_text: [{ text: { content: questionID } }],
         },
         AnswerID: {
           // rich_text: [{ text: { content: answerID } }],
@@ -370,10 +372,3 @@ if (process.env.NODE_ENV === 'production') {
     console.log(`Dev server running on http://localhost:${PORT}`);
   });
 }
-
-// redirects all http requests to http
-const httpApp = express();
-
-// httpsServer.listen(443);
-
-http.createServer(httpApp).listen(80);

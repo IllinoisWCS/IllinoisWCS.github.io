@@ -1,3 +1,15 @@
+// Uncomment console.log statements for functionality
+
+// Import huggingface model and readline
+import { pipeline } from '@huggingface/transformers';
+import readline from 'readline';
+
+// creating HNSW index
+import hnswlib from 'hnswlib-node';
+
+const index = new hnswlib.HierarchicalNSW('cosine', 768); // 768 is the embeddingsize of this model
+const databaseSize = 0; // number of questions in the notion database - need to find a way to pull this.
+index.initIndex(100); // maximum number of elements index can hold right now - need to resize later.
 // // this file is using "import" but server.js is using "require"...
 // import dotenv from 'dotenv'; //for api keys
 // import path from "path";
@@ -38,6 +50,30 @@ async function loadToxicityClassifier() {
 }
 
 // ====== REPEAT DETECTION COMPONENTS ======
+// 1) Load repeat detection model
+let repeatModel = null;
+async function loadRepeatModel() {
+  if (!repeatModel) {
+    repeatModel = await pipeline(
+      'feature-extraction',
+      'sentence-transformers/all-distilroberta-v1',
+    );
+  }
+  return repeatModel;
+}
+
+// 2) Create an embedding using the model
+async function createEmbedding(input) {
+  const model = await loadRepeatModel();
+  const embedding = await model(input);
+  return embedding.data[0];
+}
+
+// 3) Checking for duplicates
+async function checkDuplicate(input, threshold = 0.9) {
+  if (databaseSize == 0) {
+    return { isDuplicate: false, similarity: 0, nearestId: null };
+  }
 //1) set up API calling -  can't load repeat detection model, can only call via api
 const HF_API_KEY = process.env.HF_API_KEY;
 
@@ -85,6 +121,7 @@ async function checkDuplicate(index, input, threshold = 0.5) {
   };
 }
 
+// ------END OF REPEAT DETECTION COMPONENTS
 //if question is deleted - need to remove from index too?? have to ask about this
 async function questionIsRepeated(question, questionId) {
   question_index = new hnswlib.HierarchicalNSW('cosine', 384); //384 is the dimension/embedding size
@@ -182,12 +219,12 @@ read.on('line', async (line) => {
       console.log(
         'A similar question has been previously asked. See here: ${duplicate_result.nearestId}',
       );
-      //retrieve the actual question from the database, plus the link
+      // retrieve the actual question from the database, plus the link
     } else {
       console.log(
         "It doesn't share any similarities with other questions. Proceed to post.",
       );
-      //will need to add to the index if we decide to go forward with the question: index.addPoint.
+      // will need to add to the index if we decide to go forward with the question: index.addPoint.
     }
   } catch (err) {
     // console.error('Error classifying text:', err);
@@ -201,42 +238,3 @@ read.on('close', () => {
   // console.log('Session ended.');
   process.exit(0);
 });
-
-/*
-
- //THIS CODE WAS TO TEST ADDING THE QUESTION FROM ML_MODELS.JS - AI-generated, Ria.
-async function testAddQuestion() {
-  const testText = "How do I approach a professor about research opportunities?";
-
-  // Check duplicate
-  const duplicateResult = await checkDuplicate(testText);
-  console.log("Nearest ID:", duplicateResult.nearestId, "Similarity:", duplicateResult.similarity);
-  if (duplicateResult.isDuplicate) {
-    console.log("Duplicate detected!");
-    return;
-  }
-
-  // Generate a fake ID
-  const fakeId = Date.now(); // could be any string for now
-
-  // Add to index
-  await addQuestionToIndex(fakeId, testText);
-
-  console.log("Question added to HNSW index with ID:", fakeId);
-}
-
-
-
-import { fileURLToPath } from "url";
-
-// Get the current file path
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Check if this script is being run directly
-if (process.argv[1] === __filename) {
-  testAddQuestion().then(() => {
-    console.log("Test complete");
-  });
-}
-*/
