@@ -29,7 +29,8 @@ const getSelectName = (prop) => {
   if (!prop) return null;
   // select or multi select
   if (prop.select && prop.select.name) return prop.select.name;
-  if (prop.multi_select && prop.multi_select.length) return prop.multi_select[0].name;
+  if (prop.multi_select && prop.multi_select.length)
+    return prop.multi_select[0].name;
   return null;
 };
 
@@ -50,9 +51,12 @@ const getRichText = (prop) => {
 };
 
 const getCheckbox = (prop) =>
-  (prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false);
+  prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false;
 const getDateStart = (prop) => (prop && prop.date ? prop.date.start : null);
-const getNumber = (prop) => (prop && prop.number !== undefined && prop.number !== null ? prop.number : null);
+const getNumber = (prop) =>
+  prop && prop.number !== undefined && prop.number !== null
+    ? prop.number
+    : null;
 
 async function getQuestionsAndAnswers(databaseId) {
   let allPages = [];
@@ -121,7 +125,8 @@ async function getQuestionsAndAnswers(databaseId) {
 app.get('/qas', async (req, res) => {
   try {
     const dbId = process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID;
-    if (!dbId) return res.status(500).json({ error: 'Notion DB ID not configured' });
+    if (!dbId)
+      return res.status(500).json({ error: 'Notion DB ID not configured' });
 
     const qa = await getQuestionsAndAnswers(dbId);
     return res.json(qa);

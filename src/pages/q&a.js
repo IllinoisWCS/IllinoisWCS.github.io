@@ -57,7 +57,9 @@ export default function QA() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        toastError(errorData.error || 'Failed to post question. Please try again.');
+        toastError(
+          errorData.error || 'Failed to post question. Please try again.',
+        );
         return;
       }
 
@@ -68,7 +70,9 @@ export default function QA() {
         setQuestions(data || []);
       }
     } catch (error) {
-      toastError('There was an error submitting your question. Please try again.');
+      toastError(
+        'There was an error submitting your question. Please try again.',
+      );
     } finally {
       setIsLoading(false);
     }
@@ -106,7 +110,9 @@ export default function QA() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        toastError(errorData.error || 'Failed to post answer. Please try again.');
+        toastError(
+          errorData.error || 'Failed to post answer. Please try again.',
+        );
         return;
       }
 
@@ -118,7 +124,9 @@ export default function QA() {
         setQuestions(data || []);
       }
     } catch (error) {
-      toastError('There was an error submitting your answer. Please try again.');
+      toastError(
+        'There was an error submitting your answer. Please try again.',
+      );
     } finally {
       setIsLoading(false);
     }
@@ -155,20 +163,14 @@ export default function QA() {
               placeholder="Question"
             />
             <div className={styles.submitButtonWrapper}>
-              <QASubmitButton
-                onClick={submitQuestion}
-                disabled={isLoading}
-              />
+              <QASubmitButton onClick={submitQuestion} disabled={isLoading} />
             </div>
           </div>
         </div>
 
         {/* Questions and Answers Section */}
         <div className={styles.questionsContainer}>
-          <QuestionStatusToggle
-            answered={answered}
-            setAnswered={setAnswered}
-          />
+          <QuestionStatusToggle answered={answered} setAnswered={setAnswered} />
 
           {questionsLoading ? (
             <p>Loading questions...</p>
@@ -179,9 +181,7 @@ export default function QA() {
               ) : (
                 filteredQuestions.map((question) => (
                   <div key={question.QuestionID}>
-                    <QuestionAccordion
-                      questionText={question.Content}
-                    >
+                    <QuestionAccordion questionText={question.Content}>
                       <div className={styles.answersContainer}>
                         {question.Answers && question.Answers.length > 0 ? (
                           question.Answers.map((answer, idx) => (
@@ -201,17 +201,23 @@ export default function QA() {
                         <div className={styles.answerInputWrapper}>
                           <QAInputBox
                             value={answerTexts[question.QuestionID] || ''}
-                            onChange={(e) => setAnswerTexts(
-                              (prev) => ({ ...prev, [question.QuestionID]: e.target.value }),
-                            )}
+                            onChange={(e) =>
+                              setAnswerTexts((prev) => ({
+                                ...prev,
+                                [question.QuestionID]: e.target.value,
+                              }))
+                            }
                             placeholder="Answer"
                           />
                           <div className={styles.answerSubmitWrapper}>
                             <NetIdInputBox
                               value={netIds[question.QuestionID] || ''}
-                              onChange={(e) => setNetIds(
-                                (prev) => ({ ...prev, [question.QuestionID]: e.target.value }),
-                              )}
+                              onChange={(e) =>
+                                setNetIds((prev) => ({
+                                  ...prev,
+                                  [question.QuestionID]: e.target.value,
+                                }))
+                              }
                               placeholder="netId"
                             />
                             <QASubmitButton

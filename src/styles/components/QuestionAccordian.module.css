@@ -1,17 +1,9 @@
-.accordianContainer {
-  width: 100%;
-  margin: 15px auto;
-  border-radius: 12px;
-  overflow: hidden;
-  background: transparent;
-}
-
 .accordionContainer {
   width: 100%;
-  margin: 15px auto;
   border-radius: 12px;
   overflow: hidden;
   background: transparent;
+  margin-bottom: '1px';
 }
 
 .questionBar {
@@ -47,7 +39,6 @@
 
 .expandIcon.open {
   transform: rotate(45deg); /* down arrow */
-  margin-bottom: 10px;
 }
 
 .accordianContent {
@@ -56,12 +47,5 @@
   transition: all 0.3s ease;
   border-radius: 0 0 12px 12px;
   display: block;
-}
-
-.accordionContent {
-  background-color: transparent;
-  padding: 0 20px;
-  transition: all 0.3s ease;
-  border-radius: 0 0 12px 12px;
-  display: block;
+  margin-bottom: '1px';
 }

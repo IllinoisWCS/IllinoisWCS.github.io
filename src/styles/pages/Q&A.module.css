@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 6rem;
+  padding: 3rem 1rem;
   min-height: 100vh;
 }
 
 @media only screen and (max-width: 786px) {
   .main {
-    padding: 2rem; /* New padding for mobile view */
+    padding: 1rem; /* New padding for mobile view */
   }
 }
 
@@ -25,14 +25,12 @@
 
 .container {
   width: 100%;
-  max-width: 1600px; 
   margin: 0 auto;
   padding: 0;
 }
 
 .questionSubmissionContainer {
   width: 100%;
-  max-width: 1400px; 
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
@@ -53,7 +51,6 @@
 
 .questionsContainer {
   width: 100%;
-  max-width: 1400px;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
@@ -75,10 +72,9 @@
 
 .answerInputWrapper {
   position: relative;
-  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 3.25rem; 
+  padding-bottom: 3.25rem;
 }
 /* Mobile */
 .questionsContainer {
