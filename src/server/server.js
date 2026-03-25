@@ -1,5 +1,6 @@
 // importing toxic language ml model
-import { classifyToxicityInput } from './ml_models';
+// eslint-disable-next-line import/extensions
+import { classifyToxicityInput } from './ml_models.js';
 
 require('dotenv').config();
 // import { configDotenv } from 'dotenv';
@@ -25,7 +26,7 @@ app.use(cors());
 const notion = new Client({ auth: process.env.REACT_APP_NOTION_API_KEY });
 
 // q&a post functions
-
+// eslint-disable-next-line consistent-return
 app.post('/post-question', jsonParser, async (req, res) => {
   try {
     const { question, netid, timestamp } = req.body;
@@ -40,7 +41,9 @@ app.post('/post-question', jsonParser, async (req, res) => {
     // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
     if (result[0].label === 'toxic') {
       // console.log('Blocked question for toxicity:', result);
-      return res.status(403).json({ error: 'Question rejected due to toxic language' });
+      return res
+        .status(403)
+        .json({ error: 'Question rejected due to toxic language' });
     }
 
     // uses time stamp + random string
@@ -89,7 +92,7 @@ app.post('/post-question', jsonParser, async (req, res) => {
     res.status(500).json({ error: 'Failed to post question' });
   }
 });
-
+// eslint-disable-next-line consistent-return
 app.post('/post-answer', jsonParser, async (req, res) => {
   try {
     const { content, netid, questionID, authenticated, timestamp } = req.body;
@@ -106,7 +109,9 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
     if (result[0].label) {
       // console.log('Blocked question for toxicity:', result);
-      return res.status(403).json({ error: 'Question rejected due to toxic language' });
+      return res
+        .status(403)
+        .json({ error: 'Question rejected due to toxic language' });
     }
 
     const generateAnswerID = () =>

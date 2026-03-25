@@ -1,7 +1,6 @@
 {
   "name": "migration",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:server\"",
@@ -16,7 +15,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@huggingface/transformers": "^3.7.6",
+    "@huggingface/transformers": "^3.8.1",
     "@notionhq/client": "^2.3.0",
     "@tensorflow-models/toxicity": "^1.2.2",
     "@tensorflow/tfjs": "^4.22.0",
