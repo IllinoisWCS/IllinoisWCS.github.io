@@ -25,14 +25,12 @@ import { pipeline } from '@huggingface/transformers';
 // import hnswlib from 'hnswlib-node';
 // import fs from "fs";
 
-const dotenv = require('dotenv'); // for api keys
-const path = require('path');
+import dotenv from 'dotenv';
+import path from 'path';
+import readline from 'readline';
+import fs from 'fs';
 
-dotenv.config({ path: path.resolve('../../.env') }); // not sure if this is for my system only...
-const readline = require('readline');
-// const fetch = require('node-fetch');
-const hnswlib = require('hnswlib-node');
-const fs = require('fs');
+dotenv.config({ path: path.resolve('../../.env') });
 
 // ====== REPEAT DETECTION COMPONENTS ======
 // 1) set up API calling -  can't load repeat detection model, can only call via api
@@ -83,6 +81,7 @@ async function checkDuplicate(index, input, threshold = 0.5) {
 
 // if question is deleted - need to remove from index too?? have to ask about this
 async function questionIsRepeated(question, questionId) {
+  // eslint-disable-next-line no-undef
   const question_index = new hnswlib.HierarchicalNSW('cosine', 384); // 384 is the dimension/embedding size
   if (fs.existsSync('data/questions.index')) {
     // eslint-disable-next-line no-undef
@@ -108,6 +107,7 @@ async function answerIsRepeatedNoIndex(
   answerId,
   listOfAnswers,
 ) {
+  // eslint-disable-next-line no-undef
   const answerIndex = new hnswlib.HierarchicalNSW('cosine', 384);
   answerIndex.initIndex(100);
   for (let i = 0; i < listOfAnswers.length; i += 1) {
@@ -127,6 +127,7 @@ async function answerIsRepeatedNoIndex(
 
 // bad/there is duplicate -> send false; good/no duplicate -> send true, and add to index
 async function answerIsRepeatedYesIndex(answer, questionId, answerId) {
+  // eslint-disable-next-line no-undef
   const answerIndex = new hnswlib.HierarchicalNSW('cosine', 384);
   answerIndex.readIndexSync(`data/answers_${questionId}.index`);
   const result = checkDuplicate(answerIndex, answer);

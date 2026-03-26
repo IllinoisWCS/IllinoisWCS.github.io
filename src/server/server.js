@@ -1,25 +1,18 @@
-// importing toxic language ml model
-// eslint-disable-next-line import/extensions
+import dotenv from 'dotenv';
+import fs from 'fs';
+import https from 'https';
+import http from 'http';
+import express from 'express';
+import { Client } from '@notionhq/client';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import moment from 'moment';
 import { classifyToxicityInput } from './ml_models.js'; // eslint-disable-line import/extensions
 
-require('dotenv').config();
-// import { configDotenv } from 'dotenv';
-
-const fs = require('fs');
-// creates https server with ssl certificate
-const https = require('https');
-//  creates http server for redirecting to https
-const http = require('http');
-const express = require('express');
-
-const { Client } = require('@notionhq/client');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+dotenv.config();
 
 const jsonParser = bodyParser.json();
 const app = express();
-
-const moment = require('moment');
 
 app.use(cors());
 
@@ -219,7 +212,8 @@ async function getAnswersForQuestion(questionId) {
   let allPages = [];
   let startCursor;
 
-  while (true) { // eslint-disable-line no-constant-condition
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
     const resp = await qaForumNotion.databases.query({
       database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
       filter: {
