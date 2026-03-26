@@ -215,6 +215,32 @@ app.post('/post-question', jsonParser, async (req, res) => {
       .json({ error: 'Failed to post question', details: error.message });
   }
 });
+async function getAnswersForQuestion(questionId) {
+  let allPages = [];
+  let startCursor;
+
+  while (true) { // eslint-disable-line no-constant-condition
+    const resp = await qaForumNotion.databases.query({
+      database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
+      filter: {
+        and: [
+          { property: 'Type', select: { equals: 'Answer' } },
+          { property: 'QuestionID', number: { equals: questionId } },
+        ],
+      },
+      ...(startCursor ? { start_cursor: startCursor } : {}),
+    });
+    allPages = allPages.concat(resp.results || []);
+    if (resp.has_more) {
+      startCursor = resp.next_cursor;
+    } else {
+      break;
+    }
+  }
+
+  return allPages.map((page) => getRichText(page.properties.Content));
+}
+
 // eslint-disable-next-line consistent-return
 app.post('/post-answer', jsonParser, async (req, res) => {
   try {
@@ -226,15 +252,22 @@ app.post('/post-answer', jsonParser, async (req, res) => {
         .json({ error: 'Missing required fields: content or questionID' });
     }
 
-    // checking toxicity
-    const result = await classifyToxicityInput(content);
-    // const toxicThreshold = 0.8; // adjust as needed
-    // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
-    if (result[0].label) {
-      // console.log('Blocked question for toxicity:', result);
+    const toxicityResult = await classifyToxicityInput(content);
+    if (toxicityResult[0].label === 'toxic') {
       return res
         .status(403)
-        .json({ error: 'Question rejected due to toxic language' });
+        .json({ error: 'Answer rejected due to toxic or inappropriate language.' });
+    }
+
+    const existingAnswers = await getAnswersForQuestion(questionID);
+    const normalized = content.trim().toLowerCase();
+    const isDuplicate = existingAnswers.some(
+      (ans) => ans.trim().toLowerCase() === normalized,
+    );
+    if (isDuplicate) {
+      return res
+        .status(409)
+        .json({ error: 'This answer has already been posted for this question.' });
     }
 
     const generateAnswerID = () => {
