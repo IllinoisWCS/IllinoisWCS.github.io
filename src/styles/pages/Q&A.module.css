@@ -144,7 +144,7 @@
 /*this is for each question in the drop down box*/
 .dropdownQuestion {
   padding: 10px;
-  color: var(--light-pink);
+  color: var(--wcs-blue);
   /*font-family options:*/
   /* font-family: 'Nunito', sans-serif; */
   font-family: 'Zilla Slab', serif;
