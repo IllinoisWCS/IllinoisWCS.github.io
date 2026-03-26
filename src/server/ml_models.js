@@ -34,20 +34,6 @@ const readline = require('readline');
 const hnswlib = require('hnswlib-node');
 const fs = require('fs');
 
-// Load toxicity model only once for efficiency
-let toxicityModel = null;
-async function loadToxicityClassifier() {
-  if (!toxicityModel) {
-    // console.log('Loading toxicity classifier...');
-    toxicityModel = await pipeline(
-      'text-classification',
-      'onnx-community/roberta_toxicity_classifier-ONNX',
-    );
-    // console.log('Toxicity model loaded.');
-  }
-  return toxicityModel;
-}
-
 // ====== REPEAT DETECTION COMPONENTS ======
 // 1) set up API calling -  can't load repeat detection model, can only call via api
 const { HF_API_KEY } = process.env;
@@ -154,7 +140,22 @@ async function answerIsRepeatedYesIndex(answer, questionId, answerId) {
 }
 
 // ------END OF REPEAT DETECTION COMPONENTS
-async function classifyToxicityInput(input) {
+
+// Load toxicity model only once for efficiency
+let toxicityModel = null;
+async function loadToxicityClassifier() {
+  if (!toxicityModel) {
+    // console.log('Loading toxicity classifier...');
+    toxicityModel = await pipeline(
+      'text-classification',
+      'onnx-community/roberta_toxicity_classifier-ONNX',
+    );
+    // console.log('Toxicity model loaded.');
+  }
+  return toxicityModel;
+}
+
+export async function classifyToxicityInput(input) {
   const classifier = await loadToxicityClassifier();
   const output = await classifier(input);
   return output;
@@ -182,7 +183,7 @@ read.on('line', async (line) => {
     const result = await classifyToxicityInput(textInput);
     // Result will be either 'neutral' or 'toxic' with a score
     // higher score = more toxic/more neutral
-    // console.log('Toxicity result:', result);
+    // console.log('Toxicity result:', result[0].label);
 
     if (result.label === 'toxic') {
       // console.log('True');

@@ -1,4 +1,9 @@
+// importing toxic language ml model
+// eslint-disable-next-line import/extensions
+import { classifyToxicityInput } from './ml_models.js'; // eslint-disable-line import/extensions
+
 require('dotenv').config();
+// import { configDotenv } from 'dotenv';
 
 const fs = require('fs');
 // creates https server with ssl certificate
@@ -141,12 +146,24 @@ app.get('/qas', async (req, res) => {
 });
 
 // q&a post functions
+// eslint-disable-next-line consistent-return
 app.post('/post-question', jsonParser, async (req, res) => {
   try {
     const { question, netid, timestamp } = req.body;
 
     if (!question) {
       return res.status(400).json({ error: 'Missing required content field' });
+    }
+
+    // checking toxicity
+    const result = await classifyToxicityInput(question);
+    // const toxicThreshold = 0.8; // adjust as needed
+    // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
+    if (result[0].label === 'toxic') {
+      // console.log('Blocked question for toxicity:', result);
+      return res
+        .status(403)
+        .json({ error: 'Question rejected due to toxic language' });
     }
 
     const generateQuestionID = () => {
@@ -198,7 +215,7 @@ app.post('/post-question', jsonParser, async (req, res) => {
       .json({ error: 'Failed to post question', details: error.message });
   }
 });
-
+// eslint-disable-next-line consistent-return
 app.post('/post-answer', jsonParser, async (req, res) => {
   try {
     const { content, netid, questionID, authenticated, timestamp } = req.body;
@@ -207,6 +224,17 @@ app.post('/post-answer', jsonParser, async (req, res) => {
       return res
         .status(400)
         .json({ error: 'Missing required fields: content or questionID' });
+    }
+
+    // checking toxicity
+    const result = await classifyToxicityInput(content);
+    // const toxicThreshold = 0.8; // adjust as needed
+    // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
+    if (result[0].label) {
+      // console.log('Blocked question for toxicity:', result);
+      return res
+        .status(403)
+        .json({ error: 'Question rejected due to toxic language' });
     }
 
     const generateAnswerID = () => {
@@ -259,9 +287,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     });
   } catch (error) {
     console.error('Error posting answer:', error);
-    res
-      .status(500)
-      .json({ error: 'Failed to post answer', details: error.message });
+    res.status(500).json({ error: 'Failed to post answer' });
   }
 });
 
