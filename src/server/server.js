@@ -29,8 +29,9 @@ const getSelectName = (prop) => {
   if (!prop) return null;
   // select or multi select
   if (prop.select && prop.select.name) return prop.select.name;
-  if (prop.multi_select && prop.multi_select.length)
+  if (prop.multi_select && prop.multi_select.length) {
     return prop.multi_select[0].name;
+  }
   return null;
 };
 
@@ -50,9 +51,12 @@ const getRichText = (prop) => {
   return '';
 };
 
+// eslint-disable-next-line no-confusing-arrow
 const getCheckbox = (prop) =>
   prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false;
+// eslint-disable-next-line no-confusing-arrow
 const getDateStart = (prop) => (prop && prop.date ? prop.date.start : null);
+// eslint-disable-next-line no-confusing-arrow
 const getNumber = (prop) =>
   prop && prop.number !== undefined && prop.number !== null
     ? prop.number
@@ -125,9 +129,9 @@ async function getQuestionsAndAnswers(databaseId) {
 app.get('/qas', async (req, res) => {
   try {
     const dbId = process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID;
-    if (!dbId)
+    if (!dbId) {
       return res.status(500).json({ error: 'Notion DB ID not configured' });
-
+    }
     const qa = await getQuestionsAndAnswers(dbId);
     return res.json(qa);
   } catch (err) {
@@ -146,11 +150,11 @@ app.post('/post-question', jsonParser, async (req, res) => {
     }
 
     const generateQuestionID = () => {
-      const timestamp = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
+      const ts = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
       const randomnum = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
-      return Number(`1${timestamp}${randomnum}`);
-      //FORMAT: 1 (to indicate it's a question) - timestamp (10 digits) - random number (5 digits)
-    }
+      return Number(`1${ts}${randomnum}`);
+      // FORMAT: 1 (to indicate it's a question) - timestamp (10 digits) - random number (5 digits)
+    };
 
     const questionID = generateQuestionID();
     // gets question content & ids
@@ -189,7 +193,9 @@ app.post('/post-question', jsonParser, async (req, res) => {
     });
   } catch (error) {
     console.error('Error posting question:', error);
-    res.status(500).json({ error: 'Failed to post question', details: error.message });
+    res
+      .status(500)
+      .json({ error: 'Failed to post question', details: error.message });
   }
 });
 
@@ -204,12 +210,12 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     }
 
     const generateAnswerID = () => {
-      const timestamp = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
+      const ts = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
       // not technically a timestamp, but the time passed in seconds since epoch (Jan 1 1970)
       const randomnum = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
-      return Number(`2${timestamp}${randomnum}`);
-      //FORMAT: 2 (to indicate it's an answer) - timestamp (10 digits) - random number (5 digits)
-    }
+      return Number(`2${ts}${randomnum}`);
+      // FORMAT: 2 (to indicate it's an answer) - timestamp (10 digits) - random number (5 digits)
+    };
 
     const answerID = generateAnswerID();
 
@@ -253,7 +259,9 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     });
   } catch (error) {
     console.error('Error posting answer:', error);
-    res.status(500).json({ error: 'Failed to post answer', details: error.message});
+    res
+      .status(500)
+      .json({ error: 'Failed to post answer', details: error.message });
   }
 });
 

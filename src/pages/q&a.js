@@ -201,22 +201,24 @@ export default function QA() {
                         <div className={styles.answerInputWrapper}>
                           <QAInputBox
                             value={answerTexts[question.QuestionID] || ''}
-                            onChange={(e) =>
-                              setAnswerTexts((prev) => ({
-                                ...prev,
-                                [question.QuestionID]: e.target.value,
-                              }))
+                            onChange={
+                              (e) =>
+                                setAnswerTexts((prev) => ({
+                                  ...prev,
+                                  [question.QuestionID]: e.target.value,
+                                })) // eslint-disable-next-line react/jsx-curly-newline
                             }
                             placeholder="Answer"
                           />
                           <div className={styles.answerSubmitWrapper}>
                             <NetIdInputBox
                               value={netIds[question.QuestionID] || ''}
-                              onChange={(e) =>
-                                setNetIds((prev) => ({
-                                  ...prev,
-                                  [question.QuestionID]: e.target.value,
-                                }))
+                              onChange={
+                                (e) =>
+                                  setNetIds((prev) => ({
+                                    ...prev,
+                                    [question.QuestionID]: e.target.value,
+                                  })) // eslint-disable-next-line react/jsx-curly-newline
                               }
                               placeholder="netId"
                             />
