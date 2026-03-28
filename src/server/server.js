@@ -24,6 +24,8 @@ const qaForumNotion = new Client({
   auth: process.env.REACT_APP_QA_FORUM_NOTION_API_KEY,
 });
 
+import { similarQuestions, addQuestionToIndex } from './ml_models.js';
+
 // generic properties getters
 const getSelectName = (prop) => {
   if (!prop) return null;
@@ -153,6 +155,7 @@ app.post('/post-question', jsonParser, async (req, res) => {
     }
 
     const questionID = generateQuestionID();
+    await addQuestionToIndex(question, questionID);
     // gets question content & ids
     const response = await qaForumNotion.pages.create({
       parent: {
@@ -192,6 +195,7 @@ app.post('/post-question', jsonParser, async (req, res) => {
     res.status(500).json({ error: 'Failed to post question', details: error.message });
   }
 });
+
 
 app.post('/post-answer', jsonParser, async (req, res) => {
   try {
