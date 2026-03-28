@@ -135,7 +135,7 @@ export default function QA() {
 
   // const [question, setQuestion] = useState('');
   const [recommendations, setRecommendations] = useState([]);
-  const startTyping = (typedText) => {
+  const startTyping = async (typedText) => {
     const text = typedText.target.value;
     console.log("User is typing", text);
     if (text.trim().length == 0) {
