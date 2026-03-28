@@ -135,7 +135,7 @@ export default function QA() {
 
   // const [question, setQuestion] = useState('');
   const [recommendations, setRecommendations] = useState([]);
-  const startTyping = (typedText) => {
+  const startTyping = async (typedText) => {
     const text = typedText.target.value;
     console.log("User is typing", text);
     if (text.trim().length == 0) {
@@ -144,7 +144,6 @@ export default function QA() {
     }
     const listSuggestions = questions.map((q) => q.Content);
     console.log(listSuggestions);
-    // const listSuggestions = ["What is Computer Science?", "How can I transfer from CS+Econ to CS+Phil?", "Good study spots on campus?", "How can I get involved in research?", "How can I study for CS374?"];
     setRecommendations(listSuggestions);
   };
   const filteredQuestions = questions.filter((q) => {

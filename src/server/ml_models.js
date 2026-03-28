@@ -6,15 +6,13 @@ import readline from 'readline';
 
 // creating HNSW index
 import hnswlib from 'hnswlib-node';
+import fs from 'fs';
+import dotenv from 'dotenv';
+dotenv.config({path: '../../.env'});
 
-
-// const dotenv = require('dotenv'); //for api keys
 // const path = require("path");
-// dotenv.config({path: path.resolve("../../.env")}); //not sure if this is for my system only...
 // // const readline = require('readline');
 // // const fetch = require('node-fetch');
-// const hnswlib = require('hnswlib-node');
-// const fs = require("fs");
 
 // Load toxicity model only once for efficiency
 let toxicityModel = null;
@@ -33,6 +31,7 @@ async function loadToxicityClassifier() {
 // ====== REPEAT DETECTION COMPONENTS ======
 //1) set up API calling -  can't load repeat detection model, can only call via api
 const HF_API_KEY = process.env.HF_API_KEY;
+console.log("HF KEY: ", HF_API_KEY);
 const QUESTION_INDEX_FILE_PATH = "data/questions.index";
 //2) Create an embedding using the HuggingFace model by sending via API
 async function createEmbedding(text) {
