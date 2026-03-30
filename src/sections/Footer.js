@@ -25,6 +25,15 @@ export default function WCSFooter() {
                 height="30"
               />
             </Key>
+            <Key url="https://illinoiswcs.medium.com/" tooltip="Medium">
+              <Image
+                src="/assets/design-vectors/medium.svg"
+                alt="medium"
+                width="30"
+                height="30"
+                style={{ transform: 'scale(1.35)' }}
+              />
+            </Key>
             <Key
               url="https://join.slack.com/t/wcs-uiuc/shared_invite/zt-1tut8j6pi-51ilAwG8CNmYNolsQP25ew"
               tooltip="Slack"
