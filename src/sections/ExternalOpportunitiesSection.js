@@ -25,6 +25,7 @@ export default function ExternalOpportunitiesSection() {
 
   useEffect(() => {
     fetch('https://main-api.illinoiswcs.org/external-opps-api')
+    // fetch('http://localhost:4000/external-opps-api')
       .then((response) => response.json())
       .then((data) => {
         setOpportunities(data);
