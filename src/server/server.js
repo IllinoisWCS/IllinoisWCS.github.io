@@ -79,10 +79,22 @@ async function filterRecentOpportunities(data) {
 }
 
 app.get('/external-opps-api', jsonParser, async (req, res) => {
-  const results = await notion.databases.query({
-    database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
-  });
-  const filteredRes = await filterRecentOpportunities(results.results);
+
+  let hasMore = true;
+  let startCursor = undefined; // eslint-disable-line no-undef-init
+  const results = [];
+  while (hasMore) {
+    const pages = await notion.databases.query({ // eslint-disable-line no-await-in-loop
+      database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
+      start_cursor: startCursor,
+    });
+    results.push(...pages.results);
+    hasMore = pages.has_more;
+    startCursor = pages.next_cursor;
+  }
+
+  const filteredRes = await filterRecentOpportunities(results);
+
 
   const tempRes = filteredRes.map((item) => ({
     icon: item.icon?.emoji || '💡', // eslint-disable-line operator-linebreak
@@ -101,8 +113,7 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   res.json(tempRes);
 });
 
-// https server setup
-// reads sssl certificate files issued by let's encrypt
+// Production: use HTTPS with your Let's Encrypt certs
 const privateKey = fs.readFileSync(
   '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
   'utf8',
@@ -113,16 +124,16 @@ const certificate = fs.readFileSync(
 );
 const credentials = { key: privateKey, cert: certificate };
 
-//  creates https server with express app and ssl credentials
 const httpsServer = https.createServer(credentials, app);
+httpsServer.listen(443, () => {
+  // console.log('HTTPS server running on port 443');
+});
 
-httpsServer.listen(443);
-
-// redirects all http requests to http
+// redirect all HTTP traffic to HTTPS
 const httpApp = express();
-
 httpApp.use((req, res) => {
   res.redirect(`https://${req.headers.host}${req.url}`);
 });
-
-http.createServer(httpApp).listen(80);
+http.createServer(httpApp).listen(80, () => {
+  // console.log('HTTP redirect server running on port 80');
+});
