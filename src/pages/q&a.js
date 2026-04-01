@@ -8,12 +8,13 @@ import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
 import QAInputBox from '../components/general/qa-forum/QAInputBox';
 import NetIdInputBox from '../components/general/qa-forum/NetIdInputBox';
 import { toastError } from '../utils/toast';
+import {toast} from 'react-toastify'; 
 
 export default function QA() {
   const [questionText, setQuestionText] = useState('');
   const [answerTexts, setAnswerTexts] = useState({});
   const [netIds, setNetIds] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [loadingState, setLoadingState] = useState(null);
   const [questions, setQuestions] = useState([]);
   const [answered, setAnswered] = useState(true);
   const [questionsLoading, setQuestionsLoading] = useState(true);
@@ -40,9 +41,11 @@ export default function QA() {
     if (!questionText.trim()) {
       toastError('Please enter a question.');
       return;
-    }
+    } 
 
-    setIsLoading(true);
+
+    setLoadingState('question');
+    //toast.success('Submitting your question...');
     try {
       const response = await fetch('/post-question', {
         method: 'POST',
@@ -69,12 +72,14 @@ export default function QA() {
         const data = await refreshResponse.json();
         setQuestions(data || []);
       }
+      
+      toast.success('Question submitted successfully!'); 
     } catch (error) {
       toastError(
         'There was an error submitting your question. Please try again.',
       );
     } finally {
-      setIsLoading(false);
+      setLoadingState(null);
     }
   };
 
@@ -92,7 +97,8 @@ export default function QA() {
       return;
     }
 
-    setIsLoading(true);
+    setLoadingState(questionID);
+    //toast.success('Submitting your answer...');
     try {
       const response = await fetch('/post-answer', {
         method: 'POST',
@@ -123,12 +129,13 @@ export default function QA() {
         const data = await refreshResponse.json();
         setQuestions(data || []);
       }
+      toast.success('Answer submitted successfully!')
     } catch (error) {
       toastError(
         'There was an error submitting your answer. Please try again.',
       );
     } finally {
-      setIsLoading(false);
+      setLoadingState(null);
     }
   };
 
@@ -163,7 +170,12 @@ export default function QA() {
               placeholder="Question"
             />
             <div className={styles.submitButtonWrapper}>
-              <QASubmitButton onClick={submitQuestion} disabled={isLoading} />
+              <QASubmitButton 
+                onClick={submitQuestion} 
+                disabled = {loadingState !== null}
+                isLoading = {loadingState === 'question'}
+                //disabled={isLoading} 
+              />
             </div>
           </div>
         </div>
@@ -224,7 +236,9 @@ export default function QA() {
                             />
                             <QASubmitButton
                               onClick={() => submitAnswer(question.QuestionID)}
-                              disabled={isLoading}
+                             // disabled={isLoading}
+                              disabled ={loadingState !== null}
+                              isLoading = {loadingState === question.QuestionID}
                             />
                           </div>
                         </div>
