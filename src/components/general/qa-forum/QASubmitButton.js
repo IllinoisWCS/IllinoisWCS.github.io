@@ -1,6 +1,10 @@
 import styles from '@/styles/components/QASubmitButton.module.css';
 
-export default function QASubmitButton({ onClick, disabled = false }) {
+export default function QASubmitButton({
+  onClick,
+  disabled = false,
+  isLoading = false,
+}) {
   return (
     <div>
       <button
@@ -13,7 +17,7 @@ export default function QASubmitButton({ onClick, disabled = false }) {
           cursor: disabled ? 'not-allowed' : 'pointer',
         }}
       >
-        Submit
+        {isLoading ? <span className={styles.spinner} /> : 'Submit'}
       </button>
     </div>
   );

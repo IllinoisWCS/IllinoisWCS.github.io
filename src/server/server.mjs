@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/server/server.js
+=======
+// importing toxic language ml model
+>>>>>>> 512dd11fafa09eb8cc45515a69475af0ab2cf7ec:src/server/server.mjs
 import dotenv from 'dotenv';
 import fs from 'fs';
 import https from 'https';
@@ -7,7 +11,8 @@ import { Client } from '@notionhq/client';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import moment from 'moment';
-import { classifyToxicityInput } from './ml_models.js'; // eslint-disable-line import/extensions
+// eslint-disable-next-line import/extensions
+import { classifyToxicityInput } from './ml_models.mjs';
 
 dotenv.config();
 
@@ -246,8 +251,17 @@ app.post('/post-answer', jsonParser, async (req, res) => {
         .json({ error: 'Missing required fields: content or questionID' });
     }
 
+<<<<<<< HEAD:src/server/server.js
     const toxicityResult = await classifyToxicityInput(content);
     if (toxicityResult[0].label === 'toxic') {
+=======
+    // checking toxicity
+    const result = await classifyToxicityInput(content);
+    // const toxicThreshold = 0.8; // adjust as needed
+    // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
+    if (result[0].label === 'toxic') {
+      // console.log('Blocked question for toxicity:', result);
+>>>>>>> 512dd11fafa09eb8cc45515a69475af0ab2cf7ec:src/server/server.mjs
       return res
         .status(403)
         .json({ error: 'Answer rejected due to toxic or inappropriate language.' });
