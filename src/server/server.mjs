@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src/server/server.js
-=======
-// importing toxic language ml model
->>>>>>> 512dd11fafa09eb8cc45515a69475af0ab2cf7ec:src/server/server.mjs
 import dotenv from 'dotenv';
 import fs from 'fs';
 import https from 'https';
@@ -253,9 +249,9 @@ app.post('/post-answer', jsonParser, async (req, res) => {
 
     const toxicityResult = await classifyToxicityInput(content);
     if (toxicityResult[0].label === 'toxic') {
-      return res
-        .status(403)
-        .json({ error: 'Answer rejected due to toxic or inappropriate language.' });
+      return res.status(403).json({
+        error: 'Answer rejected due to toxic or inappropriate language.',
+      });
     }
 
     const existingAnswers = await getAnswersForQuestion(questionID);
@@ -264,9 +260,9 @@ app.post('/post-answer', jsonParser, async (req, res) => {
       (ans) => ans.trim().toLowerCase() === normalized,
     );
     if (isDuplicate) {
-      return res
-        .status(409)
-        .json({ error: 'This answer has already been posted for this question.' });
+      return res.status(409).json({
+        error: 'This answer has already been posted for this question.',
+      });
     }
 
     const generateAnswerID = () => {
