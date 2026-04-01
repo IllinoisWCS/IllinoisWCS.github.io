@@ -8,13 +8,13 @@ import QAInputBox from '../components/general/qa-forum/QAInputBox';
 import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
 import NetIdInputBox from '../components/general/qa-forum/NetIdInputBox';
 import { toastError } from '../utils/toast';
-
+import { toast } from 'react-toastify';
 
 export default function QA() {
   const [questionText, setQuestionText] = useState('');
   const [answerTexts, setAnswerTexts] = useState({});
   const [netIds, setNetIds] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [loadingState, setLoadingState] = useState(null);
   const [questions, setQuestions] = useState([]);
   const [answered, setAnswered] = useState(true);
   const [questionsLoading, setQuestionsLoading] = useState(true);
@@ -43,7 +43,8 @@ export default function QA() {
       return;
     }
 
-    setIsLoading(true);
+    setLoadingState('question');
+    //toast.success('Submitting your question...');
     try {
       const response = await fetch('/post-question', {
         method: 'POST',
@@ -70,12 +71,14 @@ export default function QA() {
         const data = await refreshResponse.json();
         setQuestions(data || []);
       }
+
+      toast.success('Question submitted successfully!');
     } catch (error) {
       toastError(
         'There was an error submitting your question. Please try again.',
       );
     } finally {
-      setIsLoading(false);
+      setLoadingState(null);
     }
   };
 
@@ -93,7 +96,8 @@ export default function QA() {
       return;
     }
 
-    setIsLoading(true);
+    setLoadingState(questionID);
+    //toast.success('Submitting your answer...');
     try {
       const response = await fetch('/post-answer', {
         method: 'POST',
@@ -124,12 +128,13 @@ export default function QA() {
         const data = await refreshResponse.json();
         setQuestions(data || []);
       }
+      toast.success('Answer submitted successfully!');
     } catch (error) {
       toastError(
         'There was an error submitting your answer. Please try again.',
       );
     } finally {
-      setIsLoading(false);
+      setLoadingState(null);
     }
   };
 
@@ -137,7 +142,7 @@ export default function QA() {
   const [recommendations, setRecommendations] = useState([]);
   const startTyping = async (typedText) => {
     const text = typedText.target.value;
-    console.log("User is typing", text);
+    console.log('User is typing', text);
     if (text.trim().length == 0) {
       setRecommendations([]);
       return;
@@ -170,7 +175,6 @@ export default function QA() {
             questions to provide your own answers.
           </p>
 
-
           <div className={styles.questionInputWrapper}>
             <QAInputBox
               value={questionText}
@@ -191,76 +195,85 @@ export default function QA() {
             )}
           </div>
 
-            <div className={styles.submitButtonWrapper}>
-              <QASubmitButton onClick={submitQuestion} disabled={isLoading} />
-            </div>
+          <div className={styles.submitButtonWrapper}>
+            <QASubmitButton
+              onClick={submitQuestion}
+              disabled={loadingState !== null}
+              isLoading={loadingState === 'question'}
+              //disabled={isLoading}
+            />
           </div>
-        </div>        
-        <div className={styles.questionsContainer}>
-          <QuestionStatusToggle answered={answered} setAnswered={setAnswered} />
+        </div>
+      </div>
+      <div className={styles.questionsContainer}>
+        <QuestionStatusToggle answered={answered} setAnswered={setAnswered} />
 
-          {questionsLoading ? (
-            <p>Loading questions...</p>
-          ) : (
-            <div className={styles.questionsList}>
-              {filteredQuestions.length === 0 ? (
-                <p>No {answered ? 'answered' : 'unanswered'} questions yet.</p>
-              ) : (
-                filteredQuestions.map((question) => (
-                  <div key={question.QuestionID}>
-                    <QuestionAccordion questionText={question.Content}>
-                      <div className={styles.answersContainer}>
-                        {question.Answers && question.Answers.length > 0 ? (
-                          question.Answers.map((answer, idx) => (
-                            <QASpeechBubble
-                              key={idx}
-                              content={answer.Content}
-                              netid={answer.NetID}
-                            />
-                          ))
-                        ) : (
-                          <p className={styles.firstToAnswer}>
-                            Be the first to answer this question!
-                          </p>
-                        )}
+        {questionsLoading ? (
+          <p>Loading questions...</p>
+        ) : (
+          <div className={styles.questionsList}>
+            {filteredQuestions.length === 0 ? (
+              <p>No {answered ? 'answered' : 'unanswered'} questions yet.</p>
+            ) : (
+              filteredQuestions.map((question) => (
+                <div key={question.QuestionID}>
+                  <QuestionAccordion questionText={question.Content}>
+                    <div className={styles.answersContainer}>
+                      {question.Answers && question.Answers.length > 0 ? (
+                        question.Answers.map((answer, idx) => (
+                          <QASpeechBubble
+                            key={idx}
+                            content={answer.Content}
+                            netid={answer.NetID}
+                          />
+                        ))
+                      ) : (
+                        <p className={styles.firstToAnswer}>
+                          Be the first to answer this question!
+                        </p>
+                      )}
 
-                        {/* Answer Submission Form */}
-                        <div className={styles.answerInputWrapper}>
-                          <QAInputBox
-                            value={answerTexts[question.QuestionID] || ''}
-                            onChange={(e) =>
+                      {/* Answer Submission Form */}
+                      <div className={styles.answerInputWrapper}>
+                        <QAInputBox
+                          value={answerTexts[question.QuestionID] || ''}
+                          onChange={
+                            (e) =>
                               setAnswerTexts((prev) => ({
                                 ...prev,
                                 [question.QuestionID]: e.target.value,
-                              }))
-                            }
-                            placeholder="Answer"
-                          />
-                          <div className={styles.answerSubmitWrapper}>
-                            <NetIdInputBox
-                              value={netIds[question.QuestionID] || ''}
-                              onChange={(e) =>
+                              })) // eslint-disable-next-line react/jsx-curly-newline
+                          }
+                          placeholder="Answer"
+                        />
+                        <div className={styles.answerSubmitWrapper}>
+                          <NetIdInputBox
+                            value={netIds[question.QuestionID] || ''}
+                            onChange={
+                              (e) =>
                                 setNetIds((prev) => ({
                                   ...prev,
                                   [question.QuestionID]: e.target.value,
-                                }))
-                              }
-                              placeholder="netId"
-                            />
-                            <QASubmitButton
-                              onClick={() => submitAnswer(question.QuestionID)}
-                              disabled={isLoading}
-                            />
-                          </div>
+                                })) // eslint-disable-next-line react/jsx-curly-newline
+                            }
+                            placeholder="netId"
+                          />
+                          <QASubmitButton
+                            onClick={() => submitAnswer(question.QuestionID)}
+                            // disabled={isLoading}
+                            disabled={loadingState !== null}
+                            isLoading={loadingState === question.QuestionID}
+                          />
                         </div>
                       </div>
-                    </QuestionAccordion>
-                  </div>
-                ))
-              )}
-            </div>
-          )}
-        </div>
+                    </div>
+                  </QuestionAccordion>
+                </div>
+              ))
+            )}
+          </div>
+        )}
+      </div>
     </main>
   );
 }
