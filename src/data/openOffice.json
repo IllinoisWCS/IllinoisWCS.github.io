@@ -17,7 +17,11 @@
           {
             "time": "3:00-3:30",
             "officers": ["Jia Gill", "Jazmin Uribe"],
-            "committees": ["Moukthika Nellutla", "Tanishka Suman", "Rakshita Kunde"]
+            "committees": [
+              "Moukthika Nellutla",
+              "Tanishka Suman",
+              "Rakshita Kunde"
+            ]
           },
           {
             "time": "3:30-4:00",
@@ -26,7 +30,7 @@
           },
           {
             "time": "4:00-4:30",
-            "officers": ["Shivi Narang","Ananya Kalidindi", "Michelle Sun"],
+            "officers": ["Shivi Narang", "Ananya Kalidindi", "Michelle Sun"],
             "committees": ["Eva Noftz"]
           },
           {
@@ -196,7 +200,11 @@
           {
             "time": "3:00-3:30",
             "officers": ["Jia Gill", "Jazmin Uribe"],
-            "committees": ["Chandini Chennakesavan", "Tanishka Suman", "Natalie DuShane"]
+            "committees": [
+              "Chandini Chennakesavan",
+              "Tanishka Suman",
+              "Natalie DuShane"
+            ]
           },
           {
             "time": "3:30-4:00",
@@ -205,7 +213,7 @@
           },
           {
             "time": "4:00-4:30",
-            "officers": ["Shivi Narang","Ananya Kalidindi", "Michelle Sun"],
+            "officers": ["Shivi Narang", "Ananya Kalidindi", "Michelle Sun"],
             "committees": ["Aarushi Das"]
           },
           {
@@ -241,7 +249,7 @@
           {
             "time": "4:00-4:30",
             "officers": ["Tia Kashyap", "Karen Gao", "Hiral Palakurty"],
-            "committees": ["Disha Dayalan","Rhea Shah"]
+            "committees": ["Disha Dayalan", "Rhea Shah"]
           },
           {
             "time": "4:30-5:00",
