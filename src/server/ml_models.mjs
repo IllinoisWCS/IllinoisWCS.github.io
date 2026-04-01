@@ -2,37 +2,13 @@
 
 // Import huggingface model and readline
 import { pipeline } from '@huggingface/transformers';
-// creating HNSW index
-// import hnswlib from 'hnswlib-node';
-
-// const index = new hnswlib.HierarchicalNSW('cosine', 768); // 768 is the embeddingsize of this model
-// const databaseSize = 0; // number of questions in the notion database - need to find a way to pull this.
-// index.initIndex(100); // maximum number of elements index can hold right now - need to resize later.
-// // this file is using "import" but server.js is using "require"...
-// import dotenv from 'dotenv'; //for api keys
-// import path from "path";
-// dotenv.config({path: path.resolve("../../.env")}); //not sure if this is for my system only...
-// //needs to be able to use require, removed type=module in package.json... have to change this.
-// // Uncomment console.log statements for functionality
-
-// // Import huggingface model and readline
-// import readline from 'readline';
-
-// //IMPORTING HUGGING FACE MODEL
-// import fetch from 'node-fetch';
-
-// //creation/loading of HNSW index
-// import hnswlib from 'hnswlib-node';
-// import fs from "fs";
-
-const dotenv = require('dotenv'); // for api keys
-const path = require('path');
+import readline from 'readline';
+import hnswlib from 'hnswlib-node';
+import fs from 'fs';
+import dotenv from 'dotenv';
+import path from 'path';
 
 dotenv.config({ path: path.resolve('../../.env') }); // not sure if this is for my system only...
-const readline = require('readline');
-// const fetch = require('node-fetch');
-const hnswlib = require('hnswlib-node');
-const fs = require('fs');
 
 // ====== REPEAT DETECTION COMPONENTS ======
 // 1) set up API calling -  can't load repeat detection model, can only call via api

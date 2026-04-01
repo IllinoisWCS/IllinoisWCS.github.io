@@ -1,25 +1,20 @@
 // importing toxic language ml model
+import dotenv from 'dotenv';
+import fs from 'fs';
+import https from 'https';
+import http from 'http';
+import express from 'express';
+import { Client } from '@notionhq/client';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import moment from 'moment';
 // eslint-disable-next-line import/extensions
-import { classifyToxicityInput } from './ml_models.js'; // eslint-disable-line import/extensions
+import { classifyToxicityInput } from './ml_models.mjs';
 
-require('dotenv').config();
-// import { configDotenv } from 'dotenv';
-
-const fs = require('fs');
-// creates https server with ssl certificate
-const https = require('https');
-//  creates http server for redirecting to https
-const http = require('http');
-const express = require('express');
-
-const { Client } = require('@notionhq/client');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+dotenv.config();
 
 const jsonParser = bodyParser.json();
 const app = express();
-
-const moment = require('moment');
 
 app.use(cors());
 
@@ -230,7 +225,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     const result = await classifyToxicityInput(content);
     // const toxicThreshold = 0.8; // adjust as needed
     // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
-    if (result[0].label) {
+    if (result[0].label === 'toxic') {
       // console.log('Blocked question for toxicity:', result);
       return res
         .status(403)
