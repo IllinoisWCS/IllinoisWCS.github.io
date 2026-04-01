@@ -79,7 +79,6 @@ async function filterRecentOpportunities(data) {
 }
 
 app.get('/external-opps-api', jsonParser, async (req, res) => {
-
   let hasMore = true;
   let startCursor = undefined; // eslint-disable-line no-undef-init
   const results = [];
@@ -94,7 +93,6 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   }
 
   const filteredRes = await filterRecentOpportunities(results);
-
 
   const tempRes = filteredRes.map((item) => ({
     icon: item.icon?.emoji || '💡', // eslint-disable-line operator-linebreak
