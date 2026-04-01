@@ -1,21 +1,20 @@
-const jwt = require('jsonwebtoken');
-require('dotenv').config();
+import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+import fs from 'fs';
+import https from 'https';
+import http from 'http';
+import express from 'express';
+import { Client } from '@notionhq/client';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import moment from 'moment';
+// eslint-disable-next-line import/extensions
+import { classifyToxicityInput } from './ml_models.mjs';
 
-const fs = require('fs');
-// creates https server with ssl certificate
-const https = require('https');
-//  creates http server for redirecting to https
-const http = require('http');
-const express = require('express');
-
-const { Client } = require('@notionhq/client');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+dotenv.config();
 
 const jsonParser = bodyParser.json();
 const app = express();
-
-const moment = require('moment');
 
 app.use(cors());
 
@@ -30,7 +29,9 @@ const getSelectName = (prop) => {
   if (!prop) return null;
   // select or multi select
   if (prop.select && prop.select.name) return prop.select.name;
-  if (prop.multi_select && prop.multi_select.length) { return prop.multi_select[0].name; }
+  if (prop.multi_select && prop.multi_select.length) {
+    return prop.multi_select[0].name;
+  }
   return null;
 };
 
@@ -50,9 +51,16 @@ const getRichText = (prop) => {
   return '';
 };
 
+// eslint-disable-next-line no-confusing-arrow
 const getCheckbox = (prop) =>
-  (prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false);
+  prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false;
+// eslint-disable-next-line no-confusing-arrow
 const getDateStart = (prop) => (prop && prop.date ? prop.date.start : null);
+// eslint-disable-next-line no-confusing-arrow
+const getNumber = (prop) =>
+  prop && prop.number !== undefined && prop.number !== null
+    ? prop.number
+    : null;
 
 async function getQuestionsAndAnswers(databaseId) {
   let allPages = [];
@@ -77,7 +85,7 @@ async function getQuestionsAndAnswers(databaseId) {
   allPages.forEach((page) => {
     const props = page.properties || {};
     const type = getSelectName(props.Type);
-    const qid = getRichText(props.QuestionID) || '';
+    const qid = getNumber(props.QuestionID);
     const content = getRichText(props.Content) || '';
     const timestamp = getDateStart(props.Timestamp) || null;
 
@@ -92,7 +100,7 @@ async function getQuestionsAndAnswers(databaseId) {
       });
       // populate answers map
     } else if (type === 'Answer' && qid) {
-      const aid = getRichText(props.AnswerID) || '';
+      const aid = getNumber(props.AnswerID);
       const netid = getRichText(props.NetID) || '';
       const authenticated = getCheckbox(props.Authenticated);
       const ansObj = {
@@ -121,8 +129,9 @@ async function getQuestionsAndAnswers(databaseId) {
 app.get('/qas', async (req, res) => {
   try {
     const dbId = process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID;
-    if (!dbId) { return res.status(500).json({ error: 'Notion DB ID not configured' }); }
-
+    if (!dbId) {
+      return res.status(500).json({ error: 'Notion DB ID not configured' });
+    }
     const qa = await getQuestionsAndAnswers(dbId);
     return res.json(qa);
   } catch (err) {
@@ -132,6 +141,7 @@ app.get('/qas', async (req, res) => {
 });
 
 // q&a post functions
+// eslint-disable-next-line consistent-return
 app.post('/post-question', jsonParser, async (req, res) => {
   try {
     const { question, netid, timestamp } = req.body;
@@ -140,12 +150,25 @@ app.post('/post-question', jsonParser, async (req, res) => {
       return res.status(400).json({ error: 'Missing required content field' });
     }
 
-    // uses time stamp + random string
-    const generateQuestionID = () =>
-      `Q-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
+    // checking toxicity
+    const result = await classifyToxicityInput(question);
+    // const toxicThreshold = 0.8; // adjust as needed
+    // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
+    if (result[0].label === 'toxic') {
+      // console.log('Blocked question for toxicity:', result);
+      return res
+        .status(403)
+        .json({ error: 'Question rejected due to toxic language' });
+    }
+
+    const generateQuestionID = () => {
+      const ts = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
+      const randomnum = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
+      return Number(`1${ts}${randomnum}`);
+      // FORMAT: 1 (to indicate it's a question) - timestamp (10 digits) - random number (5 digits)
+    };
 
     const questionID = generateQuestionID();
-
     // gets question content & ids
     const response = await qaForumNotion.pages.create({
       parent: {
@@ -159,10 +182,11 @@ app.post('/post-question', jsonParser, async (req, res) => {
           title: [{ text: { content: question } }],
         },
         QuestionID: {
-          rich_text: [{ text: { content: questionID } }],
+          number: questionID,
         },
         AnswerID: {
-          rich_text: [{ text: { content: '' } }], // empty for questions
+          // rich_text: [{ text: { content: '' } }], // empty for questions
+          number: 0, // 0 for questions, will be updated for answers
         },
         Authenticated: {
           checkbox: false, // questions are not authenticated
@@ -181,7 +205,9 @@ app.post('/post-question', jsonParser, async (req, res) => {
     });
   } catch (error) {
     console.error('Error posting question:', error);
-    res.status(500).json({ error: 'Failed to post question' });
+    res
+      .status(500)
+      .json({ error: 'Failed to post question', details: error.message });
   }
 });
 
@@ -192,6 +218,33 @@ function getJWT(questID, netID, ansID, content) {
   return [payload, token];
 }
 
+async function getAnswersForQuestion(questionId) {
+  let allPages = [];
+  let startCursor;
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    const resp = await qaForumNotion.databases.query({
+      database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
+      filter: {
+        and: [
+          { property: 'Type', select: { equals: 'Answer' } },
+          { property: 'QuestionID', number: { equals: questionId } },
+        ],
+      },
+      ...(startCursor ? { start_cursor: startCursor } : {}),
+    });
+    allPages = allPages.concat(resp.results || []);
+    if (resp.has_more) {
+      startCursor = resp.next_cursor;
+    } else {
+      break;
+    }
+  }
+
+  return allPages.map((page) => getRichText(page.properties.Content));
+}
+
+// eslint-disable-next-line consistent-return
 app.post('/post-answer', jsonParser, async (req, res) => {
   try {
     const { content, netid, questionID, authenticated, timestamp } = req.body;
@@ -202,8 +255,31 @@ app.post('/post-answer', jsonParser, async (req, res) => {
         .json({ error: 'Missing required fields: content or questionID' });
     }
 
-    const generateAnswerID = () =>
-      `A-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
+    const toxicityResult = await classifyToxicityInput(content);
+    if (toxicityResult[0].label === 'toxic') {
+      return res.status(403).json({
+        error: 'Answer rejected due to toxic or inappropriate language.',
+      });
+    }
+
+    const existingAnswers = await getAnswersForQuestion(questionID);
+    const normalized = content.trim().toLowerCase();
+    const isDuplicate = existingAnswers.some(
+      (ans) => ans.trim().toLowerCase() === normalized,
+    );
+    if (isDuplicate) {
+      return res.status(409).json({
+        error: 'This answer has already been posted for this question.',
+      });
+    }
+
+    const generateAnswerID = () => {
+      const ts = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
+      // not technically a timestamp, but the time passed in seconds since epoch (Jan 1 1970)
+      const randomnum = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
+      return Number(`2${ts}${randomnum}`);
+      // FORMAT: 2 (to indicate it's an answer) - timestamp (10 digits) - random number (5 digits)
+    };
 
     const answerID = generateAnswerID();
 
@@ -223,10 +299,11 @@ app.post('/post-answer', jsonParser, async (req, res) => {
           rich_text: [{ text: { content: netid || '' } }],
         },
         QuestionID: {
-          rich_text: [{ text: { content: questionID } }],
+          number: questionID,
         },
         AnswerID: {
-          rich_text: [{ text: { content: answerID } }],
+          // rich_text: [{ text: { content: answerID } }],
+          number: answerID,
         },
         Authenticated: {
           checkbox: !!authenticated, // true if user successfully authenticated
@@ -372,10 +449,3 @@ if (process.env.NODE_ENV === 'production') {
     console.log(`Dev server running on http://localhost:${PORT}`);
   });
 }
-
-// redirects all http requests to http
-const httpApp = express();
-
-// httpsServer.listen(443);
-
-http.createServer(httpApp).listen(80);
