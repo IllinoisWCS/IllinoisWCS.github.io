@@ -19,7 +19,7 @@ export default function ExternalOpportunitiesSection() {
   //  this will contain the data from notion
   const [opportunities, setOpportunities] = useState([{}]);
   const [notionDataFetched, setNotionDataFetched] = useState(true);
-  const disabled = true;
+  const disabled = false;
 
   //  this fetches the opportunities data and assigns it to opportunities (above)
   //   You can use the map function to iterate through the opportunities.
