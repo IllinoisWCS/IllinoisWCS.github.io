@@ -1,6 +1,10 @@
 import styles from '@/styles/components/QASubmitButton.module.css';
 
-export default function QASubmitButton({ onClick, disabled = false, isLoading = false}) {
+export default function QASubmitButton({
+  onClick,
+  disabled = false,
+  isLoading = false,
+}) {
   return (
     <div>
       <button

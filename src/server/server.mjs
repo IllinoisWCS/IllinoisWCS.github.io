@@ -1,4 +1,7 @@
+<<<<<<< HEAD:src/server/server.js
+=======
 // importing toxic language ml model
+>>>>>>> 512dd11fafa09eb8cc45515a69475af0ab2cf7ec:src/server/server.mjs
 import dotenv from 'dotenv';
 import fs from 'fs';
 import https from 'https';
@@ -210,6 +213,33 @@ app.post('/post-question', jsonParser, async (req, res) => {
       .json({ error: 'Failed to post question', details: error.message });
   }
 });
+async function getAnswersForQuestion(questionId) {
+  let allPages = [];
+  let startCursor;
+
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    const resp = await qaForumNotion.databases.query({
+      database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
+      filter: {
+        and: [
+          { property: 'Type', select: { equals: 'Answer' } },
+          { property: 'QuestionID', number: { equals: questionId } },
+        ],
+      },
+      ...(startCursor ? { start_cursor: startCursor } : {}),
+    });
+    allPages = allPages.concat(resp.results || []);
+    if (resp.has_more) {
+      startCursor = resp.next_cursor;
+    } else {
+      break;
+    }
+  }
+
+  return allPages.map((page) => getRichText(page.properties.Content));
+}
+
 // eslint-disable-next-line consistent-return
 app.post('/post-answer', jsonParser, async (req, res) => {
   try {
@@ -221,15 +251,31 @@ app.post('/post-answer', jsonParser, async (req, res) => {
         .json({ error: 'Missing required fields: content or questionID' });
     }
 
+<<<<<<< HEAD:src/server/server.js
+    const toxicityResult = await classifyToxicityInput(content);
+    if (toxicityResult[0].label === 'toxic') {
+=======
     // checking toxicity
     const result = await classifyToxicityInput(content);
     // const toxicThreshold = 0.8; // adjust as needed
     // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
     if (result[0].label === 'toxic') {
       // console.log('Blocked question for toxicity:', result);
+>>>>>>> 512dd11fafa09eb8cc45515a69475af0ab2cf7ec:src/server/server.mjs
       return res
         .status(403)
-        .json({ error: 'Question rejected due to toxic language' });
+        .json({ error: 'Answer rejected due to toxic or inappropriate language.' });
+    }
+
+    const existingAnswers = await getAnswersForQuestion(questionID);
+    const normalized = content.trim().toLowerCase();
+    const isDuplicate = existingAnswers.some(
+      (ans) => ans.trim().toLowerCase() === normalized,
+    );
+    if (isDuplicate) {
+      return res
+        .status(409)
+        .json({ error: 'This answer has already been posted for this question.' });
     }
 
     const generateAnswerID = () => {

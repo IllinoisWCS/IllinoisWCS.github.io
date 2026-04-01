@@ -8,7 +8,7 @@ import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
 import QAInputBox from '../components/general/qa-forum/QAInputBox';
 import NetIdInputBox from '../components/general/qa-forum/NetIdInputBox';
 import { toastError } from '../utils/toast';
-import {toast} from 'react-toastify'; 
+import { toast } from 'react-toastify';
 
 export default function QA() {
   const [questionText, setQuestionText] = useState('');
@@ -41,8 +41,7 @@ export default function QA() {
     if (!questionText.trim()) {
       toastError('Please enter a question.');
       return;
-    } 
-
+    }
 
     setLoadingState('question');
     //toast.success('Submitting your question...');
@@ -72,8 +71,8 @@ export default function QA() {
         const data = await refreshResponse.json();
         setQuestions(data || []);
       }
-      
-      toast.success('Question submitted successfully!'); 
+
+      toast.success('Question submitted successfully!');
     } catch (error) {
       toastError(
         'There was an error submitting your question. Please try again.',
@@ -129,7 +128,7 @@ export default function QA() {
         const data = await refreshResponse.json();
         setQuestions(data || []);
       }
-      toast.success('Answer submitted successfully!')
+      toast.success('Answer submitted successfully!');
     } catch (error) {
       toastError(
         'There was an error submitting your answer. Please try again.',
@@ -170,11 +169,11 @@ export default function QA() {
               placeholder="Question"
             />
             <div className={styles.submitButtonWrapper}>
-              <QASubmitButton 
-                onClick={submitQuestion} 
-                disabled = {loadingState !== null}
-                isLoading = {loadingState === 'question'}
-                //disabled={isLoading} 
+              <QASubmitButton
+                onClick={submitQuestion}
+                disabled={loadingState !== null}
+                isLoading={loadingState === 'question'}
+                //disabled={isLoading}
               />
             </div>
           </div>
@@ -236,9 +235,9 @@ export default function QA() {
                             />
                             <QASubmitButton
                               onClick={() => submitAnswer(question.QuestionID)}
-                             // disabled={isLoading}
-                              disabled ={loadingState !== null}
-                              isLoading = {loadingState === question.QuestionID}
+                              // disabled={isLoading}
+                              disabled={loadingState !== null}
+                              isLoading={loadingState === question.QuestionID}
                             />
                           </div>
                         </div>

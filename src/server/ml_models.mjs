@@ -59,6 +59,7 @@ async function checkDuplicate(index, input, threshold = 0.5) {
 
 // if question is deleted - need to remove from index too?? have to ask about this
 async function questionIsRepeated(question, questionId) {
+  // eslint-disable-next-line no-undef
   const question_index = new hnswlib.HierarchicalNSW('cosine', 384); // 384 is the dimension/embedding size
   if (fs.existsSync('data/questions.index')) {
     // eslint-disable-next-line no-undef
@@ -84,6 +85,7 @@ async function answerIsRepeatedNoIndex(
   answerId,
   listOfAnswers,
 ) {
+  // eslint-disable-next-line no-undef
   const answerIndex = new hnswlib.HierarchicalNSW('cosine', 384);
   answerIndex.initIndex(100);
   for (let i = 0; i < listOfAnswers.length; i += 1) {
@@ -103,6 +105,7 @@ async function answerIsRepeatedNoIndex(
 
 // bad/there is duplicate -> send false; good/no duplicate -> send true, and add to index
 async function answerIsRepeatedYesIndex(answer, questionId, answerId) {
+  // eslint-disable-next-line no-undef
   const answerIndex = new hnswlib.HierarchicalNSW('cosine', 384);
   answerIndex.readIndexSync(`data/answers_${questionId}.index`);
   const result = checkDuplicate(answerIndex, answer);
