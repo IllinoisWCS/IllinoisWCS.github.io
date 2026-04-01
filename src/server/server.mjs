@@ -23,7 +23,7 @@ const qaForumNotion = new Client({
   auth: process.env.REACT_APP_QA_FORUM_NOTION_API_KEY,
 });
 
-import { similarQuestions, addQuestionToIndex } from './ml_models.js';
+import { similarQuestions, addQuestionToIndex } from './ml_models.mjs';
 
 // generic properties getters
 const getSelectName = (prop) => {

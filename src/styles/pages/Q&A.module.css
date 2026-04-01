@@ -197,8 +197,6 @@
   --light-light-pink: #fff8f9; too light, it's out
   --light-light-blue: #f8fffe;
   */
-  
-
 }
 
 .panelContainer {
@@ -293,7 +291,6 @@
   gap: 0.75rem;
   width: 100%;
   position: relative;
-
 }
 
 .questionInputWrapper > div:first-child {

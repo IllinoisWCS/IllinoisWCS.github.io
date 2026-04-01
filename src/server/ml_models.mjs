@@ -157,30 +157,6 @@ async function addQuestionToIndex(question, questionId) {
   question_index.addPoint(embedding, questionId);
   question_index.writeIndexSync(QUESTION_INDEX_FILE_PATH);
 }
-
-//bad/there is duplicate -> send false; good/no duplicate -> send true, and add to index
-async function answerIsRepeatedNoIndex(
-  answer,
-  questionId,
-  answerId,
-  listOfAnswers,
-) {
-  let answerIndex = new hnswlib.HierarchicalNSW('cosine', 384);
-  answerIndex.initIndex(100);
-  for (let i = 0; i < listOfAnswers.length; i++) {
-    const ansEmbedding = await createEmbedding(listOfAnswers[i].text);
-    answerIndex.addPoint(ansEmbedding, listOfAnswers[i].id);
-  }
-  const result = checkDuplicate(answerIndex, answer);
-  if (result.isDuplicate) {
-    return false;
-  }
-  if (listOfAnswers.length >= 50) {
-    answerIndex.addPoint(await createEmbedding(answer), answerId);
-    answerIndex.writeIndexSync(`data/answers_${questionId}.index`);
-  }
-  return true;
-}
 //------END OF REPEAT DETECTION COMPONENTS
 
 export async function classifyToxicityInput(input) {
