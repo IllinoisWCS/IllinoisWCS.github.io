@@ -400,3 +400,23 @@
 .answerButton:hover {
   opacity: 0.9;
 }
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0;
+}
+
+.searchContainer .questionInputWrapper {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.searchContainer .submitButtonWrapper {
+  flex: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+

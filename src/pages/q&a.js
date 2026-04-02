@@ -174,7 +174,8 @@ export default function QA() {
             Enter it here! If you&apos;re a WCS member, check out the available
             questions to provide your own answers.
           </p>
-
+        </div>
+        <div className={styles.searchContainer}>
           <div className={styles.questionInputWrapper}>
             <QAInputBox
               value={questionText}
