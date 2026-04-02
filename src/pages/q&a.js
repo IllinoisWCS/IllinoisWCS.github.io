@@ -205,75 +205,75 @@ export default function QA() {
             />
           </div>
         </div>
-      </div>
-      <div className={styles.questionsContainer}>
-        <QuestionStatusToggle answered={answered} setAnswered={setAnswered} />
+        <div className={styles.questionsContainer}>
+          <QuestionStatusToggle answered={answered} setAnswered={setAnswered} />
 
-        {questionsLoading ? (
-          <p>Loading questions...</p>
-        ) : (
-          <div className={styles.questionsList}>
-            {filteredQuestions.length === 0 ? (
-              <p>No {answered ? 'answered' : 'unanswered'} questions yet.</p>
-            ) : (
-              filteredQuestions.map((question) => (
-                <div key={question.QuestionID}>
-                  <QuestionAccordion questionText={question.Content}>
-                    <div className={styles.answersContainer}>
-                      {question.Answers && question.Answers.length > 0 ? (
-                        question.Answers.map((answer, idx) => (
-                          <QASpeechBubble
-                            key={idx}
-                            content={answer.Content}
-                            netid={answer.NetID}
-                          />
-                        ))
-                      ) : (
-                        <p className={styles.firstToAnswer}>
-                          Be the first to answer this question!
-                        </p>
-                      )}
+          {questionsLoading ? (
+            <p>Loading questions...</p>
+          ) : (
+            <div className={styles.questionsList}>
+              {filteredQuestions.length === 0 ? (
+                <p>No {answered ? 'answered' : 'unanswered'} questions yet.</p>
+              ) : (
+                filteredQuestions.map((question) => (
+                  <div key={question.QuestionID}>
+                    <QuestionAccordion questionText={question.Content}>
+                      <div className={styles.answersContainer}>
+                        {question.Answers && question.Answers.length > 0 ? (
+                          question.Answers.map((answer, idx) => (
+                            <QASpeechBubble
+                              key={idx}
+                              content={answer.Content}
+                              netid={answer.NetID}
+                            />
+                          ))
+                        ) : (
+                          <p className={styles.firstToAnswer}>
+                            Be the first to answer this question!
+                          </p>
+                        )}
 
-                      {/* Answer Submission Form */}
-                      <div className={styles.answerInputWrapper}>
-                        <QAInputBox
-                          value={answerTexts[question.QuestionID] || ''}
-                          onChange={
-                            (e) =>
-                              setAnswerTexts((prev) => ({
-                                ...prev,
-                                [question.QuestionID]: e.target.value,
-                              })) // eslint-disable-next-line react/jsx-curly-newline
-                          }
-                          placeholder="Answer"
-                        />
-                        <div className={styles.answerSubmitWrapper}>
-                          <NetIdInputBox
-                            value={netIds[question.QuestionID] || ''}
+                        {/* Answer Submission Form */}
+                        <div className={styles.answerInputWrapper}>
+                          <QAInputBox
+                            value={answerTexts[question.QuestionID] || ''}
                             onChange={
                               (e) =>
-                                setNetIds((prev) => ({
+                                setAnswerTexts((prev) => ({
                                   ...prev,
                                   [question.QuestionID]: e.target.value,
                                 })) // eslint-disable-next-line react/jsx-curly-newline
                             }
-                            placeholder="netId"
+                            placeholder="Answer"
                           />
-                          <QASubmitButton
-                            onClick={() => submitAnswer(question.QuestionID)}
-                            // disabled={isLoading}
-                            disabled={loadingState !== null}
-                            isLoading={loadingState === question.QuestionID}
-                          />
+                          <div className={styles.answerSubmitWrapper}>
+                            <NetIdInputBox
+                              value={netIds[question.QuestionID] || ''}
+                              onChange={
+                                (e) =>
+                                  setNetIds((prev) => ({
+                                    ...prev,
+                                    [question.QuestionID]: e.target.value,
+                                  })) // eslint-disable-next-line react/jsx-curly-newline
+                              }
+                              placeholder="netId"
+                            />
+                            <QASubmitButton
+                              onClick={() => submitAnswer(question.QuestionID)}
+                              // disabled={isLoading}
+                              disabled={loadingState !== null}
+                              isLoading={loadingState === question.QuestionID}
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </QuestionAccordion>
-                </div>
-              ))
-            )}
-          </div>
-        )}
+                    </QuestionAccordion>
+                  </div>
+                ))
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </main>
   );

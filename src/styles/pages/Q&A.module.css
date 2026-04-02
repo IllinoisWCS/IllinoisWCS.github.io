@@ -166,39 +166,6 @@
   margin-bottom: 2rem;
 }
 
-/*this is for the drop down box*/
-.questionDropdown {
-  position: absolute;
-  background: white;
-  border-radius: 5px;
-  top: 100%;
-  left: 0;
-  right: 0;
-  width: 93%;
-  z-index: 100;
-}
-
-/*this is for each question in the drop down box*/
-.dropdownQuestion {
-  padding: 10px;
-  color: var(--wcs-blue);
-  /* color: black; */
-  /*font-family options:*/
-  /* font-family: 'Nunito', sans-serif; */
-  font-family: 'Zilla Slab', serif;
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: 'Roboto Mono', sans-serif; */
-
-  /*font-color options
-    --wcs-pink: #e2626a;
-  --wcs-blue: #69c7cb;
-  --light-pink: #efa9ae;
-  --light-blue: #a4dddf;
-  --light-light-pink: #fff8f9; too light, it's out
-  --light-light-blue: #f8fffe;
-  */
-}
-
 .panelContainer {
   display: flex;
   gap: 0rem;
@@ -419,4 +386,42 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.searchContainer .questionDropdown {
+  width: 99%;
+}
+
+/*this is for the drop down box*/
+.questionDropdown {
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 93%;
+  z-index: 100;
+}
+
+/*this is for each question in the drop down box*/
+.dropdownQuestion {
+  padding: 10px;
+  color: var(--wcs-blue);
+  /* color: black; */
+  /*font-family options:*/
+  /* font-family: 'Nunito', sans-serif; */
+  font-family: 'Zilla Slab', serif;
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Roboto Mono', sans-serif; */
+
+  /*font-color options
+    --wcs-pink: #e2626a;
+  --wcs-blue: #69c7cb;
+  --light-pink: #efa9ae;
+  --light-blue: #a4dddf;
+  --light-light-pink: #fff8f9; too light, it's out
+  --light-light-blue: #f8fffe;
+  */
+}
+
 
