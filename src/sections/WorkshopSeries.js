@@ -4,6 +4,8 @@ import styles from '../styles/sections/WorkshopSeries.module.css';
 
 // extraction
 export default function WorkshopSeries({ workshops }) {
+  // eslint-disable-next-line no-console
+  console.log(workshops);
   const [chunkSize, setChunkSize] = useState(3);
 
   useEffect(() => {
@@ -47,27 +49,20 @@ export default function WorkshopSeries({ workshops }) {
                 left: `${rowIndex % 2 === 0 ? '0' : 'auto'}`,
               }}
             />
-
             <div
               className={`${styles.row} ${rowIndex % 2 ? styles.odd : ''}`}
             >
-              {row.map((workshop, i) => {
-                const emojiPath = workshop.emoji && (workshop.emoji.startsWith('/') || workshop.emoji.startsWith('http'))
-                  ? workshop.emoji
-                  : '/assets/design-vectors/cloud-computing.svg';
-
-                return (
-                  <WorkshopWindow
-                    key={i}
-                    className={styles.workshop}
-                    emoji={emojiPath}
-                    topic={workshop.title}
-                    slides={workshop.slides_link}
-                    code={workshop.other_resources_link}
-                    recording={workshop.recording_link}
-                  />
-                );
-              })}
+              {row.map((workshop, i) => (
+                <WorkshopWindow
+                  key={i}
+                  className={styles.workshop}
+                  emoji={workshop.emoji}
+                  topic={workshop.title}
+                  slides={workshop.slides_link}
+                  code={workshop.other_resources_link}
+                  recording={workshop.recording_link}
+                />
+              ))}
             </div>
 
             {rowIndex < rows.length - 1 && (

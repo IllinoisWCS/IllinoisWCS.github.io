@@ -48,9 +48,9 @@ export default function UpcomingEventsSection() {
         rows.forEach(({ officers }) => {
           officers.forEach(
             (name) =>
-              // eslint-disable-next-line implicit-arrow-linebreak
+
               uniqueNames.add(`${shortenName(name)} (Officer)`),
-            // eslint-disable-next-line function-paren-newline
+
           );
         });
       } else {
@@ -63,7 +63,6 @@ export default function UpcomingEventsSection() {
     };
 
     if (weekNum !== null && week && day) {
-      // eslint-disable-next-line operator-linebreak
       const filteredData =
         data[weekNum]?.[week]?.filter(({ heading }) => heading === day) || [];
       if (filteredData.length === 0) {
@@ -73,15 +72,15 @@ export default function UpcomingEventsSection() {
       }
       const officers = filteredData.flatMap(
         ({ rows }) =>
-          // eslint-disable-next-line implicit-arrow-linebreak
+
           getUniqueNames(rows, true),
-        // eslint-disable-next-line function-paren-newline
+
       );
       const committees = filteredData.flatMap(
         ({ rows }) =>
-          // eslint-disable-next-line implicit-arrow-linebreak
+
           getUniqueNames(rows, false),
-        // eslint-disable-next-line function-paren-newline
+
       );
       setUniqueOfficers(officers);
       setUniqueCommittees(committees);
@@ -91,7 +90,6 @@ export default function UpcomingEventsSection() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        // eslint-disable-next-line operator-linebreak
         const eventsUrl =
           'https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
 

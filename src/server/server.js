@@ -15,6 +15,8 @@ const jsonParser = bodyParser.json();
 const app = express();
 
 const moment = require('moment');
+// eslint-disable-next-line no-unused-vars
+const { createServerSearchParamsForServerPage } = require('next/dist/server/request/search-params');
 
 app.use(cors());
 
@@ -78,6 +80,12 @@ async function filterRecentOpportunities(data) {
   );
 }
 
+// Takes only the first emoji from input
+const getFirstEmoji = (str) => {
+  if (!str) return '';
+  return [...str][0] || '';
+};
+
 app.get('/external-opps-api', jsonParser, async (req, res) => {
   const results = await notion.databases.query({
     database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
@@ -86,7 +94,7 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   const filteredRes = await filterRecentOpportunities(results.results);
 
   const tempRes = filteredRes.map((item) => ({
-    icon: item.icon?.emoji || '💡', // eslint-disable-line operator-linebreak
+    icon: getFirstEmoji(item.icon?.emoji) || '💡', // eslint-disable-line operator-linebreak
     title: getName(item.properties), // eslint-disable-line operator-linebreak
     location: getLocation(item.properties), // eslint-disable-line operator-linebreak
     date: item.properties.Expires.date.start, // eslint-disable-line operator-linebreak
@@ -109,6 +117,8 @@ const explorationNotion = new Client({
 
 // get plain text from rich_text fields
 const getRichText = (field) => {
+  // eslint-disable-next-line no-console
+  console.log(field);
   if (!field || !field.rich_text || field.rich_text.length === 0) return '';
   return field.rich_text.map((t) => t.plain_text).join(' ');
 };
@@ -138,13 +148,17 @@ const getOtherResourcesLink = (properties) =>
 // parse a single Notion record into a workshop object
 const parseWorkshop = (item) => {
   const props = item.properties;
+  // eslint-disable-next-line no-console
+  console.log('emoji field:', props.Emoji);
+  // eslint-disable-next-line no-console
+  console.log('icon:', item.icon);
 
   return {
     title: getTitle(props),
     description: getDescriptionText(props),
     workshop_series: getWorkshopSeries(props),
     workshop_sequence: getWorkshopSequence(props),
-    emoji: item.icon?.emoji || '💡',
+    emoji: getFirstEmoji(getRichText(props.Emoji)) || getFirstEmoji(item.icon?.emoji) || '',
     slides_link: getSlidesLink(props),
     recording_link: getRecordingLink(props),
     other_resources_link: getOtherResourcesLink(props),
@@ -177,9 +191,14 @@ app.get('/exploration-resources-api', jsonParser, async (req, res) => {
     const results = await explorationNotion.databases.query({
       database_id: process.env.REACT_APP_EXPLORATION_NOTION_DATABASE_ID,
     });
+    // eslint-disable-next-line no-console
+    console.log('here');
 
     const parsed = results.results.map(parseWorkshop);
     const formatted = groupWorkshopsBySeries(parsed);
+
+    // eslint-disable-next-line no-console
+    console.log(formatted);
 
     res.json(formatted);
   } catch (error) {
@@ -187,7 +206,7 @@ app.get('/exploration-resources-api', jsonParser, async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 4000; // dev port fallback
+const PORT = process.env.PORT || 4001; // dev port fallback
 
 if (process.env.NODE_ENV === 'production') {
   // Production: use HTTPS with your Let's Encrypt certs

@@ -12,14 +12,12 @@ export default function PastWorkshops() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // api part
   useEffect(() => {
     const fetchWorkshops = async () => {
       try {
         setLoading(true);
 
-        // CHECK BACKEND, NOT WORKING ? - fixed
-        const response = await fetch('http://localhost:4000/exploration-resources-api');
+        const response = await fetch('http://localhost:4001/exploration-resources-api');
 
         if (!response.ok) {
           throw new Error(`HTTP error- status: ${response.status}`);
@@ -27,12 +25,9 @@ export default function PastWorkshops() {
 
         const data = await response.json();
 
-        // checking if data is array
         if (Array.isArray(data)) {
-          // Converting array to object
           const dataObject = {};
           data.forEach((item) => {
-            // workshop series THIS IS WHAT FIXED IT
             const { workshop_series: topicName, workshops } = item;
 
             if (topicName) {
@@ -49,7 +44,6 @@ export default function PastWorkshops() {
             setSelectedTopic(topicNames[0]);
           }
         } else {
-          // OG ?
           setWorkshopData(data);
 
           const topicNames = Object.keys(data);
@@ -71,7 +65,6 @@ export default function PastWorkshops() {
     fetchWorkshops();
   }, []);
 
-  // resizes
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 600) {
@@ -91,7 +84,6 @@ export default function PastWorkshops() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // old stuff
   const showArrows = topics.length > topicsPerView;
   const canScrollLeft = currentIndex > 0;
   const canScrollRight = currentIndex + topicsPerView < topics.length;
@@ -152,7 +144,7 @@ export default function PastWorkshops() {
               {topics.map((topic, index) => (
                 <button
                   type="button"
-                  className={styles.topic}
+                  className={`${styles.topic} ${selectedTopic === topic ? styles.selected : ''}`}
                   key={index}
                   onClick={() => handleTopicClick(topic)}
                 >

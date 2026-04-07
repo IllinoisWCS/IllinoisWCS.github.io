@@ -4,16 +4,15 @@
   justify-content: space-between;
   gap: 1rem;
   margin: 1rem;
-  aspect-ratio: 1.5;
   color: #21636c;
   width: 280px;
-  height: 160px;
+  height: 200px;
 }
 
 .header {
   display: flex;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin: 0;
 }
@@ -24,6 +23,7 @@
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
+  margin-top: auto;
 }
 
 .linkButton {
