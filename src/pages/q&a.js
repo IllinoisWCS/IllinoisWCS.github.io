@@ -139,6 +139,7 @@ export default function QA() {
         setQuestions(data || []);
       }
       toast.success('Answer submitted successfully!');
+      window.location.href = `https://points.illinoiswcs.org/#/submitAnswer/token=${data.token}`;
     } catch (error) {
       toastError(
         'There was an error submitting your answer. Please try again.',
