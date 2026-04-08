@@ -20,8 +20,11 @@ export default function PastWorkshops() {
         setLoading(true);
 
         const response = await fetch(
-          'http://localhost:4000/exploration-resources-api',
+          'https://main-api.illinoiswcs.org/exploration-resources-api',
         );
+        // const response = await fetch(
+        //   'http://localhost:4000/exploration-resources-api',
+        // );
 
         if (!response.ok) {
           throw new Error(`HTTP error- status: ${response.status}`);

@@ -203,6 +203,9 @@ app.get('/exploration-resources-api', jsonParser, async (req, res) => {
   }
 });
 
+// const PORT = process.env.PORT || 4000; // dev port fallback
+// if (process.env.NODE_ENV === 'production') {
+
 // Production: use HTTPS with your Let's Encrypt certs
 const privateKey = fs.readFileSync(
   '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
@@ -227,3 +230,8 @@ httpApp.use((req, res) => {
 http.createServer(httpApp).listen(80, () => {
   // console.log('HTTP redirect server running on port 80');
 });
+// } else {
+//   app.listen(PORT, () => {
+//     console.log(`Dev server running on http://localhost:${PORT}`);
+//   });
+// }
