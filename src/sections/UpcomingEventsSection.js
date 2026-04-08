@@ -46,12 +46,8 @@ export default function UpcomingEventsSection() {
       const uniqueNames = new Set();
       if (officer) {
         rows.forEach(({ officers }) => {
-          officers.forEach(
-            (name) =>
-
-              uniqueNames.add(`${shortenName(name)} (Officer)`),
-
-          );
+          officers.forEach((name) =>
+            uniqueNames.add(`${shortenName(name)} (Officer)`));
         });
       } else {
         rows.forEach(({ committees }) => {
@@ -70,18 +66,10 @@ export default function UpcomingEventsSection() {
         setUniqueCommittees([]);
         return;
       }
-      const officers = filteredData.flatMap(
-        ({ rows }) =>
-
-          getUniqueNames(rows, true),
-
-      );
-      const committees = filteredData.flatMap(
-        ({ rows }) =>
-
-          getUniqueNames(rows, false),
-
-      );
+      const officers = filteredData.flatMap(({ rows }) =>
+        getUniqueNames(rows, true));
+      const committees = filteredData.flatMap(({ rows }) =>
+        getUniqueNames(rows, false));
       setUniqueOfficers(officers);
       setUniqueCommittees(committees);
     }

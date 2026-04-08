@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import styles from '@/styles/sections/PastWorkshopsSection.module.css';
 import WorkshopSeries from './WorkshopSeries';
+import ResourcesNotLoaded from './ResourcesNotLoaded';
 
 export default function PastWorkshops() {
   const [topics, setTopics] = useState([]);
@@ -10,14 +11,17 @@ export default function PastWorkshops() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [topicsPerView, setTopicsPerView] = useState(4);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [notionDataFetched, setNotionDataFetched] = useState(true);
 
   useEffect(() => {
+    // function for fetching workshop data
     const fetchWorkshops = async () => {
       try {
         setLoading(true);
 
-        const response = await fetch('http://localhost:4000/exploration-resources-api');
+        const response = await fetch(
+          'http://localhost:4000/exploration-resources-api',
+        );
 
         if (!response.ok) {
           throw new Error(`HTTP error- status: ${response.status}`);
@@ -53,19 +57,15 @@ export default function PastWorkshops() {
             setSelectedTopic(topicNames[0]);
           }
         }
-
-        setError(null);
+        setNotionDataFetched(true);
       } catch (err) {
-        setError(err.message);
+        setNotionDataFetched(false);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchWorkshops();
-  }, []);
-
-  useEffect(() => {
+    // function for handling resize
     const handleResize = () => {
       if (window.innerWidth < 600) {
         setTopicsPerView(1);
@@ -79,10 +79,15 @@ export default function PastWorkshops() {
       setCurrentIndex(0);
     };
 
+    fetchWorkshops();
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  if (!notionDataFetched) {
+    return <ResourcesNotLoaded pageName="explorations-slides" />;
+  }
 
   const showArrows = topics.length > topicsPerView;
   const canScrollLeft = currentIndex > 0;
@@ -106,14 +111,9 @@ export default function PastWorkshops() {
   };
 
   if (loading) {
-    return <div className={styles.container}><p>Loading workshops...</p></div>;
-  }
-
-  if (error) {
     return (
       <div className={styles.container}>
-        <p>error loading: {error}</p>
-        <p>check console</p>
+        <p>Loading workshops...</p>
       </div>
     );
   }

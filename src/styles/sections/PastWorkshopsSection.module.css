@@ -60,12 +60,13 @@
 .topic {
   width: 222px;
   height: 67px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: 'Zilla Slab', serif;
   color: #3d3939;
   border: 6px solid #f85971;
@@ -80,8 +81,9 @@
 
 .topic:hover:not(.selected) {
   background-color: var(--light-pink);
-  transform: translateY(2px);
-  border-bottom: 8px solid #c55a6a;
+  /* transform: translateY(2px);
+  height:65px; */
+  /* border-bottom: 8px solid #c55a6a; */
 }
 
 .topic:active {
@@ -90,12 +92,14 @@
 
 .topic.selected:hover {
   background-color: var(--light-pink) !important;
-  transform: translateY(4px);
+  transform: translateY(5px);
+  height: 62px;
   border-bottom: 8px solid #f85971;
 }
 
 .selected {
-  transform: translateY(4px);
+  transform: translateY(5px);
+  height: 62px;
   border-bottom: 8px solid #f45e75;
   background-color: var(--light-pink) !important;
 }

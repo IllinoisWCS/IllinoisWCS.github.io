@@ -5,8 +5,6 @@ import SlideModal from '../components/SlideModal';
 
 // extraction
 export default function WorkshopSeries({ workshops }) {
-  // eslint-disable-next-line no-console
-  console.log(workshops);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentSlideLink, setCurrentSlideLink] = useState('');
   const [currentTitle, setCurrentTitle] = useState('');

@@ -2,7 +2,8 @@ import Image from 'next/image';
 import ComputerWindow from './general/ComputerWindowComponent';
 import styles from '@/styles/components/WorkshopWindow.module.css';
 
-const isEmoji = (str) => str && /\p{Emoji}/u.test(str) && !/^[\w\s/.-]+$/.test(str);
+const isEmoji = (str) =>
+  str && /\p{Emoji}/u.test(str) && !/^[\w\s/.-]+$/.test(str);
 const isPath = (str) => str && (str.startsWith('/') || str.startsWith('http'));
 
 export default function WorkshopWindow({
@@ -22,15 +23,27 @@ export default function WorkshopWindow({
           <div className={styles.header}>
             {
               /* eslint-disable no-nested-ternary */
-              (emoji && isEmoji(emoji)) ? (
+              emoji && isEmoji(emoji) ? (
                 <span style={{ fontSize: '2rem' }}>{emoji}</span>
-              ) : (emoji && isPath(emoji)) ? (
+              ) : emoji && isPath(emoji) ? (
                 <div>
                   {emoji}
-                  <Image src={emoji} alt="icon" width={50} height={50} style={{ objectFit: 'contain', marginTop: '-0.6rem' }} />
+                  <Image
+                    src={emoji}
+                    alt="icon"
+                    width={50}
+                    height={50}
+                    style={{ objectFit: 'contain', marginTop: '-0.6rem' }}
+                  />
                 </div>
               ) : (
-                <Image src="/wcs-logo.png" alt="icon" width={50} height={50} style={{ objectFit: 'contain', marginTop: '-0.6rem' }} />
+                <Image
+                  src="/wcs-logo.png"
+                  alt="icon"
+                  width={50}
+                  height={50}
+                  style={{ objectFit: 'contain', marginTop: '-0.6rem' }}
+                />
               )
               /* eslint-enable no-nested-ternary */
             }
@@ -38,14 +51,14 @@ export default function WorkshopWindow({
           </div>
           <div className={styles.links}>
             {slides && (
-            <button
-              type="button"
-              className={styles.linkButton}
-              style={{ backgroundColor: buttonColor }}
-              onClick={() => onSlidesClick(slides, topic)}
-            >
-              Slides
-            </button>
+              <button
+                type="button"
+                className={styles.linkButton}
+                style={{ backgroundColor: buttonColor }}
+                onClick={() => onSlidesClick(slides, topic)}
+              >
+                Slides
+              </button>
             )}
             {recording && (
               <a

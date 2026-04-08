@@ -35,7 +35,7 @@ export default function ExternalOpportunitiesSection() {
   }, []);
 
   if (!notionDataFetched) {
-    return <ResourcesNotLoaded />;
+    return <ResourcesNotLoaded pageName="external-opportunities" />;
   }
 
   return (
