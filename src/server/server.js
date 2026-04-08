@@ -64,6 +64,12 @@ const getDescription = (properties) => {
   return 'No Description';
 };
 
+// Takes only the first emoji from input
+const getFirstEmoji = (str) => {
+  if (!str) return '';
+  return [...str][0] || '';
+};
+
 //  returns url
 const getURL = (properties) => properties.Link.url;
 
@@ -86,17 +92,15 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   const filteredRes = await filterRecentOpportunities(results.results);
 
   const tempRes = filteredRes.map((item) => ({
-    icon: item.icon?.emoji || '💡', // eslint-disable-line operator-linebreak
-    title: getName(item.properties), // eslint-disable-line operator-linebreak
-    location: getLocation(item.properties), // eslint-disable-line operator-linebreak
-    date: item.properties.Expires.date.start, // eslint-disable-line operator-linebreak
-    time: getTime(item.properties), // eslint-disable-line operator-linebreak
-    description:
-      // eslint-disable-next-line max-len
-      getDescription(item.properties), // eslint-disable-line operator-linebreak
-    link: getURL(item.properties), // eslint-disable-line operator-linebreak
-    category: getType(item.properties), // eslint-disable-line operator-linebreak
-    expires: getExpiration(item.properties), // eslint-disable-line operator-linebreak
+    icon: getFirstEmoji(item.icon?.emoji) || '💡',
+    title: getName(item.properties),
+    location: getLocation(item.properties),
+    date: item.properties.Expires.date.start,
+    time: getTime(item.properties),
+    description: getDescription(item.properties),
+    link: getURL(item.properties),
+    category: getType(item.properties),
+    expires: getExpiration(item.properties),
   }));
 
   res.json(tempRes);
@@ -124,7 +128,7 @@ const getDescriptionText = (properties) => getRichText(properties.Description);
 const getWorkshopSeries = (properties) =>
   properties['Workshop Series']?.select?.name || 'Uncategorized';
 
-// get workshop sequence - TODO: fix this
+// get workshop sequence
 const getWorkshopSequence = (properties) =>
   properties['Workshop Sequence']?.number ?? null;
 
@@ -144,7 +148,10 @@ const parseWorkshop = (item) => {
     description: getDescriptionText(props),
     workshop_series: getWorkshopSeries(props),
     workshop_sequence: getWorkshopSequence(props),
-    emoji: item.icon?.emoji || '💡',
+    emoji:
+      getFirstEmoji(getRichText(props.Emoji)) ||
+      getFirstEmoji(item.icon?.emoji) ||
+      '',
     slides_link: getSlidesLink(props),
     recording_link: getRecordingLink(props),
     other_resources_link: getOtherResourcesLink(props),
@@ -171,6 +178,7 @@ const groupWorkshopsBySeries = (parsed) => {
   }));
 };
 
+// use this
 app.get('/exploration-resources-api', jsonParser, async (req, res) => {
   try {
     const results = await explorationNotion.databases.query({

@@ -4,19 +4,66 @@ import styles from '@/styles/sections/PastWorkshopsSection.module.css';
 import WorkshopSeries from './WorkshopSeries';
 
 export default function PastWorkshops() {
-  const topics = [
-    'Hi',
-    "Git",
-    'Cloud Computing',
-    'Career Prep',
-    'Web Development',
-    'Data Science',
-    'Machine Learning',
-    'Cybersecurity',
-  ];
-
+  const [topics, setTopics] = useState([]);
+  const [workshopData, setWorkshopData] = useState({});
+  const [selectedTopic, setSelectedTopic] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [topicsPerView, setTopicsPerView] = useState(4);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchWorkshops = async () => {
+      try {
+        setLoading(true);
+
+        const response = await fetch('http://localhost:4000/exploration-resources-api');
+
+        if (!response.ok) {
+          throw new Error(`HTTP error- status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (Array.isArray(data)) {
+          const dataObject = {};
+          data.forEach((item) => {
+            const { workshop_series: topicName, workshops } = item;
+
+            if (topicName) {
+              dataObject[topicName] = workshops;
+            }
+          });
+
+          setWorkshopData(dataObject);
+
+          const topicNames = Object.keys(dataObject);
+          setTopics(topicNames);
+
+          if (topicNames.length > 0) {
+            setSelectedTopic(topicNames[0]);
+          }
+        } else {
+          setWorkshopData(data);
+
+          const topicNames = Object.keys(data);
+          setTopics(topicNames);
+
+          if (topicNames.length > 0) {
+            setSelectedTopic(topicNames[0]);
+          }
+        }
+
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchWorkshops();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -54,6 +101,23 @@ export default function PastWorkshops() {
     }
   };
 
+  const handleTopicClick = (topic) => {
+    setSelectedTopic(topic);
+  };
+
+  if (loading) {
+    return <div className={styles.container}><p>Loading workshops...</p></div>;
+  }
+
+  if (error) {
+    return (
+      <div className={styles.container}>
+        <p>error loading: {error}</p>
+        <p>check console</p>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className={styles.container}>
@@ -74,10 +138,16 @@ export default function PastWorkshops() {
               className={styles.topicsTrack}
               style={{
                 transform: `translateX(-${currentIndex * (222 + 24)}px)`,
+                justifyContent: !showArrows ? 'center' : 'flex-start',
               }}
             >
               {topics.map((topic, index) => (
-                <button type="button" className={styles.topic} key={index}>
+                <button
+                  type="button"
+                  className={`${styles.topic} ${selectedTopic === topic ? styles.selected : ''}`}
+                  key={index}
+                  onClick={() => handleTopicClick(topic)}
+                >
                   {topic}
                 </button>
               ))}
@@ -97,7 +167,9 @@ export default function PastWorkshops() {
         </div>
       </div>
       <div className={styles.seriesContainer}>
-        <WorkshopSeries />
+        {selectedTopic && workshopData[selectedTopic] && (
+          <WorkshopSeries workshops={workshopData[selectedTopic]} />
+        )}
       </div>
     </div>
   );
