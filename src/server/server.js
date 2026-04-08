@@ -64,6 +64,12 @@ const getDescription = (properties) => {
   return 'No Description';
 };
 
+// Takes only the first emoji from input
+const getFirstEmoji = (str) => {
+  if (!str) return '';
+  return [...str][0] || '';
+};
+
 //  returns url
 const getURL = (properties) => properties.Link.url;
 
@@ -78,12 +84,6 @@ async function filterRecentOpportunities(data) {
   );
 }
 
-// Takes only the first emoji from input
-const getFirstEmoji = (str) => {
-  if (!str) return '';
-  return [...str][0] || '';
-};
-
 app.get('/external-opps-api', jsonParser, async (req, res) => {
   const results = await notion.databases.query({
     database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
@@ -92,17 +92,15 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   const filteredRes = await filterRecentOpportunities(results.results);
 
   const tempRes = filteredRes.map((item) => ({
-    icon: getFirstEmoji(item.icon?.emoji) || '💡', // eslint-disable-line operator-linebreak
-    title: getName(item.properties), // eslint-disable-line operator-linebreak
-    location: getLocation(item.properties), // eslint-disable-line operator-linebreak
-    date: item.properties.Expires.date.start, // eslint-disable-line operator-linebreak
-    time: getTime(item.properties), // eslint-disable-line operator-linebreak
-    description:
-      // eslint-disable-next-line max-len
-      getDescription(item.properties), // eslint-disable-line operator-linebreak
-    link: getURL(item.properties), // eslint-disable-line operator-linebreak
-    category: getType(item.properties), // eslint-disable-line operator-linebreak
-    expires: getExpiration(item.properties), // eslint-disable-line operator-linebreak
+    icon: getFirstEmoji(item.icon?.emoji) || '💡',
+    title: getName(item.properties),
+    location: getLocation(item.properties),
+    date: item.properties.Expires.date.start,
+    time: getTime(item.properties),
+    description: getDescription(item.properties),
+    link: getURL(item.properties),
+    category: getType(item.properties),
+    expires: getExpiration(item.properties),
   }));
 
   res.json(tempRes);
@@ -115,8 +113,6 @@ const explorationNotion = new Client({
 
 // get plain text from rich_text fields
 const getRichText = (field) => {
-  // eslint-disable-next-line no-console
-  console.log(field);
   if (!field || !field.rich_text || field.rich_text.length === 0) return '';
   return field.rich_text.map((t) => t.plain_text).join(' ');
 };
@@ -132,7 +128,7 @@ const getDescriptionText = (properties) => getRichText(properties.Description);
 const getWorkshopSeries = (properties) =>
   properties['Workshop Series']?.select?.name || 'Uncategorized';
 
-// get workshop sequence - TODO: fix this
+// get workshop sequence
 const getWorkshopSequence = (properties) =>
   properties['Workshop Sequence']?.number ?? null;
 
@@ -146,17 +142,16 @@ const getOtherResourcesLink = (properties) =>
 // parse a single Notion record into a workshop object
 const parseWorkshop = (item) => {
   const props = item.properties;
-  // eslint-disable-next-line no-console
-  console.log('emoji field:', props.Emoji);
-  // eslint-disable-next-line no-console
-  console.log('icon:', item.icon);
 
   return {
     title: getTitle(props),
     description: getDescriptionText(props),
     workshop_series: getWorkshopSeries(props),
     workshop_sequence: getWorkshopSequence(props),
-    emoji: getFirstEmoji(getRichText(props.Emoji)) || getFirstEmoji(item.icon?.emoji) || '',
+    emoji:
+      getFirstEmoji(getRichText(props.Emoji)) ||
+      getFirstEmoji(item.icon?.emoji) ||
+      '',
     slides_link: getSlidesLink(props),
     recording_link: getRecordingLink(props),
     other_resources_link: getOtherResourcesLink(props),
@@ -199,7 +194,7 @@ app.get('/exploration-resources-api', jsonParser, async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 4001; // dev port fallback
+const PORT = process.env.PORT || 4000; // dev port fallback
 
 if (process.env.NODE_ENV === 'production') {
   // Production: use HTTPS with your Let's Encrypt certs

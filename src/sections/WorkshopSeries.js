@@ -1,12 +1,27 @@
 import { useState, useEffect } from 'react';
 import WorkshopWindow from '../components/WorkshopWindow';
 import styles from '../styles/sections/WorkshopSeries.module.css';
+import SlideModal from '../components/SlideModal';
 
 // extraction
 export default function WorkshopSeries({ workshops }) {
   // eslint-disable-next-line no-console
   console.log(workshops);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentSlideLink, setCurrentSlideLink] = useState('');
+  const [currentTitle, setCurrentTitle] = useState('');
   const [chunkSize, setChunkSize] = useState(3);
+
+  const openSlidesModal = (link, title) => {
+    setCurrentSlideLink(link);
+    setCurrentTitle(title);
+    setIsModalOpen(true);
+  };
+
+  const closeSlidesModal = () => {
+    setIsModalOpen(false);
+    setCurrentSlideLink('');
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -49,9 +64,7 @@ export default function WorkshopSeries({ workshops }) {
                 left: `${rowIndex % 2 === 0 ? '0' : 'auto'}`,
               }}
             />
-            <div
-              className={`${styles.row} ${rowIndex % 2 ? styles.odd : ''}`}
-            >
+            <div className={`${styles.row} ${rowIndex % 2 ? styles.odd : ''}`}>
               {row.map((workshop, i) => (
                 <WorkshopWindow
                   key={i}
@@ -61,6 +74,7 @@ export default function WorkshopSeries({ workshops }) {
                   slides={workshop.slides_link}
                   code={workshop.other_resources_link}
                   recording={workshop.recording_link}
+                  onSlidesClick={openSlidesModal}
                 />
               ))}
             </div>
@@ -74,7 +88,15 @@ export default function WorkshopSeries({ workshops }) {
             )}
           </div>
         ))}
+        ;
       </div>
+
+      <SlideModal
+        isOpen={isModalOpen}
+        closeModal={closeSlidesModal}
+        slideLink={currentSlideLink}
+        title={currentTitle}
+      />
     </div>
   );
 }

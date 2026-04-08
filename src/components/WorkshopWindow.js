@@ -13,9 +13,8 @@ export default function WorkshopWindow({
   slides,
   recording,
   code,
+  onSlidesClick, // NEW
 }) {
-  // eslint-disable-next-line no-console
-  console.log('emoji value:', emoji);
   return (
     <div className={styles.wrapper}>
       <ComputerWindow topbarColor={topbarColor}>
@@ -39,15 +38,14 @@ export default function WorkshopWindow({
           </div>
           <div className={styles.links}>
             {slides && (
-              <a
-                href={slides}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.linkButton}
-                style={{ backgroundColor: buttonColor }}
-              >
-                <p>Slides</p>
-              </a>
+            <button
+              type="button"
+              className={styles.linkButton}
+              style={{ backgroundColor: buttonColor }}
+              onClick={() => onSlidesClick(slides, topic)}
+            >
+              Slides
+            </button>
             )}
             {recording && (
               <a

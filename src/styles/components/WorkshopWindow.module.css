@@ -1,3 +1,4 @@
+
 .container {
   display: flex;
   flex-direction: column;
@@ -31,7 +32,11 @@
   border-radius: 20px;
   position: relative;
   max-width: 200px;
+  border: none;        /* ← removes the black rim */
+  background: none;
+  cursor: pointer;
 }
+
 
 .linkButton p {
   margin: 0;

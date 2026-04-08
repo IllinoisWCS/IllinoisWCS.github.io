@@ -17,7 +17,7 @@ export default function PastWorkshops() {
       try {
         setLoading(true);
 
-        const response = await fetch('http://localhost:4001/exploration-resources-api');
+        const response = await fetch('http://localhost:4000/exploration-resources-api');
 
         if (!response.ok) {
           throw new Error(`HTTP error- status: ${response.status}`);
