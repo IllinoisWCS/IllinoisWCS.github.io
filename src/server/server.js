@@ -15,8 +15,6 @@ const jsonParser = bodyParser.json();
 const app = express();
 
 const moment = require('moment');
-// eslint-disable-next-line no-unused-vars
-const { createServerSearchParamsForServerPage } = require('next/dist/server/request/search-params');
 
 app.use(cors());
 
@@ -191,14 +189,9 @@ app.get('/exploration-resources-api', jsonParser, async (req, res) => {
     const results = await explorationNotion.databases.query({
       database_id: process.env.REACT_APP_EXPLORATION_NOTION_DATABASE_ID,
     });
-    // eslint-disable-next-line no-console
-    console.log('here');
 
     const parsed = results.results.map(parseWorkshop);
     const formatted = groupWorkshopsBySeries(parsed);
-
-    // eslint-disable-next-line no-console
-    console.log(formatted);
 
     res.json(formatted);
   } catch (error) {
