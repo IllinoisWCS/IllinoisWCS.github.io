@@ -85,11 +85,20 @@ async function filterRecentOpportunities(data) {
 }
 
 app.get('/external-opps-api', jsonParser, async (req, res) => {
-  const results = await notion.databases.query({
-    database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
-  });
+  let hasMore = true;
+  let startCursor = undefined; // eslint-disable-line no-undef-init
+  const results = [];
+  while (hasMore) {
+    const pages = await notion.databases.query({ // eslint-disable-line no-await-in-loop
+      database_id: process.env.REACT_APP_NOTION_DATABASE_ID,
+      start_cursor: startCursor,
+    });
+    results.push(...pages.results);
+    hasMore = pages.has_more;
+    startCursor = pages.next_cursor;
+  }
 
-  const filteredRes = await filterRecentOpportunities(results.results);
+  const filteredRes = await filterRecentOpportunities(results);
 
   const tempRes = filteredRes.map((item) => ({
     icon: getFirstEmoji(item.icon?.emoji) || '💡',
@@ -194,62 +203,27 @@ app.get('/exploration-resources-api', jsonParser, async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 4000; // dev port fallback
+// Production: use HTTPS with your Let's Encrypt certs
+const privateKey = fs.readFileSync(
+  '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
+  'utf8',
+);
+const certificate = fs.readFileSync(
+  '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
+  'utf8',
+);
+const credentials = { key: privateKey, cert: certificate };
 
-if (process.env.NODE_ENV === 'production') {
-  // Production: use HTTPS with your Let's Encrypt certs
-  const privateKey = fs.readFileSync(
-    '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
-    'utf8',
-  );
-  const certificate = fs.readFileSync(
-    '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
-    'utf8',
-  );
-  const credentials = { key: privateKey, cert: certificate };
+const httpsServer = https.createServer(credentials, app);
+httpsServer.listen(443, () => {
+  // console.log('HTTPS server running on port 443');
+});
 
-  const httpsServer = https.createServer(credentials, app);
-  httpsServer.listen(443, () => {
-    // console.log('HTTPS server running on port 443');
-  });
-
-  // redirect all HTTP traffic to HTTPS
-  const httpApp = express();
-  httpApp.use((req, res) => {
-    res.redirect(`https://${req.headers.host}${req.url}`);
-  });
-  http.createServer(httpApp).listen(80, () => {
-    // console.log('HTTP redirect server running on port 80');
-  });
-} else {
-  // Development: just run HTTP locally
-  app.listen(PORT, () => {
-    // console.log(`Dev server running on http://localhost:${PORT}`);
-  });
-}
-
-// https server setup
-// reads sssl certificate files issued by let's encrypt
-// const privateKey = fs.readFileSync(
-//   '/etc/letsencrypt/live/main-api.illinoiswcs.org/privkey.pem',
-//   'utf8',
-// );
-// const certificate = fs.readFileSync(
-//   '/etc/letsencrypt/live/main-api.illinoiswcs.org/fullchain.pem',
-//   'utf8',
-// );
-// const credentials = { key: privateKey, cert: certificate };
-
-// //  creates https server with express app and ssl credentials
-// const httpsServer = https.createServer(credentials, app);
-
-// httpsServer.listen(443);
-
-// // redirects all http requests to http
-// const httpApp = express();
-
-// httpApp.use((req, res) => {
-//   res.redirect(`https://${req.headers.host}${req.url}`);
-// });
-
-// http.createServer(httpApp).listen(80);
+// redirect all HTTP traffic to HTTPS
+const httpApp = express();
+httpApp.use((req, res) => {
+  res.redirect(`https://${req.headers.host}${req.url}`);
+});
+http.createServer(httpApp).listen(80, () => {
+  // console.log('HTTP redirect server running on port 80');
+});

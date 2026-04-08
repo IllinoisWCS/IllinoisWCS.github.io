@@ -37,6 +37,11 @@ export default function SponsorsSection() {
               url="https://www.citadel.com/careers/?utm_source=google&utm_medium=cpc&utm_campaign=MMI%7CGS%7CCitadel%7CTalent%7C&utm_content=147465864658&utm_term=citadel%20careers&gad_source=1&gad_campaignid=17602611048&gbraid=0AAAAABK5i5mBoQObUcAWUlHnJZIW4eOOI&gclid=Cj0KCQjw8eTFBhCXARIsAIkiuOxWVvh4MckMfKcBXUaOjv0Mrapv-NV77B4iK8McDbFN2NElEk41l6kaAm5UEALw_wcB"
               tier="bronze"
             />
+            <Sponsor
+              sponsor="Deloitte.jpg"
+              url="https://www.deloitte.com/us/en.html"
+              tier="bronze"
+            />
           </div>
         </div>
         If you are interested in sponsoring us, please email{' '}
