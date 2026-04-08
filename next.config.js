@@ -20,6 +20,10 @@ const nextConfig = {
           source: '/external-opps-api',
           destination: `http://localhost:4000/external-opps-api`,
         },
+        {
+        source: '/get-similar-questions',
+        destination: 'http://localhost:4000/get-similar-questions',
+        },
       ],
     };
   },

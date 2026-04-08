@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import QuestionStatusToggle from '../components/general/qa-forum/QuestionStatusToggle';
 import QuestionAccordion from '../components/general/qa-forum/QuestionAccordian';
@@ -18,6 +18,7 @@ export default function QA() {
   const [questions, setQuestions] = useState([]);
   const [answered, setAnswered] = useState(true);
   const [questionsLoading, setQuestionsLoading] = useState(true);
+  const [openQuestion, setOpenQuestion] = useState(null);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -147,9 +148,43 @@ export default function QA() {
       setRecommendations([]);
       return;
     }
-    const listSuggestions = questions.map((q) => q.Content);
-    console.log(listSuggestions);
-    setRecommendations(listSuggestions);
+    setRecommendations([]);
+    try {
+      // const response = await fetch('/get-similar-questions', {
+      //   method: 'GET',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({ question: text }),
+      // });
+      const response = await fetch(`/get-similar-questions?question=${encodeURIComponent(text)}`);
+      const ids = await response.json();
+      const similarQuestions = ids.map(id => questions.find(q => q.QuestionID === id))
+      console.log(ids);
+      console.log(similarQuestions);
+      setRecommendations(similarQuestions.map(q => q.Content));
+      // setRecommendations(similarQuestions);
+      
+      // // setRecommendations(data.similarQuestionIds || []);
+      // console.log('Received similar question IDs:', data.similarQuestionIds);
+      // setRecommendations([]);
+    } catch (error) {
+      console.error('Error fetching recommendations:', error);
+    }
+  };
+  const questionRefs = useRef({});
+  const clickRecommendation = (recommendation) => {
+    const match = questions.find(q => q.Content === recommendation);
+    if (!match) return;
+
+    const hasAnswers = match.Answers && match.Answers.length > 0;
+    setAnswered(hasAnswers);
+    setOpenQuestion(match.QuestionID);
+
+    setTimeout(() => {
+      const ref = questionRefs.current[match.QuestionID];
+      if (ref) ref.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
   };
   const filteredQuestions = questions.filter((q) => {
     const hasAnswers = q.Answers && q.Answers.length > 0;
@@ -188,7 +223,7 @@ export default function QA() {
             {recommendations.length > 0 && (
               <div className={styles.questionDropdown}>
                 {recommendations.map((recommendation, index) => (
-                  <div key={index} className={styles.dropdownQuestion}>
+                  <div key={index} className={styles.dropdownQuestion} onClick={() => clickRecommendation(recommendation)} >
                     {recommendation}
                   </div>
                 ))}
@@ -216,8 +251,8 @@ export default function QA() {
                 <p>No {answered ? 'answered' : 'unanswered'} questions yet.</p>
               ) : (
                 filteredQuestions.map((question) => (
-                  <div key={question.QuestionID}>
-                    <QuestionAccordion questionText={question.Content}>
+                  <div key={question.QuestionID} ref={el => questionRefs.current[question.QuestionID] = el}>
+                    <QuestionAccordion questionText={question.Content} openAccordion={openQuestion === question.QuestionID}>
                       <div className={styles.answersContainer}>
                         {question.Answers && question.Answers.length > 0 ? (
                           question.Answers.map((answer, idx) => (
