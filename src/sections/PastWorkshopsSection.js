@@ -24,7 +24,7 @@ export default function PastWorkshops() {
         );
         // const response = await fetch(
         //   'http://localhost:4000/exploration-resources-api',
-        // );
+        // )
 
         if (!response.ok) {
           throw new Error(`HTTP error- status: ${response.status}`);

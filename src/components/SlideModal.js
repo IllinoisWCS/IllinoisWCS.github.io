@@ -22,13 +22,13 @@ function convertToEmbed(link) {
   return link;
 }
 
-export default function SlideModal({ isOpen, closeModal, slideLink }) {
+export default function SlideModal({ isOpen, closeModal, slideLink, title }) {
   if (!isOpen) return null;
 
   return (
     <div className={styles.container}>
       <ComputerWindow topbarColor="wcs-pink" onButtonClick={closeModal}>
-        <h1 className={styles.title}>Cloud Computing</h1>
+        <h1 className={styles.title}>{title}</h1>
 
         <iframe
           title="slide-embed"
