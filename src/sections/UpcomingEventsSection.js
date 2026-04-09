@@ -46,12 +46,8 @@ export default function UpcomingEventsSection() {
       const uniqueNames = new Set();
       if (officer) {
         rows.forEach(({ officers }) => {
-          officers.forEach(
-            (name) =>
-              // eslint-disable-next-line implicit-arrow-linebreak
-              uniqueNames.add(`${shortenName(name)} (Officer)`),
-            // eslint-disable-next-line function-paren-newline
-          );
+          officers.forEach((name) =>
+            uniqueNames.add(`${shortenName(name)} (Officer)`));
         });
       } else {
         rows.forEach(({ committees }) => {
@@ -63,7 +59,6 @@ export default function UpcomingEventsSection() {
     };
 
     if (weekNum !== null && week && day) {
-      // eslint-disable-next-line operator-linebreak
       const filteredData =
         data[weekNum]?.[week]?.filter(({ heading }) => heading === day) || [];
       if (filteredData.length === 0) {
@@ -71,18 +66,10 @@ export default function UpcomingEventsSection() {
         setUniqueCommittees([]);
         return;
       }
-      const officers = filteredData.flatMap(
-        ({ rows }) =>
-          // eslint-disable-next-line implicit-arrow-linebreak
-          getUniqueNames(rows, true),
-        // eslint-disable-next-line function-paren-newline
-      );
-      const committees = filteredData.flatMap(
-        ({ rows }) =>
-          // eslint-disable-next-line implicit-arrow-linebreak
-          getUniqueNames(rows, false),
-        // eslint-disable-next-line function-paren-newline
-      );
+      const officers = filteredData.flatMap(({ rows }) =>
+        getUniqueNames(rows, true));
+      const committees = filteredData.flatMap(({ rows }) =>
+        getUniqueNames(rows, false));
       setUniqueOfficers(officers);
       setUniqueCommittees(committees);
     }
@@ -91,7 +78,6 @@ export default function UpcomingEventsSection() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        // eslint-disable-next-line operator-linebreak
         const eventsUrl =
           'https://script.google.com/macros/s/AKfycbzXcTVpPJoRs2nCW_i9NEzG_sd_qpBcPofW_-8FVUZzTUzz8HPH4ab-RmkNNxNVDZOk/exec';
 

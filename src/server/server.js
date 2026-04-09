@@ -64,6 +64,12 @@ const getDescription = (properties) => {
   return 'No Description';
 };
 
+// Takes only the first emoji from input
+const getFirstEmoji = (str) => {
+  if (!str) return '';
+  return [...str][0] || '';
+};
+
 //  returns url
 const getURL = (properties) => properties.Link.url;
 
@@ -95,21 +101,110 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   const filteredRes = await filterRecentOpportunities(results);
 
   const tempRes = filteredRes.map((item) => ({
-    icon: item.icon?.emoji || '💡', // eslint-disable-line operator-linebreak
-    title: getName(item.properties), // eslint-disable-line operator-linebreak
-    location: getLocation(item.properties), // eslint-disable-line operator-linebreak
-    date: item.properties.Expires.date.start, // eslint-disable-line operator-linebreak
-    time: getTime(item.properties), // eslint-disable-line operator-linebreak
-    description:
-      // eslint-disable-next-line max-len
-      getDescription(item.properties), // eslint-disable-line operator-linebreak
-    link: getURL(item.properties), // eslint-disable-line operator-linebreak
-    category: getType(item.properties), // eslint-disable-line operator-linebreak
-    expires: getExpiration(item.properties), // eslint-disable-line operator-linebreak
+    icon: getFirstEmoji(item.icon?.emoji) || '💡',
+    title: getName(item.properties),
+    location: getLocation(item.properties),
+    date: item.properties.Expires.date.start,
+    time: getTime(item.properties),
+    description: getDescription(item.properties),
+    link: getURL(item.properties),
+    category: getType(item.properties),
+    expires: getExpiration(item.properties),
   }));
 
   res.json(tempRes);
 });
+
+// Explorations Resources
+const explorationNotion = new Client({
+  auth: process.env.REACT_APP_EXPLORATION_NOTION_API_KEY,
+});
+
+// get plain text from rich_text fields
+const getRichText = (field) => {
+  if (!field || !field.rich_text || field.rich_text.length === 0) return '';
+  return field.rich_text.map((t) => t.plain_text).join(' ');
+};
+
+// get plain text title
+const getTitle = (properties) =>
+  properties.Title?.title?.[0]?.plain_text || 'Untitled';
+
+// get description text
+const getDescriptionText = (properties) => getRichText(properties.Description);
+
+// get workshop series name
+const getWorkshopSeries = (properties) =>
+  properties['Workshop Series']?.select?.name || 'Uncategorized';
+
+// get workshop sequence
+const getWorkshopSequence = (properties) =>
+  properties['Workshop Sequence']?.number ?? null;
+
+// get slide/resource links
+const getSlidesLink = (properties) => properties['Slides Link']?.url || '';
+const getRecordingLink = (properties) =>
+  properties['Recording Link']?.url || '';
+const getOtherResourcesLink = (properties) =>
+  properties['Other Resources Link']?.url || '';
+
+// parse a single Notion record into a workshop object
+const parseWorkshop = (item) => {
+  const props = item.properties;
+
+  return {
+    title: getTitle(props),
+    description: getDescriptionText(props),
+    workshop_series: getWorkshopSeries(props),
+    workshop_sequence: getWorkshopSequence(props),
+    emoji:
+      getFirstEmoji(getRichText(props.Emoji)) ||
+      getFirstEmoji(item.icon?.emoji) ||
+      '',
+    slides_link: getSlidesLink(props),
+    recording_link: getRecordingLink(props),
+    other_resources_link: getOtherResourcesLink(props),
+  };
+};
+
+// group workshops by their series name
+const groupWorkshopsBySeries = (parsed) => {
+  const grouped = parsed.reduce((acc, curr) => {
+    const series = curr.workshop_series || 'Uncategorized';
+    if (!acc[series]) acc[series] = [];
+    acc[series].push(curr);
+    return acc;
+  }, {});
+
+  // sort each group by workshop_sequence (ascending)
+  return Object.keys(grouped).map((series) => ({
+    workshop_series: series,
+    workshops: grouped[series].sort((a, b) => {
+      const seqA = a.workshop_sequence ?? Infinity;
+      const seqB = b.workshop_sequence ?? Infinity;
+      return seqA - seqB;
+    }),
+  }));
+};
+
+// use this
+app.get('/exploration-resources-api', jsonParser, async (req, res) => {
+  try {
+    const results = await explorationNotion.databases.query({
+      database_id: process.env.REACT_APP_EXPLORATION_NOTION_DATABASE_ID,
+    });
+
+    const parsed = results.results.map(parseWorkshop);
+    const formatted = groupWorkshopsBySeries(parsed);
+
+    res.json(formatted);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch from Notion' });
+  }
+});
+
+// const PORT = process.env.PORT || 4000; // dev port fallback
+// if (process.env.NODE_ENV === 'production') {
 
 // Production: use HTTPS with your Let's Encrypt certs
 const privateKey = fs.readFileSync(
@@ -135,3 +230,8 @@ httpApp.use((req, res) => {
 http.createServer(httpApp).listen(80, () => {
   // console.log('HTTP redirect server running on port 80');
 });
+// } else {
+//   app.listen(PORT, () => {
+//     console.log(`Dev server running on http://localhost:${PORT}`);
+//   });
+// }
