@@ -73,7 +73,7 @@
   },
   {
     "name": "Admitted Women’s Day",
-    "registrationLink": null,
+    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSflToMBxlym7sHJ-s0hgQ_JUp2_wWKcyIPSEEmtUaW03ooNuA/viewform?usp=sharing&ouid=113168480265599020494",
     "learnMoreBlurb": "Admitted Women's Day is WCS's annual event for admitted students in the Siebel School of Computing and Data Science who are interested in exploring what studying CS at Illinois is all about! Participants get a glimpse into the day in the life of a CS student, hear from notable CS faculty, and learn more about the program, community, research, and extracurricular opportunities at Illinois! In addition, students have the opportunity to participate in a hands-on tech workshop, meet current CS students and fellow admits, and take a tour of campus to experience campus life firsthand!",
     "category": "Spring",
     "timeline": [
@@ -81,11 +81,12 @@
     ],
     "startDay": null,
     "endDay": null,
-    "committee": "Outreach"
+    "committee": "Outreach",
+    "current": true
   },
   {
     "name": "Engineering Formal",
-    "registrationLink": null,
+    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSflToMBxlym7sHJ-s0hgQ_JUp2_wWKcyIPSEEmtUaW03ooNuA/viewform?usp=sharing&ouid=113168480265599020494",
     "learnMoreBlurb": "A dressed-up night of music, dancing, and unforgettable memories with members of collaborating engineering orgs, all set in the Union Ballroom. Celebrate our community with us as we near the end of year!",
     "category": "Spring",
     "timeline": [
@@ -93,7 +94,8 @@
     ],
     "startDay": null,
     "endDay": null,
-    "committee": "Social"
+    "committee": "Social",
+    "current": true
   },
   {
     "name": "Spring Banquet",
