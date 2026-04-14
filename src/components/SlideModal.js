@@ -27,25 +27,29 @@ export default function SlideModal({ isOpen, closeModal, slideLink, title }) {
 
   return (
     <div className={styles.container}>
-      <ComputerWindow topbarColor="wcs-pink" onButtonClick={closeModal}>
-        <h1 className={styles.title}>{title}</h1>
+      <div className={styles.slideModalContainer}>
+        <ComputerWindow topbarColor="wcs-pink" onButtonClick={closeModal}>
+          <div className={styles.slideInfoContainer}>
+            <h1 className={styles.title}>{title}</h1>
 
-        <iframe
-          title="slide-embed"
-          src={convertToEmbed(slideLink)}
-          className={styles.slidesFrame}
-        />
+            <iframe
+              title="slide-embed"
+              src={convertToEmbed(slideLink)}
+              className={styles.slidesFrame}
+            />
 
-        <div className={styles.closeButtonWrapper}>
-          <button
-            type="button"
-            className={styles.closeButton}
-            onClick={closeModal}
-          >
-            Close
-          </button>
-        </div>
-      </ComputerWindow>
+            <div className={styles.closeButtonWrapper}>
+              <button
+                type="button"
+                className={styles.closeButton}
+                onClick={closeModal}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </ComputerWindow>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
-s.container {
+.container {
   width: 100%;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
