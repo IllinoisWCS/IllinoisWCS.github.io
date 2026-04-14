@@ -86,7 +86,6 @@ export default function WorkshopSeries({ workshops }) {
             )}
           </div>
         ))}
-        ;
       </div>
 
       <SlideModal

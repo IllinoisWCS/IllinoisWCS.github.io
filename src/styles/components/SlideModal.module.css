@@ -16,12 +16,21 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: 600;
-  margin: 0.5rem 0; /* more space above and below */
+  margin: 0.5rem; /* more space above and below */
+}
+
+.slideModalContainer {
+  margin: 20px;
+}
+
+.slideInfoContainer {
+  align-items: center;
 }
 
 .slidesFrame {
   width: 960px;
   height: 569px;
+  justify-self: center;
 }
 
 .closeButtonWrapper {
@@ -46,4 +55,58 @@
 
 .closeButton:hover {
   background-color: #f65563;
+}
+
+@media only screen and (max-width: 1200px) {
+  .slidesFrame {
+    width: 600px;
+    height: 370px;
+    align-items: center;
+  }
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0.5rem; /* more space above and below */
+    text-wrap: wrap;
+  }
+  .closeButton {
+    width: 50%;
+    max-width: 300px;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    color: black;
+    background-color: var(--light-pink);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .slidesFrame {
+    width: 300px;
+    height: 195px;
+    align-items: center;
+  }
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0.5rem; /* more space above and below */
+    text-wrap: wrap;
+  }
+  .closeButton {
+    width: 50%;
+    max-width: 300px;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    color: black;
+    background-color: var(--light-pink);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+  }
 }
