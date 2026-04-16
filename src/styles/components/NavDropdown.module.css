@@ -7,7 +7,7 @@
 .dropdownMenu {
   display: flex;
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 27%;
   transform: translateX(-50%);
   background-color: #ffd6d9;
