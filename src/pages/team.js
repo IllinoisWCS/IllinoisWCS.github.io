@@ -31,7 +31,7 @@ export default function Team() {
     );
 
     return (
-      <div className={styles.outerContainer}>
+      <div id={title.toLowerCase()} className={styles.outerContainer}>
         <div
           className={`${styles[`committee${position}`]} ${styles.committee}`}
         >
@@ -76,6 +76,7 @@ export default function Team() {
         src="/assets/img/committees/board.jpg"
         alt="team"
       /> */}
+      <div id="exec-board" />
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h2>Executive Board</h2>
       </ComputerWindow>
