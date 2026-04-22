@@ -69,6 +69,8 @@ async function getQuestionsAndAnswers(databaseId) {
   while (true) {
     const resp = await qaForumNotion.databases.query({
       database_id: databaseId,
+      //sorting the questions from newest to oldest
+      sorts: [{property: 'Timestamp', direction: 'descending' }],
       ...(startCursor ? { start_cursor: startCursor } : {}),
     });
     allPages = allPages.concat(resp.results || []);
@@ -119,6 +121,7 @@ async function getQuestionsAndAnswers(databaseId) {
   // attach answers to each questions at end
   questions.forEach((q) => {
     const list = answers[q.QuestionID] || [];
+    list.sort((a, b) => new Date(a.Timestamp) - new Date(b.Timestamp));
     q.Answers = list;
   });
 
