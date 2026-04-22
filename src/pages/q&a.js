@@ -45,7 +45,6 @@ export default function QA() {
     }
 
     setLoadingState('question');
-    //toast.success('Submitting your question...');
     try {
       const response = await fetch('/post-question', {
         method: 'POST',
@@ -98,7 +97,6 @@ export default function QA() {
     }
 
     setLoadingState(questionID);
-    //toast.success('Submitting your answer...');
     try {
       const response = await fetch('/post-answer', {
         method: 'POST',
@@ -139,7 +137,6 @@ export default function QA() {
     }
   };
 
-  // const [question, setQuestion] = useState('');
   const [recommendations, setRecommendations] = useState([]);
   const startTyping = async (typedText) => {
     const text = typedText.target.value;
@@ -150,42 +147,38 @@ export default function QA() {
     }
     setRecommendations([]);
     try {
-      // const response = await fetch('/get-similar-questions', {
-      //   method: 'GET',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ question: text }),
-      // });
-      const response = await fetch(`/get-similar-questions?question=${encodeURIComponent(text)}`);
+      const response = await fetch(
+        `/get-similar-questions?question=${encodeURIComponent(text)}`,
+      );
       const ids = await response.json();
-      const similarQuestions = ids.map(id => questions.find(q => q.QuestionID === id))
+      const similarQuestions = ids.map((id) =>
+        questions.find((q) => q.QuestionID === id),
+      );
       console.log(ids);
       console.log(similarQuestions);
-      setRecommendations(similarQuestions.map(q => q.Content));
-      // setRecommendations(similarQuestions);
-      
-      // // setRecommendations(data.similarQuestionIds || []);
-      // console.log('Received similar question IDs:', data.similarQuestionIds);
-      // setRecommendations([]);
+      setRecommendations(similarQuestions.map((q) => q.Content));
     } catch (error) {
       console.error('Error fetching recommendations:', error);
     }
   };
+
   const questionRefs = useRef({});
   const clickRecommendation = (recommendation) => {
-    const match = questions.find(q => q.Content === recommendation);
+    const match = questions.find((q) => q.Content === recommendation);
     if (!match) return;
 
     const hasAnswers = match.Answers && match.Answers.length > 0;
     setAnswered(hasAnswers);
+    setRecommendations([]);
     setOpenQuestion(match.QuestionID);
 
     setTimeout(() => {
       const ref = questionRefs.current[match.QuestionID];
       if (ref) ref.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 100);
+      setOpenQuestion(null); // reset after firing so user has control
+    }, 150);
   };
+
   const filteredQuestions = questions.filter((q) => {
     const hasAnswers = q.Answers && q.Answers.length > 0;
     return answered ? hasAnswers : !hasAnswers;
@@ -209,37 +202,41 @@ export default function QA() {
             Enter it here! If you&apos;re a WCS member, check out the available
             questions to provide your own answers.
           </p>
-        </div>
-        <div className={styles.searchContainer}>
-          <div className={styles.questionInputWrapper}>
-            <QAInputBox
-              value={questionText}
-              onChange={(e) => {
-                setQuestionText(e.target.value);
-                startTyping(e);
-              }}
-              placeholder="Question"
-            />
-            {recommendations.length > 0 && (
-              <div className={styles.questionDropdown}>
-                {recommendations.map((recommendation, index) => (
-                  <div key={index} className={styles.dropdownQuestion} onClick={() => clickRecommendation(recommendation)} >
-                    {recommendation}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
 
-          <div className={styles.submitButtonWrapper}>
+          <div className={styles.questionInputWrapper}>
+            <div style={{ position: 'relative', flex: 1 }}>
+              <QAInputBox
+                value={questionText}
+                onChange={(e) => {
+                  setQuestionText(e.target.value);
+                  startTyping(e);
+                }}
+                onBlur={() => setTimeout(() => setRecommendations([]), 150)}
+                placeholder="Question"
+              />
+              {recommendations.length > 0 && (
+                <div className={styles.questionDropdown}>
+                  {recommendations.map((recommendation, index) => (
+                    <div
+                      key={index}
+                      className={styles.dropdownQuestion}
+                      onClick={() => clickRecommendation(recommendation)}
+                    >
+                      {recommendation}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
             <QASubmitButton
               onClick={submitQuestion}
               disabled={loadingState !== null}
               isLoading={loadingState === 'question'}
-              //disabled={isLoading}
             />
           </div>
         </div>
+
+        {/* Questions and Answers Section */}
         <div className={styles.questionsContainer}>
           <QuestionStatusToggle answered={answered} setAnswered={setAnswered} />
 
@@ -251,8 +248,16 @@ export default function QA() {
                 <p>No {answered ? 'answered' : 'unanswered'} questions yet.</p>
               ) : (
                 filteredQuestions.map((question) => (
-                  <div key={question.QuestionID} ref={el => questionRefs.current[question.QuestionID] = el}>
-                    <QuestionAccordion questionText={question.Content} openAccordion={openQuestion === question.QuestionID}>
+                  <div
+                    key={question.QuestionID}
+                    ref={(el) =>
+                      (questionRefs.current[question.QuestionID] = el)
+                    }
+                  >
+                    <QuestionAccordion
+                      questionText={question.Content}
+                      openAccordion={openQuestion === question.QuestionID}
+                    >
                       <div className={styles.answersContainer}>
                         {question.Answers && question.Answers.length > 0 ? (
                           question.Answers.map((answer, idx) => (
@@ -295,7 +300,6 @@ export default function QA() {
                             />
                             <QASubmitButton
                               onClick={() => submitAnswer(question.QuestionID)}
-                              // disabled={isLoading}
                               disabled={loadingState !== null}
                               isLoading={loadingState === question.QuestionID}
                             />

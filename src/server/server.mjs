@@ -146,7 +146,7 @@ app.get('/get-similar-questions', jsonParser, async (req, res) => {
     const neighbors = await getSimilarQuestions(question);
     res.json(neighbors);
   } catch (err) {
-    console.error("error in similar questions: ", err);
+    console.error('error in similar questions: ', err);
     res.status(500).json({ error: 'Failed to fetch similar questions' });
   }
 });

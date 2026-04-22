@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '@/styles/components/QuestionAccordian.module.css';
 
 function QuestionAccordion({ questionText, children, openAccordion }) {
   const [isOpen, setIsOpen] = useState(false);
-  const shouldOpen = openAccordion !== undefined ? openAccordion : isOpen;
+
+  useEffect(() => {
+    if (openAccordion) setIsOpen(true);
+  }, [openAccordion]);
+
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
@@ -17,10 +21,10 @@ function QuestionAccordion({ questionText, children, openAccordion }) {
         role="button"
         tabIndex={0}
       >
-        <div className={`${styles.expandIcon} ${shouldOpen ? styles.open : ''}`} />
+        <div className={`${styles.expandIcon} ${isOpen ? styles.open : ''}`} />
         <div className={styles.questionText}>{questionText}</div>
       </div>
-      <div className={styles.accordionContent}>{shouldOpen && children}</div>
+      <div className={styles.accordionContent}>{isOpen && children}</div>
     </div>
   );
 }

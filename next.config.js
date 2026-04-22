@@ -21,8 +21,8 @@ const nextConfig = {
           destination: `http://localhost:4000/external-opps-api`,
         },
         {
-        source: '/get-similar-questions',
-        destination: 'http://localhost:4000/get-similar-questions',
+          source: '/get-similar-questions',
+          destination: 'http://localhost:4000/get-similar-questions',
         },
       ],
     };
