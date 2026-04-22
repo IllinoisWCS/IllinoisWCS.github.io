@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '@/styles/components/QuestionAccordian.module.css';
 
-function QuestionAccordion({ questionText, children }) {
+function QuestionAccordion({ questionText, children, openAccordion }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (openAccordion) setIsOpen(true);
+  }, [openAccordion]);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);

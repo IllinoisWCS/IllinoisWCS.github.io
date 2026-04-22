@@ -9,6 +9,7 @@ import bodyParser from 'body-parser';
 import moment from 'moment';
 // eslint-disable-next-line import/extensions
 import { classifyToxicityInput } from './ml_models.mjs';
+import { getSimilarQuestions, addQuestionToIndex } from './ml_models.mjs';
 
 dotenv.config();
 
@@ -139,11 +140,22 @@ app.get('/qas', async (req, res) => {
   }
 });
 
+app.get('/get-similar-questions', jsonParser, async (req, res) => {
+  try {
+    const { question } = req.query;
+    const neighbors = await getSimilarQuestions(question);
+    res.json(neighbors);
+  } catch (err) {
+    console.error('error in similar questions: ', err);
+    res.status(500).json({ error: 'Failed to fetch similar questions' });
+  }
+});
+
 // q&a post functions
 // eslint-disable-next-line consistent-return
 app.post('/post-question', jsonParser, async (req, res) => {
   try {
-    const { question, netid, timestamp } = req.body;
+    const { question, timestamp } = req.body;
 
     if (!question) {
       return res.status(400).json({ error: 'Missing required content field' });
@@ -159,15 +171,15 @@ app.post('/post-question', jsonParser, async (req, res) => {
         .status(403)
         .json({ error: 'Question rejected due to toxic language' });
     }
-
+    //till 2057.
     const generateQuestionID = () => {
-      const ts = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
-      const randomnum = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
-      return Number(`1${ts}${randomnum}`);
-      // FORMAT: 1 (to indicate it's a question) - timestamp (10 digits) - random number (5 digits)
+      const ts = Math.floor(Date.now() / 100000); // taking the timestamp in seconds/100 to reduce length
+      const randomnum = Math.floor(10 + Math.random() * 90); // 2 digit random number
+      return Number(`${ts}${randomnum}`);
     };
 
     const questionID = generateQuestionID();
+    await addQuestionToIndex(question, questionID);
     // gets question content & ids
     const response = await qaForumNotion.pages.create({
       parent: {

@@ -1,6 +1,6 @@
 import styles from '@/styles/components/QAInputBox.module.css';
 
-export default function QAInputBox({ value, onChange, placeholder }) {
+export default function QAInputBox({ value, onChange, onBlur, placeholder }) {
   const handleChange = (e) => {
     e.target.style.height = 'auto';
     e.target.style.height = `${e.target.scrollHeight}px`;
@@ -8,6 +8,7 @@ export default function QAInputBox({ value, onChange, placeholder }) {
       onChange(e);
     }
   };
+
   return (
     <div className={styles.container}>
       <textarea
@@ -16,6 +17,7 @@ export default function QAInputBox({ value, onChange, placeholder }) {
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
+        onBlur={onBlur}
         rows={1}
       />
     </div>

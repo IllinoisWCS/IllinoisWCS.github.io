@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import QuestionStatusToggle from '../components/general/qa-forum/QuestionStatusToggle';
 import QuestionAccordion from '../components/general/qa-forum/QuestionAccordian';
 import QASpeechBubble from '../components/general/qa-forum/QASpeechBubble';
 import styles from '@/styles/pages/Q&A.module.css';
-import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
 import QAInputBox from '../components/general/qa-forum/QAInputBox';
+import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
 import NetIdInputBox from '../components/general/qa-forum/NetIdInputBox';
 import { toastError } from '../utils/toast';
 import { toast } from 'react-toastify';
@@ -18,6 +18,7 @@ export default function QA() {
   const [questions, setQuestions] = useState([]);
   const [answered, setAnswered] = useState(true);
   const [questionsLoading, setQuestionsLoading] = useState(true);
+  const [openQuestion, setOpenQuestion] = useState(null);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -44,7 +45,6 @@ export default function QA() {
     }
 
     setLoadingState('question');
-    //toast.success('Submitting your question...');
     try {
       const response = await fetch('/post-question', {
         method: 'POST',
@@ -97,7 +97,6 @@ export default function QA() {
     }
 
     setLoadingState(questionID);
-    //toast.success('Submitting your answer...');
     try {
       const response = await fetch('/post-answer', {
         method: 'POST',
@@ -138,6 +137,48 @@ export default function QA() {
     }
   };
 
+  const [recommendations, setRecommendations] = useState([]);
+  const startTyping = async (typedText) => {
+    const text = typedText.target.value;
+    console.log('User is typing', text);
+    if (text.trim().length == 0) {
+      setRecommendations([]);
+      return;
+    }
+    setRecommendations([]);
+    try {
+      const response = await fetch(
+        `/get-similar-questions?question=${encodeURIComponent(text)}`,
+      );
+      const ids = await response.json();
+      const similarQuestions = ids.map((id) =>
+        questions.find((q) => q.QuestionID === id),
+      );
+      console.log(ids);
+      console.log(similarQuestions);
+      setRecommendations(similarQuestions.map((q) => q.Content));
+    } catch (error) {
+      console.error('Error fetching recommendations:', error);
+    }
+  };
+
+  const questionRefs = useRef({});
+  const clickRecommendation = (recommendation) => {
+    const match = questions.find((q) => q.Content === recommendation);
+    if (!match) return;
+
+    const hasAnswers = match.Answers && match.Answers.length > 0;
+    setAnswered(hasAnswers);
+    setRecommendations([]);
+    setOpenQuestion(match.QuestionID);
+
+    setTimeout(() => {
+      const ref = questionRefs.current[match.QuestionID];
+      if (ref) ref.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setOpenQuestion(null); // reset after firing so user has control
+    }, 150);
+  };
+
   const filteredQuestions = questions.filter((q) => {
     const hasAnswers = q.Answers && q.Answers.length > 0;
     return answered ? hasAnswers : !hasAnswers;
@@ -163,19 +204,35 @@ export default function QA() {
           </p>
 
           <div className={styles.questionInputWrapper}>
-            <QAInputBox
-              value={questionText}
-              onChange={(e) => setQuestionText(e.target.value)}
-              placeholder="Question"
-            />
-            <div className={styles.submitButtonWrapper}>
-              <QASubmitButton
-                onClick={submitQuestion}
-                disabled={loadingState !== null}
-                isLoading={loadingState === 'question'}
-                //disabled={isLoading}
+            <div style={{ position: 'relative', flex: 1 }}>
+              <QAInputBox
+                value={questionText}
+                onChange={(e) => {
+                  setQuestionText(e.target.value);
+                  startTyping(e);
+                }}
+                onBlur={() => setTimeout(() => setRecommendations([]), 150)}
+                placeholder="Question"
               />
+              {recommendations.length > 0 && (
+                <div className={styles.questionDropdown}>
+                  {recommendations.map((recommendation, index) => (
+                    <div
+                      key={index}
+                      className={styles.dropdownQuestion}
+                      onClick={() => clickRecommendation(recommendation)}
+                    >
+                      {recommendation}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
+            <QASubmitButton
+              onClick={submitQuestion}
+              disabled={loadingState !== null}
+              isLoading={loadingState === 'question'}
+            />
           </div>
         </div>
 
@@ -191,8 +248,16 @@ export default function QA() {
                 <p>No {answered ? 'answered' : 'unanswered'} questions yet.</p>
               ) : (
                 filteredQuestions.map((question) => (
-                  <div key={question.QuestionID}>
-                    <QuestionAccordion questionText={question.Content}>
+                  <div
+                    key={question.QuestionID}
+                    ref={(el) =>
+                      (questionRefs.current[question.QuestionID] = el)
+                    }
+                  >
+                    <QuestionAccordion
+                      questionText={question.Content}
+                      openAccordion={openQuestion === question.QuestionID}
+                    >
                       <div className={styles.answersContainer}>
                         {question.Answers && question.Answers.length > 0 ? (
                           question.Answers.map((answer, idx) => (
@@ -235,7 +300,6 @@ export default function QA() {
                             />
                             <QASubmitButton
                               onClick={() => submitAnswer(question.QuestionID)}
-                              // disabled={isLoading}
                               disabled={loadingState !== null}
                               isLoading={loadingState === question.QuestionID}
                             />

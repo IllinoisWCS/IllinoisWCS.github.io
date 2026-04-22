@@ -8,12 +8,11 @@ import fs from 'fs';
 import dotenv from 'dotenv';
 import path from 'path';
 
-dotenv.config({ path: path.resolve('../../.env') }); // not sure if this is for my system only...
+dotenv.config({ path: path.resolve('.env') }); // not sure if this is for my system only... inconsistent location every time.
 
 // ====== REPEAT DETECTION COMPONENTS ======
 // 1) set up API calling -  can't load repeat detection model, can only call via api
 const { HF_API_KEY } = process.env;
-
 // 2) Create an embedding using the HuggingFace model by sending via API
 async function createEmbedding(text) {
   // all-distilroberta-v1 formerly... but that Inference Endpoint is not supported.
@@ -57,13 +56,25 @@ async function checkDuplicate(index, input, threshold = 0.5) {
   };
 }
 
-// if question is deleted - need to remove from index too?? have to ask about this
+async function getSimilarQuestions(question) {
+  const question_index = new hnswlib.HierarchicalNSW('cosine', 384);
+  if (fs.existsSync('src/server/data/questions.index')) {
+    question_index.readIndexSync('src/server/data/questions.index');
+  } else {
+    return []; //should we return the latest questions instead? or just return empty list?
+    //also, if there are less than 10 questions, should we just return all the questions ranked by similarity?
+  }
+  const embedding = await createEmbedding(question);
+  const result = question_index.searchKnn(embedding, 10);
+  return result.neighbors;
+}
+
 async function questionIsRepeated(question, questionId) {
   // eslint-disable-next-line no-undef
   const question_index = new hnswlib.HierarchicalNSW('cosine', 384); // 384 is the dimension/embedding size
   if (fs.existsSync('data/questions.index')) {
     // eslint-disable-next-line no-undef
-    question_index.readIndexSync(QUESTION_INDEX_FILE_PATH);
+    question_index.readIndexSync('data/questions.index');
   } else {
     question_index.initIndex(100); // maximum number of elements index can hold right now - need to add resizing mechanism.
   }
@@ -121,8 +132,8 @@ async function answerIsRepeatedYesIndex(answer, questionId, answerId) {
 // ------END OF REPEAT DETECTION COMPONENTS
 
 // Load toxicity model only once for efficiency
-let toxicityModel = null;
 async function loadToxicityClassifier() {
+  let toxicityModel = null;
   if (!toxicityModel) {
     // console.log('Loading toxicity classifier...');
     toxicityModel = await pipeline(
@@ -133,6 +144,18 @@ async function loadToxicityClassifier() {
   }
   return toxicityModel;
 }
+async function addQuestionToIndex(question, questionId) {
+  const question_index = new hnswlib.HierarchicalNSW('cosine', 384);
+  if (fs.existsSync('src/server/data/questions.index')) {
+    question_index.readIndexSync('src/server/data/questions.index');
+  } else {
+    question_index.initIndex(100); //maximum number of elements index can hold right now - need to add resizing mechanism.
+  }
+  const embedding = await createEmbedding(question);
+  question_index.addPoint(embedding, questionId);
+  question_index.writeIndexSync('src/server/data/questions.index');
+}
+//------END OF REPEAT DETECTION COMPONENTS
 
 export async function classifyToxicityInput(input) {
   const classifier = await loadToxicityClassifier();
@@ -141,59 +164,61 @@ export async function classifyToxicityInput(input) {
 }
 
 // Use readline for getting input from terminal
-const read = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-  prompt: 'Enter text to analyze toxicity level',
-});
+// const read = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+//   prompt: 'Enter text to analyze toxicity level',
+// });
 
-read.prompt();
+// read.prompt();
 
-read.on('line', async (line) => {
-  const textInput = line.trim();
+// read.on('line', async (line) => {
+//   const textInput = line.trim();
 
-  // To end session type 'exit' and hit enter
-  if (textInput.toLowerCase() === 'exit') {
-    read.close();
-    return;
-  }
+//   // To end session type 'exit' and hit enter
+//   if (textInput.toLowerCase() === 'exit') {
+//     read.close();
+//     return;
+//   }
 
-  try {
-    const result = await classifyToxicityInput(textInput);
-    // Result will be either 'neutral' or 'toxic' with a score
-    // higher score = more toxic/more neutral
-    // console.log('Toxicity result:', result[0].label);
+//   try {
+//     const result = await classifyToxicityInput(textInput);
+//     // Result will be either 'neutral' or 'toxic' with a score
+//     // higher score = more toxic/more neutral
+//     // console.log('Toxicity result:', result[0].label);
 
-    if (result.label === 'toxic') {
-      // console.log('True');
-    } else {
-      // console.log('False');
-    }
-    if (result == null) {
-      // done to avoid errors
-    }
+//     if (result.label === 'toxic') {
+//       // console.log('True');
+//     } else {
+//       // console.log('False');
+//     }
+//     if (result == null) {
+//       // done to avoid errors
+//     }
 
-    const duplicate_result = await checkDuplicate(textInput);
-    if (duplicate_result.isDuplicate) {
-      console.log(
-        'A similar question has been previously asked. See here: ${duplicate_result.nearestId}',
-      );
-      // retrieve the actual question from the database, plus the link
-    } else {
-      console.log(
-        "It doesn't share any similarities with other questions. Proceed to post.",
-      );
-      // will need to add to the index if we decide to go forward with the question: index.addPoint.
-    }
-  } catch (err) {
-    // console.error('Error classifying text:', err);
-  }
+//     const duplicate_result = await checkDuplicate(textInput);
+//     if (duplicate_result.isDuplicate) {
+//       console.log(
+//         'A similar question has been previously asked. See here: ${duplicate_result.nearestId}',
+//       );
+//       // retrieve the actual question from the database, plus the link
+//     } else {
+//       console.log(
+//         "It doesn't share any similarities with other questions. Proceed to post.",
+//       );
+//       // will need to add to the index if we decide to go forward with the question: index.addPoint.
+//     }
+//   } catch (err) {
+//     // console.error('Error classifying text:', err);
+//   }
 
-  read.prompt();
-});
+//   read.prompt();
+// });
 
-// Function to end session
-read.on('close', () => {
-  // console.log('Session ended.');
-  process.exit(0);
-});
+// // Function to end session
+// read.on('close', () => {
+//   // console.log('Session ended.');
+//   process.exit(0);
+// });
+
+export { getSimilarQuestions, addQuestionToIndex };

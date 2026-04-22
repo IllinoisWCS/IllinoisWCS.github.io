@@ -158,6 +158,7 @@
 }
 
 .questionContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0rem;
@@ -253,9 +254,11 @@
 
 .questionInputWrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: 0.75rem;
   width: 100%;
+  position: relative;
 }
 
 .questionInputWrapper > div:first-child {
@@ -364,4 +367,56 @@
 
 .answerButton:hover {
   opacity: 0.9;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0;
+}
+
+.searchContainer .questionInputWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchContainer .submitButtonWrapper {
+  flex: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchContainer .questionDropdown {
+  width: 99%;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*this is for the drop down box*/
+.questionDropdown {
+  position: absolute;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #f38c93;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+/*this is for each question in the drop down box*/
+.dropdownQuestion {
+  padding: 10px 16px;
+  color: var(--wcs-blue);
+  font-family: 'Zilla Slab', serif;
+  cursor: pointer;
+}
+
+.dropdownQuestion:hover {
+  background-color: #fff0f1;
 }
