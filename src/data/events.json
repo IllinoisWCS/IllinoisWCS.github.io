@@ -7,8 +7,7 @@
     "timeline": [
       null
     ],
-    "startDay": null,
-    "endDay": null,
+    "date": null,
     "committee": "Mentoring"
   },
   {
@@ -19,8 +18,7 @@
     "timeline": [
       null
     ],
-    "startDay": null,
-    "endDay": null,
+    "date": null,
     "committee": "Explorations"
   },
   {
@@ -29,10 +27,9 @@
     "learnMoreBlurb": "ChicTech is WCS's annual flagship high school outreach event with the aims of encouraging high school students to pursue Computer Science! At ChicTech, high school students have the opportunity to learn more about CS and UIUC's program through a student Q&A panel, RSO Fair, professor talk, technical workshop, and scavenger hunt!",
     "category": "Fall",
     "timeline": [
-     null
+      null
     ],
-    "startDay": null,
-    "endDay": null,
+    "date": null,
     "committee": "Outreach"
   },
   {
@@ -41,10 +38,9 @@
     "learnMoreBlurb": "Looking to gain technical and project management skills, add a personal project to your resume, and meet others in CS? Join Dev Ada! Dev Ada is WCS’s annual project development cycle, taking place throughout the spring semester. Teams of 3-5 will be matched with PMs to ideate and develop a project of their choice. Participants will have access to exclusive technical workshops, networking opportunities, and socials. At the end of Dev Ada, there will be a final presentation to a panel of judges and prizes for the best teams and their PMs! Dev Ada is open to all (we do ask that PMs be sophomores or above)!",
     "category": "Spring",
     "timeline": [
-     null
+      null
     ],
-    "startDay": null,
-    "endDay": null,
+    "date": null,
     "committee": "Explorations"
   },
   {
@@ -55,8 +51,7 @@
     "timeline": [
       null
     ],
-    "startDay": null,
-    "endDay": null,
+    "date": null,
     "committee": "Mentoring"
   },
   {
@@ -67,9 +62,8 @@
     "timeline": [
       null
     ],
-    "startDay": null,
-    "endDay": null,
-    "committee": "Corporate Committee"
+    "date": null,
+    "committee": "Corporate"
   },
   {
     "name": "Admitted Women’s Day",
@@ -79,8 +73,7 @@
     "timeline": [
       null
     ],
-    "startDay": null,
-    "endDay": null,
+    "date": "April 20",
     "committee": "Outreach",
     "current": true
   },
@@ -92,10 +85,9 @@
     "timeline": [
       null
     ],
-    "startDay": null,
-    "endDay": null,
+    "date": null,
     "committee": "Social",
-    "current": true
+    "current": false
   },
   {
     "name": "Spring Banquet",
@@ -105,9 +97,7 @@
     "timeline": [
       null
     ],
-    "startDay": null,
-    "endDay": null,
+    "date": null,
     "committee": "Social"
   }
-  
 ]

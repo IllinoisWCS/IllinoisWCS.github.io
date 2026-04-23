@@ -1,0 +1,128 @@
+.container {
+  padding: 3rem 0 5rem 0;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  color: #000000;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topicsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topicsContainer {
+  width: calc(222px * 4 + 1.5rem * 3);
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .topicsContainer {
+    width: calc(222px * 3 + 1.5rem * 2);
+  }
+}
+
+@media (max-width: 900px) {
+  .topicsContainer {
+    width: calc(222px * 2 + 1.5rem * 1);
+  }
+}
+
+@media (max-width: 600px) {
+  .topicsContainer {
+    width: 222px;
+  }
+}
+
+.topicsTrack {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.topic {
+  width: 222px;
+  height: 67px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: 'Zilla Slab', serif;
+  color: #3d3939;
+  border: 6px solid #f85971;
+  border-top: 3px solid #f85971;
+  border-bottom: 12px solid #f85971;
+  border-radius: 10px;
+  background-color: var(--light-pink);
+  cursor: pointer;
+  transition: none;
+  flex-shrink: 0;
+}
+
+.topic:hover:not(.selected) {
+  background-color: var(--light-pink);
+  /* transform: translateY(2px);
+  height:65px; */
+  /* border-bottom: 8px solid #c55a6a; */
+}
+
+.topic:active {
+  background-color: #fe768d;
+}
+
+.topic.selected:hover {
+  background-color: var(--light-pink) !important;
+  transform: translateY(5px);
+  height: 62px;
+  border-bottom: 8px solid #f85971;
+}
+
+.selected {
+  transform: translateY(5px);
+  height: 62px;
+  border-bottom: 8px solid #f45e75;
+  background-color: var(--light-pink) !important;
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--light-pink);
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.arrowButton:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.arrowButton:disabled {
+  cursor: not-allowed;
+  color: #999;
+}
+
+.seriesContainer {
+  margin-bottom: 4em;
+}

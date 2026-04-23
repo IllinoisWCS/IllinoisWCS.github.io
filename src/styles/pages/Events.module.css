@@ -79,6 +79,16 @@
   font-weight: bold;
 }
 
+.committeeLink {
+  color: #1590b1;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.committeeLink:hover {
+  opacity: 0.8;
+}
+
 /* IMAGE */
 .eventImage {
   width: 340px;
@@ -87,6 +97,8 @@
   flex-shrink: 1; 
   border: 5px solid var(--wcs-pink);
 }
+
+
 
 @media (max-width: 900px) {
   .eventRow {

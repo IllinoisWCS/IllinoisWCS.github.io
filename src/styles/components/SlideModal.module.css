@@ -1,0 +1,49 @@
+.container {
+  position: fixed; /* pop up over everything */
+  top: 0; /* start from top */
+  left: 0; /* start from left */
+  width: 100vw; /* full width */
+  height: 100vh; /* full height */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  flex-direction: column;
+  z-index: 9999; /* on top of everything */
+  background: rgba(0, 0, 0, 0.5); /* dim background */
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0.5rem 0; /* more space above and below */
+}
+
+.slidesFrame {
+  width: 960px;
+  height: 569px;
+}
+
+.closeButtonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.closeButton {
+  width: 50%;
+  max-width: 300px;
+  height: 3rem;
+  border: none;
+  border-radius: 1rem;
+  color: black;
+  background-color: var(--light-pink);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: #f65563;
+}

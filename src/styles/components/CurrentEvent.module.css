@@ -2,13 +2,14 @@
   width: 95%;
   margin: 2rem auto;
   display: flex;
-  flex-direction: column; /* stack popups vertically */
-  gap: 2rem; /* space between stacked popups */
+  flex-direction: column;
+  gap: 2rem;
   align-items: center;
 }
 
 .popupBox {
-  background-color: var(--wcs-pink);
+  background: url('/assets/img/events/BinaryForCurrentEvents.png') center/cover no-repeat;
+
   padding: 1.5rem 2rem;
   border-radius: 16px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -21,43 +22,14 @@
   flex-wrap: wrap;
 }
 
-/* LEFT CONTENT: Titles + Buttons */
+/* LEFT CONTENT */
 .leftContent {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   flex: 1;
   min-width: 200px;
-  align-items: flex-start; /* titles stay left-aligned by default */
-}
-
-/* Buttons container */
-.buttonGroup {
-  display: flex;
-  gap: 15rem; /* space between buttons on desktop */
-  flex-wrap: wrap;
-  justify-content: center; /* center buttons under titles */
-  width: 100%;
-  margin-top: 2rem; /* space between titles and buttons */
-}
-
-/* Both Buttons */
-.learnMoreBtn,
-.registerBtn {
-  padding: 0.5rem 4rem;
-  background-color: #f3c1c1;
-  color: #030000;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.learnMoreBtn:hover,
-.registerBtn:hover {
-  background-color: #e6a8a8;
+  align-items: flex-start;
 }
 
 /* Titles */
@@ -76,7 +48,48 @@
   color: #ffffff;
 }
 
-/* Responsive: when the popup is narrower (computer window shrinks) */
+.dateRange {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #9adaeb;
+  opacity: 1;
+  letter-spacing: 0.8px;
+}
+
+/* BUTTONS */
+.buttonGroup {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.learnMoreBtn,
+.registerBtn {
+  padding: 0.9rem 3rem;
+  background-color: #f3c1c1;
+  color: #030000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.learnMoreBtn:hover,
+.registerBtn:hover {
+  background-color: #e6a8a8;
+}
+
+.registerLinkWrapper {
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
 @media (max-width: 1000px) {
   .popupBox {
     flex-direction: column;
@@ -84,20 +97,20 @@
   }
 
   .leftContent {
-    align-items: center; /* center text */
+    align-items: center;
     text-align: center;
   }
 
   .buttonGroup {
-    flex-direction: column; 
+    flex-direction: column;
     width: 100%;
-    gap: 2rem; 
+    gap: 2rem;
     justify-content: center;
   }
 
   .learnMoreBtn,
   .registerBtn {
-    width: 100%; 
+    width: 100%;
     text-align: center;
   }
 }

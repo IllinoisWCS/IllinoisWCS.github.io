@@ -11,7 +11,10 @@
   --light-light-pink: #fff8f9;
   --light-light-blue: #f8fffe;
 }
-
+/*added this for committee scrolling*/
+html {
+  scroll-behavior: smooth;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     /* WCS Branding Colors */

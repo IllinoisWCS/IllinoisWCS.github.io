@@ -22,7 +22,12 @@ export default function CurrentEventPopup() {
         <div key={currentEvent.name} className={styles.popupBox}>
           <div className={styles.leftContent}>
             <h2 className={styles.happeningNowTitle}>Happening Now!</h2>
+
             <h3 className={styles.eventName}>{currentEvent.name}</h3>
+
+            {currentEvent.date && (
+              <p className={styles.dateRange}>{currentEvent.date}</p>
+            )}
 
             <div className={styles.buttonGroup}>
               <button
@@ -38,6 +43,7 @@ export default function CurrentEventPopup() {
                   href={currentEvent.registrationLink}
                   target="_blank"
                   rel="noreferrer"
+                  className={styles.registerLinkWrapper}
                 >
                   <button type="button" className={styles.registerBtn}>
                     Register
