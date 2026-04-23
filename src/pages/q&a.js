@@ -73,7 +73,7 @@ export default function QA() {
       //window.location.href =`http://127.0.0.1:3000/#/submitAnswer/${data.token}`;
       // window.location.href =`http://127.0.0.1:8080/#/submitAnswer/token=eva-token!`;
       window.location.href =
-        'http://127.0.0.1:8080/?submitAnswer=true&token=eva-token!';
+        'http://127.0.0.1:8080/?submitAnswer=true&eva-token!';
 
       // end of answer logic
 
