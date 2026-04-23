@@ -46,33 +46,45 @@ export default function QA() {
     setLoadingState('question');
     //toast.success('Submitting your question...');
     try {
-      const response = await fetch('/post-question', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          question: questionText,
-          timestamp: new Date().toISOString(),
-        }),
-      });
+      // const response = await fetch('/post-question', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({
+      //     question: questionText,
+      //     timestamp: new Date().toISOString(),
+      //   }),
+      // });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        toastError(
-          errorData.error || 'Failed to post question. Please try again.',
-        );
-        return;
-      }
+      // if (!response.ok) {
+      //   const errorData = await response.json();
+      //   toastError(
+      //     errorData.error || 'Failed to post question. Please try again.',
+      //   );
+      //   return;
+      // }
 
-      setQuestionText('');
-      const refreshResponse = await fetch('/qas');
-      if (refreshResponse.ok) {
-        const data = await refreshResponse.json();
-        setQuestions(data || []);
-      }
+      // answer logic -- using question function to test
 
-      toast.success('Question submitted successfully!');
+      //window.location.href = `http://127.0.0.1:8080/#/submitAnswer/eva-token!`;
+      //window.location.href = `http://127.0.0.1:8080/auth/login?token=${token}&returnTo=/submitAnswer/${token}`;
+
+      //window.location.href =`http://127.0.0.1:3000/#/submitAnswer/${data.token}`;
+      // window.location.href =`http://127.0.0.1:8080/#/submitAnswer/token=eva-token!`;
+      window.location.href =
+        'http://127.0.0.1:8080/?submitAnswer=true&token=eva-token!';
+
+      // end of answer logic
+
+      // setQuestionText('');
+      // const refreshResponse = await fetch('/qas');
+      // if (refreshResponse.ok) {
+      //   const data = await refreshResponse.json();
+      //   setQuestions(data || []);
+      // }
+
+      // toast.success('Question submitted successfully!');
     } catch (error) {
       toastError(
         'There was an error submitting your question. Please try again.',
@@ -98,55 +110,54 @@ export default function QA() {
 
     setLoadingState(questionID);
     //toast.success('Submitting your answer...');
+    // try {
+    //   const response = await fetch('/post-answer', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       content: text,
+    //       netid: nid,
+    //       questionID,
+    //       authenticated: false,
+    //       timestamp: new Date().toISOString(),
+    //     }),
+    //   });
+
+    let data;
     try {
-      const response = await fetch('/post-answer', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          content: text,
-          netid: nid,
-          questionID,
-          authenticated: false,
-          timestamp: new Date().toISOString(),
-        }),
-      });
-
-      let data;
-      try {
-        data = await response.json();
-      } catch (jsonError) {
-        console.error('Failed to parse JSON:', jsonError);
-        data = null;
-      }
-
-      console.log('JWT token received: ', data.token);
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        toastError(
-          errorData.error || 'Failed to post answer. Please try again.',
-        );
-        return;
-      }
-
-      setAnswerTexts((prev) => ({ ...prev, [questionID]: '' }));
-      setNetIds((prev) => ({ ...prev, [questionID]: '' }));
-      const refreshResponse = await fetch('/qas');
-      if (refreshResponse.ok) {
-        const data = await refreshResponse.json();
-        setQuestions(data || []);
-      }
-      toast.success('Answer submitted successfully!');
-      window.location.href = `https://points.illinoiswcs.org/#/submitAnswer/token=${data.token}`;
-    } catch (error) {
-      toastError(
-        'There was an error submitting your answer. Please try again.',
-      );
-    } finally {
-      setLoadingState(null);
+      data = await response.json();
+    } catch (jsonError) {
+      console.error('Failed to parse JSON:', jsonError);
+      data = null;
     }
+
+    //console.log('JWT token received: ', data.token);
+    console.log('JWT token received: ', 'eva-token!');
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      toastError(errorData.error || 'Failed to post answer. Please try again.');
+      return;
+    }
+
+    setAnswerTexts((prev) => ({ ...prev, [questionID]: '' }));
+    setNetIds((prev) => ({ ...prev, [questionID]: '' }));
+    const refreshResponse = await fetch('/qas');
+    if (refreshResponse.ok) {
+      const data = await refreshResponse.json();
+      setQuestions(data || []);
+    }
+    toast.success('Answer submitted successfully!');
+    window.location.href = `https://points.illinoiswcs.org/#/submitAnswer/token=${'eva-token!'}`;
+    // } catch (error) {
+    //   toastError(
+    //     'There was an error submitting your answer. Please try again.',
+    //   );
+    // } finally {
+    //   setLoadingState(null);
+    // }
   };
 
   const filteredQuestions = questions.filter((q) => {
