@@ -1,3 +1,4 @@
+import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import https from 'https';
@@ -99,7 +100,7 @@ async function getQuestionsAndAnswers(databaseId) {
         _notionPageId: page.id,
       });
       // populate answers map
-    } else if (type === 'Answer' && qid !== null) {
+    } else if (type === 'Answer' && qid) {
       const aid = getNumber(props.AnswerID);
       const netid = getRichText(props.NetID) || '';
       const authenticated = getCheckbox(props.Authenticated);
@@ -221,10 +222,17 @@ app.post('/post-question', jsonParser, async (req, res) => {
       .json({ error: 'Failed to post question', details: error.message });
   }
 });
+
+// returns JWT
+function getJWT(questID, netID, ansID, content) {
+  const payload = { questID, netID, ansID, content };
+  const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+  return [payload, token];
+}
+
 async function getAnswersForQuestion(questionId) {
   let allPages = [];
   let startCursor;
-
   // eslint-disable-next-line no-constant-condition
   while (true) {
     const resp = await qaForumNotion.databases.query({
@@ -320,10 +328,17 @@ app.post('/post-answer', jsonParser, async (req, res) => {
       },
     });
 
+    // Creating JWT
+    const [payload, token] = getJWT(questionID, netid, answerID, content);
+
     res.status(200).json({
       message: 'Answer posted successfully',
       notionId: response.id,
       answerID,
+      token,
+      content,
+      questionID,
+      netid,
     });
   } catch (error) {
     console.error('Error posting answer:', error);
