@@ -121,13 +121,10 @@ export default function QA() {
         data = null;
       }
 
-      console.log('JWT token received: ', data.token);
+      console.log('JWT token received: ', data?.token);
 
       if (!response.ok) {
-        const errorData = await response.json();
-        toastError(
-          errorData.error || 'Failed to post answer. Please try again.',
-        );
+        toastError(data?.error || 'Failed to post answer. Please try again.');
         return;
       }
 
@@ -139,7 +136,7 @@ export default function QA() {
         setQuestions(data || []);
       }
       toast.success('Answer submitted successfully!');
-      window.location.href = `https://points.illinoiswcs.org/#/submitAnswer/token=${data.token}`;
+      window.location.href = `http://127.0.0.1:8080/#/submitAnswer/${data.token}`;
     } catch (error) {
       toastError(
         'There was an error submitting your answer. Please try again.',
