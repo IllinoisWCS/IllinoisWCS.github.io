@@ -102,15 +102,29 @@
   }
 
   .buttonGroup {
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    gap: 2rem;
+    align-items: center;
     justify-content: center;
+    gap: 2rem;
+    width: 100%;
   }
 
   .learnMoreBtn,
   .registerBtn {
-    width: 100%;
+    width: 60%;
+    max-width: 300px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
+  }
+
+  .registerLinkWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
