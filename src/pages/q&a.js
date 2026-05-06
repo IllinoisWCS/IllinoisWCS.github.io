@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { toast } from 'react-toastify';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import QuestionStatusToggle from '../components/general/qa-forum/QuestionStatusToggle';
 import QuestionAccordion from '../components/general/qa-forum/QuestionAccordian';
@@ -8,7 +9,6 @@ import QAInputBox from '../components/general/qa-forum/QAInputBox';
 import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
 import NetIdInputBox from '../components/general/qa-forum/NetIdInputBox';
 import { toastError } from '../utils/toast';
-import { toast } from 'react-toastify';
 
 export default function QA() {
   const [questionText, setQuestionText] = useState('');
@@ -19,6 +19,8 @@ export default function QA() {
   const [answered, setAnswered] = useState(true);
   const [questionsLoading, setQuestionsLoading] = useState(true);
   const [openQuestion, setOpenQuestion] = useState(null);
+  const [recommendations, setRecommendations] = useState([]);
+  const questionRefs = useRef({});
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -68,8 +70,8 @@ export default function QA() {
       setQuestionText('');
       const refreshResponse = await fetch('/qas');
       if (refreshResponse.ok) {
-        const data = await refreshResponse.json();
-        setQuestions(data || []);
+        const refreshedQuestions = await refreshResponse.json();
+        setQuestions(refreshedQuestions || []);
       }
 
       toast.success('Question submitted successfully!');
@@ -112,18 +114,17 @@ export default function QA() {
         }),
       });
 
-      let data;
+      let answerData;
       try {
-        data = await response.json();
+        answerData = await response.json();
       } catch (jsonError) {
-        console.error('Failed to parse JSON:', jsonError);
-        data = null;
+        answerData = null;
       }
 
-      console.log('JWT token received: ', data?.token);
-
       if (!response.ok) {
-        toastError(data?.error || 'Failed to post answer. Please try again.');
+        toastError(
+          answerData?.error || 'Failed to post answer. Please try again.',
+        );
         return;
       }
 
@@ -135,7 +136,7 @@ export default function QA() {
         setQuestions(data || []);
       }
       toast.success('Answer submitted successfully!');
-      window.location.href = `http://127.0.0.1:8080/#/submitAnswer/${data.token}`;
+      window.location.href = `${process.env.NEXT_PUBLIC_POINTS_URL}/#/submitAnswer/${answerData.token}`;
     } catch (error) {
       toastError(
         'There was an error submitting your answer. Please try again.',
@@ -145,11 +146,10 @@ export default function QA() {
     }
   };
 
-  const [recommendations, setRecommendations] = useState([]);
+  // Fetches similar existing questions as the user types to prevent duplicates
   const startTyping = async (typedText) => {
     const text = typedText.target.value;
-    console.log('User is typing', text);
-    if (text.trim().length == 0) {
+    if (text.trim().length === 0) {
       setRecommendations([]);
       return;
     }
@@ -162,15 +162,13 @@ export default function QA() {
       const similarQuestions = ids.map((id) =>
         questions.find((q) => q.QuestionID === id),
       );
-      console.log(ids);
-      console.log(similarQuestions);
       setRecommendations(similarQuestions.map((q) => q.Content));
     } catch (error) {
-      console.error('Error fetching recommendations:', error);
+      toastError('Error fetching recommendations. Please try again.');
     }
   };
 
-  const questionRefs = useRef({});
+  // Scrolls to and opens the selected question from the recommendations dropdown
   const clickRecommendation = (recommendation) => {
     const match = questions.find((q) => q.Content === recommendation);
     if (!match) return;
@@ -225,13 +223,14 @@ export default function QA() {
               {recommendations.length > 0 && (
                 <div className={styles.questionDropdown}>
                   {recommendations.map((recommendation, index) => (
-                    <div
+                    <button
                       key={index}
                       className={styles.dropdownQuestion}
                       onClick={() => clickRecommendation(recommendation)}
+                      type="button"
                     >
                       {recommendation}
-                    </div>
+                    </button>
                   ))}
                 </div>
               )}
@@ -258,9 +257,9 @@ export default function QA() {
                 filteredQuestions.map((question) => (
                   <div
                     key={question.QuestionID}
-                    ref={(el) =>
-                      (questionRefs.current[question.QuestionID] = el)
-                    }
+                    ref={(el) => {
+                      questionRefs.current[question.QuestionID] = el;
+                    }}
                   >
                     <QuestionAccordion
                       questionText={question.Content}
@@ -285,24 +284,22 @@ export default function QA() {
                         <div className={styles.answerInputWrapper}>
                           <QAInputBox
                             value={answerTexts[question.QuestionID] || ''}
-                            onChange={
-                              (e) =>
-                                setAnswerTexts((prev) => ({
-                                  ...prev,
-                                  [question.QuestionID]: e.target.value,
-                                })) // eslint-disable-next-line react/jsx-curly-newline
+                            onChange={(e) =>
+                              setAnswerTexts((prev) => ({
+                                ...prev,
+                                [question.QuestionID]: e.target.value,
+                              }))
                             }
                             placeholder="Answer"
                           />
                           <div className={styles.answerSubmitWrapper}>
                             <NetIdInputBox
                               value={netIds[question.QuestionID] || ''}
-                              onChange={
-                                (e) =>
-                                  setNetIds((prev) => ({
-                                    ...prev,
-                                    [question.QuestionID]: e.target.value,
-                                  })) // eslint-disable-next-line react/jsx-curly-newline
+                              onChange={(e) =>
+                                setNetIds((prev) => ({
+                                  ...prev,
+                                  [question.QuestionID]: e.target.value,
+                                }))
                               }
                               placeholder="netId"
                             />
