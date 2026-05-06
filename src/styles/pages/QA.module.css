@@ -415,8 +415,20 @@
   color: var(--wcs-blue);
   font-family: 'Zilla Slab', serif;
   cursor: pointer;
+  /* reset button defaults */
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: inherit;
+  display: block;
 }
 
 .dropdownQuestion:hover {
   background-color: #fff0f1;
+}
+
+.questionInputContainer {
+  position: relative;
+  flex: 1;
 }

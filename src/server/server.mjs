@@ -223,13 +223,6 @@ app.post('/post-question', jsonParser, async (req, res) => {
   }
 });
 
-// returns JWT
-function getJWT(questID, netID, ansID, content) {
-  const payload = { questID, netID, ansID, content };
-  const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
-  return [payload, token];
-}
-
 async function getAnswersForQuestion(questionId) {
   let allPages = [];
   let startCursor;
@@ -256,15 +249,63 @@ async function getAnswersForQuestion(questionId) {
   return allPages.map((page) => getRichText(page.properties.Content));
 }
 
-// eslint-disable-next-line consistent-return
+app.get('/check-duplicate-answer', jsonParser, async (req, res) => {
+  try {
+    const { questionID, content } = req.query;
+
+    if (!questionID || !content) {
+      return res.status(400).json({ error: 'Missing questionID or content' });
+    }
+
+    const existingAnswers = await getAnswersForQuestion(Number(questionID));
+    const normalized = content.trim().toLowerCase();
+    const isDuplicate = existingAnswers.some(
+      (ans) => ans.trim().toLowerCase() === normalized,
+    );
+
+    return res.json({ isDuplicate });
+  } catch (error) {
+    return res.status(500).json({ error: 'Failed to check duplicate' });
+  }
+});
+
+app.post('/check-toxicity', jsonParser, async (req, res) => {
+  try {
+    const { content } = req.body;
+    if (!content) {
+      return res.status(400).json({ error: 'Missing content' });
+    }
+    const result = await classifyToxicityInput(content);
+    return res.json({ isToxic: result[0].label === 'toxic' });
+  } catch (error) {
+    return res.status(500).json({ error: 'Failed to check toxicity' });
+  }
+});
+
 app.post('/post-answer', jsonParser, async (req, res) => {
   try {
-    const { content, netid, questionID, authenticated, timestamp } = req.body;
+    const { content, netid, questionID, authenticated, timestamp, token } =
+      req.body;
 
     if (!content || !questionID) {
       return res
         .status(400)
         .json({ error: 'Missing required fields: content or questionID' });
+    }
+
+    // verify the token from points backend before saving answer
+    if (!token) {
+      return res
+        .status(401)
+        .json({ error: 'Authentication required to post an answer' });
+    }
+
+    try {
+      jwt.verify(token, process.env.JWT_SECRET);
+    } catch (err) {
+      return res
+        .status(401)
+        .json({ error: 'Invalid or expired authentication token' });
     }
 
     const toxicityResult = await classifyToxicityInput(content);
@@ -286,16 +327,13 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     }
 
     const generateAnswerID = () => {
-      const ts = Math.floor(Date.now() / 1000); // taking the timestamp in seconds to reduce length
-      // not technically a timestamp, but the time passed in seconds since epoch (Jan 1 1970)
-      const randomnum = Math.floor(10000 + Math.random() * 90000); // 5 digit random number
+      const ts = Math.floor(Date.now() / 1000);
+      const randomnum = Math.floor(10000 + Math.random() * 90000);
       return Number(`2${ts}${randomnum}`);
-      // FORMAT: 2 (to indicate it's an answer) - timestamp (10 digits) - random number (5 digits)
     };
 
     const answerID = generateAnswerID();
 
-    // gets answer content, ids, and authentication status
     const response = await qaForumNotion.pages.create({
       parent: {
         database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
@@ -314,11 +352,10 @@ app.post('/post-answer', jsonParser, async (req, res) => {
           number: questionID,
         },
         AnswerID: {
-          // rich_text: [{ text: { content: answerID } }],
           number: answerID,
         },
         Authenticated: {
-          checkbox: !!authenticated, // true if user successfully authenticated
+          checkbox: !!authenticated,
         },
         Timestamp: {
           date: {
@@ -328,20 +365,15 @@ app.post('/post-answer', jsonParser, async (req, res) => {
       },
     });
 
-    // Creating JWT
-    const [payload, token] = getJWT(questionID, netid, answerID, content);
-
     res.status(200).json({
       message: 'Answer posted successfully',
       notionId: response.id,
       answerID,
-      token,
       content,
       questionID,
       netid,
     });
   } catch (error) {
-    console.error('Error posting answer:', error);
     res.status(500).json({ error: 'Failed to post answer' });
   }
 });

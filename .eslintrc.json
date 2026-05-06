@@ -15,6 +15,7 @@
     "react/jsx-filename-extension": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-curly-newline": "off",
+    "function-paren-newline": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

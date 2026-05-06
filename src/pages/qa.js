@@ -4,7 +4,7 @@ import ComputerWindow from '../components/general/ComputerWindowComponent';
 import QuestionStatusToggle from '../components/general/qa-forum/QuestionStatusToggle';
 import QuestionAccordion from '../components/general/qa-forum/QuestionAccordian';
 import QASpeechBubble from '../components/general/qa-forum/QASpeechBubble';
-import styles from '@/styles/pages/Q&A.module.css';
+import styles from '@/styles/pages/QA.module.css';
 import QAInputBox from '../components/general/qa-forum/QAInputBox';
 import QASubmitButton from '../components/general/qa-forum/QASubmitButton';
 import NetIdInputBox from '../components/general/qa-forum/NetIdInputBox';
@@ -21,6 +21,60 @@ export default function QA() {
   const [openQuestion, setOpenQuestion] = useState(null);
   const [recommendations, setRecommendations] = useState([]);
   const questionRefs = useRef({});
+
+  const postPendingAnswer = async (questionID, text, nid, timestamp, token) => {
+    setLoadingState(questionID);
+    try {
+      const response = await fetch('/post-answer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          content: text,
+          netid: nid,
+          questionID,
+          authenticated: true,
+          token,
+          timestamp,
+        }),
+      });
+
+      let answerData;
+      try {
+        answerData = await response.json();
+      } catch {
+        answerData = null;
+      }
+
+      if (!response.ok) {
+        toastError(
+          answerData?.error || 'Failed to post answer. Please try again.',
+        );
+        return;
+      }
+
+      const refreshResponse = await fetch('/qas');
+      if (refreshResponse.ok) {
+        const refreshedQuestions = await refreshResponse.json();
+        setQuestions(refreshedQuestions || []);
+      }
+
+      toast.success('Answer submitted successfully!');
+
+      setAnswered(true);
+      setOpenQuestion(questionID);
+      setTimeout(() => {
+        const ref = questionRefs.current[questionID];
+        if (ref) ref.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setOpenQuestion(null);
+      }, 500);
+    } catch (error) {
+      toastError(
+        'There was an error submitting your answer. Please try again.',
+      );
+    } finally {
+      setLoadingState(null);
+    }
+  };
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -40,6 +94,30 @@ export default function QA() {
     fetchQuestions();
   }, []);
 
+  useEffect(() => {
+    if (questionsLoading) return;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const postAnswer = urlParams.get('postAnswer');
+    const token = urlParams.get('token');
+
+    if (postAnswer === 'true' && token) {
+      window.history.replaceState({}, '', window.location.pathname);
+
+      const pending = sessionStorage.getItem('pendingAnswer');
+      if (pending) {
+        const { questionID, text, nid, timestamp } = JSON.parse(pending);
+        sessionStorage.removeItem('pendingAnswer');
+        toast.info('Posting your answer...');
+        postPendingAnswer(questionID, text, nid, timestamp, token).catch(() => {
+          toastError(
+            'There was an error submitting your answer. Please try again.',
+          );
+        });
+      }
+    }
+  }, [questionsLoading]);
+
   const submitQuestion = async () => {
     if (!questionText.trim()) {
       toastError('Please enter a question.');
@@ -47,6 +125,7 @@ export default function QA() {
     }
 
     setLoadingState('question');
+    toast.info('Posting your question...');
     try {
       const response = await fetch('/post-question', {
         method: 'POST',
@@ -92,58 +171,60 @@ export default function QA() {
       toastError('Unable to submit: question ID is missing.');
       return;
     }
-
     if (!text.trim()) {
       toastError('Please enter an answer.');
       return;
     }
 
     setLoadingState(questionID);
+
+    // check toxicity before redirecting to points site
     try {
-      const response = await fetch('/post-answer', {
+      const toxicResponse = await fetch('/check-toxicity', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          content: text,
-          netid: nid,
-          questionID,
-          authenticated: false,
-          timestamp: new Date().toISOString(),
-        }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content: text }),
       });
-
-      let answerData;
-      try {
-        answerData = await response.json();
-      } catch (jsonError) {
-        answerData = null;
-      }
-
-      if (!response.ok) {
-        toastError(
-          answerData?.error || 'Failed to post answer. Please try again.',
-        );
+      const toxicData = await toxicResponse.json();
+      if (toxicData.isToxic) {
+        toastError('Answer rejected due to toxic or inappropriate language.');
+        setLoadingState(null);
         return;
       }
-
-      setAnswerTexts((prev) => ({ ...prev, [questionID]: '' }));
-      setNetIds((prev) => ({ ...prev, [questionID]: '' }));
-      const refreshResponse = await fetch('/qas');
-      if (refreshResponse.ok) {
-        const data = await refreshResponse.json();
-        setQuestions(data || []);
-      }
-      toast.success('Answer submitted successfully!');
-      window.location.href = `${process.env.NEXT_PUBLIC_POINTS_URL}/#/submitAnswer/${answerData.token}`;
     } catch (error) {
-      toastError(
-        'There was an error submitting your answer. Please try again.',
-      );
-    } finally {
+      toastError('Error checking answer. Please try again.');
       setLoadingState(null);
+      return;
     }
+
+    // check for duplicates before redirecting to points site
+    try {
+      const checkResponse = await fetch(
+        `/check-duplicate-answer?questionID=${questionID}&content=${encodeURIComponent(text)}`,
+      );
+      const checkData = await checkResponse.json();
+      if (checkData.isDuplicate) {
+        toastError('This answer has already been posted for this question.');
+        setLoadingState(null);
+        return;
+      }
+    } catch (error) {
+      toastError('Error checking answer. Please try again.');
+      setLoadingState(null);
+      return;
+    }
+
+    sessionStorage.setItem(
+      'pendingAnswer',
+      JSON.stringify({
+        questionID,
+        text,
+        nid,
+        timestamp: new Date().toISOString(),
+      }),
+    );
+
+    window.location.href = `${process.env.NEXT_PUBLIC_POINTS_URL}/#/submitAnswer/pending`;
   };
 
   // Fetches similar existing questions as the user types to prevent duplicates
@@ -210,7 +291,7 @@ export default function QA() {
           </p>
 
           <div className={styles.questionInputWrapper}>
-            <div style={{ position: 'relative', flex: 1 }}>
+            <div className={styles.questionInputContainer}>
               <QAInputBox
                 value={questionText}
                 onChange={(e) => {
@@ -225,9 +306,9 @@ export default function QA() {
                   {recommendations.map((recommendation, index) => (
                     <button
                       key={index}
+                      type="button"
                       className={styles.dropdownQuestion}
                       onClick={() => clickRecommendation(recommendation)}
-                      type="button"
                     >
                       {recommendation}
                     </button>

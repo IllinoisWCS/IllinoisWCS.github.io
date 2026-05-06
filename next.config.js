@@ -2,27 +2,27 @@
 const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
+    const apiBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
     return {
       fallback: [
-        {
-          source: '/post-question',
-          destination: `http://localhost:4000/post-question`,
-        },
-        {
-          source: '/post-answer',
-          destination: `http://localhost:4000/post-answer`,
-        },
-        {
-          source: '/qas',
-          destination: `http://localhost:4000/qas`,
-        },
+        { source: '/post-question', destination: `${apiBase}/post-question` },
+        { source: '/post-answer', destination: `${apiBase}/post-answer` },
+        { source: '/qas', destination: `${apiBase}/qas` },
         {
           source: '/external-opps-api',
-          destination: `http://localhost:4000/external-opps-api`,
+          destination: `${apiBase}/external-opps-api`,
         },
         {
           source: '/get-similar-questions',
-          destination: 'http://localhost:4000/get-similar-questions',
+          destination: `${apiBase}/get-similar-questions`,
+        },
+        {
+          source: '/check-duplicate-answer',
+          destination: `${apiBase}/check-duplicate-answer`,
+        },
+        {
+          source: '/check-toxicity',
+          destination: `${apiBase}/check-toxicity`,
         },
       ],
     };
