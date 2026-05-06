@@ -8,9 +8,11 @@ import { Client } from '@notionhq/client';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import moment from 'moment';
-// eslint-disable-next-line import/extensions
-import { classifyToxicityInput } from './ml_models.mjs';
-import { getSimilarQuestions, addQuestionToIndex } from './ml_models.mjs';
+import {
+  getSimilarQuestions,
+  addQuestionToIndex,
+  classifyToxicityInput,
+} from './ml_models.mjs';
 
 dotenv.config();
 
@@ -52,17 +54,28 @@ const getRichText = (prop) => {
   return '';
 };
 
-// eslint-disable-next-line no-confusing-arrow
-const getCheckbox = (prop) =>
-  prop && typeof prop.checkbox === 'boolean' ? prop.checkbox : false;
-// eslint-disable-next-line no-confusing-arrow
-const getDateStart = (prop) => (prop && prop.date ? prop.date.start : null);
-// eslint-disable-next-line no-confusing-arrow
-const getNumber = (prop) =>
-  prop && prop.number !== undefined && prop.number !== null
-    ? prop.number
-    : null;
+const getCheckbox = (prop) => {
+  if (prop && typeof prop.checkbox === 'boolean') {
+    return prop.checkbox;
+  }
+  return false;
+};
 
+const getDateStart = (prop) => {
+  if (prop && prop.date) {
+    return prop.date.start;
+  }
+  return null;
+};
+
+const getNumber = (prop) => {
+  if (prop && prop.number !== undefined && prop.number !== null) {
+    return prop.number;
+  }
+  return null;
+};
+
+// -- ANONYMOUS Q&A FORUM CODE BELOW --//
 async function getQuestionsAndAnswers(databaseId) {
   let allPages = [];
   let startCursor;
@@ -70,8 +83,8 @@ async function getQuestionsAndAnswers(databaseId) {
   while (true) {
     const resp = await qaForumNotion.databases.query({
       database_id: databaseId,
-      //sorting the questions from newest to oldest
-      sorts: [{property: 'Timestamp', direction: 'descending' }],
+      // sorting the questions from newest to oldest
+      sorts: [{ property: 'Timestamp', direction: 'descending' }],
       ...(startCursor ? { start_cursor: startCursor } : {}),
     });
     allPages = allPages.concat(resp.results || []);
@@ -120,13 +133,12 @@ async function getQuestionsAndAnswers(databaseId) {
   });
 
   // attach answers to each questions at end
-  questions.forEach((q) => {
-    const list = answers[q.QuestionID] || [];
-    list.sort((a, b) => new Date(a.Timestamp) - new Date(b.Timestamp));
-    q.Answers = list;
-  });
-
-  return questions;
+  return questions.map((q) => ({
+    ...q,
+    Answers: (answers[q.QuestionID] || []).sort(
+      (a, b) => new Date(a.Timestamp) - new Date(b.Timestamp),
+    ),
+  }));
 }
 
 // get questions and answers endpt
@@ -139,7 +151,6 @@ app.get('/qas', async (req, res) => {
     const qa = await getQuestionsAndAnswers(dbId);
     return res.json(qa);
   } catch (err) {
-    console.error('Error fetching QAs:', JSON.stringify(err, null, 2));
     return res.status(500).json({ error: 'Failed to fetch QAs' });
   }
 });
@@ -150,13 +161,11 @@ app.get('/get-similar-questions', jsonParser, async (req, res) => {
     const neighbors = await getSimilarQuestions(question);
     res.json(neighbors);
   } catch (err) {
-    console.error('error in similar questions: ', err);
     res.status(500).json({ error: 'Failed to fetch similar questions' });
   }
 });
 
 // q&a post functions
-// eslint-disable-next-line consistent-return
 app.post('/post-question', jsonParser, async (req, res) => {
   try {
     const { question, timestamp } = req.body;
@@ -167,18 +176,14 @@ app.post('/post-question', jsonParser, async (req, res) => {
 
     // checking toxicity
     const result = await classifyToxicityInput(question);
-    // const toxicThreshold = 0.8; // adjust as needed
-    // const isToxic = result.some(r => r.label === 'toxic' && r.score >= toxicThreshold);
     if (result[0].label === 'toxic') {
-      // console.log('Blocked question for toxicity:', result);
       return res
         .status(403)
         .json({ error: 'Question rejected due to toxic language' });
     }
-    //till 2057.
     const generateQuestionID = () => {
-      const ts = Math.floor(Date.now() / 100000); // taking the timestamp in seconds/100 to reduce length
-      const randomnum = Math.floor(10 + Math.random() * 90); // 2 digit random number
+      const ts = Math.floor(Date.now() / 100000);
+      const randomnum = Math.floor(10 + Math.random() * 90);
       return Number(`${ts}${randomnum}`);
     };
 
@@ -200,7 +205,6 @@ app.post('/post-question', jsonParser, async (req, res) => {
           number: questionID,
         },
         AnswerID: {
-          // rich_text: [{ text: { content: '' } }], // empty for questions
           number: 0, // 0 for questions, will be updated for answers
         },
         Authenticated: {
@@ -213,14 +217,13 @@ app.post('/post-question', jsonParser, async (req, res) => {
         },
       },
     });
-    res.status(200).json({
+    return res.status(200).json({
       message: 'Question posted successfully',
       notionId: response.id,
       questionID,
     });
   } catch (error) {
-    console.error('Error posting question:', error);
-    res
+    return res
       .status(500)
       .json({ error: 'Failed to post question', details: error.message });
   }
@@ -229,7 +232,6 @@ app.post('/post-question', jsonParser, async (req, res) => {
 async function getAnswersForQuestion(questionId) {
   let allPages = [];
   let startCursor;
-  // eslint-disable-next-line no-constant-condition
   while (true) {
     const resp = await qaForumNotion.databases.query({
       database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
@@ -368,7 +370,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
       },
     });
 
-    res.status(200).json({
+    return res.status(200).json({
       message: 'Answer posted successfully',
       notionId: response.id,
       answerID,
@@ -377,13 +379,12 @@ app.post('/post-answer', jsonParser, async (req, res) => {
       netid,
     });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to post answer' });
+    return res.status(500).json({ error: 'Failed to post answer' });
   }
 });
 
-// // returns category : switch this out when using the actual board!!
+// -- EXTERNAL OPPS BOARD CODE BELOW --//
 const getType = (properties) => properties.Type.multi_select[0].name;
-// const getType = (properties) => properties.Type.select.name;
 
 //  returns name/title of opportunity
 const getName = (properties) => {
@@ -433,8 +434,7 @@ async function filterRecentOpportunities(data) {
   // Directly return the filtered data without using a block
   return data.filter(
     (page) =>
-      // eslint-disable-next-line implicit-arrow-linebreak
-      page.properties.Expires.date && // eslint-disable-line operator-linebreak
+      page.properties.Expires.date &&
       moment(page.properties.Expires.date.start).isAfter(curr),
   );
 }
@@ -447,22 +447,21 @@ app.get('/external-opps-api', jsonParser, async (req, res) => {
   const filteredRes = await filterRecentOpportunities(results.results);
 
   const tempRes = filteredRes.map((item) => ({
-    icon: item.icon?.emoji || '💡', // eslint-disable-line operator-linebreak
-    title: getName(item.properties), // eslint-disable-line operator-linebreak
-    location: getLocation(item.properties), // eslint-disable-line operator-linebreak
-    date: item.properties.Expires.date.start, // eslint-disable-line operator-linebreak
-    time: getTime(item.properties), // eslint-disable-line operator-linebreak
-    description:
-      // eslint-disable-next-line max-len
-      getDescription(item.properties), // eslint-disable-line operator-linebreak
-    link: getURL(item.properties), // eslint-disable-line operator-linebreak
-    category: getType(item.properties), // eslint-disable-line operator-linebreak
-    expires: getExpiration(item.properties), // eslint-disable-line operator-linebreak
+    icon: item.icon?.emoji || '💡',
+    title: getName(item.properties),
+    location: getLocation(item.properties),
+    date: item.properties.Expires.date.start,
+    time: getTime(item.properties),
+    description: getDescription(item.properties),
+    link: getURL(item.properties),
+    category: getType(item.properties),
+    expires: getExpiration(item.properties),
   }));
 
   res.json(tempRes);
 });
 
+// -- GENERIC SERVER SETUP BELOW --//
 const PORT = process.env.PORT || 4000; // dev port fallback
 
 if (process.env.NODE_ENV === 'production') {
@@ -478,21 +477,15 @@ if (process.env.NODE_ENV === 'production') {
   const credentials = { key: privateKey, cert: certificate };
 
   const httpsServer = https.createServer(credentials, app);
-  httpsServer.listen(443, () => {
-    console.log('HTTPS server running on port 443');
-  });
+  httpsServer.listen(443, () => {});
 
   // redirect all HTTP traffic to HTTPS
   const httpApp = express();
   httpApp.use((req, res) => {
     res.redirect(`https://${req.headers.host}${req.url}`);
   });
-  http.createServer(httpApp).listen(80, () => {
-    console.log('HTTP redirect server running on port 80');
-  });
+  http.createServer(httpApp).listen(80, () => {});
 } else {
   // Development: just run HTTP locally
-  app.listen(PORT, () => {
-    console.log(`Dev server running on http://localhost:${PORT}`);
-  });
+  app.listen(PORT, () => {});
 }
