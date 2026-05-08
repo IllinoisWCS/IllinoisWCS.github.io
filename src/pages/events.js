@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import CurrentEventPopup from '../components/events/CurrentEvent';
 import styles from '@/styles/pages/Events.module.css';
@@ -33,13 +34,9 @@ function Events() {
     (event) => event.category === currentSeason,
   );
 
-  const otherEvents = events.filter(
-    (event) => event.category === nextSeason,
-  );
+  const otherEvents = events.filter((event) => event.category === nextSeason);
 
-  const lastEvents = events.filter(
-    (event) => event.category === lastSeason,
-  );
+  const lastEvents = events.filter((event) => event.category === lastSeason);
 
   const renderEventRow = (event) => {
     const committeeSlug = event.committee
@@ -72,11 +69,7 @@ function Events() {
               with questions.
             </p>
 
-            {event.date && (
-              <p className={styles.dateRange}>
-                {event.date}
-              </p>
-            )}
+            {event.date && <p className={styles.dateRange}>{event.date}</p>}
 
             {event.timeline && event.timeline.some(Boolean) && (
               <ul>
@@ -99,7 +92,7 @@ function Events() {
         </ComputerWindow>
 
         <img
-          src={`/assets/img/events/${event.name}.jpg`}
+          src={event.image}
           alt={event.name}
           className={styles.eventImage}
           onError={(e) => {
@@ -113,7 +106,7 @@ function Events() {
   return (
     <div className={styles.eventsContainer}>
       <ComputerWindow className={styles.title} showButtons={false}>
-        <h2>Events</h2>
+        <h2>Flagship Events</h2>
       </ComputerWindow>
 
       <CurrentEventPopup />
@@ -135,6 +128,19 @@ function Events() {
       </ComputerWindow>
 
       {lastEvents.map(renderEventRow)}
+      <div className={styles.descriptionContainer}>
+        <div className={styles.description}>
+          <p>
+            These are just the beginning! To see our smaller events such as
+            workshops, coffee chats, and socials, view the Upcoming Events
+            section on our{' '}
+            <Link href="/">
+              <p>home page</p>
+            </Link>
+            .
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
