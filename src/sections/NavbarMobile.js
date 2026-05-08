@@ -41,7 +41,6 @@ export default function NavbarMobile({ handleLinkClick }) {
         label="Events"
         onClick={handleLinkClick}
       />
-
       <NavLink
         className={styles.burger}
         href="https://illinoiswcs.medium.com/"
