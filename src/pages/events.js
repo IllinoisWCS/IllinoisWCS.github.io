@@ -133,11 +133,7 @@ function Events() {
           <p>
             These are just the beginning! To see our smaller events such as
             workshops, coffee chats, and socials, view the Upcoming Events
-            section on our{' '}
-            <Link href="/">
-              <p>home page</p>
-            </Link>
-            .
+            section on our<Link href="/"><p>home page</p></Link>.
           </p>
         </div>
       </div>
