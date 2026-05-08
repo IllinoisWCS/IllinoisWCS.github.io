@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import CurrentEventPopup from '../components/events/CurrentEvent';
 import styles from '@/styles/pages/Events.module.css';
@@ -133,7 +132,7 @@ function Events() {
           <p>
             These are just the beginning! To see our smaller events such as
             workshops, coffee chats, and socials, view the Upcoming Events
-            section on our<Link href="/"><p>home page</p></Link>.
+            section on our home page.
           </p>
         </div>
       </div>
