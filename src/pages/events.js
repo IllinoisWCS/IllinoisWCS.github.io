@@ -25,7 +25,7 @@ function Events() {
   } else {
     currentSeason = 'Summer';
     nextSeason = 'Fall';
-    lastSeason = 'Spring';
+    lastSeason = 'Fall';
   }
 
   // filter events dynamically
