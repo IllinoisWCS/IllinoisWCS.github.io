@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/PastEvents.module.css';
 import UpcomingEvent from '../components/events/UpcomingEvent';
+import StyledButton from '../components/StyledButton';
 
 function PastEvents() {
   const [events, setEvents] = useState([]);
@@ -91,6 +92,18 @@ function PastEvents() {
       <ComputerWindow className={styles.title} showButtons={false}>
         <h2>Past Events</h2>
       </ComputerWindow>
+      <div className={styles.calendarButtonContainer}>
+        <StyledButton
+          onClick={() => {
+            window.open(
+              'https://calendar.google.com/calendar/u/0/embed?src=3c28gpprcnos0q251odnl877mc@group.calendar.google.com&ctz=America/Chicago',
+              '_blank',
+            );
+          }}
+        >
+          <h3 className={styles.wcsCalendarText}>Join our Google Calendar</h3>
+        </StyledButton>
+      </div>
       {events.length === 0 ? (
         <ComputerWindow showTopbar={false} className={styles.subHeader}>
           <h3>Loading events...</h3>
