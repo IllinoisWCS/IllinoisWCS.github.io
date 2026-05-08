@@ -37,6 +37,7 @@ body {
   max-width: 100vw;
   background-color: #ffd6d9;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {

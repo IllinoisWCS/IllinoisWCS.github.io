@@ -32,7 +32,7 @@ export default function Team() {
     const committeeSlug = title.replace(/\s+/g, '-');
 
     return (
-      <div className={styles.outerContainer}>
+      <div id={title.toLowerCase()} className={styles.outerContainer}>
         <div
           id={`committee-${committeeSlug}`}
           className={`${styles[`committee${position}`]} ${styles.committee}`}
@@ -74,7 +74,12 @@ export default function Team() {
       <ComputerWindow className={styles.title} showButtons={false}>
         <h1>Our Team</h1>
       </ComputerWindow>
-
+      {/* <img
+        className={styles.teamPic}
+        src="/assets/img/committees/board.jpg"
+        alt="team"
+      /> */}
+      <div id="exec-board" />
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h2>Executive Board</h2>
       </ComputerWindow>
