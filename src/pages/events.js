@@ -1,6 +1,6 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import CurrentEventPopup from '../components/events/CurrentEvent';
-import styles from '@/styles/pages/events.module.css';
+import styles from '@/styles/pages/Events.module.css';
 import events from '@/data/events.json';
 
 function Events() {
