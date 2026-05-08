@@ -7,6 +7,18 @@
   margin-bottom: 4rem;
 }
 
+.descriptionContainer{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
 .title {
   margin-top: 2rem;
   width: 90%;
