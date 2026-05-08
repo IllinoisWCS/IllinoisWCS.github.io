@@ -1,18 +1,32 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import CurrentEventPopup from '../components/events/CurrentEvent';
 import styles from '@/styles/pages/events.module.css';
-import homeStyles from '@/styles/pages/Home.module.css';
 import events from '@/data/events.json';
 
 function Events() {
   // determine current season
   const month = new Date().getMonth(); // 0–11
-  const isFall = month >= 5 && month <= 11; // June–Dec
+  const isFall = month >= 8 && month <= 11; // June–Dec
+  const isSpring = month >= 0 && month <= 4;
   // can test:
   // const isFall = true
 
-  const currentSeason = isFall ? 'Fall' : 'Spring';
-  const otherSeason = isFall ? 'Spring' : 'Fall';
+  let currentSeason = null;
+  let nextSeason = null;
+  let lastSeason = null;
+  if (isFall) {
+    currentSeason = 'Fall';
+    nextSeason = 'Spring';
+    lastSeason = 'Summer';
+  } else if (isSpring) {
+    currentSeason = 'Spring';
+    nextSeason = 'Summer';
+    lastSeason = 'Fall';
+  } else {
+    currentSeason = 'Summer';
+    nextSeason = 'Fall';
+    lastSeason = 'Spring';
+  }
 
   // filter events dynamically
   const currentEvents = events.filter(
@@ -20,7 +34,11 @@ function Events() {
   );
 
   const otherEvents = events.filter(
-    (event) => event.category === otherSeason,
+    (event) => event.category === nextSeason,
+  );
+
+  const lastEvents = events.filter(
+    (event) => event.category === lastSeason,
   );
 
   const renderEventRow = (event) => {
@@ -72,10 +90,9 @@ function Events() {
               <a
                 href={event.registrationLink}
                 target="_blank"
-                rel="noreferrer"
-                className={styles.registerLink}
+                rel="noopener noreferrer"
               >
-                Register Here
+                <p className={styles.registerLink}>Register Here</p>
               </a>
             )}
           </div>
@@ -102,16 +119,22 @@ function Events() {
       <CurrentEventPopup />
 
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
-        <h2 className={homeStyles.header}>{currentSeason} Events</h2>
+        <h2>{currentSeason} Events</h2>
       </ComputerWindow>
 
       {currentEvents.map(renderEventRow)}
 
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
-        <h2 className={homeStyles.header}>{otherSeason} Events</h2>
+        <h2>{nextSeason} Events</h2>
       </ComputerWindow>
 
       {otherEvents.map(renderEventRow)}
+
+      <ComputerWindow className={styles.subHeader} showTopbar={false}>
+        <h2>{lastSeason} Events</h2>
+      </ComputerWindow>
+
+      {lastEvents.map(renderEventRow)}
     </div>
   );
 }

@@ -8,7 +8,7 @@
 }
 
 .popupBox {
-  background: url('/assets/img/events/BinaryForCurrentEvents.png') center/cover no-repeat;
+  background: url('/assets/img/events/Redesign.png') center/cover no-repeat;
 
   padding: 1.5rem 2rem;
   border-radius: 16px;
@@ -85,6 +85,11 @@
   background-color: #e6a8a8;
 }
 
+.registerLink {
+  text-decoration: none;
+  color: var(--wcs-pink);
+}
+
 .registerLinkWrapper {
   text-decoration: none;
 }
@@ -94,11 +99,13 @@
   .popupBox {
     flex-direction: column;
     align-items: center;
+    background: url('/assets/img/events/Redesign.png') left/cover no-repeat;
   }
 
   .leftContent {
     align-items: center;
     text-align: center;
+    width:80%;
   }
 
   .buttonGroup {

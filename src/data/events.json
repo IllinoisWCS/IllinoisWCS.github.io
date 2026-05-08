@@ -3,12 +3,25 @@
     "name": "Bits & Bytes",
     "registrationLink": null,
     "learnMoreBlurb": "Bits & Bytes is Women in CS’s flagship mentorship program that pairs underclassmen (Bits) with upperclassmen (Bytes) for a semester of honest advice, guidance, and community. It’s a great fit for freshmen, transfer students, or anyone looking for guidance around classes, majors, internships, or navigating campus life. We also host low-pressure events throughout the semester focused on bonding and mentorship. You do not need to be a woman or in CS to join, and the program is open to everyone, whether you want to become a Bit and get mentorship or become a Byte and mentor someone else.",
+    "category": "Summer",
+    "timeline": [
+      null
+    ],
+    "date": null,
+    "committee": "Mentoring",
+    "current": false
+  },
+  {
+    "name": "Bits & Bytes",
+    "registrationLink": null,
+    "learnMoreBlurb": "Bits & Bytes is Women in CS’s flagship mentorship program that pairs underclassmen (Bits) with upperclassmen (Bytes) for a semester of honest advice, guidance, and community. It’s a great fit for freshmen, transfer students, or anyone looking for guidance around classes, majors, internships, or navigating campus life. We also host low-pressure events throughout the semester focused on bonding and mentorship. You do not need to be a woman or in CS to join, and the program is open to everyone, whether you want to become a Bit and get mentorship or become a Byte and mentor someone else.",
     "category": "Fall",
     "timeline": [
       null
     ],
     "date": null,
-    "committee": "Mentoring"
+    "committee": "Mentoring",
+    "current": false
   },
   {
     "name": "Code Ada",
@@ -19,7 +32,8 @@
       null
     ],
     "date": null,
-    "committee": "Explorations"
+    "committee": "Explorations",
+    "current": false
   },
   {
     "name": "ChicTech",
@@ -30,7 +44,8 @@
       null
     ],
     "date": null,
-    "committee": "Outreach"
+    "committee": "Outreach",
+    "current": false
   },
   {
     "name": "Dev Ada",
@@ -41,7 +56,8 @@
       null
     ],
     "date": null,
-    "committee": "Explorations"
+    "committee": "Explorations",
+    "current": false
   },
   {
     "name": "Bits & Bytes",
@@ -52,7 +68,8 @@
       null
     ],
     "date": null,
-    "committee": "Mentoring"
+    "committee": "Mentoring",
+    "current": false
   },
   {
     "name": "Chicago Retreat",
@@ -63,11 +80,12 @@
       null
     ],
     "date": null,
-    "committee": "Corporate"
+    "committee": "Corporate",
+    "current": false
   },
   {
     "name": "Admitted Women’s Day",
-    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSflToMBxlym7sHJ-s0hgQ_JUp2_wWKcyIPSEEmtUaW03ooNuA/viewform?usp=sharing&ouid=113168480265599020494",
+    "registrationLink": null,
     "learnMoreBlurb": "Admitted Women's Day is WCS's annual event for admitted students in the Siebel School of Computing and Data Science who are interested in exploring what studying CS at Illinois is all about! Participants get a glimpse into the day in the life of a CS student, hear from notable CS faculty, and learn more about the program, community, research, and extracurricular opportunities at Illinois! In addition, students have the opportunity to participate in a hands-on tech workshop, meet current CS students and fellow admits, and take a tour of campus to experience campus life firsthand!",
     "category": "Spring",
     "timeline": [
@@ -75,11 +93,11 @@
     ],
     "date": "April 20",
     "committee": "Outreach",
-    "current": true
+    "current": false
   },
   {
     "name": "Engineering Formal",
-    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSflToMBxlym7sHJ-s0hgQ_JUp2_wWKcyIPSEEmtUaW03ooNuA/viewform?usp=sharing&ouid=113168480265599020494",
+    "registrationLink": null,
     "learnMoreBlurb": "A dressed-up night of music, dancing, and unforgettable memories with members of collaborating engineering orgs, all set in the Union Ballroom. Celebrate our community with us as we near the end of year!",
     "category": "Spring",
     "timeline": [
