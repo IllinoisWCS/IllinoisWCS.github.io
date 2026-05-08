@@ -24,15 +24,17 @@ export default function Team() {
   ) => {
     const officersList = officerData.admin.filter(
       (officer) =>
-        // eslint-disable-next-line implicit-arrow-linebreak, operator-linebreak
         [`${title} Co-Chair`].includes(officer.position) ||
         [`${title} Chair`].includes(officer.position) ||
         [`${title.slice(0, 5)} Co-Chair`].includes(officer.position),
     );
 
+    const committeeSlug = title.replace(/\s+/g, '-');
+
     return (
       <div id={title.toLowerCase()} className={styles.outerContainer}>
         <div
+          id={`committee-${committeeSlug}`}
           className={`${styles[`committee${position}`]} ${styles.committee}`}
         >
           <ComputerWindow
@@ -58,6 +60,7 @@ export default function Team() {
             ))}
           </div>
         </div>
+
         <div className={styles.imgContainer}>
           <img className={styles.img} src={image} alt={image} />
           <p className={styles.imgCaption}>{caption}</p>
@@ -83,17 +86,8 @@ export default function Team() {
 
       <div className={styles.cards}>
         {officerData.admin
-          .filter(
-            (officer) =>
-              // eslint-disable-next-line implicit-arrow-linebreak
-              [
-                'President',
-                'Vice President',
-                'Secretary',
-                'Treasurer',
-              ].includes(officer.position),
-            // eslint-disable-next-line function-paren-newline
-          )
+          .filter((officer) =>
+            ['President', 'Vice President', 'Secretary', 'Treasurer'].includes(officer.position))
           .map((officer, index) => (
             <OfficerCard
               key={index}
@@ -106,21 +100,17 @@ export default function Team() {
       </div>
 
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
-        <h2 id="committeeHeader">Committees</h2>
+        <h2>Committees</h2>
       </ComputerWindow>
 
-      {committeeData.map(
-        (committee, index) =>
-          // eslint-disable-next-line implicit-arrow-linebreak
-          renderCommitteeSection(
-            index % 2 === 0 ? 'Left' : 'Right',
-            committee.name,
-            committee.description,
-            committee.image,
-            committeeCaptions[index],
-          ),
-        // eslint-disable-next-line function-paren-newline
-      )}
+      {committeeData.map((committee, index) =>
+        renderCommitteeSection(
+          index % 2 === 0 ? 'Left' : 'Right',
+          committee.name,
+          committee.description,
+          committee.image,
+          committeeCaptions[index],
+        ))}
     </div>
   );
 }

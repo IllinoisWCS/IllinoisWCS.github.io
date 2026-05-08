@@ -63,6 +63,23 @@ export default function WCSNavbar() {
         <NavLink href="/resources" label="Resources" />
         <NavDropdown />
         <NavLink href="/q&a" label="Q&A" />
+        <NavLink href="/events" label="Events" />
+
+        <div className={styles.medium}>
+          <NavLink
+            href="https://sriya-g.github.io/dev-ada-website/"
+            label="Dev Ada"
+          />
+          <Link href="https://sriya-g.github.io/dev-ada-website/">
+            <Image
+              className={styles.externalLink}
+              src="/assets/design-vectors/externallink.svg"
+              alt="extlink"
+              width="25"
+              height="25"
+            />
+          </Link>
+        </div>
 
         <div className={styles.medium}>
           <NavLink

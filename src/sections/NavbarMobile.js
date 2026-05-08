@@ -37,8 +37,8 @@ export default function NavbarMobile({ handleLinkClick }) {
       />
       <NavLink
         className={styles.burger}
-        href="https://sriya-g.github.io/dev-ada-website/"
-        label="Dev Ada"
+        href="/events"
+        label="Events"
         onClick={handleLinkClick}
       />
       <NavLink
