@@ -14,6 +14,9 @@
     "react/prop-types": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-one-expression-per-line": "off",
+    "react/jsx-curly-newline": "off",
+    "function-paren-newline": "off",
+    "no-await-in-loop": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -32,5 +35,22 @@
     "object-curly-newline": "off",
     "implicit-arrow-linebreak": "off",
     "operator-linebreak": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["src/server/**/*.js"],
+      "rules": {
+        "no-console": "off",
+        "no-unused-vars": "off",
+        "no-await-in-loop": "off",
+        "no-param-reassign": "off",
+        "consistent-return": "off",
+        "eqeqeq": "off",
+        "camelcase": "off",
+        "no-template-curly-in-string": "off",
+        "max-len": "off",
+        "no-constant-condition": "off"
+      }
+    }
+  ]
 }

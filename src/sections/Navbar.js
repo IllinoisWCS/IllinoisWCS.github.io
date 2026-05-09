@@ -62,7 +62,7 @@ export default function WCSNavbar() {
       >
         <NavLink href="/resources" label="Resources" />
         <NavDropdown />
-        <NavLink href="/q&a" label="Q&A" />
+        <NavLink href="/qa" label="Q&A" />
         <NavLink href="/events" label="Events" />
 
         <div className={styles.medium}>
