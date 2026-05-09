@@ -26,7 +26,7 @@ export default function QA() {
   const postPendingAnswer = async (questionID, text, nid, timestamp, token) => {
     setLoadingState(questionID);
     try {
-      const response = await fetch('/post-answer', {
+      const response = await fetch('https://main-api.illinoiswcs.org/post-answer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -58,7 +58,7 @@ export default function QA() {
 
         const alreadyAnswered = question.Answered;
         if (!alreadyAnswered) {
-          await fetch(`/update-question-answered/${questionID}`, {
+          await fetch(`https://main-api.illinoiswcs.org/update-question-answered/${questionID}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: null,
@@ -68,7 +68,7 @@ export default function QA() {
         // BAD!
       }
 
-      const refreshResponse = await fetch('/qas');
+      const refreshResponse = await fetch('https://main-api.illinoiswcs.org/qas');
       if (refreshResponse.ok) {
         const refreshedQuestions = await refreshResponse.json();
         setQuestions(refreshedQuestions || []);
@@ -94,7 +94,7 @@ export default function QA() {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch('/qas');
+        const response = await fetch('https://main-api.illinoiswcs.org/qas');
         if (response.ok) {
           const data = await response.json();
           setQuestions(data || []);
@@ -143,7 +143,7 @@ export default function QA() {
     setLoadingState('question');
     toast.info('Posting your question...');
     try {
-      const response = await fetch('/post-question', {
+      const response = await fetch('https://main-api.illinoiswcs.org/post-question', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -163,7 +163,7 @@ export default function QA() {
       }
 
       setQuestionText('');
-      const refreshResponse = await fetch('/qas');
+      const refreshResponse = await fetch('https://main-api.illinoiswcs.org/qas');
       if (refreshResponse.ok) {
         const refreshedQuestions = await refreshResponse.json();
         setQuestions(refreshedQuestions || []);
@@ -195,7 +195,7 @@ export default function QA() {
 
     // check toxicity before redirecting to points site
     try {
-      const toxicResponse = await fetch('/check-toxicity', {
+      const toxicResponse = await fetch('https://main-api.illinoiswcs.org/check-toxicity', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ content: text }),
@@ -215,7 +215,7 @@ export default function QA() {
     // check for duplicates before redirecting to points site
     try {
       const checkResponse = await fetch(
-        `/check-duplicate-answer?questionID=${questionID}&content=${encodeURIComponent(text)}`,
+        `https://main-api.illinoiswcs.org/check-duplicate-answer?questionID=${questionID}&content=${encodeURIComponent(text)}`,
       );
       const checkData = await checkResponse.json();
       if (checkData.isDuplicate) {
@@ -255,7 +255,7 @@ export default function QA() {
     recommendationsRef.current = new AbortController();
     try {
       const response = await fetch(
-        `/get-similar-questions?question=${encodeURIComponent(text)}`,
+        `https://main-api.illinoiswcs.org/get-similar-questions?question=${encodeURIComponent(text)}`,
         { signal: recommendationsRef.current.signal },
       );
 
