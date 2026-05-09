@@ -34,7 +34,8 @@
     "react/no-array-index-key": "off",
     "object-curly-newline": "off",
     "implicit-arrow-linebreak": "off",
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "import/no-extraneous-dependencies":"off"
   },
   "overrides": [
     {

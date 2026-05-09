@@ -12,7 +12,7 @@ import {
   getSimilarQuestions,
   addQuestionToIndex,
   classifyToxicityInput,
-} from './ml_models.mjs';
+} from './ml_models';
 
 dotenv.config();
 
