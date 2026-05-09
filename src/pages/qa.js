@@ -21,6 +21,7 @@ export default function QA() {
   const [openQuestion, setOpenQuestion] = useState(null);
   const [recommendations, setRecommendations] = useState([]);
   const questionRefs = useRef({});
+  const recommendationsRef = useRef(null);
 
   const postPendingAnswer = async (questionID, text, nid, timestamp, token) => {
     setLoadingState(questionID);
@@ -51,6 +52,21 @@ export default function QA() {
         );
         return;
       }
+      try {
+        const question = questions.find((q) => q.QuestionID === questionID);
+        if (!question) return;
+
+        const alreadyAnswered = question.Answered;
+        if (!alreadyAnswered) {
+          await fetch(`/update-question-answered/${questionID}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: null,
+          });
+        }
+      } catch (error) {
+        // BAD!
+      }
 
       const refreshResponse = await fetch('/qas');
       if (refreshResponse.ok) {
@@ -58,7 +74,8 @@ export default function QA() {
         setQuestions(refreshedQuestions || []);
       }
 
-      toast.success('Answer submitted successfully!');
+      toast.dismiss();
+      toast.success('Answer posted successfully!');
 
       setAnswered(true);
       setOpenQuestion(questionID);
@@ -68,9 +85,7 @@ export default function QA() {
         setOpenQuestion(null);
       }, 500);
     } catch (error) {
-      toastError(
-        'There was an error submitting your answer. Please try again.',
-      );
+      toastError('There was an error posting your answer. Please try again.');
     } finally {
       setLoadingState(null);
     }
@@ -111,7 +126,7 @@ export default function QA() {
         toast.info('Posting your answer...');
         postPendingAnswer(questionID, text, nid, timestamp, token).catch(() => {
           toastError(
-            'There was an error submitting your answer. Please try again.',
+            'There was an error posting your answer. Please try again.',
           );
         });
       }
@@ -123,6 +138,7 @@ export default function QA() {
       toastError('Please enter a question.');
       return;
     }
+    setRecommendations([]);
 
     setLoadingState('question');
     toast.info('Posting your question...');
@@ -153,11 +169,10 @@ export default function QA() {
         setQuestions(refreshedQuestions || []);
       }
 
-      toast.success('Question submitted successfully!');
+      toast.dismiss();
+      toast.success('Question posted successfully!');
     } catch (error) {
-      toastError(
-        'There was an error submitting your question. Please try again.',
-      );
+      toastError('There was an error posting your question. Please try again.');
     } finally {
       setLoadingState(null);
     }
@@ -168,7 +183,7 @@ export default function QA() {
     const nid = netIds[questionID] || '';
 
     if (!questionID) {
-      toastError('Unable to submit: question ID is missing.');
+      toastError('Unable to post: question ID is missing.');
       return;
     }
     if (!text.trim()) {
@@ -230,22 +245,27 @@ export default function QA() {
   // Fetches similar existing questions as the user types to prevent duplicates
   const startTyping = async (typedText) => {
     const text = typedText.target.value;
+    if (recommendationsRef.current) {
+      recommendationsRef.current.abort();
+    }
     if (text.trim().length === 0) {
       setRecommendations([]);
       return;
     }
-    setRecommendations([]);
+    recommendationsRef.current = new AbortController();
     try {
       const response = await fetch(
         `/get-similar-questions?question=${encodeURIComponent(text)}`,
+        { signal: recommendationsRef.current.signal },
       );
+
       const ids = await response.json();
       const similarQuestions = ids.map((id) =>
-        questions.find((q) => q.QuestionID === id),
+        questions.find((q) => q.QuestionID === parseInt(id, 10)),
       );
       setRecommendations(similarQuestions.map((q) => q.Content));
-    } catch (error) {
-      toastError('Error fetching recommendations. Please try again.');
+    } catch {
+      toast.dismiss();
     }
   };
 
@@ -285,9 +305,18 @@ export default function QA() {
         {/* Question Submission Section */}
         <div className={styles.questionSubmissionContainer}>
           <p className={styles.descriptionText}>
-            Have your own question about WCS or looking for something specific?
-            Enter it here! If you&apos;re a WCS member, check out the available
-            questions to provide your own answers.
+            Have questions about Computer Science at UIUC or WCS that you want
+            to ask about anonymously? Ask them here! You can also answer
+            questions to help your peers and earn WCS points. View our community
+            guidelines{' '}
+            <a
+              href="/assets/WCS-QA-Forum-Community-Guidelines.pdf"
+              className={styles.diversityLink}
+              rel="noreferrer"
+            >
+              here
+            </a>
+            .
           </p>
 
           <div className={styles.questionInputWrapper}>

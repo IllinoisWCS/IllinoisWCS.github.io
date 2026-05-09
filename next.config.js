@@ -7,6 +7,10 @@ const nextConfig = {
       fallback: [
         { source: '/post-question', destination: `${apiBase}/post-question` },
         { source: '/post-answer', destination: `${apiBase}/post-answer` },
+        {
+          source: '/update-question-answered/:id',
+          destination: `${apiBase}/update-question-answered/:id`,
+        },
         { source: '/qas', destination: `${apiBase}/qas` },
         {
           source: '/external-opps-api',

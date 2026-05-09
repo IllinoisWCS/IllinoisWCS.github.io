@@ -75,6 +75,13 @@ const getNumber = (prop) => {
   return null;
 };
 
+const getQuestionAnswered = (prop) => {
+  if (prop && prop.checkbox) {
+    return prop.checkbox;
+  }
+  return false;
+};
+
 // -- ANONYMOUS Q&A FORUM CODE BELOW --//
 async function getQuestionsAndAnswers(databaseId) {
   let allPages = [];
@@ -84,7 +91,6 @@ async function getQuestionsAndAnswers(databaseId) {
     const resp = await qaForumNotion.databases.query({
       database_id: databaseId,
       // sorting the questions from newest to oldest
-      sorts: [{ property: 'Timestamp', direction: 'descending' }],
       ...(startCursor ? { start_cursor: startCursor } : {}),
     });
     allPages = allPages.concat(resp.results || []);
@@ -104,6 +110,9 @@ async function getQuestionsAndAnswers(databaseId) {
     const qid = getNumber(props.QuestionID);
     const content = getRichText(props.Content) || '';
     const timestamp = getDateStart(props.Timestamp) || null;
+    const answered = getQuestionAnswered(props.Answered);
+    const lastEditedTime = page.last_edited_time;
+    const createdTime = page.created_time;
 
     // populate questions list
     if (type === 'Question') {
@@ -111,7 +120,10 @@ async function getQuestionsAndAnswers(databaseId) {
         QuestionID: qid,
         Content: content,
         Answers: [],
+        Answered: answered,
         Timestamp: timestamp,
+        LastEditedTime: lastEditedTime,
+        CreatedTime: createdTime,
         _notionPageId: page.id,
       });
       // populate answers map
@@ -125,6 +137,8 @@ async function getQuestionsAndAnswers(databaseId) {
         NetID: netid,
         Authenticated: authenticated,
         Timestamp: timestamp,
+        LastEditedTime: lastEditedTime,
+        CreatedTime: createdTime,
         _notionPageId: page.id,
       };
       answers[qid] = answers[qid] || [];
@@ -133,12 +147,14 @@ async function getQuestionsAndAnswers(databaseId) {
   });
 
   // attach answers to each questions at end
-  return questions.map((q) => ({
-    ...q,
-    Answers: (answers[q.QuestionID] || []).sort(
-      (a, b) => new Date(a.Timestamp) - new Date(b.Timestamp),
-    ),
-  }));
+  return questions
+    .map((q) => ({
+      ...q,
+      Answers: (answers[q.QuestionID] || []).sort(
+        (a, b) => new Date(a.CreatedTime) - new Date(b.CreatedTime),
+      ),
+    }))
+    .sort((a, b) => new Date(b.LastEditedTime) - new Date(a.LastEditedTime));
 }
 
 // get questions and answers endpt
@@ -182,8 +198,8 @@ app.post('/post-question', jsonParser, async (req, res) => {
         .json({ error: 'Question rejected due to toxic language' });
     }
     const generateQuestionID = () => {
-      const ts = Math.floor(Date.now() / 100000);
-      const randomnum = Math.floor(10 + Math.random() * 90);
+      const ts = Math.floor(Date.now() / 100000); // timestamp seconds/100 to reduce length
+      const randomnum = Math.floor(10 + Math.random() * 90); // 2 digit random number
       return Number(`${ts}${randomnum}`);
     };
 
@@ -208,6 +224,9 @@ app.post('/post-question', jsonParser, async (req, res) => {
           number: 0, // 0 for questions, will be updated for answers
         },
         Authenticated: {
+          checkbox: false, // questions are not authenticated
+        },
+        Answered: {
           checkbox: false, // questions are not authenticated
         },
         Timestamp: {
@@ -280,6 +299,7 @@ app.post('/check-toxicity', jsonParser, async (req, res) => {
     if (!content) {
       return res.status(400).json({ error: 'Missing content' });
     }
+
     const result = await classifyToxicityInput(content);
     return res.json({ isToxic: result[0].label === 'toxic' });
   } catch (error) {
@@ -334,7 +354,7 @@ app.post('/post-answer', jsonParser, async (req, res) => {
     const generateAnswerID = () => {
       const ts = Math.floor(Date.now() / 1000);
       const randomnum = Math.floor(10000 + Math.random() * 90000);
-      return Number(`2${ts}${randomnum}`);
+      return Number(`${ts}${randomnum}`);
     };
 
     const answerID = generateAnswerID();
@@ -381,6 +401,47 @@ app.post('/post-answer', jsonParser, async (req, res) => {
   } catch (error) {
     return res.status(500).json({ error: 'Failed to post answer' });
   }
+});
+
+app.patch('/update-question-answered/:id', jsonParser, async (req, res) => {
+  const questionId = parseInt(req.params.id, 10);
+
+  const response = await qaForumNotion.databases.query({
+    database_id: process.env.REACT_APP_PRACTICE_NOTION_DATABASE_ID,
+    filter: {
+      and: [
+        {
+          property: 'QuestionID',
+          number: {
+            equals: questionId,
+          },
+        },
+        {
+          property: 'AnswerID',
+          number: {
+            equals: 0,
+          },
+        },
+      ],
+    },
+  });
+
+  if (response === null) {
+    return res.status(404).send('Question not found');
+  }
+
+  const pageId = response.results[0].id;
+
+  await qaForumNotion.pages.update({
+    page_id: pageId,
+    properties: {
+      Answered: {
+        checkbox: true,
+      },
+    },
+  });
+
+  return res.status(200).json('Updated question to answered.');
 });
 
 // -- EXTERNAL OPPS BOARD CODE BELOW --//

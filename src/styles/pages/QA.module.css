@@ -16,6 +16,15 @@
   position: relative;
 }
 
+.diversityLink {
+  color: var(--wcs-pink);
+  text-decoration: underline;
+}
+
+.diversityLink:hover {
+  color: var(--light-pink);
+}
+
 .sectionContainer {
   width: 80svw;
   margin-top: 4rem;
