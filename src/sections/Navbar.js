@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import NavbarMobile from './NavbarMobile';
+import NavDropdown from '../components/NavDropdown';
 
 import styles from '@/styles/sections/Navbar.module.css';
 
@@ -60,8 +61,9 @@ export default function WCSNavbar() {
         className={`${styles.linksContainer} ${isMenuOpen ? styles.show : ''}`}
       >
         <NavLink href="/resources" label="Resources" />
-        <NavLink href="/team" label="Our Team" />
+        <NavDropdown />
         <NavLink href="/qa" label="Q&A" />
+        <NavLink href="/events" label="Events" />
 
         <div className={styles.medium}>
           <NavLink href="https://illinoiswcs.medium.com/" label="Medium" />

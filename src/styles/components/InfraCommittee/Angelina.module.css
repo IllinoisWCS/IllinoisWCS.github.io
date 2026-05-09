@@ -1,0 +1,86 @@
+.azcard {
+  cursor: pointer;
+  border-radius: 1rem;
+  border: solid 4px pink;
+  padding: 10px;
+  width: 250px;
+  height: 275px;
+  transition: all 0.5s ease;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 4px var(--wcs-pink);
+}
+
+.azcard:hover {
+  box-shadow: 0 2px 10px var(--wcs-pink);
+}
+
+.azcard.expanded {
+  width: 300px;
+  padding: 20px;
+  background: #fff8f0;
+}
+
+.aztop {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: 0.3s ease;
+}
+
+.azphoto {
+  border-radius: 50%;
+  border: 3px double pink;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.azphoto:hover {
+  box-shadow: 0 1px 2px var(--wcs-pink);
+}
+
+.aztext {
+  position: relative;
+  margin-top: 8px;
+  border-radius: 15px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  width: 200px;
+}
+
+.azname {
+  position: absolute;
+  padding: 15px;
+  text-align: center;
+  color: var(--wcs-blue);
+  font-size: 1rem;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  width: 200px;
+  word-wrap: break-word;
+}
+
+.azfadeIn {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.azfadeOut {
+  opacity: 0;
+  transform: translateY(-5px);
+  z-index: 1;
+}
+
+.azfunFact {
+  margin-top: 15px;
+  text-align: center;
+  font-style: italic;
+  color: #4a4a4a;
+  transition: opacity 0.5s ease;
+}

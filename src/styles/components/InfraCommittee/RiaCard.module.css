@@ -1,0 +1,109 @@
+.container {
+  background: white;
+  width: 180px;
+  height: 271px;
+  border-radius: 1rem;
+  overflow: hidden; /*Stops effects from going beyond the container*/
+  position: relative; /*Needed to let the page scroll down, otherwise it glitches*/
+  transition: all 0.3s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  gap: 10px;
+  cursor: pointer;
+  border: 7px solid var(--wcs-pink);
+}
+
+.img {
+  border: 6px solid var(--wcs-blue);
+  border-radius: 100%;
+  height: 130px;
+  width: 130px;
+  min-width: 130px;
+  min-height: 130px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.expanded {
+  /*Keep dimensions of expanded container proportional to regular container!*/
+  width: 240px;
+  height: 361px;
+}
+
+.name {
+  color: var(--wcs-pink);
+  text-align: center;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.namePosition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.details {
+  color: var(--wcs-blue);
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.closeButton {
+  /*future: want to make  button similar to "Past Events" button in Upcoming Events Section*/
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  padding: 8px 16px;
+  border-radius: 0.5rem;
+  background-color: var(--wcs-pink);
+  color: white;
+  cursor: pointer;
+}
+
+/*Cool shimmer animation! xD*/
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 30%
+  );
+  transform: rotate(90deg);
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.container:hover::before {
+  animation: shimmer 1s linear forwards;
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translate(-100%, -100%) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 100%) rotate(45deg);
+    opacity: 0;
+  }
+}
