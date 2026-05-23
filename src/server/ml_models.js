@@ -4,14 +4,19 @@ import hnswlib from 'hnswlib-node';
 import fs from 'fs';
 import dotenv from 'dotenv';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-dotenv.config({ path: path.resolve('.env') }); // not sure if this is for my system only... inconsistent location every time.
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+
+dotenv.config({ path: path.resolve(dirname, '../../.env') });
 
 // ====== REPEAT DETECTION COMPONENTS ======
 // set up API calling -  can't load repeat detection model, can only call via api
 const { HF_API_KEY } = process.env;
 
-const MAPPING_PATH = 'src/server/data/questions_mapping.json';
+const MAPPING_PATH = './data/questions_mapping.json';
+const INDEX_PATH = './data/questions.index';
 
 function loadMapping() {
   return fs.existsSync(MAPPING_PATH)
@@ -69,8 +74,8 @@ async function createEmbedding(text) {
 
 async function getSimilarQuestions(question) {
   const questionIndex = new hnswlib.HierarchicalNSW('cosine', 384);
-  if (fs.existsSync('src/server/data/questions.index')) {
-    questionIndex.readIndexSync('src/server/data/questions.index');
+  if (fs.existsSync(INDEX_PATH)) {
+    questionIndex.readIndexSync(INDEX_PATH);
   } else {
     return [];
   }
@@ -103,8 +108,8 @@ async function addQuestionToIndex(question, questionId) {
   const questionIndex = new hnswlib.HierarchicalNSW('cosine', 384);
   const mapping = loadMapping();
 
-  if (fs.existsSync('src/server/data/questions.index')) {
-    questionIndex.readIndexSync('src/server/data/questions.index');
+  if (fs.existsSync(INDEX_PATH) && fs.statSync(INDEX_PATH).isFile()) {
+    questionIndex.readIndexSync(INDEX_PATH);
   } else {
     questionIndex.initIndex(50000); // maximum number of elements index can hold.
   }
@@ -113,7 +118,7 @@ async function addQuestionToIndex(question, questionId) {
   const embedding = await createEmbedding(question);
   questionIndex.addPoint(embedding, internalIndex);
   mapping[internalIndex] = questionId;
-  questionIndex.writeIndexSync('src/server/data/questions.index');
+  questionIndex.writeIndexSync(INDEX_PATH);
   saveMapping(mapping);
 }
 // ------END OF REPEAT DETECTION COMPONENTS
