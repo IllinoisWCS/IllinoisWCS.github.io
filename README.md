@@ -3,7 +3,7 @@
 ## About
 
 This is the main website for Women in Computer Science at UIUC. It is deployed at https://illinoiswcs.org and https://wcs.illinois.edu
-Current owners are Kirthi Shankar (@kikis05) and Helena Ilic (@helenailic).
+Current owners are Avaya Agarwal (@avaya123) and Saumya Agarwal (@saumya-cs).
 
 ## Local Development
 
