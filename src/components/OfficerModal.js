@@ -12,12 +12,11 @@ function OfficerInformation(
     year,
     major,
     position,
-    place,
-    involvements,
-    interests,
-    hobbies,
+    favCodingLanguage,
+    dreamJob,
     fact,
-    advice,
+    whyWCS,
+    darkmode,
     email,
     netid,
     linkedin,
@@ -111,28 +110,25 @@ function OfficerInformation(
                   {year}
                 </p>
                 <p>
-                  <b>From: </b>
-                  {place}
+                  <b>Favorite Coding Language: </b>
+                  {favCodingLanguage}
                 </p>
                 <p>
-                  <b>Involvements: </b>
-                  {involvements}
+                  <b>Dream Job in Tech: </b>
+                  {dreamJob}
                 </p>
-                <p>
-                  <b>Interests: </b>
-                  {interests}
-                </p>
-                <p>
-                  <b>Hobbies: </b>
-                  {hobbies}
-                </p>
+
                 <p>
                   <b>Fun Fact: </b>
                   {fact}
                 </p>
                 <p>
-                  <b>Advice: </b>
-                  {advice}
+                  <b>Why WCS: </b>
+                  {whyWCS}
+                </p>
+                <p>
+                  <b>Dark Mode or Light Mode: </b>
+                  {darkmode}
                 </p>
               </div>
 
