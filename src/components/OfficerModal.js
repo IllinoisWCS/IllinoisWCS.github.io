@@ -39,6 +39,8 @@ function OfficerInformation(
                   width={400}
                   height={400}
                   alt={name}
+                  sizes="(max-width: 900px) 40vw, 18vw"
+                  quality={80}
                 />
               </div>
 
