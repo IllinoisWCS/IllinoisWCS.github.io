@@ -102,15 +102,6 @@
   animation: shimmer 3s infinite;
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: left;
-  }
-  100% {
-    background-position: right;
-  }
-}
-
 .platinum::before {
   content: 'Platinum Tier';
 }
@@ -122,4 +113,31 @@
   padding-right: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.platinum-devada::before {
+  content: 'Platinum Tier / Dev Ada Sponsor';
+}
+
+.platinum-devada::after {
+  background: linear-gradient(
+    to right,
+    #337ab7 0%,
+    #337ab7 30%,
+    #998ee1 40%,
+    #337ab7 50%,
+    #337ab7 160%
+  );
+  rotate: 170deg;
+  background-size: 300% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
