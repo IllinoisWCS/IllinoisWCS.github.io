@@ -10,7 +10,9 @@ export default function Infra() {
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h2>2026-2027</h2>
       </ComputerWindow>
-      <div className={styles.cards}></div>
+      <div className={styles.cards}>
+        {/* add your card below this line */}
+      </div>
     </div>
   );
 }
