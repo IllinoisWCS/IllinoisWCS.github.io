@@ -1,5 +1,6 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
+import OmuleComponent from '@/components/infra-committee/ovee';
 
 export default function Infra() {
   return (
@@ -10,7 +11,9 @@ export default function Infra() {
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h2>2026-2027</h2>
       </ComputerWindow>
-      <div className={styles.cards}></div>
+      <div className={styles.cards}>
+        <OmuleComponent />
+      </div>
     </div>
   );
 }
