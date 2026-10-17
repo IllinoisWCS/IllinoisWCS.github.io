@@ -1,0 +1,48 @@
+.ashra_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.ashra_photo{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.ashra_name{
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c0471;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ashra_button{
+    padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color: #010110;
+   background-color: #ba9bf1;
+}
+
+.arButton:hover {
+  background-color: #6d28d9;        
+  transform: scale(1.05);         
+}
+
+.ashra_fact{
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #201dc8;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
