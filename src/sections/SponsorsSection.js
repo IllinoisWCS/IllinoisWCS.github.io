@@ -9,6 +9,13 @@ export default function SponsorsSection() {
         <div>
           <div className={styles.sponsors}>
             <Sponsor
+              sponsor="Intuit.jpg"
+              url="https://www.intuit.com/"
+              tier="platinum-devada"
+            />
+          </div>
+          <div className={styles.sponsors}>
+            <Sponsor
               sponsor="visa.png"
               url="https://usa.visa.com/careers.html"
               tier="gold"
