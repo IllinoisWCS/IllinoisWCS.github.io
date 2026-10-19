@@ -20,10 +20,18 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
           rel="stylesheet"
         />
+
       </Head>
       <body>
         <Main />
         <NextScript />
+        {/* Cloudflare Web Analytics */}
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "5bad5165ccb9413a9bbc769220e46a03"}'
+        />
+        {/* End Cloudflare Web Analytics */}
       </body>
     </Html>
   );

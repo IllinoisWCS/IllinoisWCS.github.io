@@ -1,0 +1,30 @@
+.container {
+  color: var(--wcs-pink);
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-decoration: underline solid;
+  background-color: transparent;
+  border: none;
+}
+
+.container:hover {
+  cursor: pointer;
+  color: #f38c93;
+}
+
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(231, 84, 128, 0.3);
+  border-top-color: var(--wcs-pink);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

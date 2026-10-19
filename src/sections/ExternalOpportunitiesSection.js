@@ -19,12 +19,14 @@ export default function ExternalOpportunitiesSection() {
   //  this will contain the data from notion
   const [opportunities, setOpportunities] = useState([{}]);
   const [notionDataFetched, setNotionDataFetched] = useState(true);
+  const disabled = false;
 
   //  this fetches the opportunities data and assigns it to opportunities (above)
   //   You can use the map function to iterate through the opportunities.
 
   useEffect(() => {
     fetch('https://main-api.illinoiswcs.org/external-opps-api')
+      // fetch('http://localhost:4000/external-opps-api')
       .then((response) => response.json())
       .then((data) => {
         setOpportunities(data);
@@ -34,8 +36,8 @@ export default function ExternalOpportunitiesSection() {
       });
   }, []);
 
-  if (!notionDataFetched) {
-    return <ResourcesNotLoaded />;
+  if (!notionDataFetched || disabled) {
+    return <ResourcesNotLoaded pageName="external-opportunities" />;
   }
 
   return (

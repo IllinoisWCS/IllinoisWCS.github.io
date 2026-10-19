@@ -31,8 +31,14 @@ export default function NavbarMobile({ handleLinkClick }) {
       />
       <NavLink
         className={styles.burger}
-        href="/q&a"
+        href="/qa"
         label="Q&A"
+        onClick={handleLinkClick}
+      />
+      <NavLink
+        className={styles.burger}
+        href="/events"
+        label="Events"
         onClick={handleLinkClick}
       />
       <NavLink

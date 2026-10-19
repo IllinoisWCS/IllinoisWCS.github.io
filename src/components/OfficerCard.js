@@ -27,7 +27,9 @@ export default function OfficerCard({ name, position, netid, officer }) {
           src={`/assets/img/officers/${netid}.jpg`}
           width={200}
           height={200}
-          alt={officer}
+          alt={name}
+          sizes="130px"
+          quality={75}
         />
         <div className={styles.namePosition}>
           <h4 className={`${styles.name}`}>{name}</h4>
