@@ -64,7 +64,7 @@ export default function WCSNavbar() {
         <NavDropdown />
         <NavLink href="/qa" label="Q&A" />
         <NavLink href="/events" label="Events" />
-
+        <NavLink href="/alumni-map" label="Alumni Map" />
         <div className={styles.medium}>
           <NavLink href="https://illinoiswcs.medium.com/" label="Medium" />
           <Link href="https://illinoiswcs.medium.com/">
