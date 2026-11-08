@@ -1,0 +1,18 @@
+
+{
+  "memberName": "Alex Student",
+  "academicYear": "2026-2027",
+  "totalEvents": 24,
+  "totalHours": 36,
+  "eventCategories": {
+    "generalMeetings": 5,
+    "openOfficeHours": 4,
+    "flagshipEvents": 3,
+    "workshops": 7,
+    "socials": 5
+  },
+  "topEvent": "Web Development Workshop",
+  "busiestMonth": "October",
+  "badge": "Workshop Regular"
+}
+

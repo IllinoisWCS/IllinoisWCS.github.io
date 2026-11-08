@@ -1,0 +1,218 @@
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.slide {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  scroll-snap-align: start;
+}
+
+.intro {
+  background: linear-gradient(135deg, #ffb4d8, #ff8b91, #fff0c2, #a9e4f0);
+  color: white;
+}
+
+.eventMix {
+  background-color: #fff8f9;
+  color: #e2626a;
+}
+
+.totalHours {
+  background-color: #a4dddf;
+  color: #244b50;
+}
+
+.topEvent {
+  background-color: #efa9ae;
+  color: white;
+}
+
+.outro {
+  background-color: #69c7cb;
+  color: white;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 22px;
+  max-width: 600px;
+}
+
+
+.slide button {
+  margin: 20px 10px 0;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  color: #e2626a;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.slide button:hover {
+  transform: scale(1.05);
+}
+
+.progress {
+  position: fixed;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.activeDot {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.eventList {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.eventItem {
+  width: 100%;
+  text-align: left;
+}
+
+.eventLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.barTrack {
+  width: 100%;
+  height: 16px;
+  background-color: #f5dadd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, #e2626a, #efa9ae);
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+.hoursLabel {
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hoursNumber {
+  font-size: 150px;
+  line-height: 1;
+  margin: 10px 0;
+  font-weight: 900;
+}
+
+.hoursWord {
+  font-size: 36px;
+  letter-spacing: 8px;
+  margin: 0 0 25px;
+}
+
+.hoursExtra {
+  font-size: 18px;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.topEventLabel {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.topEventCard {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  margin: 15px 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #e2626a;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.topEventCard p,
+.badgeCard p {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.topEventCard h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.badgeCard {
+  width: 100%;
+  max-width: 500px;
+  padding: 25px;
+  margin: 15px 0;
+  background-color: #fff0c2;
+  color: #8a5b24;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.badgeCard h2 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.busiestMonth {
+  font-size: 20px;
+  margin-top: 15px;
+}
