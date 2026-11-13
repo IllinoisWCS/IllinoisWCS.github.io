@@ -1,0 +1,39 @@
+
+.pt-profile-card {
+  background: linear-gradient(135deg, #fce7f3, #ede9fe);
+  border: 2px solid #d8b4fe;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  max-width: 350px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pt-profile-card h2 {
+  color: #7e22ce;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.pt-profile-card p {
+  color: #4b5563;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.pt-profile-card button {
+  background-color: #9333ea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.pt-profile-card button:hover {
+  background-color: #7e22ce;
+}

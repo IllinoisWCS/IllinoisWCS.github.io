@@ -1,6 +1,6 @@
 import ComputerWindow from '../components/general/ComputerWindowComponent';
 import styles from '@/styles/pages/Infra.module.css';
-
+import Priya from '../components/infra-committee/priya';
 export default function Infra() {
   return (
     <div className={styles.main}>
@@ -10,7 +10,9 @@ export default function Infra() {
       <ComputerWindow className={styles.subHeader} showTopbar={false}>
         <h2>2026-2027</h2>
       </ComputerWindow>
-      <div className={styles.cards}></div>
+      <div className={styles.cards}>
+        <Priya />
+        </div>
     </div>
   );
 }
