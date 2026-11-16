@@ -195,7 +195,7 @@ export default function QA() {
 
     // check toxicity before redirecting to points site
     try {
-      const toxicResponse = await fetch('https://main-api.illinoiswcs.org/check-toxicity', {
+      const toxicResponse = await fetch('https://main-api.illinoiswcs.org/<toxicity-endpoint>', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ content: text }),

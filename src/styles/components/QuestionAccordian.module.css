@@ -1,37 +1,41 @@
 .accordionContainer {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 5px;
   overflow: hidden;
   background: transparent;
-  margin-bottom: '1px';
+  margin-bottom: 1px;
 }
 
 .questionBar {
   width: 100%;
-  background-color: #e2626a;
+  min-height: 158px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #e2626a;
   padding: 16px 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
   transition: all 0.2s ease;
-  border-radius: 10px;
+  border-radius: 20px;
   outline: none;
 }
 
 .questionText {
-  margin-left: 20px;
-  align-content: left;
-  font-size: 18px;
-  color: white;
-  font-family: 'Roboto Mono', sans-serif;
+  margin-top: 0px;
+  margin-left: 40px;
+  font-size: 25px;
+  color: #000000;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
 }
 
 .expandIcon {
-  width: 14px;
-  height: 14px;
-  border-bottom: 4px solid white;
-  border-right: 4px solid white;
-  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 4px solid #e2626a;
+  border-right: 4px solid #e2626a;
+  margin-right: 20px;
   margin-top: 3px;
   transform: rotate(-45deg); /* right arrow */
   transition: transform 0.3s ease;
@@ -47,5 +51,5 @@
   transition: all 0.3s ease;
   border-radius: 0 0 12px 12px;
   display: block;
-  margin-bottom: '1px';
+  margin-bottom: 1px;
 }

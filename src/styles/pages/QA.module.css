@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Mono:wght@400&family=Roboto+Slab:wght@400&display=swap');
 .main {
   display: flex;
   flex-direction: column;
@@ -398,12 +399,14 @@
 }
 
 .searchContainer .questionDropdown {
+    border: 1px solid #e2626a;
   width: 99%;
   font-family: 'Roboto', sans-serif;
 }
 
 /*this is for the drop down box*/
 .questionDropdown {
+  border: 1px solid #e2626a;
   position: absolute;
   background: white;
   border-radius: 12px;
@@ -420,6 +423,11 @@
 
 /*this is for each question in the drop down box*/
 .dropdownQuestion {
+    font-family: 'Roboto Slab', serif;
+  padding: 10px 16px;
+  color: var(--wcs-blue);
+  cursor: pointer;
+
   padding: 10px 16px;
   color: var(--wcs-blue);
   font-family: 'Zilla Slab', serif;
