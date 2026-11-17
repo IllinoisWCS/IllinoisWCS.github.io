@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import StyledButton from '../StyledButton';
 import styles from '@/styles/components/AddStoryButton.module.css';
 
@@ -10,7 +11,16 @@ export default function AddStoryButton() {
       <StyledButton
         onClick={() => window.open(STORY_FORM_URL, '_blank', 'noopener,noreferrer')}
       >
-        <h3>Add Your Story ↗</h3>
+        <h3 className={styles.label}> 
+          Add Your Story
+          <Image 
+            className={styles.icon}
+            src="/assets/design-vectors/externallink.svg"
+            alt=""
+            width="20"
+            height="20"
+          />
+        </h3>
       </StyledButton>
     </div>
   );

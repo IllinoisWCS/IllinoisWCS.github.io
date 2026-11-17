@@ -21,3 +21,13 @@
 .white h3 {
   margin: 0;
 }
+
+.label {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.icon {
+  flex-shrink: 0;
+}
